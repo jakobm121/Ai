@@ -69,25 +69,34 @@ body {
   transform: translateY(-5px);
 }
 
+/* Logos */
 .card-logo img {
-  max-width: 100%;
-  max-height: 120px;
+  width: 220px;
+  height: 100px;
   object-fit: contain;
   margin: 0 auto 20px;
   display: block;
 }
 
+/* Title & Rating */
 .card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #222;
 }
 
+.rating {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+  margin-left: 8px;
+}
+
+/* Description */
 .card p {
   font-size: 0.95rem;
   margin-bottom: 20px;
   color: #555;
-  flex-grow: 1;
 }
 
 /* Pros and Cons */
@@ -125,10 +134,9 @@ body {
   margin-bottom: 5px;
 }
 
-/* Button wrapper to align buttons */
+/* Button alignment */
 .btn-wrapper {
   margin-top: auto;
-  text-align: center;
 }
 
 .btn {
@@ -165,35 +173,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.social-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 10px;
-  font-size: 1rem;
-}
-
-.social-link i {
-  font-size: 1.2rem;
-  color: #e4405f; /* Instagram pink */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .pros-cons {
-    flex-direction: column;
-  }
-
-  .pros, .cons {
-    text-align: left;
-  }
+footer i {
+  margin-right: 5px;
 }
