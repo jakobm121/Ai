@@ -1,21 +1,25 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Global Styles */
 body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
+  background: #f8f9fa;
   color: #333;
-  background: #f9f9f9;
+  line-height: 1.6;
 }
 
-/* Hero */
+h1, h2, h3, h4 {
+  margin: 0 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: #fff;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
   text-align: center;
   padding: 60px 20px;
 }
@@ -31,148 +35,173 @@ body {
   font-size: 1.1rem;
 }
 
-/* Container */
+/* Bonus Strategy Section */
+.bonus-strategy {
+  background: #ffffff;
+  padding: 60px 20px;
+  margin: 40px auto;
+  max-width: 1100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.bonus-strategy h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+
+.bonus-strategy h3 {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  color: #023e8a;
+}
+
+.bonus-strategy p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.bonus-strategy .highlight {
+  font-weight: 600;
+  color: #0077b6;
+  text-align: center;
+  background: #e6f7ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Bookmakers Section */
 .container {
   max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .section-title {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 40px;
-  font-weight: 700;
-  color: #222;
+  color: #0077b6;
 }
 
-/* Bookmaker Grid */
 .bookmakers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  gap: 20px;
 }
 
+/* Card */
 .card {
   background: #fff;
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
-  text-align: center;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.2s ease-in-out;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-/* Logos */
 .card-logo img {
-  width: 220px;
-  height: 100px;
+  max-width: 150px;
+  max-height: 70px;
   object-fit: contain;
-  margin: 0 auto 20px;
   display: block;
+  margin: 0 auto 15px;
 }
 
-/* Title & Rating */
 .card h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  text-align: center;
   margin-bottom: 10px;
-  color: #222;
 }
 
-.rating {
+.card .rating {
   font-size: 0.9rem;
-  font-weight: 500;
-  color: #555;
+  font-weight: 600;
+  color: #0077b6;
   margin-left: 8px;
 }
 
-/* Description */
 .card p {
-  font-size: 0.95rem;
+  text-align: center;
   margin-bottom: 20px;
-  color: #555;
+  font-size: 0.95rem;
 }
 
-/* Pros and Cons */
+/* Pros & Cons */
 .pros-cons {
   display: flex;
   justify-content: space-between;
-  text-align: left;
+  gap: 15px;
   margin-bottom: 20px;
-  gap: 20px;
 }
 
 .pros, .cons {
   flex: 1;
+  background: #f1f9ff;
+  padding: 10px;
+  border-radius: 6px;
 }
 
 .pros h4, .cons h4 {
   margin-bottom: 8px;
   font-size: 1rem;
-  font-weight: 600;
-  color: #222;
+  color: #0077b6;
 }
 
 .pros ul, .cons ul {
-  list-style: none;
+  padding-left: 20px;
+  margin: 0;
   font-size: 0.9rem;
 }
 
-.pros li {
-  color: #2a7a2a;
-  margin-bottom: 5px;
-}
-
-.cons li {
-  color: #b22222;
-  margin-bottom: 5px;
-}
-
-/* Button alignment */
+/* Button */
 .btn-wrapper {
+  text-align: center;
   margin-top: auto;
 }
 
 .btn {
   display: inline-block;
-  background: #2a5298;
+  background: #0077b6;
   color: #fff;
   padding: 10px 20px;
   border-radius: 6px;
-  text-decoration: none;
   font-weight: 600;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease-in-out;
 }
 
 .btn:hover {
-  background: #1e3c72;
+  background: #023e8a;
 }
 
 /* Footer */
 footer {
+  background: #023e8a;
+  color: white;
   text-align: center;
   padding: 20px;
-  background: #222;
-  color: #fff;
   margin-top: 40px;
+}
+
+footer p {
+  margin: 8px 0;
   font-size: 0.9rem;
 }
 
 footer a {
-  color: #fff;
-  text-decoration: none;
+  color: #90e0ef;
+  font-weight: 600;
 }
 
 footer a:hover {
-  text-decoration: underline;
-}
-
-footer i {
-  margin-right: 5px;
+  color: #fff;
 }
