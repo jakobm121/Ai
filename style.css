@@ -35,7 +35,7 @@ a {
   font-size: 1.1rem;
 }
 
-/* Bookmakers Section */
+/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -49,6 +49,7 @@ a {
   color: #0077b6;
 }
 
+/* Bookmakers Grid */
 .bookmakers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -82,7 +83,7 @@ a {
 .card h3 {
   font-size: 1.3rem;
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .card .rating {
@@ -92,21 +93,42 @@ a {
   margin-left: 8px;
 }
 
-.card p {
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 0.95rem;
-}
-
 /* Welcome Bonus */
 .welcome-bonus {
-  font-weight: 600;
-  color: #d62828;
-  text-align: center;
-  background: #ffe6e6;
-  padding: 8px;
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
   border-radius: 6px;
-  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Pros & Cons */
+.pros-cons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.pros, .cons {
+  flex: 1;
+  background: #f1f9ff;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.pros h4, .cons h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #0077b6;
+}
+
+.pros ul, .cons ul {
+  padding-left: 20px;
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 /* Button */
