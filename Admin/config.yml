@@ -1,0 +1,52 @@
+backend:
+  name: git-gateway
+  branch: main   # če uporabljaš "main", drugače daj "master"
+
+media_folder: "img/uploads"   # kam se shranijo slike
+public_folder: "/img/uploads"
+
+collections:
+  # Hero / Landing section
+  - name: "hero"
+    label: "Hero Section"
+    files:
+      - file: "index.html"
+        label: "Hero Content"
+        name: "hero_content"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+
+  # Bookmakers
+  - name: "bookmakers"
+    label: "Bookmakers"
+    folder: "content/bookmakers"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Bookmaker Name", name: "name", widget: "string" }
+      - { label: "Rating", name: "rating", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "Affiliate Link", name: "link", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Welcome Bonus", name: "bonus", widget: "string" }
+      - label: "Pros"
+        name: "pros"
+        widget: "list"
+        field: { label: "Pro", name: "pro", widget: "string" }
+      - label: "Cons"
+        name: "cons"
+        widget: "list"
+        field: { label: "Con", name: "con", widget: "string" }
+
+  # Footer
+  - name: "footer"
+    label: "Footer"
+    files:
+      - file: "index.html"
+        label: "Footer Content"
+        name: "footer_content"
+        fields:
+          - { label: "Copyright Text", name: "copyright", widget: "string" }
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - { label: "Instagram Link", name: "instagram", widget: "string" }
