@@ -35,44 +35,6 @@ a {
   font-size: 1.1rem;
 }
 
-/* Bonus Strategy Section */
-.bonus-strategy {
-  background: #ffffff;
-  padding: 60px 20px;
-  margin: 40px auto;
-  max-width: 1100px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.bonus-strategy h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #0077b6;
-}
-
-.bonus-strategy h3 {
-  margin-top: 30px;
-  font-size: 1.4rem;
-  color: #023e8a;
-}
-
-.bonus-strategy p {
-  margin-bottom: 15px;
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-.bonus-strategy .highlight {
-  font-weight: 600;
-  color: #0077b6;
-  text-align: center;
-  background: #e6f7ff;
-  padding: 15px;
-  border-radius: 8px;
-}
-
 /* Bookmakers Section */
 .container {
   max-width: 1200px;
@@ -110,8 +72,8 @@ a {
 }
 
 .card-logo img {
-  max-width: 150px;
-  max-height: 70px;
+  max-width: 200px;
+  max-height: 100px;
   object-fit: contain;
   display: block;
   margin: 0 auto 15px;
@@ -120,7 +82,7 @@ a {
 .card h3 {
   font-size: 1.3rem;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .card .rating {
@@ -132,35 +94,19 @@ a {
 
 .card p {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 0.95rem;
 }
 
-/* Pros & Cons */
-.pros-cons {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.pros, .cons {
-  flex: 1;
-  background: #f1f9ff;
-  padding: 10px;
+/* Welcome Bonus */
+.welcome-bonus {
+  font-weight: 600;
+  color: #d62828;
+  text-align: center;
+  background: #ffe6e6;
+  padding: 8px;
   border-radius: 6px;
-}
-
-.pros h4, .cons h4 {
-  margin-bottom: 8px;
-  font-size: 1rem;
-  color: #0077b6;
-}
-
-.pros ul, .cons ul {
-  padding-left: 20px;
-  margin: 0;
-  font-size: 0.9rem;
+  margin-bottom: 12px;
 }
 
 /* Button */
