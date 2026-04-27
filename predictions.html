@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI77 Sports Lab® | Predictions</title>
+  <meta name="description" content="AI77 Sports Lab® final neon edition — a premium mobile-first sports betting site with live predictions, reviews, and strategy.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-brand" aria-label="AI77 Sports Lab home">
+        <img src="assets/logo-mark.svg" alt="" aria-hidden="true">
+        <span class="site-brand__title">AI77 Sports Lab®</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="site-nav__link">Home</a>
+        <a href="predictions.html" class="site-nav__link is-active" aria-current="page">Match Predictions</a>
+        <a href="reviews.html" class="site-nav__link">Bookmaker Reviews</a>
+        <a href="strategy.html" class="site-nav__link">Betting Strategies</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <span class="hero-badge">Live prediction board</span>
+          <h1 class="hero-title glow-text">Predictions, stats, and growth — already wired.</h1>
+          <p class="hero-subtitle">This page keeps the AI77 prediction concept but upgrades the overall feel into something much more polished and launch-ready.</p>
+        </div>
+      </div>
+    </section>
+
+<section class="section">
+  <div class="container">
+    <div class="content-card">
+      <div class="section-heading">
+        <p class="eyebrow">AI77 Quantum Edge</p>
+        <h2 class="section-title">Demo version with your real performance direction</h2>
+        <p class="section-sub">The stats below are aligned with the numbers you already use on your site and update from results.json on this version.</p>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><p class="stat-number stat-value">82</p><p class="stat-label">Total Predictions</p></article>
+        <article class="stat-card"><p class="stat-number stat-value">61</p><p class="stat-label">Winning Picks</p></article>
+        <article class="stat-card"><p class="stat-number stat-value">1.87</p><p class="stat-label">Average Odds</p></article>
+        <article class="stat-card"><p class="stat-number stat-value">+7.2%</p><p class="stat-label">ROI</p></article>
+      </div>
+      <div class="chart-shell"><canvas id="profitChart" aria-label="Profit growth chart"></canvas></div>
+      <p class="soft-note">Full history performance and detailed statistics are available only to AI77 VIP members.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split-grid">
+      <article class="glass-card">
+        <div class="section-heading">
+          <p class="eyebrow">Play like a pro</p>
+          <h2 class="section-title">How we play</h2>
+          <p class="section-sub">This section keeps the same logic from your current site, only presented more cleanly.</p>
+        </div>
+        <div class="panel">
+          <p><strong>Unit system:</strong> 1 unit = 1% of your bankroll</p>
+          <ul>
+            <li>Medium Confidence → 1 unit</li>
+            <li>Strong Confidence → 1.5 units</li>
+            <li>Very Strong Confidence → 2 units</li>
+          </ul>
+          <p><strong>Value-based approach:</strong> We target bets where our model identifies a statistical edge over market expectations.</p>
+          <p><strong>AI + Human analysis:</strong> Our predictions combine data models, recent form, and match context to identify value opportunities.</p>
+          <p class="muted small">Goal: sustainable long-term ROI between 6–10% per month.</p>
+        </div>
+      </article>
+
+      <article class="glass-card">
+        <div class="section-heading">
+          <p class="eyebrow">Live board</p>
+          <h2 class="section-title">Today's predictions</h2>
+          <p id="last-updated" class="section-sub">Updated • --</p>
+        </div>
+        <div class="divider"></div>
+        <p class="soft-note" style="margin-top:.85rem">The cards below are loaded from predictions.json and already behave like a real live prediction page.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div id="predictions-container" class="cards-grid predictions-grid"></div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <section>
+        <h2 class="site-footer__title">AI77 Sports Lab®</h2>
+        <p>Advanced sports predictions, bookmaker reviews, and long-term betting structure — now presented in a sharper, more futuristic product form.</p>
+      </section>
+      <nav>
+        <h2 class="site-footer__title">Explore</h2>
+        <ul>
+          <li><a href="predictions.html">Live Predictions</a></li>
+          <li><a href="reviews.html">Bookmaker Reviews</a></li>
+          <li><a href="strategy.html">Betting Strategies</a></li>
+          <li><a href="info.html">Info & Responsible Play</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2 class="site-footer__title">Contact</h2>
+        <p><a href="mailto:info@ai77.bettinglab.com">info@ai77.bettinglab.com</a></p>
+        <p><a href="https://instagram.com/ai77.bettinglab" target="_blank" rel="noopener noreferrer">@ai77.bettinglab</a></p>
+        <p class="muted">18+ only. Betting involves risk. Please gamble responsibly.</p>
+      </section>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p>© 2025 AI77 Sports Lab®. All rights reserved.</p>
+        <p>For entertainment and informational use only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js" defer></script>
+  <script src="script1.js" defer></script>
+</body>
+</html>
