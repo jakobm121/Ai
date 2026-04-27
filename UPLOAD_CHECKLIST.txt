@@ -1,10 +1,12 @@
-AI77 SPORTS LAB® — FINAL NEON BUILD CHECKLIST
+AI77 SPORTS LAB® — PRO PREMIUM FINAL CHECKLIST
 
-1. Upload everything from this ZIP to the root of your new repo.
-2. Replace https://your-domain.com in:
+1. Upload all files from this ZIP to the root of your repo.
+2. Keep the assets folder as a folder named:
+   assets
+3. Before going live, replace https://your-domain.com in:
    - robots.txt
    - sitemap.xml
-3. Test:
+4. Test:
    - index.html
    - predictions.html
    - reviews.html
@@ -12,17 +14,17 @@ AI77 SPORTS LAB® — FINAL NEON BUILD CHECKLIST
    - info.html
    - special-offer.html
    - 404.html
-4. On predictions.html verify:
+5. On predictions.html verify:
    - predictions load from predictions.json
    - updated timestamp appears
    - chart renders
-5. On reviews.html verify:
+6. On reviews.html verify:
    - mobile menu opens
    - Detailed Review buttons open and close
-6. This build already uses:
+7. This build keeps:
    - AI77 Sports Lab® branding
-   - your core stats (82 / 61 / 1.87 / +7.2%)
+   - your core stats
    - your bookmaker stack
    - Sportaza as featured route
-   - your contact style and Instagram handle
-7. Only your final live domain still needs to be added manually in robots.txt and sitemap.xml.
+   - your content meaning and page structure
+8. The redesign changes style and layout only — not the business logic.
