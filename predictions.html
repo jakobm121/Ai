@@ -1,38 +1,137 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI77 Pulse Lab | Predictions</title>
-<meta name="description" content="AI77 Pulse Lab is a futuristic sports prediction platform with performance tracking, bookmaker reviews, and strategy content.">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head><body>
-<header class="site-header"><div class="site-header__inner">
-<a href="index.html" class="site-brand"><img src="assets/logo-mark.svg" alt="" aria-hidden="true"><span class="site-brand__title">AI77 Pulse Lab</span></a>
-<button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
-<nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html" class="site-nav__link">Home</a><a href="predictions.html" class="site-nav__link is-active" aria-current="page">Match Predictions</a><a href="reviews.html" class="site-nav__link">Bookmaker Reviews</a><a href="strategy.html" class="site-nav__link">Betting Strategies</a></nav></div></header>
-<main class="page-main">
-<section class="hero"><div class="container"><div class="hero-card"><span class="hero-badge">Live model board</span><h1 class="hero-title glow-text">Predictions rendered like a signal feed.</h1><p class="hero-subtitle">This page reads predictions from local JSON and turns them into rings, cards, and a live performance chart.</p></div></div></section>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI77 Sports Lab® | Predictions</title>
+  <meta name="description" content="See AI77 Sports Lab® live predictions, confidence rings, updated stats, and cumulative performance in a premium futuristic layout.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-brand" aria-label="AI77 Sports Lab home">
+        <img src="assets/logo-mark.svg" alt="" aria-hidden="true">
+        <span class="site-brand__title">AI77 Sports Lab®</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="site-nav__link">Home</a>
+        <a href="predictions.html" class="site-nav__link is-active" aria-current="page">Match Predictions</a>
+        <a href="reviews.html" class="site-nav__link">Bookmaker Reviews</a>
+        <a href="strategy.html" class="site-nav__link">Betting Strategies</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="section"><div class="container"><div class="card" style="padding:1rem"><p class="eyebrow">Performance board</p><h2 class="section-title">Quantum signal snapshot</h2><p class="section-sub">These boxes are updated automatically from results.json on the live page.</p><div class="stats-grid">
-<article class="tile"><p class="stat-number stat-value">82</p><p class="stat-label">Total Predictions</p></article>
-<article class="tile"><p class="stat-number stat-value">61</p><p class="stat-label">Winning Picks</p></article>
-<article class="tile"><p class="stat-number stat-value">1.87</p><p class="stat-label">Average Odds</p></article>
-<article class="tile"><p class="stat-number stat-value">+7.2%</p><p class="stat-label">ROI</p></article>
-</div><div class="chart-shell"><canvas id="profitChart"></canvas></div><p class="muted small">Performance chart is built from stored results and displays cumulative unit growth.</p></div></div></section>
-<section class="section"><div class="container"><div class="card" style="padding:1rem"><p class="eyebrow">Operating model</p><h2 class="section-title">How this board should be played</h2><div class="stats-grid">
-<div class="panel-soft"><strong>Pulse 1.0</strong><p class="muted small">Stable exposure. Default signal allocation.</p></div>
-<div class="panel-soft"><strong>Pulse 1.5</strong><p class="muted small">Stronger edge profile with still controlled risk.</p></div>
-<div class="panel-soft"><strong>Pulse 2.0</strong><p class="muted small">Elite confidence only. Higher conviction, not higher chaos.</p></div>
-</div></div></div></section>
-<section class="section"><div class="container"><p class="eyebrow">Live feed</p><h2 class="section-title">Today's prediction stream</h2><p id="last-updated" class="section-sub">Updated • --</p><div id="predictions-container" class="card-list predictions-grid"></div></div></section>
+  <main class="page-main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <span class="hero-badge">Live signal board</span>
+          <h1 class="hero-title glow-text">Predictions rendered like a premium feed.</h1>
+          <p class="hero-subtitle">This page is fully connected to local JSON data and results history, so it already behaves like a real prediction surface — not a static demo screen.</p>
+          <div class="badge-row">
+            <span class="link-pill">Updated timestamp</span>
+            <span class="link-pill">Confidence rings</span>
+            <span class="link-pill">Growth chart</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</main>
-<footer class="site-footer"><div class="container site-footer__inner">
-<section><h2 class="site-footer__title">AI77 Pulse Lab</h2><p>A futuristic betting experience built around visual clarity, data momentum, bookmaker discovery, and disciplined long-term play.</p></section>
-<nav><h2 class="site-footer__title">Explore</h2><ul><li><a href="predictions.html">Live Predictions</a></li><li><a href="reviews.html">Bookmaker Reviews</a></li><li><a href="strategy.html">Playbook & Strategy</a></li><li><a href="info.html">Info & Responsible Play</a></li></ul></nav>
-<section><h2 class="site-footer__title">Contact</h2><p><a href="mailto:hello@ai77pulse.com">hello@ai77pulse.com</a></p><p class="muted">18+ only. Betting involves risk. Always play responsibly.</p></section>
-</div><div class="site-footer__bottom"><div class="container"><p>© 2025 AI77 Pulse Lab. All rights reserved.</p><p>For entertainment and informational use only.</p></div></div></footer>
-<script src="site.js" defer></script><script src="script1.js" defer></script>
-</body></html>
+    <section class="section">
+      <div class="container">
+        <div class="dashboard-card" style="padding:1rem">
+          <div class="section-heading">
+            <p class="eyebrow">Performance board</p>
+            <h2 class="section-title">AI77 Quantum Edge</h2>
+            <p class="section-sub">Real stat direction carried over from your current site.</p>
+          </div>
+          <div class="stats-grid">
+            <article class="data-tile"><p class="stat-number stat-value">82</p><p class="stat-label">Total Predictions</p></article>
+            <article class="data-tile"><p class="stat-number stat-value">61</p><p class="stat-label">Winning Picks</p></article>
+            <article class="data-tile"><p class="stat-number stat-value">1.87</p><p class="stat-label">Average Odds</p></article>
+            <article class="data-tile"><p class="stat-number stat-value">+7.2%</p><p class="stat-label">ROI</p></article>
+          </div>
+          <div class="chart-shell"><canvas id="profitChart" aria-label="Growth chart"></canvas></div>
+          <p class="soft-note">Cumulative growth is calculated from stored results. The page already works like a publishable stats surface.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="home-duo-grid">
+          <article class="glass-card" style="padding:1.05rem">
+            <div class="section-heading">
+              <p class="eyebrow">How to read the board</p>
+              <h2 class="section-title">Signal levels</h2>
+              <p class="section-sub">A branded alternative to generic confidence badges.</p>
+            </div>
+            <div class="kv-grid">
+              <div class="panel-soft"><strong>Signal Stable</strong><p class="muted small">Controlled entry. Standard unit level.</p></div>
+              <div class="panel-soft"><strong>Signal Strong</strong><p class="muted small">Higher quality edge with still disciplined exposure.</p></div>
+              <div class="panel-soft"><strong>Signal Elite</strong><p class="muted small">Top signal only. Strongest model alignment.</p></div>
+            </div>
+          </article>
+
+          <article class="glass-card" style="padding:1.05rem">
+            <div class="section-heading">
+              <p class="eyebrow">Today</p>
+              <h2 class="section-title">Live prediction stream</h2>
+              <p id="last-updated" class="section-sub">Updated • --</p>
+            </div>
+            <div class="divider-line"></div>
+            <p class="soft-note" style="margin-top:.85rem">The cards below are meant to be the core heartbeat of the site and are already formatted like a clean premium feed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="predictions-container" class="card-list predictions-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <section>
+        <h2 class="site-footer__title">AI77 Sports Lab®</h2>
+        <p>Advanced sports predictions, bookmaker reviews, and long-term betting structure — now presented in a sharper, more futuristic product form.</p>
+      </section>
+      <nav>
+        <h2 class="site-footer__title">Explore</h2>
+        <ul>
+          <li><a href="predictions.html">Live Predictions</a></li>
+          <li><a href="reviews.html">Bookmaker Reviews</a></li>
+          <li><a href="strategy.html">Betting Strategies</a></li>
+          <li><a href="info.html">Info & Responsible Play</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2 class="site-footer__title">Contact</h2>
+        <p><a href="mailto:info@ai77.bettinglab.com">info@ai77.bettinglab.com</a></p>
+        <p><a href="https://instagram.com/ai77.bettinglab" target="_blank" rel="noopener noreferrer">@ai77.bettinglab</a></p>
+        <p class="muted">18+ only. Betting involves risk. Please gamble responsibly.</p>
+      </section>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p>© 2025 AI77 Sports Lab®. All rights reserved.</p>
+        <p>For entertainment and informational use only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js" defer></script>
+  <script src="script1.js" defer></script>
+</body>
+</html>
