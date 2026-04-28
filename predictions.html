@@ -3,136 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI77 Sports Lab® | Predictions</title>
-  <meta name="description" content="AI77 Sports Lab® final premium edition with the same content and data logic as your current site, redesigned in a cleaner professional style.">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <title>AI77 Sports Lab | Predictions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a href="index.html" class="site-brand" aria-label="AI77 Sports Lab home">
-        <img src="assets/logo-mark.svg" alt="" aria-hidden="true">
-        <span class="site-brand__title">AI77 Sports Lab®</span>
-      </a>
-      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
-      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="index.html" class="site-nav__link">Home</a>
-        <a href="predictions.html" class="site-nav__link is-active" aria-current="page">Match Predictions</a>
-        <a href="reviews.html" class="site-nav__link">Bookmaker Reviews</a>
-        <a href="strategy.html" class="site-nav__link">Betting Strategies</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-main">
-    <section class="hero">
-      <div class="container">
-        <div class="hero-card">
-          <span class="hero-badge">Match predictions</span>
-          <h1 class="hero-title glow-text">Stop guessing. Start playing with edge.</h1>
-          <p class="hero-subtitle">This page keeps the same AI77 prediction logic and stats structure, but presents it in a stronger premium format.</p>
-        </div>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html"><span class="brand-mark">AI77</span><span class="brand-text">Sports Lab</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="predictions.html" class="active">Predictions</a>
+          <a href="vip.html">VIP</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="strategy.html">Strategy</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-<section class="section">
-  <div class="container">
-    <div class="content-card">
-      <div class="section-heading">
-        <p class="eyebrow">AI77 Quantum Edge (Demo Version)</p>
-        <h2 class="section-title">Real stats presentation</h2>
-        <p class="section-sub">The numbers below follow the same direction as your current live page and update from results.json in this version.</p>
-      </div>
-      <div class="stats-grid">
-        <article class="stat-card"><p class="stat-number stat-value">82</p><p class="stat-label">Total Predictions 📊</p></article>
-        <article class="stat-card"><p class="stat-number stat-value">61</p><p class="stat-label">Winning Picks ✅</p></article>
-        <article class="stat-card"><p class="stat-number stat-value">1.87</p><p class="stat-label">Average Odds ⚡️</p></article>
-        <article class="stat-card"><p class="stat-number stat-value">+7.2%</p><p class="stat-label">ROI 📈</p></article>
-      </div>
-      <div class="chart-shell"><canvas id="profitChart" aria-label="Profit chart"></canvas></div>
-      <p class="soft-note">📊 Full history performance and detailed statistics are available only to AI77 VIP members.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="split-grid">
-      <article class="content-card">
-        <div class="section-heading">
-          <p class="eyebrow">How we play</p>
-          <h2 class="section-title">Play like a pro</h2>
+    <main>
+      <section class="page-hero premium-glow">
+        <div class="container">
+          <div class="eyebrow">AI77 live board</div>
+          <h1>Predictions and performance in a cleaner lab format.</h1>
+          <p>Designed to feel like a real product: less clutter, clearer metrics, and collapsible analysis for heavier prediction days.</p>
         </div>
-        <div class="panel">
-          <p><strong>💰 Unit system:</strong> 1 unit = 1% of your bankroll</p>
-          <ul>
-            <li>🟡 Medium Confidence → 1 unit</li>
-            <li>🟢 Strong Confidence → 1.5 units</li>
-            <li>🔥 Very Strong Confidence → 2 units</li>
-          </ul>
-          <p><strong>📈 Value-based approach:</strong> We target bets where our model identifies a statistical edge over market expectations.</p>
-          <p><strong>🧠 AI + Human analysis:</strong> Our predictions combine data models, recent form, and match context to identify value opportunities.</p>
-          <p class="muted small">🎓 Goal: sustainable long term ROI between 6–10% per month.</p>
-        </div>
-      </article>
-
-      <article class="content-card">
-        <div class="section-heading">
-          <p class="eyebrow">Live feed</p>
-          <h2 class="section-title">Today's predictions</h2>
-          <p id="last-updated" class="section-sub">Updated • --</p>
-        </div>
-        <div class="divider"></div>
-        <p class="soft-note" style="margin-top:.85rem">This is designed as the main live board of the site and already behaves like a production-ready predictions page.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div id="predictions-container" class="cards-grid predictions-grid"></div>
-  </div>
-</section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <section>
-        <h2 class="site-footer__title">AI-77 Betting Lab®</h2>
-        <p>AI-77 Betting Lab® combines the power of artificial intelligence and expert analysis to deliver smart match predictions, bookmaker reviews, and long-term betting strategies.</p>
       </section>
-      <nav>
-        <h2 class="site-footer__title">Information</h2>
-        <ul>
-          <li><a href="info.html#about">About Us</a></li>
-          <li><a href="info.html#privacy">Privacy Policy</a></li>
-          <li><a href="info.html#terms">Terms & Conditions</a></li>
-          <li><a href="info.html#responsible">Responsible Gambling</a></li>
-        </ul>
-      </nav>
-      <section>
-        <h2 class="site-footer__title">Contact</h2>
-        <p><a href="mailto:info@ai77.bettinglab.com">info@ai77.bettinglab.com</a></p>
-        <p><a href="https://instagram.com/ai77.bettinglab" target="_blank" rel="noopener noreferrer">@ai77.bettinglab</a></p>
-        <p class="muted">Disclaimer: Betting involves risk. Please gamble responsibly. 18+ only.</p>
-      </section>
-    </div>
-    <div class="site-footer__bottom">
-      <div class="container">
-        <p>© 2025 AI-77 Betting. All rights reserved.</p>
-        <p>This website is intended for informational and entertainment purposes only.</p>
-      </div>
-    </div>
-  </footer>
 
-  <script src="site.js" defer></script>
-  <script src="script1.js" defer></script>
+      <section class="section">
+        <div class="container">
+          <div class="stats-row four">
+            <article class="card stat-card"><span>Total Picks</span><strong>412</strong><small>All tracked</small></article>
+            <article class="card stat-card"><span>Hit Rate</span><strong>57.9%</strong><small>Settled record</small></article>
+            <article class="card stat-card"><span>Profit</span><strong class="positive">+30.8u</strong><small>Flat stake</small></article>
+            <article class="card stat-card"><span>ROI</span><strong class="positive">8.4%</strong><small>Long-term</small></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading split">
+            <div>
+              <span class="eyebrow">Bucket board</span>
+              <h2>Selections grouped by market to keep the feed readable.</h2>
+            </div>
+            <span class="soft-note">Updated 28 Apr 2026 · 14:00</span>
+          </div>
+
+          <div class="bucket-block">
+            <div class="bucket-head"><h3>Draw Picks</h3><span>2</span></div>
+            <div class="pick-list">
+              <article class="card prediction-item">
+                <div class="prediction-top"><span class="tag">Draw</span><span>Serie B · 19:00</span></div>
+                <h4>Bari vs Parma</h4>
+                <div class="prediction-meta-grid">
+                  <div><small>Odds</small><strong>3.26</strong></div>
+                  <div><small>Edge</small><strong>+6.1%</strong></div>
+                  <div><small>Confidence</small><strong>71</strong></div>
+                  <div><small>Quality</small><strong>76</strong></div>
+                </div>
+                <details>
+                  <summary>Detailed AI analysis</summary>
+                  <p>Short xG gap, high balance projection, and draw pricing that still leaves enough margin after market blend.</p>
+                </details>
+              </article>
+            </div>
+          </div>
+
+          <div class="bucket-block">
+            <div class="bucket-head"><h3>BTTS No</h3><span>3</span></div>
+            <div class="pick-list three-list">
+              <article class="card prediction-item">
+                <div class="prediction-top"><span class="tag">BTTS No</span><span>Championship · 20:45</span></div>
+                <h4>Southampton vs Ipswich</h4>
+                <div class="prediction-meta-grid">
+                  <div><small>Odds</small><strong>2.28</strong></div>
+                  <div><small>Edge</small><strong>+28.8%</strong></div>
+                  <div><small>Confidence</small><strong>78</strong></div>
+                  <div><small>Quality</small><strong>81</strong></div>
+                </div>
+                <details><summary>Detailed AI analysis</summary><p>Lower-event profile, defensive resistance, and lower two-sided scoring probability than the market currently prices.</p></details>
+              </article>
+              <article class="card prediction-item">
+                <div class="prediction-top"><span class="tag">BTTS No</span><span>League One · 20:45</span></div>
+                <h4>Northampton vs Barnsley</h4>
+                <div class="prediction-meta-grid">
+                  <div><small>Odds</small><strong>2.26</strong></div>
+                  <div><small>Edge</small><strong>+23.7%</strong></div>
+                  <div><small>Confidence</small><strong>74</strong></div>
+                  <div><small>Quality</small><strong>77</strong></div>
+                </div>
+                <details><summary>Detailed AI analysis</summary><p>Lower combined BTTS profile with enough separation between implied and model pricing to keep this playable.</p></details>
+              </article>
+              <article class="card prediction-item">
+                <div class="prediction-top"><span class="tag">BTTS No</span><span>Liga 1 · 14:00</span></div>
+                <h4>PSBS Biak Numfor vs Malut United</h4>
+                <div class="prediction-meta-grid">
+                  <div><small>Odds</small><strong>1.62</strong></div>
+                  <div><small>Edge</small><strong>+9.1%</strong></div>
+                  <div><small>Confidence</small><strong>62</strong></div>
+                  <div><small>Quality</small><strong>69</strong></div>
+                </div>
+                <details><summary>Detailed AI analysis</summary><p>Not the strongest price on the board, but still supported by scoring suppression and weaker away attack projection.</p></details>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom single"><span>AI77 Sports Lab · Transparent tracking · 18+ only</span></div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
