@@ -1,28 +1,62 @@
 import os
 import requests
-from collections import Counter
-from datetime import datetime
-from zoneinfo import ZoneInfo
+import json
 
 API_KEY = os.getenv("ISPORTS_API_KEY")
-URL = "http://api.isportsapi.com/sport/football/livescores"
 
-res = requests.get(URL, params={"api_key": API_KEY}, timeout=25)
-data = res.json().get("data", [])
+BASE_URLS = [
+    "http://api.isportsapi.com",
+    "http://api2.isportsapi.com",
+]
 
-statuses = Counter()
-leagues = Counter()
+PATHS = [
+    "/sport/football/odds",
+    "/sport/football/odds/main",
+    "/sport/football/odds/list",
+    "/sport/football/match/odds",
+    "/sport/football/bookmaker",
+    "/sport/football/schedule",
+    "/sport/football/fixtures",
+    "/sport/football/matches",
+    "/sport/football/standings",
+    "/sport/football/team",
+]
 
-for m in data:
-    statuses[m.get("status")] += 1
-    leagues[m.get("leagueName")] += 1
+def main():
+    if not API_KEY:
+        raise RuntimeError("Missing ISPORTS_API_KEY")
 
-print("TOTAL MATCHES:", len(data))
-print("STATUS COUNTS:", statuses.most_common())
-print("TOP LEAGUES:", leagues.most_common(20))
+    for base in BASE_URLS:
+        print("\n" + "=" * 80)
+        print("BASE:", base)
+        print("=" * 80)
 
-print("\nSAMPLE TIMES:")
-for m in data[:10]:
-    ts = m.get("matchTime")
-    dt = datetime.fromtimestamp(ts, ZoneInfo("Europe/Ljubljana")) if ts else None
-    print(m.get("leagueName"), m.get("homeName"), "-", m.get("awayName"), "status=", m.get("status"), "time=", dt)
+        for path in PATHS:
+            url = base + path
+            try:
+                res = requests.get(url, params={"api_key": API_KEY}, timeout=15)
+                print("\nPATH:", path)
+                print("STATUS:", res.status_code)
+                print("PREVIEW:", res.text[:300])
+
+                try:
+                    data = res.json()
+                    if isinstance(data, dict):
+                        print("KEYS:", list(data.keys()))
+                        if "data" in data:
+                            if isinstance(data["data"], list):
+                                print("DATA LIST LEN:", len(data["data"]))
+                                if data["data"] and isinstance(data["data"][0], dict):
+                                    print("FIRST KEYS:", list(data["data"][0].keys()))
+                            elif isinstance(data["data"], dict):
+                                print("DATA DICT KEYS:", list(data["data"].keys()))
+                    elif isinstance(data, list):
+                        print("LIST LEN:", len(data))
+                except Exception:
+                    pass
+
+            except Exception as e:
+                print("ERROR:", path, e)
+
+if __name__ == "__main__":
+    main()
