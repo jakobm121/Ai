@@ -1,264 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI77 Sports Lab | Premium Betting Intelligence</title>
-  <meta name="description" content="AI77 Sports Lab is a premium football betting intelligence platform focused on transparent tracking, structured testing, and long-term edge.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI77 CS2 Test Lab</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="site-shell">
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="index.html">
-          <span class="brand-mark">AI77</span>
-          <span class="brand-text">Sports Lab</span>
-        </a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        <nav class="site-nav">
-          <a href="index.html" class="active">Home</a>
-          <a href="predictions.html">Predictions</a>
-          <a href="vip.html">VIP</a>
-          <a href="reviews.html">Reviews</a>
-          <a href="strategy.html">Strategy</a>
-        </nav>
-      </div>
-    </header>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">PandaScore Free API · CS2 Match Winner</p>
+      <h1>AI77 CS2 Test Lab</h1>
+      <p class="subtitle">A separate esports test page for prediction accuracy. No betting odds are used yet, so this page tracks model correctness, not real betting ROI.</p>
+    </div>
+    <div class="status-card">
+      <span>Last update</span>
+      <strong id="lastUpdate">Loading...</strong>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero premium-glow">
-        <div class="container hero-grid">
-          <div>
-            <div class="eyebrow">Transparent football betting intelligence</div>
-            <h1>Not another tipster page. A premium betting lab built on data, tracking, and discipline.</h1>
-            <p class="hero-copy">AI77 Sports Lab combines model-driven football selection, public performance tracking, and structured market testing to build long-term betting edge without fake hype.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="predictions.html">View today’s picks</a>
-              <a class="btn btn-secondary" href="#performance">See performance</a>
-            </div>
-            <div class="hero-proof">
-              <span>Tracked selections</span>
-              <span>Bucket testing</span>
-              <span>Flat stake logic</span>
-              <span>Long-term focus</span>
-            </div>
-          </div>
-          <aside class="hero-panel card">
-            <div class="panel-top">Live lab snapshot</div>
-            <div class="hero-stats-grid">
-              <article>
-                <strong>412</strong>
-                <span>Tracked Picks</span>
-              </article>
-              <article>
-                <strong>8.4%</strong>
-                <span>ROI</span>
-              </article>
-              <article>
-                <strong>57.9%</strong>
-                <span>Hit Rate</span>
-              </article>
-              <article>
-                <strong>2.01</strong>
-                <span>Avg Odds</span>
-              </article>
-            </div>
-            <div class="mini-feed">
-              <div class="mini-row"><span>Best bucket</span><strong>BTTS No</strong></div>
-              <div class="mini-row"><span>Most stable league</span><strong>Championship</strong></div>
-              <div class="mini-row"><span>Stake model</span><strong>Flat 1 Unit</strong></div>
-              <div class="mini-row"><span>Status</span><strong class="positive">Tracking live</strong></div>
-            </div>
-          </aside>
-        </div>
-      </section>
+  <main>
+    <section class="notice">
+      <strong>Testing note:</strong> This is independent from the official football page. Current profit/ROI uses simple accuracy mode: win = +1u, loss = -1u. Once odds are added, this can be switched to real ROI.
+    </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-heading narrow">
-            <span class="eyebrow">Why AI77 is different</span>
-            <h2>Built like a betting product, not a social media flex page.</h2>
-            <p>Most betting brands sell confidence. The strongest brands sell structure, proof, and repeatable process. AI77 is built around measurable edge, not fake certainty.</p>
-          </div>
-          <div class="feature-grid three">
-            <article class="card feature-card">
-              <h3>Transparent tracking</h3>
-              <p>Selections are logged, settled, and measured over time. No hiding bad runs. No rewriting history.</p>
-            </article>
-            <article class="card feature-card">
-              <h3>Bucket-based testing</h3>
-              <p>Home, draw, away, totals, and BTTS are measured separately so the model can evolve around what actually works.</p>
-            </article>
-            <article class="card feature-card">
-              <h3>Long-term edge mindset</h3>
-              <p>The goal is not daily hype. The goal is sustainable decision-making, clean data, and disciplined bankroll logic.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+    <section class="cards" id="summaryCards"></section>
 
-      <section class="section strip">
-        <div class="container process-grid">
-          <div class="section-heading narrow">
-            <span class="eyebrow">How it works</span>
-            <h2>A simple system with serious intent.</h2>
-          </div>
-          <div class="timeline">
-            <div class="timeline-item"><span>01</span><div><h3>Matches are scanned</h3><p>Upcoming fixtures are filtered by market coverage, time window, bookmaker support, and core model inputs.</p></div></div>
-            <div class="timeline-item"><span>02</span><div><h3>Signals are ranked</h3><p>Probabilities, market prices, quality score, confidence score, and anti-correlation filters shape final selection.</p></div></div>
-            <div class="timeline-item"><span>03</span><div><h3>Results are logged</h3><p>Every selection feeds the record. Winning and losing runs remain part of the public process.</p></div></div>
-            <div class="timeline-item"><span>04</span><div><h3>The model improves</h3><p>League learning, bucket performance, and disciplined review refine the system over time.</p></div></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="performance">
-        <div class="container">
-          <div class="section-heading split">
-            <div>
-              <span class="eyebrow">Performance overview</span>
-              <h2>Public-facing proof that looks clean and feels real.</h2>
-            </div>
-            <a class="text-link" href="predictions.html">Open full lab board →</a>
-          </div>
-          <div class="stats-row four">
-            <article class="card stat-card"><span>Total Picks</span><strong>412</strong><small>Flat stake tracked</small></article>
-            <article class="card stat-card"><span>Settled</span><strong>367</strong><small>45 pending</small></article>
-            <article class="card stat-card"><span>Profit</span><strong class="positive">+30.8u</strong><small>Long-term sample</small></article>
-            <article class="card stat-card"><span>ROI</span><strong class="positive">8.4%</strong><small>Measured, not guessed</small></article>
-          </div>
-          <div class="table-card card">
-            <table>
-              <thead>
-                <tr>
-                  <th>Bucket</th>
-                  <th>Picks</th>
-                  <th>Hit Rate</th>
-                  <th>Avg Odds</th>
-                  <th>Profit</th>
-                  <th>ROI</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>BTTS No</td><td>62</td><td>61.3%</td><td>1.92</td><td class="positive">+10.4u</td><td class="positive">16.8%</td></tr>
-                <tr><td>Under 2.5</td><td>58</td><td>58.6%</td><td>2.01</td><td class="positive">+8.7u</td><td class="positive">15.0%</td></tr>
-                <tr><td>Under 3.5</td><td>55</td><td>68.9%</td><td>1.54</td><td class="positive">+6.1u</td><td class="positive">11.1%</td></tr>
-                <tr><td>Draw</td><td>29</td><td>34.5%</td><td>3.41</td><td class="positive">+2.9u</td><td class="positive">10.0%</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-heading split">
-            <div>
-              <span class="eyebrow">Today’s featured picks</span>
-              <h2>Enough detail to build trust. Clean enough to stay readable.</h2>
-            </div>
-            <a class="text-link" href="predictions.html">See all selections →</a>
-          </div>
-          <div class="feature-grid three">
-            <article class="card pick-card">
-              <div class="pick-top"><span class="tag">BTTS No</span><span>20:45</span></div>
-              <h3>Southampton vs Ipswich</h3>
-              <p class="pick-line">Odds 2.28 · Confidence 78 · Quality 81</p>
-              <p class="muted">A lower-event profile with stronger defensive stability than the current median pricing suggests.</p>
-            </article>
-            <article class="card pick-card">
-              <div class="pick-top"><span class="tag">Draw</span><span>19:00</span></div>
-              <h3>Bari vs Parma</h3>
-              <p class="pick-line">Odds 3.26 · Confidence 71 · Quality 76</p>
-              <p class="muted">Balanced projection, narrow xG gap, and draw pricing that still leaves measurable value.</p>
-            </article>
-            <article class="card pick-card">
-              <div class="pick-top"><span class="tag">Under 2.5</span><span>18:30</span></div>
-              <h3>Heerenveen vs AZ</h3>
-              <p class="pick-line">Odds 2.06 · Confidence 75 · Quality 79</p>
-              <p class="muted">Combined scoring profile remains lower than market assumptions after recent form adjustments.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section vip-strip premium-glow">
-        <div class="container vip-grid">
-          <div>
-            <span class="eyebrow">Future monetization</span>
-            <h2>AI77 VIP is where the strongest-rated selections, deeper stats, and early access will live.</h2>
-            <p>The free layer builds trust. The premium layer should reward serious followers with cleaner signals, deeper dashboards, and a stronger decision edge.</p>
-          </div>
-          <div class="card vip-box">
-            <ul>
-              <li>Top-rated daily picks</li>
-              <li>Deeper market notes</li>
-              <li>Full dashboard access</li>
-              <li>Priority release window</li>
-            </ul>
-            <a class="btn btn-primary" href="vip.html">View VIP page</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-heading split">
-            <div>
-              <span class="eyebrow">Affiliate revenue layer</span>
-              <h2>Bookmaker reviews that monetize without turning the site into spam.</h2>
-            </div>
-            <a class="text-link" href="reviews.html">Explore reviews →</a>
-          </div>
-          <div class="feature-grid three">
-            <article class="card book-card">
-              <h3>20Bet Review</h3>
-              <p>Sharp overview, strengths, weaknesses, mobile usability, and best fit for value-focused users.</p>
-              <a class="btn btn-secondary" href="reviews.html">Read review</a>
-            </article>
-            <article class="card book-card">
-              <h3>1xBet Review</h3>
-              <p>Best for wide market coverage, deeper lines, and broader football menu depth.</p>
-              <a class="btn btn-secondary" href="reviews.html">Read review</a>
-            </article>
-            <article class="card book-card">
-              <h3>Sportaza Review</h3>
-              <p>Best for modern UX, good promo depth, and casual-to-regular player onboarding.</p>
-              <a class="btn btn-secondary" href="reviews.html">Read review</a>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
+    <section class="panel">
+      <div class="panel-head">
         <div>
-          <div class="brand footer-brand"><span class="brand-mark">AI77</span><span class="brand-text">Sports Lab</span></div>
-          <p>Premium football betting intelligence built around transparent tracking, measured testing, and long-term edge.</p>
-        </div>
-        <div>
-          <h4>Navigation</h4>
-          <a href="predictions.html">Predictions</a>
-          <a href="vip.html">VIP</a>
-          <a href="reviews.html">Reviews</a>
-          <a href="strategy.html">Strategy</a>
-        </div>
-        <div>
-          <h4>Positioning</h4>
-          <p>Data-driven. Transparent. Disciplined. Built to grow into a premium football betting brand.</p>
+          <h2>Current CS2 Picks</h2>
+          <p>Generated from team form, recent map differential, best-of format, and tournament context.</p>
         </div>
       </div>
-      <div class="container footer-bottom">
-        <span>© 2026 AI77 Sports Lab</span>
-        <span>18+ only · Gamble responsibly</span>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th><th>Match</th><th>Pick</th><th>BO</th><th>Prob</th><th>Confidence</th><th>Tier</th><th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="predictionsBody"></tbody>
+        </table>
       </div>
-    </footer>
-  </div>
-  <script src="script.js"></script>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>Performance by Confidence</h2>
+        <div class="table-wrap"><table><thead><tr><th>Group</th><th>Picks</th><th>Hit</th><th>Profit</th><th>ROI</th></tr></thead><tbody id="byConfidence"></tbody></table></div>
+      </div>
+      <div class="panel">
+        <h2>Performance by Best Of</h2>
+        <div class="table-wrap"><table><thead><tr><th>Group</th><th>Picks</th><th>Hit</th><th>Profit</th><th>ROI</th></tr></thead><tbody id="byBestOf"></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>Performance by Tier</h2>
+        <div class="table-wrap"><table><thead><tr><th>Group</th><th>Picks</th><th>Hit</th><th>Profit</th><th>ROI</th></tr></thead><tbody id="byTier"></tbody></table></div>
+      </div>
+      <div class="panel">
+        <h2>Performance by Region</h2>
+        <div class="table-wrap"><table><thead><tr><th>Group</th><th>Picks</th><th>Hit</th><th>Profit</th><th>ROI</th></tr></thead><tbody id="byRegion"></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Recent Results</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Date</th><th>Match</th><th>Pick</th><th>Final</th><th>Result</th><th>Confidence</th></tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
