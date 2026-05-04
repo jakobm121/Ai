@@ -3,7 +3,7 @@ import requests
 import json
 from datetime import datetime
 
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f")
 BASE_URL = "https://api.api-tennis.com/tennis/"
 
 if not API_KEY:
