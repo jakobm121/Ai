@@ -1,12 +1,21 @@
 {
-  "generated_at": "2026-05-04T02:02:27.834474+02:00",
+  "generated_at": "2026-05-04T02:09:20.366220+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "PandaScore",
-  "model": "AI77 PandaScore CS2 Free v1",
+  "model": "AI77 PandaScore CS2 Free v2",
   "note": "No betting odds are used. This page tracks prediction accuracy only.",
   "window_hours": {
     "min": 0,
     "max": 72
+  },
+  "settings": {
+    "min_matches_per_team": 3,
+    "min_prob_edge": 0.035,
+    "min_confidence": 52.0,
+    "min_score_diff": 3.5,
+    "skip_bo1": true,
+    "past_pages": 8,
+    "past_per_page": 100
   },
   "picks": []
 }
