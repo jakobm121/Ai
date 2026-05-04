@@ -188,9 +188,13 @@
       "close_loss_rate_10": 0.0,
       "same_tier_recent": 10
     },
-    "result": "pending",
+    "result": "loss",
     "created_at": "2026-05-04T02:29:41.858572+02:00",
-    "reasoning": "Fire Flux Esports rates higher than ALGO Esports in the CS2 PandaScore free-plan model. Signal uses recent match win rate, map differential, clean wins, best-of format and tournament context. No odds are used yet, so this tracks prediction accuracy, not betting ROI."
+    "reasoning": "Fire Flux Esports rates higher than ALGO Esports in the CS2 PandaScore free-plan model. Signal uses recent match win rate, map differential, clean wins, best-of format and tournament context. No odds are used yet, so this tracks prediction accuracy, not betting ROI.",
+    "settled_at": "2026-05-04T14:09:50.969891+02:00",
+    "settled_status": "finished",
+    "winner_id": 136539,
+    "final_score": "2:1"
   },
   {
     "pick_id": "05fe8189025f0e4a9b2d7f3908f0ea9c",
@@ -223,18 +227,18 @@
     "quality_score": 99,
     "pick_stats": {
       "score": 91.4,
-      "matches": 14,
+      "matches": 13,
       "history_source": "id",
       "last_3_win_rate": 1.0,
       "last_5_win_rate": 1.0,
       "last_10_win_rate": 0.8,
-      "map_diff_5": 2.0,
+      "map_diff_5": 1.8,
       "map_diff_10": 1.2,
       "map_for_10": 1.7,
       "map_against_10": 0.5,
       "clean_win_rate_10": 0.7,
       "close_loss_rate_10": 0.1,
-      "same_tier_recent": 8
+      "same_tier_recent": 7
     },
     "opponent_stats": {
       "score": 59.0,
@@ -536,13 +540,13 @@
     "model_prob": 0.719,
     "prob_edge_vs_coinflip": 0.219,
     "team_score": 98.73,
-    "opponent_score": 71.47,
-    "score_diff": 27.26,
+    "opponent_score": 65.87,
+    "score_diff": 32.86,
     "confidence": 94,
     "quality_score": 99,
     "pick_stats": {
       "score": 98.73,
-      "matches": 18,
+      "matches": 17,
       "history_source": "id",
       "last_3_win_rate": 1.0,
       "last_5_win_rate": 1.0,
@@ -556,13 +560,13 @@
       "same_tier_recent": 5
     },
     "opponent_stats": {
-      "score": 71.47,
-      "matches": 35,
+      "score": 65.87,
+      "matches": 34,
       "history_source": "id",
       "last_3_win_rate": 1.0,
-      "last_5_win_rate": 1.0,
+      "last_5_win_rate": 0.8,
       "last_10_win_rate": 0.5,
-      "map_diff_5": 1.8,
+      "map_diff_5": 1.2,
       "map_diff_10": 0.1,
       "map_for_10": 1.2,
       "map_against_10": 1.1,
