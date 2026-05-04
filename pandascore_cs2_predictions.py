@@ -244,6 +244,23 @@ def is_valid_cs2_match(match):
     return True
 
 
+def is_cs_match(match):
+    videogame = match.get("videogame") or {}
+    vg_name = str(videogame.get("name") or "").lower()
+    vg_slug = str(videogame.get("slug") or "").lower()
+
+    if "counter" in vg_name:
+        return True
+
+    if "cs" in vg_slug:
+        return True
+
+    if "csgo" in vg_slug:
+        return True
+
+    return False
+
+
 def fetch_upcoming():
     params = {
         "per_page": UPCOMING_PER_PAGE,
@@ -289,6 +306,12 @@ def fetch_past():
 
 
 def fetch_team_past_matches(team_id):
+    """
+    Correct PandaScore endpoint:
+    /teams/{team_id}/matches
+
+    It is global, so we filter finished CS/CSGO/CS2 matches ourselves.
+    """
     all_matches = []
 
     for page in range(1, TEAM_PAST_PAGES + 1):
@@ -299,15 +322,35 @@ def fetch_team_past_matches(team_id):
         }
 
         try:
-            data = api_get(f"/csgo/teams/{team_id}/matches/past", params)
+            data = api_get(f"/teams/{team_id}/matches", params)
         except Exception as e:
-            debug(f"TEAM PAST ERROR team_id={team_id}: {e}")
+            debug(f"TEAM MATCHES ERROR team_id={team_id}: {e}")
             break
 
         if not isinstance(data, list) or not data:
             break
 
-        all_matches.extend(data)
+        kept = 0
+
+        for match in data:
+            status = str(match.get("status") or "").lower()
+
+            if status != "finished":
+                continue
+
+            if not is_cs_match(match):
+                continue
+
+            if len(get_teams(match)) < 2:
+                continue
+
+            all_matches.append(match)
+            kept += 1
+
+        debug(
+            f"TEAM MATCHES page={page} team_id={team_id} "
+            f"raw={len(data)} kept_finished_cs={kept}"
+        )
 
         time.sleep(API_SLEEP_SECONDS)
 
@@ -352,10 +395,18 @@ def fetch_extra_history_for_upcoming(upcoming):
     for team_id_str in team_ids:
         cached = cache.get(team_id_str)
 
+        # Old cache from wrong endpoint may contain 0 matches.
+        # We do not trust empty cache, so empty cache is fetched again.
         if isinstance(cached, dict) and isinstance(cached.get("matches"), list):
-            extra_matches.extend(cached["matches"])
-            debug(f"TEAM HISTORY cached team_id={team_id_str} matches={len(cached['matches'])}")
-            continue
+            cached_matches = cached.get("matches", [])
+
+            if len(cached_matches) > 0:
+                extra_matches.extend(cached_matches)
+                debug(
+                    f"TEAM HISTORY cached team_id={team_id_str} "
+                    f"matches={len(cached_matches)}"
+                )
+                continue
 
         matches = fetch_team_past_matches(team_id_str)
 
@@ -791,7 +842,7 @@ def build_predictions():
                 "fixture_id": match.get("id"),
                 "sport": "esports",
                 "game": "cs2",
-                "model_version": "ai77_pandascore_cs2_free_v3_team_history",
+                "model_version": "ai77_pandascore_cs2_free_v4_team_matches",
                 "date": dt.strftime("%Y-%m-%d"),
                 "time": dt.strftime("%H:%M"),
                 "league": league,
@@ -884,7 +935,7 @@ def build_predictions():
         "generated_at": datetime.now(tz).isoformat(),
         "timezone": TZ_NAME,
         "source": "PandaScore",
-        "model": "AI77 PandaScore CS2 Free v3 Team History",
+        "model": "AI77 PandaScore CS2 Free v4 Team Matches",
         "note": "No betting odds are used. This page tracks prediction accuracy only.",
         "window_hours": {
             "min": TIME_WINDOW_MIN_HOURS,
