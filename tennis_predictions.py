@@ -32,24 +32,24 @@ API_SLEEP_SECONDS = 0.35
 DAYS_AHEAD = 2
 
 # Pick limits
-MAX_PICKS = 8
+MAX_PICKS = 5
 
 # Strict filters
 MIN_RECENT_MATCHES_EACH = 6
 MIN_BOOKMAKERS = 5
-MIN_EDGE = 0.055
-MIN_CONFIDENCE = 68.0
+MIN_EDGE = 0.065
+MIN_CONFIDENCE = 72.0
 
-ODDS_MIN = 1.55
-ODDS_MAX = 3.25
+ODDS_MIN = 1.60
+ODDS_MAX = 2.85
 
 # Avoid low-quality / unstable contexts if needed
 SKIP_LIVE = True
 SKIP_FINISHED = True
 
 # Model probability cap
-MODEL_PROB_MIN = 0.38
-MODEL_PROB_MAX = 0.74
+MODEL_PROB_MIN = 0.40
+MODEL_PROB_MAX = 0.66
 
 # Odds sanity
 MAX_BEST_TO_MEDIAN_GAP = 0.18  # 18% max difference from median
@@ -622,7 +622,7 @@ def confidence_score(model_prob, score_diff, edge, bookmakers_used, matches_min,
     # Penalize outlier best price
     conf -= clamp(best_median_gap / MAX_BEST_TO_MEDIAN_GAP, 0, 1) * 5
 
-    return round(clamp(conf, 1, 96), 1)
+    return round(clamp(conf, 1, 88), 1)
 
 
 def quality_score(confidence, edge, bookmakers_used, odds, matches_min):
