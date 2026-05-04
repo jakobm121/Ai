@@ -18,6 +18,7 @@ DATA_DIR = "data"
 PREDICTIONS_FILE = os.path.join(DATA_DIR, "cs2_predictions.json")
 RESULTS_FILE = os.path.join(DATA_DIR, "cs2_results.json")
 SNAPSHOT_FILE = os.path.join(DATA_DIR, "cs2_past_snapshot.json")
+TEAM_CACHE_FILE = os.path.join(DATA_DIR, "cs2_team_history_cache.json")
 
 REQUEST_TIMEOUT = 30
 API_SLEEP_SECONDS = 0.8
@@ -25,6 +26,10 @@ API_SLEEP_SECONDS = 0.8
 UPCOMING_PER_PAGE = 100
 PAST_PAGES = 8
 PAST_PER_PAGE = 100
+
+TEAM_PAST_PER_PAGE = 20
+TEAM_PAST_PAGES = 2
+MAX_UNIQUE_TEAMS_TO_FETCH = 120
 
 TIME_WINDOW_MIN_HOURS = 0
 TIME_WINDOW_MAX_HOURS = 72
@@ -36,6 +41,7 @@ MIN_CONFIDENCE = 52.0
 MIN_SCORE_DIFF = 3.5
 
 SKIP_BO1 = True
+USE_TEAM_SPECIFIC_HISTORY = True
 
 DEBUG = True
 
@@ -64,6 +70,7 @@ def load_json(path, default):
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
+
         return data if isinstance(data, type(default)) else default
     except Exception:
         return default
@@ -149,7 +156,6 @@ def normalize_team_name(name):
     text = text.replace("esport", "")
     text = text.replace("gaming", "")
     text = text.replace("team", "")
-    text = text.replace("academy", "academy")
     text = re.sub(r"[^a-z0-9]+", "", text)
     return text
 
@@ -282,6 +288,91 @@ def fetch_past():
     return all_matches
 
 
+def fetch_team_past_matches(team_id):
+    all_matches = []
+
+    for page in range(1, TEAM_PAST_PAGES + 1):
+        params = {
+            "per_page": TEAM_PAST_PER_PAGE,
+            "page": page,
+            "sort": "-begin_at",
+        }
+
+        try:
+            data = api_get(f"/csgo/teams/{team_id}/matches/past", params)
+        except Exception as e:
+            debug(f"TEAM PAST ERROR team_id={team_id}: {e}")
+            break
+
+        if not isinstance(data, list) or not data:
+            break
+
+        all_matches.extend(data)
+
+        time.sleep(API_SLEEP_SECONDS)
+
+    return all_matches
+
+
+def fetch_extra_history_for_upcoming(upcoming):
+    if not USE_TEAM_SPECIFIC_HISTORY:
+        return []
+
+    cache = load_json(TEAM_CACHE_FILE, {})
+
+    if not isinstance(cache, dict):
+        cache = {}
+
+    team_ids = []
+    seen = set()
+
+    for match in upcoming:
+        teams = get_teams(match)
+
+        for team in teams:
+            team_id = team.get("id")
+
+            if not team_id:
+                continue
+
+            team_id_str = str(team_id)
+
+            if team_id_str in seen:
+                continue
+
+            seen.add(team_id_str)
+            team_ids.append(team_id_str)
+
+    team_ids = team_ids[:MAX_UNIQUE_TEAMS_TO_FETCH]
+
+    debug(f"TEAM HISTORY unique_teams={len(team_ids)}")
+
+    extra_matches = []
+
+    for team_id_str in team_ids:
+        cached = cache.get(team_id_str)
+
+        if isinstance(cached, dict) and isinstance(cached.get("matches"), list):
+            extra_matches.extend(cached["matches"])
+            debug(f"TEAM HISTORY cached team_id={team_id_str} matches={len(cached['matches'])}")
+            continue
+
+        matches = fetch_team_past_matches(team_id_str)
+
+        cache[team_id_str] = {
+            "fetched_at": datetime.now(timezone.utc).isoformat(),
+            "matches": matches,
+        }
+
+        extra_matches.extend(matches)
+
+        debug(f"TEAM HISTORY fetched team_id={team_id_str} matches={len(matches)}")
+
+    save_json(TEAM_CACHE_FILE, cache)
+
+    return extra_matches
+
+
 def team_match_result(match, team_id):
     winner_id = match.get("winner_id")
     results = get_results_map(match)
@@ -341,6 +432,7 @@ def build_team_history(past_matches):
             history_by_id[int(team_id)].append(result)
 
             name_key = normalize_team_name(team_name)
+
             if name_key:
                 history_by_name[name_key].append(result)
 
@@ -560,11 +652,16 @@ def build_predictions():
 
     upcoming = fetch_upcoming()
     past = fetch_past()
+    extra_team_past = fetch_extra_history_for_upcoming(upcoming)
+
+    combined_past = past + extra_team_past
 
     debug(f"UPCOMING raw={len(upcoming)}")
     debug(f"PAST raw={len(past)}")
+    debug(f"EXTRA TEAM PAST raw={len(extra_team_past)}")
+    debug(f"COMBINED PAST raw={len(combined_past)}")
 
-    history_by_id, history_by_name = build_team_history(past)
+    history_by_id, history_by_name = build_team_history(combined_past)
 
     debug(f"HISTORY teams_by_id={len(history_by_id)} teams_by_name={len(history_by_name)}")
 
@@ -694,7 +791,7 @@ def build_predictions():
                 "fixture_id": match.get("id"),
                 "sport": "esports",
                 "game": "cs2",
-                "model_version": "ai77_pandascore_cs2_free_v2",
+                "model_version": "ai77_pandascore_cs2_free_v3_team_history",
                 "date": dt.strftime("%Y-%m-%d"),
                 "time": dt.strftime("%H:%M"),
                 "league": league,
@@ -744,7 +841,8 @@ def build_predictions():
                 f"CANDIDATE {pick['match']} | {pick['bet']} | "
                 f"prob={pick['model_prob']} conf={confidence} "
                 f"diff={pick['score_diff']} q={pick['quality_score']} "
-                f"hist={pick_stat['matches']}/{opp_stat['matches']}"
+                f"hist={pick_stat['matches']}/{opp_stat['matches']} "
+                f"src={pick_stat['history_source']}/{opp_stat['history_source']}"
             )
 
         except Exception as e:
@@ -786,7 +884,7 @@ def build_predictions():
         "generated_at": datetime.now(tz).isoformat(),
         "timezone": TZ_NAME,
         "source": "PandaScore",
-        "model": "AI77 PandaScore CS2 Free v2",
+        "model": "AI77 PandaScore CS2 Free v3 Team History",
         "note": "No betting odds are used. This page tracks prediction accuracy only.",
         "window_hours": {
             "min": TIME_WINDOW_MIN_HOURS,
@@ -800,6 +898,10 @@ def build_predictions():
             "skip_bo1": SKIP_BO1,
             "past_pages": PAST_PAGES,
             "past_per_page": PAST_PER_PAGE,
+            "team_past_pages": TEAM_PAST_PAGES,
+            "team_past_per_page": TEAM_PAST_PER_PAGE,
+            "max_unique_teams_to_fetch": MAX_UNIQUE_TEAMS_TO_FETCH,
+            "use_team_specific_history": USE_TEAM_SPECIFIC_HISTORY,
         },
         "picks": final,
     }
