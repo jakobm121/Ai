@@ -29,7 +29,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Create data folders
+      - name: Create data and web folders
         run: |
           mkdir -p data
           mkdir -p web
@@ -46,9 +46,55 @@ jobs:
         run: |
           python pandascore_cs2_settle.py
 
-      - name: Build CS2 site
+      - name: Build CS2 site data
         run: |
           python build_cs2_site.py
+
+      - name: Debug generated files
+        run: |
+          echo "---- data folder ----"
+          ls -la data || true
+          echo "---- web folder ----"
+          ls -la web || true
+
+          python - <<'PY'
+          import json, os
+
+          files = [
+              "data/cs2_predictions.json",
+              "data/cs2_results.json",
+              "data/cs2_team_history_cache.json",
+              "data/cs2_past_snapshot.json",
+              "web/cs2_site_data.json",
+              "web/index.html",
+              "web/style.css",
+              "web/app.js",
+          ]
+
+          for path in files:
+              print("\nFILE:", path, "exists:", os.path.exists(path))
+
+              if not os.path.exists(path):
+                  continue
+
+              if path.endswith(".json"):
+                  with open(path, "r", encoding="utf-8") as f:
+                      data = json.load(f)
+
+                  print("TYPE:", type(data).__name__)
+
+                  if isinstance(data, dict):
+                      print("KEYS:", list(data.keys()))
+                      if isinstance(data.get("picks"), list):
+                          print("picks len:", len(data.get("picks", [])))
+                      if isinstance(data.get("current_picks"), list):
+                          print("current_picks len:", len(data.get("current_picks", [])))
+                      if isinstance(data.get("results"), list):
+                          print("results len:", len(data.get("results", [])))
+
+                  elif isinstance(data, list):
+                      print("list len:", len(data))
+          PY
 
       - name: Commit updated CS2 files
         run: |
@@ -57,10 +103,12 @@ jobs:
 
           git add data/cs2_predictions.json || true
           git add data/cs2_results.json || true
+          git add data/cs2_team_history_cache.json || true
+          git add data/cs2_past_snapshot.json || true
+          git add web/cs2_site_data.json || true
           git add web/index.html || true
           git add web/style.css || true
           git add web/app.js || true
-          git add web/cs2_site_data.json || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
@@ -77,5 +125,10 @@ jobs:
           path: |
             data/cs2_predictions.json
             data/cs2_results.json
+            data/cs2_team_history_cache.json
+            data/cs2_past_snapshot.json
             web/cs2_site_data.json
+            web/index.html
+            web/style.css
+            web/app.js
           if-no-files-found: warn
