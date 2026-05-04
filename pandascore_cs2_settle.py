@@ -1,190 +1,214 @@
 import os
 import json
 import time
-from datetime import datetime, timezone
+from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import requests
 
 PANDASCORE_API_KEY = os.getenv("PANDASCORE_API_KEY")
 BASE_URL = "https://api.pandascore.co"
+
 TZ_NAME = "Europe/Ljubljana"
 
-DATA_DIR = "data"
-RESULTS_FILE = os.path.join(DATA_DIR, "cs2_results.json")
-SETTLE_SNAPSHOT_FILE = os.path.join(DATA_DIR, "cs2_settle_snapshot.json")
+RESULTS_FILE = "data/cs2_results.json"
+PREDICTIONS_FILE = "data/cs2_predictions.json"
+
 REQUEST_TIMEOUT = 30
-API_SLEEP_SECONDS = 0.8
-DEBUG = True
-
-PAST_PAGES = 5
-PAST_PER_PAGE = 100
-RUNNING_PER_PAGE = 100
-
-FINAL_STATUSES = {"finished", "canceled"}
-VOID_STATUSES = {"canceled", "postponed"}
-
-
-def debug(msg):
-    if DEBUG:
-        print(msg)
-
-
-def ensure_dirs():
-    os.makedirs(DATA_DIR, exist_ok=True)
-
-
-def load_json(path, default):
-    if not os.path.exists(path):
-        return default
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        return data if isinstance(data, type(default)) else default
-    except Exception:
-        return default
-
-
-def save_json(path, data):
-    ensure_dirs()
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-        f.write("\n")
+API_SLEEP_SECONDS = 0.4
 
 
 def headers():
     if not PANDASCORE_API_KEY:
         raise RuntimeError("Missing PANDASCORE_API_KEY environment variable.")
+
     return {
         "Authorization": f"Bearer {PANDASCORE_API_KEY}",
         "Accept": "application/json",
     }
 
 
-def api_get(path, params=None, retries=3):
+def load_json(path, default):
+    if not os.path.exists(path):
+        return default
+
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return default
+
+
+def save_json(path, data):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+
+def api_get(path, params=None):
     url = BASE_URL + path
-    params = params.copy() if params else {}
-    for attempt in range(retries):
-        res = requests.get(url, headers=headers(), params=params, timeout=REQUEST_TIMEOUT)
-        if res.status_code in {429, 500, 502, 503, 504}:
-            wait = (attempt + 1) * 3
-            debug(f"API RETRY {res.status_code} {path} sleep={wait}s")
-            time.sleep(wait)
-            continue
-        if res.status_code >= 400:
-            raise RuntimeError(f"HTTP {res.status_code} {path}: {res.text[:500]}")
-        return res.json()
-    raise RuntimeError(f"API failed after retries: {path} {params}")
+
+    res = requests.get(
+        url,
+        headers=headers(),
+        params=params or {},
+        timeout=REQUEST_TIMEOUT,
+    )
+
+    if res.status_code == 404:
+        return None
+
+    if res.status_code == 429:
+        print("RATE LIMIT sleep 5s")
+        time.sleep(5)
+        res = requests.get(
+            url,
+            headers=headers(),
+            params=params or {},
+            timeout=REQUEST_TIMEOUT,
+        )
+
+    if res.status_code >= 400:
+        print(f"API ERROR {res.status_code} {path}: {res.text[:300]}")
+        return None
+
+    return res.json()
+
+
+def get_match_by_id(match_id):
+    match_id = str(match_id)
+
+    endpoints = [
+        f"/matches/{match_id}",
+        f"/csgo/matches/{match_id}",
+    ]
+
+    for endpoint in endpoints:
+        data = api_get(endpoint)
+        time.sleep(API_SLEEP_SECONDS)
+
+        if isinstance(data, dict) and str(data.get("id")) == match_id:
+            return data
+
+    return None
 
 
 def get_results_map(match):
     out = {}
+
     for item in match.get("results") or []:
         team_id = item.get("team_id")
+        score = item.get("score")
+
         if team_id is not None:
             try:
-                out[int(team_id)] = int(item.get("score") or 0)
+                out[int(team_id)] = int(score or 0)
             except Exception:
                 out[int(team_id)] = 0
+
     return out
 
 
-def fetch_running_and_past():
-    matches = []
-    running = api_get("/csgo/matches/running", {"per_page": RUNNING_PER_PAGE})
-    if isinstance(running, list):
-        matches.extend(running)
-    time.sleep(API_SLEEP_SECONDS)
+def final_score_for_pick(match):
+    results = get_results_map(match)
 
-    for page in range(1, PAST_PAGES + 1):
-        past = api_get("/csgo/matches/past", {"per_page": PAST_PER_PAGE, "page": page, "sort": "-begin_at"})
-        if not isinstance(past, list) or not past:
-            break
-        matches.extend(past)
-        time.sleep(API_SLEEP_SECONDS)
+    if not results:
+        return ""
 
-    save_json(SETTLE_SNAPSHOT_FILE, {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "matches": matches,
-    })
-    return matches
+    scores = list(results.values())
+
+    if len(scores) >= 2:
+        return f"{scores[0]}:{scores[1]}"
+
+    return ""
 
 
-def settle_item(item, match):
+def settle_pick(pick, match):
     status = str(match.get("status") or "").lower()
     winner_id = match.get("winner_id")
-    pick_team_id = item.get("pick_team_id")
 
-    debug(f"CHECK {item.get('match')} | {item.get('bet')} | status={status} winner_id={winner_id}")
-
-    if status in VOID_STATUSES:
-        return "storno"
     if status != "finished":
-        return "pending"
-    if winner_id is None or pick_team_id is None:
-        return "pending"
+        return False
+
+    if winner_id is None:
+        return False
+
+    pick_team_id = pick.get("pick_team_id")
+
+    if pick_team_id is None:
+        return False
 
     try:
-        return "win" if int(winner_id) == int(pick_team_id) else "loss"
+        pick_team_id = int(pick_team_id)
+        winner_id = int(winner_id)
     except Exception:
-        return "pending"
+        return False
+
+    pick["result"] = "win" if pick_team_id == winner_id else "loss"
+    pick["settled_at"] = datetime.now(ZoneInfo(TZ_NAME)).isoformat()
+    pick["settled_status"] = status
+    pick["winner_id"] = winner_id
+    pick["final_score"] = final_score_for_pick(match)
+
+    return True
 
 
 def main():
-    ensure_dirs()
-    history = load_json(RESULTS_FILE, [])
-    if not isinstance(history, list):
-        history = []
+    results = load_json(RESULTS_FILE, [])
 
-    pending = [x for x in history if isinstance(x, dict) and x.get("result") == "pending"]
-    debug(f"PENDING PICKS: {len(pending)}")
-    if not pending:
-        save_json(RESULTS_FILE, history)
-        print("CS2 SETTLE DONE: no pending picks.")
-        return
+    if not isinstance(results, list):
+        results = []
 
-    matches = fetch_running_and_past()
-    by_id = {str(m.get("id")): m for m in matches if isinstance(m, dict) and m.get("id") is not None}
+    pending = [
+        p for p in results
+        if isinstance(p, dict) and str(p.get("result") or "pending").lower() == "pending"
+    ]
+
+    print(f"PENDING PICKS: {len(pending)}")
 
     updated = 0
     still_pending = 0
     not_found = 0
-    tz = ZoneInfo(TZ_NAME)
 
-    for item in history:
-        if not isinstance(item, dict) or item.get("result") != "pending":
-            continue
-        match_id = str(item.get("match_id") or item.get("fixture_id") or "")
-        match = by_id.get(match_id)
-        if not match:
-            not_found += 1
-            debug(f"NO MATCH FOUND: {item.get('match')} | match_id={match_id}")
-            continue
+    for pick in pending:
+        match_id = pick.get("match_id") or pick.get("fixture_id")
+        match_name = pick.get("match", "Unknown match")
 
-        new_result = settle_item(item, match)
-        if new_result == "pending":
+        if not match_id:
+            print(f"MISSING MATCH ID: {match_name}")
             still_pending += 1
             continue
 
-        results_map = get_results_map(match)
-        pick_team_id = item.get("pick_team_id")
-        opponent_team_id = item.get("opponent_team_id")
-        final_score = ""
-        try:
-            final_score = f"{results_map.get(int(pick_team_id), 0)}:{results_map.get(int(opponent_team_id), 0)}"
-        except Exception:
-            final_score = json.dumps(results_map, ensure_ascii=False)
+        match = get_match_by_id(match_id)
 
-        item["result"] = new_result
-        item["settled_at"] = datetime.now(tz).isoformat()
-        item["settled_status"] = match.get("status")
-        item["winner_id"] = match.get("winner_id")
-        item["final_score"] = final_score
-        updated += 1
-        debug(f"SETTLED {item.get('match')} | {item.get('bet')} | {final_score} -> {new_result}")
+        if not match:
+            print(f"NO MATCH FOUND - KEEP PENDING: {match_name} | match_id={match_id}")
+            not_found += 1
+            still_pending += 1
+            continue
 
-    save_json(RESULTS_FILE, history)
-    print(f"CS2 SETTLE DONE: updated={updated} still_pending={still_pending} not_found={not_found}")
+        status = str(match.get("status") or "").lower()
+        score = final_score_for_pick(match)
+
+        print(f"CHECK {match_name} | status={status} | score={score or '-'}")
+
+        changed = settle_pick(pick, match)
+
+        if changed:
+            updated += 1
+            print(f"SETTLED {match_name}: {pick['result']} | {pick.get('final_score', '-')}")
+        else:
+            still_pending += 1
+
+    save_json(RESULTS_FILE, results)
+
+    print(
+        f"CS2 SETTLE DONE: updated={updated} "
+        f"still_pending={still_pending} "
+        f"not_found={not_found}"
+    )
 
 
 if __name__ == "__main__":
