@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-04T02:11:03.991664+02:00",
+  "generated_at": "2026-05-04T02:21:18.057625+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "PandaScore",
-  "model": "AI77 PandaScore CS2 Free v2",
+  "model": "AI77 PandaScore CS2 Free v3 Team History",
   "note": "No betting odds are used. This page tracks prediction accuracy only.",
   "window_hours": {
     "min": 0,
@@ -15,7 +15,11 @@
     "min_score_diff": 3.5,
     "skip_bo1": true,
     "past_pages": 8,
-    "past_per_page": 100
+    "past_per_page": 100,
+    "team_past_pages": 2,
+    "team_past_per_page": 20,
+    "max_unique_teams_to_fetch": 120,
+    "use_team_specific_history": true
   },
   "picks": []
 }
