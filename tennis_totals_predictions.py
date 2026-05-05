@@ -331,11 +331,33 @@ def clean_finished_matches(matches):
     for m in matches or []:
         if str(m.get("event_status") or "").lower() != "finished":
             continue
-        if not parse_scores(m.get("scores")):
+
+        parsed = parse_scores(m.get("scores"))
+        if not parsed:
             continue
-        if total_games_from_scores(m.get("scores")) <= 0:
+
+        # Totals model je za normalne best-of-3 singles tekme.
+        # Izločimo bad-data / BO5 / nenormalne rezultate.
+        if len(parsed) < 2 or len(parsed) > 3:
             continue
+
+        total = sum(a + b for a, b in parsed)
+
+        if total < 12 or total > 39:
+            continue
+
+        bad_set = False
+        for a, b in parsed:
+            if a < 0 or b < 0:
+                bad_set = True
+            if max(a, b) > 13:
+                bad_set = True
+
+        if bad_set:
+            continue
+
         out.append(m)
+
     return out
 
 
@@ -509,11 +531,16 @@ def expected_total_games(player_form, opponent_form, h2h_matches, market_info):
     o5 = opponent_form["last_5"]
     o10 = opponent_form["last_10"]
 
+    p10_total = safe_float(p10.get("median_total_games")) * 0.65 + safe_float(p10.get("avg_total_games")) * 0.35
+    o10_total = safe_float(o10.get("median_total_games")) * 0.65 + safe_float(o10.get("avg_total_games")) * 0.35
+    p5_total = safe_float(p5.get("median_total_games")) * 0.60 + safe_float(p5.get("avg_total_games")) * 0.40
+    o5_total = safe_float(o5.get("median_total_games")) * 0.60 + safe_float(o5.get("avg_total_games")) * 0.40
+
     avg_recent = (
-        safe_float(p10.get("avg_total_games")) * 0.32 +
-        safe_float(o10.get("avg_total_games")) * 0.32 +
-        safe_float(p5.get("avg_total_games")) * 0.18 +
-        safe_float(o5.get("avg_total_games")) * 0.18
+        p10_total * 0.34 +
+        o10_total * 0.34 +
+        p5_total * 0.16 +
+        o5_total * 0.16
     )
 
     three_set_rate = (
@@ -544,10 +571,16 @@ def expected_total_games(player_form, opponent_form, h2h_matches, market_info):
 
     if market_info:
         gap = safe_float(market_info.get("market_gap"))
-        if gap >= 0.26:
-            exp -= 1.8
+
+        # Velik favorit pogosto pomeni krajši match: 6-2 6-2, 6-1 6-3 ipd.
+        if gap >= 0.55:
+            exp -= 2.8
+        elif gap >= 0.40:
+            exp -= 2.2
+        elif gap >= 0.26:
+            exp -= 1.6
         elif gap >= 0.18:
-            exp -= 1.1
+            exp -= 1.0
         elif gap <= 0.08:
             exp += 0.8
 
@@ -747,6 +780,12 @@ def main():
                     implied_prob = 1 / odds
                     edge = model_prob - implied_prob
                     margin = abs(exp_games - line)
+
+                    # Ne lovimo OVER na nizki liniji pri ekstremnem favoritu.
+                    if market_info:
+                        market_gap = safe_float(market_info.get("market_gap"))
+                        if side == "over" and line <= 19.5 and market_gap >= 0.55:
+                            continue
 
                     if edge < MIN_EDGE:
                         continue
