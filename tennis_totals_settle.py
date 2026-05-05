@@ -123,8 +123,27 @@ def final_score_string(scores):
     return ", ".join(f"{a}-{b}" for a, b in parsed)
 
 
+def is_bad_terminal_status(status):
+    s = str(status or "").lower().strip()
+    bad = {
+        "cancelled",
+        "canceled",
+        "postponed",
+        "retired",
+        "walkover",
+        "abandoned",
+        "interrupted",
+        "suspended",
+    }
+    return s in bad
+
+
 def settle_pick(pick, fixture):
-    status = str(fixture.get("event_status") or "").lower()
+    status_raw = fixture.get("event_status")
+    status = str(status_raw or "").lower().strip()
+
+    if is_bad_terminal_status(status):
+        return False, "bad_terminal_status"
 
     if status != "finished":
         return False, "not_finished"
@@ -142,20 +161,25 @@ def settle_pick(pick, fixture):
     if side not in {"over", "under"}:
         return False, "bad_side"
 
-    if side == "over":
-        win = total > line
-    else:
-        win = total < line
-
     stake = safe_float(pick.get("stake"))
     odds = safe_float(pick.get("odds"))
 
-    profit = stake * (odds - 1) if win else -stake
+    if total == line:
+        result = "push"
+        profit = 0.0
+    elif side == "over":
+        win = total > line
+        result = "win" if win else "loss"
+        profit = stake * (odds - 1) if win else -stake
+    else:
+        win = total < line
+        result = "win" if win else "loss"
+        profit = stake * (odds - 1) if win else -stake
 
-    pick["result"] = "win" if win else "loss"
+    pick["result"] = result
     pick["profit"] = round(profit, 3)
     pick["settled_at"] = now_iso()
-    pick["settled_status"] = fixture.get("event_status")
+    pick["settled_status"] = status_raw
     pick["event_winner"] = fixture.get("event_winner")
     pick["final_score"] = final_score_string(scores)
     pick["total_games"] = total
@@ -212,18 +236,27 @@ def main():
 
             if changed:
                 debug["updated"] += 1
-                print(f"SETTLED: {match_name} | {pick.get('bet')} | {pick.get('result')} | total={pick.get('total_games')}")
+                print(
+                    f"SETTLED: {match_name} | {pick.get('bet')} | "
+                    f"{pick.get('result')} | total={pick.get('total_games')} | profit={pick.get('profit')}"
+                )
             else:
                 debug["still_pending"] += 1
                 print(f"PENDING: {match_name} | reason={reason} | status={fixture.get('event_status')}")
 
             debug["items"].append({
                 "event_key": event_key,
+                "pick_id": pick.get("pick_id"),
                 "match": match_name,
+                "bet": pick.get("bet"),
+                "side": pick.get("side"),
+                "line": pick.get("line"),
                 "status": reason,
                 "api_status": fixture.get("event_status"),
                 "result": pick.get("result"),
                 "total_games": pick.get("total_games"),
+                "final_score": pick.get("final_score"),
+                "profit": pick.get("profit"),
             })
 
         except Exception as e:
