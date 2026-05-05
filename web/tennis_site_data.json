@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T11:21:31.056150+02:00",
+  "generated_at": "2026-05-05T11:53:03.341491+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -23,18 +23,18 @@
   },
   "summary": {
     "picks": 17,
-    "settled": 4,
-    "pending": 13,
+    "settled": 7,
+    "pending": 10,
     "wins": 2,
-    "losses": 2,
-    "hit_rate": 50.0,
-    "stake": 5.5,
-    "profit": 0.29,
-    "roi": 5.2,
-    "avg_odds": 2.13,
+    "losses": 5,
+    "hit_rate": 28.6,
+    "stake": 9.75,
+    "profit": -3.96,
+    "roi": -40.6,
+    "avg_odds": 2.14,
     "total_results": 17,
-    "settled_picks": 4,
-    "pending_picks": 13
+    "settled_picks": 7,
+    "pending_picks": 10
   },
   "current_picks": [
     {
@@ -1405,9 +1405,14 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-04T23:42:56.087196+02:00",
-      "reasoning": "Y. Yang is selected against C. Zhao in Jiujiang (China) - Qualification. The model prices Y. Yang at 66.0% versus an implied probability of 46.5% from best odds 2.15. Market median is 2.08 across 7 bookmakers, leaving an estimated edge of +19.5%. Recent-form profile: Y. Yang last-10 win rate 40.0%, avg set diff -0.40, avg game diff -1.70; C. Zhao last-10 win rate 10.0%, avg set diff -1.50, avg game diff -4.80. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "Y. Yang is selected against C. Zhao in Jiujiang (China) - Qualification. The model prices Y. Yang at 66.0% versus an implied probability of 46.5% from best odds 2.15. Market median is 2.08 across 7 bookmakers, leaving an estimated edge of +19.5%. Recent-form profile: Y. Yang last-10 win rate 40.0%, avg set diff -0.40, avg game diff -1.70; C. Zhao last-10 win rate 10.0%, avg set diff -1.50, avg game diff -4.80. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-05-05T11:52:52.438952+02:00",
+      "settled_status": "Finished",
+      "event_winner": "Second Player",
+      "final_score": "2-6, 6-3, 3-6"
     },
     {
       "pick_id": "81bbcda8162fa9653a5fa451e78d2f27",
@@ -1540,9 +1545,14 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-04T23:42:53.433551+02:00",
-      "reasoning": "N. Noha Akugue is selected against M. Timofeeva in Istanbul (Turkey) - Qualification. The model prices N. Noha Akugue at 62.0% versus an implied probability of 47.6% from best odds 2.10. Market median is 2.08 across 8 bookmakers, leaving an estimated edge of +14.4%. Recent-form profile: N. Noha Akugue last-10 win rate 80.0%, avg set diff +1.00, avg game diff +2.40; M. Timofeeva last-10 win rate 60.0%, avg set diff +0.20, avg game diff +1.60. Pick type: underdog. Confidence score: 96.0."
+      "reasoning": "N. Noha Akugue is selected against M. Timofeeva in Istanbul (Turkey) - Qualification. The model prices N. Noha Akugue at 62.0% versus an implied probability of 47.6% from best odds 2.10. Market median is 2.08 across 8 bookmakers, leaving an estimated edge of +14.4%. Recent-form profile: N. Noha Akugue last-10 win rate 80.0%, avg set diff +1.00, avg game diff +2.40; M. Timofeeva last-10 win rate 60.0%, avg set diff +0.20, avg game diff +1.60. Pick type: underdog. Confidence score: 96.0.",
+      "profit": -1.5,
+      "settled_at": "2026-05-05T11:52:53.342568+02:00",
+      "settled_status": "Finished",
+      "event_winner": "First Player",
+      "final_score": "6-4, 6-3"
     },
     {
       "pick_id": "5a95345b7bea3219f3c9adee9c103561",
@@ -2080,9 +2090,14 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-05T08:25:47.689736+02:00",
-      "reasoning": "N. Noha Akugue is selected against M. Timofeeva in Istanbul (Turkey) - Qualification. The model prices N. Noha Akugue at 60.0% versus an implied probability of 45.5% from best odds 2.20. Market median is 2.10 across 11 bookmakers, leaving an estimated edge of +14.5%. Recent-form profile: N. Noha Akugue last-10 win rate 80.0%, avg set diff +1.00, avg game diff +2.40; M. Timofeeva last-10 win rate 60.0%, avg set diff +0.20, avg game diff +1.60. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "N. Noha Akugue is selected against M. Timofeeva in Istanbul (Turkey) - Qualification. The model prices N. Noha Akugue at 60.0% versus an implied probability of 45.5% from best odds 2.20. Market median is 2.10 across 11 bookmakers, leaving an estimated edge of +14.5%. Recent-form profile: N. Noha Akugue last-10 win rate 80.0%, avg set diff +1.00, avg game diff +2.40; M. Timofeeva last-10 win rate 60.0%, avg set diff +0.20, avg game diff +1.60. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.5,
+      "settled_at": "2026-05-05T11:52:57.024995+02:00",
+      "settled_status": "Finished",
+      "event_winner": "First Player",
+      "final_score": "6-4, 6-3"
     },
     {
       "pick_id": "428e2873cda7234faf9e54016c78c67a",
@@ -3035,15 +3050,15 @@
       {
         "date": "2026-05-05",
         "picks": 17,
-        "settled": 4,
-        "pending": 13,
+        "settled": 7,
+        "pending": 10,
         "wins": 2,
-        "losses": 2,
-        "hit_rate": 50.0,
-        "stake": 5.5,
-        "profit": 0.29,
-        "roi": 5.2,
-        "avg_odds": 2.13
+        "losses": 5,
+        "hit_rate": 28.6,
+        "stake": 9.75,
+        "profit": -3.96,
+        "roi": -40.6,
+        "avg_odds": 2.14
       }
     ],
     "daily_by_type": [
@@ -3051,15 +3066,15 @@
         "date": "2026-05-05",
         "type": "underdog",
         "picks": 14,
-        "settled": 3,
-        "pending": 11,
+        "settled": 6,
+        "pending": 8,
         "wins": 2,
-        "losses": 1,
-        "hit_rate": 66.7,
-        "stake": 4.0,
-        "profit": 1.79,
-        "roi": 44.7,
-        "avg_odds": 2.28
+        "losses": 4,
+        "hit_rate": 33.3,
+        "stake": 8.25,
+        "profit": -2.46,
+        "roi": -29.8,
+        "avg_odds": 2.21
       },
       {
         "date": "2026-05-05",
@@ -3080,15 +3095,15 @@
       {
         "group": "underdog",
         "picks": 14,
-        "settled": 3,
-        "pending": 11,
+        "settled": 6,
+        "pending": 8,
         "wins": 2,
-        "losses": 1,
-        "hit_rate": 66.7,
-        "stake": 4.0,
-        "profit": 1.79,
-        "roi": 44.7,
-        "avg_odds": 2.28
+        "losses": 4,
+        "hit_rate": 33.3,
+        "stake": 8.25,
+        "profit": -2.46,
+        "roi": -29.8,
+        "avg_odds": 2.21
       },
       {
         "group": "favorite",
@@ -3108,15 +3123,15 @@
       {
         "group": "2.00 - 2.29",
         "picks": 8,
-        "settled": 2,
-        "pending": 6,
+        "settled": 5,
+        "pending": 3,
         "wins": 1,
-        "losses": 1,
-        "hit_rate": 50.0,
-        "stake": 2.75,
-        "profit": -0.09,
-        "roi": -3.2,
-        "avg_odds": 2.17
+        "losses": 4,
+        "hit_rate": 20.0,
+        "stake": 7.0,
+        "profit": -4.34,
+        "roi": -62.0,
+        "avg_odds": 2.16
       },
       {
         "group": "2.30 - 2.69",
@@ -3162,18 +3177,31 @@
       {
         "group": "Elite 88+",
         "picks": 17,
-        "settled": 4,
-        "pending": 13,
+        "settled": 7,
+        "pending": 10,
         "wins": 2,
-        "losses": 2,
-        "hit_rate": 50.0,
-        "stake": 5.5,
-        "profit": 0.29,
-        "roi": 5.2,
-        "avg_odds": 2.13
+        "losses": 5,
+        "hit_rate": 28.6,
+        "stake": 9.75,
+        "profit": -3.96,
+        "roi": -40.6,
+        "avg_odds": 2.14
       }
     ],
     "by_edge": [
+      {
+        "group": "10% - 14.9%",
+        "picks": 7,
+        "settled": 4,
+        "pending": 3,
+        "wins": 1,
+        "losses": 3,
+        "hit_rate": 25.0,
+        "stake": 5.75,
+        "profit": -3.09,
+        "roi": -53.7,
+        "avg_odds": 2.03
+      },
       {
         "group": "20%+",
         "picks": 5,
@@ -3188,73 +3216,60 @@
         "avg_odds": 2.35
       },
       {
-        "group": "10% - 14.9%",
-        "picks": 7,
-        "settled": 2,
-        "pending": 5,
-        "wins": 1,
-        "losses": 1,
-        "hit_rate": 50.0,
-        "stake": 2.75,
-        "profit": -0.09,
-        "roi": -3.2,
-        "avg_odds": 1.9
-      },
-      {
         "group": "15% - 19.9%",
         "picks": 5,
-        "settled": 0,
-        "pending": 5,
+        "settled": 1,
+        "pending": 4,
         "wins": 0,
-        "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "losses": 1,
+        "hit_rate": 0.0,
+        "stake": 1.25,
+        "profit": -1.25,
+        "roi": -100.0,
+        "avg_odds": 2.15
       }
     ],
     "by_stake_label": [
       {
-        "group": "Strong",
-        "picks": 10,
-        "settled": 2,
-        "pending": 8,
-        "wins": 2,
-        "losses": 0,
-        "hit_rate": 100.0,
-        "stake": 2.5,
-        "profit": 3.29,
-        "roi": 131.5,
-        "avg_odds": 2.31
-      },
-      {
         "group": "Top Rated",
         "picks": 7,
-        "settled": 2,
-        "pending": 5,
+        "settled": 4,
+        "pending": 3,
         "wins": 0,
-        "losses": 2,
+        "losses": 4,
         "hit_rate": 0.0,
-        "stake": 3.0,
-        "profit": -3.0,
+        "stake": 6.0,
+        "profit": -6.0,
         "roi": -100.0,
-        "avg_odds": 1.94
+        "avg_odds": 2.04
+      },
+      {
+        "group": "Strong",
+        "picks": 10,
+        "settled": 3,
+        "pending": 7,
+        "wins": 2,
+        "losses": 1,
+        "hit_rate": 66.7,
+        "stake": 3.75,
+        "profit": 2.04,
+        "roi": 54.3,
+        "avg_odds": 2.26
       }
     ],
     "by_tour_level": [
       {
         "group": "challenger",
         "picks": 13,
-        "settled": 4,
-        "pending": 9,
+        "settled": 7,
+        "pending": 6,
         "wins": 2,
-        "losses": 2,
-        "hit_rate": 50.0,
-        "stake": 5.5,
-        "profit": 0.29,
-        "roi": 5.2,
-        "avg_odds": 2.13
+        "losses": 5,
+        "hit_rate": 28.6,
+        "stake": 9.75,
+        "profit": -3.96,
+        "roi": -40.6,
+        "avg_odds": 2.14
       },
       {
         "group": "atp",
@@ -3287,15 +3302,15 @@
       {
         "group": "women",
         "picks": 6,
-        "settled": 2,
-        "pending": 4,
+        "settled": 5,
+        "pending": 1,
         "wins": 1,
-        "losses": 1,
-        "hit_rate": 50.0,
-        "stake": 2.75,
-        "profit": 0.38,
-        "roi": 13.6,
-        "avg_odds": 2.35
+        "losses": 4,
+        "hit_rate": 20.0,
+        "stake": 7.0,
+        "profit": -3.88,
+        "roi": -55.4,
+        "avg_odds": 2.23
       },
       {
         "group": "men",
@@ -3352,43 +3367,43 @@
         "avg_odds": 1.9
       },
       {
-        "group": "Unibet",
-        "picks": 3,
-        "settled": 0,
-        "pending": 3,
-        "wins": 0,
-        "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
-      },
-      {
         "group": "Betano",
         "picks": 2,
-        "settled": 0,
+        "settled": 1,
+        "pending": 1,
+        "wins": 0,
+        "losses": 1,
+        "hit_rate": 0.0,
+        "stake": 1.25,
+        "profit": -1.25,
+        "roi": -100.0,
+        "avg_odds": 2.15
+      },
+      {
+        "group": "Unibet",
+        "picks": 3,
+        "settled": 1,
         "pending": 2,
         "wins": 0,
-        "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "losses": 1,
+        "hit_rate": 0.0,
+        "stake": 1.5,
+        "profit": -1.5,
+        "roi": -100.0,
+        "avg_odds": 2.2
       },
       {
         "group": "10Bet",
         "picks": 1,
-        "settled": 0,
-        "pending": 1,
+        "settled": 1,
+        "pending": 0,
         "wins": 0,
-        "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "losses": 1,
+        "hit_rate": 0.0,
+        "stake": 1.5,
+        "profit": -1.5,
+        "roi": -100.0,
+        "avg_odds": 2.1
       },
       {
         "group": "Sbo",
