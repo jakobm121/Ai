@@ -95,7 +95,12 @@ def safe_float(value, default=None):
 
 def safe_int(value, default=0):
     try:
-        return int(value)
+        text = str(value).strip()
+
+        if "." in text:
+            text = text.split(".", 1)[0]
+
+        return int(text)
     except Exception:
         return default
 
@@ -131,8 +136,8 @@ def today_local():
     return datetime.now(ZoneInfo(TZ_NAME)).date()
 
 
-def build_pick_id(event_key, side, player_key, odds):
-    raw = f"tennis|{event_key}|{side}|{player_key}|{odds}"
+def build_pick_id(event_key, side, player_key, odds=None):
+    raw = f"tennis_value_v1|{event_key}|{side}|{player_key}"
     return hashlib.md5(raw.encode("utf-8")).hexdigest()
 
 
@@ -677,9 +682,9 @@ def tournament_context(match):
 
     text = f"{event_type} {tournament_name} {round_name}".lower()
 
-    if "women" in text:
+    if "women" in text or "wta" in text:
         tour_gender = "women"
-    elif "men" in text:
+    elif "men" in text or "atp" in text:
         tour_gender = "men"
     else:
         tour_gender = "unknown"
