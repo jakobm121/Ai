@@ -1,0 +1,55 @@
+name: Tennis Clean Results
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tennis-clean-results
+  cancel-in-progress: false
+
+jobs:
+  tennis-clean-results:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run cleanup script
+        run: |
+          python clean_tennis_results.py
+
+      - name: Commit cleaned results
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git pull --rebase origin main
+
+          git add data/*.json || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Clean tennis results"
+            git push
+          fi
+
+      - name: Upload cleaned results artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tennis-clean-results-output
+          path: |
+            data/*.json
+          if-no-files-found: warn
