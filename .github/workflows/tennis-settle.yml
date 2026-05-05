@@ -30,9 +30,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Create data folder
+      - name: Create folders
         run: |
           mkdir -p data
+          mkdir -p web
 
       - name: Settle tennis results
         env:
@@ -40,7 +41,11 @@ jobs:
         run: |
           python tennis_settle.py
 
-      - name: Commit tennis settled results
+      - name: Build tennis site
+        run: |
+          python build_tennis_site.py
+
+      - name: Commit tennis settled results and site
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
@@ -48,10 +53,15 @@ jobs:
           git add data/tennis_results.json || true
           git add data/tennis_settle_debug.json || true
 
+          git add web/tennis.html || true
+          git add web/tennis_app.js || true
+          git add web/tennis_style.css || true
+          git add web/tennis_site_data.json || true
+
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Settle tennis results"
+            git commit -m "Settle tennis results and update site"
             git push
           fi
 
@@ -63,4 +73,5 @@ jobs:
           path: |
             data/tennis_results.json
             data/tennis_settle_debug.json
+            web/tennis_site_data.json
           if-no-files-found: warn
