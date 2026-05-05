@@ -3,7 +3,7 @@ name: Tennis Value Model
 on:
   workflow_dispatch:
   schedule:
-    # Runs every 30 minutes
+    # Runs every 4 hours
     - cron: "0 */4 * * *"
 
 permissions:
@@ -29,15 +29,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Create data folder
+      - name: Create folders
         run: |
           mkdir -p data
+          mkdir -p web
 
       - name: Run tennis predictions
         env:
           API_KEY: ${{ secrets.API_KEY }}
         run: |
           python tennis_predictions.py
+
+      - name: Build tennis site
+        run: |
+          python build_tennis_site.py
 
       - name: Commit tennis files
         run: |
@@ -48,10 +53,15 @@ jobs:
           git add data/tennis_results.json || true
           git add data/tennis_debug.json || true
 
+          git add web/tennis.html || true
+          git add web/tennis_app.js || true
+          git add web/tennis_style.css || true
+          git add web/tennis_site_data.json || true
+
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Update tennis value model"
+            git commit -m "Update tennis value model and site"
             git push
           fi
 
@@ -64,4 +74,5 @@ jobs:
             data/tennis_predictions.json
             data/tennis_results.json
             data/tennis_debug.json
+            web/tennis_site_data.json
           if-no-files-found: warn
