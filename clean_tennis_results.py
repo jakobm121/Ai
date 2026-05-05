@@ -3,7 +3,7 @@ import os
 import shutil
 from datetime import datetime
 
-RESULTS_FILE = "data/tennis_results.json"
+RESULTS_FILE = "data/tennis_totals_results.json"
 
 REMOVE_PICK_IDS = {
     "05f7e73fe1f472dcf442d312bba6d1d4",
