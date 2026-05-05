@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI77 Tennis Value Model</title>
+  <link rel="stylesheet" href="tennis_style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">AI77 Research Engine</p>
+      <h1>Tennis Value Model</h1>
+      <p class="subtitle">
+        Match winner value signals powered by player form, H2H, market odds and strict filtering.
+      </p>
+    </div>
+    <div class="heroBox">
+      <span>Last update</span>
+      <strong id="lastUpdate">Loading...</strong>
+    </div>
+  </header>
+
+  <main>
+    <section class="notice">
+      <strong>Test Mode</strong>
+      <span>
+        This page tracks model performance and market value signals. ROI can fluctuate heavily while the model is being calibrated.
+      </span>
+    </section>
+
+    <section class="cards" id="summaryCards"></section>
+
+    <section class="panel">
+      <div class="panelHeader">
+        <div>
+          <h2>Current Picks</h2>
+          <p>Latest active tennis value signals.</p>
+        </div>
+      </div>
+
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Match</th>
+              <th>Pick</th>
+              <th>Odds</th>
+              <th>Type</th>
+              <th>Edge</th>
+              <th>Conf</th>
+              <th>Stake</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="currentPicksBody">
+            <tr><td colspan="9" class="muted">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panelHeader">
+        <div>
+          <h2>Daily Performance</h2>
+          <p>Performance grouped by date for clearer day-by-day tracking.</p>
+        </div>
+      </div>
+
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Picks</th>
+              <th>Settled</th>
+              <th>Pending</th>
+              <th>W-L</th>
+              <th>Hit</th>
+              <th>Stake</th>
+              <th>Profit</th>
+              <th>ROI</th>
+              <th>Avg Odds</th>
+            </tr>
+          </thead>
+          <tbody id="dailyBody">
+            <tr><td colspan="10" class="muted">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid2">
+      <section class="panel">
+        <h2>By Favorite / Underdog</h2>
+        <div class="tableWrap small">
+          <table>
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Picks</th>
+                <th>Settled</th>
+                <th>Hit</th>
+                <th>Profit</th>
+                <th>ROI</th>
+              </tr>
+            </thead>
+            <tbody id="byFavoriteType"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>By Odds Band</h2>
+        <div class="tableWrap small">
+          <table>
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Picks</th>
+                <th>Settled</th>
+                <th>Hit</th>
+                <th>Profit</th>
+                <th>ROI</th>
+              </tr>
+            </thead>
+            <tbody id="byOddsBand"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>By Confidence</h2>
+        <div class="tableWrap small">
+          <table>
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Picks</th>
+                <th>Settled</th>
+                <th>Hit</th>
+                <th>Profit</th>
+                <th>ROI</th>
+              </tr>
+            </thead>
+            <tbody id="byConfidence"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>By Stake Label</h2>
+        <div class="tableWrap small">
+          <table>
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Picks</th>
+                <th>Settled</th>
+                <th>Hit</th>
+                <th>Profit</th>
+                <th>ROI</th>
+              </tr>
+            </thead>
+            <tbody id="byStakeLabel"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>By Tour Level</h2>
+        <div class="tableWrap small">
+          <table>
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Picks</th>
+                <th>Settled</th>
+                <th>Hit</th>
+                <th>Profit</th>
+                <th>ROI</th>
+              </tr>
+            </thead>
+            <tbody id="byTourLevel"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>By Gender</h2>
+        <div class="tableWrap small">
+          <table>
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Picks</th>
+                <th>Settled</th>
+                <th>Hit</th>
+                <th>Profit</th>
+                <th>ROI</th>
+              </tr>
+            </thead>
+            <tbody id="byGender"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="panel">
+      <div class="panelHeader">
+        <div>
+          <h2>Recent Results</h2>
+          <p>Latest settled and pending picks.</p>
+        </div>
+      </div>
+
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Match</th>
+              <th>Pick</th>
+              <th>Odds</th>
+              <th>Final Score</th>
+              <th>Result</th>
+              <th>Profit</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody">
+            <tr><td colspan="7" class="muted">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="tennis_app.js"></script>
+</body>
+</html>
