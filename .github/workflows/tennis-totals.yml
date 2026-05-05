@@ -29,15 +29,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Create data folder
+      - name: Create data and web folders
         run: |
           mkdir -p data
+          mkdir -p web
 
       - name: Run tennis totals predictions
         env:
           API_KEY: ${{ secrets.API_KEY }}
         run: |
           python tennis_totals_predictions.py
+
+      - name: Build tennis totals site
+        run: |
+          python build_tennis_totals_site.py
 
       - name: Commit tennis totals files
         run: |
@@ -47,6 +52,7 @@ jobs:
           git add data/tennis_totals_predictions.json || true
           git add data/tennis_totals_results.json || true
           git add data/tennis_totals_debug.json || true
+          git add web/tennis_totals_site_data.json || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
@@ -64,4 +70,5 @@ jobs:
             data/tennis_totals_predictions.json
             data/tennis_totals_results.json
             data/tennis_totals_debug.json
+            web/tennis_totals_site_data.json
           if-no-files-found: warn
