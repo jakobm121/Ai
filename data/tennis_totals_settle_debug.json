@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-07T12:41:09.620819+02:00",
-  "pending_before": 10,
-  "updated": 1,
-  "still_pending": 9,
+  "generated_at": "2026-05-07T18:23:49.378202+02:00",
+  "pending_before": 9,
+  "updated": 4,
+  "still_pending": 5,
   "not_found": 0,
   "errors": [],
   "items": [
@@ -27,12 +27,12 @@
       "bet": "OVER 22.5 games",
       "side": "over",
       "line": 22.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "loss",
+      "total_games": 10,
+      "final_score": "4-6",
+      "profit": -0.75
     },
     {
       "event_key": 12125162,
@@ -41,12 +41,12 @@
       "bet": "OVER 20.5 games",
       "side": "over",
       "line": 20.5,
-      "status": "not_finished",
-      "api_status": "Set 1",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "win",
+      "total_games": 22,
+      "final_score": "7-5, 6-4",
+      "profit": 0.862
     },
     {
       "event_key": 12124450,
@@ -55,12 +55,12 @@
       "bet": "UNDER 22.5 games",
       "side": "under",
       "line": 22.5,
-      "status": "not_finished",
-      "api_status": "Set 2",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "win",
+      "total_games": 17,
+      "final_score": "6-2, 6-3",
+      "profit": 0.765
     },
     {
       "event_key": 12125167,
@@ -70,7 +70,7 @@
       "side": "over",
       "line": 22.5,
       "status": "not_finished",
-      "api_status": "",
+      "api_status": "Set 2",
       "result": "pending",
       "total_games": null,
       "final_score": null,
@@ -125,26 +125,12 @@
       "bet": "UNDER 21.5 games",
       "side": "under",
       "line": 21.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null
-    },
-    {
-      "event_key": 12124439,
-      "pick_id": "09baaffe2de253e43d1792b01fb7a58e",
-      "match": "Z. Bergs - T. Atmane",
-      "bet": "OVER 22.5 games",
-      "side": "over",
-      "line": 22.5,
       "status": "settled",
       "api_status": "Finished",
-      "result": "loss",
-      "total_games": 19,
-      "final_score": "3-6, 4-6",
-      "profit": -0.75
+      "result": "win",
+      "total_games": 20,
+      "final_score": "4-6, 4-6",
+      "profit": 0.787
     }
   ]
 }
