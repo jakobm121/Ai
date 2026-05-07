@@ -294,3 +294,7 @@ tr:last-child td {
     grid-template-columns: 1fr;
   }
 }
+
+.grid2 .panel:nth-child(3) {
+  grid-column: 1 / -1;
+}
