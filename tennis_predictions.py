@@ -32,7 +32,7 @@ API_SLEEP_SECONDS = 0.35
 DAYS_AHEAD = 2
 
 # Pick limits
-MAX_PICKS = 5
+MAX_PICKS = 12
 
 # Strict filters
 MIN_RECENT_MATCHES_EACH = 6
