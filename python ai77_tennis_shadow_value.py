@@ -1,0 +1,1264 @@
+import os
+import json
+import math
+import time
+import statistics
+import hashlib
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+from collections import defaultdict
+
+import requests
+
+
+# ============================================================
+# AI77 TENNIS SHADOW VALUE MODEL
+# Separate test version. Does NOT touch old files.
+# ============================================================
+
+API_KEY = os.getenv("TENNIS_API_KEY") or os.getenv("API_KEY")
+BASE_URL = "https://api.api-tennis.com/tennis/"
+
+TZ_NAME = "Europe/Ljubljana"
+
+DATA_DIR = "data"
+PREDICTIONS_FILE = os.path.join(DATA_DIR, "tennis_shadow_predictions.json")
+RESULTS_FILE = os.path.join(DATA_DIR, "tennis_shadow_results.json")
+DEBUG_FILE = os.path.join(DATA_DIR, "tennis_shadow_debug.json")
+
+MODEL_VERSION = "ai77_tennis_shadow_value_v1"
+
+REQUEST_TIMEOUT = 30
+API_SLEEP_SECONDS = 0.35
+
+DAYS_AHEAD = 1
+MAX_PICKS = 10
+
+# Base data quality
+MIN_RECENT_MATCHES_EACH = 6
+MIN_BOOKMAKERS = 7
+MIN_CONFIDENCE = 76.0
+
+# Shadow filters from sample
+ODDS_MIN = 1.80
+ODDS_MAX = 2.70
+EDGE_MIN = 0.10
+EDGE_MAX = 0.22
+MAX_BEST_TO_MEDIAN_GAP = 0.08
+
+# Sample showed ATP weak, so reject by default
+REJECT_ATP = True
+
+# Model probability cap
+MODEL_PROB_MIN = 0.40
+MODEL_PROB_MAX = 0.66
+
+SKIP_LIVE = True
+SKIP_FINISHED = True
+
+
+# ============================================================
+# HELPERS
+# ============================================================
+
+def debug(msg):
+    print(msg)
+
+
+def ensure_dirs():
+    os.makedirs(DATA_DIR, exist_ok=True)
+
+
+def save_json(path, data):
+    ensure_dirs()
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+
+def load_json(path, default):
+    if not os.path.exists(path):
+        return default
+
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data if isinstance(data, type(default)) else default
+    except Exception:
+        return default
+
+
+def safe_float(value, default=None):
+    try:
+        return float(value)
+    except Exception:
+        return default
+
+
+def safe_int(value, default=0):
+    try:
+        text = str(value).strip()
+        if "." in text:
+            text = text.split(".", 1)[0]
+        return int(text)
+    except Exception:
+        return default
+
+
+def clamp(value, lo, hi):
+    return max(lo, min(hi, value))
+
+
+def median(values):
+    vals = [safe_float(v) for v in values]
+    vals = [v for v in vals if v is not None and v > 1.0]
+
+    if not vals:
+        return None
+
+    return float(statistics.median(vals))
+
+
+def avg(values, default=0.0):
+    vals = [v for v in values if isinstance(v, (int, float))]
+    if not vals:
+        return default
+    return sum(vals) / len(vals)
+
+
+def pct(part, total):
+    if not total:
+        return 0.0
+    return part / total
+
+
+def today_local():
+    return datetime.now(ZoneInfo(TZ_NAME)).date()
+
+
+def build_pick_id(event_key, side, player_key):
+    # No odds in ID. Same player/match does not become duplicate if odds move.
+    raw = f"{MODEL_VERSION}|{event_key}|{side}|{player_key}"
+    return hashlib.md5(raw.encode("utf-8")).hexdigest()
+
+
+def parse_match_date_time(match):
+    date_s = match.get("event_date")
+    time_s = match.get("event_time") or "00:00"
+
+    try:
+        dt = datetime.strptime(f"{date_s} {time_s}", "%Y-%m-%d %H:%M")
+        return dt.replace(tzinfo=ZoneInfo(TZ_NAME))
+    except Exception:
+        return None
+
+
+def api_call(params, retries=3):
+    if not API_KEY:
+        raise RuntimeError("Missing TENNIS_API_KEY or API_KEY environment variable.")
+
+    params = params.copy()
+    params["APIkey"] = API_KEY
+
+    for attempt in range(retries):
+        try:
+            res = requests.get(BASE_URL, params=params, timeout=REQUEST_TIMEOUT)
+
+            if res.status_code in {429, 500, 502, 503, 504}:
+                wait = 3 * (attempt + 1)
+                debug(f"API retry {res.status_code}, sleeping {wait}s")
+                time.sleep(wait)
+                continue
+
+            if res.status_code >= 400:
+                raise RuntimeError(f"HTTP {res.status_code}: {res.text[:400]}")
+
+            return res.json()
+
+        except Exception as e:
+            if attempt == retries - 1:
+                raise
+
+            wait = 2 * (attempt + 1)
+            debug(f"API exception {e}, sleeping {wait}s")
+            time.sleep(wait)
+
+    raise RuntimeError("API failed after retries")
+
+
+# ============================================================
+# API FETCHERS
+# ============================================================
+
+def fetch_fixtures_for_date(date_value):
+    date_s = date_value.strftime("%Y-%m-%d")
+
+    data = api_call({
+        "method": "get_fixtures",
+        "date_start": date_s,
+        "date_stop": date_s,
+    })
+
+    time.sleep(API_SLEEP_SECONDS)
+
+    if data.get("success") != 1:
+        debug(f"Fixtures error for {date_s}: {data}")
+        return []
+
+    result = data.get("result") or []
+
+    if not isinstance(result, list):
+        return []
+
+    debug(f"FIXTURES {date_s}: {len(result)}")
+    return result
+
+
+def fetch_all_fixtures():
+    start = today_local()
+    out = []
+
+    for i in range(DAYS_AHEAD):
+        date_value = start + timedelta(days=i)
+        out.extend(fetch_fixtures_for_date(date_value))
+
+    return out
+
+
+def fetch_odds(event_key):
+    data = api_call({
+        "method": "get_odds",
+        "event_key": event_key,
+    })
+
+    time.sleep(API_SLEEP_SECONDS)
+
+    if data.get("success") != 1:
+        return {}
+
+    result = data.get("result") or {}
+    return result.get(str(event_key)) or result.get(int(event_key)) or {}
+
+
+def fetch_h2h(first_player_key, second_player_key):
+    data = api_call({
+        "method": "get_H2H",
+        "first_player_key": first_player_key,
+        "second_player_key": second_player_key,
+    })
+
+    time.sleep(API_SLEEP_SECONDS)
+
+    if data.get("success") != 1:
+        return {}
+
+    return data.get("result") or {}
+
+
+# ============================================================
+# ODDS PARSING
+# ============================================================
+
+def parse_home_away_odds(odds_blob):
+    market = odds_blob.get("Home/Away")
+
+    if not isinstance(market, dict):
+        return None
+
+    home = market.get("Home") or {}
+    away = market.get("Away") or {}
+
+    if not isinstance(home, dict) or not isinstance(away, dict):
+        return None
+
+    home_odds = []
+    away_odds = []
+
+    for book, odd in home.items():
+        value = safe_float(odd)
+        if value and value > 1:
+            home_odds.append({
+                "bookmaker": book,
+                "odds": value,
+            })
+
+    for book, odd in away.items():
+        value = safe_float(odd)
+        if value and value > 1:
+            away_odds.append({
+                "bookmaker": book,
+                "odds": value,
+            })
+
+    if not home_odds or not away_odds:
+        return None
+
+    home_best = max(home_odds, key=lambda x: x["odds"])
+    away_best = max(away_odds, key=lambda x: x["odds"])
+
+    home_median = median([x["odds"] for x in home_odds])
+    away_median = median([x["odds"] for x in away_odds])
+
+    common_books = set(x["bookmaker"] for x in home_odds) & set(x["bookmaker"] for x in away_odds)
+    common_count = len(common_books) if common_books else min(len(home_odds), len(away_odds))
+
+    return {
+        "home": {
+            "best_odds": home_best["odds"],
+            "best_bookmaker": home_best["bookmaker"],
+            "median_odds": home_median,
+            "bookmakers": len(home_odds),
+            "raw": home_odds,
+        },
+        "away": {
+            "best_odds": away_best["odds"],
+            "best_bookmaker": away_best["bookmaker"],
+            "median_odds": away_median,
+            "bookmakers": len(away_odds),
+            "raw": away_odds,
+        },
+        "bookmakers_used": min(len(home_odds), len(away_odds), common_count),
+    }
+
+
+def best_to_median_gap(best_odds, median_odds):
+    if not best_odds or not median_odds:
+        return 999.0
+    return (best_odds - median_odds) / median_odds
+
+
+# ============================================================
+# FORM PARSING
+# ============================================================
+
+def get_match_winner_side(match, player_key):
+    winner = match.get("event_winner")
+
+    first_key = safe_int(match.get("first_player_key"))
+    second_key = safe_int(match.get("second_player_key"))
+    player_key = safe_int(player_key)
+
+    if winner == "First Player":
+        winner_key = first_key
+    elif winner == "Second Player":
+        winner_key = second_key
+    else:
+        return None
+
+    return winner_key == player_key
+
+
+def parse_final_sets(match, player_key):
+    first_key = safe_int(match.get("first_player_key"))
+    second_key = safe_int(match.get("second_player_key"))
+    player_key = safe_int(player_key)
+
+    scores = match.get("scores") or []
+
+    sets_for = 0
+    sets_against = 0
+    games_for = 0
+    games_against = 0
+
+    for s in scores:
+        a = safe_int(s.get("score_first"))
+        b = safe_int(s.get("score_second"))
+
+        if player_key == first_key:
+            gf, ga = a, b
+        elif player_key == second_key:
+            gf, ga = b, a
+        else:
+            continue
+
+        games_for += gf
+        games_against += ga
+
+        if gf > ga:
+            sets_for += 1
+        elif ga > gf:
+            sets_against += 1
+
+    return sets_for, sets_against, games_for, games_against
+
+
+def normalize_player_results(raw_results, player_key, current_event_key=None):
+    rows = []
+
+    if not isinstance(raw_results, list):
+        return rows
+
+    for match in raw_results:
+        if str(match.get("event_status") or "").lower() != "finished":
+            continue
+
+        if current_event_key and str(match.get("event_key")) == str(current_event_key):
+            continue
+
+        won = get_match_winner_side(match, player_key)
+
+        if won is None:
+            continue
+
+        sets_for, sets_against, games_for, games_against = parse_final_sets(match, player_key)
+
+        if sets_for + sets_against <= 0:
+            continue
+
+        rows.append({
+            "event_key": match.get("event_key"),
+            "date": match.get("event_date") or "",
+            "won": bool(won),
+            "sets_for": sets_for,
+            "sets_against": sets_against,
+            "set_diff": sets_for - sets_against,
+            "games_for": games_for,
+            "games_against": games_against,
+            "game_diff": games_for - games_against,
+            "straight_win": bool(won and sets_against == 0),
+            "straight_loss": bool((not won) and sets_for == 0),
+            "close_loss": bool((not won) and sets_for > 0),
+        })
+
+    rows.sort(key=lambda x: x.get("date") or "", reverse=True)
+    return rows
+
+
+def h2h_score(h2h_rows, first_player_key, second_player_key):
+    if not isinstance(h2h_rows, list) or not h2h_rows:
+        return {
+            "matches": 0,
+            "first_wins": 0,
+            "second_wins": 0,
+            "first_score": 0.0,
+            "second_score": 0.0,
+        }
+
+    first_wins = 0
+    second_wins = 0
+    usable = 0
+
+    for match in h2h_rows:
+        if str(match.get("event_status") or "").lower() != "finished":
+            continue
+
+        winner = match.get("event_winner")
+        first_key = safe_int(match.get("first_player_key"))
+        second_key = safe_int(match.get("second_player_key"))
+
+        if winner == "First Player":
+            winner_key = first_key
+        elif winner == "Second Player":
+            winner_key = second_key
+        else:
+            continue
+
+        if winner_key == safe_int(first_player_key):
+            first_wins += 1
+            usable += 1
+        elif winner_key == safe_int(second_player_key):
+            second_wins += 1
+            usable += 1
+
+    if usable == 0:
+        return {
+            "matches": 0,
+            "first_wins": 0,
+            "second_wins": 0,
+            "first_score": 0.0,
+            "second_score": 0.0,
+        }
+
+    first_rate = first_wins / usable
+    second_rate = second_wins / usable
+
+    return {
+        "matches": usable,
+        "first_wins": first_wins,
+        "second_wins": second_wins,
+        "first_score": round((first_rate - 0.5) * 6, 3),
+        "second_score": round((second_rate - 0.5) * 6, 3),
+    }
+
+
+def form_summary(rows):
+    total = len(rows)
+
+    if total == 0:
+        return {
+            "matches": 0,
+            "wins": 0,
+            "losses": 0,
+            "win_rate": 0,
+            "set_diff_avg": 0,
+            "game_diff_avg": 0,
+            "straight_win_rate": 0,
+            "straight_loss_rate": 0,
+            "close_loss_rate": 0,
+            "fatigue_matches_7d": 0,
+            "fatigue_matches_3d": 0,
+        }
+
+    wins = sum(1 for r in rows if r["won"])
+    today = today_local()
+
+    fatigue_7d = 0
+    fatigue_3d = 0
+
+    for r in rows:
+        try:
+            d = datetime.strptime(r["date"], "%Y-%m-%d").date()
+            days_ago = (today - d).days
+
+            if 0 <= days_ago <= 7:
+                fatigue_7d += 1
+
+            if 0 <= days_ago <= 3:
+                fatigue_3d += 1
+        except Exception:
+            pass
+
+    return {
+        "matches": total,
+        "wins": wins,
+        "losses": total - wins,
+        "win_rate": round(wins / total, 4),
+        "set_diff_avg": round(avg([r["set_diff"] for r in rows]), 4),
+        "game_diff_avg": round(avg([r["game_diff"] for r in rows]), 4),
+        "straight_win_rate": round(pct(sum(1 for r in rows if r["straight_win"]), total), 4),
+        "straight_loss_rate": round(pct(sum(1 for r in rows if r["straight_loss"]), total), 4),
+        "close_loss_rate": round(pct(sum(1 for r in rows if r["close_loss"]), total), 4),
+        "fatigue_matches_7d": fatigue_7d,
+        "fatigue_matches_3d": fatigue_3d,
+    }
+
+
+def player_strength(rows, h2h_adj=0.0):
+    s5 = form_summary(rows[:5])
+    s10 = form_summary(rows[:10])
+    s20 = form_summary(rows[:20])
+
+    score = 50.0
+
+    score += (s5["win_rate"] - 0.5) * 22
+    score += (s10["win_rate"] - 0.5) * 18
+    score += (s20["win_rate"] - 0.5) * 10
+
+    score += clamp(s10["set_diff_avg"], -1.5, 1.5) * 6
+    score += clamp(s10["game_diff_avg"] / 5.0, -1.5, 1.5) * 5
+
+    score += s10["straight_win_rate"] * 5
+    score -= s10["straight_loss_rate"] * 6
+    score += s10["close_loss_rate"] * 2
+
+    score -= clamp(s10["fatigue_matches_3d"] - 1, 0, 4) * 1.8
+    score -= clamp(s10["fatigue_matches_7d"] - 3, 0, 6) * 0.8
+
+    score += h2h_adj
+
+    return {
+        "score": round(clamp(score, 20, 80), 3),
+        "last_5": s5,
+        "last_10": s10,
+        "last_20": s20,
+    }
+
+
+def probability_from_scores(score_a, score_b):
+    diff = score_a - score_b
+
+    raw = 1 / (1 + math.exp(-(diff / 13.5)))
+
+    return clamp(raw, MODEL_PROB_MIN, MODEL_PROB_MAX)
+
+
+# ============================================================
+# SCORING
+# ============================================================
+
+def confidence_score(model_prob, score_diff, edge, bookmakers_used, matches_min, odds, gap):
+    conf = 45.0
+
+    conf += clamp(abs(model_prob - 0.5) / 0.20, 0, 1) * 18
+    conf += clamp(abs(score_diff) / 18, 0, 1) * 14
+    conf += clamp(edge / 0.12, 0, 1) * 18
+    conf += clamp(bookmakers_used / 10, 0, 1) * 9
+    conf += clamp(matches_min / 14, 0, 1) * 8
+
+    if 2.30 <= odds <= 2.69:
+        conf += 5
+    elif 1.80 <= odds <= 2.70:
+        conf += 2
+
+    conf -= clamp(gap / MAX_BEST_TO_MEDIAN_GAP, 0, 1) * 5
+
+    return round(clamp(conf, 1, 88), 1)
+
+
+def quality_score(confidence, edge, bookmakers_used, odds, matches_min):
+    q = 0.0
+
+    q += clamp(confidence / 100, 0, 1) * 30
+    q += clamp(edge / 0.16, 0, 1) * 25
+    q += clamp(bookmakers_used / 10, 0, 1) * 15
+    q += clamp(matches_min / 14, 0, 1) * 10
+
+    if 2.30 <= odds <= 2.69:
+        q += 15
+    elif 1.80 <= odds <= 2.70:
+        q += 5
+
+    return round(clamp(q, 1, 99), 1)
+
+
+def shadow_risk_score(pick):
+    score = 0
+
+    odds = pick["odds"]
+    edge = pick["edge"]
+    confidence = pick["confidence"]
+    tour_level = pick["tour_level"]
+    bookmakers = pick["bookmakers_used"]
+    gap = pick["best_to_median_gap"]
+    score_diff = pick["score_diff"]
+
+    if 2.30 <= odds <= 2.69:
+        score += 2
+
+    if 0.10 <= edge <= 0.149:
+        score += 2
+    elif 0.15 <= edge <= 0.22:
+        score += 1
+
+    if 82 <= confidence <= 87:
+        score += 2
+    elif confidence >= 88:
+        score += 1
+
+    if tour_level == "challenger":
+        score += 2
+    elif tour_level == "wta":
+        score += 1
+
+    if bookmakers >= 9:
+        score += 1
+
+    if gap <= 0.04:
+        score += 1
+
+    if abs(score_diff) >= 10:
+        score += 1
+
+    return score
+
+
+def stake_from_shadow(pick):
+    """
+    Conservative staking:
+    - no 1.50 Top Rated
+    - max 1.25
+    - strongest profile gets 1.25
+    - normal accepted profile gets 1.00
+    - weak accepted profile gets 0.75
+    """
+    risk_score = pick["shadow_risk_score"]
+    odds = pick["odds"]
+    edge = pick["edge"]
+    confidence = pick["confidence"]
+
+    if risk_score >= 7 and 2.20 <= odds <= 2.70 and 0.10 <= edge <= 0.22 and confidence >= 82:
+        return 1.25, "Shadow Strong"
+
+    if risk_score >= 5:
+        return 1.00, "Shadow Standard"
+
+    return 0.75, "Shadow Small"
+
+
+def passes_shadow_filters(pick):
+    odds = pick["odds"]
+    edge = pick["edge"]
+    confidence = pick["confidence"]
+    tour_level = pick["tour_level"]
+    bookmakers = pick["bookmakers_used"]
+    gap = pick["best_to_median_gap"]
+
+    if odds < ODDS_MIN:
+        return False, "odds_low"
+
+    if odds > ODDS_MAX:
+        return False, "odds_high"
+
+    if edge < EDGE_MIN:
+        return False, "edge_low"
+
+    if edge > EDGE_MAX:
+        return False, "edge_high"
+
+    if bookmakers < MIN_BOOKMAKERS:
+        return False, "bookmakers_low"
+
+    if gap > MAX_BEST_TO_MEDIAN_GAP:
+        return False, "gap_high"
+
+    if confidence < MIN_CONFIDENCE:
+        return False, "confidence_low"
+
+    if REJECT_ATP and tour_level == "atp":
+        return False, "atp_rejected"
+
+    risk = shadow_risk_score(pick)
+    pick["shadow_risk_score"] = risk
+
+    stake, label = stake_from_shadow(pick)
+    pick["stake"] = stake
+    pick["stake_label"] = label
+
+    # Minimum risk score. This keeps test version cleaner.
+    if risk < 4:
+        return False, "risk_score_low"
+
+    return True, "accepted"
+
+
+# ============================================================
+# MATCH CONTEXT
+# ============================================================
+
+def is_match_eligible(match):
+    status = str(match.get("event_status") or "").lower()
+
+    if SKIP_FINISHED and status == "finished":
+        return False
+
+    if SKIP_LIVE and str(match.get("event_live") or "0") == "1":
+        return False
+
+    if status in {"finished", "cancelled", "postponed", "retired", "walkover"}:
+        return False
+
+    if not match.get("event_key"):
+        return False
+
+    if not match.get("first_player_key") or not match.get("second_player_key"):
+        return False
+
+    if not match.get("event_first_player") or not match.get("event_second_player"):
+        return False
+
+    return True
+
+
+def tournament_context(match):
+    event_type = str(match.get("event_type_type") or "")
+    tournament_name = str(match.get("tournament_name") or "")
+    round_name = str(match.get("tournament_round") or "")
+    qualification = str(match.get("event_qualification") or "").lower() == "true"
+
+    text = f"{event_type} {tournament_name} {round_name}".lower()
+
+    if "women" in text or "wta" in text:
+        gender = "women"
+    elif "men" in text or "atp" in text:
+        gender = "men"
+    else:
+        gender = "unknown"
+
+    if "itf" in text:
+        level = "itf"
+    elif "challenger" in text:
+        level = "challenger"
+    elif "atp" in text:
+        level = "atp"
+    elif "wta" in text:
+        level = "wta"
+    else:
+        level = "other"
+
+    return {
+        "gender": gender,
+        "level": level,
+        "qualification": qualification,
+    }
+
+
+# ============================================================
+# REASONING
+# ============================================================
+
+def build_reasoning(
+    player,
+    opponent,
+    tournament,
+    odds,
+    median_odds,
+    model_prob,
+    implied_prob,
+    edge,
+    confidence,
+    player_strength,
+    opponent_strength,
+    bookmakers_used,
+    favorite_type,
+    shadow_risk_score_value,
+    stake_label,
+):
+    p10 = player_strength["last_10"]
+    o10 = opponent_strength["last_10"]
+
+    return (
+        f"{player} is selected against {opponent} in {tournament}. "
+        f"The model prices {player} at {model_prob * 100:.1f}% versus implied probability "
+        f"{implied_prob * 100:.1f}% from best odds {odds:.2f}. "
+        f"Market median is {median_odds:.2f} across {bookmakers_used} bookmakers, leaving edge "
+        f"+{edge * 100:.1f}%. "
+        f"Recent form: {player} last-10 win rate {p10['win_rate'] * 100:.1f}%, "
+        f"set diff {p10['set_diff_avg']:+.2f}, game diff {p10['game_diff_avg']:+.2f}; "
+        f"{opponent} last-10 win rate {o10['win_rate'] * 100:.1f}%, "
+        f"set diff {o10['set_diff_avg']:+.2f}, game diff {o10['game_diff_avg']:+.2f}. "
+        f"Pick type: {favorite_type}. Confidence: {confidence:.1f}. "
+        f"Shadow risk score: {shadow_risk_score_value}. Stake label: {stake_label}."
+    )
+
+
+# ============================================================
+# CANDIDATE BUILDING
+# ============================================================
+
+def build_candidate(match, reject_counter=None):
+    event_key = match.get("event_key")
+
+    first_key = safe_int(match.get("first_player_key"))
+    second_key = safe_int(match.get("second_player_key"))
+
+    first_name = match.get("event_first_player")
+    second_name = match.get("event_second_player")
+
+    odds_blob = fetch_odds(event_key)
+    parsed_odds = parse_home_away_odds(odds_blob)
+
+    if not parsed_odds:
+        if reject_counter is not None:
+            reject_counter["no_odds"] += 1
+        return []
+
+    bookmakers_used = parsed_odds["bookmakers_used"]
+
+    if bookmakers_used < MIN_BOOKMAKERS:
+        if reject_counter is not None:
+            reject_counter["bookmakers_low_pre"] += 1
+        return []
+
+    h2h = fetch_h2h(first_key, second_key)
+
+    first_results_raw = h2h.get("firstPlayerResults") or []
+    second_results_raw = h2h.get("secondPlayerResults") or []
+    h2h_rows = h2h.get("H2H") or []
+
+    first_rows = normalize_player_results(first_results_raw, first_key, current_event_key=event_key)
+    second_rows = normalize_player_results(second_results_raw, second_key, current_event_key=event_key)
+
+    if len(first_rows) < MIN_RECENT_MATCHES_EACH or len(second_rows) < MIN_RECENT_MATCHES_EACH:
+        if reject_counter is not None:
+            reject_counter["low_history"] += 1
+
+        debug(f"SKIP low history {first_name} - {second_name}: {len(first_rows)} / {len(second_rows)}")
+        return []
+
+    h2h_data = h2h_score(h2h_rows, first_key, second_key)
+
+    first_strength = player_strength(first_rows, h2h_adj=h2h_data["first_score"])
+    second_strength = player_strength(second_rows, h2h_adj=h2h_data["second_score"])
+
+    prob_first = probability_from_scores(first_strength["score"], second_strength["score"])
+    prob_second = 1.0 - prob_first
+
+    context = tournament_context(match)
+    dt = parse_match_date_time(match)
+
+    sides = [
+        {
+            "side": "home",
+            "market_side": "Home",
+            "player_key": first_key,
+            "player_name": first_name,
+            "opponent_key": second_key,
+            "opponent_name": second_name,
+            "model_prob": prob_first,
+            "player_strength": first_strength,
+            "opponent_strength": second_strength,
+            "score_diff": first_strength["score"] - second_strength["score"],
+            "odds_data": parsed_odds["home"],
+        },
+        {
+            "side": "away",
+            "market_side": "Away",
+            "player_key": second_key,
+            "player_name": second_name,
+            "opponent_key": first_key,
+            "opponent_name": first_name,
+            "model_prob": prob_second,
+            "player_strength": second_strength,
+            "opponent_strength": first_strength,
+            "score_diff": second_strength["score"] - first_strength["score"],
+            "odds_data": parsed_odds["away"],
+        },
+    ]
+
+    candidates = []
+
+    for side in sides:
+        odds = safe_float(side["odds_data"]["best_odds"])
+        median_odds = safe_float(side["odds_data"]["median_odds"])
+
+        if odds is None or median_odds is None:
+            continue
+
+        implied_prob = 1 / odds
+        edge = side["model_prob"] - implied_prob
+        gap = best_to_median_gap(odds, median_odds)
+
+        matches_min = min(
+            side["player_strength"]["last_20"]["matches"],
+            side["opponent_strength"]["last_20"]["matches"],
+        )
+
+        confidence = confidence_score(
+            model_prob=side["model_prob"],
+            score_diff=side["score_diff"],
+            edge=edge,
+            bookmakers_used=bookmakers_used,
+            matches_min=matches_min,
+            odds=odds,
+            gap=gap,
+        )
+
+        quality = quality_score(
+            confidence=confidence,
+            edge=edge,
+            bookmakers_used=bookmakers_used,
+            odds=odds,
+            matches_min=matches_min,
+        )
+
+        favorite_type = "favorite" if odds < 2.0 else "underdog"
+
+        pick = {
+            "pick_id": build_pick_id(event_key, side["side"], side["player_key"]),
+            "event_key": event_key,
+            "fixture_id": event_key,
+            "sport": "tennis",
+            "model_version": MODEL_VERSION,
+
+            "date": dt.strftime("%Y-%m-%d") if dt else match.get("event_date"),
+            "time": dt.strftime("%H:%M") if dt else match.get("event_time"),
+            "match": f"{first_name} - {second_name}",
+            "bet": side["player_name"],
+
+            "bucket": "match_winner",
+            "side": side["side"],
+            "market_side": side["market_side"],
+
+            "player_key": side["player_key"],
+            "player_name": side["player_name"],
+            "opponent_key": side["opponent_key"],
+            "opponent_name": side["opponent_name"],
+
+            "tournament": match.get("tournament_name") or "",
+            "tournament_key": match.get("tournament_key"),
+            "round": match.get("tournament_round") or "",
+            "event_type": match.get("event_type_type") or "",
+            "qualification": context["qualification"],
+            "tour_level": context["level"],
+            "gender": context["gender"],
+
+            "odds": round(odds, 2),
+            "best_bookmaker": side["odds_data"]["best_bookmaker"],
+            "market_median_odds": round(median_odds, 2),
+            "bookmakers_used": bookmakers_used,
+            "best_to_median_gap": round(gap, 4),
+
+            "model_prob": round(side["model_prob"], 4),
+            "implied_prob": round(implied_prob, 4),
+            "edge": round(edge, 4),
+
+            "player_score": side["player_strength"]["score"],
+            "opponent_score": side["opponent_strength"]["score"],
+            "score_diff": round(side["score_diff"], 3),
+
+            "confidence": confidence,
+            "quality_score": quality,
+            "favorite_type": favorite_type,
+
+            "h2h": h2h_data,
+            "player_form": side["player_strength"],
+            "opponent_form": side["opponent_strength"],
+
+            "result": "pending",
+            "created_at": datetime.now(ZoneInfo(TZ_NAME)).isoformat(),
+        }
+
+        accepted, reason = passes_shadow_filters(pick)
+        pick["shadow_filter_reason"] = reason
+
+        if not accepted:
+            if reject_counter is not None:
+                reject_counter[reason] += 1
+            continue
+
+        pick["reasoning"] = build_reasoning(
+            player=side["player_name"],
+            opponent=side["opponent_name"],
+            tournament=match.get("tournament_name") or "",
+            odds=odds,
+            median_odds=median_odds,
+            model_prob=side["model_prob"],
+            implied_prob=implied_prob,
+            edge=edge,
+            confidence=confidence,
+            player_strength=side["player_strength"],
+            opponent_strength=side["opponent_strength"],
+            bookmakers_used=bookmakers_used,
+            favorite_type=favorite_type,
+            shadow_risk_score_value=pick["shadow_risk_score"],
+            stake_label=pick["stake_label"],
+        )
+
+        candidates.append(pick)
+
+    return candidates
+
+
+# ============================================================
+# HISTORY APPEND - NO DUPLICATES
+# ============================================================
+
+def append_unique_history(predictions):
+    history = load_json(RESULTS_FILE, [])
+
+    if not isinstance(history, list):
+        history = []
+
+    by_pick_id = {
+        item.get("pick_id"): idx
+        for idx, item in enumerate(history)
+        if isinstance(item, dict) and item.get("pick_id")
+    }
+
+    added = 0
+    updated_pending = 0
+
+    for pick in predictions:
+        pick_id = pick.get("pick_id")
+
+        if not pick_id:
+            continue
+
+        if pick_id not in by_pick_id:
+            history.append(pick.copy())
+            by_pick_id[pick_id] = len(history) - 1
+            added += 1
+        else:
+            idx = by_pick_id[pick_id]
+            old = history[idx]
+
+            # Refresh only pending picks. Settled history is never overwritten.
+            if str(old.get("result") or "pending").lower() == "pending":
+                new_pick = pick.copy()
+
+                if old.get("created_at"):
+                    new_pick["created_at"] = old.get("created_at")
+
+                history[idx] = new_pick
+                updated_pending += 1
+
+    save_json(RESULTS_FILE, history)
+
+    debug(f"SHADOW HISTORY added={added} updated_pending={updated_pending} total={len(history)}")
+
+
+# ============================================================
+# MAIN BUILD
+# ============================================================
+
+def build_predictions():
+    ensure_dirs()
+
+    now = datetime.now(ZoneInfo(TZ_NAME))
+    fixtures = fetch_all_fixtures()
+
+    candidates = []
+    debug_items = []
+    reject_counter = defaultdict(int)
+
+    checked = 0
+    skipped_ineligible = 0
+    errors = 0
+
+    for match in fixtures:
+        checked += 1
+
+        try:
+            if not is_match_eligible(match):
+                skipped_ineligible += 1
+                continue
+
+            match_name = f"{match.get('event_first_player')} - {match.get('event_second_player')}"
+            debug(f"SHADOW CHECK {match_name} | event_key={match.get('event_key')}")
+
+            built = build_candidate(match, reject_counter=reject_counter)
+
+            if built:
+                debug(f"SHADOW CANDIDATES {match_name}: {len(built)}")
+                candidates.extend(built)
+
+        except Exception as e:
+            errors += 1
+
+            debug(
+                f"ERROR match={match.get('event_key')} "
+                f"{match.get('event_first_player')} - {match.get('event_second_player')}: {e}"
+            )
+
+            debug_items.append({
+                "event_key": match.get("event_key"),
+                "match": f"{match.get('event_first_player')} - {match.get('event_second_player')}",
+                "error": str(e),
+            })
+
+    # One pick per event. This is no-duplicate rule inside one run.
+    best_by_event = {}
+
+    for pick in candidates:
+        event_key = str(pick["event_key"])
+        old = best_by_event.get(event_key)
+
+        if not old:
+            best_by_event[event_key] = pick
+            continue
+
+        new_rank = (
+            pick["shadow_risk_score"],
+            pick["quality_score"],
+            pick["confidence"],
+            pick["edge"],
+            pick["bookmakers_used"],
+        )
+
+        old_rank = (
+            old["shadow_risk_score"],
+            old["quality_score"],
+            old["confidence"],
+            old["edge"],
+            old["bookmakers_used"],
+        )
+
+        if new_rank > old_rank:
+            best_by_event[event_key] = pick
+
+    final = list(best_by_event.values())
+
+    final.sort(
+        key=lambda x: (
+            x["shadow_risk_score"],
+            x["quality_score"],
+            x["confidence"],
+            x["edge"],
+            x["bookmakers_used"],
+        ),
+        reverse=True,
+    )
+
+    final = final[:MAX_PICKS]
+    final.sort(key=lambda x: (x["date"], x["time"]))
+
+    payload = {
+        "generated_at": now.isoformat(),
+        "timezone": TZ_NAME,
+        "source": "API-Tennis",
+        "model": "AI77 Tennis Shadow Value Model v1",
+        "model_version": MODEL_VERSION,
+        "market": "Home/Away Match Winner",
+
+        "files": {
+            "predictions": PREDICTIONS_FILE,
+            "results": RESULTS_FILE,
+            "debug": DEBUG_FILE,
+        },
+
+        "stake_mode": "shadow_risk_score_max_1_25",
+
+        "dedupe": {
+            "one_pick_per_event": True,
+            "pick_id_excludes_odds": True,
+            "settled_history_never_overwritten": True,
+        },
+
+        "filters": {
+            "min_recent_matches_each": MIN_RECENT_MATCHES_EACH,
+            "min_bookmakers": MIN_BOOKMAKERS,
+            "min_confidence": MIN_CONFIDENCE,
+            "odds_min": ODDS_MIN,
+            "odds_max": ODDS_MAX,
+            "edge_min": EDGE_MIN,
+            "edge_max": EDGE_MAX,
+            "max_best_to_median_gap": MAX_BEST_TO_MEDIAN_GAP,
+            "reject_atp": REJECT_ATP,
+            "max_picks": MAX_PICKS,
+            "days_ahead": DAYS_AHEAD,
+        },
+
+        "summary": {
+            "fixtures_checked": checked,
+            "candidates_raw": len(candidates),
+            "final_picks": len(final),
+            "skipped_ineligible": skipped_ineligible,
+            "errors": errors,
+            "rejects": dict(reject_counter),
+        },
+
+        "picks": final,
+    }
+
+    save_json(PREDICTIONS_FILE, payload)
+    append_unique_history(final)
+
+    save_json(DEBUG_FILE, {
+        "generated_at": now.isoformat(),
+        "summary": payload["summary"],
+        "errors": debug_items,
+    })
+
+    return payload
+
+
+def main():
+    payload = build_predictions()
+
+    print("")
+    print("TENNIS SHADOW PREDICTIONS DONE")
+    print(f"Fixtures checked: {payload['summary']['fixtures_checked']}")
+    print(f"Raw candidates: {payload['summary']['candidates_raw']}")
+    print(f"Final picks: {payload['summary']['final_picks']}")
+    print(f"Saved: {PREDICTIONS_FILE}")
+    print(f"History: {RESULTS_FILE}")
+    print("")
+
+    if payload["summary"].get("rejects"):
+        print("Reject summary:")
+        for reason, count in sorted(payload["summary"]["rejects"].items(), key=lambda x: x[1], reverse=True):
+            print(f"  {reason}: {count}")
+        print("")
+
+    for pick in payload["picks"]:
+        print(
+            f"{pick['date']} {pick['time']} | {pick['match']} | "
+            f"{pick['bet']} @ {pick['odds']} | edge={pick['edge']} | "
+            f"conf={pick['confidence']} | q={pick['quality_score']} | "
+            f"risk={pick['shadow_risk_score']} | stake={pick['stake']} | "
+            f"{pick['stake_label']} | {pick['tour_level']}"
+        )
+
+
+if __name__ == "__main__":
+    main()
