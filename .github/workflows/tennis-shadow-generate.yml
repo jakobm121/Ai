@@ -31,7 +31,7 @@ jobs:
 
       - name: Run tennis shadow generator
         env:
-          TENNIS_API_KEY: ${{ secrets.TENNIS_API_KEY }}
+          TENNIS_API_KEY: ${{ secrets.API_KEY }}
         run: |
           python ai77_tennis_shadow_value.py
 
