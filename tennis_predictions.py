@@ -29,7 +29,7 @@ REQUEST_TIMEOUT = 30
 API_SLEEP_SECONDS = 0.35
 
 # Dates to scan
-DAYS_AHEAD = 2
+DAYS_AHEAD = 1
 
 # Pick limits
 MAX_PICKS = 15
