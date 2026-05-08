@@ -1,0 +1,50 @@
+name: Tennis Shadow Generate
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Vsak dan ob 06:05 Ljubljana časa v poletnem času = 04:05 UTC
+    - cron: "5 4 * * *"
+    # Dodatni popoldanski run, če želiš več pickov čez dan
+    - cron: "5 14 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run tennis shadow generator
+        env:
+          TENNIS_API_KEY: ${{ secrets.TENNIS_API_KEY }}
+        run: |
+          python ai77_tennis_shadow.py
+
+      - name: Commit shadow prediction files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/tennis_shadow_predictions.json data/tennis_shadow_results.json data/tennis_shadow_debug.json
+
+          if git diff --cached --quiet; then
+            echo "No shadow prediction changes to commit."
+          else
+            git commit -m "Update tennis shadow predictions"
+            git push
+          fi
