@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T23:15:00.548638+02:00",
+  "generated_at": "2026-05-08T05:46:10.891037+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -15,10 +15,10 @@
     "days_ahead": 2
   },
   "predictions_summary": {
-    "fixtures_checked": 654,
-    "candidates_raw": 12,
-    "final_picks": 12,
-    "skipped_ineligible": 423,
+    "fixtures_checked": 275,
+    "candidates_raw": 11,
+    "final_picks": 11,
+    "skipped_ineligible": 15,
     "errors": 0
   },
   "summary": {
@@ -173,141 +173,6 @@
       "reasoning": "J. Choe is selected against Z. Zhao in M15 Wuning. The model prices J. Choe at 66.0% versus an implied probability of 53.8% from best odds 1.86. Market median is 1.83 across 8 bookmakers, leaving an estimated edge of +12.2%. Recent-form profile: J. Choe last-10 win rate 60.0%, avg set diff +0.30, avg game diff -0.30; Z. Zhao last-10 win rate 30.0%, avg set diff -0.60, avg game diff -1.50. Pick type: favorite. Confidence score: 88.0."
     },
     {
-      "pick_id": "1e8a69def1ae7f516fabd7c31a88d0b0",
-      "event_key": 12125285,
-      "fixture_id": 12125285,
-      "sport": "tennis",
-      "model_version": "ai77_tennis_value_v1",
-      "date": "2026-05-08",
-      "time": "05:00",
-      "match": "H. Watson - X. You",
-      "bet": "X. You",
-      "bucket": "match_winner",
-      "side": "away",
-      "market_side": "Away",
-      "player_key": 1819,
-      "player_name": "X. You",
-      "opponent_key": 1155,
-      "opponent_name": "H. Watson",
-      "tournament": "Jiujiang (China) - Qualification",
-      "tournament_key": 13829,
-      "round": "Jiujiang - Quarter-finals",
-      "event_type": "Challenger Women Singles",
-      "qualification": false,
-      "tour_level": "challenger",
-      "gender": "women",
-      "odds": 2.4,
-      "best_bookmaker": "Unibet",
-      "market_median_odds": 2.24,
-      "bookmakers_used": 10,
-      "best_to_median_gap": 0.0738,
-      "model_prob": 0.6,
-      "implied_prob": 0.4167,
-      "edge": 0.1833,
-      "player_score": 79.9,
-      "opponent_score": 51.8,
-      "score_diff": 28.1,
-      "confidence": 88,
-      "quality_score": 92.9,
-      "stake": 1.5,
-      "stake_label": "Top Rated",
-      "favorite_type": "underdog",
-      "h2h": {
-        "matches": 0,
-        "first_wins": 0,
-        "second_wins": 0,
-        "first_score": 0.0,
-        "second_score": 0.0
-      },
-      "player_form": {
-        "score": 79.9,
-        "last_5": {
-          "matches": 5,
-          "wins": 4,
-          "losses": 1,
-          "win_rate": 0.8,
-          "set_diff_avg": 1.2,
-          "game_diff_avg": 5.0,
-          "straight_win_rate": 0.6,
-          "straight_loss_rate": 0.0,
-          "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 1,
-          "fatigue_matches_3d": 1
-        },
-        "last_10": {
-          "matches": 10,
-          "wins": 8,
-          "losses": 2,
-          "win_rate": 0.8,
-          "set_diff_avg": 1.2,
-          "game_diff_avg": 4.3,
-          "straight_win_rate": 0.6,
-          "straight_loss_rate": 0.0,
-          "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 1,
-          "fatigue_matches_3d": 1
-        },
-        "last_20": {
-          "matches": 10,
-          "wins": 8,
-          "losses": 2,
-          "win_rate": 0.8,
-          "set_diff_avg": 1.2,
-          "game_diff_avg": 4.3,
-          "straight_win_rate": 0.6,
-          "straight_loss_rate": 0.0,
-          "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 1,
-          "fatigue_matches_3d": 1
-        }
-      },
-      "opponent_form": {
-        "score": 51.8,
-        "last_5": {
-          "matches": 5,
-          "wins": 3,
-          "losses": 2,
-          "win_rate": 0.6,
-          "set_diff_avg": 0.6,
-          "game_diff_avg": 2.0,
-          "straight_win_rate": 0.6,
-          "straight_loss_rate": 0.2,
-          "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
-        },
-        "last_10": {
-          "matches": 10,
-          "wins": 5,
-          "losses": 5,
-          "win_rate": 0.5,
-          "set_diff_avg": 0.1,
-          "game_diff_avg": 0.2,
-          "straight_win_rate": 0.4,
-          "straight_loss_rate": 0.3,
-          "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
-        },
-        "last_20": {
-          "matches": 10,
-          "wins": 5,
-          "losses": 5,
-          "win_rate": 0.5,
-          "set_diff_avg": 0.1,
-          "game_diff_avg": 0.2,
-          "straight_win_rate": 0.4,
-          "straight_loss_rate": 0.3,
-          "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
-        }
-      },
-      "result": "pending",
-      "created_at": "2026-05-07T19:56:05.043707+02:00",
-      "reasoning": "X. You is selected against H. Watson in Jiujiang (China) - Qualification. The model prices X. You at 60.0% versus an implied probability of 41.7% from best odds 2.40. Market median is 2.24 across 10 bookmakers, leaving an estimated edge of +18.3%. Recent-form profile: X. You last-10 win rate 80.0%, avg set diff +1.20, avg game diff +4.30; H. Watson last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.20. Pick type: underdog. Confidence score: 88.0."
-    },
-    {
       "pick_id": "8cee8232e2e97b48632c2bb91a997d50",
       "event_key": 12125661,
       "fixture_id": 12125661,
@@ -340,8 +205,8 @@
       "implied_prob": 0.4348,
       "edge": 0.2252,
       "player_score": 69.5,
-      "opponent_score": 42.2,
-      "score_diff": 27.3,
+      "opponent_score": 44.0,
+      "score_diff": 25.5,
       "confidence": 88,
       "quality_score": 88.4,
       "stake": 1.25,
@@ -366,7 +231,7 @@
           "straight_win_rate": 0.2,
           "straight_loss_rate": 0.2,
           "close_loss_rate": 0.0,
-          "fatigue_matches_7d": 3,
+          "fatigue_matches_7d": 2,
           "fatigue_matches_3d": 2
         },
         "last_10": {
@@ -379,7 +244,7 @@
           "straight_win_rate": 0.3,
           "straight_loss_rate": 0.1,
           "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 3,
+          "fatigue_matches_7d": 2,
           "fatigue_matches_3d": 2
         },
         "last_20": {
@@ -392,12 +257,12 @@
           "straight_win_rate": 0.3,
           "straight_loss_rate": 0.1,
           "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 3,
+          "fatigue_matches_7d": 2,
           "fatigue_matches_3d": 2
         }
       },
       "opponent_form": {
-        "score": 42.2,
+        "score": 44.0,
         "last_5": {
           "matches": 5,
           "wins": 3,
@@ -409,7 +274,7 @@
           "straight_loss_rate": 0.2,
           "close_loss_rate": 0.2,
           "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
+          "fatigue_matches_3d": 1
         },
         "last_10": {
           "matches": 10,
@@ -422,7 +287,7 @@
           "straight_loss_rate": 0.4,
           "close_loss_rate": 0.2,
           "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
+          "fatigue_matches_3d": 1
         },
         "last_20": {
           "matches": 10,
@@ -435,7 +300,7 @@
           "straight_loss_rate": 0.4,
           "close_loss_rate": 0.2,
           "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
+          "fatigue_matches_3d": 1
         }
       },
       "result": "pending",
@@ -501,7 +366,7 @@
           "straight_win_rate": 0.2,
           "straight_loss_rate": 0.0,
           "close_loss_rate": 0.4,
-          "fatigue_matches_7d": 1,
+          "fatigue_matches_7d": 0,
           "fatigue_matches_3d": 0
         },
         "last_10": {
@@ -514,7 +379,7 @@
           "straight_win_rate": 0.1,
           "straight_loss_rate": 0.3,
           "close_loss_rate": 0.3,
-          "fatigue_matches_7d": 1,
+          "fatigue_matches_7d": 0,
           "fatigue_matches_3d": 0
         },
         "last_20": {
@@ -527,7 +392,7 @@
           "straight_win_rate": 0.1,
           "straight_loss_rate": 0.3,
           "close_loss_rate": 0.3,
-          "fatigue_matches_7d": 1,
+          "fatigue_matches_7d": 0,
           "fatigue_matches_3d": 0
         }
       },
@@ -879,9 +744,9 @@
       "model_prob": 0.66,
       "implied_prob": 0.4049,
       "edge": 0.2551,
-      "player_score": 77.0,
+      "player_score": 77.8,
       "opponent_score": 57.8,
-      "score_diff": 19.2,
+      "score_diff": 20.0,
       "confidence": 88,
       "quality_score": 90.9,
       "stake": 1.25,
@@ -895,7 +760,7 @@
         "second_score": -3.0
       },
       "player_form": {
-        "score": 77.0,
+        "score": 77.8,
         "last_5": {
           "matches": 5,
           "wins": 5,
@@ -906,7 +771,7 @@
           "straight_win_rate": 0.4,
           "straight_loss_rate": 0.0,
           "close_loss_rate": 0.0,
-          "fatigue_matches_7d": 5,
+          "fatigue_matches_7d": 4,
           "fatigue_matches_3d": 1
         },
         "last_10": {
@@ -919,7 +784,7 @@
           "straight_win_rate": 0.4,
           "straight_loss_rate": 0.1,
           "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 5,
+          "fatigue_matches_7d": 4,
           "fatigue_matches_3d": 1
         },
         "last_20": {
@@ -932,7 +797,7 @@
           "straight_win_rate": 0.4,
           "straight_loss_rate": 0.1,
           "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 5,
+          "fatigue_matches_7d": 4,
           "fatigue_matches_3d": 1
         }
       },
@@ -1277,7 +1142,7 @@
       "tour_level": "atp",
       "gender": "men",
       "odds": 2.38,
-      "best_bookmaker": "Betfair",
+      "best_bookmaker": "Pncl",
       "market_median_odds": 2.23,
       "bookmakers_used": 10,
       "best_to_median_gap": 0.0697,
@@ -8283,7 +8148,7 @@
           "straight_win_rate": 0.2,
           "straight_loss_rate": 0.0,
           "close_loss_rate": 0.4,
-          "fatigue_matches_7d": 1,
+          "fatigue_matches_7d": 0,
           "fatigue_matches_3d": 0
         },
         "last_10": {
@@ -8296,7 +8161,7 @@
           "straight_win_rate": 0.1,
           "straight_loss_rate": 0.3,
           "close_loss_rate": 0.3,
-          "fatigue_matches_7d": 1,
+          "fatigue_matches_7d": 0,
           "fatigue_matches_3d": 0
         },
         "last_20": {
@@ -8309,7 +8174,7 @@
           "straight_win_rate": 0.1,
           "straight_loss_rate": 0.3,
           "close_loss_rate": 0.3,
-          "fatigue_matches_7d": 1,
+          "fatigue_matches_7d": 0,
           "fatigue_matches_3d": 0
         }
       },
@@ -8662,8 +8527,8 @@
       "implied_prob": 0.4348,
       "edge": 0.2252,
       "player_score": 69.5,
-      "opponent_score": 42.2,
-      "score_diff": 27.3,
+      "opponent_score": 44.0,
+      "score_diff": 25.5,
       "confidence": 88,
       "quality_score": 88.4,
       "stake": 1.25,
@@ -8688,7 +8553,7 @@
           "straight_win_rate": 0.2,
           "straight_loss_rate": 0.2,
           "close_loss_rate": 0.0,
-          "fatigue_matches_7d": 3,
+          "fatigue_matches_7d": 2,
           "fatigue_matches_3d": 2
         },
         "last_10": {
@@ -8701,7 +8566,7 @@
           "straight_win_rate": 0.3,
           "straight_loss_rate": 0.1,
           "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 3,
+          "fatigue_matches_7d": 2,
           "fatigue_matches_3d": 2
         },
         "last_20": {
@@ -8714,12 +8579,12 @@
           "straight_win_rate": 0.3,
           "straight_loss_rate": 0.1,
           "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 3,
+          "fatigue_matches_7d": 2,
           "fatigue_matches_3d": 2
         }
       },
       "opponent_form": {
-        "score": 42.2,
+        "score": 44.0,
         "last_5": {
           "matches": 5,
           "wins": 3,
@@ -8731,7 +8596,7 @@
           "straight_loss_rate": 0.2,
           "close_loss_rate": 0.2,
           "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
+          "fatigue_matches_3d": 1
         },
         "last_10": {
           "matches": 10,
@@ -8744,7 +8609,7 @@
           "straight_loss_rate": 0.4,
           "close_loss_rate": 0.2,
           "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
+          "fatigue_matches_3d": 1
         },
         "last_20": {
           "matches": 10,
@@ -8757,7 +8622,7 @@
           "straight_loss_rate": 0.4,
           "close_loss_rate": 0.2,
           "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
+          "fatigue_matches_3d": 1
         }
       },
       "result": "pending",
@@ -8796,9 +8661,9 @@
       "model_prob": 0.66,
       "implied_prob": 0.4049,
       "edge": 0.2551,
-      "player_score": 77.0,
+      "player_score": 77.8,
       "opponent_score": 57.8,
-      "score_diff": 19.2,
+      "score_diff": 20.0,
       "confidence": 88,
       "quality_score": 90.9,
       "stake": 1.25,
@@ -8812,7 +8677,7 @@
         "second_score": -3.0
       },
       "player_form": {
-        "score": 77.0,
+        "score": 77.8,
         "last_5": {
           "matches": 5,
           "wins": 5,
@@ -8823,7 +8688,7 @@
           "straight_win_rate": 0.4,
           "straight_loss_rate": 0.0,
           "close_loss_rate": 0.0,
-          "fatigue_matches_7d": 5,
+          "fatigue_matches_7d": 4,
           "fatigue_matches_3d": 1
         },
         "last_10": {
@@ -8836,7 +8701,7 @@
           "straight_win_rate": 0.4,
           "straight_loss_rate": 0.1,
           "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 5,
+          "fatigue_matches_7d": 4,
           "fatigue_matches_3d": 1
         },
         "last_20": {
@@ -8849,7 +8714,7 @@
           "straight_win_rate": 0.4,
           "straight_loss_rate": 0.1,
           "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 5,
+          "fatigue_matches_7d": 4,
           "fatigue_matches_3d": 1
         }
       },
@@ -9194,7 +9059,7 @@
       "tour_level": "atp",
       "gender": "men",
       "odds": 2.38,
-      "best_bookmaker": "Betfair",
+      "best_bookmaker": "Pncl",
       "market_median_odds": 2.23,
       "bookmakers_used": 10,
       "best_to_median_gap": 0.0697,
@@ -9951,9 +9816,9 @@
     "by_bookmaker": [
       {
         "group": "Pncl",
-        "picks": 21,
+        "picks": 22,
         "settled": 16,
-        "pending": 5,
+        "pending": 6,
         "wins": 6,
         "losses": 10,
         "hit_rate": 37.5,
@@ -9990,9 +9855,9 @@
       },
       {
         "group": "Betfair",
-        "picks": 6,
+        "picks": 5,
         "settled": 4,
-        "pending": 2,
+        "pending": 1,
         "wins": 0,
         "losses": 4,
         "hit_rate": 0.0,
