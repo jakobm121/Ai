@@ -33,7 +33,7 @@ jobs:
         env:
           TENNIS_API_KEY: ${{ secrets.TENNIS_API_KEY }}
         run: |
-          ai77_tennis_shadow.py
+          ai77_tennis_shadow_value.py
 
       - name: Commit shadow prediction files
         run: |
