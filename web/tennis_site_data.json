@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T16:52:28.551436+02:00",
+  "generated_at": "2026-05-08T17:13:29.333742+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -23,18 +23,18 @@
   },
   "summary": {
     "picks": 70,
-    "settled": 55,
-    "pending": 15,
+    "settled": 57,
+    "pending": 13,
     "wins": 20,
-    "losses": 35,
-    "hit_rate": 36.4,
-    "stake": 71.75,
-    "profit": -14.66,
-    "roi": -20.4,
+    "losses": 37,
+    "hit_rate": 35.1,
+    "stake": 73.5,
+    "profit": -16.41,
+    "roi": -22.3,
     "avg_odds": 2.21,
     "total_results": 70,
-    "settled_picks": 55,
-    "pending_picks": 15
+    "settled_picks": 57,
+    "pending_picks": 13
   },
   "current_picks": [
     {
@@ -308,9 +308,14 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-08T11:49:20.560863+02:00",
-      "reasoning": "L. Bocchi is selected against N. Ehrenschneider in M15 Hurghada 4 (Egypt). The model prices L. Bocchi at 66.0% versus an implied probability of 58.1% from best odds 1.72. Market median is 1.65 across 7 bookmakers, leaving an estimated edge of +7.9%. Recent-form profile: L. Bocchi last-10 win rate 80.0%, avg set diff +1.00, avg game diff +3.40; N. Ehrenschneider last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.30. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "L. Bocchi is selected against N. Ehrenschneider in M15 Hurghada 4 (Egypt). The model prices L. Bocchi at 66.0% versus an implied probability of 58.1% from best odds 1.72. Market median is 1.65 across 7 bookmakers, leaving an estimated edge of +7.9%. Recent-form profile: L. Bocchi last-10 win rate 80.0%, avg set diff +1.00, avg game diff +3.40; N. Ehrenschneider last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.30. Pick type: favorite. Confidence score: 88.0.",
+      "profit": -0.75,
+      "settled_at": "2026-05-08T17:13:28.528612+02:00",
+      "settled_status": "Finished",
+      "event_winner": "Second Player",
+      "final_score": "6.5-7.7, 5-7"
     },
     {
       "pick_id": "033f3bff75eef5272019c7817151168f",
@@ -11115,9 +11120,14 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-08T11:47:48.819998+02:00",
-      "reasoning": "D. Marques is selected against G. Marques in M25 Loule. The model prices D. Marques at 48.9% versus an implied probability of 36.4% from best odds 2.75. Market median is 2.62 across 6 bookmakers, leaving an estimated edge of +12.5%. Recent-form profile: D. Marques last-10 win rate 40.0%, avg set diff -0.40, avg game diff -1.40; G. Marques last-10 win rate 40.0%, avg set diff -0.30, avg game diff -0.40. Pick type: underdog. Confidence score: 77.3."
+      "reasoning": "D. Marques is selected against G. Marques in M25 Loule. The model prices D. Marques at 48.9% versus an implied probability of 36.4% from best odds 2.75. Market median is 2.62 across 6 bookmakers, leaving an estimated edge of +12.5%. Recent-form profile: D. Marques last-10 win rate 40.0%, avg set diff -0.40, avg game diff -1.40; G. Marques last-10 win rate 40.0%, avg set diff -0.30, avg game diff -0.40. Pick type: underdog. Confidence score: 77.3.",
+      "profit": -1.0,
+      "settled_at": "2026-05-08T17:13:27.795487+02:00",
+      "settled_status": "Finished",
+      "event_winner": "First Player",
+      "final_score": "6-3, 4-6, 6-2"
     },
     {
       "pick_id": "f3428e4998e23bfba507521739f436a0",
@@ -11250,9 +11260,14 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-08T11:49:20.560863+02:00",
-      "reasoning": "L. Bocchi is selected against N. Ehrenschneider in M15 Hurghada 4 (Egypt). The model prices L. Bocchi at 66.0% versus an implied probability of 58.1% from best odds 1.72. Market median is 1.65 across 7 bookmakers, leaving an estimated edge of +7.9%. Recent-form profile: L. Bocchi last-10 win rate 80.0%, avg set diff +1.00, avg game diff +3.40; N. Ehrenschneider last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.30. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "L. Bocchi is selected against N. Ehrenschneider in M15 Hurghada 4 (Egypt). The model prices L. Bocchi at 66.0% versus an implied probability of 58.1% from best odds 1.72. Market median is 1.65 across 7 bookmakers, leaving an estimated edge of +7.9%. Recent-form profile: L. Bocchi last-10 win rate 80.0%, avg set diff +1.00, avg game diff +3.40; N. Ehrenschneider last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.30. Pick type: favorite. Confidence score: 88.0.",
+      "profit": -0.75,
+      "settled_at": "2026-05-08T17:13:28.528612+02:00",
+      "settled_status": "Finished",
+      "event_winner": "Second Player",
+      "final_score": "6.5-7.7, 5-7"
     },
     {
       "pick_id": "f9f1bada24730d25883ccb7270f345c6",
@@ -11408,15 +11423,15 @@
       {
         "date": "2026-05-08",
         "picks": 24,
-        "settled": 11,
-        "pending": 13,
+        "settled": 13,
+        "pending": 11,
         "wins": 4,
-        "losses": 7,
-        "hit_rate": 36.4,
-        "stake": 14.0,
-        "profit": -1.94,
-        "roi": -13.8,
-        "avg_odds": 2.17
+        "losses": 9,
+        "hit_rate": 30.8,
+        "stake": 15.75,
+        "profit": -3.69,
+        "roi": -23.4,
+        "avg_odds": 2.18
       },
       {
         "date": "2026-05-07",
@@ -11477,29 +11492,29 @@
         "date": "2026-05-08",
         "type": "underdog",
         "picks": 17,
-        "settled": 8,
-        "pending": 9,
+        "settled": 9,
+        "pending": 8,
         "wins": 3,
-        "losses": 5,
-        "hit_rate": 37.5,
-        "stake": 10.75,
-        "profit": -1.01,
-        "roi": -9.4,
-        "avg_odds": 2.29
+        "losses": 6,
+        "hit_rate": 33.3,
+        "stake": 11.75,
+        "profit": -2.01,
+        "roi": -17.1,
+        "avg_odds": 2.34
       },
       {
         "date": "2026-05-08",
         "type": "favorite",
         "picks": 7,
-        "settled": 3,
-        "pending": 4,
+        "settled": 4,
+        "pending": 3,
         "wins": 1,
-        "losses": 2,
-        "hit_rate": 33.3,
-        "stake": 3.25,
-        "profit": -0.93,
-        "roi": -28.5,
-        "avg_odds": 1.87
+        "losses": 3,
+        "hit_rate": 25.0,
+        "stake": 4.0,
+        "profit": -1.68,
+        "roi": -41.9,
+        "avg_odds": 1.83
       },
       {
         "date": "2026-05-07",
@@ -11590,28 +11605,28 @@
       {
         "group": "underdog",
         "picks": 55,
-        "settled": 44,
-        "pending": 11,
+        "settled": 45,
+        "pending": 10,
         "wins": 16,
-        "losses": 28,
-        "hit_rate": 36.4,
-        "stake": 58.0,
-        "profit": -9.6,
-        "roi": -16.5,
-        "avg_odds": 2.3
+        "losses": 29,
+        "hit_rate": 35.6,
+        "stake": 59.0,
+        "profit": -10.6,
+        "roi": -18.0,
+        "avg_odds": 2.31
       },
       {
         "group": "favorite",
         "picks": 15,
-        "settled": 11,
-        "pending": 4,
+        "settled": 12,
+        "pending": 3,
         "wins": 4,
-        "losses": 7,
-        "hit_rate": 36.4,
-        "stake": 13.75,
-        "profit": -5.07,
-        "roi": -36.9,
-        "avg_odds": 1.86
+        "losses": 8,
+        "hit_rate": 33.3,
+        "stake": 14.5,
+        "profit": -5.82,
+        "roi": -40.1,
+        "avg_odds": 1.85
       }
     ],
     "by_odds_band": [
@@ -11655,45 +11670,45 @@
         "avg_odds": 1.88
       },
       {
-        "group": "2.70+",
-        "picks": 2,
-        "settled": 1,
-        "pending": 1,
-        "wins": 0,
-        "losses": 1,
-        "hit_rate": 0.0,
-        "stake": 1.25,
-        "profit": -1.25,
-        "roi": -100.0,
-        "avg_odds": 2.75
-      },
-      {
         "group": "1.60 - 1.79",
         "picks": 3,
-        "settled": 1,
-        "pending": 2,
+        "settled": 2,
+        "pending": 1,
         "wins": 0,
-        "losses": 1,
+        "losses": 2,
         "hit_rate": 0.0,
-        "stake": 1.5,
-        "profit": -1.5,
+        "stake": 2.25,
+        "profit": -2.25,
         "roi": -100.0,
-        "avg_odds": 1.68
+        "avg_odds": 1.7
+      },
+      {
+        "group": "2.70+",
+        "picks": 2,
+        "settled": 2,
+        "pending": 0,
+        "wins": 0,
+        "losses": 2,
+        "hit_rate": 0.0,
+        "stake": 2.25,
+        "profit": -2.25,
+        "roi": -100.0,
+        "avg_odds": 2.75
       }
     ],
     "by_confidence": [
       {
         "group": "Elite 88+",
         "picks": 64,
-        "settled": 51,
-        "pending": 13,
+        "settled": 52,
+        "pending": 12,
         "wins": 17,
-        "losses": 34,
-        "hit_rate": 33.3,
-        "stake": 67.0,
-        "profit": -19.07,
-        "roi": -28.5,
-        "avg_odds": 2.19
+        "losses": 35,
+        "hit_rate": 32.7,
+        "stake": 67.75,
+        "profit": -19.82,
+        "roi": -29.2,
+        "avg_odds": 2.18
       },
       {
         "group": "Strong 82-87",
@@ -11711,30 +11726,30 @@
       {
         "group": "Solid 76-81",
         "picks": 3,
-        "settled": 1,
-        "pending": 2,
+        "settled": 2,
+        "pending": 1,
         "wins": 0,
-        "losses": 1,
+        "losses": 2,
         "hit_rate": 0.0,
-        "stake": 1.0,
-        "profit": -1.0,
+        "stake": 2.0,
+        "profit": -2.0,
         "roi": -100.0,
-        "avg_odds": 2.63
+        "avg_odds": 2.69
       }
     ],
     "by_edge": [
       {
         "group": "10% - 14.9%",
         "picks": 25,
-        "settled": 20,
-        "pending": 5,
+        "settled": 21,
+        "pending": 4,
         "wins": 9,
-        "losses": 11,
-        "hit_rate": 45.0,
-        "stake": 26.0,
-        "profit": -2.82,
-        "roi": -10.8,
-        "avg_odds": 2.06
+        "losses": 12,
+        "hit_rate": 42.9,
+        "stake": 27.0,
+        "profit": -3.82,
+        "roi": -14.1,
+        "avg_odds": 2.1
       },
       {
         "group": "15% - 19.9%",
@@ -11765,15 +11780,15 @@
       {
         "group": "6.5% - 9.9%",
         "picks": 4,
-        "settled": 1,
-        "pending": 3,
+        "settled": 2,
+        "pending": 2,
         "wins": 0,
-        "losses": 1,
+        "losses": 2,
         "hit_rate": 0.0,
-        "stake": 1.0,
-        "profit": -1.0,
+        "stake": 1.75,
+        "profit": -1.75,
         "roi": -100.0,
-        "avg_odds": 1.91
+        "avg_odds": 1.81
       }
     ],
     "by_stake_label": [
@@ -11806,28 +11821,28 @@
       {
         "group": "Standard",
         "picks": 8,
-        "settled": 4,
-        "pending": 4,
+        "settled": 5,
+        "pending": 3,
         "wins": 1,
-        "losses": 3,
-        "hit_rate": 25.0,
-        "stake": 4.0,
-        "profit": -2.17,
-        "roi": -54.2,
-        "avg_odds": 2.05
+        "losses": 4,
+        "hit_rate": 20.0,
+        "stake": 5.0,
+        "profit": -3.17,
+        "roi": -63.4,
+        "avg_odds": 2.19
       },
       {
         "group": "Small Value",
         "picks": 1,
-        "settled": 0,
-        "pending": 1,
+        "settled": 1,
+        "pending": 0,
         "wins": 0,
-        "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "losses": 1,
+        "hit_rate": 0.0,
+        "stake": 0.75,
+        "profit": -0.75,
+        "roi": -100.0,
+        "avg_odds": 1.72
       }
     ],
     "by_tour_level": [
@@ -11847,15 +11862,15 @@
       {
         "group": "itf",
         "picks": 17,
-        "settled": 13,
-        "pending": 4,
+        "settled": 15,
+        "pending": 2,
         "wins": 4,
-        "losses": 9,
-        "hit_rate": 30.8,
-        "stake": 15.75,
-        "profit": -5.46,
-        "roi": -34.7,
-        "avg_odds": 2.19
+        "losses": 11,
+        "hit_rate": 26.7,
+        "stake": 17.5,
+        "profit": -7.21,
+        "roi": -41.2,
+        "avg_odds": 2.2
       },
       {
         "group": "wta",
@@ -11886,6 +11901,19 @@
     ],
     "by_gender": [
       {
+        "group": "men",
+        "picks": 34,
+        "settled": 25,
+        "pending": 9,
+        "wins": 8,
+        "losses": 17,
+        "hit_rate": 32.0,
+        "stake": 31.5,
+        "profit": -8.0,
+        "roi": -25.4,
+        "avg_odds": 2.2
+      },
+      {
         "group": "women",
         "picks": 29,
         "settled": 25,
@@ -11897,19 +11925,6 @@
         "profit": -10.48,
         "roi": -31.8,
         "avg_odds": 2.21
-      },
-      {
-        "group": "men",
-        "picks": 34,
-        "settled": 23,
-        "pending": 11,
-        "wins": 8,
-        "losses": 15,
-        "hit_rate": 34.8,
-        "stake": 29.75,
-        "profit": -6.25,
-        "roi": -21.0,
-        "avg_odds": 2.2
       },
       {
         "group": "unknown",
@@ -11955,28 +11970,28 @@
       {
         "group": "bet365",
         "picks": 9,
-        "settled": 8,
-        "pending": 1,
+        "settled": 9,
+        "pending": 0,
         "wins": 4,
-        "losses": 4,
-        "hit_rate": 50.0,
-        "stake": 10.25,
-        "profit": 0.79,
-        "roi": 7.7,
-        "avg_odds": 2.21
+        "losses": 5,
+        "hit_rate": 44.4,
+        "stake": 11.0,
+        "profit": 0.04,
+        "roi": 0.4,
+        "avg_odds": 2.16
       },
       {
         "group": "Betfair",
         "picks": 8,
-        "settled": 6,
-        "pending": 2,
+        "settled": 7,
+        "pending": 1,
         "wins": 1,
-        "losses": 5,
-        "hit_rate": 16.7,
-        "stake": 7.25,
-        "profit": -3.96,
-        "roi": -54.7,
-        "avg_odds": 2.53
+        "losses": 6,
+        "hit_rate": 14.3,
+        "stake": 8.25,
+        "profit": -4.96,
+        "roi": -60.2,
+        "avg_odds": 2.56
       },
       {
         "group": "Betano",
