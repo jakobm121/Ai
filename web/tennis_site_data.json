@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T05:46:20.577618+02:00",
+  "generated_at": "2026-05-09T07:14:52.043711+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -23,18 +23,18 @@
   },
   "summary": {
     "picks": 81,
-    "settled": 67,
-    "pending": 14,
-    "wins": 27,
-    "losses": 40,
-    "hit_rate": 40.3,
-    "stake": 85.25,
-    "profit": -11.14,
-    "roi": -13.1,
-    "avg_odds": 2.2,
+    "settled": 70,
+    "pending": 11,
+    "wins": 28,
+    "losses": 42,
+    "hit_rate": 40.0,
+    "stake": 89.0,
+    "profit": -11.77,
+    "roi": -13.2,
+    "avg_odds": 2.22,
     "total_results": 81,
-    "settled_picks": 67,
-    "pending_picks": 14
+    "settled_picks": 70,
+    "pending_picks": 11
   },
   "current_picks": [
     {
@@ -168,9 +168,14 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-09T05:45:22.675783+02:00",
-      "reasoning": "L. Yuhan is selected against K. Yodpetch in W15 Nakhon Pathom 2. The model prices L. Yuhan at 60.0% versus an implied probability of 40.0% from best odds 2.50. Market median is 2.40 across 7 bookmakers, leaving an estimated edge of +20.0%. Recent-form profile: L. Yuhan last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.70; K. Yodpetch last-10 win rate 50.0%, avg set diff -0.10, avg game diff -0.10. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "L. Yuhan is selected against K. Yodpetch in W15 Nakhon Pathom 2. The model prices L. Yuhan at 60.0% versus an implied probability of 40.0% from best odds 2.50. Market median is 2.40 across 7 bookmakers, leaving an estimated edge of +20.0%. Recent-form profile: L. Yuhan last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.70; K. Yodpetch last-10 win rate 50.0%, avg set diff -0.10, avg game diff -0.10. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.875,
+      "settled_at": "2026-05-09T07:14:44.837071+02:00",
+      "settled_status": "Finished",
+      "event_winner": "Second Player",
+      "final_score": "3-6, 5-7"
     },
     {
       "pick_id": "adc4d5db4cf051dea2cf4d156bdd3f2a",
@@ -8375,9 +8380,14 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-07T19:56:33.553431+02:00",
-      "reasoning": "Y. Hanfmann is selected against L. Darderi in Rome. The model prices Y. Hanfmann at 58.4% versus an implied probability of 41.0% from best odds 2.44. Market median is 2.38 across 11 bookmakers, leaving an estimated edge of +17.5%. Recent-form profile: Y. Hanfmann last-10 win rate 60.0%, avg set diff +0.10, avg game diff +0.60; L. Darderi last-10 win rate 40.0%, avg set diff -0.10, avg game diff -0.50. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "Y. Hanfmann is selected against L. Darderi in Rome. The model prices Y. Hanfmann at 58.4% versus an implied probability of 41.0% from best odds 2.44. Market median is 2.38 across 11 bookmakers, leaving an estimated edge of +17.5%. Recent-form profile: Y. Hanfmann last-10 win rate 60.0%, avg set diff +0.10, avg game diff +0.60; L. Darderi last-10 win rate 40.0%, avg set diff -0.10, avg game diff -0.50. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-05-09T07:14:40.366459+02:00",
+      "settled_status": "Finished",
+      "event_winner": "Second Player",
+      "final_score": "4-6, 4-6"
     },
     {
       "pick_id": "0188eb65f09393a8609700d526d15179",
@@ -11575,9 +11585,14 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-08T19:27:19.664900+02:00",
-      "reasoning": "M. Tobon is selected against M. Pucinelli de Almeida in Santos. The model prices M. Tobon at 60.0% versus an implied probability of 35.3% from best odds 2.83. Market median is 2.67 across 10 bookmakers, leaving an estimated edge of +24.7%. Recent-form profile: M. Tobon last-10 win rate 70.0%, avg set diff +0.80, avg game diff +3.70; M. Pucinelli de Almeida last-10 win rate 50.0%, avg set diff +0.20, avg game diff +1.60. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "M. Tobon is selected against M. Pucinelli de Almeida in Santos. The model prices M. Tobon at 60.0% versus an implied probability of 35.3% from best odds 2.83. Market median is 2.67 across 10 bookmakers, leaving an estimated edge of +24.7%. Recent-form profile: M. Tobon last-10 win rate 70.0%, avg set diff +0.80, avg game diff +3.70; M. Pucinelli de Almeida last-10 win rate 50.0%, avg set diff +0.20, avg game diff +1.60. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-05-09T07:14:43.942065+02:00",
+      "settled_status": "Finished",
+      "event_winner": "First Player",
+      "final_score": "6-1, 6-3"
     },
     {
       "pick_id": "c4c02f4cd91b4080cb52c3f36f624088",
@@ -11710,9 +11725,14 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-09T05:45:22.675783+02:00",
-      "reasoning": "L. Yuhan is selected against K. Yodpetch in W15 Nakhon Pathom 2. The model prices L. Yuhan at 60.0% versus an implied probability of 40.0% from best odds 2.50. Market median is 2.40 across 7 bookmakers, leaving an estimated edge of +20.0%. Recent-form profile: L. Yuhan last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.70; K. Yodpetch last-10 win rate 50.0%, avg set diff -0.10, avg game diff -0.10. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "L. Yuhan is selected against K. Yodpetch in W15 Nakhon Pathom 2. The model prices L. Yuhan at 60.0% versus an implied probability of 40.0% from best odds 2.50. Market median is 2.40 across 7 bookmakers, leaving an estimated edge of +20.0%. Recent-form profile: L. Yuhan last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.70; K. Yodpetch last-10 win rate 50.0%, avg set diff -0.10, avg game diff -0.10. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.875,
+      "settled_at": "2026-05-09T07:14:44.837071+02:00",
+      "settled_status": "Finished",
+      "event_winner": "Second Player",
+      "final_score": "3-6, 5-7"
     },
     {
       "pick_id": "adc4d5db4cf051dea2cf4d156bdd3f2a",
@@ -12800,28 +12820,28 @@
       {
         "date": "2026-05-09",
         "picks": 11,
-        "settled": 0,
-        "pending": 11,
-        "wins": 0,
+        "settled": 1,
+        "pending": 10,
+        "wins": 1,
         "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "hit_rate": 100.0,
+        "stake": 1.25,
+        "profit": 1.88,
+        "roi": 150.0,
+        "avg_odds": 2.5
       },
       {
         "date": "2026-05-08",
         "picks": 26,
-        "settled": 23,
-        "pending": 3,
+        "settled": 25,
+        "pending": 1,
         "wins": 11,
-        "losses": 12,
-        "hit_rate": 47.8,
-        "stake": 27.5,
-        "profit": 1.58,
-        "roi": 5.8,
-        "avg_odds": 2.18
+        "losses": 14,
+        "hit_rate": 44.0,
+        "stake": 30.0,
+        "profit": -0.92,
+        "roi": -3.1,
+        "avg_odds": 2.21
       },
       {
         "date": "2026-05-07",
@@ -12868,29 +12888,29 @@
         "date": "2026-05-09",
         "type": "underdog",
         "picks": 11,
-        "settled": 0,
-        "pending": 11,
-        "wins": 0,
+        "settled": 1,
+        "pending": 10,
+        "wins": 1,
         "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "hit_rate": 100.0,
+        "stake": 1.25,
+        "profit": 1.88,
+        "roi": 150.0,
+        "avg_odds": 2.5
       },
       {
         "date": "2026-05-08",
         "type": "underdog",
         "picks": 19,
-        "settled": 16,
-        "pending": 3,
+        "settled": 18,
+        "pending": 1,
         "wins": 7,
-        "losses": 9,
-        "hit_rate": 43.8,
-        "stake": 20.25,
-        "profit": 0.62,
-        "roi": 3.1,
-        "avg_odds": 2.33
+        "losses": 11,
+        "hit_rate": 38.9,
+        "stake": 22.75,
+        "profit": -1.88,
+        "roi": -8.2,
+        "avg_odds": 2.36
       },
       {
         "date": "2026-05-08",
@@ -12995,15 +13015,15 @@
       {
         "group": "underdog",
         "picks": 66,
-        "settled": 52,
-        "pending": 14,
-        "wins": 20,
-        "losses": 32,
-        "hit_rate": 38.5,
-        "stake": 67.5,
-        "profit": -7.96,
-        "roi": -11.8,
-        "avg_odds": 2.31
+        "settled": 55,
+        "pending": 11,
+        "wins": 21,
+        "losses": 34,
+        "hit_rate": 38.2,
+        "stake": 71.25,
+        "profit": -8.58,
+        "roi": -12.0,
+        "avg_odds": 2.33
       },
       {
         "group": "favorite",
@@ -13036,14 +13056,14 @@
       {
         "group": "2.30 - 2.69",
         "picks": 29,
-        "settled": 21,
-        "pending": 8,
-        "wins": 11,
-        "losses": 10,
-        "hit_rate": 52.4,
-        "stake": 26.25,
-        "profit": 7.56,
-        "roi": 28.8,
+        "settled": 23,
+        "pending": 6,
+        "wins": 12,
+        "losses": 11,
+        "hit_rate": 52.2,
+        "stake": 28.75,
+        "profit": 8.19,
+        "roi": 28.5,
         "avg_odds": 2.44
       },
       {
@@ -13075,30 +13095,30 @@
       {
         "group": "2.70+",
         "picks": 4,
-        "settled": 2,
-        "pending": 2,
+        "settled": 3,
+        "pending": 1,
         "wins": 0,
-        "losses": 2,
+        "losses": 3,
         "hit_rate": 0.0,
-        "stake": 2.25,
-        "profit": -2.25,
+        "stake": 3.5,
+        "profit": -3.5,
         "roi": -100.0,
-        "avg_odds": 2.75
+        "avg_odds": 2.78
       }
     ],
     "by_confidence": [
       {
         "group": "Elite 88+",
         "picks": 73,
-        "settled": 61,
-        "pending": 12,
-        "wins": 24,
-        "losses": 37,
-        "hit_rate": 39.3,
-        "stake": 78.5,
-        "profit": -13.54,
-        "roi": -17.3,
-        "avg_odds": 2.17
+        "settled": 64,
+        "pending": 9,
+        "wins": 25,
+        "losses": 39,
+        "hit_rate": 39.1,
+        "stake": 82.25,
+        "profit": -14.17,
+        "roi": -17.2,
+        "avg_odds": 2.19
       },
       {
         "group": "Strong 82-87",
@@ -13144,28 +13164,28 @@
       {
         "group": "15% - 19.9%",
         "picks": 26,
-        "settled": 23,
-        "pending": 3,
+        "settled": 24,
+        "pending": 2,
         "wins": 9,
-        "losses": 14,
-        "hit_rate": 39.1,
-        "stake": 30.25,
-        "profit": -3.49,
-        "roi": -11.5,
+        "losses": 15,
+        "hit_rate": 37.5,
+        "stake": 31.5,
+        "profit": -4.74,
+        "roi": -15.0,
         "avg_odds": 2.25
       },
       {
         "group": "20%+",
         "picks": 24,
-        "settled": 16,
-        "pending": 8,
-        "wins": 5,
-        "losses": 11,
-        "hit_rate": 31.2,
-        "stake": 20.75,
-        "profit": -5.15,
-        "roi": -24.8,
-        "avg_odds": 2.4
+        "settled": 18,
+        "pending": 6,
+        "wins": 6,
+        "losses": 12,
+        "hit_rate": 33.3,
+        "stake": 23.25,
+        "profit": -4.53,
+        "roi": -19.5,
+        "avg_odds": 2.43
       },
       {
         "group": "6.5% - 9.9%",
@@ -13185,15 +13205,15 @@
       {
         "group": "Strong",
         "picks": 54,
-        "settled": 42,
-        "pending": 12,
-        "wins": 21,
-        "losses": 21,
-        "hit_rate": 50.0,
-        "stake": 52.5,
-        "profit": 5.86,
-        "roi": 11.2,
-        "avg_odds": 2.26
+        "settled": 45,
+        "pending": 9,
+        "wins": 22,
+        "losses": 23,
+        "hit_rate": 48.9,
+        "stake": 56.25,
+        "profit": 5.24,
+        "roi": 9.3,
+        "avg_odds": 2.28
       },
       {
         "group": "Top Rated",
@@ -13239,41 +13259,41 @@
       {
         "group": "challenger",
         "picks": 30,
-        "settled": 29,
-        "pending": 1,
+        "settled": 30,
+        "pending": 0,
         "wins": 14,
-        "losses": 15,
-        "hit_rate": 48.3,
-        "stake": 38.0,
-        "profit": 2.38,
-        "roi": 6.3,
-        "avg_odds": 2.19
+        "losses": 16,
+        "hit_rate": 46.7,
+        "stake": 39.25,
+        "profit": 1.13,
+        "roi": 2.9,
+        "avg_odds": 2.21
       },
       {
         "group": "itf",
         "picks": 20,
-        "settled": 17,
-        "pending": 3,
-        "wins": 6,
+        "settled": 18,
+        "pending": 2,
+        "wins": 7,
         "losses": 11,
-        "hit_rate": 35.3,
-        "stake": 20.0,
-        "profit": -4.06,
-        "roi": -20.3,
-        "avg_odds": 2.2
+        "hit_rate": 38.9,
+        "stake": 21.25,
+        "profit": -2.18,
+        "roi": -10.3,
+        "avg_odds": 2.22
       },
       {
         "group": "atp",
         "picks": 19,
-        "settled": 11,
-        "pending": 8,
+        "settled": 12,
+        "pending": 7,
         "wins": 2,
-        "losses": 9,
-        "hit_rate": 18.2,
-        "stake": 14.25,
-        "profit": -8.39,
-        "roi": -58.9,
-        "avg_odds": 2.32
+        "losses": 10,
+        "hit_rate": 16.7,
+        "stake": 15.5,
+        "profit": -9.64,
+        "roi": -62.2,
+        "avg_odds": 2.33
       },
       {
         "group": "wta",
@@ -13293,28 +13313,28 @@
       {
         "group": "men",
         "picks": 40,
-        "settled": 31,
-        "pending": 9,
+        "settled": 33,
+        "pending": 7,
         "wins": 11,
-        "losses": 20,
-        "hit_rate": 35.5,
-        "stake": 38.5,
-        "profit": -8.09,
-        "roi": -21.0,
-        "avg_odds": 2.2
+        "losses": 22,
+        "hit_rate": 33.3,
+        "stake": 41.0,
+        "profit": -10.59,
+        "roi": -25.8,
+        "avg_odds": 2.23
       },
       {
         "group": "women",
         "picks": 34,
-        "settled": 29,
-        "pending": 5,
-        "wins": 12,
+        "settled": 30,
+        "pending": 4,
+        "wins": 13,
         "losses": 17,
-        "hit_rate": 41.4,
-        "stake": 37.75,
-        "profit": -5.12,
-        "roi": -13.6,
-        "avg_odds": 2.2
+        "hit_rate": 43.3,
+        "stake": 39.0,
+        "profit": -3.24,
+        "roi": -8.3,
+        "avg_odds": 2.21
       },
       {
         "group": "unknown",
@@ -13334,15 +13354,15 @@
       {
         "group": "Pncl",
         "picks": 33,
-        "settled": 28,
-        "pending": 5,
+        "settled": 30,
+        "pending": 3,
         "wins": 11,
-        "losses": 17,
-        "hit_rate": 39.3,
-        "stake": 36.0,
-        "profit": -6.67,
-        "roi": -18.5,
-        "avg_odds": 2.14
+        "losses": 19,
+        "hit_rate": 36.7,
+        "stake": 38.5,
+        "profit": -9.17,
+        "roi": -23.8,
+        "avg_odds": 2.17
       },
       {
         "group": "Unibet",
@@ -13360,15 +13380,15 @@
       {
         "group": "bet365",
         "picks": 14,
-        "settled": 9,
-        "pending": 5,
-        "wins": 4,
+        "settled": 10,
+        "pending": 4,
+        "wins": 5,
         "losses": 5,
-        "hit_rate": 44.4,
-        "stake": 11.0,
-        "profit": 0.04,
-        "roi": 0.4,
-        "avg_odds": 2.16
+        "hit_rate": 50.0,
+        "stake": 12.25,
+        "profit": 1.92,
+        "roi": 15.7,
+        "avg_odds": 2.19
       },
       {
         "group": "Betfair",
