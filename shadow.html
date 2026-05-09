@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI77 Tennis Shadow</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    header {
+      padding: 18px 22px;
+      background: #020617;
+      border-bottom: 1px solid #334155;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .card .label {
+      color: #94a3b8;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .card .value {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .positive {
+      color: #22c55e;
+    }
+
+    .negative {
+      color: #ef4444;
+    }
+
+    .neutral {
+      color: #eab308;
+    }
+
+    .section {
+      background: #111827;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 22px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      font-size: 19px;
+    }
+
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    select, input {
+      background: #020617;
+      color: #e5e7eb;
+      border: 1px solid #475569;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th, td {
+      padding: 9px 8px;
+      border-bottom: 1px solid #334155;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: #cbd5e1;
+      background: #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    tr:hover {
+      background: #1e293b;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 7px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .win {
+      background: rgba(34, 197, 94, 0.18);
+      color: #4ade80;
+    }
+
+    .loss {
+      background: rgba(239, 68, 68, 0.18);
+      color: #f87171;
+    }
+
+    .pending {
+      background: rgba(234, 179, 8, 0.18);
+      color: #facc15;
+    }
+
+    .small {
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      max-height: 720px;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>AI77 Tennis Shadow</h1>
+    <div class="subtitle">Testni shadow picki, rezultati in osnovna statistika</div>
+  </header>
+
+  <main>
+    <div class="cards">
+      <div class="card">
+        <div class="label">Vsi picki</div>
+        <div class="value" id="totalPicks">-</div>
+      </div>
+      <div class="card">
+        <div class="label">Settled</div>
+        <div class="value" id="settledPicks">-</div>
+      </div>
+      <div class="card">
+        <div class="label">Pending</div>
+        <div class="value" id="pendingPicks">-</div>
+      </div>
+      <div class="card">
+        <div class="label">Wins / Losses</div>
+        <div class="value" id="wl">-</div>
+      </div>
+      <div class="card">
+        <div class="label">Hit rate</div>
+        <div class="value" id="hitRate">-</div>
+      </div>
+      <div class="card">
+        <div class="label">Profit</div>
+        <div class="value" id="profit">-</div>
+      </div>
+      <div class="card">
+        <div class="label">ROI</div>
+        <div class="value" id="roi">-</div>
+      </div>
+      <div class="card">
+        <div class="label">Avg odds</div>
+        <div class="value" id="avgOdds">-</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Filtri</h2>
+      <div class="filters">
+        <select id="resultFilter">
+          <option value="all">Vsi rezultati</option>
+          <option value="pending">Pending</option>
+          <option value="win">Win</option>
+          <option value="loss">Loss</option>
+        </select>
+
+        <select id="tourFilter">
+          <option value="all">Vsi tour leveli</option>
+        </select>
+
+        <select id="stakeFilter">
+          <option value="all">Vsi stake labeli</option>
+        </select>
+
+        <select id="oddsBandFilter">
+          <option value="all">Vse kvote</option>
+          <option value="1.60-1.79">1.60 - 1.79</option>
+          <option value="1.80-1.99">1.80 - 1.99</option>
+          <option value="2.00-2.29">2.00 - 2.29</option>
+          <option value="2.30-2.69">2.30 - 2.69</option>
+          <option value="2.70+">2.70+</option>
+        </select>
+
+        <input id="searchBox" placeholder="Išči igralca / turnir..." />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Shadow picki</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Datum</th>
+              <th>Tekma</th>
+              <th>Pick</th>
+              <th>Kvota</th>
+              <th>Edge</th>
+              <th>Conf</th>
+              <th>Stake</th>
+              <th>Tour</th>
+              <th>Book</th>
+              <th>Gap</th>
+              <th>Rezultat</th>
+              <th>Profit</th>
+            </tr>
+          </thead>
+          <tbody id="picksTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const RESULTS_URL = "data/shadow/tennis_shadow_results.json";
+    const PREDICTIONS_URL = "data/shadow/tennis_shadow_predictions.json";
+
+    let allPicks = [];
+
+    function num(value, fallback = 0) {
+      const n = Number(value);
+      return Number.isFinite(n) ? n : fallback;
+    }
+
+    function pct(value) {
+      return `${(value * 100).toFixed(1)}%`;
+    }
+
+    function fmt(value, decimals = 2) {
+      return num(value).toFixed(decimals);
+    }
+
+    function getOddsBand(odds) {
+      odds = num(odds);
+
+      if (odds >= 1.60 && odds < 1.80) return "1.60-1.79";
+      if (odds >= 1.80 && odds < 2.00) return "1.80-1.99";
+      if (odds >= 2.00 && odds < 2.30) return "2.00-2.29";
+      if (odds >= 2.30 && odds < 2.70) return "2.30-2.69";
+      if (odds >= 2.70) return "2.70+";
+
+      return "other";
+    }
+
+    async function loadJsonSafe(url, fallback) {
+      try {
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) return fallback;
+        return await res.json();
+      } catch (e) {
+        return fallback;
+      }
+    }
+
+    async function loadData() {
+      const results = await loadJsonSafe(RESULTS_URL, []);
+      const predictionsPayload = await loadJsonSafe(PREDICTIONS_URL, { picks: [] });
+
+      const currentPicks = Array.isArray(predictionsPayload.picks)
+        ? predictionsPayload.picks
+        : [];
+
+      const map = new Map();
+
+      if (Array.isArray(results)) {
+        results.forEach(p => {
+          if (p && p.pick_id) map.set(p.pick_id, p);
+        });
+      }
+
+      currentPicks.forEach(p => {
+        if (p && p.pick_id && !map.has(p.pick_id)) {
+          map.set(p.pick_id, p);
+        }
+      });
+
+      allPicks = Array.from(map.values());
+
+      allPicks.sort((a, b) => {
+        const da = `${a.date || ""} ${a.time || ""}`;
+        const db = `${b.date || ""} ${b.time || ""}`;
+        return db.localeCompare(da);
+      });
+
+      populateFilters();
+      render();
+    }
+
+    function populateFilters() {
+      const tourFilter = document.getElementById("tourFilter");
+      const stakeFilter = document.getElementById("stakeFilter");
+
+      const tours = [...new Set(allPicks.map(p => p.tour_level).filter(Boolean))].sort();
+      const stakes = [...new Set(allPicks.map(p => p.stake_label).filter(Boolean))].sort();
+
+      tours.forEach(t => {
+        const opt = document.createElement("option");
+        opt.value = t;
+        opt.textContent = t;
+        tourFilter.appendChild(opt);
+      });
+
+      stakes.forEach(s => {
+        const opt = document.createElement("option");
+        opt.value = s;
+        opt.textContent = s;
+        stakeFilter.appendChild(opt);
+      });
+    }
+
+    function getFilteredPicks() {
+      const resultFilter = document.getElementById("resultFilter").value;
+      const tourFilter = document.getElementById("tourFilter").value;
+      const stakeFilter = document.getElementById("stakeFilter").value;
+      const oddsBandFilter = document.getElementById("oddsBandFilter").value;
+      const search = document.getElementById("searchBox").value.toLowerCase().trim();
+
+      return allPicks.filter(p => {
+        const result = String(p.result || "pending").toLowerCase();
+
+        if (resultFilter !== "all" && result !== resultFilter) return false;
+        if (tourFilter !== "all" && p.tour_level !== tourFilter) return false;
+        if (stakeFilter !== "all" && p.stake_label !== stakeFilter) return false;
+        if (oddsBandFilter !== "all" && getOddsBand(p.odds) !== oddsBandFilter) return false;
+
+        if (search) {
+          const text = [
+            p.match,
+            p.bet,
+            p.player_name,
+            p.opponent_name,
+            p.tournament,
+            p.event_type,
+            p.best_bookmaker
+          ].join(" ").toLowerCase();
+
+          if (!text.includes(search)) return false;
+        }
+
+        return true;
+      });
+    }
+
+    function renderSummary(picks) {
+      const settled = picks.filter(p => ["win", "loss"].includes(String(p.result || "").toLowerCase()));
+      const pending = picks.filter(p => String(p.result || "pending").toLowerCase() === "pending");
+      const wins = settled.filter(p => String(p.result).toLowerCase() === "win");
+      const losses = settled.filter(p => String(p.result).toLowerCase() === "loss");
+
+      const stake = settled.reduce((s, p) => s + num(p.stake), 0);
+      const profit = settled.reduce((s, p) => s + num(p.profit), 0);
+      const hitRate = settled.length ? wins.length / settled.length : 0;
+      const roi = stake ? profit / stake : 0;
+      const avgOdds = settled.length
+        ? settled.reduce((s, p) => s + num(p.odds), 0) / settled.length
+        : 0;
+
+      document.getElementById("totalPicks").textContent = picks.length;
+      document.getElementById("settledPicks").textContent = settled.length;
+      document.getElementById("pendingPicks").textContent = pending.length;
+      document.getElementById("wl").textContent = `${wins.length}-${losses.length}`;
+      document.getElementById("hitRate").textContent = settled.length ? pct(hitRate) : "-";
+      document.getElementById("profit").textContent = profit.toFixed(2);
+      document.getElementById("roi").textContent = stake ? pct(roi) : "-";
+      document.getElementById("avgOdds").textContent = avgOdds ? avgOdds.toFixed(2) : "-";
+
+      const profitEl = document.getElementById("profit");
+      const roiEl = document.getElementById("roi");
+
+      profitEl.className = "value " + (profit > 0 ? "positive" : profit < 0 ? "negative" : "neutral");
+      roiEl.className = "value " + (roi > 0 ? "positive" : roi < 0 ? "negative" : "neutral");
+    }
+
+    function resultBadge(result) {
+      result = String(result || "pending").toLowerCase();
+
+      if (result === "win") return `<span class="badge win">WIN</span>`;
+      if (result === "loss") return `<span class="badge loss">LOSS</span>`;
+      return `<span class="badge pending">PENDING</span>`;
+    }
+
+    function renderTable(picks) {
+      const tbody = document.getElementById("picksTable");
+      tbody.innerHTML = "";
+
+      if (!picks.length) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="12" class="small">Ni pickov za izbrane filtre.</td>
+          </tr>
+        `;
+        return;
+      }
+
+      picks.forEach(p => {
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+          <td>
+            ${p.date || ""}
+            <div class="small">${p.time || ""}</div>
+          </td>
+          <td>
+            ${p.match || ""}
+            <div class="small">${p.tournament || ""}</div>
+          </td>
+          <td>
+            <strong>${p.bet || p.player_name || ""}</strong>
+            <div class="small">${p.favorite_type || ""}</div>
+          </td>
+          <td>${fmt(p.odds, 2)}</td>
+          <td>${pct(num(p.edge))}</td>
+          <td>${fmt(p.confidence, 1)}</td>
+          <td>
+            ${fmt(p.stake, 2)}
+            <div class="small">${p.stake_label || ""}</div>
+          </td>
+          <td>
+            ${p.tour_level || ""}
+            <div class="small">${p.gender || ""}</div>
+          </td>
+          <td>${p.best_bookmaker || ""}</td>
+          <td>${pct(num(p.best_to_median_gap))}</td>
+          <td>${resultBadge(p.result)}</td>
+          <td class="${num(p.profit) > 0 ? "positive" : num(p.profit) < 0 ? "negative" : ""}">
+            ${p.profit === undefined ? "-" : fmt(p.profit, 2)}
+          </td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+    }
+
+    function render() {
+      const picks = getFilteredPicks();
+      renderSummary(picks);
+      renderTable(picks);
+    }
+
+    document.getElementById("resultFilter").addEventListener("change", render);
+    document.getElementById("tourFilter").addEventListener("change", render);
+    document.getElementById("stakeFilter").addEventListener("change", render);
+    document.getElementById("oddsBandFilter").addEventListener("change", render);
+    document.getElementById("searchBox").addEventListener("input", render);
+
+    loadData();
+  </script>
+</body>
+</html>
