@@ -39,7 +39,7 @@ jobs:
 
       - name: Run tennis shadow settle
         env:
-          TENNIS_API_KEY: ${{ secrets.TENNIS_API_KEY }}
+          TENNIS_API_KEY: ${{ secrets.API_KEY }}
         run: |
           python settle_tennis_shadow_results.py
 
