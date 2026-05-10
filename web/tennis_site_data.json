@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T06:03:14.465931+02:00",
+  "generated_at": "2026-05-10T07:30:20.178167+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -23,18 +23,18 @@
   },
   "summary": {
     "picks": 100,
-    "settled": 89,
-    "pending": 11,
+    "settled": 90,
+    "pending": 10,
     "wins": 37,
-    "losses": 52,
-    "hit_rate": 41.6,
-    "stake": 112.0,
-    "profit": -7.4,
-    "roi": -6.6,
+    "losses": 53,
+    "hit_rate": 41.1,
+    "stake": 113.5,
+    "profit": -8.9,
+    "roi": -7.8,
     "avg_odds": 2.26,
     "total_results": 100,
-    "settled_picks": 89,
-    "pending_picks": 11
+    "settled_picks": 90,
+    "pending_picks": 10
   },
   "current_picks": [
     {
@@ -12310,9 +12310,14 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-09T05:45:05.366809+02:00",
-      "reasoning": "T. Townsend is selected against I. Jovic in Rome. The model prices T. Townsend at 66.0% versus an implied probability of 46.7% from best odds 2.14. Market median is 2.10 across 11 bookmakers, leaving an estimated edge of +19.3%. Recent-form profile: T. Townsend last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.70; I. Jovic last-10 win rate 50.0%, avg set diff +0.20, avg game diff +0.10. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "T. Townsend is selected against I. Jovic in Rome. The model prices T. Townsend at 66.0% versus an implied probability of 46.7% from best odds 2.14. Market median is 2.10 across 11 bookmakers, leaving an estimated edge of +19.3%. Recent-form profile: T. Townsend last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.70; I. Jovic last-10 win rate 50.0%, avg set diff +0.20, avg game diff +0.10. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.5,
+      "settled_at": "2026-05-10T07:30:12.882032+02:00",
+      "settled_status": "Finished",
+      "event_winner": "Second Player",
+      "final_score": "5-7, 2-6"
     },
     {
       "pick_id": "4deb1270c6908a98825f4af8b3980184",
@@ -14948,15 +14953,15 @@
       {
         "date": "2026-05-09",
         "picks": 23,
-        "settled": 20,
-        "pending": 3,
+        "settled": 21,
+        "pending": 2,
         "wins": 10,
-        "losses": 10,
-        "hit_rate": 50.0,
-        "stake": 24.25,
-        "profit": 6.25,
-        "roi": 25.8,
-        "avg_odds": 2.42
+        "losses": 11,
+        "hit_rate": 47.6,
+        "stake": 25.75,
+        "profit": 4.75,
+        "roi": 18.4,
+        "avg_odds": 2.41
       },
       {
         "date": "2026-05-08",
@@ -15044,15 +15049,15 @@
         "date": "2026-05-09",
         "type": "underdog",
         "picks": 22,
-        "settled": 19,
-        "pending": 3,
+        "settled": 20,
+        "pending": 2,
         "wins": 10,
-        "losses": 9,
-        "hit_rate": 52.6,
-        "stake": 23.25,
-        "profit": 7.25,
-        "roi": 31.2,
-        "avg_odds": 2.46
+        "losses": 10,
+        "hit_rate": 50.0,
+        "stake": 24.75,
+        "profit": 5.75,
+        "roi": 23.2,
+        "avg_odds": 2.44
       },
       {
         "date": "2026-05-09",
@@ -15185,15 +15190,15 @@
       {
         "group": "underdog",
         "picks": 81,
-        "settled": 73,
-        "pending": 8,
+        "settled": 74,
+        "pending": 7,
         "wins": 30,
-        "losses": 43,
-        "hit_rate": 41.1,
-        "stake": 93.25,
-        "profit": -3.21,
-        "roi": -3.4,
-        "avg_odds": 2.36
+        "losses": 44,
+        "hit_rate": 40.5,
+        "stake": 94.75,
+        "profit": -4.71,
+        "roi": -5.0,
+        "avg_odds": 2.35
       },
       {
         "group": "favorite",
@@ -15211,6 +15216,19 @@
     ],
     "by_odds_band": [
       {
+        "group": "2.00 - 2.29",
+        "picks": 39,
+        "settled": 35,
+        "pending": 4,
+        "wins": 11,
+        "losses": 24,
+        "hit_rate": 31.4,
+        "stake": 47.0,
+        "profit": -15.25,
+        "roi": -32.4,
+        "avg_odds": 2.18
+      },
+      {
         "group": "2.30 - 2.69",
         "picks": 37,
         "settled": 34,
@@ -15222,19 +15240,6 @@
         "profit": 10.62,
         "roi": 25.1,
         "avg_odds": 2.47
-      },
-      {
-        "group": "2.00 - 2.29",
-        "picks": 39,
-        "settled": 34,
-        "pending": 5,
-        "wins": 11,
-        "losses": 23,
-        "hit_rate": 32.4,
-        "stake": 45.5,
-        "profit": -13.75,
-        "roi": -30.2,
-        "avg_odds": 2.19
       },
       {
         "group": "1.80 - 1.99",
@@ -15280,15 +15285,15 @@
       {
         "group": "Elite 88+",
         "picks": 89,
-        "settled": 79,
-        "pending": 10,
+        "settled": 80,
+        "pending": 9,
         "wins": 32,
-        "losses": 47,
-        "hit_rate": 40.5,
-        "stake": 101.25,
-        "profit": -10.45,
-        "roi": -10.3,
-        "avg_odds": 2.23
+        "losses": 48,
+        "hit_rate": 40.0,
+        "stake": 102.75,
+        "profit": -11.95,
+        "roi": -11.6,
+        "avg_odds": 2.22
       },
       {
         "group": "Solid 76-81",
@@ -15319,6 +15324,19 @@
     ],
     "by_edge": [
       {
+        "group": "15% - 19.9%",
+        "picks": 32,
+        "settled": 30,
+        "pending": 2,
+        "wins": 11,
+        "losses": 19,
+        "hit_rate": 36.7,
+        "stake": 39.25,
+        "profit": -6.47,
+        "roi": -16.5,
+        "avg_odds": 2.26
+      },
+      {
         "group": "10% - 14.9%",
         "picks": 29,
         "settled": 29,
@@ -15330,19 +15348,6 @@
         "profit": -1.88,
         "roi": -5.2,
         "avg_odds": 2.11
-      },
-      {
-        "group": "15% - 19.9%",
-        "picks": 32,
-        "settled": 29,
-        "pending": 3,
-        "wins": 11,
-        "losses": 18,
-        "hit_rate": 37.9,
-        "stake": 37.75,
-        "profit": -4.97,
-        "roi": -13.2,
-        "avg_odds": 2.26
       },
       {
         "group": "20%+",
@@ -15388,14 +15393,14 @@
       {
         "group": "Top Rated",
         "picks": 20,
-        "settled": 18,
-        "pending": 2,
+        "settled": 19,
+        "pending": 1,
         "wins": 5,
-        "losses": 13,
-        "hit_rate": 27.8,
-        "stake": 27.0,
-        "profit": -9.78,
-        "roi": -36.2,
+        "losses": 14,
+        "hit_rate": 26.3,
+        "stake": 28.5,
+        "profit": -11.28,
+        "roi": -39.6,
         "avg_odds": 2.16
       },
       {
@@ -15468,14 +15473,14 @@
       {
         "group": "wta",
         "picks": 14,
-        "settled": 11,
-        "pending": 3,
+        "settled": 12,
+        "pending": 2,
         "wins": 6,
-        "losses": 5,
-        "hit_rate": 54.5,
-        "stake": 13.75,
-        "profit": 0.2,
-        "roi": 1.5,
+        "losses": 6,
+        "hit_rate": 50.0,
+        "stake": 15.25,
+        "profit": -1.3,
+        "roi": -8.5,
         "avg_odds": 2.17
       }
     ],
@@ -15496,15 +15501,15 @@
       {
         "group": "women",
         "picks": 40,
-        "settled": 35,
-        "pending": 5,
+        "settled": 36,
+        "pending": 4,
         "wins": 15,
-        "losses": 20,
-        "hit_rate": 42.9,
-        "stake": 44.5,
-        "profit": -4.09,
-        "roi": -9.2,
-        "avg_odds": 2.25
+        "losses": 21,
+        "hit_rate": 41.7,
+        "stake": 46.0,
+        "profit": -5.59,
+        "roi": -12.1,
+        "avg_odds": 2.24
       },
       {
         "group": "unknown",
@@ -15537,15 +15542,15 @@
       {
         "group": "Unibet",
         "picks": 17,
-        "settled": 15,
-        "pending": 2,
+        "settled": 16,
+        "pending": 1,
         "wins": 10,
-        "losses": 5,
-        "hit_rate": 66.7,
-        "stake": 19.0,
-        "profit": 8.95,
-        "roi": 47.1,
-        "avg_odds": 2.29
+        "losses": 6,
+        "hit_rate": 62.5,
+        "stake": 20.5,
+        "profit": 7.45,
+        "roi": 36.3,
+        "avg_odds": 2.28
       },
       {
         "group": "bet365",
