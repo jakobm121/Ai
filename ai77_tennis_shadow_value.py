@@ -31,7 +31,7 @@ MODEL_VERSION = "ai77_tennis_shadow_value_v1"
 REQUEST_TIMEOUT = 30
 API_SLEEP_SECONDS = 0.35
 
-DAYS_AHEAD = 1
+DAYS_AHEAD = 2
 MAX_PICKS = 30
 
 # Base data quality
