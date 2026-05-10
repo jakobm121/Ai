@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-10T17:32:04.616439+02:00",
+  "generated_at": "2026-05-10T23:25:33.228885+02:00",
   "pending_before": 7,
-  "updated": 0,
-  "still_pending": 7,
+  "updated": 3,
+  "still_pending": 4,
   "not_found": 0,
   "errors": [],
   "items": [
@@ -55,12 +55,12 @@
       "bet": "UNDER 22.5 games",
       "side": "under",
       "line": 22.5,
-      "status": "not_finished",
-      "api_status": "Set 3",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "loss",
+      "total_games": 32,
+      "final_score": "5-7, 6-4, 6-4",
+      "profit": -0.75
     },
     {
       "event_key": 12126018,
@@ -69,12 +69,12 @@
       "bet": "UNDER 22.5 games",
       "side": "under",
       "line": 22.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "loss",
+      "total_games": 26,
+      "final_score": "6-3, 3-6, 2-6",
+      "profit": -0.5
     },
     {
       "event_key": 12125908,
@@ -83,12 +83,12 @@
       "bet": "UNDER 20.5 games",
       "side": "under",
       "line": 20.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "loss",
+      "total_games": 26,
+      "final_score": "1-6, 6-4, 3-6",
+      "profit": -0.25
     },
     {
       "event_key": 12126048,
@@ -98,7 +98,7 @@
       "side": "under",
       "line": 21.5,
       "status": "not_finished",
-      "api_status": "",
+      "api_status": "1",
       "result": "pending",
       "total_games": null,
       "final_score": null,
