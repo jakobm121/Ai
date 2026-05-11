@@ -129,13 +129,40 @@ def parse_set_pair_from_text(value):
     return int(match.group(1)), int(match.group(2))
 
 
+def parse_score_number(value):
+    """
+    API-Tennis sometimes returns tie-break set scores like:
+      6.5 / 7.7
+      6.8 / 7.10
+      7.8 / 6.6
+
+    For totals we only need games:
+      6.5  -> 6
+      7.10 -> 7
+    """
+    if value is None:
+        return None
+
+    text = str(value).strip()
+    if not text:
+        return None
+
+    if "." in text:
+        text = text.split(".", 1)[0]
+
+    try:
+        return int(text)
+    except Exception:
+        return None
+
+
 def parse_scores(scores):
     """
     Robust parser for API 'scores' array.
 
-    Handles both:
+    Handles:
       {"score_first": "6", "score_second": "7"}
-    and possible string fields:
+      {"score_first": "6.5", "score_second": "7.7"}
       {"score": "7-6(5)"}
     """
     parsed = []
@@ -154,13 +181,12 @@ def parse_scores(scores):
         second = s.get("score_second")
 
         if first is not None and second is not None:
-            try:
-                a = int(str(first).strip())
-                b = int(str(second).strip())
+            a = parse_score_number(first)
+            b = parse_score_number(second)
+
+            if a is not None and b is not None:
                 parsed.append((a, b))
                 continue
-            except Exception:
-                pass
 
         # Fallback: if API stores set score as a string in a different field.
         for key in (
@@ -266,7 +292,15 @@ def settle_pick(pick, fixture):
     status = str(status_raw or "").lower().strip()
 
     if is_bad_terminal_status(status):
-        return False, "bad_terminal_status"
+        pick["result"] = "void"
+        pick["profit"] = 0.0
+        pick["settled_at"] = now_iso()
+        pick["settled_status"] = status_raw
+        pick["event_winner"] = fixture.get("event_winner")
+        pick["final_score"] = None
+        pick["total_games"] = None
+
+        return True, "void_bad_terminal_status"
 
     if status != "finished":
         return False, "not_finished"
