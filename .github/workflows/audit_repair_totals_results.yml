@@ -1,0 +1,112 @@
+name: Audit Repair Totals Results
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit-repair-totals-results:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Ai
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Show files before repair
+        run: |
+          echo "=== root ==="
+          ls -la
+
+          echo "=== scripts ==="
+          ls -la scripts || true
+
+          echo "=== data before ==="
+          ls -la data || true
+
+          if [ ! -f data/tennis_totals_results.json ]; then
+            echo "ERROR: data/tennis_totals_results.json not found."
+            exit 1
+          fi
+
+          if [ ! -f scripts/audit_repair_totals_results.py ]; then
+            echo "ERROR: scripts/audit_repair_totals_results.py not found."
+            exit 1
+          fi
+
+      - name: Run totals results audit repair
+        run: |
+          python scripts/audit_repair_totals_results.py
+
+      - name: Show repair output
+        run: |
+          echo "=== data after ==="
+          ls -la data || true
+
+          echo "=== repair report preview ==="
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report_path = Path("data/tennis_totals_audit_repair_report.json")
+
+          if not report_path.exists():
+              print("No report found.")
+              raise SystemExit(1)
+
+          report = json.loads(report_path.read_text(encoding="utf-8"))
+
+          print("changed_count:", report.get("changed_count"))
+          print("reset_to_pending_count:", report.get("reset_to_pending_count"))
+          print("untouched_count:", report.get("untouched_count"))
+
+          print("\nChanged examples:")
+          for item in report.get("changed", [])[:20]:
+              print(
+                  item.get("date"),
+                  item.get("time"),
+                  item.get("match"),
+                  item.get("side"),
+                  item.get("line"),
+                  item.get("final_score"),
+                  f"{item.get('old_result')} -> {item.get('new_result')}",
+                  f"{item.get('old_profit')} -> {item.get('new_profit')}",
+              )
+
+          print("\nReset to pending examples:")
+          for item in report.get("reset_to_pending", [])[:20]:
+              print(
+                  item.get("date"),
+                  item.get("time"),
+                  item.get("match"),
+                  item.get("side"),
+                  item.get("line"),
+                  item.get("old_final_score"),
+                  item.get("old_result"),
+              )
+          PY
+
+      - name: Commit repaired totals results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/tennis_totals_results.json \
+                  data/tennis_totals_results.before_audit_repair.json \
+                  data/tennis_totals_audit_repair_report.json \
+                  scripts/audit_repair_totals_results.py \
+                  tennis_totals_settle.py
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Audit and repair tennis totals results"
+          git push
