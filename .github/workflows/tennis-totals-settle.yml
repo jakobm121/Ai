@@ -3,8 +3,17 @@ name: Tennis Totals Settle
 on:
   workflow_dispatch:
   schedule:
-    # Runs 4 times per day UTC
-    - cron: "30 2,8,14,20 * * *"
+    # 08:30 Balkan poleti
+    - cron: "30 6 * * *"
+
+    # 14:00 Balkan poleti
+    - cron: "0 12 * * *"
+
+    # 15:00 Balkan poleti
+    - cron: "0 13 * * *"
+
+    # 23:30 Balkan poleti
+    - cron: "30 21 * * *"
 
 permissions:
   contents: write
