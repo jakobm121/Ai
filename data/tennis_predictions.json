@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T02:18:48.586430+02:00",
+  "generated_at": "2026-05-11T06:12:20.829200+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -16,9 +16,9 @@
     "days_ahead": 1
   },
   "summary": {
-    "fixtures_checked": 153,
-    "candidates_raw": 4,
-    "final_picks": 4,
+    "fixtures_checked": 159,
+    "candidates_raw": 5,
+    "final_picks": 5,
     "skipped_ineligible": 2,
     "errors": 0
   },
@@ -155,7 +155,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-11T02:19:06.396001+02:00",
+      "created_at": "2026-05-11T06:12:40.391480+02:00",
       "reasoning": "M. Landaluce is selected against M. Bellucci in Rome. The model prices M. Landaluce at 58.6% versus an implied probability of 51.0% from best odds 1.96. Market median is 1.91 across 10 bookmakers, leaving an estimated edge of +7.6%. Recent-form profile: M. Landaluce last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.80; M. Bellucci last-10 win rate 60.0%, avg set diff +0.20, avg game diff -0.30. Pick type: favorite. Confidence score: 86.8."
     },
     {
@@ -290,7 +290,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-11T02:19:03.558855+02:00",
+      "created_at": "2026-05-11T06:12:37.288169+02:00",
       "reasoning": "A. Rublev is selected against A. Davidovich Fokina in Rome. The model prices A. Rublev at 66.0% versus an implied probability of 58.8% from best odds 1.70. Market median is 1.68 across 11 bookmakers, leaving an estimated edge of +7.2%. Recent-form profile: A. Rublev last-10 win rate 60.0%, avg set diff +0.30, avg game diff +1.90; A. Davidovich Fokina last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.10. Pick type: favorite. Confidence score: 88.0."
     },
     {
@@ -425,8 +425,143 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-11T02:19:15.723919+02:00",
+      "created_at": "2026-05-11T06:12:50.243321+02:00",
       "reasoning": "N. Basilashvili is selected against B. Nakashima in Rome. The model prices N. Basilashvili at 60.0% versus an implied probability of 38.5% from best odds 2.60. Market median is 2.55 across 11 bookmakers, leaving an estimated edge of +21.5%. Recent-form profile: N. Basilashvili last-10 win rate 60.0%, avg set diff +0.10, avg game diff +0.60; B. Nakashima last-10 win rate 40.0%, avg set diff +0.10, avg game diff +1.40. Pick type: underdog. Confidence score: 88.0."
+    },
+    {
+      "pick_id": "b6ce4104145c8bc669455fdf915ff49b",
+      "event_key": 12126142,
+      "fixture_id": 12126142,
+      "sport": "tennis",
+      "model_version": "ai77_tennis_value_v1",
+      "date": "2026-05-11",
+      "time": "16:00",
+      "match": "M. Mrva - F. Cina",
+      "bet": "M. Mrva",
+      "bucket": "match_winner",
+      "side": "home",
+      "market_side": "Home",
+      "player_key": 31143,
+      "player_name": "M. Mrva",
+      "opponent_key": 38264,
+      "opponent_name": "F. Cina",
+      "tournament": "Tunis",
+      "tournament_key": 2609,
+      "round": "Tunis - 1/16-finals",
+      "event_type": "Challenger Men Singles",
+      "qualification": false,
+      "tour_level": "challenger",
+      "gender": "men",
+      "odds": 2.37,
+      "best_bookmaker": "bet365",
+      "market_median_odds": 2.32,
+      "bookmakers_used": 5,
+      "best_to_median_gap": 0.0216,
+      "model_prob": 0.5498,
+      "implied_prob": 0.4219,
+      "edge": 0.1279,
+      "player_score": 36.8,
+      "opponent_score": 34.1,
+      "score_diff": 2.7,
+      "confidence": 82.2,
+      "quality_score": 80.4,
+      "stake": 1.0,
+      "stake_label": "Standard",
+      "favorite_type": "underdog",
+      "h2h": {
+        "matches": 0,
+        "first_wins": 0,
+        "second_wins": 0,
+        "first_score": 0.0,
+        "second_score": 0.0
+      },
+      "player_form": {
+        "score": 36.8,
+        "last_5": {
+          "matches": 5,
+          "wins": 0,
+          "losses": 5,
+          "win_rate": 0.0,
+          "set_diff_avg": -1.2,
+          "game_diff_avg": -3.4,
+          "straight_win_rate": 0.0,
+          "straight_loss_rate": 0.2,
+          "close_loss_rate": 0.8,
+          "fatigue_matches_7d": 0,
+          "fatigue_matches_3d": 0
+        },
+        "last_10": {
+          "matches": 10,
+          "wins": 4,
+          "losses": 6,
+          "win_rate": 0.4,
+          "set_diff_avg": -0.1,
+          "game_diff_avg": 0.1,
+          "straight_win_rate": 0.3,
+          "straight_loss_rate": 0.2,
+          "close_loss_rate": 0.4,
+          "fatigue_matches_7d": 0,
+          "fatigue_matches_3d": 0
+        },
+        "last_20": {
+          "matches": 10,
+          "wins": 4,
+          "losses": 6,
+          "win_rate": 0.4,
+          "set_diff_avg": -0.1,
+          "game_diff_avg": 0.1,
+          "straight_win_rate": 0.3,
+          "straight_loss_rate": 0.2,
+          "close_loss_rate": 0.4,
+          "fatigue_matches_7d": 0,
+          "fatigue_matches_3d": 0
+        }
+      },
+      "opponent_form": {
+        "score": 34.1,
+        "last_5": {
+          "matches": 5,
+          "wins": 0,
+          "losses": 5,
+          "win_rate": 0.0,
+          "set_diff_avg": -1.6,
+          "game_diff_avg": -5.0,
+          "straight_win_rate": 0.0,
+          "straight_loss_rate": 0.6,
+          "close_loss_rate": 0.4,
+          "fatigue_matches_7d": 1,
+          "fatigue_matches_3d": 0
+        },
+        "last_10": {
+          "matches": 10,
+          "wins": 4,
+          "losses": 6,
+          "win_rate": 0.4,
+          "set_diff_avg": -0.2,
+          "game_diff_avg": -1.2,
+          "straight_win_rate": 0.3,
+          "straight_loss_rate": 0.3,
+          "close_loss_rate": 0.3,
+          "fatigue_matches_7d": 1,
+          "fatigue_matches_3d": 0
+        },
+        "last_20": {
+          "matches": 10,
+          "wins": 4,
+          "losses": 6,
+          "win_rate": 0.4,
+          "set_diff_avg": -0.2,
+          "game_diff_avg": -1.2,
+          "straight_win_rate": 0.3,
+          "straight_loss_rate": 0.3,
+          "close_loss_rate": 0.3,
+          "fatigue_matches_7d": 1,
+          "fatigue_matches_3d": 0
+        }
+      },
+      "result": "pending",
+      "created_at": "2026-05-11T06:13:08.969638+02:00",
+      "reasoning": "M. Mrva is selected against F. Cina in Tunis. The model prices M. Mrva at 55.0% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.32 across 5 bookmakers, leaving an estimated edge of +12.8%. Recent-form profile: M. Mrva last-10 win rate 40.0%, avg set diff -0.10, avg game diff +0.10; F. Cina last-10 win rate 40.0%, avg set diff -0.20, avg game diff -1.20. Pick type: underdog. Confidence score: 82.2."
     },
     {
       "pick_id": "0befa5076f9b345f59c10d6d2fcae556",
@@ -455,8 +590,8 @@
       "odds": 1.8,
       "best_bookmaker": "Betano",
       "market_median_odds": 1.73,
-      "bookmakers_used": 7,
-      "best_to_median_gap": 0.0405,
+      "bookmakers_used": 6,
+      "best_to_median_gap": 0.0375,
       "model_prob": 0.66,
       "implied_prob": 0.5556,
       "edge": 0.1044,
@@ -464,7 +599,7 @@
       "opponent_score": 36.3,
       "score_diff": 16.5,
       "confidence": 88,
-      "quality_score": 79.6,
+      "quality_score": 78.1,
       "stake": 1.0,
       "stake_label": "Standard",
       "favorite_type": "favorite",
@@ -560,8 +695,8 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-11T02:19:24.079059+02:00",
-      "reasoning": "Dar. Blanch is selected against J. Pinnington Jones in Oeiras 6. The model prices Dar. Blanch at 66.0% versus an implied probability of 55.6% from best odds 1.80. Market median is 1.73 across 7 bookmakers, leaving an estimated edge of +10.4%. Recent-form profile: Dar. Blanch last-10 win rate 60.0%, avg set diff +0.10, avg game diff +1.10; J. Pinnington Jones last-10 win rate 30.0%, avg set diff -0.70, avg game diff -3.10. Pick type: favorite. Confidence score: 88.0."
+      "created_at": "2026-05-11T06:12:59.995352+02:00",
+      "reasoning": "Dar. Blanch is selected against J. Pinnington Jones in Oeiras 6. The model prices Dar. Blanch at 66.0% versus an implied probability of 55.6% from best odds 1.80. Market median is 1.73 across 6 bookmakers, leaving an estimated edge of +10.4%. Recent-form profile: Dar. Blanch last-10 win rate 60.0%, avg set diff +0.10, avg game diff +1.10; J. Pinnington Jones last-10 win rate 30.0%, avg set diff -0.70, avg game diff -3.10. Pick type: favorite. Confidence score: 88.0."
     }
   ]
 }
