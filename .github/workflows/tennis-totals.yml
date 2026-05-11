@@ -3,9 +3,8 @@ name: Tennis Totals Value Model
 on:
   workflow_dispatch:
   schedule:
-    # Balkan poleti: 10:20, 12:20, 14:20, 16:20
-    # GitHub cron uporablja UTC
-    - cron: "20 8,10,12,14 * * *"
+    # 09:20, 11:20, 13:20, 16:20 Balkan poleti
+    - cron: "20 7,9,11,14 * * *"
 
 permissions:
   contents: write
