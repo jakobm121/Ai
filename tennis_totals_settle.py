@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -9,9 +10,10 @@ import requests
 
 API_KEY = os.getenv("API_KEY")
 BASE_URL = "https://api.api-tennis.com/tennis/"
-TZ_NAME = "Europe/Ljubljana"
 
+TZ_NAME = "Europe/Ljubljana"
 DATA_DIR = "data"
+
 RESULTS_FILE = f"{DATA_DIR}/tennis_totals_results.json"
 DEBUG_FILE = f"{DATA_DIR}/tennis_totals_settle_debug.json"
 
@@ -30,9 +32,11 @@ def now_iso():
 def load_json(path, default):
     if not os.path.exists(path):
         return default
+
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
+
         return data if isinstance(data, type(default)) else default
     except Exception:
         return default
@@ -40,6 +44,7 @@ def load_json(path, default):
 
 def save_json(path, data):
     ensure_dirs()
+
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
@@ -47,6 +52,8 @@ def save_json(path, data):
 
 def safe_float(v, default=0.0):
     try:
+        if v is None or v == "":
+            return default
         return float(v)
     except Exception:
         return default
@@ -81,6 +88,7 @@ def fetch_fixture_by_event_key(event_key):
         "method": "get_fixtures",
         "event_key": event_key,
     })
+
     time.sleep(API_SLEEP_SECONDS)
 
     if data.get("success") != 1:
@@ -97,34 +105,122 @@ def fetch_fixture_by_event_key(event_key):
     return None
 
 
+def parse_set_pair_from_text(value):
+    """
+    Supports:
+      6-7
+      7-6(5)
+      6 - 7
+      10-8
+
+    Tie-break number in parentheses is ignored.
+    """
+    if value is None:
+        return None
+
+    text = str(value).strip()
+    if not text:
+        return None
+
+    match = re.search(r"(\d+)\s*-\s*(\d+)", text)
+    if not match:
+        return None
+
+    return int(match.group(1)), int(match.group(2))
+
+
 def parse_scores(scores):
+    """
+    Robust parser for API 'scores' array.
+
+    Handles both:
+      {"score_first": "6", "score_second": "7"}
+    and possible string fields:
+      {"score": "7-6(5)"}
+    """
     parsed = []
 
     if not isinstance(scores, list):
         return parsed
 
     for s in scores:
-        try:
-            a = int(str(s.get("score_first")).strip())
-            b = int(str(s.get("score_second")).strip())
-            parsed.append((a, b))
-        except Exception:
+        if not isinstance(s, dict):
+            pair = parse_set_pair_from_text(s)
+            if pair:
+                parsed.append(pair)
             continue
+
+        first = s.get("score_first")
+        second = s.get("score_second")
+
+        if first is not None and second is not None:
+            try:
+                a = int(str(first).strip())
+                b = int(str(second).strip())
+                parsed.append((a, b))
+                continue
+            except Exception:
+                pass
+
+        # Fallback: if API stores set score as a string in a different field.
+        for key in (
+            "score",
+            "result",
+            "set_score",
+            "event_score",
+            "score_set",
+            "games",
+            "value",
+        ):
+            pair = parse_set_pair_from_text(s.get(key))
+            if pair:
+                parsed.append(pair)
+                break
 
     return parsed
 
 
-def total_games(scores):
-    return sum(a + b for a, b in parse_scores(scores))
-
-
-def final_score_string(scores):
+def parse_scores_from_fixture(fixture):
+    """
+    First tries fixture['scores'].
+    Then falls back to fixture-level result/score strings if API returns score there.
+    """
+    scores = fixture.get("scores") or []
     parsed = parse_scores(scores)
+
+    if parsed:
+        return parsed
+
+    for key in (
+        "event_final_result",
+        "event_game_result",
+        "event_result",
+        "event_score",
+        "final_score",
+        "score",
+    ):
+        value = fixture.get(key)
+        if not value:
+            continue
+
+        pairs = re.findall(r"(\d+)\s*-\s*(\d+)", str(value))
+        if pairs:
+            return [(int(a), int(b)) for a, b in pairs]
+
+    return []
+
+
+def total_games_from_parsed(parsed):
+    return sum(a + b for a, b in parsed)
+
+
+def final_score_string_from_parsed(parsed):
     return ", ".join(f"{a}-{b}" for a, b in parsed)
 
 
 def is_bad_terminal_status(status):
     s = str(status or "").lower().strip()
+
     bad = {
         "cancelled",
         "canceled",
@@ -135,7 +231,34 @@ def is_bad_terminal_status(status):
         "interrupted",
         "suspended",
     }
+
     return s in bad
+
+
+def compact_fixture_debug(fixture):
+    """
+    Saves score-related parts of the API fixture into debug file.
+    This helps us see where API stores tie-break sets like 6-7 / 7-6.
+    """
+    if not isinstance(fixture, dict):
+        return fixture
+
+    score_related = {}
+
+    for key, value in fixture.items():
+        lk = str(key).lower()
+
+        if (
+            "score" in lk
+            or "result" in lk
+            or "set" in lk
+            or "point" in lk
+            or "winner" in lk
+            or "status" in lk
+        ):
+            score_related[key] = value
+
+    return score_related
 
 
 def settle_pick(pick, fixture):
@@ -148,13 +271,20 @@ def settle_pick(pick, fixture):
     if status != "finished":
         return False, "not_finished"
 
-    scores = fixture.get("scores") or []
-    parsed = parse_scores(scores)
+    parsed = parse_scores_from_fixture(fixture)
 
     if not parsed:
         return False, "no_scores"
 
-    total = total_games(scores)
+    # Critical safety:
+    # A finished tennis match with only 1 parsed set is unsafe for totals.
+    # It is usually incomplete API data or a retirement-like score.
+    # Do not settle until API returns at least two sets.
+    if len(parsed) < 2:
+        return False, "incomplete_score_sets"
+
+    total = total_games_from_parsed(parsed)
+
     line = safe_float(pick.get("line"))
     side = str(pick.get("side") or "").lower()
 
@@ -181,7 +311,7 @@ def settle_pick(pick, fixture):
     pick["settled_at"] = now_iso()
     pick["settled_status"] = status_raw
     pick["event_winner"] = fixture.get("event_winner")
-    pick["final_score"] = final_score_string(scores)
+    pick["final_score"] = final_score_string_from_parsed(parsed)
     pick["total_games"] = total
 
     return True, "settled"
@@ -191,12 +321,14 @@ def main():
     ensure_dirs()
 
     results = load_json(RESULTS_FILE, [])
+
     if not isinstance(results, list):
         results = []
 
     pending = [
         x for x in results
-        if isinstance(x, dict) and str(x.get("result") or "pending").lower() == "pending"
+        if isinstance(x, dict)
+        and str(x.get("result") or "pending").lower() == "pending"
     ]
 
     debug = {
@@ -216,7 +348,10 @@ def main():
         match_name = pick.get("match")
 
         if not event_key:
-            debug["errors"].append({"pick_id": pick.get("pick_id"), "error": "missing_event_key"})
+            debug["errors"].append({
+                "pick_id": pick.get("pick_id"),
+                "error": "missing_event_key",
+            })
             continue
 
         try:
@@ -226,6 +361,7 @@ def main():
                 debug["not_found"] += 1
                 debug["items"].append({
                     "event_key": event_key,
+                    "pick_id": pick.get("pick_id"),
                     "match": match_name,
                     "status": "not_found",
                 })
@@ -238,11 +374,15 @@ def main():
                 debug["updated"] += 1
                 print(
                     f"SETTLED: {match_name} | {pick.get('bet')} | "
-                    f"{pick.get('result')} | total={pick.get('total_games')} | profit={pick.get('profit')}"
+                    f"{pick.get('result')} | total={pick.get('total_games')} | "
+                    f"profit={pick.get('profit')}"
                 )
             else:
                 debug["still_pending"] += 1
-                print(f"PENDING: {match_name} | reason={reason} | status={fixture.get('event_status')}")
+                print(
+                    f"PENDING: {match_name} | reason={reason} | "
+                    f"status={fixture.get('event_status')}"
+                )
 
             debug["items"].append({
                 "event_key": event_key,
@@ -257,6 +397,8 @@ def main():
                 "total_games": pick.get("total_games"),
                 "final_score": pick.get("final_score"),
                 "profit": pick.get("profit"),
+                "raw_scores": fixture.get("scores"),
+                "score_debug": compact_fixture_debug(fixture),
             })
 
         except Exception as e:
@@ -273,8 +415,10 @@ def main():
     print("")
     print(
         f"TENNIS TOTALS SETTLE DONE: "
-        f"updated={debug['updated']} still_pending={debug['still_pending']} "
-        f"not_found={debug['not_found']} errors={len(debug['errors'])}"
+        f"updated={debug['updated']} "
+        f"still_pending={debug['still_pending']} "
+        f"not_found={debug['not_found']} "
+        f"errors={len(debug['errors'])}"
     )
 
 
