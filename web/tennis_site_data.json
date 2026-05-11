@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T07:51:20.079944+02:00",
+  "generated_at": "2026-05-11T12:53:08.049108+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -23,18 +23,18 @@
   },
   "summary": {
     "picks": 111,
-    "settled": 103,
-    "pending": 8,
-    "wins": 45,
+    "settled": 104,
+    "pending": 7,
+    "wins": 46,
     "losses": 58,
-    "hit_rate": 43.7,
-    "stake": 127.5,
-    "profit": -2.29,
-    "roi": -1.8,
+    "hit_rate": 44.2,
+    "stake": 128.5,
+    "profit": -1.59,
+    "roi": -1.2,
     "avg_odds": 2.25,
     "total_results": 111,
-    "settled_picks": 103,
-    "pending_picks": 8
+    "settled_picks": 104,
+    "pending_picks": 7
   },
   "current_picks": [
     {
@@ -303,9 +303,14 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-11T02:19:03.558855+02:00",
-      "reasoning": "A. Rublev is selected against A. Davidovich Fokina in Rome. The model prices A. Rublev at 66.0% versus an implied probability of 58.8% from best odds 1.70. Market median is 1.68 across 11 bookmakers, leaving an estimated edge of +7.2%. Recent-form profile: A. Rublev last-10 win rate 60.0%, avg set diff +0.30, avg game diff +1.90; A. Davidovich Fokina last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.10. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "A. Rublev is selected against A. Davidovich Fokina in Rome. The model prices A. Rublev at 66.0% versus an implied probability of 58.8% from best odds 1.70. Market median is 1.68 across 11 bookmakers, leaving an estimated edge of +7.2%. Recent-form profile: A. Rublev last-10 win rate 60.0%, avg set diff +0.30, avg game diff +1.90; A. Davidovich Fokina last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.10. Pick type: favorite. Confidence score: 88.0.",
+      "profit": 0.7,
+      "settled_at": "2026-05-11T12:53:05.245955+02:00",
+      "settled_status": "Finished",
+      "event_winner": "First Player",
+      "final_score": "6-4, 6-4"
     },
     {
       "pick_id": "9083ba5db4f0bc2d68a44348eea20610",
@@ -15805,9 +15810,14 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-11T02:19:03.558855+02:00",
-      "reasoning": "A. Rublev is selected against A. Davidovich Fokina in Rome. The model prices A. Rublev at 66.0% versus an implied probability of 58.8% from best odds 1.70. Market median is 1.68 across 11 bookmakers, leaving an estimated edge of +7.2%. Recent-form profile: A. Rublev last-10 win rate 60.0%, avg set diff +0.30, avg game diff +1.90; A. Davidovich Fokina last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.10. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "A. Rublev is selected against A. Davidovich Fokina in Rome. The model prices A. Rublev at 66.0% versus an implied probability of 58.8% from best odds 1.70. Market median is 1.68 across 11 bookmakers, leaving an estimated edge of +7.2%. Recent-form profile: A. Rublev last-10 win rate 60.0%, avg set diff +0.30, avg game diff +1.90; A. Davidovich Fokina last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.10. Pick type: favorite. Confidence score: 88.0.",
+      "profit": 0.7,
+      "settled_at": "2026-05-11T12:53:05.245955+02:00",
+      "settled_status": "Finished",
+      "event_winner": "First Player",
+      "final_score": "6-4, 6-4"
     },
     {
       "pick_id": "9083ba5db4f0bc2d68a44348eea20610",
@@ -16220,15 +16230,15 @@
       {
         "date": "2026-05-11",
         "picks": 5,
-        "settled": 0,
-        "pending": 5,
-        "wins": 0,
+        "settled": 1,
+        "pending": 4,
+        "wins": 1,
         "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "hit_rate": 100.0,
+        "stake": 1.0,
+        "profit": 0.7,
+        "roi": 70.0,
+        "avg_odds": 1.7
       },
       {
         "date": "2026-05-10",
@@ -16328,15 +16338,15 @@
         "date": "2026-05-11",
         "type": "favorite",
         "picks": 3,
-        "settled": 0,
-        "pending": 3,
-        "wins": 0,
+        "settled": 1,
+        "pending": 2,
+        "wins": 1,
         "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "hit_rate": 100.0,
+        "stake": 1.0,
+        "profit": 0.7,
+        "roi": 70.0,
+        "avg_odds": 1.7
       },
       {
         "date": "2026-05-10",
@@ -16524,14 +16534,14 @@
       {
         "group": "favorite",
         "picks": 24,
-        "settled": 21,
-        "pending": 3,
-        "wins": 10,
+        "settled": 22,
+        "pending": 2,
+        "wins": 11,
         "losses": 11,
-        "hit_rate": 47.6,
-        "stake": 23.5,
-        "profit": -3.28,
-        "roi": -14.0,
+        "hit_rate": 50.0,
+        "stake": 24.5,
+        "profit": -2.58,
+        "roi": -10.6,
         "avg_odds": 1.83
       }
     ],
@@ -16591,30 +16601,30 @@
       {
         "group": "1.60 - 1.79",
         "picks": 7,
-        "settled": 6,
-        "pending": 1,
-        "wins": 1,
+        "settled": 7,
+        "pending": 0,
+        "wins": 2,
         "losses": 5,
-        "hit_rate": 16.7,
-        "stake": 6.0,
-        "profit": -4.21,
-        "roi": -70.2,
-        "avg_odds": 1.74
+        "hit_rate": 28.6,
+        "stake": 7.0,
+        "profit": -3.51,
+        "roi": -50.1,
+        "avg_odds": 1.73
       }
     ],
     "by_confidence": [
       {
         "group": "Elite 88+",
         "picks": 96,
-        "settled": 90,
-        "pending": 6,
-        "wins": 39,
+        "settled": 91,
+        "pending": 5,
+        "wins": 40,
         "losses": 51,
-        "hit_rate": 43.3,
-        "stake": 113.75,
-        "profit": -5.91,
-        "roi": -5.2,
-        "avg_odds": 2.21
+        "hit_rate": 44.0,
+        "stake": 114.75,
+        "profit": -5.21,
+        "roi": -4.5,
+        "avg_odds": 2.2
       },
       {
         "group": "Solid 76-81",
@@ -16686,15 +16696,15 @@
       {
         "group": "6.5% - 9.9%",
         "picks": 13,
-        "settled": 11,
-        "pending": 2,
-        "wins": 4,
+        "settled": 12,
+        "pending": 1,
+        "wins": 5,
         "losses": 7,
-        "hit_rate": 36.4,
-        "stake": 9.75,
-        "profit": -2.36,
-        "roi": -24.2,
-        "avg_odds": 1.98
+        "hit_rate": 41.7,
+        "stake": 10.75,
+        "profit": -1.66,
+        "roi": -15.4,
+        "avg_odds": 1.96
       }
     ],
     "by_stake_label": [
@@ -16727,15 +16737,15 @@
       {
         "group": "Standard",
         "picks": 19,
-        "settled": 15,
-        "pending": 4,
-        "wins": 6,
+        "settled": 16,
+        "pending": 3,
+        "wins": 7,
         "losses": 9,
-        "hit_rate": 40.0,
-        "stake": 15.0,
-        "profit": -3.01,
-        "roi": -20.1,
-        "avg_odds": 2.16
+        "hit_rate": 43.8,
+        "stake": 16.0,
+        "profit": -2.31,
+        "roi": -14.4,
+        "avg_odds": 2.13
       },
       {
         "group": "Small Value",
@@ -16781,15 +16791,15 @@
       {
         "group": "atp",
         "picks": 26,
-        "settled": 23,
-        "pending": 3,
-        "wins": 8,
+        "settled": 24,
+        "pending": 2,
+        "wins": 9,
         "losses": 15,
-        "hit_rate": 34.8,
-        "stake": 29.25,
-        "profit": -3.21,
-        "roi": -11.0,
-        "avg_odds": 2.36
+        "hit_rate": 37.5,
+        "stake": 30.25,
+        "profit": -2.51,
+        "roi": -8.3,
+        "avg_odds": 2.33
       },
       {
         "group": "wta",
@@ -16809,15 +16819,15 @@
       {
         "group": "men",
         "picks": 63,
-        "settled": 57,
-        "pending": 6,
-        "wins": 23,
+        "settled": 58,
+        "pending": 5,
+        "wins": 24,
         "losses": 34,
-        "hit_rate": 40.4,
-        "stake": 69.25,
-        "profit": -3.0,
-        "roi": -4.3,
-        "avg_odds": 2.26
+        "hit_rate": 41.4,
+        "stake": 70.25,
+        "profit": -2.3,
+        "roi": -3.3,
+        "avg_odds": 2.25
       },
       {
         "group": "women",
@@ -16889,15 +16899,15 @@
       {
         "group": "Betfair",
         "picks": 13,
-        "settled": 11,
-        "pending": 2,
-        "wins": 3,
+        "settled": 12,
+        "pending": 1,
+        "wins": 4,
         "losses": 8,
-        "hit_rate": 27.3,
-        "stake": 13.0,
-        "profit": -4.33,
-        "roi": -33.3,
-        "avg_odds": 2.47
+        "hit_rate": 33.3,
+        "stake": 14.0,
+        "profit": -3.63,
+        "roi": -25.9,
+        "avg_odds": 2.4
       },
       {
         "group": "Betano",
