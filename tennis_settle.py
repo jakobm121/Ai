@@ -7,8 +7,9 @@ from zoneinfo import ZoneInfo
 import requests
 
 
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("TENNIS_API_KEY") or os.getenv("API_KEY")
 BASE_URL = "https://api.api-tennis.com/tennis/"
+
 TZ_NAME = "Europe/Ljubljana"
 
 DATA_DIR = "data"
@@ -17,6 +18,27 @@ SETTLE_DEBUG_FILE = os.path.join(DATA_DIR, "tennis_settle_debug.json")
 
 REQUEST_TIMEOUT = 30
 API_SLEEP_SECONDS = 0.35
+
+FINISHED_STATUSES = {"finished"}
+VOID_STATUSES = {
+    "cancelled",
+    "canceled",
+    "retired",
+    "walkover",
+    "wo",
+    "abandoned",
+}
+KEEP_PENDING_STATUSES = {
+    "",
+    "not started",
+    "started",
+    "inprogress",
+    "in progress",
+    "live",
+    "suspended",
+    "interrupted",
+    "postponed",
+}
 
 
 def ensure_dirs():
@@ -37,14 +59,44 @@ def load_json(path, default):
 
 def save_json(path, data):
     ensure_dirs()
+
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
 
+def now_iso():
+    return datetime.now(ZoneInfo(TZ_NAME)).isoformat()
+
+
+def normalize_status(value):
+    return str(value or "").strip().lower()
+
+
+def safe_float(value, default=0.0):
+    try:
+        if value is None or value == "":
+            return default
+        return float(value)
+    except Exception:
+        return default
+
+
+def safe_int(value, default=None):
+    try:
+        if value is None or value == "":
+            return default
+        text = str(value).strip()
+        if "." in text:
+            text = text.split(".", 1)[0]
+        return int(text)
+    except Exception:
+        return default
+
+
 def api_call(params, retries=3):
     if not API_KEY:
-        raise RuntimeError("Missing API_KEY environment variable.")
+        raise RuntimeError("Missing TENNIS_API_KEY or API_KEY environment variable.")
 
     params = params.copy()
     params["APIkey"] = API_KEY
@@ -92,7 +144,54 @@ def fetch_fixture(event_key):
     return None
 
 
+def score_value(score_row, keys):
+    for key in keys:
+        value = score_row.get(key)
+        parsed = safe_int(value, None)
+        if parsed is not None:
+            return parsed
+    return None
+
+
+def tiebreak_value(score_row):
+    """
+    API providers do not always use the same field names for tie-breaks.
+    This checks the common variants and returns the loser points if available.
+    """
+    possible_keys = [
+        "score_tb",
+        "score_tie_break",
+        "score_tiebreak",
+        "tie_break",
+        "tiebreak",
+        "tb",
+        "score_first_tie_break",
+        "score_second_tie_break",
+        "score_first_tb",
+        "score_second_tb",
+        "tie_break_first",
+        "tie_break_second",
+        "tb_first",
+        "tb_second",
+    ]
+
+    for key in possible_keys:
+        value = score_row.get(key)
+        parsed = safe_int(value, None)
+        if parsed is not None:
+            return parsed
+
+    return None
+
+
 def final_score(match):
+    """
+    Returns final score with tie-breaks when available.
+
+    Example:
+    7-6(4), 6-4
+    6-7(5), 6-3, 6-2
+    """
     scores = match.get("scores") or []
 
     if not scores:
@@ -100,40 +199,76 @@ def final_score(match):
 
     parts = []
 
-    for s in scores:
-        a = s.get("score_first")
-        b = s.get("score_second")
+    for score_row in scores:
+        if not isinstance(score_row, dict):
+            continue
 
-        if a is not None and b is not None:
-            parts.append(f"{a}-{b}")
+        a = score_value(score_row, ["score_first", "first_score", "home_score"])
+        b = score_value(score_row, ["score_second", "second_score", "away_score"])
+
+        if a is None or b is None:
+            continue
+
+        part = f"{a}-{b}"
+
+        # Tie-break is only relevant on 7-6 / 6-7 sets.
+        if {a, b} == {6, 7}:
+            tb = tiebreak_value(score_row)
+            if tb is not None:
+                part = f"{part}({tb})"
+
+        parts.append(part)
 
     return ", ".join(parts) if parts else (match.get("event_final_result") or "")
 
 
-def settle_pick(pick, match):
-    status = str(match.get("event_status") or "").lower()
+def pick_winner_label_from_side(pick):
+    pick_side = pick.get("market_side")
 
-    if status != "finished":
-        return False
+    if pick_side == "Home":
+        return "First Player"
+
+    if pick_side == "Away":
+        return "Second Player"
+
+    return None
+
+
+def settle_as_void(pick, match, reason):
+    pick["result"] = "void"
+    pick["profit"] = 0.0
+    pick["settled_at"] = now_iso()
+    pick["settled_status"] = match.get("event_status")
+    pick["settle_reason"] = reason
+    pick["event_winner"] = match.get("event_winner")
+    pick["final_score"] = final_score(match)
+
+    return True, reason
+
+
+def settle_pick(pick, match):
+    status = normalize_status(match.get("event_status"))
+
+    if status in VOID_STATUSES:
+        return settle_as_void(pick, match, f"void_status:{status}")
+
+    if status not in FINISHED_STATUSES:
+        return False, f"keep_pending_status:{status or 'unknown'}"
 
     winner = match.get("event_winner")
 
     if winner not in {"First Player", "Second Player"}:
-        return False
+        return False, "missing_or_invalid_event_winner"
 
-    pick_side = pick.get("market_side")
+    pick_winner_label = pick_winner_label_from_side(pick)
 
-    if pick_side == "Home":
-        pick_winner_label = "First Player"
-    elif pick_side == "Away":
-        pick_winner_label = "Second Player"
-    else:
-        return False
+    if not pick_winner_label:
+        return False, "missing_or_invalid_market_side"
 
     won = winner == pick_winner_label
 
-    stake = float(pick.get("stake") or 1)
-    odds = float(pick.get("odds") or 0)
+    stake = safe_float(pick.get("stake"), 1.0)
+    odds = safe_float(pick.get("odds"), 0.0)
 
     if won:
         profit = stake * (odds - 1)
@@ -144,12 +279,13 @@ def settle_pick(pick, match):
 
     pick["result"] = result
     pick["profit"] = round(profit, 4)
-    pick["settled_at"] = datetime.now(ZoneInfo(TZ_NAME)).isoformat()
+    pick["settled_at"] = now_iso()
     pick["settled_status"] = match.get("event_status")
+    pick["settle_reason"] = "finished_with_winner"
     pick["event_winner"] = winner
     pick["final_score"] = final_score(match)
 
-    return True
+    return True, "settled"
 
 
 def main():
@@ -170,6 +306,7 @@ def main():
     still_pending = 0
     not_found = 0
     errors = []
+    checked = []
 
     for pick in pending:
         event_key = pick.get("event_key") or pick.get("fixture_id")
@@ -178,6 +315,13 @@ def main():
         if not event_key:
             print(f"MISSING EVENT KEY - KEEP PENDING: {match_name}")
             still_pending += 1
+            checked.append({
+                "match": match_name,
+                "event_key": event_key,
+                "status": None,
+                "changed": False,
+                "reason": "missing_event_key",
+            })
             continue
 
         try:
@@ -187,6 +331,13 @@ def main():
                 print(f"NO MATCH FOUND - KEEP PENDING: {match_name} | event_key={event_key}")
                 not_found += 1
                 still_pending += 1
+                checked.append({
+                    "match": match_name,
+                    "event_key": event_key,
+                    "status": None,
+                    "changed": False,
+                    "reason": "match_not_found",
+                })
                 continue
 
             status = match.get("event_status")
@@ -194,13 +345,28 @@ def main():
 
             print(f"CHECK {match_name} | status={status} | score={score or '-'}")
 
-            changed = settle_pick(pick, match)
+            changed, reason = settle_pick(pick, match)
+
+            checked.append({
+                "match": match_name,
+                "event_key": event_key,
+                "status": status,
+                "winner": match.get("event_winner"),
+                "score": score,
+                "changed": changed,
+                "reason": reason,
+            })
 
             if changed:
                 updated += 1
-                print(f"SETTLED {match_name}: {pick['result']} | profit={pick.get('profit')} | {pick.get('final_score')}")
+                print(
+                    f"SETTLED {match_name}: {pick.get('result')} "
+                    f"| profit={pick.get('profit')} "
+                    f"| {pick.get('final_score')}"
+                )
             else:
                 still_pending += 1
+                print(f"KEEP PENDING {match_name}: {reason}")
 
         except Exception as e:
             print(f"SETTLE ERROR - KEEP PENDING: {match_name} | {e}")
@@ -209,17 +375,24 @@ def main():
                 "match": match_name,
                 "error": str(e),
             })
+            checked.append({
+                "match": match_name,
+                "event_key": event_key,
+                "changed": False,
+                "reason": f"error:{e}",
+            })
             still_pending += 1
 
     save_json(RESULTS_FILE, results)
 
     debug_payload = {
-        "generated_at": datetime.now(ZoneInfo(TZ_NAME)).isoformat(),
+        "generated_at": now_iso(),
         "pending_checked": len(pending),
         "updated": updated,
         "still_pending": still_pending,
         "not_found": not_found,
         "errors": errors,
+        "checked": checked,
     }
 
     save_json(SETTLE_DEBUG_FILE, debug_payload)
