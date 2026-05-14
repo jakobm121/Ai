@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-14T23:42:09.480742+02:00",
+  "generated_at": "2026-05-14T23:51:38.087987+02:00",
   "model_version": "ai77_tennis_totals_v2_wide_shadow",
-  "fixtures_total": 607,
-  "scanned": 120,
-  "with_odds": 68,
-  "with_match_total_market": 0,
+  "fixtures_total": 613,
+  "scanned": 125,
+  "with_odds": 75,
+  "with_match_total_market": 62,
   "skipped": [
     {
       "event_key": 12126214,
@@ -4213,7 +4213,17 @@
         "Away Team Total (1st Set)",
         "Away Team Total (2nd Set)",
         "Home Team Total (1st Set)",
-        "Home Team Total (2nd Set)"
+        "Home Team Total (2nd Set)",
+        "Odd/Even",
+        "Win In Straigh Sets (Player 1)",
+        "Win In Straigh Sets (Player 2)",
+        "Total Breaks on Serve",
+        "Home First Service Game - Winners Winner",
+        "Away First Service Game - Winners Winner",
+        "Away First Service Game - Winners First Point",
+        "Home First Service Game - Winners First Point",
+        "Win From behind (Player 1)",
+        "Win From behind (Player 2)"
       ]
     },
     {
@@ -4573,7 +4583,13 @@
         "Over/Under by Games (2nd Set)",
         "Home/Away (2nd Set)",
         "Odd/Even (2nd Set)",
-        "Asian Handicap (2nd Set)"
+        "Asian Handicap (2nd Set)",
+        "Correct Score 2nd Half",
+        "Result/Total Goals",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
       ]
     },
     {
@@ -4690,22 +4706,59 @@
     {
       "event_key": 12127803,
       "match": "R. Piatti - T. Longwe-Smit",
-      "reason": "no_odds"
+      "reason": "no_match_total_candidates",
+      "markets": [
+        "Home/Away",
+        "Correct Score 1st Half",
+        "Over/Under by Games in Match",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Number of sets",
+        "Win In Straigh Sets (Player 1)",
+        "Win In Straigh Sets (Player 2)",
+        "Home First Service Game - Winners Winner",
+        "Away First Service Game - Winners Winner"
+      ]
     },
     {
       "event_key": 12127804,
       "match": "R. Strombachs - C. Williams",
-      "reason": "no_odds"
+      "reason": "no_match_total_candidates",
+      "markets": [
+        "Home/Away",
+        "Correct Score 1st Half",
+        "Over/Under by Games in Match",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Number of sets",
+        "Win In Straigh Sets (Player 1)",
+        "Win In Straigh Sets (Player 2)",
+        "Home First Service Game - Winners Winner",
+        "Away First Service Game - Winners Winner"
+      ]
     },
     {
       "event_key": 12127805,
       "match": "S. Vujic - C. Bittoun",
-      "reason": "no_odds"
+      "reason": "no_match_total_candidates",
+      "markets": [
+        "Home/Away",
+        "Home/Away (1st Set)"
+      ]
     },
     {
       "event_key": 12127806,
       "match": "J. Weber - U. Kamboj",
-      "reason": "no_odds"
+      "reason": "no_match_total_candidates",
+      "markets": [
+        "Home/Away",
+        "Home/Away (1st Set)"
+      ]
     },
     {
       "event_key": 12127807,
@@ -4810,17 +4863,53 @@
     {
       "event_key": 12127820,
       "match": "E. Jamshidi - M. Giordano",
-      "reason": "no_odds"
+      "reason": "no_match_total_candidates",
+      "markets": [
+        "Home/Away",
+        "Correct Score 1st Half",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Set Betting",
+        "Number of sets",
+        "Win In Straigh Sets (Player 1)",
+        "Win In Straigh Sets (Player 2)",
+        "Home First Service Game - Winners Winner",
+        "Away First Service Game - Winners Winner"
+      ]
     },
     {
       "event_key": 12127821,
       "match": "M. Laron - S. Leon",
-      "reason": "no_odds"
+      "reason": "no_match_total_candidates",
+      "markets": [
+        "Home/Away",
+        "Correct Score 1st Half",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Set Betting",
+        "Number of sets",
+        "Win In Straigh Sets (Player 1)",
+        "Win In Straigh Sets (Player 2)",
+        "Home First Service Game - Winners Winner",
+        "Away First Service Game - Winners Winner"
+      ]
     },
     {
       "event_key": 12127822,
       "match": "K. Laskutova - E. Ivanov",
-      "reason": "no_odds"
+      "reason": "no_match_total_candidates",
+      "markets": [
+        "Home/Away",
+        "Correct Score 1st Half",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Set Betting",
+        "Number of sets",
+        "Win In Straigh Sets (Player 1)",
+        "Win In Straigh Sets (Player 2)",
+        "Home First Service Game - Winners Winner",
+        "Away First Service Game - Winners Winner"
+      ]
     },
     {
       "event_key": 12127823,
@@ -4896,6 +4985,36 @@
       "event_key": 12127839,
       "match": "Firman/ Liu - Pascual Montalvo/ Sharabura",
       "reason": "not_singles"
+    },
+    {
+      "event_key": 12127840,
+      "match": "J. Sinner - D. Medvedev",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12127841,
+      "match": "Pignaton/ Liu - Kuzuhara/ Mesarovic",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12127842,
+      "match": "C. Langmo - A. Ganesan",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12127843,
+      "match": "N. Hardt - K. Bigun",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12127844,
+      "match": "P. Carreno-Busta - J. Munar",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12127845,
+      "match": "M. Giunta - T. Compagnucci",
+      "reason": "no_odds"
     }
   ],
   "candidates_raw": 0,
@@ -4903,11 +5022,8 @@
   "errors": [],
   "market_feature_coverage": {
     "match_total_center": 0,
-    "player_total_sum_center": 0,
-    "three_set_prob_no_vig": 0,
-    "handicap_abs_center": 0,
-    "first_set_total_center": 0,
-    "second_set_total_center": 0
+    "number_of_sets": 0,
+    "home_away": 0
   },
   "market_probe": {
     "event_key": 12127466,
