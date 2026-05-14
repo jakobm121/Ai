@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-05-14T23:35:44.236582+02:00",
+  "generated_at": "2026-05-14T23:43:23.365552+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
-  "model": "AI77 Tennis Totals V2 Wide Shadow",
+  "model": "AI77 Tennis Totals Value Model v2 Wide Shadow",
   "model_version": "ai77_tennis_totals_v2_wide_shadow",
-  "stake_mode": "quality_based_shadow",
-  "market": "Over/Under by Games in Match",
+  "stake_mode": "shadow_quality_based",
   "filters": {
     "days_ahead": 2,
+    "max_fixtures": 700,
+    "max_scan": 160,
     "max_picks": 60,
     "max_over_picks": 30,
     "max_under_picks": 30,
-    "min_recent_matches_each": 5,
-    "min_bookmakers_match_total": 3,
-    "min_edge": 0.035,
-    "min_confidence": 58.0,
-    "min_quality": 54.0,
-    "odds_min": 1.55,
-    "odds_max": 2.35,
-    "main_lines_min": 18.5,
-    "main_lines_max": 24.5,
-    "model_prob_min": 0.39,
+    "min_recent_matches_each": 4,
+    "min_bookmakers": 5,
+    "min_edge": 0.025,
+    "min_confidence": 55.0,
+    "odds_min": 1.5,
+    "odds_max": 2.5,
+    "main_lines_min": 17.5,
+    "main_lines_max": 25.5,
+    "model_prob_min": 0.4,
     "model_prob_max": 0.66
   },
   "summary": {
@@ -30,15 +30,7 @@
     "with_match_total_market": 0,
     "candidates_raw": 0,
     "final_picks": 0,
-    "errors": 0,
-    "market_feature_coverage": {
-      "match_total_center": 0,
-      "player_total_sum_center": 0,
-      "three_set_prob_no_vig": 0,
-      "handicap_abs_center": 0,
-      "first_set_total_center": 0,
-      "second_set_total_center": 0
-    }
+    "errors": 0
   },
   "picks": []
 }
