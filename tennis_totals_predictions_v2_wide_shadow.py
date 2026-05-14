@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import time
 import math
@@ -16,38 +17,40 @@ TZ_NAME = "Europe/Ljubljana"
 
 DATA_DIR = "data"
 
+MODEL_VERSION = "ai77_tennis_totals_v2_wide_shadow"
+MODEL_NAME = "AI77 Tennis Totals V2 Wide Shadow"
+MARKET_NAME = "Over/Under by Games in Match"
+
 PREDICTIONS_FILE = f"{DATA_DIR}/tennis_totals_predictions_v2_wide_shadow.json"
 RESULTS_FILE = f"{DATA_DIR}/tennis_totals_results_v2_wide_shadow.json"
 DEBUG_FILE = f"{DATA_DIR}/tennis_totals_debug_v2_wide_shadow.json"
 CANDIDATES_FILE = f"{DATA_DIR}/tennis_totals_candidates_v2_wide_shadow.json"
 
-MODEL_VERSION = "ai77_tennis_totals_v2_wide_shadow"
-MODEL_NAME = "AI77 Tennis Totals Value Model v2 Wide Shadow"
-
-DAYS_AHEAD = 2
-MAX_FIXTURES = 700
-MAX_SCAN = 160
-
+DAYS_AHEAD = int(os.getenv("DAYS_AHEAD", "2"))
+MAX_FIXTURES = int(os.getenv("MAX_FIXTURES", "900"))
 REQUEST_TIMEOUT = 30
-API_SLEEP_SECONDS = 0.25
+API_SLEEP_SECONDS = float(os.getenv("API_SLEEP_SECONDS", "0.30"))
 
-MAX_PICKS = 60
-MAX_OVER_PICKS = 30
-MAX_UNDER_PICKS = 30
+MAX_PICKS = int(os.getenv("MAX_PICKS", "30"))
+MAX_OVER_PICKS = int(os.getenv("MAX_OVER_PICKS", "18"))
+MAX_UNDER_PICKS = int(os.getenv("MAX_UNDER_PICKS", "18"))
 
-MIN_RECENT_MATCHES_EACH = 4
-MIN_BOOKMAKERS = 5
-MIN_EDGE = 0.025
-MIN_CONFIDENCE = 55.0
+MIN_RECENT_MATCHES_EACH = int(os.getenv("MIN_RECENT_MATCHES_EACH", "4"))
 
-ODDS_MIN = 1.50
-ODDS_MAX = 2.50
+# Za prvi test naj bo 2. Ko boš videl, da kandidati prihajajo, lahko dvigneš na 3/4/5.
+MIN_BOOKMAKERS = int(os.getenv("MIN_BOOKMAKERS", "2"))
 
-MODEL_PROB_MIN = 0.40
-MODEL_PROB_MAX = 0.66
+MIN_EDGE = float(os.getenv("MIN_EDGE", "0.025"))
+MIN_CONFIDENCE = float(os.getenv("MIN_CONFIDENCE", "55.0"))
 
-MAIN_LINES_MIN = 17.5
-MAIN_LINES_MAX = 25.5
+ODDS_MIN = float(os.getenv("ODDS_MIN", "1.45"))
+ODDS_MAX = float(os.getenv("ODDS_MAX", "2.60"))
+
+MODEL_PROB_MIN = 0.38
+MODEL_PROB_MAX = 0.68
+
+MAIN_LINES_MIN = float(os.getenv("MAIN_LINES_MIN", "16.5"))
+MAIN_LINES_MAX = float(os.getenv("MAIN_LINES_MAX", "27.5"))
 
 
 def ensure_dirs():
@@ -65,9 +68,11 @@ def today_local():
 def load_json(path, default):
     if not os.path.exists(path):
         return default
+
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
+
         return data if isinstance(data, type(default)) else default
     except Exception:
         return default
@@ -75,6 +80,7 @@ def load_json(path, default):
 
 def save_json(path, data):
     ensure_dirs()
+
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
@@ -86,6 +92,8 @@ def clamp(v, lo, hi):
 
 def safe_float(v, default=0.0):
     try:
+        if v is None:
+            return default
         return float(v)
     except Exception:
         return default
@@ -93,13 +101,11 @@ def safe_float(v, default=0.0):
 
 def safe_int(v, default=0):
     try:
+        if v is None:
+            return default
         return int(v)
     except Exception:
         return default
-
-
-def norm_key(s):
-    return " ".join(str(s or "").lower().replace("-", " ").replace("_", " ").split())
 
 
 def api_call(params, retries=3):
@@ -128,11 +134,13 @@ def api_call(params, retries=3):
 
 def fetch_fixtures_for_date(date_value):
     date_s = date_value.strftime("%Y-%m-%d")
+
     data = api_call({
         "method": "get_fixtures",
         "date_start": date_s,
         "date_stop": date_s,
     })
+
     time.sleep(API_SLEEP_SECONDS)
 
     if data.get("success") != 1:
@@ -147,12 +155,14 @@ def fetch_odds(event_key):
         "method": "get_odds",
         "event_key": event_key,
     })
+
     time.sleep(API_SLEEP_SECONDS)
 
     if data.get("success") != 1:
         return {}
 
     result = data.get("result") or {}
+
     return result.get(str(event_key)) or result.get(int(event_key)) or {}
 
 
@@ -162,6 +172,7 @@ def fetch_h2h(first_player_key, second_player_key):
         "first_player_key": first_player_key,
         "second_player_key": second_player_key,
     })
+
     time.sleep(API_SLEEP_SECONDS)
 
     if data.get("success") != 1:
@@ -171,8 +182,8 @@ def fetch_h2h(first_player_key, second_player_key):
 
 
 def is_pregame(match):
-    status = str(match.get("event_status") or "").lower()
-    live = str(match.get("event_live") or "0")
+    status = str(match.get("event_status") or "").lower().strip()
+    live = str(match.get("event_live") or "0").strip()
 
     if live == "1":
         return False
@@ -184,8 +195,8 @@ def is_pregame(match):
         "retired",
         "walkover",
         "interrupted",
-        "after penalties",
-        "after extra time",
+        "abandoned",
+        "suspended",
     }
 
     if status in bad_statuses:
@@ -205,6 +216,10 @@ def is_singles(match):
     if "doubles" in event_type:
         return False
 
+    if "singles" in event_type:
+        return True
+
+    # API včasih ne napiše lepo singles, zato pustimo solo imena skozi.
     return True
 
 
@@ -219,6 +234,7 @@ def tour_level(event_type):
         return "challenger"
     if "itf" in e:
         return "itf"
+
     return "unknown"
 
 
@@ -229,6 +245,7 @@ def gender_from_event_type(event_type):
         return "women"
     if "men" in e or "atp" in e:
         return "men"
+
     return "unknown"
 
 
@@ -259,9 +276,11 @@ def sets_count(scores):
 
 def close_sets_count(scores):
     count = 0
+
     for a, b in parse_scores(scores):
         if max(a, b) >= 6 and abs(a - b) <= 2:
             count += 1
+
     return count
 
 
@@ -278,7 +297,9 @@ def match_winner_side(match):
 
     if len(parts) == 2:
         try:
-            a, b = int(parts[0]), int(parts[1])
+            a = int(parts[0])
+            b = int(parts[1])
+
             if a > b:
                 return "first"
             if b > a:
@@ -291,6 +312,7 @@ def match_winner_side(match):
 
 def player_won(match, player_key):
     player_key = safe_int(player_key)
+
     first = safe_int(match.get("first_player_key"))
     second = safe_int(match.get("second_player_key"))
     winner = match_winner_side(match)
@@ -307,28 +329,35 @@ def player_won(match, player_key):
 
 def game_diff_for_player(match, player_key):
     player_key = safe_int(player_key)
+
     first = safe_int(match.get("first_player_key"))
     second = safe_int(match.get("second_player_key"))
 
+    if first != player_key and second != player_key:
+        return 0
+
     diff = 0
+
     for a, b in parse_scores(match.get("scores")):
         diff += a - b
 
     if second == player_key:
         diff *= -1
 
-    if first != player_key and second != player_key:
-        return 0
-
     return diff
 
 
 def set_diff_for_player(match, player_key):
     player_key = safe_int(player_key)
+
     first = safe_int(match.get("first_player_key"))
     second = safe_int(match.get("second_player_key"))
 
+    if first != player_key and second != player_key:
+        return 0
+
     diff = 0
+
     for a, b in parse_scores(match.get("scores")):
         if a > b:
             diff += 1
@@ -337,9 +366,6 @@ def set_diff_for_player(match, player_key):
 
     if second == player_key:
         diff *= -1
-
-    if first != player_key and second != player_key:
-        return 0
 
     return diff
 
@@ -352,6 +378,7 @@ def clean_finished_matches(matches):
             continue
 
         parsed = parse_scores(m.get("scores"))
+
         if not parsed:
             continue
 
@@ -364,6 +391,7 @@ def clean_finished_matches(matches):
             continue
 
         bad_set = False
+
         for a, b in parsed:
             if a < 0 or b < 0:
                 bad_set = True
@@ -380,13 +408,14 @@ def clean_finished_matches(matches):
 
 def form_totals(matches, player_key):
     matches = clean_finished_matches(matches)
+
     matches = sorted(
         matches,
         key=lambda x: (x.get("event_date") or "", x.get("event_time") or ""),
         reverse=True,
     )
 
-    recent = matches[:20]
+    recent = matches[:25]
 
     def window_stats(n):
         arr = recent[:n]
@@ -399,7 +428,7 @@ def form_totals(matches, player_key):
                 "over_20_5_rate": 0.0,
                 "over_21_5_rate": 0.0,
                 "over_22_5_rate": 0.0,
-                "under_21_5_rate": 0.0,
+                "over_23_5_rate": 0.0,
                 "three_set_rate": 0.0,
                 "straight_set_rate": 0.0,
                 "close_set_rate": 0.0,
@@ -425,7 +454,7 @@ def form_totals(matches, player_key):
             "over_20_5_rate": round(sum(1 for x in totals if x > 20.5) / len(totals), 4),
             "over_21_5_rate": round(sum(1 for x in totals if x > 21.5) / len(totals), 4),
             "over_22_5_rate": round(sum(1 for x in totals if x > 22.5) / len(totals), 4),
-            "under_21_5_rate": round(sum(1 for x in totals if x < 21.5) / len(totals), 4),
+            "over_23_5_rate": round(sum(1 for x in totals if x > 23.5) / len(totals), 4),
             "three_set_rate": round(sum(three_sets) / len(three_sets), 4),
             "straight_set_rate": round(1 - (sum(three_sets) / len(three_sets)), 4),
             "close_set_rate": round(sum(close_sets) / len(close_sets), 4),
@@ -443,6 +472,7 @@ def form_totals(matches, player_key):
 
 def player_strength_score(form):
     l10 = form.get("last_10", {})
+
     win_rate = safe_float(l10.get("win_rate"))
     game_diff = safe_float(l10.get("avg_game_diff"))
     set_diff = safe_float(l10.get("avg_set_diff"))
@@ -453,156 +483,6 @@ def player_strength_score(form):
     score += clamp(set_diff, -1.8, 1.8) * 7
 
     return round(clamp(score, 1, 99), 2)
-
-
-def flatten_line_books(node):
-    out = {}
-
-    if not isinstance(node, dict):
-        return out
-
-    for k, v in node.items():
-        line = safe_float(k, None)
-
-        # Format 1:
-        # {"21.5": {"Pncl": "2.05", "Betano": "1.98"}}
-        if line is not None and isinstance(v, dict):
-            for book, odd in v.items():
-                odd_f = safe_float(odd, 0)
-                if odd_f > 1:
-                    out.setdefault(float(line), {})[str(book)] = odd_f
-            continue
-
-        # Format 2:
-        # {"Pncl": {"21.5": "2.05"}}
-        if isinstance(v, dict):
-            book = str(k)
-            for line_s, odd in v.items():
-                line2 = safe_float(line_s, None)
-                odd_f = safe_float(odd, 0)
-
-                if line2 is not None and odd_f > 1:
-                    out.setdefault(float(line2), {})[book] = odd_f
-
-    return out
-
-
-def merge_line_books(nodes):
-    merged = {}
-
-    for node in nodes:
-        flat = flatten_line_books(node)
-
-        for line, books in flat.items():
-            for book, odd in books.items():
-                merged.setdefault(float(line), {})[book] = odd
-
-    return merged
-
-
-def find_match_total_market(odds_blob):
-    if not isinstance(odds_blob, dict):
-        return None, None
-
-    preferred = [
-        "over/under by games in match",
-        "over under by games in match",
-        "over/under games in match",
-        "total games",
-        "games over under",
-    ]
-
-    for k, v in odds_blob.items():
-        nk = norm_key(k)
-        if nk in preferred and isinstance(v, dict):
-            return k, v
-
-    for k, v in odds_blob.items():
-        nk = norm_key(k)
-        if not isinstance(v, dict):
-            continue
-
-        if "over under" in nk and "games" in nk and "match" in nk:
-            return k, v
-
-    for k, v in odds_blob.items():
-        nk = norm_key(k)
-        if not isinstance(v, dict):
-            continue
-
-        if "total" in nk and "games" in nk:
-            return k, v
-
-    return None, None
-
-
-def parse_match_total_candidates(odds_blob):
-    market_name, market = find_match_total_market(odds_blob)
-
-    if not market:
-        return []
-
-    over_nodes = []
-    under_nodes = []
-
-    for k, v in market.items():
-        nk = norm_key(k)
-
-        if not isinstance(v, dict):
-            continue
-
-        if "over" in nk and "under" not in nk:
-            over_nodes.append(v)
-        elif "under" in nk:
-            under_nodes.append(v)
-
-    over_by_line = merge_line_books(over_nodes)
-    under_by_line = merge_line_books(under_nodes)
-
-    candidates = []
-
-    for line in sorted(set(over_by_line) & set(under_by_line)):
-        if not (MAIN_LINES_MIN <= line <= MAIN_LINES_MAX):
-            continue
-
-        over_books = over_by_line.get(line) or {}
-        under_books = under_by_line.get(line) or {}
-
-        shared_books = sorted(set(over_books) & set(under_books))
-
-        if len(shared_books) < MIN_BOOKMAKERS:
-            continue
-
-        over_shared = [over_books[b] for b in shared_books if over_books[b] > 1]
-        under_shared = [under_books[b] for b in shared_books if under_books[b] > 1]
-
-        if not over_shared or not under_shared:
-            continue
-
-        over_best_book = max(shared_books, key=lambda b: over_books[b])
-        under_best_book = max(shared_books, key=lambda b: under_books[b])
-
-        candidates.append({
-            "market_name_found": market_name,
-            "line": float(line),
-            "bookmakers_used": len(shared_books),
-            "over": {
-                "best_odds": round(over_books[over_best_book], 3),
-                "best_bookmaker": over_best_book,
-                "median_odds": round(median(over_shared), 3),
-            },
-            "under": {
-                "best_odds": round(under_books[under_best_book], 3),
-                "best_bookmaker": under_best_book,
-                "median_odds": round(median(under_shared), 3),
-            },
-        })
-
-    return candidates
-
-
-def parse_totals_market(odds_blob):
-    return parse_match_total_candidates(odds_blob)
 
 
 def extract_home_away_odds(odds_blob):
@@ -636,24 +516,265 @@ def extract_home_away_odds(odds_blob):
     }
 
 
-def no_vig_prob_from_pair(over_odds, under_odds):
-    over_odds = safe_float(over_odds)
-    under_odds = safe_float(under_odds)
+def _line_from_text(text):
+    text = str(text or "")
+    hits = re.findall(r"(?<!\d)(\d{1,2}(?:\.5|\.0)?)(?!\d)", text)
 
-    if over_odds <= 1 or under_odds <= 1:
+    for h in hits:
+        line = safe_float(h, None)
+
+        if line is None:
+            continue
+
+        if MAIN_LINES_MIN <= line <= MAIN_LINES_MAX:
+            return line
+
+    return None
+
+
+def _side_from_text(text):
+    t = str(text or "").lower()
+
+    if "over" in t:
+        return "over"
+
+    if "under" in t:
+        return "under"
+
+    return None
+
+
+def _looks_like_line(text):
+    line = safe_float(text, None)
+
+    if line is None:
+        return False
+
+    return MAIN_LINES_MIN <= line <= MAIN_LINES_MAX
+
+
+def _bookmaker_from_path(path):
+    cleaned = []
+
+    for p in path:
+        s = str(p or "").strip()
+        low = s.lower()
+
+        if not s:
+            continue
+
+        if _looks_like_line(s):
+            continue
+
+        if "over" in low or "under" in low:
+            continue
+
+        if "games in match" in low:
+            continue
+
+        if low in {
+            "over/under",
+            "over/under by games in match",
+            "match total",
+            "total",
+            "line",
+            "odds",
+            "value",
+        }:
+            continue
+
+        cleaned.append(s)
+
+    if cleaned:
+        return cleaned[-1]
+
+    return "unknown"
+
+
+def _walk_totals_market(obj, path, rows):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            _walk_totals_market(v, path + [k], rows)
+        return
+
+    if isinstance(obj, list):
+        for i, v in enumerate(obj):
+            _walk_totals_market(v, path + [str(i)], rows)
+        return
+
+    odds = safe_float(obj, None)
+
+    if odds is None or odds <= 1:
+        return
+
+    joined = " ".join(str(x) for x in path)
+
+    side = _side_from_text(joined)
+    line = _line_from_text(joined)
+
+    if side not in {"over", "under"}:
+        return
+
+    if line is None:
+        return
+
+    bookmaker = _bookmaker_from_path(path)
+
+    rows.append({
+        "side": side,
+        "line": line,
+        "bookmaker": bookmaker,
+        "odds": odds,
+        "path": path,
+    })
+
+
+def parse_totals_market(odds_blob):
+    """
+    Robust parser za API-Tennis totals.
+
+    Podpira več struktur:
+    1) market["Over/Under by Games in Match Over"]["22.5"]["Book"] = 1.90
+    2) market["Over"]["22.5"]["Book"] = 1.90
+    3) market["22.5"]["Over"]["Book"] = 1.90
+    4) market["Book"]["Over"]["22.5"] = 1.90
+    5) market["Over 22.5"]["Book"] = 1.90
+    """
+
+    market = odds_blob.get(MARKET_NAME)
+
+    if not isinstance(market, dict):
+        return []
+
+    rows = []
+    _walk_totals_market(market, [MARKET_NAME], rows)
+
+    grouped = {}
+
+    for row in rows:
+        side = row["side"]
+        line = row["line"]
+        bookmaker = row["bookmaker"]
+        odds = row["odds"]
+
+        if not (MAIN_LINES_MIN <= line <= MAIN_LINES_MAX):
+            continue
+
+        key = line
+
+        if key not in grouped:
+            grouped[key] = {
+                "over": {},
+                "under": {},
+                "raw_rows": [],
+            }
+
+        old = grouped[key][side].get(bookmaker)
+
+        if old is None or odds > old:
+            grouped[key][side][bookmaker] = odds
+
+        grouped[key]["raw_rows"].append(row)
+
+    candidates = []
+
+    for line, data in grouped.items():
+        over_books = data.get("over") or {}
+        under_books = data.get("under") or {}
+
+        if not over_books or not under_books:
+            continue
+
+        shared_books = sorted(set(over_books) & set(under_books))
+
+        if shared_books:
+            over_values = [over_books[b] for b in shared_books]
+            under_values = [under_books[b] for b in shared_books]
+            books_used = len(shared_books)
+        else:
+            over_values = list(over_books.values())
+            under_values = list(under_books.values())
+            books_used = min(len(over_values), len(under_values))
+
+        if books_used < MIN_BOOKMAKERS:
+            continue
+
+        over_best_book = max(over_books, key=lambda b: over_books[b])
+        under_best_book = max(under_books, key=lambda b: under_books[b])
+
+        candidates.append({
+            "line": float(line),
+            "bookmakers_used": books_used,
+            "over": {
+                "best_odds": round(over_books[over_best_book], 3),
+                "best_bookmaker": over_best_book,
+                "median_odds": round(median(over_values), 3),
+            },
+            "under": {
+                "best_odds": round(under_books[under_best_book], 3),
+                "best_bookmaker": under_best_book,
+                "median_odds": round(median(under_values), 3),
+            },
+            "parser_rows_found": len(data.get("raw_rows") or []),
+        })
+
+    candidates.sort(key=lambda x: x["line"])
+
+    return candidates
+
+
+def extract_number_of_sets_market(odds_blob):
+    market = odds_blob.get("Number of sets")
+
+    if not isinstance(market, dict):
         return None
 
-    po = 1 / over_odds
-    pu = 1 / under_odds
-    s = po + pu
+    flat = []
 
-    if s <= 0:
+    def walk(obj, path):
+        if isinstance(obj, dict):
+            for k, v in obj.items():
+                walk(v, path + [k])
+            return
+
+        odds = safe_float(obj, None)
+
+        if odds is None or odds <= 1:
+            return
+
+        joined = " ".join(str(x).lower() for x in path)
+
+        flat.append((joined, odds))
+
+    walk(market, ["Number of sets"])
+
+    three_odds = []
+    two_odds = []
+
+    for label, odds in flat:
+        if "3" in label:
+            three_odds.append(odds)
+        elif "2" in label:
+            two_odds.append(odds)
+
+    if not three_odds or not two_odds:
+        return None
+
+    o2 = median(two_odds)
+    o3 = median(three_odds)
+
+    p2_raw = 1 / o2
+    p3_raw = 1 / o3
+    total = p2_raw + p3_raw
+
+    if total <= 0:
         return None
 
     return {
-        "over": round(po / s, 4),
-        "under": round(pu / s, 4),
-        "overround": round(s, 4),
+        "two_sets_median_odds": round(o2, 3),
+        "three_sets_median_odds": round(o3, 3),
+        "two_set_prob_no_vig": round(p2_raw / total, 4),
+        "three_set_prob_no_vig": round(p3_raw / total, 4),
     }
 
 
@@ -661,16 +782,17 @@ def sigmoid(x):
     return 1 / (1 + math.exp(-x))
 
 
-def expected_total_games(player_form, opponent_form, h2h_matches, market_info):
+def expected_total_games(player_form, opponent_form, h2h_matches, market_info, sets_market):
     p5 = player_form["last_5"]
     p10 = player_form["last_10"]
     o5 = opponent_form["last_5"]
     o10 = opponent_form["last_10"]
 
-    p10_total = safe_float(p10.get("median_total_games")) * 0.60 + safe_float(p10.get("avg_total_games")) * 0.40
-    o10_total = safe_float(o10.get("median_total_games")) * 0.60 + safe_float(o10.get("avg_total_games")) * 0.40
-    p5_total = safe_float(p5.get("median_total_games")) * 0.55 + safe_float(p5.get("avg_total_games")) * 0.45
-    o5_total = safe_float(o5.get("median_total_games")) * 0.55 + safe_float(o5.get("avg_total_games")) * 0.45
+    p10_total = safe_float(p10.get("median_total_games")) * 0.65 + safe_float(p10.get("avg_total_games")) * 0.35
+    o10_total = safe_float(o10.get("median_total_games")) * 0.65 + safe_float(o10.get("avg_total_games")) * 0.35
+
+    p5_total = safe_float(p5.get("median_total_games")) * 0.60 + safe_float(p5.get("avg_total_games")) * 0.40
+    o5_total = safe_float(o5.get("median_total_games")) * 0.60 + safe_float(o5.get("avg_total_games")) * 0.40
 
     avg_recent = (
         p10_total * 0.32 +
@@ -696,39 +818,52 @@ def expected_total_games(player_form, opponent_form, h2h_matches, market_info):
     exp = avg_recent
 
     exp += (three_set_rate - 0.28) * 4.4
-    exp += (close_set_rate - 0.36) * 3.0
+    exp += (close_set_rate - 0.36) * 2.9
 
-    if strength_gap >= 35:
+    if strength_gap >= 32:
         exp -= 2.2
-    elif strength_gap >= 28:
-        exp -= 1.7
-    elif strength_gap >= 22:
-        exp -= 1.1
-    elif strength_gap <= 7:
-        exp += 0.9
+    elif strength_gap >= 24:
+        exp -= 1.45
+    elif strength_gap >= 17:
+        exp -= 0.75
+    elif strength_gap <= 8:
+        exp += 1.0
 
     if market_info:
         gap = safe_float(market_info.get("market_gap"))
 
-        if gap >= 0.60:
-            exp -= 2.6
-        elif gap >= 0.48:
-            exp -= 2.1
-        elif gap >= 0.36:
-            exp -= 1.5
-        elif gap >= 0.24:
-            exp -= 0.9
+        if gap >= 0.55:
+            exp -= 2.7
+        elif gap >= 0.40:
+            exp -= 2.0
+        elif gap >= 0.26:
+            exp -= 1.4
+        elif gap >= 0.18:
+            exp -= 0.8
         elif gap <= 0.08:
-            exp += 0.7
+            exp += 0.8
+
+    if sets_market:
+        three_prob = safe_float(sets_market.get("three_set_prob_no_vig"))
+
+        if three_prob:
+            exp += (three_prob - 0.30) * 5.5
 
     h2h_finished = clean_finished_matches(h2h_matches)
 
     if h2h_finished:
+        h2h_finished = sorted(
+            h2h_finished,
+            key=lambda x: (x.get("event_date") or "", x.get("event_time") or ""),
+            reverse=True,
+        )
+
         h2h_totals = [total_games_from_scores(m.get("scores")) for m in h2h_finished[:5]]
         h2h_avg = sum(h2h_totals) / len(h2h_totals)
-        exp = exp * 0.85 + h2h_avg * 0.15
 
-    return round(clamp(exp, 16.0, 30.0), 2)
+        exp = exp * 0.86 + h2h_avg * 0.14
+
+    return round(clamp(exp, 15.5, 30.5), 2)
 
 
 def model_probability(expected_games, line, side):
@@ -743,66 +878,49 @@ def model_probability(expected_games, line, side):
     return round(1 - p_over, 4)
 
 
-def confidence_score(expected_games, line, model_prob, bookmakers_used, odds, side, market_gap):
+def confidence_score(expected_games, line, model_prob, bookmakers_used, odds):
     margin = abs(expected_games - line)
 
     c = 48
-    c += clamp(margin / 3.5, 0, 1) * 22
-    c += clamp((model_prob - 0.5) / 0.14, 0, 1) * 16
+    c += clamp(margin / 3.2, 0, 1) * 22
+    c += clamp((model_prob - 0.5) / 0.14, 0, 1) * 15
     c += clamp(bookmakers_used / 8, 0, 1) * 8
 
     if 1.70 <= odds <= 2.10:
-        c += 4
+        c += 5
     elif 1.55 <= odds <= 2.35:
-        c += 2
-
-    if side == "under" and market_gap >= 0.24:
         c += 3
-
-    if side == "over" and market_gap >= 0.40:
-        c -= 4
 
     return round(clamp(c, 1, 96), 1)
 
 
-def quality_score(confidence, edge, bookmakers_used, odds, matches_min, margin, side, market_gap):
+def quality_score(confidence, edge, bookmakers_used, odds, matches_min, margin):
     q = 0
-    q += clamp(confidence / 90, 0, 1) * 28
-    q += clamp(edge / 0.10, 0, 1) * 28
+    q += clamp(confidence / 88, 0, 1) * 30
+    q += clamp(edge / 0.10, 0, 1) * 30
     q += clamp(bookmakers_used / 8, 0, 1) * 14
     q += clamp(matches_min / 12, 0, 1) * 12
-    q += clamp(margin / 3.2, 0, 1) * 10
+    q += clamp(margin / 3.2, 0, 1) * 9
 
     if 1.70 <= odds <= 2.10:
         q += 5
     elif 1.55 <= odds <= 2.35:
         q += 3
 
-    if side == "under" and market_gap >= 0.24:
-        q += 3
-
-    if side == "over" and market_gap >= 0.40:
-        q -= 5
-
     return round(clamp(q, 1, 99), 1)
 
 
-def stake_from_quality(quality, edge, side):
-    if side == "over":
-        if quality >= 88 and edge >= 0.10:
-            return 0.75, "Shadow Top Over"
-        if quality >= 80 and edge >= 0.075:
-            return 0.50, "Shadow Strong Over"
-        return 0.25, "Shadow Over"
-
+def stake_from_quality(quality, edge):
     if quality >= 88 and edge >= 0.09:
-        return 1.0, "Shadow Top Under"
-    if quality >= 80 and edge >= 0.07:
-        return 0.75, "Shadow Strong Under"
-    if quality >= 68:
-        return 0.5, "Shadow Standard Under"
+        return 1.0, "Top Rated"
 
-    return 0.25, "Shadow Small"
+    if quality >= 80 and edge >= 0.07:
+        return 0.75, "Strong"
+
+    if quality >= 68:
+        return 0.5, "Standard"
+
+    return 0.25, "Small Value"
 
 
 def pick_id_for(event_key, side, line):
@@ -813,11 +931,11 @@ def pick_id_for(event_key, side, line):
 def build_reasoning(pick):
     return (
         f"{pick['bet']} selected in {pick['match']} at line {pick['line']}. "
-        f"Expected total games {pick['expected_total_games']:.2f}; market line {pick['line']:.1f}. "
-        f"Model probability {pick['model_prob'] * 100:.1f}% vs implied {pick['implied_prob'] * 100:.1f}% "
-        f"from best odds {pick['odds']:.2f}. Edge {pick['edge'] * 100:+.1f}%. "
-        f"Bookmakers used {pick['bookmakers_used']}. Confidence {pick['confidence']:.1f}. "
-        f"Quality {pick['quality_score']:.1f}."
+        f"Expected total games: {pick['expected_total_games']:.2f}; market line: {pick['line']:.1f}. "
+        f"Model probability {pick['model_prob'] * 100:.1f}% versus implied {pick['implied_prob'] * 100:.1f}% "
+        f"from best odds {pick['odds']:.2f}. Edge: {pick['edge'] * 100:+.1f}%. "
+        f"Bookmakers used: {pick['bookmakers_used']}. Confidence: {pick['confidence']:.1f}. "
+        f"Quality: {pick['quality_score']:.1f}."
     )
 
 
@@ -825,6 +943,7 @@ def main():
     ensure_dirs()
 
     old_results = load_json(RESULTS_FILE, [])
+
     if not isinstance(old_results, list):
         old_results = []
 
@@ -840,12 +959,15 @@ def main():
     for i in range(DAYS_AHEAD):
         day = start + timedelta(days=i)
         daily = fetch_fixtures_for_date(day)
+
         print(f"FIXTURES {day}: {len(daily)}")
+
         fixtures.extend(daily)
 
     fixtures = fixtures[:MAX_FIXTURES]
 
     candidates = []
+
     debug = {
         "generated_at": now_iso(),
         "model_version": MODEL_VERSION,
@@ -859,17 +981,13 @@ def main():
         "errors": [],
         "market_feature_coverage": {
             "match_total_center": 0,
-            "player_total_sum_center": 0,
-            "three_set_prob_no_vig": 0,
-            "handicap_abs_center": 0,
-            "first_set_total_center": 0,
-            "second_set_total_center": 0,
+            "number_of_sets": 0,
+            "home_away": 0,
         },
+        "market_probe": None,
     }
 
     h2h_cache = {}
-
-    scanned_limit = 0
 
     for match in fixtures:
         event_key = match.get("event_key")
@@ -879,58 +997,84 @@ def main():
             continue
 
         if not is_pregame(match):
-            debug["skipped"].append({"event_key": event_key, "match": name, "reason": "not_pregame"})
+            debug["skipped"].append({
+                "event_key": event_key,
+                "match": name,
+                "reason": "not_pregame",
+            })
             continue
 
         if not is_singles(match):
-            debug["skipped"].append({"event_key": event_key, "match": name, "reason": "not_singles"})
+            debug["skipped"].append({
+                "event_key": event_key,
+                "match": name,
+                "reason": "not_singles",
+            })
             continue
 
         first_key = match.get("first_player_key")
         second_key = match.get("second_player_key")
 
         if not first_key or not second_key:
-            debug["skipped"].append({"event_key": event_key, "match": name, "reason": "missing_player_key"})
-            continue
-
-        if scanned_limit >= MAX_SCAN:
-            debug["skipped"].append({"event_key": event_key, "match": name, "reason": "max_scan_reached"})
+            debug["skipped"].append({
+                "event_key": event_key,
+                "match": name,
+                "reason": "missing_player_key",
+            })
             continue
 
         try:
-            scanned_limit += 1
             debug["scanned"] += 1
 
             odds_blob = fetch_odds(event_key)
 
             if not odds_blob:
-                debug["skipped"].append({"event_key": event_key, "match": name, "reason": "no_odds"})
+                debug["skipped"].append({
+                    "event_key": event_key,
+                    "match": name,
+                    "reason": "no_odds",
+                })
                 continue
 
             debug["with_odds"] += 1
 
-            if debug.get("market_probe") is None:
+            markets = list(odds_blob.keys())
+
+            if debug["market_probe"] is None:
                 debug["market_probe"] = {
                     "event_key": event_key,
                     "match": name,
-                    "markets": list(odds_blob.keys())[:100] if isinstance(odds_blob, dict) else [],
+                    "markets": markets,
                 }
 
-            totals_lines = parse_match_total_candidates(odds_blob)
+            if isinstance(odds_blob.get(MARKET_NAME), dict):
+                debug["with_match_total_market"] += 1
+
+            totals_lines = parse_totals_market(odds_blob)
 
             if not totals_lines:
                 debug["skipped"].append({
                     "event_key": event_key,
                     "match": name,
                     "reason": "no_match_total_candidates",
-                    "markets": list(odds_blob.keys())[:40] if isinstance(odds_blob, dict) else [],
+                    "markets": markets,
                 })
                 continue
 
-            debug["with_match_total_market"] += 1
             debug["market_feature_coverage"]["match_total_center"] += 1
 
+            market_info = extract_home_away_odds(odds_blob)
+
+            if market_info:
+                debug["market_feature_coverage"]["home_away"] += 1
+
+            sets_market = extract_number_of_sets_market(odds_blob)
+
+            if sets_market:
+                debug["market_feature_coverage"]["number_of_sets"] += 1
+
             cache_key = (first_key, second_key)
+
             if cache_key not in h2h_cache:
                 h2h_cache[cache_key] = fetch_h2h(first_key, second_key)
 
@@ -954,25 +1098,25 @@ def main():
                     "reason": "not_enough_recent_matches",
                     "first_matches": first_n,
                     "second_matches": second_n,
+                    "markets": markets,
                 })
                 continue
 
-            market_info = extract_home_away_odds(odds_blob)
-            market_gap = safe_float((market_info or {}).get("market_gap"))
-
-            exp_games = expected_total_games(first_form, second_form, h2h_matches, market_info)
+            exp_games = expected_total_games(
+                first_form,
+                second_form,
+                h2h_matches,
+                market_info,
+                sets_market,
+            )
 
             for line_info in totals_lines:
                 line = safe_float(line_info.get("line"))
                 bookmakers_used = safe_int(line_info.get("bookmakers_used"))
 
-                market_no_vig = no_vig_prob_from_pair(
-                    (line_info.get("over") or {}).get("median_odds"),
-                    (line_info.get("under") or {}).get("median_odds"),
-                )
-
                 for side in ["over", "under"]:
                     side_info = line_info.get(side) or {}
+
                     odds = safe_float(side_info.get("best_odds"))
                     median_odds = safe_float(side_info.get("median_odds"))
                     bookmaker = side_info.get("best_bookmaker") or "unknown"
@@ -985,8 +1129,14 @@ def main():
                     edge = model_prob - implied_prob
                     margin = abs(exp_games - line)
 
-                    if side == "over" and market_gap >= 0.55 and line <= 20.5:
-                        continue
+                    if market_info:
+                        market_gap = safe_float(market_info.get("market_gap"))
+
+                        if side == "over" and line <= 19.5 and market_gap >= 0.55:
+                            continue
+
+                        if side == "under" and line >= 24.5 and market_gap <= 0.06:
+                            continue
 
                     if edge < MIN_EDGE:
                         continue
@@ -997,8 +1147,6 @@ def main():
                         model_prob,
                         bookmakers_used,
                         odds,
-                        side,
-                        market_gap,
                     )
 
                     if confidence < MIN_CONFIDENCE:
@@ -1011,11 +1159,9 @@ def main():
                         odds,
                         matches_min,
                         margin,
-                        side,
-                        market_gap,
                     )
 
-                    stake, stake_label = stake_from_quality(quality, edge, side)
+                    stake, stake_label = stake_from_quality(quality, edge)
 
                     pick = {
                         "pick_id": pick_id_for(event_key, side, line),
@@ -1023,13 +1169,14 @@ def main():
                         "fixture_id": event_key,
                         "sport": "tennis",
                         "model_version": MODEL_VERSION,
+                        "model_name": MODEL_NAME,
                         "date": match.get("event_date"),
                         "time": match.get("event_time"),
                         "match": name,
                         "bet": f"{side.upper()} {line:.1f} games",
                         "bucket": "total_games",
                         "side": side,
-                        "market": line_info.get("market_name_found") or "match_total_games",
+                        "market": MARKET_NAME,
                         "line": line,
                         "first_player_key": safe_int(first_key),
                         "second_player_key": safe_int(second_key),
@@ -1046,7 +1193,6 @@ def main():
                         "best_bookmaker": bookmaker,
                         "market_median_odds": round(median_odds, 3),
                         "bookmakers_used": bookmakers_used,
-                        "market_no_vig": market_no_vig,
                         "model_prob": model_prob,
                         "implied_prob": round(implied_prob, 4),
                         "edge": round(edge, 4),
@@ -1057,22 +1203,30 @@ def main():
                         "stake": stake,
                         "stake_label": stake_label,
                         "market_info": market_info,
+                        "sets_market": sets_market,
+                        "line_parser_info": {
+                            "parser_rows_found": line_info.get("parser_rows_found"),
+                        },
                         "first_form": first_form,
                         "second_form": second_form,
                         "first_strength_score": player_strength_score(first_form),
                         "second_strength_score": player_strength_score(second_form),
-                        "strength_gap": round(abs(player_strength_score(first_form) - player_strength_score(second_form)), 2),
                         "h2h_matches": len(clean_finished_matches(h2h_matches)),
                         "result": "pending",
                         "created_at": now_iso(),
-                        "shadow_model": True,
                     }
 
                     pick["reasoning"] = build_reasoning(pick)
+
                     candidates.append(pick)
 
         except Exception as e:
-            debug["errors"].append({"event_key": event_key, "match": name, "error": str(e)})
+            debug["errors"].append({
+                "event_key": event_key,
+                "match": name,
+                "error": str(e),
+            })
+
             print(f"ERROR {event_key} {name}: {e}")
 
     debug["candidates_raw"] = len(candidates)
@@ -1111,8 +1265,6 @@ def main():
         if len(final) >= MAX_PICKS:
             break
 
-    debug["final_picks"] = len(final)
-
     for pick in final:
         old = existing_by_id.get(pick["pick_id"])
 
@@ -1122,7 +1274,16 @@ def main():
         existing_by_id[pick["pick_id"]] = pick
 
     results = list(existing_by_id.values())
-    results.sort(key=lambda x: (x.get("date") or "", x.get("time") or "", x.get("match") or ""))
+
+    results.sort(
+        key=lambda x: (
+            x.get("date") or "",
+            x.get("time") or "",
+            x.get("match") or "",
+        )
+    )
+
+    debug["final_picks"] = len(final)
 
     payload = {
         "generated_at": now_iso(),
@@ -1130,11 +1291,11 @@ def main():
         "source": "API-Tennis",
         "model": MODEL_NAME,
         "model_version": MODEL_VERSION,
-        "stake_mode": "shadow_quality_based",
+        "stake_mode": "quality_based",
+        "market": MARKET_NAME,
         "filters": {
             "days_ahead": DAYS_AHEAD,
             "max_fixtures": MAX_FIXTURES,
-            "max_scan": MAX_SCAN,
             "max_picks": MAX_PICKS,
             "max_over_picks": MAX_OVER_PICKS,
             "max_under_picks": MAX_UNDER_PICKS,
