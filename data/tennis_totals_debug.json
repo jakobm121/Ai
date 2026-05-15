@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-15T08:25:16.260020+02:00",
+  "generated_at": "2026-05-15T09:24:18.695749+02:00",
   "fixtures_total": 220,
-  "scanned": 103,
+  "scanned": 101,
   "skipped": [
     {
       "event_key": 12126836,
@@ -156,7 +156,7 @@
     {
       "event_key": 12127679,
       "match": "Bar Biryukov/ Lomakin - Kalyanpur/ Sasikumar",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12127680,
@@ -271,7 +271,7 @@
     {
       "event_key": 12127702,
       "match": "P. Cheapchandej - E. Tse",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12127703,
@@ -296,7 +296,7 @@
     {
       "event_key": 12127707,
       "match": "C. Y. Tsao - S. Noguchi",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12127708,
@@ -361,7 +361,7 @@
     {
       "event_key": 12127720,
       "match": "Jeong/ Park - Im/ Kim",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12127721,
@@ -557,7 +557,7 @@
       "event_key": 12127765,
       "match": "P. Sekulic - K. Tyagi",
       "reason": "not_enough_recent_matches",
-      "first_matches": 7,
+      "first_matches": 6,
       "second_matches": 5
     },
     {
@@ -753,7 +753,7 @@
     {
       "event_key": 12127812,
       "match": "N. Ehrenschneider - M. Bassem Sobhy",
-      "reason": "no_odds"
+      "reason": "no_totals_market"
     },
     {
       "event_key": 12127813,
@@ -813,7 +813,7 @@
     {
       "event_key": 12127824,
       "match": "E. Cayetano - S. Broadus",
-      "reason": "no_odds"
+      "reason": "no_totals_market"
     },
     {
       "event_key": 12127825,
@@ -913,7 +913,12 @@
     {
       "event_key": 12127847,
       "match": "M. Brengle - S. Shapatava",
-      "reason": "no_odds"
+      "reason": "no_totals_market"
+    },
+    {
+      "event_key": 12127848,
+      "match": "G. I. Justo - F. Roncadelli",
+      "reason": "no_totals_market"
     },
     {
       "event_key": 12127849,
@@ -933,7 +938,7 @@
     {
       "event_key": 12127852,
       "match": "H. Klugman - B. Payne",
-      "reason": "no_odds"
+      "reason": "no_totals_market"
     },
     {
       "event_key": 12127853,
@@ -958,17 +963,17 @@
     {
       "event_key": 12127858,
       "match": "H. Hoeyeraal - W. Leite",
-      "reason": "no_odds"
+      "reason": "no_totals_market"
     },
     {
       "event_key": 12127859,
       "match": "M. Alves - T. Martinez",
-      "reason": "no_odds"
+      "reason": "no_totals_market"
     },
     {
       "event_key": 12127860,
       "match": "S. Price - M. Del Pino",
-      "reason": "no_odds"
+      "reason": "no_totals_market"
     },
     {
       "event_key": 12127861,
@@ -998,7 +1003,7 @@
     {
       "event_key": 12127867,
       "match": "Cao/ Tikhonova - Hou/ Wang",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12127868,
@@ -1006,6 +1011,6 @@
       "reason": "not_singles"
     }
   ],
-  "candidates_raw": 13,
+  "candidates_raw": 16,
   "errors": []
 }
