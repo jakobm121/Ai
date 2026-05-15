@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-14T23:02:42.625026+02:00",
-  "pending_checked": 8,
-  "updated": 6,
-  "still_pending": 2,
+  "generated_at": "2026-05-15T07:46:52.793611+02:00",
+  "pending_checked": 7,
+  "updated": 4,
+  "still_pending": 3,
   "not_found": 0,
   "errors": [],
   "checked": [
@@ -16,8 +16,17 @@
       "reason": "keep_pending_status:walk over"
     },
     {
-      "match": "D. Parry - C. Paquet",
-      "event_key": 12126971,
+      "match": "A. Rinderknech - M. Damm",
+      "event_key": 12127561,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "Y. Chung - S. Fukuda",
+      "event_key": 12127682,
       "status": "Finished",
       "winner": "First Player",
       "score": "2 - 1",
@@ -25,8 +34,26 @@
       "reason": "settled"
     },
     {
-      "match": "S. Baez - P. Carreno-Busta",
-      "event_key": 12127039,
+      "match": "H. Chang - S. Lansere",
+      "event_key": 12127663,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "M. Yamaguchi - L. Cabrera",
+      "event_key": 12127662,
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 0",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "M. Rapolu - B. Jeong",
+      "event_key": 12127658,
       "status": "Finished",
       "winner": "Second Player",
       "score": "1 - 2",
@@ -34,49 +61,13 @@
       "reason": "settled"
     },
     {
-      "match": "F. Roncadelli - N. Kicker",
-      "event_key": 12127638,
-      "status": "Finished",
-      "winner": "First Player",
-      "score": "2 - 1",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "C. Ugo Carabelli - M. Berrettini",
-      "event_key": 12127564,
-      "status": "Finished",
-      "winner": "First Player",
-      "score": "2 - 0",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "G. I. Justo - E. Ribeiro",
-      "event_key": 12127500,
-      "status": "Finished",
-      "winner": "First Player",
-      "score": "2 - 0",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "A. Rinderknech - M. Damm",
-      "event_key": 12127561,
-      "status": "1",
+      "match": "Z. Piros - L. Neumayer",
+      "event_key": 12127725,
+      "status": "Interrupted",
       "winner": null,
-      "score": "-",
+      "score": "1 - 1",
       "changed": false,
-      "reason": "keep_pending_status:1"
-    },
-    {
-      "match": "A. Pecci - T. Compagnucci",
-      "event_key": 12127045,
-      "status": "Finished",
-      "winner": "Second Player",
-      "score": "0 - 2",
-      "changed": true,
-      "reason": "settled"
+      "reason": "keep_pending_status:interrupted"
     }
   ]
 }
