@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T10:13:12.122537+02:00",
+  "generated_at": "2026-05-17T11:27:23.018168+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -23,18 +23,18 @@
   },
   "summary": {
     "picks": 256,
-    "settled": 226,
-    "pending": 20,
-    "wins": 101,
+    "settled": 227,
+    "pending": 19,
+    "wins": 102,
     "losses": 125,
-    "hit_rate": 44.7,
-    "stake": 272.75,
-    "profit": -7.42,
-    "roi": -2.7,
-    "avg_odds": 2.24,
+    "hit_rate": 44.9,
+    "stake": 274.0,
+    "profit": -5.23,
+    "roi": -1.9,
+    "avg_odds": 2.25,
     "total_results": 256,
-    "settled_picks": 226,
-    "pending_picks": 20
+    "settled_picks": 227,
+    "pending_picks": 19
   },
   "current_picks": [
     {
@@ -33765,9 +33765,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-16T04:09:57.118333+02:00",
-      "reasoning": "C. Vandermeersch is selected against J. Echeverria in M25 Kutaisi (Georgia). The model prices C. Vandermeersch at 66.0% versus an implied probability of 36.4% from best odds 2.75. Market median is 2.62 across 7 bookmakers, leaving an estimated edge of +29.6%. Recent-form profile: C. Vandermeersch last-10 win rate 80.0%, avg set diff +0.90, avg game diff +4.50; J. Echeverria last-10 win rate 70.0%, avg set diff +0.80, avg game diff +3.70. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "C. Vandermeersch is selected against J. Echeverria in M25 Kutaisi (Georgia). The model prices C. Vandermeersch at 66.0% versus an implied probability of 36.4% from best odds 2.75. Market median is 2.62 across 7 bookmakers, leaving an estimated edge of +29.6%. Recent-form profile: C. Vandermeersch last-10 win rate 80.0%, avg set diff +0.90, avg game diff +4.50; J. Echeverria last-10 win rate 70.0%, avg set diff +0.80, avg game diff +3.70. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 2.1875,
+      "settled_at": "2026-05-17T11:27:12.926665+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-3, 6-3"
     },
     {
       "pick_id": "9068743e6c071508978b469ca8fc517a",
@@ -37639,15 +37645,15 @@
       {
         "date": "2026-05-17",
         "picks": 16,
-        "settled": 0,
-        "pending": 16,
-        "wins": 0,
+        "settled": 1,
+        "pending": 15,
+        "wins": 1,
         "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "hit_rate": 100.0,
+        "stake": 1.25,
+        "profit": 2.19,
+        "roi": 175.0,
+        "avg_odds": 2.75
       },
       {
         "date": "2026-05-16",
@@ -37811,15 +37817,15 @@
         "date": "2026-05-17",
         "type": "underdog",
         "picks": 11,
-        "settled": 0,
-        "pending": 11,
-        "wins": 0,
+        "settled": 1,
+        "pending": 10,
+        "wins": 1,
         "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "hit_rate": 100.0,
+        "stake": 1.25,
+        "profit": 2.19,
+        "roi": 175.0,
+        "avg_odds": 2.75
       },
       {
         "date": "2026-05-17",
@@ -38176,14 +38182,14 @@
       {
         "group": "underdog",
         "picks": 195,
-        "settled": 172,
-        "pending": 15,
-        "wins": 73,
+        "settled": 173,
+        "pending": 14,
+        "wins": 74,
         "losses": 99,
-        "hit_rate": 42.4,
-        "stake": 215.25,
-        "profit": -4.15,
-        "roi": -1.9,
+        "hit_rate": 42.8,
+        "stake": 216.5,
+        "profit": -1.97,
+        "roi": -0.9,
         "avg_odds": 2.37
       },
       {
@@ -38243,14 +38249,14 @@
       {
         "group": "2.70+",
         "picks": 22,
-        "settled": 19,
-        "pending": 3,
-        "wins": 6,
+        "settled": 20,
+        "pending": 2,
+        "wins": 7,
         "losses": 13,
-        "hit_rate": 31.6,
-        "stake": 22.5,
-        "profit": -3.81,
-        "roi": -16.9,
+        "hit_rate": 35.0,
+        "stake": 23.75,
+        "profit": -1.62,
+        "roi": -6.8,
         "avg_odds": 2.77
       },
       {
@@ -38271,14 +38277,14 @@
       {
         "group": "Elite 88+",
         "picks": 218,
-        "settled": 193,
-        "pending": 17,
-        "wins": 84,
+        "settled": 194,
+        "pending": 16,
+        "wins": 85,
         "losses": 109,
-        "hit_rate": 43.5,
-        "stake": 238.75,
-        "profit": -14.3,
-        "roi": -6.0,
+        "hit_rate": 43.8,
+        "stake": 240.0,
+        "profit": -12.12,
+        "roi": -5.0,
         "avg_odds": 2.22
       },
       {
@@ -38325,14 +38331,14 @@
       {
         "group": "20%+",
         "picks": 80,
-        "settled": 70,
-        "pending": 8,
-        "wins": 26,
+        "settled": 71,
+        "pending": 7,
+        "wins": 27,
         "losses": 44,
-        "hit_rate": 37.1,
-        "stake": 89.5,
-        "profit": -6.83,
-        "roi": -7.6,
+        "hit_rate": 38.0,
+        "stake": 90.75,
+        "profit": -4.64,
+        "roi": -5.1,
         "avg_odds": 2.51
       },
       {
@@ -38379,14 +38385,14 @@
       {
         "group": "Strong",
         "picks": 155,
-        "settled": 136,
-        "pending": 11,
-        "wins": 60,
+        "settled": 137,
+        "pending": 10,
+        "wins": 61,
         "losses": 76,
-        "hit_rate": 44.1,
-        "stake": 170.0,
-        "profit": 1.05,
-        "roi": 0.6,
+        "hit_rate": 44.5,
+        "stake": 171.25,
+        "profit": 3.24,
+        "roi": 1.9,
         "avg_odds": 2.35
       },
       {
@@ -38446,15 +38452,15 @@
       {
         "group": "itf",
         "picks": 89,
-        "settled": 79,
-        "pending": 5,
-        "wins": 31,
+        "settled": 80,
+        "pending": 4,
+        "wins": 32,
         "losses": 48,
-        "hit_rate": 39.2,
-        "stake": 90.75,
-        "profit": -12.98,
-        "roi": -14.3,
-        "avg_odds": 2.24
+        "hit_rate": 40.0,
+        "stake": 92.0,
+        "profit": -10.79,
+        "roi": -11.7,
+        "avg_odds": 2.25
       },
       {
         "group": "atp",
@@ -38487,14 +38493,14 @@
       {
         "group": "men",
         "picks": 161,
-        "settled": 144,
-        "pending": 12,
-        "wins": 65,
+        "settled": 145,
+        "pending": 11,
+        "wins": 66,
         "losses": 79,
-        "hit_rate": 45.1,
-        "stake": 171.5,
-        "profit": -1.89,
-        "roi": -1.1,
+        "hit_rate": 45.5,
+        "stake": 172.75,
+        "profit": 0.3,
+        "roi": 0.2,
         "avg_odds": 2.24
       },
       {
@@ -38567,15 +38573,15 @@
       {
         "group": "Betfair",
         "picks": 31,
-        "settled": 26,
-        "pending": 3,
-        "wins": 10,
+        "settled": 27,
+        "pending": 2,
+        "wins": 11,
         "losses": 16,
-        "hit_rate": 38.5,
-        "stake": 30.5,
-        "profit": -5.6,
-        "roi": -18.4,
-        "avg_odds": 2.35
+        "hit_rate": 40.7,
+        "stake": 31.75,
+        "profit": -3.41,
+        "roi": -10.7,
+        "avg_odds": 2.36
       },
       {
         "group": "Betano",
