@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-17T11:14:45.168251+02:00",
+  "generated_at": "2026-05-17T12:41:20.161059+02:00",
   "fixtures_total": 116,
-  "scanned": 63,
+  "scanned": 47,
   "skipped": [
     {
       "event_key": 12127694,
@@ -26,12 +26,12 @@
     {
       "event_key": 12127755,
       "match": "Duncan/ Whitehouse - Maric/ Mikrut",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12127756,
       "match": "Poljicak/ Serdarusic - Goldhoff/ Ingildsen",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12127774,
@@ -136,7 +136,7 @@
     {
       "event_key": 12128040,
       "match": "F. C. Jianu - L. Marmousez",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128041,
@@ -154,9 +154,14 @@
       "reason": "not_singles"
     },
     {
+      "event_key": 12128063,
+      "match": "M. Giron - M. Schoenhaus",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12128066,
       "match": "E. Seidel - E. Andreeva",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128067,
@@ -176,7 +181,17 @@
     {
       "event_key": 12128070,
       "match": "Andreeva/ Shnaider - Bucsa/ Melichar-Martinez",
-      "reason": "not_singles"
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12128072,
+      "match": "I. Buse - H. Gaston",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12128073,
+      "match": "R. Hijikata - H. Squire",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128079,
@@ -184,6 +199,21 @@
       "reason": "not_enough_recent_matches",
       "first_matches": 10,
       "second_matches": 3
+    },
+    {
+      "event_key": 12128081,
+      "match": "M. Sakkari - P. Stearns",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12128082,
+      "match": "M. Joint - A. Li",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12128083,
+      "match": "A. Zakharova - D. Kasatkina",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128084,
@@ -218,12 +248,12 @@
     {
       "event_key": 12128107,
       "match": "C. Fornasieri - M. Mettraux",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128108,
       "match": "C. Djonov - M. Wiskandt",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128109,
@@ -303,12 +333,12 @@
     {
       "event_key": 12128124,
       "match": "A. Shanmugam - D. Javia",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128125,
       "match": "T. Yamanaka - A. Kalyanpur",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128126,
@@ -343,7 +373,7 @@
     {
       "event_key": 12128132,
       "match": "D. Bagnolini - S. Sorger",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128133,
@@ -353,7 +383,7 @@
     {
       "event_key": 12128134,
       "match": "P. Nesterov - P. Basile",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128135,
@@ -408,12 +438,12 @@
     {
       "event_key": 12128145,
       "match": "K. I. Kosaner - L. Pokorny",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128146,
       "match": "P. A. Saraiva Dos Santos - T. Avcibasi",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12128147,
@@ -486,6 +516,6 @@
       "reason": "no_odds"
     }
   ],
-  "candidates_raw": 16,
+  "candidates_raw": 11,
   "errors": []
 }
