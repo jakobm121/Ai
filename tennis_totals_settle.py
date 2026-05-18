@@ -252,6 +252,7 @@ def is_bad_terminal_status(status):
         "canceled",
         "postponed",
         "retired",
+        "wo",
         "walkover",
         "abandoned",
         "interrupted",
