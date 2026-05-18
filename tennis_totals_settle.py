@@ -246,20 +246,26 @@ def final_score_string_from_parsed(parsed):
 
 def is_bad_terminal_status(status):
     s = str(status or "").lower().strip()
+    compact = (
+        s.replace(" ", "")
+         .replace("-", "")
+         .replace("/", "")
+         .replace(".", "")
+    )
 
     bad = {
         "cancelled",
         "canceled",
         "postponed",
         "retired",
-        "wo",
         "walkover",
+        "wo",
         "abandoned",
         "interrupted",
         "suspended",
     }
 
-    return s in bad
+    return s in bad or compact in bad
 
 
 def compact_fixture_debug(fixture):
