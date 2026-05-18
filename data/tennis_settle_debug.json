@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-18T13:37:19.576741+02:00",
-  "pending_checked": 22,
-  "updated": 1,
-  "still_pending": 21,
+  "generated_at": "2026-05-18T18:43:10.514761+02:00",
+  "pending_checked": 25,
+  "updated": 9,
+  "still_pending": 16,
   "not_found": 0,
   "errors": [],
   "checked": [
@@ -54,11 +54,11 @@
     {
       "match": "S. Waltert - A. Kalinina",
       "event_key": 12128089,
-      "status": "Set 2",
-      "winner": null,
-      "score": "0 - 1",
-      "changed": false,
-      "reason": "keep_pending_status:set 2"
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 2",
+      "changed": true,
+      "reason": "settled"
     },
     {
       "match": "D. Singh - L. Vithoontien",
@@ -70,8 +70,26 @@
       "reason": "keep_pending_status:unknown"
     },
     {
-      "match": "H. Vandewinkel - P. Udvardy",
-      "event_key": 12128090,
+      "match": "A. Parks - M. Uchijima",
+      "event_key": 12128093,
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 0",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "B. Gadamauri - C. Cretu",
+      "event_key": 12128171,
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 0",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "D. Evans - D. Jade",
+      "event_key": 12128278,
       "status": "Finished",
       "winner": "Second Player",
       "score": "0 - 2",
@@ -79,35 +97,53 @@
       "reason": "settled"
     },
     {
-      "match": "A. Parks - M. Uchijima",
-      "event_key": 12128093,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "B. Gadamauri - C. Cretu",
-      "event_key": 12128171,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "D. Evans - D. Jade",
-      "event_key": 12128278,
-      "status": "Interrupted",
-      "winner": null,
-      "score": "0 - 1",
-      "changed": false,
-      "reason": "keep_pending_status:interrupted"
-    },
-    {
       "match": "D. Dutra Da Silva - G. Kravchenko",
       "event_key": 12128267,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "1 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "M. Kessler - J. Cristian",
+      "event_key": 12128249,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "M. Sherif - A. Lazaro Garcia",
+      "event_key": 12128321,
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 1",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "P. Marcinko - V. Zvonareva",
+      "event_key": 12128334,
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 0",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "M. Barthel - A-L. Friedsam",
+      "event_key": 12128315,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "1 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "A. Barrena - A. Galarneau",
+      "event_key": 12128289,
       "status": "Set 3",
       "winner": null,
       "score": "1 - 1",
@@ -115,8 +151,8 @@
       "reason": "keep_pending_status:set 3"
     },
     {
-      "match": "M. Kessler - J. Cristian",
-      "event_key": 12128249,
+      "match": "L. Klimovicova - L. Radivojevic",
+      "event_key": 12128324,
       "status": "Set 2",
       "winner": null,
       "score": "0 - 1",
@@ -124,71 +160,35 @@
       "reason": "keep_pending_status:set 2"
     },
     {
-      "match": "M. Sherif - A. Lazaro Garcia",
-      "event_key": 12128321,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "P. Marcinko - V. Zvonareva",
-      "event_key": 12128334,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "M. Barthel - A-L. Friedsam",
-      "event_key": 12128315,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "A. Barrena - A. Galarneau",
-      "event_key": 12128289,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "L. Klimovicova - L. Radivojevic",
-      "event_key": 12128324,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
       "match": "V. Sachko - J. Pinnington Jones",
       "event_key": 12128295,
-      "status": "",
+      "status": "Set 1",
       "winner": null,
-      "score": "-",
+      "score": "0 - 0",
       "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "reason": "keep_pending_status:set 1"
     },
     {
       "match": "B. Tomic - M. Echargui",
       "event_key": 12128296,
-      "status": "",
+      "status": "Set 1",
       "winner": null,
-      "score": "-",
+      "score": "0 - 0",
       "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "reason": "keep_pending_status:set 1"
     },
     {
       "match": "R. Brancaccio - S. Wawrinka",
       "event_key": 12128256,
+      "status": "Set 1",
+      "winner": null,
+      "score": "0 - 0",
+      "changed": false,
+      "reason": "keep_pending_status:set 1"
+    },
+    {
+      "match": "L. Sonego - E. Butvilas",
+      "event_key": 12128255,
       "status": "",
       "winner": null,
       "score": "-",
@@ -196,8 +196,35 @@
       "reason": "keep_pending_status:unknown"
     },
     {
-      "match": "L. Sonego - E. Butvilas",
-      "event_key": 12128255,
+      "match": "G. Bueno - F. Bax",
+      "event_key": 12128291,
+      "status": "Set 2",
+      "winner": null,
+      "score": "1 - 0",
+      "changed": false,
+      "reason": "keep_pending_status:set 2"
+    },
+    {
+      "match": "A. Moro Canas - S. Napolitano",
+      "event_key": 12128293,
+      "status": "Set 1",
+      "winner": null,
+      "score": "0 - 0",
+      "changed": false,
+      "reason": "keep_pending_status:set 1"
+    },
+    {
+      "match": "S. Bandecchi - C. Paquet",
+      "event_key": 12128329,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "J. Reis Da Silva - C. Hemery",
+      "event_key": 12128300,
       "status": "",
       "winner": null,
       "score": "-",
