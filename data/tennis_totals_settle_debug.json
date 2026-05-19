@@ -1,775 +1,115 @@
 {
-  "generated_at": "2026-05-19T12:13:03.026824+02:00",
-  "pending_before": 16,
+  "generated_at": "2026-05-19T15:56:41.611859+02:00",
+  "pending_before": 21,
   "updated": 0,
-  "still_pending": 16,
+  "still_pending": 0,
   "not_found": 0,
-  "errors": [],
-  "items": [
+  "errors": [
     {
       "event_key": 12128395,
-      "pick_id": "921474d833bf3926b5d1e53c0777a2a7",
       "match": "C. Smith - A. Guillen Meza",
-      "bet": "UNDER 20.5 games",
-      "side": "under",
-      "line": 20.5,
-      "status": "not_finished",
-      "api_status": "Set 1",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "4",
-          "score_second": "4",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "0 - 0",
-        "event_game_result": "15 - 0",
-        "event_winner": null,
-        "event_status": "Set 1",
-        "pointbypoint": [
-          {
-            "set_number": "Set 1",
-            "number_game": "1",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "1 - 0",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "2",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "1 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "3",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "2 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "40 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "4",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "2 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "40 - A",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "5",
-            "player_served": "First Player",
-            "serve_winner": "Second Player",
-            "serve_lost": "First Player",
-            "score": "2 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          }
-        ],
-        "scores": [
-          {
-            "score_first": "4",
-            "score_second": "4",
-            "score_set": "1"
-          }
-        ]
-      }
-    },
-    {
-      "event_key": 12128383,
-      "pick_id": "006174b39353aff4099da3115afbfe81",
-      "match": "L. Midon - R. Carballes Baena",
-      "bet": "OVER 21.5 games",
-      "side": "over",
-      "line": 21.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
-    },
-    {
-      "event_key": 12128370,
-      "pick_id": "e8bd58a382dea6f7882070cb198b5b9e",
-      "match": "M. Dodig - Y. Zhou",
-      "bet": "UNDER 19.5 games",
-      "side": "under",
-      "line": 19.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
-    },
-    {
-      "event_key": 12128599,
-      "pick_id": "664764d8a8709e54a2cf1df2abcf1407",
-      "match": "S. Dostanic - F. Forti",
-      "bet": "OVER 22.5 games",
-      "side": "over",
-      "line": 22.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128395&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.api-tennis.com', port=443) at 0x7f6892e49a50>, 'Connection to api.api-tennis.com timed out. (connect timeout=30)'))"
     },
     {
       "event_key": 12128243,
-      "pick_id": "5f5053c673bfe64cf4509708f9757b40",
       "match": "F. Cobolli - I. Buse",
-      "bet": "UNDER 21.5 games",
-      "side": "under",
-      "line": 21.5,
-      "status": "not_finished",
-      "api_status": "Set 1",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "0 - 0",
-        "event_game_result": "15 - 15",
-        "event_winner": null,
-        "event_status": "Set 1",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128243&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.api-tennis.com', port=443) at 0x7f6892e4b750>, 'Connection to api.api-tennis.com timed out. (connect timeout=30)'))"
     },
     {
-      "event_key": 12128254,
-      "pick_id": "c7be4095ebe947c9cd2adfbb5f91c50f",
-      "match": "N. Basavareddy - J. Munar",
-      "bet": "UNDER 20.5 games",
-      "side": "under",
-      "line": 20.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "event_key": 12128234,
+      "match": "A. Li - E. Alexandrova",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128234&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     {
-      "event_key": 12128458,
-      "pick_id": "e50296074c0ed3a7efb5f2a343a7172c",
-      "match": "N. Honda - P. Sekulic",
-      "bet": "UNDER 20.5 games",
-      "side": "under",
-      "line": 20.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "event_key": 12128046,
+      "match": "L. Darderi - R. A. Burruchaga",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128046&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     {
-      "event_key": 12128374,
-      "pick_id": "81e0724681f03e8c817878e88a4ded26",
-      "match": "L. Giustino - K. Jacquet",
-      "bet": "OVER 21.5 games",
-      "side": "over",
-      "line": 21.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "event_key": 12128599,
+      "match": "S. Dostanic - F. Forti",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128599&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     {
-      "event_key": 12128373,
-      "pick_id": "1d55e76517c48bd0e7beca4ea1883f8c",
-      "match": "N. Fatic - L. Mikrut",
-      "bet": "OVER 22.5 games",
-      "side": "over",
-      "line": 22.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "event_key": 12128383,
+      "match": "L. Midon - R. Carballes Baena",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128383&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     {
-      "event_key": 12127985,
-      "pick_id": "dff79c1c1ca8e00df0dd1352abcf5777",
-      "match": "J. Brooksby - C. Ruud",
-      "bet": "UNDER 18.5 games",
-      "side": "under",
-      "line": 18.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "event_key": 12128370,
+      "match": "M. Dodig - Y. Zhou",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128370&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     {
       "event_key": 12128096,
-      "pick_id": "9c767063a75bf535a925eb0e7ae99861",
       "match": "Y. Kabbaj - B. Cengiz",
-      "bet": "OVER 20.5 games",
-      "side": "over",
-      "line": 20.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128096&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     {
-      "event_key": 12128180,
-      "pick_id": "69a36fd17875b407ddb7b96f8fd43636",
-      "match": "B. Hassan - F. C. Jianu",
-      "bet": "UNDER 20.5 games",
-      "side": "under",
-      "line": 20.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "event_key": 12128254,
+      "match": "N. Basavareddy - J. Munar",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128254&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    },
+    {
+      "event_key": 12128431,
+      "match": "L. Zaar - J. Bouzas Maneiro",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128431&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    },
+    {
+      "event_key": 12128458,
+      "match": "N. Honda - P. Sekulic",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128458&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     {
       "event_key": 12128377,
-      "pick_id": "33368554e0e72fa97ba7b7a982de8870",
       "match": "P. Herbert - K. Uchida",
-      "bet": "UNDER 19.5 games",
-      "side": "under",
-      "line": 19.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128377&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     {
-      "event_key": 12128402,
-      "pick_id": "eafebee34394003407d0fbd03db01d3e",
-      "match": "I. Burillo Escorihuela - V. Tomova",
-      "bet": "UNDER 19.5 games",
-      "side": "under",
-      "line": 19.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "event_key": 12128180,
+      "match": "B. Hassan - F. C. Jianu",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128180&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     {
       "event_key": 12128413,
-      "pick_id": "2b8923dd7f67bafc5a4a334abd83b772",
       "match": "R. Masarova - M. L. Carle",
-      "bet": "OVER 20.5 games",
-      "side": "over",
-      "line": 20.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128413&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    },
+    {
+      "event_key": 12128597,
+      "match": "F. Romano - E. Dalla Valle",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128597&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    },
+    {
+      "event_key": 12128374,
+      "match": "L. Giustino - K. Jacquet",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128374&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    },
+    {
+      "event_key": 12128373,
+      "match": "N. Fatic - L. Mikrut",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128373&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    },
+    {
+      "event_key": 12127985,
+      "match": "J. Brooksby - C. Ruud",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12127985&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    },
+    {
+      "event_key": 12128402,
+      "match": "I. Burillo Escorihuela - V. Tomova",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128402&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    },
+    {
+      "event_key": 12128387,
+      "match": "L. Pavlovic - H. Wendelken",
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12128387&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     {
       "event_key": 12127986,
-      "pick_id": "06a43df033b67657ba8fe612bbbabae8",
       "match": "L. Djere - J. M. Cerundolo",
-      "bet": "UNDER 21.5 games",
-      "side": "under",
-      "line": 21.5,
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
-      "raw_scores": [
-        {
-          "score_first": "0",
-          "score_second": "0",
-          "score_set": "1"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "-",
-        "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
-        "scores": [
-          {
-            "score_first": "0",
-            "score_second": "0",
-            "score_set": "1"
-          }
-        ]
-      }
+      "error": "HTTPSConnectionPool(host='api.api-tennis.com', port=443): Max retries exceeded with url: /tennis/?method=get_fixtures&event_key=12127986&APIkey=3ce2788e6d9f418f7909a106fd7f75f5839b2666d8f3275a3bf075fef6a4d92f (Caused by NewConnectionError(\"HTTPSConnection(host='api.api-tennis.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     }
-  ]
+  ],
+  "items": []
 }
