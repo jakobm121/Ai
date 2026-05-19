@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-19T07:58:42.336373+02:00",
-  "pending_checked": 19,
-  "updated": 0,
-  "still_pending": 19,
+  "generated_at": "2026-05-19T12:53:53.986774+02:00",
+  "pending_checked": 27,
+  "updated": 2,
+  "still_pending": 25,
   "not_found": 0,
   "errors": [],
   "checked": [
@@ -45,47 +45,47 @@
     {
       "match": "D. Palan - K. Isomura",
       "event_key": 12128164,
-      "status": "Interrupted",
-      "winner": null,
-      "score": "1 - 0",
-      "changed": false,
-      "reason": "keep_pending_status:interrupted"
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 1",
+      "changed": true,
+      "reason": "settled"
     },
     {
       "match": "D. Singh - L. Vithoontien",
       "event_key": 12128165,
-      "status": "Set 2",
-      "winner": null,
-      "score": "0 - 1",
-      "changed": false,
-      "reason": "keep_pending_status:set 2"
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 2",
+      "changed": true,
+      "reason": "settled"
     },
     {
       "match": "J. Riera - L. Samson",
       "event_key": 12128420,
-      "status": "",
+      "status": "Set 2",
       "winner": null,
-      "score": "-",
+      "score": "1 - 0",
       "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "reason": "keep_pending_status:set 2"
     },
     {
       "match": "C. Smith - A. Guillen Meza",
       "event_key": 12128395,
-      "status": "",
+      "status": "Set 2",
       "winner": null,
-      "score": "-",
+      "score": "1 - 0",
       "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "reason": "keep_pending_status:set 2"
     },
     {
       "match": "A. Popyrin - C. Tabur",
       "event_key": 12128253,
-      "status": "",
+      "status": "Set 2",
       "winner": null,
-      "score": "-",
+      "score": "1 - 0",
       "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "reason": "keep_pending_status:set 2"
     },
     {
       "match": "O. Jasika - S. Rawat",
@@ -117,11 +117,11 @@
     {
       "match": "J. Faria - G. Dimitrov",
       "event_key": 12128372,
-      "status": "",
+      "status": "Set 1",
       "winner": null,
-      "score": "-",
+      "score": "0 - 0",
       "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "reason": "keep_pending_status:set 1"
     },
     {
       "match": "N. Fatic - L. Mikrut",
@@ -171,6 +171,78 @@
     {
       "match": "L. Djere - J. M. Cerundolo",
       "event_key": 12127986,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "E. Agureeva - G. Parentini",
+      "event_key": 12128708,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "L. Midon - R. Carballes Baena",
+      "event_key": 12128383,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "S. Iliev - C. Diaz Adrover",
+      "event_key": 12128726,
+      "status": "Set 1",
+      "winner": null,
+      "score": "0 - 0",
+      "changed": false,
+      "reason": "keep_pending_status:set 1"
+    },
+    {
+      "match": "A. Li - E. Alexandrova",
+      "event_key": 12128234,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "N. Sousa Salazar - A. Urso",
+      "event_key": 12128704,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "T. Compagnucci - L. Tu",
+      "event_key": 12128598,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "M. Alkaya - G. Kravchenko",
+      "event_key": 12128602,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "I. Shinikova - V. Morvayova",
+      "event_key": 12128738,
       "status": "",
       "winner": null,
       "score": "-",
