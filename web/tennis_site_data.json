@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T16:44:42.448102+02:00",
+  "generated_at": "2026-05-20T18:45:18.173255+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -23,18 +23,18 @@
   },
   "summary": {
     "picks": 324,
-    "settled": 285,
-    "pending": 27,
-    "wins": 128,
-    "losses": 157,
-    "hit_rate": 44.9,
-    "stake": 343.0,
-    "profit": -9.37,
-    "roi": -2.7,
+    "settled": 296,
+    "pending": 16,
+    "wins": 134,
+    "losses": 162,
+    "hit_rate": 45.3,
+    "stake": 357.5,
+    "profit": -6.49,
+    "roi": -1.8,
     "avg_odds": 2.24,
     "total_results": 324,
-    "settled_picks": 285,
-    "pending_picks": 27
+    "settled_picks": 296,
+    "pending_picks": 16
   },
   "current_picks": [
     {
@@ -303,9 +303,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-20T16:43:33.233142+02:00",
-      "reasoning": "T. Sahtali is selected against S. Andre in M15 Monastir 19. The model prices T. Sahtali at 60.0% versus an implied probability of 47.6% from best odds 2.10. Market median is 2.03 across 6 bookmakers, leaving an estimated edge of +12.4%. Recent-form profile: T. Sahtali last-10 win rate 90.0%, avg set diff +1.60, avg game diff +4.50; S. Andre last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.20. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "T. Sahtali is selected against S. Andre in M15 Monastir 19. The model prices T. Sahtali at 60.0% versus an implied probability of 47.6% from best odds 2.10. Market median is 2.03 across 6 bookmakers, leaving an estimated edge of +12.4%. Recent-form profile: T. Sahtali last-10 win rate 90.0%, avg set diff +1.60, avg game diff +4.50; S. Andre last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.20. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.0,
+      "settled_at": "2026-05-20T18:45:11.828410+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "4-6, 7-5, 7-6"
     },
     {
       "pick_id": "560169e807f087dc209f8f2cb2b47f8d",
@@ -1383,9 +1389,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-20T16:42:06.040838+02:00",
-      "reasoning": "C. Liu is selected against K. Kawa in French Open. The model prices C. Liu at 64.1% versus an implied probability of 56.8% from best odds 1.76. Market median is 1.73 across 11 bookmakers, leaving an estimated edge of +7.2%. Recent-form profile: C. Liu last-10 win rate 70.0%, avg set diff +0.50, avg game diff +1.90; K. Kawa last-10 win rate 60.0%, avg set diff +0.40, avg game diff +1.50. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "C. Liu is selected against K. Kawa in French Open. The model prices C. Liu at 64.1% versus an implied probability of 56.8% from best odds 1.76. Market median is 1.73 across 11 bookmakers, leaving an estimated edge of +7.2%. Recent-form profile: C. Liu last-10 win rate 70.0%, avg set diff +0.50, avg game diff +1.90; K. Kawa last-10 win rate 60.0%, avg set diff +0.40, avg game diff +1.50. Pick type: favorite. Confidence score: 88.0.",
+      "profit": 0.76,
+      "settled_at": "2026-05-20T18:45:17.181714+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-3, 6-0"
     },
     {
       "pick_id": "f57d66bd554af28b10a69e1ee3ed227b",
@@ -44340,9 +44352,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-20T10:57:27.201892+02:00",
-      "reasoning": "G. Bueno is selected against V. Sachko in French Open. The model prices G. Bueno at 66.0% versus an implied probability of 50.5% from best odds 1.98. Market median is 1.80 across 11 bookmakers, leaving an estimated edge of +15.5%. Recent-form profile: G. Bueno last-10 win rate 70.0%, avg set diff +0.70, avg game diff +2.30; V. Sachko last-10 win rate 50.0%, avg set diff -0.10, avg game diff -1.30. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "G. Bueno is selected against V. Sachko in French Open. The model prices G. Bueno at 66.0% versus an implied probability of 50.5% from best odds 1.98. Market median is 1.80 across 11 bookmakers, leaving an estimated edge of +15.5%. Recent-form profile: G. Bueno last-10 win rate 70.0%, avg set diff +0.70, avg game diff +2.30; V. Sachko last-10 win rate 50.0%, avg set diff -0.10, avg game diff -1.30. Pick type: favorite. Confidence score: 88.0.",
+      "profit": 1.47,
+      "settled_at": "2026-05-20T18:45:00.068682+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-2, 6-4"
     },
     {
       "pick_id": "abaf06e08d65fa3b895f8b655488ce34",
@@ -44475,9 +44493,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-20T10:57:52.654415+02:00",
-      "reasoning": "P. Nesterov is selected against M. Dhamne in Cervia (Italy) - Qualification. The model prices P. Nesterov at 66.0% versus an implied probability of 52.4% from best odds 1.91. Market median is 1.84 across 11 bookmakers, leaving an estimated edge of +13.6%. Recent-form profile: P. Nesterov last-10 win rate 80.0%, avg set diff +1.00, avg game diff +2.30; M. Dhamne last-10 win rate 50.0%, avg set diff -0.10, avg game diff -0.30. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "P. Nesterov is selected against M. Dhamne in Cervia (Italy) - Qualification. The model prices P. Nesterov at 66.0% versus an implied probability of 52.4% from best odds 1.91. Market median is 1.84 across 11 bookmakers, leaving an estimated edge of +13.6%. Recent-form profile: P. Nesterov last-10 win rate 80.0%, avg set diff +1.00, avg game diff +2.30; M. Dhamne last-10 win rate 50.0%, avg set diff -0.10, avg game diff -0.30. Pick type: favorite. Confidence score: 88.0.",
+      "profit": 1.365,
+      "settled_at": "2026-05-20T18:45:00.987683+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-0, 3-6, 6-4"
     },
     {
       "pick_id": "9c5127b4316e5c0f50eeba0ff2d208d3",
@@ -44610,9 +44634,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-20T10:56:41.209178+02:00",
-      "reasoning": "G. Minnen is selected against L. Radivojevic in French Open. The model prices G. Minnen at 66.0% versus an implied probability of 41.5% from best odds 2.41. Market median is 2.32 across 11 bookmakers, leaving an estimated edge of +24.5%. Recent-form profile: G. Minnen last-10 win rate 70.0%, avg set diff +0.70, avg game diff +2.20; L. Radivojevic last-10 win rate 30.0%, avg set diff -0.50, avg game diff -1.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "G. Minnen is selected against L. Radivojevic in French Open. The model prices G. Minnen at 66.0% versus an implied probability of 41.5% from best odds 2.41. Market median is 2.32 across 11 bookmakers, leaving an estimated edge of +24.5%. Recent-form profile: G. Minnen last-10 win rate 70.0%, avg set diff +0.70, avg game diff +2.20; L. Radivojevic last-10 win rate 30.0%, avg set diff -0.50, avg game diff -1.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.7625,
+      "settled_at": "2026-05-20T18:45:01.869699+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-1, 6-2"
     },
     {
       "pick_id": "9771a4c227fc69fbca445d2cb2a31eba",
@@ -44745,9 +44775,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-20T10:58:16.588010+02:00",
-      "reasoning": "A. Sobolieva is selected against K. Rinaldo Persson in W75 Kosice (Slovakia). The model prices A. Sobolieva at 60.0% versus an implied probability of 44.4% from best odds 2.25. Market median is 2.13 across 9 bookmakers, leaving an estimated edge of +15.6%. Recent-form profile: A. Sobolieva last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.00; K. Rinaldo Persson last-10 win rate 60.0%, avg set diff +0.40, avg game diff +1.00. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "A. Sobolieva is selected against K. Rinaldo Persson in W75 Kosice (Slovakia). The model prices A. Sobolieva at 60.0% versus an implied probability of 44.4% from best odds 2.25. Market median is 2.13 across 9 bookmakers, leaving an estimated edge of +15.6%. Recent-form profile: A. Sobolieva last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.00; K. Rinaldo Persson last-10 win rate 60.0%, avg set diff +0.40, avg game diff +1.00. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-05-20T18:45:02.774339+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-3, 6-4"
     },
     {
       "pick_id": "2481c45fc9a0fe30870fd00f8ca79b67",
@@ -44880,9 +44916,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-20T10:58:50.294381+02:00",
-      "reasoning": "F. Ferro is selected against J. Bouzas Maneiro in Rabat. The model prices F. Ferro at 66.0% versus an implied probability of 42.0% from best odds 2.38. Market median is 2.30 across 11 bookmakers, leaving an estimated edge of +24.0%. Recent-form profile: F. Ferro last-10 win rate 80.0%, avg set diff +0.90, avg game diff +3.50; J. Bouzas Maneiro last-10 win rate 50.0%, avg set diff +0.30, avg game diff +1.50. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "F. Ferro is selected against J. Bouzas Maneiro in Rabat. The model prices F. Ferro at 66.0% versus an implied probability of 42.0% from best odds 2.38. Market median is 2.30 across 11 bookmakers, leaving an estimated edge of +24.0%. Recent-form profile: F. Ferro last-10 win rate 80.0%, avg set diff +0.90, avg game diff +3.50; J. Bouzas Maneiro last-10 win rate 50.0%, avg set diff +0.30, avg game diff +1.50. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.5,
+      "settled_at": "2026-05-20T18:45:03.680367+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "6-2, 6-7, 3-6"
     },
     {
       "pick_id": "13bef9969777e51a8e9289f77ab48b36",
@@ -45015,9 +45057,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-20T10:57:42.690110+02:00",
-      "reasoning": "I. Buse is selected against J. Mensik in Hamburg. The model prices I. Buse at 66.0% versus an implied probability of 38.8% from best odds 2.58. Market median is 2.50 across 12 bookmakers, leaving an estimated edge of +27.2%. Recent-form profile: I. Buse last-10 win rate 70.0%, avg set diff +1.00, avg game diff +3.10; J. Mensik last-10 win rate 50.0%, avg set diff +0.40, avg game diff +0.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "I. Buse is selected against J. Mensik in Hamburg. The model prices I. Buse at 66.0% versus an implied probability of 38.8% from best odds 2.58. Market median is 2.50 across 12 bookmakers, leaving an estimated edge of +27.2%. Recent-form profile: I. Buse last-10 win rate 70.0%, avg set diff +1.00, avg game diff +3.10; J. Mensik last-10 win rate 50.0%, avg set diff +0.40, avg game diff +0.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.975,
+      "settled_at": "2026-05-20T18:45:04.718303+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-0, 6-3"
     },
     {
       "pick_id": "5c91413c8e66c40eedf7a3e7fd6d895a",
@@ -45150,9 +45198,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-20T10:56:00.731451+02:00",
-      "reasoning": "C. Tauson is selected against J. Cristian in Strasbourg. The model prices C. Tauson at 66.0% versus an implied probability of 39.2% from best odds 2.55. Market median is 2.38 across 12 bookmakers, leaving an estimated edge of +26.8%. Recent-form profile: C. Tauson last-10 win rate 60.0%, avg set diff +0.70, avg game diff +2.50; J. Cristian last-10 win rate 50.0%, avg set diff +0.00, avg game diff -1.00. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "C. Tauson is selected against J. Cristian in Strasbourg. The model prices C. Tauson at 66.0% versus an implied probability of 39.2% from best odds 2.55. Market median is 2.38 across 12 bookmakers, leaving an estimated edge of +26.8%. Recent-form profile: C. Tauson last-10 win rate 60.0%, avg set diff +0.70, avg game diff +2.50; J. Cristian last-10 win rate 50.0%, avg set diff +0.00, avg game diff -1.00. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-05-20T18:45:05.613817+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "1-6, 5-7"
     },
     {
       "pick_id": "560169e807f087dc209f8f2cb2b47f8d",
@@ -45420,9 +45474,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-20T10:58:26.587513+02:00",
-      "reasoning": "B. Gojo is selected against H. Rocha in French Open. The model prices B. Gojo at 60.0% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.22 across 11 bookmakers, leaving an estimated edge of +17.8%. Recent-form profile: B. Gojo last-10 win rate 80.0%, avg set diff +1.10, avg game diff +2.20; H. Rocha last-10 win rate 50.0%, avg set diff +0.20, avg game diff -0.80. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "B. Gojo is selected against H. Rocha in French Open. The model prices B. Gojo at 60.0% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.22 across 11 bookmakers, leaving an estimated edge of +17.8%. Recent-form profile: B. Gojo last-10 win rate 80.0%, avg set diff +1.10, avg game diff +2.20; H. Rocha last-10 win rate 50.0%, avg set diff +0.20, avg game diff -0.80. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 2.055,
+      "settled_at": "2026-05-20T18:45:07.398323+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "3-6, 6-3, 6-7"
     },
     {
       "pick_id": "8735d83338fb99e9dc9a5ab74f1481fa",
@@ -45825,9 +45885,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-20T11:04:29.690682+02:00",
-      "reasoning": "L. Djere is selected against A. Rinderknech in Geneva. The model prices L. Djere at 60.0% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.16 across 12 bookmakers, leaving an estimated edge of +17.8%. Recent-form profile: L. Djere last-10 win rate 90.0%, avg set diff +1.40, avg game diff +4.30; A. Rinderknech last-10 win rate 40.0%, avg set diff -0.20, avg game diff -0.30. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "L. Djere is selected against A. Rinderknech in Geneva. The model prices L. Djere at 60.0% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.16 across 12 bookmakers, leaving an estimated edge of +17.8%. Recent-form profile: L. Djere last-10 win rate 90.0%, avg set diff +1.40, avg game diff +4.30; A. Rinderknech last-10 win rate 40.0%, avg set diff -0.20, avg game diff -0.30. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.5,
+      "settled_at": "2026-05-20T18:45:10.064476+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "4-6, 7-6, 6-1"
     },
     {
       "pick_id": "f57d66bd554af28b10a69e1ee3ed227b",
@@ -46095,9 +46161,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-05-20T16:43:33.233142+02:00",
-      "reasoning": "T. Sahtali is selected against S. Andre in M15 Monastir 19. The model prices T. Sahtali at 60.0% versus an implied probability of 47.6% from best odds 2.10. Market median is 2.03 across 6 bookmakers, leaving an estimated edge of +12.4%. Recent-form profile: T. Sahtali last-10 win rate 90.0%, avg set diff +1.60, avg game diff +4.50; S. Andre last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.20. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "T. Sahtali is selected against S. Andre in M15 Monastir 19. The model prices T. Sahtali at 60.0% versus an implied probability of 47.6% from best odds 2.10. Market median is 2.03 across 6 bookmakers, leaving an estimated edge of +12.4%. Recent-form profile: T. Sahtali last-10 win rate 90.0%, avg set diff +1.60, avg game diff +4.50; S. Andre last-10 win rate 70.0%, avg set diff +0.60, avg game diff +1.20. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.0,
+      "settled_at": "2026-05-20T18:45:11.828410+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "4-6, 7-5, 7-6"
     },
     {
       "pick_id": "da724beacd340e5fcf745da4679674de",
@@ -46905,9 +46977,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-05-20T16:42:06.040838+02:00",
-      "reasoning": "C. Liu is selected against K. Kawa in French Open. The model prices C. Liu at 64.1% versus an implied probability of 56.8% from best odds 1.76. Market median is 1.73 across 11 bookmakers, leaving an estimated edge of +7.2%. Recent-form profile: C. Liu last-10 win rate 70.0%, avg set diff +0.50, avg game diff +1.90; K. Kawa last-10 win rate 60.0%, avg set diff +0.40, avg game diff +1.50. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "C. Liu is selected against K. Kawa in French Open. The model prices C. Liu at 64.1% versus an implied probability of 56.8% from best odds 1.76. Market median is 1.73 across 11 bookmakers, leaving an estimated edge of +7.2%. Recent-form profile: C. Liu last-10 win rate 70.0%, avg set diff +0.50, avg game diff +1.90; K. Kawa last-10 win rate 60.0%, avg set diff +0.40, avg game diff +1.50. Pick type: favorite. Confidence score: 88.0.",
+      "profit": 0.76,
+      "settled_at": "2026-05-20T18:45:17.181714+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-3, 6-0"
     },
     {
       "pick_id": "e191c26ea93875fa2ab194691ac4719a",
@@ -47050,15 +47128,15 @@
       {
         "date": "2026-05-20",
         "picks": 23,
-        "settled": 0,
-        "pending": 23,
-        "wins": 0,
-        "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "settled": 11,
+        "pending": 12,
+        "wins": 6,
+        "losses": 5,
+        "hit_rate": 54.5,
+        "stake": 14.5,
+        "profit": 2.89,
+        "roi": 19.9,
+        "avg_odds": 2.24
       },
       {
         "date": "2026-05-19",
@@ -47261,29 +47339,29 @@
         "date": "2026-05-20",
         "type": "underdog",
         "picks": 18,
-        "settled": 0,
-        "pending": 18,
-        "wins": 0,
-        "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "settled": 8,
+        "pending": 10,
+        "wins": 3,
+        "losses": 5,
+        "hit_rate": 37.5,
+        "stake": 10.5,
+        "profit": -0.71,
+        "roi": -6.7,
+        "avg_odds": 2.38
       },
       {
         "date": "2026-05-20",
         "type": "favorite",
         "picks": 5,
-        "settled": 0,
-        "pending": 5,
-        "wins": 0,
+        "settled": 3,
+        "pending": 2,
+        "wins": 3,
         "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "hit_rate": 100.0,
+        "stake": 4.0,
+        "profit": 3.59,
+        "roi": 89.9,
+        "avg_odds": 1.88
       },
       {
         "date": "2026-05-19",
@@ -47710,27 +47788,27 @@
       {
         "group": "underdog",
         "picks": 246,
-        "settled": 214,
-        "pending": 22,
-        "wins": 89,
-        "losses": 125,
-        "hit_rate": 41.6,
-        "stake": 266.5,
-        "profit": -9.77,
-        "roi": -3.7,
+        "settled": 222,
+        "pending": 14,
+        "wins": 92,
+        "losses": 130,
+        "hit_rate": 41.4,
+        "stake": 277.0,
+        "profit": -10.48,
+        "roi": -3.8,
         "avg_odds": 2.37
       },
       {
         "group": "favorite",
         "picks": 78,
-        "settled": 71,
-        "pending": 5,
-        "wins": 39,
+        "settled": 74,
+        "pending": 2,
+        "wins": 42,
         "losses": 32,
-        "hit_rate": 54.9,
-        "stake": 76.5,
-        "profit": 0.4,
-        "roi": 0.5,
+        "hit_rate": 56.8,
+        "stake": 80.5,
+        "profit": 4.0,
+        "roi": 5.0,
         "avg_odds": 1.85
       }
     ],
@@ -47738,40 +47816,40 @@
       {
         "group": "2.30 - 2.69",
         "picks": 119,
-        "settled": 100,
-        "pending": 15,
-        "wins": 43,
-        "losses": 57,
-        "hit_rate": 43.0,
-        "stake": 125.0,
-        "profit": 6.47,
-        "roi": 5.2,
+        "settled": 106,
+        "pending": 9,
+        "wins": 46,
+        "losses": 60,
+        "hit_rate": 43.4,
+        "stake": 133.25,
+        "profit": 8.01,
+        "roi": 6.0,
         "avg_odds": 2.46
       },
       {
         "group": "2.00 - 2.29",
         "picks": 99,
-        "settled": 87,
-        "pending": 6,
+        "settled": 89,
+        "pending": 4,
         "wins": 37,
-        "losses": 50,
-        "hit_rate": 42.5,
-        "stake": 109.25,
-        "profit": -13.07,
-        "roi": -12.0,
+        "losses": 52,
+        "hit_rate": 41.6,
+        "stake": 111.5,
+        "profit": -15.32,
+        "roi": -13.7,
         "avg_odds": 2.15
       },
       {
         "group": "1.80 - 1.99",
         "picks": 59,
-        "settled": 54,
-        "pending": 3,
-        "wins": 32,
+        "settled": 56,
+        "pending": 1,
+        "wins": 34,
         "losses": 22,
-        "hit_rate": 59.3,
-        "stake": 60.25,
-        "profit": 5.84,
-        "roi": 9.7,
+        "hit_rate": 60.7,
+        "stake": 63.25,
+        "profit": 8.68,
+        "roi": 13.7,
         "avg_odds": 1.89
       },
       {
@@ -47790,29 +47868,29 @@
       {
         "group": "1.60 - 1.79",
         "picks": 19,
-        "settled": 17,
-        "pending": 2,
-        "wins": 7,
+        "settled": 18,
+        "pending": 1,
+        "wins": 8,
         "losses": 10,
-        "hit_rate": 41.2,
-        "stake": 16.25,
-        "profit": -5.44,
-        "roi": -33.5,
-        "avg_odds": 1.73
+        "hit_rate": 44.4,
+        "stake": 17.25,
+        "profit": -4.68,
+        "roi": -27.1,
+        "avg_odds": 1.74
       }
     ],
     "by_confidence": [
       {
         "group": "Elite 88+",
         "picks": 276,
-        "settled": 242,
-        "pending": 25,
-        "wins": 105,
-        "losses": 137,
-        "hit_rate": 43.4,
-        "stake": 298.5,
-        "profit": -20.33,
-        "roi": -6.8,
+        "settled": 253,
+        "pending": 14,
+        "wins": 111,
+        "losses": 142,
+        "hit_rate": 43.9,
+        "stake": 313.0,
+        "profit": -17.44,
+        "roi": -5.6,
         "avg_odds": 2.22
       },
       {
@@ -47857,55 +47935,55 @@
     ],
     "by_edge": [
       {
-        "group": "10% - 14.9%",
-        "picks": 97,
-        "settled": 87,
-        "pending": 6,
-        "wins": 43,
-        "losses": 44,
-        "hit_rate": 49.4,
-        "stake": 105.5,
-        "profit": 0.38,
-        "roi": 0.4,
-        "avg_odds": 2.1
-      },
-      {
         "group": "20%+",
         "picks": 101,
-        "settled": 87,
-        "pending": 12,
-        "wins": 30,
-        "losses": 57,
-        "hit_rate": 34.5,
-        "stake": 111.0,
-        "profit": -15.43,
-        "roi": -13.9,
+        "settled": 91,
+        "pending": 8,
+        "wins": 32,
+        "losses": 59,
+        "hit_rate": 35.2,
+        "stake": 116.25,
+        "profit": -14.44,
+        "roi": -12.4,
         "avg_odds": 2.52
+      },
+      {
+        "group": "10% - 14.9%",
+        "picks": 97,
+        "settled": 89,
+        "pending": 4,
+        "wins": 44,
+        "losses": 45,
+        "hit_rate": 49.4,
+        "stake": 108.0,
+        "profit": 0.75,
+        "roi": 0.7,
+        "avg_odds": 2.1
       },
       {
         "group": "15% - 19.9%",
         "picks": 74,
-        "settled": 63,
-        "pending": 6,
-        "wins": 28,
-        "losses": 35,
-        "hit_rate": 44.4,
-        "stake": 83.0,
-        "profit": 2.2,
-        "roi": 2.7,
+        "settled": 67,
+        "pending": 2,
+        "wins": 30,
+        "losses": 37,
+        "hit_rate": 44.8,
+        "stake": 88.75,
+        "profit": 2.98,
+        "roi": 3.4,
         "avg_odds": 2.28
       },
       {
         "group": "6.5% - 9.9%",
         "picks": 52,
-        "settled": 48,
-        "pending": 3,
-        "wins": 27,
+        "settled": 49,
+        "pending": 2,
+        "wins": 28,
         "losses": 21,
-        "hit_rate": 56.2,
-        "stake": 43.5,
-        "profit": 3.47,
-        "roi": 8.0,
+        "hit_rate": 57.1,
+        "stake": 44.5,
+        "profit": 4.23,
+        "roi": 9.5,
         "avg_odds": 1.94
       }
     ],
@@ -47913,40 +47991,40 @@
       {
         "group": "Strong",
         "picks": 190,
-        "settled": 172,
-        "pending": 10,
-        "wins": 75,
-        "losses": 97,
-        "hit_rate": 43.6,
-        "stake": 215.0,
-        "profit": -2.12,
-        "roi": -1.0,
-        "avg_odds": 2.34
+        "settled": 176,
+        "pending": 6,
+        "wins": 77,
+        "losses": 99,
+        "hit_rate": 43.8,
+        "stake": 220.0,
+        "profit": -0.89,
+        "roi": -0.4,
+        "avg_odds": 2.35
       },
       {
         "group": "Standard",
         "picks": 62,
-        "settled": 56,
-        "pending": 5,
-        "wins": 25,
-        "losses": 31,
-        "hit_rate": 44.6,
-        "stake": 56.0,
-        "profit": -6.61,
+        "settled": 58,
+        "pending": 3,
+        "wins": 26,
+        "losses": 32,
+        "hit_rate": 44.8,
+        "stake": 58.0,
+        "profit": -6.85,
         "roi": -11.8,
-        "avg_odds": 2.04
+        "avg_odds": 2.03
       },
       {
         "group": "Top Rated",
         "picks": 53,
-        "settled": 39,
-        "pending": 11,
-        "wins": 15,
-        "losses": 24,
-        "hit_rate": 38.5,
-        "stake": 58.5,
-        "profit": -7.42,
-        "roi": -12.7,
+        "settled": 44,
+        "pending": 6,
+        "wins": 18,
+        "losses": 26,
+        "hit_rate": 40.9,
+        "stake": 66.0,
+        "profit": -5.53,
+        "roi": -8.4,
         "avg_odds": 2.2
       },
       {
@@ -47967,81 +48045,81 @@
       {
         "group": "challenger",
         "picks": 120,
-        "settled": 110,
-        "pending": 5,
-        "wins": 56,
+        "settled": 111,
+        "pending": 4,
+        "wins": 57,
         "losses": 54,
-        "hit_rate": 50.9,
-        "stake": 136.0,
-        "profit": 14.35,
-        "roi": 10.6,
+        "hit_rate": 51.4,
+        "stake": 137.5,
+        "profit": 15.72,
+        "roi": 11.4,
         "avg_odds": 2.22
       },
       {
         "group": "itf",
         "picks": 100,
-        "settled": 85,
-        "pending": 9,
+        "settled": 87,
+        "pending": 7,
         "wins": 34,
-        "losses": 51,
-        "hit_rate": 40.0,
-        "stake": 98.25,
-        "profit": -12.21,
-        "roi": -12.4,
+        "losses": 53,
+        "hit_rate": 39.1,
+        "stake": 100.5,
+        "profit": -14.46,
+        "roi": -14.4,
         "avg_odds": 2.24
       },
       {
         "group": "atp",
         "picks": 64,
-        "settled": 54,
-        "pending": 9,
-        "wins": 20,
-        "losses": 34,
-        "hit_rate": 37.0,
-        "stake": 66.5,
-        "profit": -9.69,
-        "roi": -14.6,
+        "settled": 58,
+        "pending": 5,
+        "wins": 23,
+        "losses": 35,
+        "hit_rate": 39.7,
+        "stake": 72.25,
+        "profit": -5.69,
+        "roi": -7.9,
         "avg_odds": 2.33
       },
       {
         "group": "wta",
         "picks": 40,
-        "settled": 36,
-        "pending": 4,
-        "wins": 18,
-        "losses": 18,
+        "settled": 40,
+        "pending": 0,
+        "wins": 20,
+        "losses": 20,
         "hit_rate": 50.0,
-        "stake": 42.25,
-        "profit": -1.82,
+        "stake": 47.25,
+        "profit": -2.05,
         "roi": -4.3,
-        "avg_odds": 2.19
+        "avg_odds": 2.2
       }
     ],
     "by_gender": [
       {
         "group": "men",
         "picks": 204,
-        "settled": 180,
-        "pending": 17,
-        "wins": 81,
-        "losses": 99,
-        "hit_rate": 45.0,
-        "stake": 215.0,
-        "profit": -2.7,
-        "roi": -1.3,
+        "settled": 186,
+        "pending": 11,
+        "wins": 85,
+        "losses": 101,
+        "hit_rate": 45.7,
+        "stake": 223.25,
+        "profit": 1.67,
+        "roi": 0.7,
         "avg_odds": 2.25
       },
       {
         "group": "women",
         "picks": 113,
-        "settled": 98,
-        "pending": 10,
-        "wins": 43,
-        "losses": 55,
-        "hit_rate": 43.9,
-        "stake": 119.0,
-        "profit": -8.74,
-        "roi": -7.3,
+        "settled": 103,
+        "pending": 5,
+        "wins": 45,
+        "losses": 58,
+        "hit_rate": 43.7,
+        "stake": 125.25,
+        "profit": -10.22,
+        "roi": -8.2,
         "avg_odds": 2.23
       },
       {
@@ -48062,15 +48140,15 @@
       {
         "group": "Pncl",
         "picks": 148,
-        "settled": 131,
-        "pending": 11,
-        "wins": 56,
-        "losses": 75,
-        "hit_rate": 42.7,
-        "stake": 158.25,
-        "profit": -12.39,
-        "roi": -7.8,
-        "avg_odds": 2.24
+        "settled": 136,
+        "pending": 6,
+        "wins": 59,
+        "losses": 77,
+        "hit_rate": 43.4,
+        "stake": 165.0,
+        "profit": -10.04,
+        "roi": -6.1,
+        "avg_odds": 2.25
       },
       {
         "group": "Unibet",
@@ -48088,41 +48166,41 @@
       {
         "group": "bet365",
         "picks": 54,
-        "settled": 44,
-        "pending": 8,
-        "wins": 20,
-        "losses": 24,
-        "hit_rate": 45.5,
-        "stake": 52.75,
-        "profit": 2.72,
-        "roi": 5.2,
+        "settled": 46,
+        "pending": 6,
+        "wins": 21,
+        "losses": 25,
+        "hit_rate": 45.7,
+        "stake": 55.5,
+        "profit": 3.53,
+        "roi": 6.4,
         "avg_odds": 2.29
       },
       {
         "group": "Betfair",
         "picks": 37,
-        "settled": 34,
-        "pending": 1,
+        "settled": 35,
+        "pending": 0,
         "wins": 15,
-        "losses": 19,
-        "hit_rate": 44.1,
-        "stake": 40.25,
-        "profit": -1.19,
-        "roi": -3.0,
+        "losses": 20,
+        "hit_rate": 42.9,
+        "stake": 41.25,
+        "profit": -2.19,
+        "roi": -5.3,
         "avg_odds": 2.32
       },
       {
         "group": "Betano",
         "picks": 15,
-        "settled": 13,
-        "pending": 2,
+        "settled": 14,
+        "pending": 1,
         "wins": 9,
-        "losses": 4,
-        "hit_rate": 69.2,
-        "stake": 15.0,
-        "profit": 4.22,
-        "roi": 28.2,
-        "avg_odds": 1.96
+        "losses": 5,
+        "hit_rate": 64.3,
+        "stake": 16.5,
+        "profit": 2.72,
+        "roi": 16.5,
+        "avg_odds": 1.99
       },
       {
         "group": "WilliamHill",
@@ -48140,15 +48218,15 @@
       {
         "group": "Sbo",
         "picks": 4,
-        "settled": 3,
-        "pending": 1,
-        "wins": 1,
+        "settled": 4,
+        "pending": 0,
+        "wins": 2,
         "losses": 2,
-        "hit_rate": 33.3,
-        "stake": 3.25,
-        "profit": -1.32,
-        "roi": -40.6,
-        "avg_odds": 2.07
+        "hit_rate": 50.0,
+        "stake": 4.75,
+        "profit": 0.15,
+        "roi": 3.2,
+        "avg_odds": 2.05
       },
       {
         "group": "888Sport",
@@ -48164,6 +48242,19 @@
         "avg_odds": 2.0
       },
       {
+        "group": "1xBet",
+        "picks": 3,
+        "settled": 2,
+        "pending": 1,
+        "wins": 1,
+        "losses": 1,
+        "hit_rate": 50.0,
+        "stake": 2.0,
+        "profit": -0.24,
+        "roi": -12.0,
+        "avg_odds": 1.75
+      },
+      {
         "group": "10Bet",
         "picks": 2,
         "settled": 2,
@@ -48175,19 +48266,6 @@
         "profit": -3.0,
         "roi": -100.0,
         "avg_odds": 2.15
-      },
-      {
-        "group": "1xBet",
-        "picks": 3,
-        "settled": 1,
-        "pending": 2,
-        "wins": 0,
-        "losses": 1,
-        "hit_rate": 0.0,
-        "stake": 1.0,
-        "profit": -1.0,
-        "roi": -100.0,
-        "avg_odds": 1.73
       },
       {
         "group": "Superbet",
