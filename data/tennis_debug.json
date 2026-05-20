@@ -1,11 +1,17 @@
 {
-  "generated_at": "2026-05-20T04:33:54.568769+02:00",
+  "generated_at": "2026-05-20T10:55:31.571117+02:00",
   "summary": {
-    "fixtures_checked": 0,
-    "candidates_raw": 0,
-    "final_picks": 0,
-    "skipped_ineligible": 0,
-    "errors": 0
+    "fixtures_checked": 635,
+    "candidates_raw": 47,
+    "final_picks": 15,
+    "skipped_ineligible": 149,
+    "errors": 1
   },
-  "errors": []
+  "errors": [
+    {
+      "event_key": 12129123,
+      "match": "P. De Lange - S. Popovic",
+      "error": "API failed after retries"
+    }
+  ]
 }
