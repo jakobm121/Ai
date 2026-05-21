@@ -1,8 +1,8 @@
 {
-  "built_at": "2026-05-21T16:36:19.254241+02:00",
+  "built_at": "2026-05-21T17:58:30.346286+02:00",
   "timezone": "Europe/Ljubljana",
   "predictions": {
-    "generated_at": "2026-05-21T16:19:35.421838+02:00",
+    "generated_at": "2026-05-21T17:58:30.227568+02:00",
     "timezone": "Europe/Ljubljana",
     "source": "API-Tennis",
     "model": "AI77 Tennis Totals Value Model v1",
@@ -25,9 +25,9 @@
       "model_prob_max": 0.62
     },
     "summary": {
-      "fixtures_checked": 416,
-      "candidates_raw": 5,
-      "final_picks": 4,
+      "fixtures_checked": 417,
+      "candidates_raw": 3,
+      "final_picks": 3,
       "errors": 0
     },
     "picks": [
@@ -163,7 +163,7 @@
         "second_strength_score": 50.88,
         "h2h_matches": 2,
         "result": "pending",
-        "created_at": "2026-05-21T16:19:20.605254+02:00",
+        "created_at": "2026-05-21T17:58:18.371639+02:00",
         "reasoning": "UNDER 22.5 games selected in A. Rinderknech - A. Bublik at line 22.5. Model expected total games: 18.29; market line: 22.5. Model probability 57.0% versus implied 45.7% from best odds 2.19. Edge: +11.3%. Bookmakers used: 6. Confidence: 86.1."
       },
       {
@@ -298,7 +298,7 @@
         "second_strength_score": 39.94,
         "h2h_matches": 1,
         "result": "pending",
-        "created_at": "2026-05-21T16:19:04.368545+02:00",
+        "created_at": "2026-05-21T17:58:10.560991+02:00",
         "reasoning": "UNDER 22.5 games selected in A. Michelsen - L. Tien at line 22.5. Model expected total games: 20.50; market line: 22.5. Model probability 57.0% versus implied 48.3% from best odds 2.07. Edge: +8.7%. Bookmakers used: 7. Confidence: 81.6."
       },
       {
@@ -308,7 +308,7 @@
         "sport": "tennis",
         "model_version": "ai77_tennis_totals_v1",
         "date": "2026-05-21",
-        "time": "18:00",
+        "time": "18:45",
         "match": "L. Darderi - A. De Minaur",
         "bet": "UNDER 22.5 games",
         "bucket": "total_games",
@@ -433,143 +433,8 @@
         "second_strength_score": 39.93,
         "h2h_matches": 0,
         "result": "pending",
-        "created_at": "2026-05-21T16:19:27.390177+02:00",
+        "created_at": "2026-05-21T17:58:24.302744+02:00",
         "reasoning": "UNDER 22.5 games selected in L. Darderi - A. De Minaur at line 22.5. Model expected total games: 19.50; market line: 22.5. Model probability 57.0% versus implied 51.3% from best odds 1.95. Edge: +5.7%. Bookmakers used: 7. Confidence: 90.9."
-      },
-      {
-        "pick_id": "c0118d09f81e71bcc23dc7b773583147",
-        "event_key": 12129775,
-        "fixture_id": 12129775,
-        "sport": "tennis",
-        "model_version": "ai77_tennis_totals_v1",
-        "date": "2026-05-21",
-        "time": "16:30",
-        "match": "A. Kovacevic - C. Ugo Carabelli",
-        "bet": "OVER 21.5 games",
-        "bucket": "total_games",
-        "side": "over",
-        "market": "Over/Under by Games in Match",
-        "line": 21.5,
-        "first_player_key": 2978,
-        "second_player_key": 401,
-        "first_player_name": "A. Kovacevic",
-        "second_player_name": "C. Ugo Carabelli",
-        "tournament": "Hamburg",
-        "tournament_key": 1442,
-        "round": "ATP Hamburg - Quarter-finals",
-        "event_type": "Atp Singles",
-        "qualification": false,
-        "tour_level": "atp",
-        "gender": "men",
-        "odds": 1.8,
-        "best_bookmaker": "bet365",
-        "market_median_odds": 1.73,
-        "bookmakers_used": 7,
-        "model_prob": 0.62,
-        "implied_prob": 0.5556,
-        "edge": 0.0644,
-        "expected_total_games": 23.36,
-        "expected_margin": 1.86,
-        "confidence": 89.2,
-        "quality_score": 74.5,
-        "stake": 0.5,
-        "stake_label": "Standard",
-        "market_info": {
-          "home_median_odds": 2.7,
-          "away_median_odds": 1.45,
-          "home_implied": 0.3704,
-          "away_implied": 0.6897,
-          "market_gap": 0.3193,
-          "market_favorite_side": "away"
-        },
-        "first_form": {
-          "last_5": {
-            "matches": 5,
-            "avg_total_games": 25.8,
-            "median_total_games": 29,
-            "over_21_5_rate": 0.6,
-            "over_22_5_rate": 0.6,
-            "three_set_rate": 0.6,
-            "straight_set_rate": 0.4,
-            "close_set_rate": 0.5667,
-            "avg_set_diff": 0.2,
-            "avg_game_diff": 0.6,
-            "win_rate": 0.6
-          },
-          "last_10": {
-            "matches": 8,
-            "avg_total_games": 24.62,
-            "median_total_games": 26.0,
-            "over_21_5_rate": 0.625,
-            "over_22_5_rate": 0.625,
-            "three_set_rate": 0.625,
-            "straight_set_rate": 0.375,
-            "close_set_rate": 0.3958,
-            "avg_set_diff": -0.125,
-            "avg_game_diff": -0.375,
-            "win_rate": 0.375
-          },
-          "last_20": {
-            "matches": 8,
-            "avg_total_games": 24.62,
-            "median_total_games": 26.0,
-            "over_21_5_rate": 0.625,
-            "over_22_5_rate": 0.625,
-            "three_set_rate": 0.625,
-            "straight_set_rate": 0.375,
-            "close_set_rate": 0.3958,
-            "avg_set_diff": -0.125,
-            "avg_game_diff": -0.375,
-            "win_rate": 0.375
-          }
-        },
-        "second_form": {
-          "last_5": {
-            "matches": 5,
-            "avg_total_games": 22.0,
-            "median_total_games": 23,
-            "over_21_5_rate": 0.6,
-            "over_22_5_rate": 0.6,
-            "three_set_rate": 0.4,
-            "straight_set_rate": 0.6,
-            "close_set_rate": 0.4333,
-            "avg_set_diff": 0.0,
-            "avg_game_diff": -2.4,
-            "win_rate": 0.4
-          },
-          "last_10": {
-            "matches": 9,
-            "avg_total_games": 20.11,
-            "median_total_games": 19,
-            "over_21_5_rate": 0.3333,
-            "over_22_5_rate": 0.3333,
-            "three_set_rate": 0.2222,
-            "straight_set_rate": 0.7778,
-            "close_set_rate": 0.3519,
-            "avg_set_diff": 0.0,
-            "avg_game_diff": -1.889,
-            "win_rate": 0.4444
-          },
-          "last_20": {
-            "matches": 9,
-            "avg_total_games": 20.11,
-            "median_total_games": 19,
-            "over_21_5_rate": 0.3333,
-            "over_22_5_rate": 0.3333,
-            "three_set_rate": 0.2222,
-            "straight_set_rate": 0.7778,
-            "close_set_rate": 0.3519,
-            "avg_set_diff": 0.0,
-            "avg_game_diff": -1.889,
-            "win_rate": 0.4444
-          }
-        },
-        "first_strength_score": 42.38,
-        "second_strength_score": 41.83,
-        "h2h_matches": 0,
-        "result": "pending",
-        "created_at": "2026-05-21T16:19:19.256740+02:00",
-        "reasoning": "OVER 21.5 games selected in A. Kovacevic - C. Ugo Carabelli at line 21.5. Model expected total games: 23.36; market line: 21.5. Model probability 62.0% versus implied 55.6% from best odds 1.80. Edge: +6.4%. Bookmakers used: 7. Confidence: 89.2."
       }
     ]
   },
@@ -44656,7 +44521,7 @@
       "second_strength_score": 39.94,
       "h2h_matches": 1,
       "result": "pending",
-      "created_at": "2026-05-21T16:19:04.368545+02:00",
+      "created_at": "2026-05-21T17:58:10.560991+02:00",
       "reasoning": "UNDER 22.5 games selected in A. Michelsen - L. Tien at line 22.5. Model expected total games: 20.50; market line: 22.5. Model probability 57.0% versus implied 48.3% from best odds 2.07. Edge: +8.7%. Bookmakers used: 7. Confidence: 81.6."
     },
     {
@@ -44666,7 +44531,7 @@
       "sport": "tennis",
       "model_version": "ai77_tennis_totals_v1",
       "date": "2026-05-21",
-      "time": "18:00",
+      "time": "18:45",
       "match": "L. Darderi - A. De Minaur",
       "bet": "UNDER 22.5 games",
       "bucket": "total_games",
@@ -44791,7 +44656,7 @@
       "second_strength_score": 39.93,
       "h2h_matches": 0,
       "result": "pending",
-      "created_at": "2026-05-21T16:19:27.390177+02:00",
+      "created_at": "2026-05-21T17:58:24.302744+02:00",
       "reasoning": "UNDER 22.5 games selected in L. Darderi - A. De Minaur at line 22.5. Model expected total games: 19.50; market line: 22.5. Model probability 57.0% versus implied 51.3% from best odds 1.95. Edge: +5.7%. Bookmakers used: 7. Confidence: 90.9."
     },
     {
@@ -44926,7 +44791,7 @@
       "second_strength_score": 50.88,
       "h2h_matches": 2,
       "result": "pending",
-      "created_at": "2026-05-21T16:19:20.605254+02:00",
+      "created_at": "2026-05-21T17:58:18.371639+02:00",
       "reasoning": "UNDER 22.5 games selected in A. Rinderknech - A. Bublik at line 22.5. Model expected total games: 18.29; market line: 22.5. Model probability 57.0% versus implied 45.7% from best odds 2.19. Edge: +11.3%. Bookmakers used: 6. Confidence: 86.1."
     }
   ]
