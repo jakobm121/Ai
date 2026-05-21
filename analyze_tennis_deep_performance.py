@@ -181,6 +181,76 @@ def what_if(items):
             and str(p.get("favorite_type", "")).lower() == "favorite"
             and p.get("stake_label") != "Top Rated"
         ),
+
+        def strategy_search(items, min_picks=12):
+    tests = []
+
+    odds_rules = [
+        ("odds_1.70_1.89", lambda p: 1.70 <= fnum(p.get("odds")) < 1.90),
+        ("odds_1.90_2.09", lambda p: 1.90 <= fnum(p.get("odds")) <= 2.09),
+        ("odds_2.10_2.39", lambda p: 2.10 <= fnum(p.get("odds")) <= 2.39),
+        ("odds_2.40_2.70", lambda p: 2.40 <= fnum(p.get("odds")) <= 2.70),
+        ("odds_1.70_2.09", lambda p: 1.70 <= fnum(p.get("odds")) <= 2.09),
+        ("odds_2.10_2.70", lambda p: 2.10 <= fnum(p.get("odds")) <= 2.70),
+    ]
+
+    tours = ["challenger", "atp", "wta", "itf"]
+    favs = ["favorite", "underdog"]
+
+    edge_rules = [
+        ("edge_6.5_7.9", lambda p: 0.065 <= fnum(p.get("edge")) < 0.08),
+        ("edge_8_9.9", lambda p: 0.08 <= fnum(p.get("edge")) < 0.10),
+        ("edge_10_11.9", lambda p: 0.10 <= fnum(p.get("edge")) < 0.12),
+        ("edge_12_plus", lambda p: fnum(p.get("edge")) >= 0.12),
+        ("edge_under_12", lambda p: fnum(p.get("edge")) < 0.12),
+    ]
+
+    stake_rules = [
+        ("no_top_rated", lambda p: p.get("stake_label") != "Top Rated"),
+        ("strong_only", lambda p: p.get("stake_label") == "Strong"),
+        ("standard_only", lambda p: p.get("stake_label") == "Standard"),
+        ("small_value_only", lambda p: p.get("stake_label") == "Small Value"),
+    ]
+
+    for tour in tours:
+        for fav in favs:
+            for odds_name, odds_fn in odds_rules:
+                rule_name = f"{tour}_{fav}_{odds_name}"
+                tests.append((
+                    rule_name,
+                    lambda p, tour=tour, fav=fav, odds_fn=odds_fn:
+                        str(p.get("tour_level", "")).lower() == tour
+                        and str(p.get("favorite_type", "")).lower() == fav
+                        and odds_fn(p)
+                ))
+
+                for edge_name, edge_fn in edge_rules:
+                    tests.append((
+                        f"{rule_name}_{edge_name}",
+                        lambda p, tour=tour, fav=fav, odds_fn=odds_fn, edge_fn=edge_fn:
+                            str(p.get("tour_level", "")).lower() == tour
+                            and str(p.get("favorite_type", "")).lower() == fav
+                            and odds_fn(p)
+                            and edge_fn(p)
+                    ))
+
+                for stake_name, stake_fn in stake_rules:
+                    tests.append((
+                        f"{rule_name}_{stake_name}",
+                        lambda p, tour=tour, fav=fav, odds_fn=odds_fn, stake_fn=stake_fn:
+                            str(p.get("tour_level", "")).lower() == tour
+                            and str(p.get("favorite_type", "")).lower() == fav
+                            and odds_fn(p)
+                            and stake_fn(p)
+                    ))
+
+    results = []
+    for name, rule in tests:
+        s = simulate(items, name, rule)
+        if s["picks"] >= min_picks:
+            results.append(s)
+
+    return sorted(results, key=lambda x: (x["roi"], x["profit"]), reverse=True)
     ]
 
     rows = [simulate(items, name, rule) for name, rule in tests]
