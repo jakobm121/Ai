@@ -7,50 +7,72 @@ OUT_FILE = Path("data/tennis_deep_performance_report.json")
 
 SETTLED = {"win", "loss"}
 
+
 def fnum(x, default=0.0):
     try:
         return float(x)
     except Exception:
         return default
 
+
 def result(p):
     return str(p.get("result", "")).lower()
+
 
 def profit(p):
     r = result(p)
     odds = fnum(p.get("odds"))
     stake = fnum(p.get("stake"), 1)
+
     if r == "win":
         return (odds - 1) * stake
     if r == "loss":
         return -stake
     return 0
 
+
 def pick_date_key(p):
     return f"{p.get('date','')} {p.get('time','')} {p.get('match','')}"
 
+
 def bucket_odds(p):
     o = fnum(p.get("odds"))
-    if o < 1.70: return "<1.70"
-    if o < 1.90: return "1.70-1.89"
-    if o < 2.10: return "1.90-2.09"
-    if o < 2.40: return "2.10-2.39"
-    return "2.40+"
+    if o < 1.70:
+        return "<1.70"
+    if o < 1.90:
+        return "1.70-1.89"
+    if o < 2.10:
+        return "1.90-2.09"
+    if o < 2.40:
+        return "2.10-2.39"
+    if o <= 2.70:
+        return "2.40-2.70"
+    return "2.70+"
+
 
 def bucket_edge(p):
     e = fnum(p.get("edge"))
-    if e < 0.08: return "6.5-7.9%"
-    if e < 0.10: return "8-9.9%"
-    if e < 0.12: return "10-11.9%"
+    if e < 0.08:
+        return "6.5-7.9%"
+    if e < 0.10:
+        return "8-9.9%"
+    if e < 0.12:
+        return "10-11.9%"
     return "12%+"
+
 
 def bucket_conf(p):
     c = fnum(p.get("confidence"))
-    if c < 74: return "<74"
-    if c < 78: return "74-77.9"
-    if c < 82: return "78-81.9"
-    if c < 86: return "82-85.9"
+    if c < 74:
+        return "<74"
+    if c < 78:
+        return "74-77.9"
+    if c < 82:
+        return "78-81.9"
+    if c < 86:
+        return "82-85.9"
     return "86+"
+
 
 def summarize(items):
     settled = [p for p in items if result(p) in SETTLED]
@@ -68,14 +90,16 @@ def summarize(items):
         "staked": round(staked, 2),
         "profit": round(prof, 2),
         "roi": round(prof / staked * 100, 2) if staked else 0,
-        "avg_odds": round(avg_odds, 3)
+        "avg_odds": round(avg_odds, 3),
     }
+
 
 def max_drawdown(items):
     settled = sorted(
         [p for p in items if result(p) in SETTLED],
         key=pick_date_key
     )
+
     bank = 0
     peak = 0
     dd = 0
@@ -83,8 +107,7 @@ def max_drawdown(items):
     max_loss_streak = 0
 
     for p in settled:
-        pr = profit(p)
-        bank += pr
+        bank += profit(p)
         peak = max(peak, bank)
         dd = max(dd, peak - bank)
 
@@ -96,15 +119,18 @@ def max_drawdown(items):
 
     return {
         "max_drawdown_units": round(dd, 2),
-        "longest_loss_streak": max_loss_streak
+        "longest_loss_streak": max_loss_streak,
     }
+
 
 def group_by(items, name, fn, min_picks=1):
     groups = defaultdict(list)
+
     for p in items:
         groups[fn(p)].append(p)
 
     out = {}
+
     for k, rows in groups.items():
         s = summarize(rows)
         if s["picks"] >= min_picks:
@@ -113,13 +139,16 @@ def group_by(items, name, fn, min_picks=1):
 
     return dict(sorted(out.items(), key=lambda x: x[1]["profit"], reverse=True))
 
+
 def cross(items, name, f1, f2, min_picks=10):
     groups = defaultdict(list)
+
     for p in items:
         key = f"{f1(p)} | {f2(p)}"
         groups[key].append(p)
 
     rows = []
+
     for k, vals in groups.items():
         s = summarize(vals)
         if s["picks"] >= min_picks:
@@ -128,6 +157,26 @@ def cross(items, name, f1, f2, min_picks=10):
             rows.append(s)
 
     return sorted(rows, key=lambda x: x["roi"], reverse=True)
+
+
+def multi_cross(items, fields, min_picks=8):
+    groups = defaultdict(list)
+
+    for p in items:
+        key = " | ".join(str(fn(p)) for _, fn in fields)
+        groups[key].append(p)
+
+    rows = []
+
+    for key, vals in groups.items():
+        s = summarize(vals)
+        if s["picks"] >= min_picks:
+            s.update(max_drawdown(vals))
+            s["segment"] = key
+            rows.append(s)
+
+    return sorted(rows, key=lambda x: (x["roi"], x["profit"]), reverse=True)
+
 
 def find_duplicates(items):
     by_match_bet = defaultdict(list)
@@ -149,8 +198,9 @@ def find_duplicates(items):
             {"key": k, "count": len(v), "profit": round(sum(profit(x) for x in v), 2)}
             for k, v in by_match.items()
             if len(v) > 1
-        ]
+        ],
     }
+
 
 def simulate(items, name, rule):
     rows = [p for p in items if result(p) in SETTLED and rule(p)]
@@ -158,6 +208,7 @@ def simulate(items, name, rule):
     s.update(max_drawdown(rows))
     s["name"] = name
     return s
+
 
 def what_if(items):
     tests = [
@@ -169,6 +220,7 @@ def what_if(items):
         ("challenger_only", lambda p: str(p.get("tour_level", "")).lower() == "challenger"),
         ("favorites_only", lambda p: str(p.get("favorite_type", "")).lower() == "favorite"),
         ("challenger_odds_1.70_2.09", lambda p: str(p.get("tour_level", "")).lower() == "challenger" and 1.70 <= fnum(p.get("odds")) <= 2.09),
+        ("challenger_odds_2.10_2.70", lambda p: str(p.get("tour_level", "")).lower() == "challenger" and 2.10 <= fnum(p.get("odds")) <= 2.70),
         ("favorite_odds_1.70_2.09", lambda p: str(p.get("favorite_type", "")).lower() == "favorite" and 1.70 <= fnum(p.get("odds")) <= 2.09),
         ("gold_zone", lambda p:
             1.70 <= fnum(p.get("odds")) <= 2.09
@@ -181,8 +233,13 @@ def what_if(items):
             and str(p.get("favorite_type", "")).lower() == "favorite"
             and p.get("stake_label") != "Top Rated"
         ),
+    ]
 
-        def strategy_search(items, min_picks=12):
+    rows = [simulate(items, name, rule) for name, rule in tests]
+    return sorted(rows, key=lambda x: x["roi"], reverse=True)
+
+
+def strategy_search(items, min_picks=12):
     tests = []
 
     odds_rules = [
@@ -215,9 +272,10 @@ def what_if(items):
     for tour in tours:
         for fav in favs:
             for odds_name, odds_fn in odds_rules:
-                rule_name = f"{tour}_{fav}_{odds_name}"
+                base_name = f"{tour}_{fav}_{odds_name}"
+
                 tests.append((
-                    rule_name,
+                    base_name,
                     lambda p, tour=tour, fav=fav, odds_fn=odds_fn:
                         str(p.get("tour_level", "")).lower() == tour
                         and str(p.get("favorite_type", "")).lower() == fav
@@ -226,7 +284,7 @@ def what_if(items):
 
                 for edge_name, edge_fn in edge_rules:
                     tests.append((
-                        f"{rule_name}_{edge_name}",
+                        f"{base_name}_{edge_name}",
                         lambda p, tour=tour, fav=fav, odds_fn=odds_fn, edge_fn=edge_fn:
                             str(p.get("tour_level", "")).lower() == tour
                             and str(p.get("favorite_type", "")).lower() == fav
@@ -236,7 +294,7 @@ def what_if(items):
 
                 for stake_name, stake_fn in stake_rules:
                     tests.append((
-                        f"{rule_name}_{stake_name}",
+                        f"{base_name}_{stake_name}",
                         lambda p, tour=tour, fav=fav, odds_fn=odds_fn, stake_fn=stake_fn:
                             str(p.get("tour_level", "")).lower() == tour
                             and str(p.get("favorite_type", "")).lower() == fav
@@ -245,16 +303,14 @@ def what_if(items):
                     ))
 
     results = []
+
     for name, rule in tests:
         s = simulate(items, name, rule)
         if s["picks"] >= min_picks:
             results.append(s)
 
     return sorted(results, key=lambda x: (x["roi"], x["profit"]), reverse=True)
-    ]
 
-    rows = [simulate(items, name, rule) for name, rule in tests]
-    return sorted(rows, key=lambda x: x["roi"], reverse=True)
 
 def calibration(items):
     groups = defaultdict(list)
@@ -262,25 +318,31 @@ def calibration(items):
     for p in items:
         if result(p) not in SETTLED:
             continue
+
         prob = fnum(p.get("model_prob"))
+
         if prob <= 0:
             continue
+
         b = int((prob * 100) // 5 * 5)
         groups[f"{b}-{b+4}%"].append(p)
 
     out = {}
+
     for k, rows in groups.items():
         wins = sum(1 for p in rows if result(p) == "win")
         avg_prob = sum(fnum(p.get("model_prob")) for p in rows) / len(rows)
         actual = wins / len(rows)
+
         out[k] = {
             "picks": len(rows),
             "avg_model_prob": round(avg_prob * 100, 2),
             "actual_win_rate": round(actual * 100, 2),
-            "gap": round((actual - avg_prob) * 100, 2)
+            "gap": round((actual - avg_prob) * 100, 2),
         }
 
     return out
+
 
 def main():
     items = json.loads(RESULTS_FILE.read_text(encoding="utf-8"))
@@ -308,10 +370,42 @@ def main():
             "confidence_x_edge": cross(items, "conf_x_edge", bucket_conf, bucket_edge),
         },
 
+        "multi_segments": {
+            "tour_x_favorite_x_odds": multi_cross(items, [
+                ("tour", lambda p: str(p.get("tour_level", "unknown")).lower()),
+                ("favorite", lambda p: str(p.get("favorite_type", "unknown")).lower()),
+                ("odds", bucket_odds),
+            ]),
+
+            "tour_x_odds_x_edge": multi_cross(items, [
+                ("tour", lambda p: str(p.get("tour_level", "unknown")).lower()),
+                ("odds", bucket_odds),
+                ("edge", bucket_edge),
+            ]),
+
+            "tour_x_odds_x_stake": multi_cross(items, [
+                ("tour", lambda p: str(p.get("tour_level", "unknown")).lower()),
+                ("odds", bucket_odds),
+                ("stake", lambda p: p.get("stake_label", "unknown")),
+            ]),
+
+            "favorite_x_odds_x_edge": multi_cross(items, [
+                ("favorite", lambda p: str(p.get("favorite_type", "unknown")).lower()),
+                ("odds", bucket_odds),
+                ("edge", bucket_edge),
+            ]),
+
+            "tour_x_favorite_x_edge": multi_cross(items, [
+                ("tour", lambda p: str(p.get("tour_level", "unknown")).lower()),
+                ("favorite", lambda p: str(p.get("favorite_type", "unknown")).lower()),
+                ("edge", bucket_edge),
+            ]),
+        },
+
         "what_if": what_if(items),
-        "calibration": calibration(items),
         "strategy_search": strategy_search(items, min_picks=12),
-        "duplicates": find_duplicates(items)
+        "calibration": calibration(items),
+        "duplicates": find_duplicates(items),
     }
 
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -321,6 +415,9 @@ def main():
     print(json.dumps(report["overall"], indent=2, ensure_ascii=False))
     print("\nTop what-if:")
     print(json.dumps(report["what_if"][:5], indent=2, ensure_ascii=False))
+    print("\nTop strategy search:")
+    print(json.dumps(report["strategy_search"][:10], indent=2, ensure_ascii=False))
+
 
 if __name__ == "__main__":
     main()
