@@ -1,0 +1,33 @@
+name: Tennis Totals Ultra Performance Report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "25 23 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  totals-ultra-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run tennis totals ultra report
+        run: python analyze_tennis_totals_ultra_performance.py
+
+      - name: Commit totals ultra report
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/tennis_totals_ultra_performance_report.json
+          git commit -m "Update tennis totals ultra performance report" || echo "No changes"
+          git push
