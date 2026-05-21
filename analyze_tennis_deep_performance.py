@@ -310,6 +310,7 @@ def main():
 
         "what_if": what_if(items),
         "calibration": calibration(items),
+        "strategy_search": strategy_search(items, min_picks=12),
         "duplicates": find_duplicates(items)
     }
 
