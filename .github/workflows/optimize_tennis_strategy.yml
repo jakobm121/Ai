@@ -1,0 +1,38 @@
+name: Optimize Tennis Strategy
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimize-tennis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Ai repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run tennis strategy optimizer
+        run: python optimize_tennis_strategy.py
+
+      - name: Upload optimizer report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tennis-strategy-optimizer-report
+          path: data/tennis_strategy_optimizer_report.json
+
+      - name: Commit optimizer report
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/tennis_strategy_optimizer_report.json
+          git commit -m "Update tennis strategy optimizer report" || echo "No changes"
+          git pull --rebase origin main
+          git push || (git pull --rebase origin main && git push)
