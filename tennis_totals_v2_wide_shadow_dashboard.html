@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI77 Tennis Totals V2 Wide Shadow</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #0e1b2e;
+      --panel2: #12233a;
+      --text: #eaf2ff;
+      --muted: #8fa5c2;
+      --line: rgba(255,255,255,.10);
+      --good: #27d17f;
+      --bad: #ff5c77;
+      --warn: #ffc857;
+      --info: #64b5ff;
+      --chip: #1b3352;
+      --shadow: 0 16px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(70,130,255,.20), transparent 32rem),
+        radial-gradient(circle at top right, rgba(39,209,127,.12), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 26px 24px 18px;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: rgba(7,17,31,.88);
+      backdrop-filter: blur(14px);
+      z-index: 10;
+    }
+
+    .wrap {
+      max-width: 1540px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(25px, 3vw, 42px);
+      letter-spacing: -.04em;
+      line-height: 1.03;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-top: 8px;
+      font-size: 14px;
+      max-width: 900px;
+    }
+
+    .status {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--warn);
+      box-shadow: 0 0 18px var(--warn);
+      display: inline-block;
+    }
+
+    .dot.ok { background: var(--good); box-shadow: 0 0 18px var(--good); }
+    .dot.err { background: var(--bad); box-shadow: 0 0 18px var(--bad); }
+
+    main { padding: 24px 0 48px; }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .kpis {
+      grid-template-columns: repeat(6, minmax(150px, 1fr));
+      margin-bottom: 16px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015)), var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .kpi {
+      padding: 17px;
+      min-height: 112px;
+    }
+
+    .kpi .label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 12px;
+    }
+
+    .kpi .value {
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .kpi .mini {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .good { color: var(--good); }
+    .bad { color: var(--bad); }
+    .warn { color: var(--warn); }
+    .info { color: var(--info); }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1.4fr repeat(8, minmax(110px, .75fr));
+      gap: 10px;
+      padding: 14px;
+      margin-bottom: 16px;
+      align-items: center;
+    }
+
+    input, select, button {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--panel2);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 11px 12px;
+      font-size: 13px;
+      outline: none;
+    }
+
+    button {
+      cursor: pointer;
+      font-weight: 700;
+      background: linear-gradient(180deg, #1f74ff, #1550bd);
+      border: none;
+    }
+
+    button.secondary {
+      background: var(--chip);
+      border: 1px solid var(--line);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 430px;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .panel {
+      padding: 16px;
+    }
+
+    .panel-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .panel-title h2 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: -.02em;
+    }
+
+    .panel-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      max-height: 72vh;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1280px;
+      background: rgba(0,0,0,.12);
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 11px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 13px;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: #0d1a2d;
+      z-index: 1;
+      color: #bad0ed;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    tr:hover td { background: rgba(255,255,255,.035); }
+    tr.selected td { background: rgba(100,181,255,.12); }
+
+    .match {
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+      background: var(--chip);
+      color: #c9ddf7;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .pill.over { background: rgba(39,209,127,.13); color: #72f2b0; }
+    .pill.under { background: rgba(100,181,255,.13); color: #9ed0ff; }
+    .pill.win { background: rgba(39,209,127,.13); color: #72f2b0; }
+    .pill.loss { background: rgba(255,92,119,.13); color: #ff9bad; }
+    .pill.pending { background: rgba(255,200,87,.13); color: #ffe09a; }
+    .pill.push { background: rgba(143,165,194,.15); color: #c8d5e8; }
+    .pill.top { background: rgba(39,209,127,.16); color: #72f2b0; }
+    .pill.risk { background: rgba(255,200,87,.15); color: #ffe09a; }
+
+    .num {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .detail {
+      display: grid;
+      gap: 12px;
+    }
+
+    .empty {
+      color: var(--muted);
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      padding: 18px;
+      line-height: 1.5;
+    }
+
+    .detail-head {
+      padding: 16px;
+      background: rgba(255,255,255,.03);
+      border-radius: 15px;
+      border: 1px solid var(--line);
+    }
+
+    .detail-head h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      letter-spacing: -.035em;
+    }
+
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .statbox {
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.025);
+    }
+
+    .statbox .slabel {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+
+    .statbox .svalue {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .progress {
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--bad), var(--warn), var(--good));
+    }
+
+    .section {
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      padding: 13px;
+      background: rgba(255,255,255,.02);
+    }
+
+    .section h4 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #cfe1fb;
+    }
+
+    .kv {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: 13px;
+    }
+
+    .kv:last-child { border-bottom: none; }
+    .kv span:first-child { color: var(--muted); }
+    .kv span:last-child { font-variant-numeric: tabular-nums; font-weight: 750; }
+
+    .reason {
+      color: #c7d8ef;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    canvas {
+      width: 100%;
+      height: 260px;
+      display: block;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 10px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 1280px) {
+      .kpis { grid-template-columns: repeat(3, 1fr); }
+      .toolbar { grid-template-columns: repeat(2, 1fr); }
+      .layout { grid-template-columns: 1fr; }
+      .charts { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 720px) {
+      header { position: static; }
+      .kpis { grid-template-columns: 1fr 1fr; }
+      .toolbar { grid-template-columns: 1fr; }
+      .mini-grid { grid-template-columns: 1fr; }
+      .wrap { padding: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <div>
+        <h1>AI77 Tennis Totals V2 Wide Shadow</h1>
+        <div class="subtitle">
+          Dashboard za spremljanje pickov, settle rezultatov, ROI, risk flagov, expected total floor/ceiling clampov in modulov.
+        </div>
+      </div>
+      <div class="status">
+        <span id="loadDot" class="dot"></span>
+        <span id="loadStatus">Čakam podatke ...</span>
+        <button class="secondary" id="reloadBtn" style="width:auto;padding:10px 14px;">Reload</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="grid kpis" id="kpis">
+        <div class="card kpi"><div class="label">Picki</div><div class="value" id="kpiPicks">–</div><div class="mini" id="kpiSettled">–</div></div>
+        <div class="card kpi"><div class="label">Win rate</div><div class="value" id="kpiWinRate">–</div><div class="mini">settled brez push</div></div>
+        <div class="card kpi"><div class="label">Profit</div><div class="value" id="kpiProfit">–</div><div class="mini">po stakeih</div></div>
+        <div class="card kpi"><div class="label">ROI</div><div class="value" id="kpiRoi">–</div><div class="mini">profit / staked</div></div>
+        <div class="card kpi"><div class="label">Pending</div><div class="value" id="kpiPending">–</div><div class="mini" id="kpiPendingStake">–</div></div>
+        <div class="card kpi"><div class="label">Risk flags</div><div class="value" id="kpiRisk">–</div><div class="mini">picki z vsaj 1 flagom</div></div>
+      </section>
+
+      <section class="charts">
+        <div class="card panel">
+          <div class="panel-title"><h2>Profit po datumih</h2><span id="chartProfitMeta"></span></div>
+          <canvas id="profitChart" width="720" height="260"></canvas>
+        </div>
+        <div class="card panel">
+          <div class="panel-title"><h2>Distribucija kakovosti</h2><span id="chartQualityMeta"></span></div>
+          <canvas id="qualityChart" width="720" height="260"></canvas>
+        </div>
+      </section>
+
+      <section class="card toolbar">
+        <input id="searchInput" placeholder="Išči match, tournament, bookmaker, bet ..." />
+        <select id="resultFilter">
+          <option value="">Result: vsi</option>
+          <option value="pending">pending</option>
+          <option value="win">win</option>
+          <option value="loss">loss</option>
+          <option value="push">push</option>
+          <option value="void">void</option>
+        </select>
+        <select id="sideFilter">
+          <option value="">Side: vsi</option>
+          <option value="over">over</option>
+          <option value="under">under</option>
+        </select>
+        <select id="tourFilter">
+          <option value="">Tour: vsi</option>
+        </select>
+        <select id="stakeFilter">
+          <option value="">Stake: vsi</option>
+          <option value="1">1.00</option>
+          <option value="0.75">0.75</option>
+          <option value="0.5">0.50</option>
+          <option value="0.25">0.25</option>
+        </select>
+        <select id="riskFilter">
+          <option value="">Risk: vsi</option>
+          <option value="has">ima flag</option>
+          <option value="none">brez flaga</option>
+          <option value="floor_clamped">floor_clamped</option>
+          <option value="low_sample">low_sample</option>
+          <option value="weak_set_betting_market">weak_set_betting</option>
+          <option value="low_line_under">low_line_under</option>
+        </select>
+        <select id="dateFilter">
+          <option value="">Datum: vsi</option>
+        </select>
+        <select id="sortSelect">
+          <option value="date_desc">Sort: datum ↓</option>
+          <option value="date_asc">Sort: datum ↑</option>
+          <option value="quality_desc">quality ↓</option>
+          <option value="edge_desc">edge ↓</option>
+          <option value="confidence_desc">confidence ↓</option>
+          <option value="profit_desc">profit ↓</option>
+        </select>
+        <button id="resetBtn">Reset</button>
+      </section>
+
+      <section class="layout">
+        <div class="card panel">
+          <div class="panel-title">
+            <h2>Picki</h2>
+            <span id="tableMeta">–</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th data-sort="date">Date</th>
+                  <th data-sort="match">Match</th>
+                  <th data-sort="side">Bet</th>
+                  <th data-sort="result">Result</th>
+                  <th data-sort="odds">Odds</th>
+                  <th data-sort="stake">Stake</th>
+                  <th data-sort="profit">P/L</th>
+                  <th data-sort="line">Line</th>
+                  <th data-sort="expected_total_games">Exp</th>
+                  <th data-sort="raw_expected_total_games">Raw</th>
+                  <th data-sort="edge">Edge</th>
+                  <th data-sort="confidence">Conf</th>
+                  <th data-sort="quality_score">Quality</th>
+                  <th data-sort="module_score">Module</th>
+                  <th>Flags</th>
+                </tr>
+              </thead>
+              <tbody id="picksBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="card panel">
+          <div class="panel-title">
+            <h2>Detajl picka</h2>
+            <span id="detailMeta">klikni vrstico</span>
+          </div>
+          <div id="detail" class="detail">
+            <div class="empty">
+              Izberi pick iz tabele. Tukaj boš videl expected components, market info, forme, risk flags, reasoning in settle izračun.
+            </div>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const CONFIG = {
+      predictionsUrl: "data/tennis_totals_v2_wide_shadow_predictions.json",
+      resultsUrl: "data/tennis_totals_v2_wide_shadow_results.json",
+      debugUrl: "data/tennis_totals_v2_wide_shadow_debug.json",
+      snapshotsUrl: "data/tennis_totals_v2_wide_shadow_market_snapshots.json",
+      autoReloadMs: 0
+    };
+
+    let state = {
+      predictions: null,
+      results: [],
+      debug: null,
+      snapshots: [],
+      rows: [],
+      filtered: [],
+      selectedId: null,
+      sortKey: "date_desc"
+    };
+
+    const $ = (id) => document.getElementById(id);
+
+    function fmtNum(v, digits = 2) {
+      const n = Number(v);
+      if (!Number.isFinite(n)) return "–";
+      return n.toFixed(digits);
+    }
+
+    function fmtPct(v, digits = 1) {
+      const n = Number(v);
+      if (!Number.isFinite(n)) return "–";
+      return (n * 100).toFixed(digits) + "%";
+    }
+
+    function normResult(r) {
+      return String(r || "pending").toLowerCase();
+    }
+
+    function profitForPick(p) {
+      const result = normResult(p.result);
+      const stake = Number(p.stake || 0);
+      const odds = Number(p.odds || 0);
+      if (result === "win") return stake * (odds - 1);
+      if (result === "loss") return -stake;
+      if (result === "push" || result === "void") return 0;
+      return 0;
+    }
+
+    function isSettled(p) {
+      const r = normResult(p.result);
+      return ["win", "loss", "push", "void"].includes(r);
+    }
+
+    function settledForWinrate(p) {
+      const r = normResult(p.result);
+      return r === "win" || r === "loss";
+    }
+
+    function resultPill(r) {
+      r = normResult(r);
+      if (r === "won") r = "win";
+      if (r === "lost") r = "loss";
+      return `<span class="pill ${r}">${r}</span>`;
+    }
+
+    function sidePill(side) {
+      side = String(side || "").toLowerCase();
+      return `<span class="pill ${side}">${side.toUpperCase()}</span>`;
+    }
+
+    async function fetchJson(url, optional = false) {
+      try {
+        const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+        return await res.json();
+      } catch (err) {
+        if (optional) return null;
+        throw new Error(`Ne morem naložiti ${url}: ${err.message}`);
+      }
+    }
+
+    function mergeRows(predictions, results) {
+      const picks = Array.isArray(predictions?.picks) ? predictions.picks : [];
+      const resultRows = Array.isArray(results) ? results : [];
+
+      const byId = new Map();
+      for (const p of picks) {
+        if (p && p.pick_id) byId.set(p.pick_id, { ...p, source_current_predictions: true });
+      }
+
+      for (const r of resultRows) {
+        if (!r || !r.pick_id) continue;
+        const old = byId.get(r.pick_id) || {};
+        byId.set(r.pick_id, { ...old, ...r, source_results: true });
+      }
+
+      return [...byId.values()].map((p) => {
+        const result = normResult(p.result);
+        const profit = profitForPick({ ...p, result });
+        return {
+          ...p,
+          result,
+          profit,
+          risk_flags: Array.isArray(p.risk_flags) ? p.risk_flags : []
+        };
+      });
+    }
+
+    function setStatus(kind, text) {
+      const dot = $("loadDot");
+      dot.className = "dot" + (kind === "ok" ? " ok" : kind === "err" ? " err" : "");
+      $("loadStatus").textContent = text;
+    }
+
+    async function loadAll() {
+      try {
+        setStatus("wait", "Nalagam JSON ...");
+
+        const [predictions, results, debug, snapshots] = await Promise.all([
+          fetchJson(CONFIG.predictionsUrl),
+          fetchJson(CONFIG.resultsUrl, true),
+          fetchJson(CONFIG.debugUrl, true),
+          fetchJson(CONFIG.snapshotsUrl, true)
+        ]);
+
+        state.predictions = predictions;
+        state.results = Array.isArray(results) ? results : [];
+        state.debug = debug;
+        state.snapshots = Array.isArray(snapshots) ? snapshots : [];
+        state.rows = mergeRows(predictions, state.results);
+
+        populateFilters();
+        applyFilters();
+        setStatus("ok", `Naloženo: ${new Date().toLocaleString("sl-SI")}`);
+      } catch (err) {
+        console.error(err);
+        setStatus("err", err.message);
+      }
+    }
+
+    function populateFilters() {
+      const tours = [...new Set(state.rows.map(p => p.tour_level).filter(Boolean))].sort();
+      const dates = [...new Set(state.rows.map(p => p.date).filter(Boolean))].sort();
+
+      const tourEl = $("tourFilter");
+      const oldTour = tourEl.value;
+      tourEl.innerHTML = `<option value="">Tour: vsi</option>` + tours.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("");
+      tourEl.value = oldTour;
+
+      const dateEl = $("dateFilter");
+      const oldDate = dateEl.value;
+      dateEl.innerHTML = `<option value="">Datum: vsi</option>` + dates.map(d => `<option value="${escapeHtml(d)}">${escapeHtml(d)}</option>`).join("");
+      dateEl.value = oldDate;
+    }
+
+    function applyFilters() {
+      const q = $("searchInput").value.trim().toLowerCase();
+      const result = $("resultFilter").value;
+      const side = $("sideFilter").value;
+      const tour = $("tourFilter").value;
+      const stake = $("stakeFilter").value;
+      const risk = $("riskFilter").value;
+      const date = $("dateFilter").value;
+      state.sortKey = $("sortSelect").value;
+
+      let rows = [...state.rows];
+
+      if (q) {
+        rows = rows.filter(p => {
+          const hay = [
+            p.match, p.bet, p.tournament, p.round, p.best_bookmaker,
+            p.event_type, p.stake_label, ...(p.risk_flags || [])
+          ].join(" ").toLowerCase();
+          return hay.includes(q);
+        });
+      }
+
+      if (result) rows = rows.filter(p => p.result === result);
+      if (side) rows = rows.filter(p => String(p.side || "").toLowerCase() === side);
+      if (tour) rows = rows.filter(p => String(p.tour_level || "") === tour);
+      if (stake) rows = rows.filter(p => Number(p.stake || 0) === Number(stake));
+      if (date) rows = rows.filter(p => p.date === date);
+
+      if (risk) {
+        if (risk === "has") rows = rows.filter(p => (p.risk_flags || []).length > 0);
+        else if (risk === "none") rows = rows.filter(p => (p.risk_flags || []).length === 0);
+        else rows = rows.filter(p => (p.risk_flags || []).includes(risk));
+      }
+
+      sortRows(rows, state.sortKey);
+      state.filtered = rows;
+
+      renderKpis(rows);
+      renderCharts(rows);
+      renderTable(rows);
+
+      if (state.selectedId) {
+        const selected = state.rows.find(p => p.pick_id === state.selectedId);
+        if (selected) renderDetail(selected);
+      }
+    }
+
+    function sortRows(rows, sortKey) {
+      const parts = String(sortKey || "date_desc").split("_");
+      const dir = parts.pop() === "asc" ? 1 : -1;
+      const key = parts.join("_");
+
+      rows.sort((a, b) => {
+        if (key === "date") {
+          const av = `${a.date || ""} ${a.time || ""}`;
+          const bv = `${b.date || ""} ${b.time || ""}`;
+          return av.localeCompare(bv) * dir;
+        }
+        if (["quality", "edge", "confidence", "profit"].includes(key)) {
+          const map = { quality: "quality_score", edge: "edge", confidence: "confidence", profit: "profit" };
+          return ((Number(a[map[key]] || 0) - Number(b[map[key]] || 0)) * dir);
+        }
+        return String(a[key] || "").localeCompare(String(b[key] || "")) * dir;
+      });
+    }
+
+    function renderKpis(rows) {
+      const total = rows.length;
+      const settled = rows.filter(isSettled);
+      const wrRows = rows.filter(settledForWinrate);
+      const wins = wrRows.filter(p => p.result === "win").length;
+      const losses = wrRows.filter(p => p.result === "loss").length;
+      const pending = rows.filter(p => p.result === "pending");
+      const staked = settled.reduce((s, p) => s + Number(p.stake || 0), 0);
+      const profit = settled.reduce((s, p) => s + p.profit, 0);
+      const roi = staked > 0 ? profit / staked : null;
+      const riskCount = rows.filter(p => (p.risk_flags || []).length > 0).length;
+      const pendingStake = pending.reduce((s, p) => s + Number(p.stake || 0), 0);
+
+      $("kpiPicks").textContent = total;
+      $("kpiSettled").textContent = `${settled.length} settled / ${pending.length} pending`;
+      $("kpiWinRate").textContent = (wins + losses) ? `${(wins / (wins + losses) * 100).toFixed(1)}%` : "–";
+      $("kpiProfit").textContent = `${profit >= 0 ? "+" : ""}${fmtNum(profit, 2)}u`;
+      $("kpiProfit").className = "value " + (profit >= 0 ? "good" : "bad");
+      $("kpiRoi").textContent = roi === null ? "–" : `${roi >= 0 ? "+" : ""}${(roi * 100).toFixed(1)}%`;
+      $("kpiRoi").className = "value " + (roi === null ? "" : roi >= 0 ? "good" : "bad");
+      $("kpiPending").textContent = pending.length;
+      $("kpiPendingStake").textContent = `${fmtNum(pendingStake, 2)}u open stake`;
+      $("kpiRisk").textContent = riskCount;
+    }
+
+    function renderTable(rows) {
+      $("tableMeta").textContent = `${rows.length} prikazanih / ${state.rows.length} skupaj`;
+
+      const body = $("picksBody");
+      body.innerHTML = rows.map(p => {
+        const flags = (p.risk_flags || []).slice(0, 3).map(f => `<span class="pill risk">${escapeHtml(f)}</span>`).join(" ");
+        const pl = p.result === "pending" ? "–" : `${p.profit >= 0 ? "+" : ""}${fmtNum(p.profit, 2)}u`;
+        const selected = p.pick_id === state.selectedId ? " selected" : "";
+        const qClass = Number(p.quality_score || 0) >= 90 ? "good" : Number(p.quality_score || 0) >= 75 ? "warn" : "";
+        const eClass = Number(p.edge || 0) >= 0.09 ? "good" : Number(p.edge || 0) >= 0.055 ? "warn" : "";
+
+        return `<tr class="${selected}" data-id="${escapeHtml(p.pick_id)}">
+          <td class="num">${escapeHtml(p.date || "")}<div class="meta">${escapeHtml(p.time || "")}</div></td>
+          <td>
+            <div class="match">${escapeHtml(p.match || "")}</div>
+            <div class="meta">${escapeHtml(p.tournament || "")} · ${escapeHtml(p.round || "")}</div>
+          </td>
+          <td>${sidePill(p.side)} <div class="meta">${escapeHtml(p.bet || "")}</div></td>
+          <td>${resultPill(p.result)}</td>
+          <td class="num">${fmtNum(p.odds, 2)}<div class="meta">${escapeHtml(p.best_bookmaker || "")}</div></td>
+          <td class="num">${fmtNum(p.stake, 2)}<div class="meta">${escapeHtml(p.stake_label || "")}</div></td>
+          <td class="num ${p.profit >= 0 ? "good" : "bad"}">${pl}</td>
+          <td class="num">${fmtNum(p.line, 1)}</td>
+          <td class="num">${fmtNum(p.expected_total_games, 2)}</td>
+          <td class="num">${p.raw_expected_total_games == null ? "–" : fmtNum(p.raw_expected_total_games, 2)}</td>
+          <td class="num ${eClass}">${fmtPct(p.edge)}</td>
+          <td class="num">${fmtNum(p.confidence, 1)}</td>
+          <td class="num ${qClass}">${fmtNum(p.quality_score, 1)}</td>
+          <td class="num">${fmtNum(p.module_score, 2)}</td>
+          <td>${flags || `<span class="meta">–</span>`}</td>
+        </tr>`;
+      }).join("");
+
+      body.querySelectorAll("tr").forEach(tr => {
+        tr.addEventListener("click", () => {
+          const id = tr.dataset.id;
+          state.selectedId = id;
+          const p = state.rows.find(x => x.pick_id === id);
+          renderTable(state.filtered);
+          renderDetail(p);
+        });
+      });
+    }
+
+    function renderDetail(p) {
+      if (!p) return;
+      $("detailMeta").textContent = p.pick_id ? p.pick_id.slice(0, 8) : "";
+
+      const market = p.market_info || {};
+      const setInfo = p.set_betting_info || {};
+      const comp = p.expected_components || {};
+      const first10 = p.first_form?.last_10 || {};
+      const second10 = p.second_form?.last_10 || {};
+      const flags = (p.risk_flags || []).map(f => `<span class="pill risk">${escapeHtml(f)}</span>`).join(" ");
+      const profit = p.result === "pending" ? "–" : `${p.profit >= 0 ? "+" : ""}${fmtNum(p.profit, 2)}u`;
+
+      $("detail").innerHTML = `
+        <div class="detail-head">
+          <h3>${escapeHtml(p.match || "")}</h3>
+          <div class="meta">${escapeHtml(p.date || "")} ${escapeHtml(p.time || "")} · ${escapeHtml(p.tournament || "")} · ${escapeHtml(p.round || "")}</div>
+          <div class="chips">
+            ${sidePill(p.side)}
+            ${resultPill(p.result)}
+            <span class="pill">${escapeHtml(p.bet || "")}</span>
+            <span class="pill">${fmtNum(p.odds, 2)} @ ${escapeHtml(p.best_bookmaker || "")}</span>
+            ${p.stake_label ? `<span class="pill ${String(p.stake_label).startsWith("Risk") ? "risk" : "top"}">${escapeHtml(p.stake_label)}</span>` : ""}
+          </div>
+          <div class="chips">${flags || `<span class="meta">Brez risk flagov</span>`}</div>
+        </div>
+
+        <div class="mini-grid">
+          ${statBox("Profit", profit, p.profit >= 0 ? "good" : "bad")}
+          ${statBox("Stake", `${fmtNum(p.stake, 2)}u`, "")}
+          ${statBox("Expected", fmtNum(p.expected_total_games, 2), "")}
+          ${statBox("Raw expected", p.raw_expected_total_games == null ? "–" : fmtNum(p.raw_expected_total_games, 2), p.floor_clamped ? "warn" : "")}
+          ${statBox("Edge", fmtPct(p.edge), Number(p.edge || 0) >= .09 ? "good" : "warn")}
+          ${statBox("Quality", fmtNum(p.quality_score, 1), Number(p.quality_score || 0) >= 90 ? "good" : "")}
+        </div>
+
+        <div class="section">
+          <h4>Model</h4>
+          ${kv("Line", fmtNum(p.line, 1))}
+          ${kv("Expected margin", fmtNum(p.expected_margin, 2))}
+          ${kv("Model prob", fmtPct(p.model_prob))}
+          ${kv("Implied prob", fmtPct(p.implied_prob))}
+          ${kv("Confidence", fmtNum(p.confidence, 1))}
+          ${kv("Module score", fmtNum(p.module_score, 2))}
+          ${kv("Bookmakers used", p.bookmakers_used ?? "–")}
+          ${kv("Market median odds", fmtNum(p.market_median_odds, 3))}
+          <div class="progress"><div class="bar" style="width:${clamp(Number(p.quality_score || 0), 0, 100)}%"></div></div>
+        </div>
+
+        <div class="section">
+          <h4>Expected components</h4>
+          ${kv("Avg recent", fmtNum(comp.avg_recent, 3))}
+          ${kv("Three-set rate", fmtPct(comp.three_set_rate))}
+          ${kv("Close-set rate", fmtPct(comp.close_set_rate))}
+          ${kv("Three-set adj", signed(comp.three_set_adj))}
+          ${kv("Close-set adj", signed(comp.close_set_adj))}
+          ${kv("Strength gap", fmtNum(comp.strength_gap, 2))}
+          ${kv("Strength adj", signed(comp.strength_adj))}
+          ${kv("Market adj", signed(comp.market_adj))}
+          ${kv("Set betting adj", signed(comp.set_betting_adj ?? p.set_betting_adjustment))}
+          ${kv("Surface adj", signed(comp.surface_adj ?? p.surface_adjustment))}
+          ${kv("H2H adj", signed(comp.h2h_adj))}
+        </div>
+
+        <div class="section">
+          <h4>Market info</h4>
+          ${kv("Favorite side", market.market_favorite_side || "–")}
+          ${kv("Home median odds", fmtNum(market.home_median_odds, 3))}
+          ${kv("Away median odds", fmtNum(market.away_median_odds, 3))}
+          ${kv("Market gap", fmtNum(market.market_gap, 4))}
+          ${kv("Set market", setInfo.market_name || "–")}
+          ${kv("Set signal", setInfo.signal_strength || "old/unknown")}
+          ${kv("Straight implied", fmtPct(setInfo.straight_sets_implied))}
+          ${kv("Three-set implied", fmtPct(setInfo.three_sets_implied))}
+          ${kv("Surface proxy", p.surface_proxy || "–")}
+        </div>
+
+        <div class="section">
+          <h4>Form last 10</h4>
+          ${kv(escapeHtml(p.first_player_name || "First") + " matches", first10.matches ?? "–")}
+          ${kv(escapeHtml(p.first_player_name || "First") + " avg total", fmtNum(first10.avg_total_games, 2))}
+          ${kv(escapeHtml(p.first_player_name || "First") + " median", fmtNum(first10.median_total_games, 2))}
+          ${kv(escapeHtml(p.first_player_name || "First") + " 3-set", fmtPct(first10.three_set_rate))}
+          ${kv(escapeHtml(p.first_player_name || "First") + " close", fmtPct(first10.close_set_rate))}
+          ${kv(escapeHtml(p.second_player_name || "Second") + " matches", second10.matches ?? "–")}
+          ${kv(escapeHtml(p.second_player_name || "Second") + " avg total", fmtNum(second10.avg_total_games, 2))}
+          ${kv(escapeHtml(p.second_player_name || "Second") + " median", fmtNum(second10.median_total_games, 2))}
+          ${kv(escapeHtml(p.second_player_name || "Second") + " 3-set", fmtPct(second10.three_set_rate))}
+          ${kv(escapeHtml(p.second_player_name || "Second") + " close", fmtPct(second10.close_set_rate))}
+        </div>
+
+        <div class="section">
+          <h4>Reasoning</h4>
+          <div class="reason">${escapeHtml(p.reasoning || "–")}</div>
+        </div>
+      `;
+    }
+
+    function statBox(label, value, cls) {
+      return `<div class="statbox"><div class="slabel">${label}</div><div class="svalue ${cls || ""}">${value}</div></div>`;
+    }
+
+    function kv(label, value) {
+      return `<div class="kv"><span>${label}</span><span>${value}</span></div>`;
+    }
+
+    function signed(v) {
+      const n = Number(v);
+      if (!Number.isFinite(n)) return "–";
+      return `${n >= 0 ? "+" : ""}${n.toFixed(3)}`;
+    }
+
+    function clamp(v, lo, hi) {
+      return Math.max(lo, Math.min(hi, v));
+    }
+
+    function renderCharts(rows) {
+      drawProfitChart(rows);
+      drawQualityChart(rows);
+    }
+
+    function drawProfitChart(rows) {
+      const canvas = $("profitChart");
+      const ctx = canvas.getContext("2d");
+      clearCanvas(ctx, canvas);
+
+      const settled = rows.filter(isSettled).sort((a,b) => `${a.date||""} ${a.time||""}`.localeCompare(`${b.date||""} ${b.time||""}`));
+      let cum = 0;
+      const points = settled.map(p => {
+        cum += p.profit;
+        return { x: p.date || "", y: cum };
+      });
+
+      $("chartProfitMeta").textContent = `${settled.length} settled`;
+
+      if (!points.length) {
+        drawEmptyChart(ctx, canvas, "Ni settled pickov.");
+        return;
+      }
+
+      drawLine(ctx, canvas, points.map((p, i) => ({ x: i, y: p.y })), "Cumulative P/L");
+    }
+
+    function drawQualityChart(rows) {
+      const canvas = $("qualityChart");
+      const ctx = canvas.getContext("2d");
+      clearCanvas(ctx, canvas);
+
+      const buckets = [
+        { label: "<70", min: -Infinity, max: 70, count: 0 },
+        { label: "70-79", min: 70, max: 80, count: 0 },
+        { label: "80-89", min: 80, max: 90, count: 0 },
+        { label: "90+", min: 90, max: Infinity, count: 0 }
+      ];
+
+      for (const p of rows) {
+        const q = Number(p.quality_score || 0);
+        const b = buckets.find(x => q >= x.min && q < x.max);
+        if (b) b.count++;
+      }
+
+      $("chartQualityMeta").textContent = `${rows.length} pickov`;
+      drawBars(ctx, canvas, buckets);
+    }
+
+    function clearCanvas(ctx, canvas) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function drawEmptyChart(ctx, canvas, text) {
+      ctx.fillStyle = "rgba(234,242,255,.70)";
+      ctx.font = "15px system-ui";
+      ctx.fillText(text, 24, 40);
+    }
+
+    function drawLine(ctx, canvas, points, label) {
+      const pad = 32;
+      const w = canvas.width - pad * 2;
+      const h = canvas.height - pad * 2;
+      const ys = points.map(p => p.y);
+      let yMin = Math.min(...ys, 0);
+      let yMax = Math.max(...ys, 0);
+      if (yMax === yMin) { yMax += 1; yMin -= 1; }
+
+      ctx.strokeStyle = "rgba(255,255,255,.12)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(pad, pad);
+      ctx.lineTo(pad, pad + h);
+      ctx.lineTo(pad + w, pad + h);
+      ctx.stroke();
+
+      const zeroY = pad + h - ((0 - yMin) / (yMax - yMin)) * h;
+      ctx.strokeStyle = "rgba(255,255,255,.18)";
+      ctx.beginPath();
+      ctx.moveTo(pad, zeroY);
+      ctx.lineTo(pad + w, zeroY);
+      ctx.stroke();
+
+      ctx.strokeStyle = "rgba(100,181,255,.95)";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+
+      points.forEach((p, i) => {
+        const x = pad + (points.length === 1 ? w / 2 : (p.x / (points.length - 1)) * w);
+        const y = pad + h - ((p.y - yMin) / (yMax - yMin)) * h;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+
+      ctx.stroke();
+
+      ctx.fillStyle = "rgba(234,242,255,.75)";
+      ctx.font = "12px system-ui";
+      ctx.fillText(`${label}: ${points[points.length - 1].y >= 0 ? "+" : ""}${points[points.length - 1].y.toFixed(2)}u`, pad, 18);
+    }
+
+    function drawBars(ctx, canvas, buckets) {
+      const pad = 32;
+      const w = canvas.width - pad * 2;
+      const h = canvas.height - pad * 2;
+      const max = Math.max(...buckets.map(b => b.count), 1);
+      const gap = 18;
+      const bw = (w - gap * (buckets.length - 1)) / buckets.length;
+
+      ctx.strokeStyle = "rgba(255,255,255,.12)";
+      ctx.beginPath();
+      ctx.moveTo(pad, pad);
+      ctx.lineTo(pad, pad + h);
+      ctx.lineTo(pad + w, pad + h);
+      ctx.stroke();
+
+      buckets.forEach((b, i) => {
+        const x = pad + i * (bw + gap);
+        const bh = (b.count / max) * h;
+        const y = pad + h - bh;
+
+        ctx.fillStyle = "rgba(100,181,255,.80)";
+        ctx.fillRect(x, y, bw, bh);
+
+        ctx.fillStyle = "rgba(234,242,255,.82)";
+        ctx.font = "13px system-ui";
+        ctx.fillText(b.count, x + bw / 2 - 4, y - 8);
+
+        ctx.fillStyle = "rgba(143,165,194,.95)";
+        ctx.font = "12px system-ui";
+        ctx.fillText(b.label, x + bw / 2 - 18, pad + h + 20);
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function attachEvents() {
+      [
+        "searchInput", "resultFilter", "sideFilter", "tourFilter", "stakeFilter",
+        "riskFilter", "dateFilter", "sortSelect"
+      ].forEach(id => $(id).addEventListener("input", applyFilters));
+
+      $("resetBtn").addEventListener("click", () => {
+        $("searchInput").value = "";
+        $("resultFilter").value = "";
+        $("sideFilter").value = "";
+        $("tourFilter").value = "";
+        $("stakeFilter").value = "";
+        $("riskFilter").value = "";
+        $("dateFilter").value = "";
+        $("sortSelect").value = "date_desc";
+        applyFilters();
+      });
+
+      $("reloadBtn").addEventListener("click", loadAll);
+
+      document.querySelectorAll("th[data-sort]").forEach(th => {
+        th.addEventListener("click", () => {
+          const key = th.dataset.sort;
+          const current = $("sortSelect").value;
+          let next = key + "_desc";
+          if (current === key + "_desc") next = key + "_asc";
+          $("sortSelect").value = next;
+          applyFilters();
+        });
+      });
+    }
+
+    attachEvents();
+    loadAll();
+
+    if (CONFIG.autoReloadMs > 0) {
+      setInterval(loadAll, CONFIG.autoReloadMs);
+    }
+  </script>
+</body>
+</html>
