@@ -50,6 +50,11 @@ MAIN_LINES_MAX = 24.5
 MAX_API_ERRORS_TO_SAVE = 12
 MIN_FIXTURES_TO_SAVE = 50
 
+EXP_FLOOR = 17.2
+EXP_CEIL = 29.0
+
+MIN_SET_BETTING_BOOKS_STRONG = 3
+
 
 def ensure_dirs():
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -197,6 +202,23 @@ def is_singles(match):
         return False
 
     return "singles" in event_type
+
+
+def is_qualification_match(match):
+    text = " ".join(str(match.get(k) or "") for k in [
+        "event_qualification",
+        "tournament_name",
+        "tournament_round",
+        "event_type_type",
+    ]).lower()
+
+    return (
+        "true" in text
+        or "qualification" in text
+        or "qualifying" in text
+        or " qual " in text
+        or "- qual" in text
+    )
 
 
 def tour_level(event_type):
@@ -488,9 +510,11 @@ def extract_set_betting_info(odds_blob):
             continue
 
         med = median(odds_values)
-        if any(x in outcome_s for x in ["2:0", "0:2", "2-0", "0-2", "20", "02"]):
+
+        if any(x in outcome_s for x in ["2:0", "0:2", "2-0", "0-2"]):
             straight_odds.append(med)
-        if any(x in outcome_s for x in ["2:1", "1:2", "2-1", "1-2", "21", "12"]):
+
+        if any(x in outcome_s for x in ["2:1", "1:2", "2-1", "1-2"]):
             three_set_odds.append(med)
 
     if not straight_odds and not three_set_odds:
@@ -498,6 +522,13 @@ def extract_set_betting_info(odds_blob):
 
     straight_prob = sum((1 / x) for x in straight_odds) / len(straight_odds) if straight_odds else None
     three_set_prob = sum((1 / x) for x in three_set_odds) / len(three_set_odds) if three_set_odds else None
+
+    total_books_signal = min(len(straight_odds), len(three_set_odds))
+    signal_strength = "weak"
+    if total_books_signal >= 4:
+        signal_strength = "strong"
+    elif total_books_signal >= 3:
+        signal_strength = "medium"
 
     return {
         "market_name": market_name,
@@ -507,6 +538,7 @@ def extract_set_betting_info(odds_blob):
         "three_sets_implied": round(three_set_prob, 4) if three_set_prob is not None else None,
         "straight_books": len(straight_odds),
         "three_set_books": len(three_set_odds),
+        "signal_strength": signal_strength,
     }
 
 
@@ -591,41 +623,95 @@ def set_betting_adjustment(set_betting_info):
 
     diff = three_p - straight_p
 
+    signal_strength = str(set_betting_info.get("signal_strength") or "weak").lower()
+    multiplier = 1.0
+    if signal_strength == "medium":
+        multiplier = 0.85
+    elif signal_strength == "weak":
+        multiplier = 0.65
+
     if diff >= 0.12:
-        return 1.05
+        return round(0.65 * multiplier, 3)
     if diff >= 0.08:
-        return 0.75
+        return round(0.45 * multiplier, 3)
     if diff >= 0.04:
-        return 0.40
+        return round(0.25 * multiplier, 3)
 
     if diff <= -0.22:
-        return -1.05
+        return round(-0.65 * multiplier, 3)
     if diff <= -0.16:
-        return -0.75
+        return round(-0.45 * multiplier, 3)
     if diff <= -0.10:
-        return -0.40
+        return round(-0.25 * multiplier, 3)
 
     return 0.0
 
 
 def surface_proxy_adjustment(match):
-    # API-Tennis pogosto nima čistega surface polja na fixtureju.
-    # Zato je to previden proxy iz tournament/type stringa.
     text = " ".join(str(match.get(k) or "") for k in [
-        "tournament_name", "event_type_type", "tournament_round"
+        "tournament_name",
+        "event_type_type",
+        "tournament_round",
     ]).lower()
 
-    if "grass" in text:
-        return 0.45, "grass_proxy"
-    if "clay" in text or "roland" in text or "monte carlo" in text or "madrid" in text or "rome" in text:
-        return -0.25, "clay_proxy"
-    if "hard" in text or "indoor" in text:
-        return 0.15, "hard_proxy"
+    clay_keywords = [
+        "clay",
+        "roland",
+        "french open",
+        "monte carlo",
+        "madrid",
+        "rome",
+        "rabat",
+        "strasbourg",
+        "hamburg",
+        "geneva",
+        "cervia",
+        "doboj",
+        "istanbul",
+        "klagenfurt",
+    ]
+
+    hard_keywords = [
+        "hard",
+        "indoor",
+        "australian open",
+        "us open",
+        "miami",
+        "indian wells",
+        "doha",
+        "dubai",
+    ]
+
+    grass_keywords = [
+        "grass",
+        "wimbledon",
+        "halle",
+        "queens",
+        "stuttgart",
+        "s-hertogenbosch",
+        "nottingham",
+    ]
+
+    if any(k in text for k in grass_keywords):
+        return 0.35, "grass_proxy"
+
+    if any(k in text for k in clay_keywords):
+        return -0.20, "clay_proxy"
+
+    if any(k in text for k in hard_keywords):
+        return 0.12, "hard_proxy"
 
     return 0.0, "unknown"
 
 
-def expected_total_games(player_form, opponent_form, h2h_matches, market_info, set_betting_info=None, surface_adj=0.0):
+def expected_total_games_details(
+    player_form,
+    opponent_form,
+    h2h_matches,
+    market_info,
+    set_betting_info=None,
+    surface_adj=0.0,
+):
     p5 = player_form["last_5"]
     p10 = player_form["last_10"]
     o5 = opponent_form["last_5"]
@@ -651,52 +737,149 @@ def expected_total_games(player_form, opponent_form, h2h_matches, market_info, s
     strength_gap = abs(p_strength - o_strength)
 
     exp = avg_recent
-    exp += (three_set_rate - 0.28) * 4.2
-    exp += (close_set_rate - 0.36) * 2.8
 
+    three_set_adj = (three_set_rate - 0.28) * 4.2
+    close_set_adj = (close_set_rate - 0.36) * 2.8
+
+    exp += three_set_adj
+    exp += close_set_adj
+
+    strength_adj = 0.0
     if strength_gap >= 30:
-        exp -= 2.0
+        strength_adj = -2.0
     elif strength_gap >= 22:
-        exp -= 1.25
+        strength_adj = -1.25
     elif strength_gap <= 8:
-        exp += 1.0
+        strength_adj = 1.0
 
+    exp += strength_adj
+
+    market_adj = 0.0
     if market_info:
         gap = safe_float(market_info.get("market_gap"))
         if gap >= 0.55:
-            exp -= 2.8
+            market_adj = -2.8
         elif gap >= 0.40:
-            exp -= 2.2
+            market_adj = -2.2
         elif gap >= 0.26:
-            exp -= 1.6
+            market_adj = -1.6
         elif gap >= 0.18:
-            exp -= 1.0
+            market_adj = -1.0
         elif gap <= 0.08:
-            exp += 0.8
+            market_adj = 0.8
 
-    exp += set_betting_adjustment(set_betting_info)
+    exp += market_adj
+
+    set_adj = set_betting_adjustment(set_betting_info)
+    exp += set_adj
     exp += surface_adj
 
+    h2h_adj = 0.0
     h2h_finished = clean_finished_matches(h2h_matches)
     if h2h_finished:
+        before_h2h = exp
         h2h_totals = [total_games_from_scores(m.get("scores")) for m in h2h_finished[:5]]
         h2h_avg = sum(h2h_totals) / len(h2h_totals)
         exp = exp * 0.85 + h2h_avg * 0.15
+        h2h_adj = exp - before_h2h
 
-    return round(clamp(exp, 16.5, 29.5), 2)
+    raw_exp = round(exp, 2)
+    clamped_exp = round(clamp(exp, EXP_FLOOR, EXP_CEIL), 2)
+
+    return {
+        "expected_total_games": clamped_exp,
+        "raw_expected_total_games": raw_exp,
+        "expected_total_games_clamped": raw_exp != clamped_exp,
+        "floor_clamped": raw_exp < EXP_FLOOR,
+        "ceiling_clamped": raw_exp > EXP_CEIL,
+        "components": {
+            "avg_recent": round(avg_recent, 3),
+            "three_set_rate": round(three_set_rate, 4),
+            "close_set_rate": round(close_set_rate, 4),
+            "three_set_adj": round(three_set_adj, 3),
+            "close_set_adj": round(close_set_adj, 3),
+            "strength_gap": round(strength_gap, 3),
+            "strength_adj": round(strength_adj, 3),
+            "market_adj": round(market_adj, 3),
+            "set_betting_adj": round(set_adj, 3),
+            "surface_adj": round(surface_adj, 3),
+            "h2h_adj": round(h2h_adj, 3),
+        }
+    }
 
 
 def model_probability(expected_games, line, side):
     diff = expected_games - line
     p_over = sigmoid(diff / 2.9)
     p_over = clamp(p_over, MODEL_PROB_MIN, MODEL_PROB_MAX)
+
     if side == "over":
         return round(p_over, 4)
+
     return round(1 - p_over, 4)
 
 
-def confidence_score(expected_games, line, model_prob, bookmakers_used, odds, set_betting_info=None, side=""):
+def risk_flags_for_pick(
+    side,
+    line,
+    odds,
+    expected_details,
+    first_form,
+    second_form,
+    set_betting_info,
+    module_score,
+):
+    flags = []
+
+    first_n = safe_int(first_form.get("last_10", {}).get("matches"))
+    second_n = safe_int(second_form.get("last_10", {}).get("matches"))
+    matches_min = min(first_n, second_n)
+
+    if matches_min <= 7:
+        flags.append("low_sample")
+
+    if expected_details.get("floor_clamped"):
+        flags.append("floor_clamped")
+
+    if expected_details.get("ceiling_clamped"):
+        flags.append("ceiling_clamped")
+
+    if set_betting_info:
+        signal_strength = str(set_betting_info.get("signal_strength") or "weak")
+        if signal_strength == "weak":
+            flags.append("weak_set_betting_market")
+    else:
+        flags.append("no_set_betting_market")
+
+    if side == "under" and module_score >= 4.5:
+        flags.append("under_module_heavy")
+
+    if side == "over" and module_score <= 0:
+        flags.append("over_no_module_support")
+
+    if odds >= 2.25:
+        flags.append("high_odds_variance")
+
+    if line <= 19.5 and side == "under":
+        flags.append("low_line_under")
+
+    return flags
+
+
+def confidence_score(
+    expected_games,
+    line,
+    model_prob,
+    bookmakers_used,
+    odds,
+    set_betting_info=None,
+    side="",
+    risk_flags=None,
+):
+    risk_flags = risk_flags or []
+
     margin = abs(expected_games - line)
+
     c = 50
     c += clamp(margin / 3.0, 0, 1) * 22
     c += clamp((model_prob - 0.5) / 0.14, 0, 1) * 16
@@ -709,27 +892,80 @@ def confidence_score(expected_games, line, model_prob, bookmakers_used, odds, se
 
     if set_betting_info:
         adj = set_betting_adjustment(set_betting_info)
+        signal_strength = str(set_betting_info.get("signal_strength") or "weak")
+
+        signal_multiplier = 1.0
+        if signal_strength == "medium":
+            signal_multiplier = 0.75
+        elif signal_strength == "weak":
+            signal_multiplier = 0.45
+
         if side == "over" and adj > 0:
-            c += min(4, adj * 3)
+            c += min(3, adj * 3 * signal_multiplier)
+
         if side == "under" and adj < 0:
-            c += min(4, abs(adj) * 3)
+            c += min(3, abs(adj) * 3 * signal_multiplier)
+
+    if "floor_clamped" in risk_flags:
+        c -= 4.0
+
+    if "ceiling_clamped" in risk_flags:
+        c -= 3.0
+
+    if "weak_set_betting_market" in risk_flags:
+        c -= 1.5
+
+    if "low_sample" in risk_flags:
+        c -= 1.5
+
+    if "low_line_under" in risk_flags:
+        c -= 1.0
 
     return round(clamp(c, 1, 97), 1)
 
 
-def quality_score(confidence, edge, bookmakers_used, odds, matches_min, margin, module_score=0.0):
+def quality_score(
+    confidence,
+    edge,
+    bookmakers_used,
+    odds,
+    matches_min,
+    margin,
+    module_score=0.0,
+    risk_flags=None,
+):
+    risk_flags = risk_flags or []
+
     q = 0
     q += clamp(confidence / 90, 0, 1) * 30
     q += clamp(edge / 0.11, 0, 1) * 30
     q += clamp(bookmakers_used / 10, 0, 1) * 14
     q += clamp(matches_min / 14, 0, 1) * 12
     q += clamp(margin / 3.0, 0, 1) * 9
-    q += clamp(module_score, -6, 6)
+    q += clamp(module_score, -5, 5)
 
     if 1.72 <= odds <= 2.05:
         q += 5
     elif 1.60 <= odds <= 2.20:
         q += 3
+
+    if "floor_clamped" in risk_flags:
+        q -= 5.0
+
+    if "ceiling_clamped" in risk_flags:
+        q -= 4.0
+
+    if "weak_set_betting_market" in risk_flags:
+        q -= 1.5
+
+    if "low_sample" in risk_flags:
+        q -= 1.5
+
+    if "low_line_under" in risk_flags:
+        q -= 1.0
+
+    if "over_no_module_support" in risk_flags:
+        q -= 2.0
 
     return round(clamp(q, 1, 99), 1)
 
@@ -737,8 +973,10 @@ def quality_score(confidence, edge, bookmakers_used, odds, matches_min, margin, 
 def special_module_score(side, line, expected_margin, first_form, second_form, market_info, set_betting_info):
     p10 = first_form.get("last_10", {})
     o10 = second_form.get("last_10", {})
+
     avg_three = (safe_float(p10.get("three_set_rate")) + safe_float(o10.get("three_set_rate"))) / 2
     avg_close = (safe_float(p10.get("close_set_rate")) + safe_float(o10.get("close_set_rate"))) / 2
+
     gap = safe_float((market_info or {}).get("market_gap"), None)
     set_adj = set_betting_adjustment(set_betting_info)
 
@@ -754,34 +992,73 @@ def special_module_score(side, line, expected_margin, first_form, second_form, m
         if line <= 21.5:
             score += 1.0
         if set_adj > 0:
-            score += min(2.0, set_adj * 1.5)
+            score += min(1.5, set_adj * 1.5)
         if gap is not None and gap >= 0.35:
             score -= 3.0
 
+        return round(clamp(score, -5, 6), 2)
+
     if side == "under":
-        if gap is not None and gap >= 0.26:
-            score += 2.0
-        if avg_three <= 0.24:
-            score += 1.2
-        if avg_close <= 0.32:
-            score += 1.2
-        if expected_margin <= -2.5:
+        if gap is not None and gap >= 0.30:
             score += 1.5
+        elif gap is not None and gap >= 0.22:
+            score += 1.0
+
+        if avg_three <= 0.20:
+            score += 0.9
+        elif avg_three <= 0.26:
+            score += 0.5
+
+        if avg_close <= 0.30:
+            score += 0.8
+        elif avg_close <= 0.36:
+            score += 0.4
+
+        if expected_margin <= -3.0:
+            score += 1.2
+        elif expected_margin <= -2.2:
+            score += 0.7
+
         if set_adj < 0:
-            score += min(2.0, abs(set_adj) * 1.5)
+            score += min(1.2, abs(set_adj) * 1.2)
 
-    return round(clamp(score, -5, 6), 2)
+        return round(clamp(score, -5, 4.8), 2)
+
+    return 0.0
 
 
-def stake_from_quality(quality, edge, side, module_score):
-    if quality >= 90 and edge >= 0.095:
+def stake_from_quality(quality, edge, side, module_score, risk_flags=None):
+    risk_flags = risk_flags or []
+
+    risk_penalty_flags = {
+        "floor_clamped",
+        "ceiling_clamped",
+        "low_sample",
+        "weak_set_betting_market",
+        "low_line_under",
+    }
+
+    risk_count = sum(1 for f in risk_flags if f in risk_penalty_flags)
+
+    if risk_count >= 3:
+        if quality >= 90 and edge >= 0.10:
+            return 0.75, "Risk-Capped Strong"
+        if quality >= 78:
+            return 0.5, "Risk-Capped Standard"
+        return 0.25, "Risk-Capped Small"
+
+    if quality >= 91 and edge >= 0.10:
         return 1.0, "Top Rated"
-    if quality >= 82 and edge >= 0.07:
+
+    if quality >= 84 and edge >= 0.075:
         return 0.75, "Strong"
-    if quality >= 72:
+
+    if quality >= 74:
         return 0.5, "Standard"
-    if quality >= 66 and module_score >= 3.0:
+
+    if quality >= 67 and module_score >= 3.0:
         return 0.5, "Module Value"
+
     return 0.25, "Small Value"
 
 
@@ -791,13 +1068,21 @@ def pick_id_for(event_key, side, line):
 
 
 def build_reasoning(pick):
+    clamp_note = ""
+    if pick.get("expected_total_games_clamped"):
+        clamp_note = f" Raw expected was {pick.get('raw_expected_total_games'):.2f}, then clamped."
+
+    flags = pick.get("risk_flags") or []
+    flags_note = f" Risk flags: {', '.join(flags)}." if flags else ""
+
     return (
         f"{pick['bet']} selected in {pick['match']} at line {pick['line']}. "
-        f"Shadow expected total games: {pick['expected_total_games']:.2f}; market line: {pick['line']:.1f}. "
+        f"Shadow expected total games: {pick['expected_total_games']:.2f}; market line: {pick['line']:.1f}."
+        f"{clamp_note} "
         f"Model probability {pick['model_prob'] * 100:.1f}% versus implied {pick['implied_prob'] * 100:.1f}% "
         f"from best odds {pick['odds']:.2f}. Edge: {pick['edge'] * 100:+.1f}%. "
         f"Bookmakers used: {pick['bookmakers_used']}. Confidence: {pick['confidence']:.1f}. "
-        f"Module score: {pick.get('module_score', 0)}."
+        f"Module score: {pick.get('module_score', 0)}.{flags_note}"
     )
 
 
@@ -835,6 +1120,7 @@ def main():
     fixtures = fixtures[:MAX_FIXTURES]
 
     candidates = []
+
     debug = {
         "generated_at": now_iso(),
         "fixtures_total": len(fixtures),
@@ -848,6 +1134,15 @@ def main():
             "over_rescue_filter": True,
             "under_blowout_filter": True,
             "market_snapshots": True,
+            "expected_total_raw_and_clamped": True,
+            "risk_flags": True,
+            "risk_capped_staking": True,
+        },
+        "model_guardrails": {
+            "expected_floor": EXP_FLOOR,
+            "expected_ceil": EXP_CEIL,
+            "set_betting_adjustment_reduced": True,
+            "under_module_cap": 4.8,
         },
     }
 
@@ -920,7 +1215,7 @@ def main():
             set_betting_info = extract_set_betting_info(odds_blob)
             surface_adj, surface_proxy = surface_proxy_adjustment(match)
 
-            exp_games = expected_total_games(
+            expected_details = expected_total_games_details(
                 first_form,
                 second_form,
                 h2h_matches,
@@ -928,6 +1223,8 @@ def main():
                 set_betting_info=set_betting_info,
                 surface_adj=surface_adj,
             )
+
+            exp_games = expected_details["expected_total_games"]
 
             snapshots.append({
                 "created_at": now_iso(),
@@ -939,6 +1236,7 @@ def main():
                 "set_betting_info": set_betting_info,
                 "surface_proxy": surface_proxy,
                 "surface_adj": surface_adj,
+                "expected_details": expected_details,
                 "lines": totals_lines,
             })
 
@@ -974,9 +1272,19 @@ def main():
                         set_betting_info,
                     )
 
-                    # Shadow is wide, but not reckless.
                     if side == "over" and module_score < -2.0:
                         continue
+
+                    risk_flags = risk_flags_for_pick(
+                        side=side,
+                        line=line,
+                        odds=odds,
+                        expected_details=expected_details,
+                        first_form=first_form,
+                        second_form=second_form,
+                        set_betting_info=set_betting_info,
+                        module_score=module_score,
+                    )
 
                     confidence = confidence_score(
                         exp_games,
@@ -986,6 +1294,7 @@ def main():
                         odds,
                         set_betting_info=set_betting_info,
                         side=side,
+                        risk_flags=risk_flags,
                     )
 
                     if confidence < MIN_CONFIDENCE and module_score < 3.0:
@@ -999,8 +1308,16 @@ def main():
                         matches_min,
                         margin,
                         module_score=module_score,
+                        risk_flags=risk_flags,
                     )
-                    stake, stake_label = stake_from_quality(quality, edge, side, module_score)
+
+                    stake, stake_label = stake_from_quality(
+                        quality,
+                        edge,
+                        side,
+                        module_score,
+                        risk_flags=risk_flags,
+                    )
 
                     pick = {
                         "pick_id": pick_id_for(event_key, side, line),
@@ -1024,7 +1341,7 @@ def main():
                         "tournament_key": match.get("tournament_key"),
                         "round": match.get("tournament_round"),
                         "event_type": match.get("event_type_type"),
-                        "qualification": str(match.get("event_qualification") or "").lower() == "true",
+                        "qualification": is_qualification_match(match),
                         "tour_level": tour_level(match.get("event_type_type")),
                         "gender": gender_from_event_type(match.get("event_type_type")),
                         "odds": round(odds, 3),
@@ -1035,6 +1352,11 @@ def main():
                         "implied_prob": round(implied_prob, 4),
                         "edge": round(edge, 4),
                         "expected_total_games": exp_games,
+                        "raw_expected_total_games": expected_details["raw_expected_total_games"],
+                        "expected_total_games_clamped": expected_details["expected_total_games_clamped"],
+                        "floor_clamped": expected_details["floor_clamped"],
+                        "ceiling_clamped": expected_details["ceiling_clamped"],
+                        "expected_components": expected_details["components"],
                         "expected_margin": expected_margin,
                         "confidence": confidence,
                         "quality_score": quality,
@@ -1046,6 +1368,7 @@ def main():
                         "surface_proxy": surface_proxy,
                         "surface_adjustment": surface_adj,
                         "module_score": module_score,
+                        "risk_flags": risk_flags,
                         "first_form": first_form,
                         "second_form": second_form,
                         "first_strength_score": player_strength_score(first_form),
@@ -1063,6 +1386,14 @@ def main():
             print(f"ERROR {event_key} {name}: {e}")
 
     debug["candidates_raw"] = len(candidates)
+    debug["risk_summary"] = {
+        "floor_clamped_candidates": sum(1 for p in candidates if p.get("floor_clamped")),
+        "ceiling_clamped_candidates": sum(1 for p in candidates if p.get("ceiling_clamped")),
+        "low_sample_candidates": sum(1 for p in candidates if "low_sample" in (p.get("risk_flags") or [])),
+        "weak_set_betting_candidates": sum(
+            1 for p in candidates if "weak_set_betting_market" in (p.get("risk_flags") or [])
+        ),
+    }
 
     candidates.sort(
         key=lambda x: (
@@ -1113,7 +1444,7 @@ def main():
         "timezone": TZ_NAME,
         "source": "API-Tennis",
         "model": MODEL_NAME,
-        "stake_mode": "v2_wide_shadow_quality_plus_modules",
+        "stake_mode": "v2_wide_shadow_quality_modules_risk_capped",
         "market": MARKET_NAME,
         "filters": {
             "days_ahead": DAYS_AHEAD,
@@ -1130,8 +1461,11 @@ def main():
             "main_lines_max": MAIN_LINES_MAX,
             "model_prob_min": MODEL_PROB_MIN,
             "model_prob_max": MODEL_PROB_MAX,
+            "expected_floor": EXP_FLOOR,
+            "expected_ceil": EXP_CEIL,
         },
         "modules": debug["shadow_modules"],
+        "guardrails": debug["model_guardrails"],
         "summary": {
             "fixtures_checked": len(fixtures),
             "candidates_raw": len(candidates),
@@ -1139,6 +1473,8 @@ def main():
             "errors": len(debug["errors"]),
             "over_final": sum(1 for p in final if p.get("side") == "over"),
             "under_final": sum(1 for p in final if p.get("side") == "under"),
+            "floor_clamped_final": sum(1 for p in final if p.get("floor_clamped")),
+            "risk_capped_final": sum(1 for p in final if str(p.get("stake_label") or "").startswith("Risk-Capped")),
         },
         "picks": final,
     }
@@ -1160,6 +1496,8 @@ def main():
     print(f"TENNIS TOTALS V2 WIDE SHADOW DONE: candidates={len(candidates)} final={len(final)} results_total={len(results)}")
     print(f"Over final: {sum(1 for p in final if p.get('side') == 'over')}")
     print(f"Under final: {sum(1 for p in final if p.get('side') == 'under')}")
+    print(f"Floor clamped final: {sum(1 for p in final if p.get('floor_clamped'))}")
+    print(f"Risk capped final: {sum(1 for p in final if str(p.get('stake_label') or '').startswith('Risk-Capped'))}")
     print(f"Saved {PREDICTIONS_FILE}")
     print(f"Saved {RESULTS_FILE}")
     print(f"Saved {DEBUG_FILE}")
