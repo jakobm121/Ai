@@ -22,6 +22,7 @@
     }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
@@ -67,7 +68,8 @@
       color: var(--muted);
       margin-top: 8px;
       font-size: 14px;
-      max-width: 900px;
+      max-width: 920px;
+      line-height: 1.45;
     }
 
     .status {
@@ -94,10 +96,7 @@
 
     main { padding: 24px 0 48px; }
 
-    .grid {
-      display: grid;
-      gap: 16px;
-    }
+    .grid { display: grid; gap: 16px; }
 
     .kpis {
       grid-template-columns: repeat(6, minmax(150px, 1fr));
@@ -135,6 +134,7 @@
       margin-top: 8px;
       color: var(--muted);
       font-size: 13px;
+      line-height: 1.35;
     }
 
     .good { color: var(--good); }
@@ -181,9 +181,7 @@
       align-items: start;
     }
 
-    .panel {
-      padding: 16px;
-    }
+    .panel { padding: 16px; }
 
     .panel-title {
       display: flex;
@@ -214,7 +212,7 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 1280px;
+      min-width: 1320px;
       background: rgba(0,0,0,.12);
     }
 
@@ -267,6 +265,7 @@
       background: var(--chip);
       color: #c9ddf7;
       border: 1px solid rgba(255,255,255,.08);
+      margin: 1px;
     }
 
     .pill.over { background: rgba(39,209,127,.13); color: #72f2b0; }
@@ -275,6 +274,7 @@
     .pill.loss { background: rgba(255,92,119,.13); color: #ff9bad; }
     .pill.pending { background: rgba(255,200,87,.13); color: #ffe09a; }
     .pill.push { background: rgba(143,165,194,.15); color: #c8d5e8; }
+    .pill.void { background: rgba(143,165,194,.15); color: #c8d5e8; }
     .pill.top { background: rgba(39,209,127,.16); color: #72f2b0; }
     .pill.risk { background: rgba(255,200,87,.15); color: #ffe09a; }
 
@@ -378,7 +378,7 @@
 
     .kv:last-child { border-bottom: none; }
     .kv span:first-child { color: var(--muted); }
-    .kv span:last-child { font-variant-numeric: tabular-nums; font-weight: 750; }
+    .kv span:last-child { font-variant-numeric: tabular-nums; font-weight: 750; text-align: right; }
 
     .reason {
       color: #c7d8ef;
@@ -422,13 +422,14 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="wrap topbar">
       <div>
         <h1>AI77 Tennis Totals V2 Wide Shadow</h1>
         <div class="subtitle">
-          Dashboard za spremljanje pickov, settle rezultatov, ROI, risk flagov, expected total floor/ceiling clampov in modulov.
+          Dashboard za spremljanje pickov, settle rezultatov, ROI, profit/loss, modulov, confidence, quality, edge in pending stanja.
         </div>
       </div>
       <div class="status">
@@ -441,44 +442,84 @@
 
   <main>
     <div class="wrap">
-      <section class="grid kpis" id="kpis">
-        <div class="card kpi"><div class="label">Picki</div><div class="value" id="kpiPicks">–</div><div class="mini" id="kpiSettled">–</div></div>
-        <div class="card kpi"><div class="label">Win rate</div><div class="value" id="kpiWinRate">–</div><div class="mini">settled brez push</div></div>
-        <div class="card kpi"><div class="label">Profit</div><div class="value" id="kpiProfit">–</div><div class="mini">po stakeih</div></div>
-        <div class="card kpi"><div class="label">ROI</div><div class="value" id="kpiRoi">–</div><div class="mini">profit / staked</div></div>
-        <div class="card kpi"><div class="label">Pending</div><div class="value" id="kpiPending">–</div><div class="mini" id="kpiPendingStake">–</div></div>
-        <div class="card kpi"><div class="label">Risk flags</div><div class="value" id="kpiRisk">–</div><div class="mini">picki z vsaj 1 flagom</div></div>
+      <section class="grid kpis">
+        <div class="card kpi">
+          <div class="label">Picki</div>
+          <div class="value" id="kpiPicks">–</div>
+          <div class="mini" id="kpiSettled">–</div>
+        </div>
+
+        <div class="card kpi">
+          <div class="label">Win rate</div>
+          <div class="value" id="kpiWinRate">–</div>
+          <div class="mini">settled brez push/void</div>
+        </div>
+
+        <div class="card kpi">
+          <div class="label">Profit</div>
+          <div class="value" id="kpiProfit">–</div>
+          <div class="mini">po stakeih</div>
+        </div>
+
+        <div class="card kpi">
+          <div class="label">ROI</div>
+          <div class="value" id="kpiRoi">–</div>
+          <div class="mini">profit / staked</div>
+        </div>
+
+        <div class="card kpi">
+          <div class="label">Pending</div>
+          <div class="value" id="kpiPending">–</div>
+          <div class="mini" id="kpiPendingStake">–</div>
+        </div>
+
+        <div class="card kpi">
+          <div class="label">W / L / P / V</div>
+          <div class="value" id="kpiWlpv">–</div>
+          <div class="mini" id="kpiSettleDebug">–</div>
+        </div>
       </section>
 
       <section class="charts">
         <div class="card panel">
-          <div class="panel-title"><h2>Profit po datumih</h2><span id="chartProfitMeta"></span></div>
+          <div class="panel-title">
+            <h2>Profit po času</h2>
+            <span id="chartProfitMeta"></span>
+          </div>
           <canvas id="profitChart" width="720" height="260"></canvas>
         </div>
+
         <div class="card panel">
-          <div class="panel-title"><h2>Distribucija kakovosti</h2><span id="chartQualityMeta"></span></div>
+          <div class="panel-title">
+            <h2>Distribucija kakovosti</h2>
+            <span id="chartQualityMeta"></span>
+          </div>
           <canvas id="qualityChart" width="720" height="260"></canvas>
         </div>
       </section>
 
       <section class="card toolbar">
         <input id="searchInput" placeholder="Išči match, tournament, bookmaker, bet ..." />
+
         <select id="resultFilter">
           <option value="">Result: vsi</option>
           <option value="pending">pending</option>
-          <option value="win">win</option>
-          <option value="loss">loss</option>
+          <option value="won">won</option>
+          <option value="lost">lost</option>
           <option value="push">push</option>
           <option value="void">void</option>
         </select>
+
         <select id="sideFilter">
           <option value="">Side: vsi</option>
           <option value="over">over</option>
           <option value="under">under</option>
         </select>
+
         <select id="tourFilter">
           <option value="">Tour: vsi</option>
         </select>
+
         <select id="stakeFilter">
           <option value="">Stake: vsi</option>
           <option value="1">1.00</option>
@@ -486,8 +527,9 @@
           <option value="0.5">0.50</option>
           <option value="0.25">0.25</option>
         </select>
+
         <select id="riskFilter">
-          <option value="">Risk: vsi</option>
+          <option value="">Flags: vsi</option>
           <option value="has">ima flag</option>
           <option value="none">brez flaga</option>
           <option value="floor_clamped">floor_clamped</option>
@@ -495,9 +537,11 @@
           <option value="weak_set_betting_market">weak_set_betting</option>
           <option value="low_line_under">low_line_under</option>
         </select>
+
         <select id="dateFilter">
           <option value="">Datum: vsi</option>
         </select>
+
         <select id="sortSelect">
           <option value="date_desc">Sort: datum ↓</option>
           <option value="date_asc">Sort: datum ↑</option>
@@ -505,7 +549,9 @@
           <option value="edge_desc">edge ↓</option>
           <option value="confidence_desc">confidence ↓</option>
           <option value="profit_desc">profit ↓</option>
+          <option value="odds_desc">odds ↓</option>
         </select>
+
         <button id="resetBtn">Reset</button>
       </section>
 
@@ -515,6 +561,7 @@
             <h2>Picki</h2>
             <span id="tableMeta">–</span>
           </div>
+
           <div class="table-wrap">
             <table>
               <thead>
@@ -528,12 +575,12 @@
                   <th data-sort="profit">P/L</th>
                   <th data-sort="line">Line</th>
                   <th data-sort="expected_total_games">Exp</th>
-                  <th data-sort="raw_expected_total_games">Raw</th>
+                  <th data-sort="total_games">Total</th>
                   <th data-sort="edge">Edge</th>
                   <th data-sort="confidence">Conf</th>
                   <th data-sort="quality_score">Quality</th>
                   <th data-sort="module_score">Module</th>
-                  <th>Flags</th>
+                  <th>Score / Flags</th>
                 </tr>
               </thead>
               <tbody id="picksBody"></tbody>
@@ -546,9 +593,10 @@
             <h2>Detajl picka</h2>
             <span id="detailMeta">klikni vrstico</span>
           </div>
+
           <div id="detail" class="detail">
             <div class="empty">
-              Izberi pick iz tabele. Tukaj boš videl expected components, market info, forme, risk flags, reasoning in settle izračun.
+              Izberi pick iz tabele. Tukaj boš videl model, market, formo, settle rezultat, profit in reasoning.
             </div>
           </div>
         </aside>
@@ -561,6 +609,7 @@
       predictionsUrl: "data/tennis_totals_v2_wide_shadow_predictions.json",
       resultsUrl: "data/tennis_totals_v2_wide_shadow_results.json",
       debugUrl: "data/tennis_totals_v2_wide_shadow_debug.json",
+      settleDebugUrl: "data/tennis_totals_v2_wide_shadow_settle_debug.json",
       snapshotsUrl: "data/tennis_totals_v2_wide_shadow_market_snapshots.json",
       autoReloadMs: 0
     };
@@ -569,6 +618,7 @@
       predictions: null,
       results: [],
       debug: null,
+      settleDebug: null,
       snapshots: [],
       rows: [],
       filtered: [],
@@ -590,40 +640,60 @@
       return (n * 100).toFixed(digits) + "%";
     }
 
-    function normResult(r) {
-      return String(r || "pending").toLowerCase();
+    function signedNum(v, digits = 2) {
+      const n = Number(v);
+      if (!Number.isFinite(n)) return "–";
+      return `${n >= 0 ? "+" : ""}${n.toFixed(digits)}`;
     }
 
-    function profitForPick(p) {
-      const result = normResult(p.result);
-      const stake = Number(p.stake || 0);
-      const odds = Number(p.odds || 0);
-      if (result === "win") return stake * (odds - 1);
-      if (result === "loss") return -stake;
-      if (result === "push" || result === "void") return 0;
-      return 0;
+    function normResult(r) {
+      const v = String(r || "pending").toLowerCase().trim();
+
+      if (v === "win") return "won";
+      if (v === "loss") return "lost";
+
+      if (["won", "lost", "push", "void", "pending"].includes(v)) return v;
+
+      return "pending";
     }
 
     function isSettled(p) {
       const r = normResult(p.result);
-      return ["win", "loss", "push", "void"].includes(r);
+      return ["won", "lost", "push", "void"].includes(r);
     }
 
     function settledForWinrate(p) {
       const r = normResult(p.result);
-      return r === "win" || r === "loss";
+      return r === "won" || r === "lost";
+    }
+
+    function profitForPick(p) {
+      const result = normResult(p.result);
+      const existingProfit = Number(p.profit);
+
+      if (result !== "pending" && Number.isFinite(existingProfit)) {
+        return existingProfit;
+      }
+
+      const stake = Number(p.stake || 0);
+      const odds = Number(p.odds || 0);
+
+      if (result === "won") return stake * (odds - 1);
+      if (result === "lost") return -stake;
+      if (result === "push" || result === "void") return 0;
+
+      return 0;
     }
 
     function resultPill(r) {
-      r = normResult(r);
-      if (r === "won") r = "win";
-      if (r === "lost") r = "loss";
-      return `<span class="pill ${r}">${r}</span>`;
+      const result = normResult(r);
+      const cls = result === "won" ? "win" : result === "lost" ? "loss" : result;
+      return `<span class="pill ${cls}">${escapeHtml(result)}</span>`;
     }
 
     function sidePill(side) {
       side = String(side || "").toLowerCase();
-      return `<span class="pill ${side}">${side.toUpperCase()}</span>`;
+      return `<span class="pill ${side}">${escapeHtml(side.toUpperCase())}</span>`;
     }
 
     async function fetchJson(url, optional = false) {
@@ -638,12 +708,15 @@
     }
 
     function mergeRows(predictions, results) {
-      const picks = Array.isArray(predictions?.picks) ? predictions.picks : [];
+      const predictionPicks = Array.isArray(predictions?.picks) ? predictions.picks : [];
       const resultRows = Array.isArray(results) ? results : [];
 
       const byId = new Map();
-      for (const p of picks) {
-        if (p && p.pick_id) byId.set(p.pick_id, { ...p, source_current_predictions: true });
+
+      for (const p of predictionPicks) {
+        if (p && p.pick_id) {
+          byId.set(p.pick_id, { ...p, source_current_predictions: true });
+        }
       }
 
       for (const r of resultRows) {
@@ -674,21 +747,24 @@
       try {
         setStatus("wait", "Nalagam JSON ...");
 
-        const [predictions, results, debug, snapshots] = await Promise.all([
+        const [predictions, results, debug, settleDebug, snapshots] = await Promise.all([
           fetchJson(CONFIG.predictionsUrl),
           fetchJson(CONFIG.resultsUrl, true),
           fetchJson(CONFIG.debugUrl, true),
+          fetchJson(CONFIG.settleDebugUrl, true),
           fetchJson(CONFIG.snapshotsUrl, true)
         ]);
 
         state.predictions = predictions;
         state.results = Array.isArray(results) ? results : [];
         state.debug = debug;
+        state.settleDebug = settleDebug;
         state.snapshots = Array.isArray(snapshots) ? snapshots : [];
         state.rows = mergeRows(predictions, state.results);
 
         populateFilters();
         applyFilters();
+
         setStatus("ok", `Naloženo: ${new Date().toLocaleString("sl-SI")}`);
       } catch (err) {
         console.error(err);
@@ -726,14 +802,23 @@
       if (q) {
         rows = rows.filter(p => {
           const hay = [
-            p.match, p.bet, p.tournament, p.round, p.best_bookmaker,
-            p.event_type, p.stake_label, ...(p.risk_flags || [])
+            p.match,
+            p.bet,
+            p.tournament,
+            p.round,
+            p.best_bookmaker,
+            p.event_type,
+            p.stake_label,
+            p.result,
+            p.final_score,
+            ...(p.risk_flags || [])
           ].join(" ").toLowerCase();
+
           return hay.includes(q);
         });
       }
 
-      if (result) rows = rows.filter(p => p.result === result);
+      if (result) rows = rows.filter(p => normResult(p.result) === result);
       if (side) rows = rows.filter(p => String(p.side || "").toLowerCase() === side);
       if (tour) rows = rows.filter(p => String(p.tour_level || "") === tour);
       if (stake) rows = rows.filter(p => Number(p.stake || 0) === Number(stake));
@@ -769,10 +854,19 @@
           const bv = `${b.date || ""} ${b.time || ""}`;
           return av.localeCompare(bv) * dir;
         }
-        if (["quality", "edge", "confidence", "profit"].includes(key)) {
-          const map = { quality: "quality_score", edge: "edge", confidence: "confidence", profit: "profit" };
-          return ((Number(a[map[key]] || 0) - Number(b[map[key]] || 0)) * dir);
+
+        const numericMap = {
+          quality: "quality_score",
+          edge: "edge",
+          confidence: "confidence",
+          profit: "profit",
+          odds: "odds"
+        };
+
+        if (numericMap[key]) {
+          return (Number(a[numericMap[key]] || 0) - Number(b[numericMap[key]] || 0)) * dir;
         }
+
         return String(a[key] || "").localeCompare(String(b[key] || "")) * dir;
       });
     }
@@ -781,57 +875,107 @@
       const total = rows.length;
       const settled = rows.filter(isSettled);
       const wrRows = rows.filter(settledForWinrate);
-      const wins = wrRows.filter(p => p.result === "win").length;
-      const losses = wrRows.filter(p => p.result === "loss").length;
-      const pending = rows.filter(p => p.result === "pending");
-      const staked = settled.reduce((s, p) => s + Number(p.stake || 0), 0);
-      const profit = settled.reduce((s, p) => s + p.profit, 0);
+      const wins = wrRows.filter(p => normResult(p.result) === "won").length;
+      const losses = wrRows.filter(p => normResult(p.result) === "lost").length;
+      const push = rows.filter(p => normResult(p.result) === "push").length;
+      const voids = rows.filter(p => normResult(p.result) === "void").length;
+      const pending = rows.filter(p => normResult(p.result) === "pending");
+
+      const staked = settled
+        .filter(p => ["won", "lost", "push"].includes(normResult(p.result)))
+        .reduce((s, p) => s + Number(p.stake || 0), 0);
+
+      const profit = settled.reduce((s, p) => s + Number(p.profit || 0), 0);
       const roi = staked > 0 ? profit / staked : null;
-      const riskCount = rows.filter(p => (p.risk_flags || []).length > 0).length;
       const pendingStake = pending.reduce((s, p) => s + Number(p.stake || 0), 0);
 
       $("kpiPicks").textContent = total;
       $("kpiSettled").textContent = `${settled.length} settled / ${pending.length} pending`;
-      $("kpiWinRate").textContent = (wins + losses) ? `${(wins / (wins + losses) * 100).toFixed(1)}%` : "–";
+
+      $("kpiWinRate").textContent = (wins + losses)
+        ? `${(wins / (wins + losses) * 100).toFixed(1)}%`
+        : "–";
+
       $("kpiProfit").textContent = `${profit >= 0 ? "+" : ""}${fmtNum(profit, 2)}u`;
       $("kpiProfit").className = "value " + (profit >= 0 ? "good" : "bad");
+
       $("kpiRoi").textContent = roi === null ? "–" : `${roi >= 0 ? "+" : ""}${(roi * 100).toFixed(1)}%`;
       $("kpiRoi").className = "value " + (roi === null ? "" : roi >= 0 ? "good" : "bad");
+
       $("kpiPending").textContent = pending.length;
       $("kpiPendingStake").textContent = `${fmtNum(pendingStake, 2)}u open stake`;
-      $("kpiRisk").textContent = riskCount;
+
+      $("kpiWlpv").textContent = `${wins}/${losses}/${push}/${voids}`;
+
+      const sd = state.settleDebug?.summary;
+      if (sd) {
+        $("kpiSettleDebug").textContent =
+          `debug ROI ${fmtNum(sd.roi_percent, 2)}% · ${fmtNum(sd.total_profit, 2)}u`;
+      } else {
+        $("kpiSettleDebug").textContent = "settle debug ni naložen";
+      }
     }
 
     function renderTable(rows) {
       $("tableMeta").textContent = `${rows.length} prikazanih / ${state.rows.length} skupaj`;
 
       const body = $("picksBody");
+
       body.innerHTML = rows.map(p => {
         const flags = (p.risk_flags || []).slice(0, 3).map(f => `<span class="pill risk">${escapeHtml(f)}</span>`).join(" ");
-        const pl = p.result === "pending" ? "–" : `${p.profit >= 0 ? "+" : ""}${fmtNum(p.profit, 2)}u`;
+        const result = normResult(p.result);
+        const pl = result === "pending" ? "–" : `${p.profit >= 0 ? "+" : ""}${fmtNum(p.profit, 2)}u`;
         const selected = p.pick_id === state.selectedId ? " selected" : "";
         const qClass = Number(p.quality_score || 0) >= 90 ? "good" : Number(p.quality_score || 0) >= 75 ? "warn" : "";
         const eClass = Number(p.edge || 0) >= 0.09 ? "good" : Number(p.edge || 0) >= 0.055 ? "warn" : "";
+        const profitClass = result === "pending" ? "" : Number(p.profit || 0) >= 0 ? "good" : "bad";
 
         return `<tr class="${selected}" data-id="${escapeHtml(p.pick_id)}">
-          <td class="num">${escapeHtml(p.date || "")}<div class="meta">${escapeHtml(p.time || "")}</div></td>
+          <td class="num">
+            ${escapeHtml(p.date || "")}
+            <div class="meta">${escapeHtml(p.time || "")}</div>
+          </td>
+
           <td>
             <div class="match">${escapeHtml(p.match || "")}</div>
             <div class="meta">${escapeHtml(p.tournament || "")} · ${escapeHtml(p.round || "")}</div>
           </td>
-          <td>${sidePill(p.side)} <div class="meta">${escapeHtml(p.bet || "")}</div></td>
-          <td>${resultPill(p.result)}</td>
-          <td class="num">${fmtNum(p.odds, 2)}<div class="meta">${escapeHtml(p.best_bookmaker || "")}</div></td>
-          <td class="num">${fmtNum(p.stake, 2)}<div class="meta">${escapeHtml(p.stake_label || "")}</div></td>
-          <td class="num ${p.profit >= 0 ? "good" : "bad"}">${pl}</td>
+
+          <td>
+            ${sidePill(p.side)}
+            <div class="meta">${escapeHtml(p.bet || "")}</div>
+          </td>
+
+          <td>${resultPill(result)}</td>
+
+          <td class="num">
+            ${fmtNum(p.odds, 2)}
+            <div class="meta">${escapeHtml(p.best_bookmaker || "")}</div>
+          </td>
+
+          <td class="num">
+            ${fmtNum(p.stake, 2)}
+            <div class="meta">${escapeHtml(p.stake_label || "")}</div>
+          </td>
+
+          <td class="num ${profitClass}">${pl}</td>
           <td class="num">${fmtNum(p.line, 1)}</td>
           <td class="num">${fmtNum(p.expected_total_games, 2)}</td>
-          <td class="num">${p.raw_expected_total_games == null ? "–" : fmtNum(p.raw_expected_total_games, 2)}</td>
+
+          <td class="num">
+            ${p.total_games == null ? "–" : fmtNum(p.total_games, 0)}
+            <div class="meta">${escapeHtml(p.final_score || "")}</div>
+          </td>
+
           <td class="num ${eClass}">${fmtPct(p.edge)}</td>
           <td class="num">${fmtNum(p.confidence, 1)}</td>
           <td class="num ${qClass}">${fmtNum(p.quality_score, 1)}</td>
           <td class="num">${fmtNum(p.module_score, 2)}</td>
-          <td>${flags || `<span class="meta">–</span>`}</td>
+
+          <td>
+            ${flags || `<span class="meta">–</span>`}
+            ${p.settle_note ? `<div class="meta">${escapeHtml(p.settle_note)}</div>` : ""}
+          </td>
         </tr>`;
       }).join("");
 
@@ -848,35 +992,45 @@
 
     function renderDetail(p) {
       if (!p) return;
+
       $("detailMeta").textContent = p.pick_id ? p.pick_id.slice(0, 8) : "";
 
+      const result = normResult(p.result);
       const market = p.market_info || {};
       const setInfo = p.set_betting_info || {};
       const comp = p.expected_components || {};
       const first10 = p.first_form?.last_10 || {};
       const second10 = p.second_form?.last_10 || {};
       const flags = (p.risk_flags || []).map(f => `<span class="pill risk">${escapeHtml(f)}</span>`).join(" ");
-      const profit = p.result === "pending" ? "–" : `${p.profit >= 0 ? "+" : ""}${fmtNum(p.profit, 2)}u`;
+      const profit = result === "pending" ? "–" : `${p.profit >= 0 ? "+" : ""}${fmtNum(p.profit, 2)}u`;
 
       $("detail").innerHTML = `
         <div class="detail-head">
           <h3>${escapeHtml(p.match || "")}</h3>
-          <div class="meta">${escapeHtml(p.date || "")} ${escapeHtml(p.time || "")} · ${escapeHtml(p.tournament || "")} · ${escapeHtml(p.round || "")}</div>
+          <div class="meta">
+            ${escapeHtml(p.date || "")} ${escapeHtml(p.time || "")}
+            · ${escapeHtml(p.tournament || "")}
+            · ${escapeHtml(p.round || "")}
+          </div>
+
           <div class="chips">
             ${sidePill(p.side)}
-            ${resultPill(p.result)}
+            ${resultPill(result)}
             <span class="pill">${escapeHtml(p.bet || "")}</span>
             <span class="pill">${fmtNum(p.odds, 2)} @ ${escapeHtml(p.best_bookmaker || "")}</span>
-            ${p.stake_label ? `<span class="pill ${String(p.stake_label).startsWith("Risk") ? "risk" : "top"}">${escapeHtml(p.stake_label)}</span>` : ""}
+            ${p.stake_label ? `<span class="pill top">${escapeHtml(p.stake_label)}</span>` : ""}
           </div>
+
           <div class="chips">${flags || `<span class="meta">Brez risk flagov</span>`}</div>
         </div>
 
         <div class="mini-grid">
-          ${statBox("Profit", profit, p.profit >= 0 ? "good" : "bad")}
+          ${statBox("Profit", profit, Number(p.profit || 0) >= 0 ? "good" : "bad")}
           ${statBox("Stake", `${fmtNum(p.stake, 2)}u`, "")}
+          ${statBox("Result", result, result === "won" ? "good" : result === "lost" ? "bad" : "warn")}
+          ${statBox("Final score", p.final_score || "–", "")}
+          ${statBox("Total games", p.total_games == null ? "–" : fmtNum(p.total_games, 0), "")}
           ${statBox("Expected", fmtNum(p.expected_total_games, 2), "")}
-          ${statBox("Raw expected", p.raw_expected_total_games == null ? "–" : fmtNum(p.raw_expected_total_games, 2), p.floor_clamped ? "warn" : "")}
           ${statBox("Edge", fmtPct(p.edge), Number(p.edge || 0) >= .09 ? "good" : "warn")}
           ${statBox("Quality", fmtNum(p.quality_score, 1), Number(p.quality_score || 0) >= 90 ? "good" : "")}
         </div>
@@ -891,6 +1045,9 @@
           ${kv("Module score", fmtNum(p.module_score, 2))}
           ${kv("Bookmakers used", p.bookmakers_used ?? "–")}
           ${kv("Market median odds", fmtNum(p.market_median_odds, 3))}
+          ${kv("Settled at", p.settled_at || "–")}
+          ${kv("Settle status", p.settle_status || "–")}
+          ${kv("Settle note", p.settle_note || "–")}
           <div class="progress"><div class="bar" style="width:${clamp(Number(p.quality_score || 0), 0, 100)}%"></div></div>
         </div>
 
@@ -914,11 +1071,13 @@
           ${kv("Favorite side", market.market_favorite_side || "–")}
           ${kv("Home median odds", fmtNum(market.home_median_odds, 3))}
           ${kv("Away median odds", fmtNum(market.away_median_odds, 3))}
+          ${kv("Home implied", fmtPct(market.home_implied))}
+          ${kv("Away implied", fmtPct(market.away_implied))}
           ${kv("Market gap", fmtNum(market.market_gap, 4))}
           ${kv("Set market", setInfo.market_name || "–")}
-          ${kv("Set signal", setInfo.signal_strength || "old/unknown")}
           ${kv("Straight implied", fmtPct(setInfo.straight_sets_implied))}
           ${kv("Three-set implied", fmtPct(setInfo.three_sets_implied))}
+          ${kv("Set betting adjustment", signed(p.set_betting_adjustment))}
           ${kv("Surface proxy", p.surface_proxy || "–")}
         </div>
 
@@ -929,11 +1088,13 @@
           ${kv(escapeHtml(p.first_player_name || "First") + " median", fmtNum(first10.median_total_games, 2))}
           ${kv(escapeHtml(p.first_player_name || "First") + " 3-set", fmtPct(first10.three_set_rate))}
           ${kv(escapeHtml(p.first_player_name || "First") + " close", fmtPct(first10.close_set_rate))}
+          ${kv(escapeHtml(p.first_player_name || "First") + " win rate", fmtPct(first10.win_rate))}
           ${kv(escapeHtml(p.second_player_name || "Second") + " matches", second10.matches ?? "–")}
           ${kv(escapeHtml(p.second_player_name || "Second") + " avg total", fmtNum(second10.avg_total_games, 2))}
           ${kv(escapeHtml(p.second_player_name || "Second") + " median", fmtNum(second10.median_total_games, 2))}
           ${kv(escapeHtml(p.second_player_name || "Second") + " 3-set", fmtPct(second10.three_set_rate))}
           ${kv(escapeHtml(p.second_player_name || "Second") + " close", fmtPct(second10.close_set_rate))}
+          ${kv(escapeHtml(p.second_player_name || "Second") + " win rate", fmtPct(second10.win_rate))}
         </div>
 
         <div class="section">
@@ -971,11 +1132,15 @@
       const ctx = canvas.getContext("2d");
       clearCanvas(ctx, canvas);
 
-      const settled = rows.filter(isSettled).sort((a,b) => `${a.date||""} ${a.time||""}`.localeCompare(`${b.date||""} ${b.time||""}`));
+      const settled = rows
+        .filter(isSettled)
+        .filter(p => ["won", "lost", "push"].includes(normResult(p.result)))
+        .sort((a,b) => `${a.date||""} ${a.time||""}`.localeCompare(`${b.date||""} ${b.time||""}`));
+
       let cum = 0;
-      const points = settled.map(p => {
-        cum += p.profit;
-        return { x: p.date || "", y: cum };
+      const points = settled.map((p, i) => {
+        cum += Number(p.profit || 0);
+        return { x: i, y: cum };
       });
 
       $("chartProfitMeta").textContent = `${settled.length} settled`;
@@ -985,7 +1150,7 @@
         return;
       }
 
-      drawLine(ctx, canvas, points.map((p, i) => ({ x: i, y: p.y })), "Cumulative P/L");
+      drawLine(ctx, canvas, points, "Cumulative P/L");
     }
 
     function drawQualityChart(rows) {
@@ -1025,9 +1190,14 @@
       const w = canvas.width - pad * 2;
       const h = canvas.height - pad * 2;
       const ys = points.map(p => p.y);
+
       let yMin = Math.min(...ys, 0);
       let yMax = Math.max(...ys, 0);
-      if (yMax === yMin) { yMax += 1; yMin -= 1; }
+
+      if (yMax === yMin) {
+        yMax += 1;
+        yMin -= 1;
+      }
 
       ctx.strokeStyle = "rgba(255,255,255,.12)";
       ctx.lineWidth = 1;
@@ -1049,8 +1219,9 @@
       ctx.beginPath();
 
       points.forEach((p, i) => {
-        const x = pad + (points.length === 1 ? w / 2 : (p.x / (points.length - 1)) * w);
+        const x = pad + (points.length === 1 ? w / 2 : (i / (points.length - 1)) * w);
         const y = pad + h - ((p.y - yMin) / (yMax - yMin)) * h;
+
         if (i === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
       });
@@ -1059,7 +1230,8 @@
 
       ctx.fillStyle = "rgba(234,242,255,.75)";
       ctx.font = "12px system-ui";
-      ctx.fillText(`${label}: ${points[points.length - 1].y >= 0 ? "+" : ""}${points[points.length - 1].y.toFixed(2)}u`, pad, 18);
+      const last = points[points.length - 1].y;
+      ctx.fillText(`${label}: ${last >= 0 ? "+" : ""}${last.toFixed(2)}u`, pad, 18);
     }
 
     function drawBars(ctx, canvas, buckets) {
@@ -1087,7 +1259,7 @@
 
         ctx.fillStyle = "rgba(234,242,255,.82)";
         ctx.font = "13px system-ui";
-        ctx.fillText(b.count, x + bw / 2 - 4, y - 8);
+        ctx.fillText(String(b.count), x + bw / 2 - 4, y - 8);
 
         ctx.fillStyle = "rgba(143,165,194,.95)";
         ctx.font = "12px system-ui";
@@ -1106,8 +1278,14 @@
 
     function attachEvents() {
       [
-        "searchInput", "resultFilter", "sideFilter", "tourFilter", "stakeFilter",
-        "riskFilter", "dateFilter", "sortSelect"
+        "searchInput",
+        "resultFilter",
+        "sideFilter",
+        "tourFilter",
+        "stakeFilter",
+        "riskFilter",
+        "dateFilter",
+        "sortSelect"
       ].forEach(id => $(id).addEventListener("input", applyFilters));
 
       $("resetBtn").addEventListener("click", () => {
@@ -1129,7 +1307,9 @@
           const key = th.dataset.sort;
           const current = $("sortSelect").value;
           let next = key + "_desc";
+
           if (current === key + "_desc") next = key + "_asc";
+
           $("sortSelect").value = next;
           applyFilters();
         });
