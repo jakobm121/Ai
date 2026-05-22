@@ -24,7 +24,7 @@ MODEL_VERSION = "ai77_tennis_totals_v2_wide_shadow"
 MODEL_NAME = "AI77 Tennis Totals V2 Wide Shadow"
 MARKET_NAME = "Over/Under by Games in Match"
 
-DAYS_AHEAD = 1
+DAYS_AHEAD = 2
 MAX_FIXTURES = 650
 REQUEST_TIMEOUT = 30
 API_SLEEP_SECONDS = 0.35
