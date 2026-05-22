@@ -28,4 +28,5 @@ jobs:
           git config user.email "github-actions@github.com"
           git add data/tennis_totals_vs_aib_optimizer_report.json
           git commit -m "Update tennis totals optimizer report" || echo "No changes"
+          git pull --rebase origin main
           git push
