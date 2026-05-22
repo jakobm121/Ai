@@ -1,0 +1,117 @@
+name: Tennis Totals Robust Validation
+
+on:
+  workflow_dispatch:
+
+  # Po želji lahko pustiš tudi avtomatski run.
+  # Trenutno je nastavljen vsak dan ob 08:00 UTC.
+  schedule:
+    - cron: "0 8 * * *"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate-tennis-totals:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Show project files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo ""
+          echo "Files:"
+          ls -la
+          echo ""
+          echo "Data folder:"
+          ls -la data || true
+
+      - name: Check input file exists
+        run: |
+          if [ ! -f "data/tennis_totals_results.json" ]; then
+            echo "Missing file: data/tennis_totals_results.json"
+            exit 1
+          fi
+
+      - name: Run robust validation
+        run: |
+          python tennis_totals_robust_validation.py
+
+      - name: Show generated report
+        run: |
+          echo "Report file:"
+          ls -la data/tennis_totals_robust_validation_report.json
+          echo ""
+          echo "Report preview:"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path("data/tennis_totals_robust_validation_report.json")
+          report = json.loads(p.read_text(encoding="utf-8"))
+
+          print("raw_results:", report.get("raw_results"))
+          print("settled_results:", report.get("settled_results"))
+          print("deduped_settled_results:", report.get("deduped_settled_results"))
+
+          fixed = report.get("fixed_strategies", {})
+
+          print("\nPREMIUM ONLY overall:")
+          print(json.dumps(
+              fixed.get("premium_only", {}).get("overall"),
+              indent=2,
+              ensure_ascii=False
+          ))
+
+          print("\nPREMIUM ONLY test_30:")
+          print(json.dumps(
+              fixed.get("premium_only", {}).get("test_30"),
+              indent=2,
+              ensure_ascii=False
+          ))
+
+          print("\nPREMIUM + VOLUME B 0.25 overall:")
+          print(json.dumps(
+              fixed.get("premium_plus_volume_b_025", {}).get("overall"),
+              indent=2,
+              ensure_ascii=False
+          ))
+
+          print("\nPREMIUM + VOLUME B 0.25 test_30:")
+          print(json.dumps(
+              fixed.get("premium_plus_volume_b_025", {}).get("test_30"),
+              indent=2,
+              ensure_ascii=False
+          ))
+
+          auto = report.get("train_test_auto", {})
+          print("\nAUTO best_train_rule:")
+          print(json.dumps(
+              auto.get("best_train_rule"),
+              indent=2,
+              ensure_ascii=False
+          ))
+          print("AUTO passed_test_count:", auto.get("passed_test_count"))
+
+          wf = report.get("walk_forward_auto", {})
+          print("\nWALK FORWARD:")
+          print("windows_count:", wf.get("windows_count"))
+          print("passed_windows:", wf.get("passed_windows"))
+          PY
+
+      - name: Upload validation report
+        uses: actions/upload-artifact@v4
+        with:
+          name: tennis-totals-robust-validation-report
+          path: data/tennis_totals_robust_validation_report.json
+          if-no-files-found: error
