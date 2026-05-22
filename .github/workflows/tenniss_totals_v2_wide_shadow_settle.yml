@@ -3,8 +3,9 @@ name: Tennis Totals V2 Wide Shadow Settle
 on:
   workflow_dispatch:
   schedule:
-    # GitHub cron je v UTC.
-    # Približno: 09:15, 13:15, 17:15, 22:45 Ljubljana poletni čas.
+    # GitHub cron je UTC.
+    # Poletni čas Ljubljana: 09:15, 13:15, 17:15, 22:45
+    # Zimski čas Ljubljana: 08:15, 12:15, 16:15, 21:45
     - cron: "15 7 * * *"
     - cron: "15 11 * * *"
     - cron: "15 15 * * *"
@@ -39,15 +40,14 @@ jobs:
         run: |
           python tennis_totals_v2_wide_shadow_settle.py
 
-      - name: Commit settled results
+      - name: Commit settled V2 Wide Shadow results
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
           git add data/tennis_totals_v2_wide_shadow_predictions.json \
                   data/tennis_totals_v2_wide_shadow_results.json \
-                  data/tennis_totals_debug.json \
-                  data/tennis_totals_v2_wide_shadow_debug.json || true
+                  data/tennis_totals_v2_wide_shadow_settle_debug.json || true
 
           if git diff --cached --quiet; then
             echo "No settle changes to commit."
