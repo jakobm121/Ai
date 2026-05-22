@@ -1,0 +1,34 @@
+name: Tennis Totals V2 Wide Shadow Settle
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 23 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  settle-v2-wide-shadow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Ai repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run V2 wide shadow settle
+        run: python tennis_totals_v2_wide_shadow_settle.py
+
+      - name: Commit V2 wide shadow settled results
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/tennis_totals_v2_wide_shadow_results.json
+          git commit -m "Settle tennis totals V2 wide shadow" || echo "No changes"
+          git pull --rebase origin main
+          git push || (git pull --rebase origin main && git push)
