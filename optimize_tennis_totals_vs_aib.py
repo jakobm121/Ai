@@ -308,10 +308,17 @@ def base_filters():
 def build_rules():
     filters = base_filters()
 
-    for size in range(3, 7):
+    # Hitrejša verzija:
+    # 42C3 + 42C4 = približno 123k kombinacij.
+    # Prejšnja verzija 3-6 filtrov je šla čez 6M kombinacij.
+    for size in range(3, 5):
         for combo in combinations(filters, size):
             names = [x[0] for x in combo]
             fns = [x[1] for x in combo]
+
+            # Preskoči očitne konflikte, da ne testira praznih/neuporabnih pravil.
+            if has_conflict(names):
+                continue
 
             name = "rule_" + "__".join(names)
 
@@ -321,25 +328,144 @@ def build_rules():
             yield name, rule
 
 
+def has_conflict(names):
+    names = set(names)
+
+    # Side conflict
+    if "under" in names and "over" in names:
+        return True
+
+    # Tour conflict
+    tours = {"atp", "wta", "challenger", "itf"}
+    if len(names & tours) > 1:
+        return True
+
+    # Label conflict
+    if "strong_only" in names and "no_top_rated" in names:
+        # To ni nujno konflikt, ker Strong ni Top Rated.
+        pass
+
+    if "strong_only" in names and "standard_or_strong" in names:
+        # Ni konflikt, ampak je redundantno.
+        return True
+
+    # Books conflict
+    if "books_6_7" in names and "books_not_6_7" in names:
+        return True
+
+    if "books_lt6" in names and "books_8plus" in names:
+        return True
+
+    if "books_lt6" in names and "books_6_7" in names:
+        return True
+
+    if "books_8plus" in names and "books_6_7" in names:
+        return True
+
+    # Confidence conflict
+    if "conf_88_plus" in names and "conf_82_87.9" in names:
+        return True
+
+    if "conf_82_87.9" in names and "conf_not_76_81.9" in names:
+        # Ni konflikt, ker 82-87.9 je zunaj 76-81.9, ampak je redundantno.
+        return True
+
+    if "conf_88_plus" in names and "conf_not_76_81.9" in names:
+        # Ni konflikt, ampak redundantno.
+        return True
+
+    # Edge conflict
+    if "edge_under_6.5" in names and "edge_6.5_9.9" in names:
+        return True
+
+    if "edge_under_6.5" in names and "edge_10_11.9" in names:
+        return True
+
+    if "edge_6.5_9.9" in names and "edge_10_11.9" in names:
+        return True
+
+    if "edge_10_11.9" in names and "edge_under_12" in names:
+        # Ni konflikt, ampak redundantno.
+        return True
+
+    # Odds conflict
+    odds_groups = {
+        "odds_1.70_1.84",
+        "odds_1.85_1.99",
+        "odds_2.00_2.20",
+    }
+
+    if len(names & odds_groups) > 1:
+        return True
+
+    if "odds_1.85_2.20" in names and ("odds_1.85_1.99" in names or "odds_2.00_2.20" in names):
+        # Ni konflikt, ampak redundantno.
+        return True
+
+    if "odds_1.70_1.84" in names and "odds_1.85_2.20" in names:
+        return True
+
+    # Exact line conflicts
+    exact_lines = {"line_exact_20.5", "line_exact_21.5", "line_exact_22.5"}
+    if len(names & exact_lines) > 1:
+        return True
+
+    if "line_exact_22.5" in names and "line_max_21.5" in names:
+        return True
+
+    if "line_exact_22.5" in names and "line_max_20.5" in names:
+        return True
+
+    if "line_exact_21.5" in names and "line_max_20.5" in names:
+        return True
+
+    if "line_18.5_20.5" in names and "line_exact_21.5" in names:
+        return True
+
+    if "line_18.5_20.5" in names and "line_exact_22.5" in names:
+        return True
+
+    if "line_20.5_22.5" in names and "line_max_20.5" in names:
+        # Presek je samo 20.5. Ni konflikt, ampak zelo ozko/redundantno.
+        return True
+
+    # Margin conflict
+    if "margin_under_1" in names and "margin_1.0_plus" in names:
+        return True
+
+    if "margin_under_1" in names and "margin_1.5_plus" in names:
+        return True
+
+    if "margin_under_1" in names and "margin_2.0_plus" in names:
+        return True
+
+    return False
+
+
 def main():
-    raw = json.loads(RESULTS_FILE.read_text(encoding="utf-8"))
-    raw = [p for p in raw if result(p) in SETTLED]
-    raw = dedupe(raw)
+    raw_loaded = json.loads(RESULTS_FILE.read_text(encoding="utf-8"))
+    raw_settled = [p for p in raw_loaded if result(p) in SETTLED]
+    raw = dedupe(raw_settled)
 
     tested = []
     better_than_aib = []
 
+    rule_count = 0
+
     for name, rule in build_rules():
-        for stake in [0.5, 0.75, 1.0]:
-            s = simulate(name, raw, rule, stake=stake)
+        rule_count += 1
 
-            if s["picks"] < MIN_PICKS:
-                continue
+        # Fixed stake testiramo samo z 1.0.
+        # Pri 0.5/0.75/1.0 je ROI enak, samo profit in drawdown se linearno spremenita.
+        s = simulate(name, raw, rule, stake=1.0)
 
-            tested.append(s)
+        if s["picks"] < MIN_PICKS:
+            continue
 
-            if s["roi"] > BASELINE_ROI and s["picks"] >= MIN_PICKS and s["profit"] > 0:
-                better_than_aib.append(s)
+        tested.append(s)
+
+        if s["roi"] > BASELINE_ROI and s["picks"] >= MIN_PICKS and s["profit"] > 0:
+            better_than_aib.append(s)
 
     combined_optimized = summarize_variable_stake(raw, optimized_stake)
     combined_optimized["name"] = "combined_optimized_totals_staking"
@@ -374,13 +500,27 @@ def main():
         reverse=True,
     )
 
+    # Posebej izpiši pravila z večjim volumnom.
+    top_100_plus = [
+        x for x in top_by_profit
+        if x["picks"] >= 100
+    ]
+
+    top_150_plus = [
+        x for x in top_by_profit
+        if x["picks"] >= 150
+    ]
+
     report = {
         "baseline": {
             "aib_roi": BASELINE_ROI,
             "baseline_min_picks": BASELINE_MIN_PICKS,
         },
-        "raw_results": len(raw),
+        "raw_results": len(raw_loaded),
+        "settled_results": len(raw_settled),
+        "deduped_results": len(raw),
         "filters_used": len(base_filters()),
+        "rules_generated_after_conflict_skip": rule_count,
         "tested_strategies": len(tested),
         "better_than_aib_count": len(better),
         "combined_optimized": combined_optimized,
@@ -388,10 +528,14 @@ def main():
         "top_by_roi": top_by_roi[:100],
         "top_by_profit": top_by_profit[:100],
         "top_balanced": top_balanced[:100],
+        "top_100_plus": top_100_plus[:100],
+        "top_150_plus": top_150_plus[:100],
         "recommended": {
             "best_roi": top_by_roi[0] if top_by_roi else None,
             "best_profit": top_by_profit[0] if top_by_profit else None,
             "best_balanced": top_balanced[0] if top_balanced else None,
+            "best_100_plus": top_100_plus[0] if top_100_plus else None,
+            "best_150_plus": top_150_plus[0] if top_150_plus else None,
             "combined_optimized": combined_optimized,
         },
     }
@@ -403,13 +547,23 @@ def main():
     )
 
     print("Saved:", OUT_FILE)
-    print("Raw/deduped:", len(raw))
-    print("Tested:", len(tested))
+    print("Raw:", len(raw_loaded))
+    print("Settled:", len(raw_settled))
+    print("Deduped:", len(raw))
+    print("Filters:", len(base_filters()))
+    print("Rules generated after conflict skip:", rule_count)
+    print("Tested strategies:", len(tested))
     print("Better than AiB:", len(better))
+
     print("\nCombined optimized:")
     print(json.dumps(combined_optimized, indent=2, ensure_ascii=False))
-    print("\nTop better_than_aib:")
-    print(json.dumps(better[:20], indent=2, ensure_ascii=False))
+
+    print("\nRecommended:")
+    print(json.dumps(report["recommended"], indent=2, ensure_ascii=False))
+
+    print("\nTop 150+ picks:")
+    print(json.dumps(top_150_plus[:20], indent=2, ensure_ascii=False))
+
     print("\nTop by profit:")
     print(json.dumps(top_by_profit[:20], indent=2, ensure_ascii=False))
 
