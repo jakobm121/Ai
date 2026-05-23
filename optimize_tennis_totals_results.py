@@ -888,26 +888,42 @@ def stake_for_strategy(p: Pick, strategy: str) -> float:
 def metrics_for_strategy(picks: Sequence[Pick], strategy: str) -> Dict[str, Any]:
     class Temp:
         pass
+
     temp = []
+
     for p in picks:
         stake = stake_for_strategy(p, strategy)
+
         t = Temp()
-        # copy only needed attrs
-        t.result = p.result
-        t.odds = p.odds
-        t.month = p.month
-        t.week = p.week
-        t.side = p.side
+
+        # Kopiramo vse atribute originalnega picka.
+        # backtest_metrics rabi edge/confidence/quality_score itd.,
+        # zato ne smemo kopirati samo result/odds/month/week/side.
+        if hasattr(p, "__dict__"):
+            t.__dict__.update(p.__dict__)
+
+        # Pri staking strategiji spremenimo profit glede na stake.
         t.flat_profit_1u = flat_profit(p.result, p.odds, stake)
+
         temp.append(t)
+
     m = backtest_metrics(temp)  # type: ignore[arg-type]
-    total_staked = sum(stake_for_strategy(p, strategy) for p in picks if p.result != "void")
+
+    total_staked = sum(
+        stake_for_strategy(p, strategy)
+        for p in picks
+        if p.result != "void"
+    )
+
     m["strategy"] = strategy
     m["total_staked_units"] = round(total_staked, 6)
     m["roi_on_actual_staked"] = round(m["profit"] / max(1e-9, total_staked), 6)
-    m["avg_stake"] = round(total_staked / max(1, sum(1 for p in picks if p.result != "void")), 4)
-    return m
+    m["avg_stake"] = round(
+        total_staked / max(1, sum(1 for p in picks if p.result != "void")),
+        4
+    )
 
+    return m
 
 def staking_comparison(picks: Sequence[Pick], top_rules: Sequence[Dict[str, Any]], top_k: int = 10) -> Dict[str, Any]:
     strategies = [
