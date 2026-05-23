@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-22T23:03:17.327385+02:00",
+  "generated_at": "2026-05-23T07:32:39.759396+02:00",
   "pending_checked": 8,
-  "updated": 2,
-  "still_pending": 6,
+  "updated": 0,
+  "still_pending": 8,
   "not_found": 0,
   "errors": [],
   "checked": [
@@ -52,15 +52,6 @@
       "reason": "keep_pending_status:set 1"
     },
     {
-      "match": "A. De Minaur - T. Paul",
-      "event_key": 12130087,
-      "status": "Finished",
-      "winner": "Second Player",
-      "score": "1 - 2",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
       "match": "A. Vergara Rivera - B. Payne",
       "event_key": 12130062,
       "status": "Interrupted",
@@ -70,13 +61,22 @@
       "reason": "keep_pending_status:interrupted"
     },
     {
-      "match": "D. Guzman - M. Brengle",
-      "event_key": 12130061,
-      "status": "Retired",
-      "winner": "Second Player",
-      "score": "0 - 0",
-      "changed": true,
-      "reason": "void_status:retired"
+      "match": "S. Noguchi - R. Matsuda",
+      "event_key": 12130145,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "I. Ivashka - P. Bar Biryukov",
+      "event_key": 12130135,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
     }
   ]
 }
