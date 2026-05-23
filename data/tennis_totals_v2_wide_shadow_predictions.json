@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-23T09:29:21.012741+02:00",
+  "generated_at": "2026-05-23T10:41:11.618118+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Totals V2 Wide Shadow",
   "stake_mode": "v2_wide_shadow_quality_modules_risk_capped",
   "market": "Over/Under by Games in Match",
   "filters": {
-    "days_ahead": 1,
+    "days_ahead": 2,
     "max_picks": 30,
     "max_over_picks": 15,
     "max_under_picks": 15,
     "min_recent_matches_each": 6,
-    "min_bookmakers": 1,
+    "min_bookmakers": 5,
     "min_edge": 0.045,
     "min_confidence": 64.0,
     "odds_min": 1.6,
@@ -40,7 +40,7 @@
     "under_module_cap": 4.8
   },
   "summary": {
-    "fixtures_checked": 172,
+    "fixtures_checked": 176,
     "candidates_raw": 0,
     "final_picks": 0,
     "errors": 0,
