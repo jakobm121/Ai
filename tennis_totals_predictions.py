@@ -730,8 +730,13 @@ def main():
 
             totals_lines = parse_totals_market(odds_blob)
             if not totals_lines:
-                debug["skipped"].append({"event_key": event_key, "match": name, "reason": "no_totals_market"})
-                continue
+                debug["skipped"].append({
+                "event_key": event_key,
+                "match": name,
+                "reason": "no_totals_market",
+                "available_markets": list(odds_blob.keys())[:30] if isinstance(odds_blob, dict) else []
+                })
+    continue
 
             cache_key = (first_key, second_key)
             if cache_key not in h2h_cache:
