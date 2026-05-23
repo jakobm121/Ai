@@ -3,6 +3,7 @@ import json
 import time
 import math
 import hashlib
+import re
 from statistics import median
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
@@ -83,6 +84,8 @@ def clamp(v, lo, hi):
 
 def safe_float(v, default=0.0):
     try:
+        if v is None or v == "":
+            return default
         return float(v)
     except Exception:
         return default
@@ -90,6 +93,8 @@ def safe_float(v, default=0.0):
 
 def safe_int(v, default=0):
     try:
+        if v is None or v == "":
+            return default
         return int(v)
     except Exception:
         return default
@@ -336,8 +341,6 @@ def clean_finished_matches(matches):
         if not parsed:
             continue
 
-        # Totals model je za normalne best-of-3 singles tekme.
-        # Izločimo bad-data / BO5 / nenormalne rezultate.
         if len(parsed) < 2 or len(parsed) > 3:
             continue
 
@@ -456,40 +459,157 @@ def extract_home_away_odds(odds_blob):
     }
 
 
+def normalize_line_key(v):
+    n = safe_float(v, None)
+    if n is None:
+        return None
+    return f"{n:.1f}"
+
+
+def extract_line_from_text(text):
+    s = str(text or "")
+    m = re.search(r"(\d{1,2}(?:[.,]\d+)?)", s)
+    if not m:
+        return None
+    return safe_float(m.group(1).replace(",", "."), None)
+
+
+def normalize_side_from_text(text):
+    s = str(text or "").lower()
+    if "over" in s:
+        return "over"
+    if "under" in s:
+        return "under"
+    return None
+
+
+def collect_books_from_any_shape(obj):
+    out = {}
+
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            odd = safe_float(v, None)
+            if odd is not None and odd > 1:
+                out[str(k)] = odd
+                continue
+
+            if isinstance(v, dict):
+                bookmaker = (
+                    v.get("bookmaker")
+                    or v.get("bookmaker_name")
+                    or v.get("bookmaker_key")
+                    or k
+                )
+                odd_val = (
+                    v.get("odd")
+                    or v.get("odds")
+                    or v.get("value")
+                    or v.get("price")
+                )
+                odd = safe_float(odd_val, None)
+                if bookmaker and odd is not None and odd > 1:
+                    out[str(bookmaker)] = odd
+
+    elif isinstance(obj, list):
+        for item in obj:
+            if not isinstance(item, dict):
+                continue
+
+            bookmaker = (
+                item.get("bookmaker")
+                or item.get("bookmaker_name")
+                or item.get("bookmaker_key")
+                or item.get("name")
+            )
+            odd_val = (
+                item.get("odd")
+                or item.get("odds")
+                or item.get("value")
+                or item.get("price")
+            )
+
+            odd = safe_float(odd_val, None)
+            if bookmaker and odd is not None and odd > 1:
+                out[str(bookmaker)] = odd
+
+    return out
+
+
 def parse_totals_market(odds_blob):
     market = odds_blob.get(MARKET_NAME)
     if not isinstance(market, dict):
         return []
 
+    by_line = {}
+
+    def add_side_books(line, side, books):
+        line_key = normalize_line_key(line)
+        if not line_key or side not in {"over", "under"}:
+            return
+
+        line_float = safe_float(line_key, None)
+        if line_float is None:
+            return
+
+        if not (MAIN_LINES_MIN <= line_float <= MAIN_LINES_MAX):
+            return
+
+        clean_books = {
+            str(book): safe_float(odd)
+            for book, odd in (books or {}).items()
+            if safe_float(odd) > 1
+        }
+
+        if not clean_books:
+            return
+
+        by_line.setdefault(line_key, {"line": line_float, "over": {}, "under": {}})
+        by_line[line_key][side].update(clean_books)
+
     over_key = f"{MARKET_NAME} Over"
     under_key = f"{MARKET_NAME} Under"
 
-    over_data = market.get(over_key) or {}
-    under_data = market.get(under_key) or {}
+    over_data = market.get(over_key)
+    under_data = market.get(under_key)
 
-    if not isinstance(over_data, dict) or not isinstance(under_data, dict):
-        return []
+    if isinstance(over_data, dict):
+        for line_s, over_books in over_data.items():
+            add_side_books(line_s, "over", collect_books_from_any_shape(over_books))
+
+    if isinstance(under_data, dict):
+        for line_s, under_books in under_data.items():
+            add_side_books(line_s, "under", collect_books_from_any_shape(under_books))
+
+    for side_key in ["Over", "Under", "over", "under"]:
+        data = market.get(side_key)
+        side = normalize_side_from_text(side_key)
+        if isinstance(data, dict) and side:
+            for line_s, books in data.items():
+                add_side_books(line_s, side, collect_books_from_any_shape(books))
+
+    for key, value in market.items():
+        side = normalize_side_from_text(key)
+        line = extract_line_from_text(key)
+
+        if side and line is not None:
+            add_side_books(line, side, collect_books_from_any_shape(value))
+
+    for key, value in market.items():
+        line = extract_line_from_text(key)
+
+        if line is None or not isinstance(value, dict):
+            continue
+
+        for sub_key, sub_value in value.items():
+            side = normalize_side_from_text(sub_key)
+            if side:
+                add_side_books(line, side, collect_books_from_any_shape(sub_value))
 
     candidates = []
 
-    for line_s, over_books in over_data.items():
-        if line_s not in under_data:
-            continue
-
-        line = safe_float(line_s, None)
-        if line is None:
-            continue
-
-        if not (MAIN_LINES_MIN <= line <= MAIN_LINES_MAX):
-            continue
-
-        under_books = under_data.get(line_s) or {}
-
-        if not isinstance(over_books, dict) or not isinstance(under_books, dict):
-            continue
-
-        over_odds_values = {k: safe_float(v) for k, v in over_books.items() if safe_float(v) > 1}
-        under_odds_values = {k: safe_float(v) for k, v in under_books.items() if safe_float(v) > 1}
+    for line_key, item in by_line.items():
+        over_odds_values = item.get("over") or {}
+        under_odds_values = item.get("under") or {}
 
         shared_books = sorted(set(over_odds_values) & set(under_odds_values))
         books_used = len(shared_books)
@@ -497,14 +617,17 @@ def parse_totals_market(odds_blob):
         if books_used < MIN_BOOKMAKERS:
             continue
 
-        over_shared = [over_odds_values[b] for b in shared_books]
-        under_shared = [under_odds_values[b] for b in shared_books]
+        over_shared = [over_odds_values[b] for b in shared_books if over_odds_values[b] > 1]
+        under_shared = [under_odds_values[b] for b in shared_books if under_odds_values[b] > 1]
+
+        if not over_shared or not under_shared:
+            continue
 
         over_best_book = max(shared_books, key=lambda b: over_odds_values[b])
         under_best_book = max(shared_books, key=lambda b: under_odds_values[b])
 
         candidates.append({
-            "line": line,
+            "line": item["line"],
             "bookmakers_used": books_used,
             "over": {
                 "best_odds": round(over_odds_values[over_best_book], 3),
@@ -518,6 +641,7 @@ def parse_totals_market(odds_blob):
             }
         })
 
+    candidates.sort(key=lambda x: safe_float(x.get("line")))
     return candidates
 
 
@@ -572,7 +696,6 @@ def expected_total_games(player_form, opponent_form, h2h_matches, market_info):
     if market_info:
         gap = safe_float(market_info.get("market_gap"))
 
-        # Velik favorit pogosto pomeni krajši match: 6-2 6-2, 6-1 6-3 ipd.
         if gap >= 0.55:
             exp -= 2.8
         elif gap >= 0.40:
@@ -730,11 +853,19 @@ def main():
 
             totals_lines = parse_totals_market(odds_blob)
             if not totals_lines:
+                market_preview = None
+                try:
+                    m = odds_blob.get(MARKET_NAME) if isinstance(odds_blob, dict) else None
+                    market_preview = json.dumps(m, ensure_ascii=False)[:2500] if m is not None else None
+                except Exception:
+                    market_preview = str(odds_blob.get(MARKET_NAME))[:2500] if isinstance(odds_blob, dict) else None
+
                 debug["skipped"].append({
                     "event_key": event_key,
                     "match": name,
                     "reason": "no_totals_market",
-                    "available_markets": list(odds_blob.keys())[:30] if isinstance(odds_blob, dict) else []
+                    "available_markets": list(odds_blob.keys())[:30] if isinstance(odds_blob, dict) else [],
+                    "totals_market_preview": market_preview,
                 })
                 continue
 
@@ -786,7 +917,6 @@ def main():
                     edge = model_prob - implied_prob
                     margin = abs(exp_games - line)
 
-                    # Ne lovimo OVER na nizki liniji pri ekstremnem favoritu.
                     if market_info:
                         market_gap = safe_float(market_info.get("market_gap"))
                         if side == "over" and line <= 19.5 and market_gap >= 0.55:
