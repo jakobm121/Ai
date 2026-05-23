@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T16:53:14.405830+02:00",
+  "generated_at": "2026-05-23T20:58:44.768579+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -15,10 +15,10 @@
     "days_ahead": 1
   },
   "predictions_summary": {
-    "fixtures_checked": 138,
-    "candidates_raw": 1,
-    "final_picks": 1,
-    "skipped_ineligible": 105,
+    "fixtures_checked": 142,
+    "candidates_raw": 0,
+    "final_picks": 0,
+    "skipped_ineligible": 137,
     "errors": 0
   },
   "summary": {
@@ -36,143 +36,7 @@
     "settled_picks": 353,
     "pending_picks": 6
   },
-  "current_picks": [
-    {
-      "pick_id": "f2a25926a903747b6cb2a8f7746b7a22",
-      "event_key": 12130062,
-      "fixture_id": 12130062,
-      "sport": "tennis",
-      "model_version": "ai77_tennis_value_v1",
-      "date": "2026-05-23",
-      "time": "17:00",
-      "match": "A. Vergara Rivera - B. Payne",
-      "bet": "B. Payne",
-      "bucket": "match_winner",
-      "side": "away",
-      "market_side": "Away",
-      "player_key": 82380,
-      "player_name": "B. Payne",
-      "opponent_key": 23356,
-      "opponent_name": "A. Vergara Rivera",
-      "tournament": "W50 Pelham, AL",
-      "tournament_key": 12516,
-      "round": "W50 Pelham, AL - Quarter-finals",
-      "event_type": "Itf Women Singles",
-      "qualification": false,
-      "tour_level": "itf",
-      "gender": "women",
-      "odds": 2.27,
-      "best_bookmaker": "Pncl",
-      "market_median_odds": 2.16,
-      "bookmakers_used": 10,
-      "best_to_median_gap": 0.0509,
-      "model_prob": 0.6,
-      "implied_prob": 0.4405,
-      "edge": 0.1595,
-      "player_score": 67.2,
-      "opponent_score": 57.7,
-      "score_diff": 9.5,
-      "confidence": 88,
-      "quality_score": 92.9,
-      "stake": 1.5,
-      "stake_label": "Top Rated",
-      "favorite_type": "underdog",
-      "h2h": {
-        "matches": 0,
-        "first_wins": 0,
-        "second_wins": 0,
-        "first_score": 0.0,
-        "second_score": 0.0
-      },
-      "player_form": {
-        "score": 67.2,
-        "last_5": {
-          "matches": 5,
-          "wins": 4,
-          "losses": 1,
-          "win_rate": 0.8,
-          "set_diff_avg": 0.8,
-          "game_diff_avg": 4.0,
-          "straight_win_rate": 0.2,
-          "straight_loss_rate": 0.0,
-          "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 3,
-          "fatigue_matches_3d": 2
-        },
-        "last_10": {
-          "matches": 10,
-          "wins": 7,
-          "losses": 3,
-          "win_rate": 0.7,
-          "set_diff_avg": 0.6,
-          "game_diff_avg": 2.2,
-          "straight_win_rate": 0.4,
-          "straight_loss_rate": 0.2,
-          "close_loss_rate": 0.1,
-          "fatigue_matches_7d": 3,
-          "fatigue_matches_3d": 2
-        },
-        "last_20": {
-          "matches": 10,
-          "wins": 7,
-          "losses": 3,
-          "win_rate": 0.7,
-          "set_diff_avg": 0.6,
-          "game_diff_avg": 2.2,
-          "straight_win_rate": 0.4,
-          "straight_loss_rate": 0.2,
-          "close_loss_rate": 0.1,
-          "fatigue_matches_7d": 3,
-          "fatigue_matches_3d": 2
-        }
-      },
-      "opponent_form": {
-        "score": 57.7,
-        "last_5": {
-          "matches": 5,
-          "wins": 3,
-          "losses": 2,
-          "win_rate": 0.6,
-          "set_diff_avg": 0.4,
-          "game_diff_avg": 3.0,
-          "straight_win_rate": 0.6,
-          "straight_loss_rate": 0.4,
-          "close_loss_rate": 0.0,
-          "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 1
-        },
-        "last_10": {
-          "matches": 10,
-          "wins": 6,
-          "losses": 4,
-          "win_rate": 0.6,
-          "set_diff_avg": 0.2,
-          "game_diff_avg": 1.9,
-          "straight_win_rate": 0.4,
-          "straight_loss_rate": 0.4,
-          "close_loss_rate": 0.0,
-          "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 1
-        },
-        "last_20": {
-          "matches": 10,
-          "wins": 6,
-          "losses": 4,
-          "win_rate": 0.6,
-          "set_diff_avg": 0.2,
-          "game_diff_avg": 1.9,
-          "straight_win_rate": 0.4,
-          "straight_loss_rate": 0.4,
-          "close_loss_rate": 0.0,
-          "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 1
-        }
-      },
-      "result": "pending",
-      "created_at": "2026-05-22T16:22:40.664366+02:00",
-      "reasoning": "B. Payne is selected against A. Vergara Rivera in W50 Pelham, AL. The model prices B. Payne at 60.0% versus an implied probability of 44.1% from best odds 2.27. Market median is 2.16 across 10 bookmakers, leaving an estimated edge of +15.9%. Recent-form profile: B. Payne last-10 win rate 70.0%, avg set diff +0.60, avg game diff +2.20; A. Vergara Rivera last-10 win rate 60.0%, avg set diff +0.20, avg game diff +1.90. Pick type: underdog. Confidence score: 88.0."
-    }
-  ],
+  "current_picks": [],
   "results": [
     {
       "pick_id": "5e893bdaa85a02e159e2dcfb2e2e25ef",
