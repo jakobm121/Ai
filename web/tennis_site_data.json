@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T00:06:19.071203+02:00",
+  "generated_at": "2026-05-24T04:33:59.706558+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -15,10 +15,10 @@
     "days_ahead": 1
   },
   "predictions_summary": {
-    "fixtures_checked": 124,
+    "fixtures_checked": 139,
     "candidates_raw": 11,
     "final_picks": 11,
-    "skipped_ineligible": 0,
+    "skipped_ineligible": 3,
     "errors": 0
   },
   "summary": {
@@ -468,9 +468,9 @@
       "gender": "men",
       "odds": 1.97,
       "best_bookmaker": "1xBet",
-      "market_median_odds": 1.93,
-      "bookmakers_used": 9,
-      "best_to_median_gap": 0.0207,
+      "market_median_odds": 1.92,
+      "bookmakers_used": 10,
+      "best_to_median_gap": 0.0234,
       "model_prob": 0.66,
       "implied_prob": 0.5076,
       "edge": 0.1524,
@@ -478,9 +478,9 @@
       "opponent_score": 33.9,
       "score_diff": 34.0,
       "confidence": 88,
-      "quality_score": 91.4,
-      "stake": 1.25,
-      "stake_label": "Strong",
+      "quality_score": 92.9,
+      "stake": 1.5,
+      "stake_label": "Top Rated",
       "favorite_type": "favorite",
       "h2h": {
         "matches": 0,
@@ -575,7 +575,7 @@
       },
       "result": "pending",
       "created_at": "2026-05-24T00:05:06.412498+02:00",
-      "reasoning": "K. Jacquet is selected against M. Trungelliti in French Open. The model prices K. Jacquet at 66.0% versus an implied probability of 50.8% from best odds 1.97. Market median is 1.93 across 9 bookmakers, leaving an estimated edge of +15.2%. Recent-form profile: K. Jacquet last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.70; M. Trungelliti last-10 win rate 30.0%, avg set diff -0.50, avg game diff -0.90. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "K. Jacquet is selected against M. Trungelliti in French Open. The model prices K. Jacquet at 66.0% versus an implied probability of 50.8% from best odds 1.97. Market median is 1.92 across 10 bookmakers, leaving an estimated edge of +15.2%. Recent-form profile: K. Jacquet last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.70; M. Trungelliti last-10 win rate 30.0%, avg set diff -0.50, avg game diff -0.90. Pick type: favorite. Confidence score: 88.0."
     },
     {
       "pick_id": "93a7822df12fc95f4add2c6aa6f1a016",
@@ -1008,9 +1008,9 @@
       "gender": "men",
       "odds": 1.82,
       "best_bookmaker": "1xBet",
-      "market_median_odds": 1.76,
-      "bookmakers_used": 9,
-      "best_to_median_gap": 0.0341,
+      "market_median_odds": 1.75,
+      "bookmakers_used": 10,
+      "best_to_median_gap": 0.043,
       "model_prob": 0.66,
       "implied_prob": 0.5495,
       "edge": 0.1105,
@@ -1018,7 +1018,7 @@
       "opponent_score": 40.4,
       "score_diff": 39.6,
       "confidence": 88,
-      "quality_score": 84.1,
+      "quality_score": 85.6,
       "stake": 1.25,
       "stake_label": "Strong",
       "favorite_type": "favorite",
@@ -1115,7 +1115,7 @@
       },
       "result": "pending",
       "created_at": "2026-05-24T00:05:09.222148+02:00",
-      "reasoning": "H. Dellien is selected against V. Royer in French Open. The model prices H. Dellien at 66.0% versus an implied probability of 54.9% from best odds 1.82. Market median is 1.76 across 9 bookmakers, leaving an estimated edge of +11.1%. Recent-form profile: H. Dellien last-10 win rate 90.0%, avg set diff +1.40, avg game diff +4.00; V. Royer last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.60. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "H. Dellien is selected against V. Royer in French Open. The model prices H. Dellien at 66.0% versus an implied probability of 54.9% from best odds 1.82. Market median is 1.75 across 10 bookmakers, leaving an estimated edge of +11.1%. Recent-form profile: H. Dellien last-10 win rate 90.0%, avg set diff +1.40, avg game diff +4.00; V. Royer last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.60. Pick type: favorite. Confidence score: 88.0."
     },
     {
       "pick_id": "f78004f96ebd35406c98e8428a3e4831",
@@ -54522,9 +54522,9 @@
       "gender": "men",
       "odds": 1.97,
       "best_bookmaker": "1xBet",
-      "market_median_odds": 1.93,
-      "bookmakers_used": 9,
-      "best_to_median_gap": 0.0207,
+      "market_median_odds": 1.92,
+      "bookmakers_used": 10,
+      "best_to_median_gap": 0.0234,
       "model_prob": 0.66,
       "implied_prob": 0.5076,
       "edge": 0.1524,
@@ -54532,9 +54532,9 @@
       "opponent_score": 33.9,
       "score_diff": 34.0,
       "confidence": 88,
-      "quality_score": 91.4,
-      "stake": 1.25,
-      "stake_label": "Strong",
+      "quality_score": 92.9,
+      "stake": 1.5,
+      "stake_label": "Top Rated",
       "favorite_type": "favorite",
       "h2h": {
         "matches": 0,
@@ -54629,7 +54629,7 @@
       },
       "result": "pending",
       "created_at": "2026-05-24T00:05:06.412498+02:00",
-      "reasoning": "K. Jacquet is selected against M. Trungelliti in French Open. The model prices K. Jacquet at 66.0% versus an implied probability of 50.8% from best odds 1.97. Market median is 1.93 across 9 bookmakers, leaving an estimated edge of +15.2%. Recent-form profile: K. Jacquet last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.70; M. Trungelliti last-10 win rate 30.0%, avg set diff -0.50, avg game diff -0.90. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "K. Jacquet is selected against M. Trungelliti in French Open. The model prices K. Jacquet at 66.0% versus an implied probability of 50.8% from best odds 1.97. Market median is 1.92 across 10 bookmakers, leaving an estimated edge of +15.2%. Recent-form profile: K. Jacquet last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.70; M. Trungelliti last-10 win rate 30.0%, avg set diff -0.50, avg game diff -0.90. Pick type: favorite. Confidence score: 88.0."
     },
     {
       "pick_id": "93a7822df12fc95f4add2c6aa6f1a016",
@@ -55062,9 +55062,9 @@
       "gender": "men",
       "odds": 1.82,
       "best_bookmaker": "1xBet",
-      "market_median_odds": 1.76,
-      "bookmakers_used": 9,
-      "best_to_median_gap": 0.0341,
+      "market_median_odds": 1.75,
+      "bookmakers_used": 10,
+      "best_to_median_gap": 0.043,
       "model_prob": 0.66,
       "implied_prob": 0.5495,
       "edge": 0.1105,
@@ -55072,7 +55072,7 @@
       "opponent_score": 40.4,
       "score_diff": 39.6,
       "confidence": 88,
-      "quality_score": 84.1,
+      "quality_score": 85.6,
       "stake": 1.25,
       "stake_label": "Strong",
       "favorite_type": "favorite",
@@ -55169,7 +55169,7 @@
       },
       "result": "pending",
       "created_at": "2026-05-24T00:05:09.222148+02:00",
-      "reasoning": "H. Dellien is selected against V. Royer in French Open. The model prices H. Dellien at 66.0% versus an implied probability of 54.9% from best odds 1.82. Market median is 1.76 across 9 bookmakers, leaving an estimated edge of +11.1%. Recent-form profile: H. Dellien last-10 win rate 90.0%, avg set diff +1.40, avg game diff +4.00; V. Royer last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.60. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "H. Dellien is selected against V. Royer in French Open. The model prices H. Dellien at 66.0% versus an implied probability of 54.9% from best odds 1.82. Market median is 1.75 across 10 bookmakers, leaving an estimated edge of +11.1%. Recent-form profile: H. Dellien last-10 win rate 90.0%, avg set diff +1.40, avg game diff +4.00; V. Royer last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.60. Pick type: favorite. Confidence score: 88.0."
     },
     {
       "pick_id": "f78004f96ebd35406c98e8428a3e4831",
@@ -56608,9 +56608,9 @@
     "by_stake_label": [
       {
         "group": "Strong",
-        "picks": 220,
+        "picks": 219,
         "settled": 201,
-        "pending": 11,
+        "pending": 10,
         "wins": 88,
         "losses": 113,
         "hit_rate": 43.8,
@@ -56634,9 +56634,9 @@
       },
       {
         "group": "Top Rated",
-        "picks": 66,
+        "picks": 67,
         "settled": 58,
-        "pending": 4,
+        "pending": 5,
         "wins": 23,
         "losses": 35,
         "hit_rate": 39.7,

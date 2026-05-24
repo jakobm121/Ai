@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T00:04:21.399574+02:00",
+  "generated_at": "2026-05-24T04:31:54.510342+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -16,10 +16,10 @@
     "days_ahead": 1
   },
   "summary": {
-    "fixtures_checked": 124,
+    "fixtures_checked": 139,
     "candidates_raw": 11,
     "final_picks": 11,
-    "skipped_ineligible": 0,
+    "skipped_ineligible": 3,
     "errors": 0
   },
   "picks": [
@@ -155,7 +155,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:05:20.336522+02:00",
+      "created_at": "2026-05-24T04:32:53.315158+02:00",
       "reasoning": "Y. Naito is selected against V. Ryser in W100 Takasaki. The model prices Y. Naito at 60.2% versus an implied probability of 50.0% from best odds 2.00. Market median is 1.90 across 6 bookmakers, leaving an estimated edge of +10.2%. Recent-form profile: Y. Naito last-10 win rate 80.0%, avg set diff +1.00, avg game diff +4.10; V. Ryser last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.60. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -290,7 +290,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:05:05.022348+02:00",
+      "created_at": "2026-05-24T04:32:37.924001+02:00",
       "reasoning": "P. Llamas Ruiz is selected against T. A. Tirante in French Open. The model prices P. Llamas Ruiz at 66.0% versus an implied probability of 46.1% from best odds 2.17. Market median is 2.10 across 9 bookmakers, leaving an estimated edge of +19.9%. Recent-form profile: P. Llamas Ruiz last-10 win rate 80.0%, avg set diff +0.90, avg game diff +3.10; T. A. Tirante last-10 win rate 60.0%, avg set diff +0.20, avg game diff +0.40. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -425,7 +425,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:04:35.158983+02:00",
+      "created_at": "2026-05-24T04:32:08.349177+02:00",
       "reasoning": "J. Duckworth is selected against G. Diallo in French Open. The model prices J. Duckworth at 66.0% versus an implied probability of 40.0% from best odds 2.50. Market median is 2.40 across 11 bookmakers, leaving an estimated edge of +26.0%. Recent-form profile: J. Duckworth last-10 win rate 70.0%, avg set diff +0.50, avg game diff +1.60; G. Diallo last-10 win rate 40.0%, avg set diff -0.40, avg game diff -2.00. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -454,9 +454,9 @@
       "gender": "men",
       "odds": 1.97,
       "best_bookmaker": "1xBet",
-      "market_median_odds": 1.93,
-      "bookmakers_used": 9,
-      "best_to_median_gap": 0.0207,
+      "market_median_odds": 1.92,
+      "bookmakers_used": 10,
+      "best_to_median_gap": 0.0234,
       "model_prob": 0.66,
       "implied_prob": 0.5076,
       "edge": 0.1524,
@@ -464,9 +464,9 @@
       "opponent_score": 33.9,
       "score_diff": 34.0,
       "confidence": 88,
-      "quality_score": 91.4,
-      "stake": 1.25,
-      "stake_label": "Strong",
+      "quality_score": 92.9,
+      "stake": 1.5,
+      "stake_label": "Top Rated",
       "favorite_type": "favorite",
       "h2h": {
         "matches": 0,
@@ -560,8 +560,8 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:05:06.412498+02:00",
-      "reasoning": "K. Jacquet is selected against M. Trungelliti in French Open. The model prices K. Jacquet at 66.0% versus an implied probability of 50.8% from best odds 1.97. Market median is 1.93 across 9 bookmakers, leaving an estimated edge of +15.2%. Recent-form profile: K. Jacquet last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.70; M. Trungelliti last-10 win rate 30.0%, avg set diff -0.50, avg game diff -0.90. Pick type: favorite. Confidence score: 88.0."
+      "created_at": "2026-05-24T04:32:39.325347+02:00",
+      "reasoning": "K. Jacquet is selected against M. Trungelliti in French Open. The model prices K. Jacquet at 66.0% versus an implied probability of 50.8% from best odds 1.97. Market median is 1.92 across 10 bookmakers, leaving an estimated edge of +15.2%. Recent-form profile: K. Jacquet last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.70; M. Trungelliti last-10 win rate 30.0%, avg set diff -0.50, avg game diff -0.90. Pick type: favorite. Confidence score: 88.0."
     },
     {
       "pick_id": "93a7822df12fc95f4add2c6aa6f1a016",
@@ -695,7 +695,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:04:33.764424+02:00",
+      "created_at": "2026-05-24T04:32:06.958956+02:00",
       "reasoning": "N. Borges is selected against T. M. Etcheverry in French Open. The model prices N. Borges at 51.5% versus an implied probability of 35.1% from best odds 2.85. Market median is 2.70 across 11 bookmakers, leaving an estimated edge of +16.4%. Recent-form profile: N. Borges last-10 win rate 40.0%, avg set diff -0.30, avg game diff -0.30; T. M. Etcheverry last-10 win rate 50.0%, avg set diff +0.00, avg game diff -0.60. Pick type: underdog. Confidence score: 78.1."
     },
     {
@@ -830,7 +830,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:04:30.899313+02:00",
+      "created_at": "2026-05-24T04:32:04.014968+02:00",
       "reasoning": "M. Bellucci is selected against Q. Halys in French Open. The model prices M. Bellucci at 60.0% versus an implied probability of 47.6% from best odds 2.10. Market median is 2.00 across 11 bookmakers, leaving an estimated edge of +12.4%. Recent-form profile: M. Bellucci last-10 win rate 50.0%, avg set diff -0.20, avg game diff -1.10; Q. Halys last-10 win rate 40.0%, avg set diff -0.20, avg game diff -0.20. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -965,7 +965,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:04:47.931499+02:00",
+      "created_at": "2026-05-24T04:32:21.029464+02:00",
       "reasoning": "S. Sorribes Tormo is selected against T. Korpatsch in French Open. The model prices S. Sorribes Tormo at 66.0% versus an implied probability of 45.2% from best odds 2.21. Market median is 2.12 across 11 bookmakers, leaving an estimated edge of +20.8%. Recent-form profile: S. Sorribes Tormo last-10 win rate 80.0%, avg set diff +0.80, avg game diff +1.40; T. Korpatsch last-10 win rate 70.0%, avg set diff +0.50, avg game diff +2.00. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -994,9 +994,9 @@
       "gender": "men",
       "odds": 1.82,
       "best_bookmaker": "1xBet",
-      "market_median_odds": 1.76,
-      "bookmakers_used": 9,
-      "best_to_median_gap": 0.0341,
+      "market_median_odds": 1.75,
+      "bookmakers_used": 10,
+      "best_to_median_gap": 0.043,
       "model_prob": 0.66,
       "implied_prob": 0.5495,
       "edge": 0.1105,
@@ -1004,7 +1004,7 @@
       "opponent_score": 40.4,
       "score_diff": 39.6,
       "confidence": 88,
-      "quality_score": 84.1,
+      "quality_score": 85.6,
       "stake": 1.25,
       "stake_label": "Strong",
       "favorite_type": "favorite",
@@ -1100,8 +1100,8 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:05:09.222148+02:00",
-      "reasoning": "H. Dellien is selected against V. Royer in French Open. The model prices H. Dellien at 66.0% versus an implied probability of 54.9% from best odds 1.82. Market median is 1.76 across 9 bookmakers, leaving an estimated edge of +11.1%. Recent-form profile: H. Dellien last-10 win rate 90.0%, avg set diff +1.40, avg game diff +4.00; V. Royer last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.60. Pick type: favorite. Confidence score: 88.0."
+      "created_at": "2026-05-24T04:32:42.110820+02:00",
+      "reasoning": "H. Dellien is selected against V. Royer in French Open. The model prices H. Dellien at 66.0% versus an implied probability of 54.9% from best odds 1.82. Market median is 1.75 across 10 bookmakers, leaving an estimated edge of +11.1%. Recent-form profile: H. Dellien last-10 win rate 90.0%, avg set diff +1.40, avg game diff +4.00; V. Royer last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.60. Pick type: favorite. Confidence score: 88.0."
     },
     {
       "pick_id": "f78004f96ebd35406c98e8428a3e4831",
@@ -1235,7 +1235,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:05:18.945465+02:00",
+      "created_at": "2026-05-24T04:32:51.930105+02:00",
       "reasoning": "M. Bassols is selected against E. Arango in French Open. The model prices M. Bassols at 66.0% versus an implied probability of 48.8% from best odds 2.05. Market median is 2.00 across 10 bookmakers, leaving an estimated edge of +17.2%. Recent-form profile: M. Bassols last-10 win rate 70.0%, avg set diff +0.90, avg game diff +2.90; E. Arango last-10 win rate 40.0%, avg set diff -0.20, avg game diff +1.20. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -1370,7 +1370,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:05:17.556040+02:00",
+      "created_at": "2026-05-24T04:32:50.547233+02:00",
       "reasoning": "S. Stephens is selected against S. Bejlek in French Open. The model prices S. Stephens at 60.0% versus an implied probability of 38.6% from best odds 2.59. Market median is 2.49 across 10 bookmakers, leaving an estimated edge of +21.4%. Recent-form profile: S. Stephens last-10 win rate 50.0%, avg set diff +0.00, avg game diff -0.40; S. Bejlek last-10 win rate 50.0%, avg set diff -0.10, avg game diff +0.00. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -1505,7 +1505,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-05-24T00:04:45.070561+02:00",
+      "created_at": "2026-05-24T04:32:18.236506+02:00",
       "reasoning": "D. Snigur is selected against C. Tauson in French Open. The model prices D. Snigur at 60.0% versus an implied probability of 38.9% from best odds 2.57. Market median is 2.49 across 11 bookmakers, leaving an estimated edge of +21.1%. Recent-form profile: D. Snigur last-10 win rate 80.0%, avg set diff +1.20, avg game diff +3.50; C. Tauson last-10 win rate 50.0%, avg set diff +0.30, avg game diff +1.00. Pick type: underdog. Confidence score: 88.0."
     }
   ]
