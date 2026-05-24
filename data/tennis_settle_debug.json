@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-24T11:47:57.261268+02:00",
-  "pending_checked": 22,
-  "updated": 1,
-  "still_pending": 21,
+  "generated_at": "2026-05-24T16:55:11.400504+02:00",
+  "pending_checked": 21,
+  "updated": 6,
+  "still_pending": 15,
   "not_found": 0,
   "errors": [],
   "checked": [
@@ -54,38 +54,38 @@
     {
       "match": "P. Llamas Ruiz - T. A. Tirante",
       "event_key": 12130167,
-      "status": "Set 1",
-      "winner": null,
-      "score": "0 - 0",
-      "changed": false,
-      "reason": "keep_pending_status:set 1"
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "1 - 3",
+      "changed": true,
+      "reason": "settled"
     },
     {
       "match": "J. Duckworth - G. Diallo",
       "event_key": 12129907,
-      "status": "Set 1",
-      "winner": null,
-      "score": "0 - 0",
-      "changed": false,
-      "reason": "keep_pending_status:set 1"
+      "status": "Retired",
+      "winner": "First Player",
+      "score": "1 - 0",
+      "changed": true,
+      "reason": "void_status:retired"
     },
     {
       "match": "K. Jacquet - M. Trungelliti",
       "event_key": 12130169,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 3",
+      "changed": true,
+      "reason": "settled"
     },
     {
       "match": "T. M. Etcheverry - N. Borges",
       "event_key": 12129906,
-      "status": "",
+      "status": "Set 3",
       "winner": null,
-      "score": "-",
+      "score": "0 - 2",
       "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "reason": "keep_pending_status:set 3"
     },
     {
       "match": "Q. Halys - M. Bellucci",
@@ -99,11 +99,11 @@
     {
       "match": "S. Sorribes Tormo - T. Korpatsch",
       "event_key": 12129932,
-      "status": "",
+      "status": "Set 2",
       "winner": null,
-      "score": "-",
+      "score": "0 - 1",
       "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "reason": "keep_pending_status:set 2"
     },
     {
       "match": "H. Dellien - V. Royer",
@@ -142,8 +142,17 @@
       "reason": "keep_pending_status:unknown"
     },
     {
-      "match": "V. Grammatikopoulou - K. Kroitor",
-      "event_key": 12130326,
+      "match": "L. Gagliardo - M. Van Der Meerschen",
+      "event_key": 12130324,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "1 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "N. Tepmahc - D. De Jonge",
+      "event_key": 12130307,
       "status": "Finished",
       "winner": "Second Player",
       "score": "0 - 2",
@@ -151,49 +160,31 @@
       "reason": "settled"
     },
     {
-      "match": "L. Gagliardo - M. Van Der Meerschen",
-      "event_key": 12130324,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "N. Tepmahc - D. De Jonge",
-      "event_key": 12130307,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
       "match": "P. Sakamoto - L. Angelini",
       "event_key": 12130374,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 0",
+      "changed": true,
+      "reason": "settled"
     },
     {
       "match": "I. Xilas - S. Vincent Ruggeri",
       "event_key": 12130388,
-      "status": "",
-      "winner": null,
+      "status": "Walk Over",
+      "winner": "First Player",
       "score": "-",
       "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "reason": "keep_pending_status:walk over"
     },
     {
       "match": "Y. Ghazouani Durand - J. Sels",
       "event_key": 12130390,
-      "status": "",
+      "status": "Set 2",
       "winner": null,
-      "score": "-",
+      "score": "0 - 1",
       "changed": false,
-      "reason": "keep_pending_status:unknown"
+      "reason": "keep_pending_status:set 2"
     },
     {
       "match": "L. Sonego - P. Herbert",
