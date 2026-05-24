@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-24T11:28:13.684457+02:00",
+  "generated_at": "2026-05-24T12:55:12.220779+02:00",
   "fixtures_total": 140,
-  "scanned": 90,
+  "scanned": 73,
   "skipped": [
     {
       "event_key": 12129888,
@@ -66,9 +66,7 @@
     {
       "event_key": 12129922,
       "match": "K. Volynets - C. Burel",
-      "reason": "not_enough_recent_matches",
-      "first_matches": 10,
-      "second_matches": 2
+      "reason": "not_pregame"
     },
     {
       "event_key": 12129928,
@@ -103,7 +101,7 @@
     {
       "event_key": 12130169,
       "match": "K. Jacquet - M. Trungelliti",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130170,
@@ -124,6 +122,11 @@
       "event_key": 12130178,
       "match": "A. Blockx - C. Wong",
       "reason": "no_totals_market"
+    },
+    {
+      "event_key": 12130183,
+      "match": "S. Kraus - B. Bencic",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130184,
@@ -178,6 +181,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12130280,
+      "match": "N. Berecoechea - A. Dudeney",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12130281,
       "match": "A. Shubladze - Y. Yang",
       "reason": "not_pregame"
@@ -185,6 +193,16 @@
     {
       "event_key": 12130282,
       "match": "Shimizu/ Shimizu - Lee/ Wong Hong Yi",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12130307,
+      "match": "N. Tepmahc - D. De Jonge",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12130319,
+      "match": "B. Artnak - G. La Vela",
       "reason": "not_pregame"
     },
     {
@@ -220,7 +238,7 @@
     {
       "event_key": 12130331,
       "match": "Cooper/ Paganetti - Blazka/ Holder",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130332,
@@ -270,7 +288,7 @@
     {
       "event_key": 12130341,
       "match": "E. Jamshidi - M. Van Zyl",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130342,
@@ -297,17 +315,17 @@
     {
       "event_key": 12130349,
       "match": "P. Brown - P. Buldorini",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130350,
       "match": "G. Dalmasso - M. Nawa",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130351,
       "match": "M. Gonzalez Fernandez - O. Shimanov",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130352,
@@ -372,7 +390,7 @@
     {
       "event_key": 12130364,
       "match": "M. Braun - S. A. Andreescu",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130365,
@@ -382,7 +400,7 @@
     {
       "event_key": 12130366,
       "match": "A. Martinez - S. Banthia",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130367,
@@ -412,7 +430,12 @@
     {
       "event_key": 12130372,
       "match": "T. Berkieta - M. Bekeni",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12130374,
+      "match": "P. Sakamoto - L. Angelini",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130375,
@@ -457,6 +480,21 @@
     {
       "event_key": 12130383,
       "match": "L. Tu - P. Bertasi",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12130384,
+      "match": "F. Arnaboldi - H. S. Callejon",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12130385,
+      "match": "S. Nam Ji - L. Lokoli",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12130386,
+      "match": "C. Sanchez Jover - P. O. Fellin",
       "reason": "not_pregame"
     },
     {
@@ -550,7 +588,7 @@
       "reason": "not_pregame"
     }
   ],
-  "candidates_raw": 60,
+  "candidates_raw": 47,
   "errors": [],
   "shadow_modules": {
     "set_betting_signal": true,
@@ -569,9 +607,9 @@
     "under_module_cap": 4.8
   },
   "risk_summary": {
-    "floor_clamped_candidates": 33,
+    "floor_clamped_candidates": 28,
     "ceiling_clamped_candidates": 0,
-    "low_sample_candidates": 10,
-    "weak_set_betting_candidates": 60
+    "low_sample_candidates": 8,
+    "weak_set_betting_candidates": 47
   }
 }
