@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-24T12:55:12.220779+02:00",
+  "generated_at": "2026-05-24T14:41:11.146797+02:00",
   "fixtures_total": 140,
-  "scanned": 73,
+  "scanned": 56,
   "skipped": [
     {
       "event_key": 12129888,
@@ -16,7 +16,7 @@
     {
       "event_key": 12129891,
       "match": "T. Machac - Z. Bergs",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12129895,
@@ -61,11 +61,16 @@
     {
       "event_key": 12129916,
       "match": "B. Bonzi - A. Zverev",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12129922,
       "match": "K. Volynets - C. Burel",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12129925,
+      "match": "T. Valentova - M. Linette",
       "reason": "not_pregame"
     },
     {
@@ -81,6 +86,16 @@
     {
       "event_key": 12129950,
       "match": "M. Kostyuk - O. Selekhmeteva",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12129964,
+      "match": "A. Blinkova - Y. Starodubtseva",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12129966,
+      "match": "H. Baptiste - B. Krejcikova",
       "reason": "not_pregame"
     },
     {
@@ -131,9 +146,7 @@
     {
       "event_key": 12130184,
       "match": "D. Kovinic - Xiy. Wang",
-      "reason": "not_enough_recent_matches",
-      "first_matches": 2,
-      "second_matches": 8
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130191,
@@ -203,6 +216,16 @@
     {
       "event_key": 12130319,
       "match": "B. Artnak - G. La Vela",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12130322,
+      "match": "D. Obradovic - E. Vanshelboim",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12130324,
+      "match": "L. Gagliardo - M. Van Der Meerschen",
       "reason": "not_pregame"
     },
     {
@@ -291,13 +314,6 @@
       "reason": "not_pregame"
     },
     {
-      "event_key": 12130342,
-      "match": "M. Molder - P. Karthik",
-      "reason": "not_enough_recent_matches",
-      "first_matches": 5,
-      "second_matches": 6
-    },
-    {
       "event_key": 12130346,
       "match": "D. Beckles - N. Honda",
       "reason": "not_pregame"
@@ -330,12 +346,12 @@
     {
       "event_key": 12130352,
       "match": "L. Koenig - K. van Wyk",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130353,
       "match": "O. Weightman - C. Roothman",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130354,
@@ -395,7 +411,7 @@
     {
       "event_key": 12130365,
       "match": "A. Kadhe - M. Janvier",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130366,
@@ -405,7 +421,7 @@
     {
       "event_key": 12130367,
       "match": "S. Latinovic - A. Paulson",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130368,
@@ -433,6 +449,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12130373,
+      "match": "D. Rapagnetta - I. Lopez Morillo",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12130374,
       "match": "P. Sakamoto - L. Angelini",
       "reason": "not_pregame"
@@ -440,7 +461,7 @@
     {
       "event_key": 12130375,
       "match": "P. Fajta - T. Lanik",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130376,
@@ -450,7 +471,7 @@
     {
       "event_key": 12130377,
       "match": "D. Macej - L. Wiedenmann",
-      "reason": "no_totals_market"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130378,
@@ -498,6 +519,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12130387,
+      "match": "A. Battiston - S. Pieri",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12130391,
       "match": "P. Nesterov - D. Bagnolini",
       "reason": "no_totals_market"
@@ -505,7 +531,7 @@
     {
       "event_key": 12130393,
       "match": "S. H. Haita - R. M. Papoe",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12130510,
@@ -588,7 +614,7 @@
       "reason": "not_pregame"
     }
   ],
-  "candidates_raw": 47,
+  "candidates_raw": 36,
   "errors": [],
   "shadow_modules": {
     "set_betting_signal": true,
@@ -607,9 +633,9 @@
     "under_module_cap": 4.8
   },
   "risk_summary": {
-    "floor_clamped_candidates": 28,
+    "floor_clamped_candidates": 19,
     "ceiling_clamped_candidates": 0,
-    "low_sample_candidates": 8,
-    "weak_set_betting_candidates": 47
+    "low_sample_candidates": 1,
+    "weak_set_betting_candidates": 36
   }
 }
