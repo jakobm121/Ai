@@ -47,7 +47,17 @@
     "over_final": 2,
     "under_final": 15,
     "floor_clamped_final": 9,
-    "risk_capped_final": 4
+    "risk_capped_final": 4,
+    "settled_picks": 0,
+    "pending_picks": 17,
+    "pending_review": 0,
+    "won": 0,
+    "lost": 0,
+    "push": 0,
+    "void": 0,
+    "total_staked": 0,
+    "total_profit": 0,
+    "roi_percent": 0.0
   },
   "picks": [
     {
@@ -217,7 +227,17 @@
       "h2h_matches": 1,
       "result": "pending",
       "created_at": "2026-05-24T10:32:35.741566+02:00",
-      "reasoning": "OVER 21.5 games selected in M. Frech - G. Ruse at line 21.5. Shadow expected total games: 25.33; market line: 21.5. Model probability 64.0% versus implied 51.0% from best odds 1.96. Edge: +13.0%. Bookmakers used: 10. Confidence: 97.0. Module score: 2.5. Risk flags: weak_set_betting_market."
+      "reasoning": "OVER 21.5 games selected in M. Frech - G. Ruse at line 21.5. Shadow expected total games: 25.33; market line: 21.5. Model probability 64.0% versus implied 51.0% from best odds 1.96. Edge: +13.0%. Bookmakers used: 10. Confidence: 97.0. Module score: 2.5. Risk flags: weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:55.417180+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "42ee323f42290b5f0029905667b5fca8",
@@ -386,7 +406,17 @@
       "h2h_matches": 1,
       "result": "pending",
       "created_at": "2026-05-24T10:32:27.563389+02:00",
-      "reasoning": "OVER 21.5 games selected in S. Sorribes Tormo - T. Korpatsch at line 21.5. Shadow expected total games: 23.36; market line: 21.5. Model probability 64.0% versus implied 48.8% from best odds 2.05. Edge: +15.2%. Bookmakers used: 9. Confidence: 89.3. Module score: 4.5. Risk flags: weak_set_betting_market."
+      "reasoning": "OVER 21.5 games selected in S. Sorribes Tormo - T. Korpatsch at line 21.5. Shadow expected total games: 23.36; market line: 21.5. Model probability 64.0% versus implied 48.8% from best odds 2.05. Edge: +15.2%. Bookmakers used: 9. Confidence: 89.3. Module score: 4.5. Risk flags: weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:54.036466+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "a5a4fa0534c5c7ce3b380750c3cb8fad",
@@ -555,7 +585,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:32:40.477838+02:00",
-      "reasoning": "UNDER 21.5 games selected in H. Baptiste - B. Krejcikova at line 21.5. Shadow expected total games: 17.96; market line: 21.5. Model probability 58.0% versus implied 48.8% from best odds 2.05. Edge: +9.2%. Bookmakers used: 9. Confidence: 91.1. Module score: 2.7. Risk flags: weak_set_betting_market."
+      "reasoning": "UNDER 21.5 games selected in H. Baptiste - B. Krejcikova at line 21.5. Shadow expected total games: 17.96; market line: 21.5. Model probability 58.0% versus implied 48.8% from best odds 2.05. Edge: +9.2%. Bookmakers used: 9. Confidence: 91.1. Module score: 2.7. Risk flags: weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:53.349437+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "5a1165e418e804c70eed7976df6b50a4",
@@ -725,7 +765,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:32:54.778639+02:00",
-      "reasoning": "UNDER 20.5 games selected in S. Bejlek - S. Stephens at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 16.13, then clamped. Model probability 58.0% versus implied 47.6% from best odds 2.10. Edge: +10.4%. Bookmakers used: 8. Confidence: 84.3. Module score: 3.7. Risk flags: floor_clamped, weak_set_betting_market."
+      "reasoning": "UNDER 20.5 games selected in S. Bejlek - S. Stephens at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 16.13, then clamped. Model probability 58.0% versus implied 47.6% from best odds 2.10. Edge: +10.4%. Bookmakers used: 8. Confidence: 84.3. Module score: 3.7. Risk flags: floor_clamped, weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:58.168395+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "33dce8f272dcc73b0d2027494cf808e7",
@@ -895,7 +945,17 @@
       "h2h_matches": 1,
       "result": "pending",
       "created_at": "2026-05-24T10:32:24.404153+02:00",
-      "reasoning": "UNDER 20.5 games selected in C. Tauson - D. Snigur at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 15.17, then clamped. Model probability 58.0% versus implied 47.6% from best odds 2.10. Edge: +10.4%. Bookmakers used: 7. Confidence: 83.5. Module score: 3.3. Risk flags: floor_clamped, weak_set_betting_market."
+      "reasoning": "UNDER 20.5 games selected in C. Tauson - D. Snigur at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 15.17, then clamped. Model probability 58.0% versus implied 47.6% from best odds 2.10. Edge: +10.4%. Bookmakers used: 7. Confidence: 83.5. Module score: 3.3. Risk flags: floor_clamped, weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:56.792708+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "e1e8a75c45e897ea704632001f9564db",
@@ -1064,7 +1124,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:32:22.632885+02:00",
-      "reasoning": "UNDER 20.5 games selected in A. Tomljanovic - C. McNally at line 20.5. Shadow expected total games: 17.60; market line: 20.5. Model probability 58.0% versus implied 52.1% from best odds 1.92. Edge: +5.9%. Bookmakers used: 9. Confidence: 90.3. Module score: 2.8. Risk flags: weak_set_betting_market."
+      "reasoning": "UNDER 20.5 games selected in A. Tomljanovic - C. McNally at line 20.5. Shadow expected total games: 17.60; market line: 20.5. Model probability 58.0% versus implied 52.1% from best odds 1.92. Edge: +5.9%. Bookmakers used: 9. Confidence: 90.3. Module score: 2.8. Risk flags: weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:47.671731+02:00",
+      "settle_status": "set 1",
+      "scores_raw": [
+        {
+          "score_first": "2",
+          "score_second": "1",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_set 1"
     },
     {
       "pick_id": "05ea8df7404b5c60ac96e995acca8063",
@@ -1234,7 +1304,17 @@
       "h2h_matches": 2,
       "result": "pending",
       "created_at": "2026-05-24T10:32:34.052470+02:00",
-      "reasoning": "UNDER 20.5 games selected in F. Jones - B. Haddad Maia at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 16.17, then clamped. Model probability 58.0% versus implied 46.5% from best odds 2.15. Edge: +11.5%. Bookmakers used: 6. Confidence: 82.7. Module score: 3.1. Risk flags: floor_clamped, weak_set_betting_market."
+      "reasoning": "UNDER 20.5 games selected in F. Jones - B. Haddad Maia at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 16.17, then clamped. Model probability 58.0% versus implied 46.5% from best odds 2.15. Edge: +11.5%. Bookmakers used: 6. Confidence: 82.7. Module score: 3.1. Risk flags: floor_clamped, weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:52.662208+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "bee338748d6332bc31cfd2b87b737b04",
@@ -1403,7 +1483,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:32:29.280521+02:00",
-      "reasoning": "UNDER 20.5 games selected in E. Raducanu - S. Sierra at line 20.5. Shadow expected total games: 18.10; market line: 20.5. Model probability 58.0% versus implied 45.9% from best odds 2.18. Edge: +12.1%. Bookmakers used: 5. Confidence: 81.5. Module score: 1.7. Risk flags: weak_set_betting_market."
+      "reasoning": "UNDER 20.5 games selected in E. Raducanu - S. Sierra at line 20.5. Shadow expected total games: 18.10; market line: 20.5. Model probability 58.0% versus implied 45.9% from best odds 2.18. Edge: +12.1%. Bookmakers used: 5. Confidence: 81.5. Module score: 1.7. Risk flags: weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:54.727059+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "440875bbe2e63cd66ad013c80d007070",
@@ -1574,7 +1664,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:32:49.941563+02:00",
-      "reasoning": "UNDER 19.5 games selected in S. Kraus - B. Bencic at line 19.5. Shadow expected total games: 17.20; market line: 19.5. Raw expected was 15.71, then clamped. Model probability 58.0% versus implied 48.8% from best odds 2.05. Edge: +9.2%. Bookmakers used: 9. Confidence: 81.1. Module score: 3.35. Risk flags: floor_clamped, weak_set_betting_market, low_line_under."
+      "reasoning": "UNDER 19.5 games selected in S. Kraus - B. Bencic at line 19.5. Shadow expected total games: 17.20; market line: 19.5. Raw expected was 15.71, then clamped. Model probability 58.0% versus implied 48.8% from best odds 2.05. Edge: +9.2%. Bookmakers used: 9. Confidence: 81.1. Module score: 3.35. Risk flags: floor_clamped, weak_set_betting_market, low_line_under.",
+      "settle_checked_at": "2026-05-24T11:25:51.280112+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "9f067d19563368343fa4bd8fa7990734",
@@ -1743,7 +1843,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:33:37.839273+02:00",
-      "reasoning": "UNDER 20.5 games selected in P. Sakamoto - L. Angelini at line 20.5. Shadow expected total games: 17.87; market line: 20.5. Model probability 58.0% versus implied 46.5% from best odds 2.15. Edge: +11.5%. Bookmakers used: 3. Confidence: 81.5. Module score: 2.3. Risk flags: weak_set_betting_market."
+      "reasoning": "UNDER 20.5 games selected in P. Sakamoto - L. Angelini at line 20.5. Shadow expected total games: 17.87; market line: 20.5. Model probability 58.0% versus implied 46.5% from best odds 2.15. Edge: +11.5%. Bookmakers used: 3. Confidence: 81.5. Module score: 2.3. Risk flags: weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:49.826293+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "1f4cb43227aad078021ed22f19a63594",
@@ -1912,7 +2022,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:32:25.967699+02:00",
-      "reasoning": "UNDER 21.5 games selected in L. Tagger - Xin. Wang at line 21.5. Shadow expected total games: 19.94; market line: 21.5. Model probability 58.0% versus implied 49.5% from best odds 2.02. Edge: +8.5%. Bookmakers used: 9. Confidence: 80.5. Module score: 0.6. Risk flags: weak_set_betting_market."
+      "reasoning": "UNDER 21.5 games selected in L. Tagger - Xin. Wang at line 21.5. Shadow expected total games: 19.94; market line: 21.5. Model probability 58.0% versus implied 49.5% from best odds 2.02. Edge: +8.5%. Bookmakers used: 9. Confidence: 80.5. Module score: 0.6. Risk flags: weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:49.140184+02:00",
+      "settle_status": "set 1",
+      "scores_raw": [
+        {
+          "score_first": "2",
+          "score_second": "1",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_set 1"
     },
     {
       "pick_id": "a8da34d65ea696675ceb55349b1eb605",
@@ -2081,7 +2201,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:33:51.146254+02:00",
-      "reasoning": "UNDER 20.5 games selected in C. Sanchez Jover - P. O. Fellin at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Model probability 58.0% versus implied 48.3% from best odds 2.07. Edge: +9.7%. Bookmakers used: 3. Confidence: 84.3. Module score: 2.9. Risk flags: weak_set_betting_market."
+      "reasoning": "UNDER 20.5 games selected in C. Sanchez Jover - P. O. Fellin at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Model probability 58.0% versus implied 48.3% from best odds 2.07. Edge: +9.7%. Bookmakers used: 3. Confidence: 84.3. Module score: 2.9. Risk flags: weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:50.597485+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "ef51bb1fff544ea52726383b11cd457f",
@@ -2252,7 +2382,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:32:56.368479+02:00",
-      "reasoning": "UNDER 20.5 games selected in M. Bassols - E. Arango at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 15.70, then clamped. Model probability 58.0% versus implied 46.5% from best odds 2.15. Edge: +11.5%. Bookmakers used: 6. Confidence: 81.2. Module score: 2.7. Risk flags: low_sample, floor_clamped, weak_set_betting_market."
+      "reasoning": "UNDER 20.5 games selected in M. Bassols - E. Arango at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 15.70, then clamped. Model probability 58.0% versus implied 46.5% from best odds 2.15. Edge: +11.5%. Bookmakers used: 6. Confidence: 81.2. Module score: 2.7. Risk flags: low_sample, floor_clamped, weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:57.477288+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "2e533d74b232c22881830163ba467e16",
@@ -2423,7 +2563,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:32:20.991376+02:00",
-      "reasoning": "UNDER 19.5 games selected in T. Valentova - M. Linette at line 19.5. Shadow expected total games: 17.20; market line: 19.5. Raw expected was 13.64, then clamped. Model probability 58.0% versus implied 47.2% from best odds 2.12. Edge: +10.8%. Bookmakers used: 7. Confidence: 77.5. Module score: 3.05. Risk flags: floor_clamped, weak_set_betting_market, low_line_under."
+      "reasoning": "UNDER 19.5 games selected in T. Valentova - M. Linette at line 19.5. Shadow expected total games: 17.20; market line: 19.5. Raw expected was 13.64, then clamped. Model probability 58.0% versus implied 47.2% from best odds 2.12. Edge: +10.8%. Bookmakers used: 7. Confidence: 77.5. Module score: 3.05. Risk flags: floor_clamped, weak_set_betting_market, low_line_under.",
+      "settle_checked_at": "2026-05-24T11:25:51.977574+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "566b1b53b19c368cb9240a9cd528bfb8",
@@ -2593,7 +2743,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:33:09.059444+02:00",
-      "reasoning": "UNDER 20.5 games selected in L. Gagliardo - M. Van Der Meerschen at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 15.85, then clamped. Model probability 58.0% versus implied 47.6% from best odds 2.10. Edge: +10.4%. Bookmakers used: 4. Confidence: 81.1. Module score: 3.1. Risk flags: floor_clamped, weak_set_betting_market."
+      "reasoning": "UNDER 20.5 games selected in L. Gagliardo - M. Van Der Meerschen at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 15.85, then clamped. Model probability 58.0% versus implied 47.6% from best odds 2.10. Edge: +10.4%. Bookmakers used: 4. Confidence: 81.1. Module score: 3.1. Risk flags: floor_clamped, weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:46.948808+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     },
     {
       "pick_id": "60cfa8109d6e03e3b38ab4d79d0a81d2",
@@ -2765,7 +2925,17 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:32:53.206505+02:00",
-      "reasoning": "UNDER 19.5 games selected in L. Bronzetti - M. Bouzkova at line 19.5. Shadow expected total games: 17.20; market line: 19.5. Raw expected was 14.09, then clamped. Model probability 58.0% versus implied 48.8% from best odds 2.05. Edge: +9.2%. Bookmakers used: 8. Confidence: 78.8. Module score: 3.45. Risk flags: low_sample, floor_clamped, weak_set_betting_market, low_line_under."
+      "reasoning": "UNDER 19.5 games selected in L. Bronzetti - M. Bouzkova at line 19.5. Shadow expected total games: 17.20; market line: 19.5. Raw expected was 14.09, then clamped. Model probability 58.0% versus implied 48.8% from best odds 2.05. Edge: +9.2%. Bookmakers used: 8. Confidence: 78.8. Module score: 3.45. Risk flags: low_sample, floor_clamped, weak_set_betting_market, low_line_under.",
+      "settle_checked_at": "2026-05-24T11:25:48.369261+02:00",
+      "settle_status": "set 1",
+      "scores_raw": [
+        {
+          "score_first": "1",
+          "score_second": "2",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_set 1"
     },
     {
       "pick_id": "a071d9cb4255f5e7f02d806f0bfce9ad",
@@ -2935,7 +3105,18 @@
       "h2h_matches": 0,
       "result": "pending",
       "created_at": "2026-05-24T10:33:57.456995+02:00",
-      "reasoning": "UNDER 20.5 games selected in Y. Ghazouani Durand - J. Sels at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 15.24, then clamped. Model probability 58.0% versus implied 48.8% from best odds 2.05. Edge: +9.2%. Bookmakers used: 3. Confidence: 82.3. Module score: 3.8. Risk flags: floor_clamped, weak_set_betting_market."
+      "reasoning": "UNDER 20.5 games selected in Y. Ghazouani Durand - J. Sels at line 20.5. Shadow expected total games: 17.20; market line: 20.5. Raw expected was 15.24, then clamped. Model probability 58.0% versus implied 48.8% from best odds 2.05. Edge: +9.2%. Bookmakers used: 3. Confidence: 82.3. Module score: 3.8. Risk flags: floor_clamped, weak_set_betting_market.",
+      "settle_checked_at": "2026-05-24T11:25:56.105249+02:00",
+      "settle_status": "",
+      "scores_raw": [
+        {
+          "score_first": "0",
+          "score_second": "0",
+          "score_set": "1"
+        }
+      ],
+      "settle_note": "not_finished_unknown"
     }
-  ]
+  ],
+  "last_settled_at": "2026-05-24T11:25:58.168971+02:00"
 }
