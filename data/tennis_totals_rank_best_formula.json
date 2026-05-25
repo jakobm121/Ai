@@ -1,0 +1,262 @@
+{
+  "generated_at_utc": "2026-05-25T21:57:40.662309+00:00",
+  "input_file": "data/tennis_totals_results.json",
+  "top_cuts": [
+    50,
+    100,
+    150
+  ],
+  "tier_stakes": {
+    "elite": 0.75,
+    "premium": 0.5,
+    "value": 0.25
+  },
+  "formula": {
+    "w_confidence": 15.23847,
+    "w_quality": 25.08882,
+    "w_edge": 16.92941,
+    "w_abs_margin": 3.90769,
+    "w_bookmakers": 9.34103,
+    "w_market_gap": 18.99279,
+    "w_avg_three": 6.1766,
+    "w_avg_close": -2.43833,
+    "w_min_recent": 6.52011,
+    "p_h2h": 11.71077,
+    "p_strength_gap_high": 0.22275,
+    "p_odds_high": 3.99825,
+    "p_low_line_under": 0.46778,
+    "p_qualification": 1.0072,
+    "b_over": -1.89001,
+    "b_under": 1.26209
+  },
+  "summary_by_cut": {
+    "top_50": {
+      "picks": 50,
+      "settled_non_void": 46,
+      "wins": 27,
+      "losses": 19,
+      "voids": 4,
+      "winrate": 0.587,
+      "avg_odds": 2.0813,
+      "avg_edge": 0.09988,
+      "avg_confidence": 90.113,
+      "avg_quality": 85.987,
+      "total_staked_units": 34.5,
+      "profit": 7.53,
+      "roi_on_actual_staked": 0.218261,
+      "max_drawdown": -2.25,
+      "longest_losing_streak": 3,
+      "profit_by_week": {
+        "2026-W19": 4.455,
+        "2026-W20": 1.8525,
+        "2026-W21": 1.935,
+        "2026-W22": -0.7125
+      },
+      "profit_by_month": {
+        "2026-05": 7.53
+      },
+      "profit_by_side": {
+        "over": 1.7475,
+        "under": 5.7825
+      },
+      "weeks_positive_ratio": 0.75,
+      "months_positive_ratio": 1.0,
+      "equity_curve_last": [
+        8.1525,
+        8.9175,
+        8.1675,
+        8.955,
+        9.7425,
+        8.9925,
+        8.2425,
+        9.03,
+        8.28,
+        7.53
+      ],
+      "by_tier": {
+        "elite": {
+          "picks": 46,
+          "wins": 27,
+          "losses": 19,
+          "winrate": 0.587,
+          "staked": 34.5,
+          "profit": 7.53,
+          "roi_on_actual_staked": 0.218261,
+          "avg_odds": 2.0813
+        },
+        "premium": {
+          "picks": 0,
+          "wins": 0,
+          "losses": 0,
+          "winrate": 0,
+          "staked": 0,
+          "profit": 0,
+          "roi_on_actual_staked": 0,
+          "avg_odds": 0
+        },
+        "value": {
+          "picks": 0,
+          "wins": 0,
+          "losses": 0,
+          "winrate": 0,
+          "staked": 0,
+          "profit": 0,
+          "roi_on_actual_staked": 0,
+          "avg_odds": 0
+        }
+      }
+    },
+    "top_100": {
+      "picks": 100,
+      "settled_non_void": 95,
+      "wins": 50,
+      "losses": 45,
+      "voids": 5,
+      "winrate": 0.5263,
+      "avg_odds": 2.0787,
+      "avg_edge": 0.09682,
+      "avg_confidence": 89.447,
+      "avg_quality": 84.534,
+      "total_staked_units": 59.0,
+      "profit": 6.875,
+      "roi_on_actual_staked": 0.116525,
+      "max_drawdown": -3.17,
+      "longest_losing_streak": 3,
+      "profit_by_week": {
+        "2026-W19": 5.095,
+        "2026-W20": 1.1225,
+        "2026-W21": 1.87,
+        "2026-W22": -1.2125
+      },
+      "profit_by_month": {
+        "2026-05": 6.875
+      },
+      "profit_by_side": {
+        "over": -0.2225,
+        "under": 7.0975
+      },
+      "weeks_positive_ratio": 0.75,
+      "months_positive_ratio": 1.0,
+      "equity_curve_last": [
+        9.0375,
+        8.2875,
+        7.5375,
+        8.0875,
+        8.875,
+        8.125,
+        7.625,
+        8.125,
+        7.375,
+        6.875
+      ],
+      "by_tier": {
+        "elite": {
+          "picks": 46,
+          "wins": 27,
+          "losses": 19,
+          "winrate": 0.587,
+          "staked": 34.5,
+          "profit": 7.53,
+          "roi_on_actual_staked": 0.218261,
+          "avg_odds": 2.0813
+        },
+        "premium": {
+          "picks": 49,
+          "wins": 23,
+          "losses": 26,
+          "winrate": 0.4694,
+          "staked": 24.5,
+          "profit": -0.655,
+          "roi_on_actual_staked": -0.026735,
+          "avg_odds": 2.0763
+        },
+        "value": {
+          "picks": 0,
+          "wins": 0,
+          "losses": 0,
+          "winrate": 0,
+          "staked": 0,
+          "profit": 0,
+          "roi_on_actual_staked": 0,
+          "avg_odds": 0
+        }
+      }
+    },
+    "top_150": {
+      "picks": 150,
+      "settled_non_void": 143,
+      "wins": 75,
+      "losses": 68,
+      "voids": 7,
+      "winrate": 0.5245,
+      "avg_odds": 2.0762,
+      "avg_edge": 0.09611,
+      "avg_confidence": 89.241,
+      "avg_quality": 83.983,
+      "total_staked_units": 71.0,
+      "profit": 7.8225,
+      "roi_on_actual_staked": 0.110176,
+      "max_drawdown": -3.37,
+      "longest_losing_streak": 4,
+      "profit_by_week": {
+        "2026-W19": 5.18,
+        "2026-W20": 2.565,
+        "2026-W21": 1.52,
+        "2026-W22": -1.4425
+      },
+      "profit_by_month": {
+        "2026-05": 7.8225
+      },
+      "profit_by_side": {
+        "over": -0.3025,
+        "under": 8.125
+      },
+      "weeks_positive_ratio": 0.75,
+      "months_positive_ratio": 1.0,
+      "equity_curve_last": [
+        9.265,
+        10.0525,
+        9.3025,
+        9.5725,
+        9.3225,
+        8.8225,
+        9.3225,
+        8.5725,
+        8.3225,
+        7.8225
+      ],
+      "by_tier": {
+        "elite": {
+          "picks": 46,
+          "wins": 27,
+          "losses": 19,
+          "winrate": 0.587,
+          "staked": 34.5,
+          "profit": 7.53,
+          "roi_on_actual_staked": 0.218261,
+          "avg_odds": 2.0813
+        },
+        "premium": {
+          "picks": 49,
+          "wins": 23,
+          "losses": 26,
+          "winrate": 0.4694,
+          "staked": 24.5,
+          "profit": -0.655,
+          "roi_on_actual_staked": -0.026735,
+          "avg_odds": 2.0763
+        },
+        "value": {
+          "picks": 48,
+          "wins": 25,
+          "losses": 23,
+          "winrate": 0.5208,
+          "staked": 12.0,
+          "profit": 0.9475,
+          "roi_on_actual_staked": 0.078958,
+          "avg_odds": 2.071
+        }
+      }
+    }
+  }
+}
