@@ -3,11 +3,6 @@ name: Tennis Totals Optimizer V2
 on:
   workflow_dispatch:
 
-  schedule:
-    # Vsak dan ob 23:30 po Sloveniji v zimskem času / 22:30 UTC.
-    # Poleti bo zaradi DST zamik 1 uro.
-    - cron: "30 22 * * *"
-
 permissions:
   contents: write
 
@@ -16,43 +11,49 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  optimize:
+  run-optimizer:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync branch before run
+        run: |
+          git pull --rebase origin main
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Check input file
+      - name: Install dependencies
         run: |
-          test -f data/tennis_totals_results.json || {
-            echo "Missing data/tennis_totals_results.json"
-            exit 1
-          }
+          python -m pip install --upgrade pip
 
-      - name: Run Tennis Totals Optimizer V2
+      - name: Run tennis totals optimizer v2
         run: |
           python scripts/tennis_totals_optimizer_v2.py
 
-      - name: Commit optimizer outputs
+      - name: Commit and push optimizer outputs
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add data/tennis_totals_optimizer_v2_report.json
-          git add data/tennis_totals_ranked_top100.json
-          git add data/tennis_totals_ranked_top200.json
-          git add data/tennis_totals_ranked_top300.json
+          git add data/tennis_totals_optimizer_v2_report.json \
+                  data/tennis_totals_ranked_top100.json \
+                  data/tennis_totals_ranked_top200.json \
+                  data/tennis_totals_ranked_top300.json
 
           if git diff --cached --quiet; then
-            echo "No optimizer changes to commit."
-          else
-            git commit -m "Update tennis totals optimizer v2 outputs"
-            git push
+            echo "No changes to commit"
+            exit 0
           fi
+
+          git commit -m "Update tennis totals optimizer v2 outputs"
+
+          git pull --rebase origin main
+          git push origin main
