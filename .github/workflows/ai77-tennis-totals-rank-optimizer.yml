@@ -1,0 +1,56 @@
+name: AI77 Tennis Totals Rank Optimizer
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs every day at 23:45 Europe/Ljubljana winter time approximation.
+    # GitHub cron uses UTC.
+    - cron: "45 22 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  rank-optimizer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check input file
+        run: |
+          if [ ! -f data/tennis_totals_results.json ]; then
+            echo "Missing data/tennis_totals_results.json"
+            exit 1
+          fi
+
+      - name: Run rank optimizer
+        run: |
+          python tennis_totals_rank_optimizer.py \
+            --input data/tennis_totals_results.json \
+            --out-dir data \
+            --prefix tennis_totals_rank \
+            --staking safe \
+            --samples 2500
+
+      - name: Commit optimizer outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/tennis_totals_rank_optimizer_report.json
+          git add data/tennis_totals_rank_optimizer_report.md
+          git add data/tennis_totals_rank_best_formula.json
+
+          if git diff --cached --quiet; then
+            echo "No optimizer changes to commit."
+          else
+            git commit -m "Update tennis totals rank optimizer report"
+            git push
+          fi
