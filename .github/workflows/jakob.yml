@@ -52,12 +52,16 @@ jobs:
           echo "Generated data files:"
           ls -lah data || true
 
+          echo ""
+          echo "Jakob files:"
+          ls -lah data/jakob_*.json || true
+
       - name: Commit and push Jakob outputs
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add data/jakob_predictions.json data/jakob_results.json data/jakob_debug.json
+          git add data/jakob_*.json
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
