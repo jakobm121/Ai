@@ -1,7 +1,6 @@
 import os
 import json
 import math
-import itertools
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from collections import defaultdict
@@ -23,10 +22,12 @@ SUMMARY_FILE = f"{OUTPUT_DIR}/tennis_optimizer_summary.json"
 MIN_PICKS = int(os.getenv("MIN_PICKS", "100"))
 TOP_N = int(os.getenv("TOP_N", "75"))
 
-# Za GitHub Actions. Če želiš močnejši run:
-# MAX_CANDIDATES=750000 MAX_RULES_PER_COMBO=7 python tennis_optimizer.py
-MAX_CANDIDATES = int(os.getenv("MAX_CANDIDATES", "250000"))
-MAX_RULES_PER_COMBO = int(os.getenv("MAX_RULES_PER_COMBO", "6"))
+# Koliko najboljših kombinacij držimo pri vsakem koraku.
+# Če želiš še bolj brutalen search, dvigni na 500 ali 800.
+BEAM_WIDTH = int(os.getenv("BEAM_WIDTH", "350"))
+
+# Maksimalno število pravil v eni taktiki.
+MAX_RULES = int(os.getenv("MAX_RULES", "6"))
 
 FLAT_STAKE = 1.0
 
@@ -39,26 +40,26 @@ SCORE_WEIGHTS = {
     "sample_bonus": 0.08,
 }
 
-RULE_GRID = {
-    "confidence_min": [None, 50, 55, 60, 65, 70, 75, 80, 85],
-    "quality_min": [None, 50, 55, 60, 65, 70, 72, 75, 80],
-    "edge_min": [None, 0.00, 0.02, 0.04, 0.06, 0.08, 0.10],
-    "odds_min": [None, 1.30, 1.45, 1.60, 1.75, 1.90, 2.05],
-    "odds_max": [None, 1.70, 1.90, 2.10, 2.30, 2.60, 3.00],
-    "market_gap_min": [None, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40],
-    "market_gap_max": [None, 0.25, 0.35, 0.50, 0.70],
-    "strength_gap_min": [None, 3, 5, 8, 10, 15, 20, 30],
-    "strength_gap_max": [None, 10, 15, 20, 30, 40, 60],
-    "h2h_max": [None, 0, 1, 2, 3],
-    "bookmakers_min": [None, 2, 3, 4, 5, 6, 8],
-    "rank_max": [None, 10, 20, 30, 50, 100],
+NUMERIC_RULES = {
+    "confidence_min": ("confidence", ">=", [50, 55, 60, 65, 70, 75, 80, 85, 88, 90]),
+    "quality_min": ("quality", ">=", [50, 55, 60, 65, 70, 72, 75, 78, 80, 85]),
+    "edge_min": ("edge", ">=", [0.00, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12]),
+    "odds_min": ("odds", ">=", [1.30, 1.45, 1.60, 1.75, 1.90, 2.00, 2.05]),
+    "odds_max": ("odds", "<=", [1.60, 1.70, 1.85, 1.90, 2.00, 2.10, 2.25, 2.50, 3.00]),
+    "market_gap_min": ("market_gap", ">=", [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50]),
+    "market_gap_max": ("market_gap", "<=", [0.20, 0.25, 0.30, 0.35, 0.45, 0.55, 0.70]),
+    "strength_gap_min": ("strength_gap", ">=", [3, 5, 8, 10, 15, 20, 30, 40]),
+    "strength_gap_max": ("strength_gap", "<=", [8, 10, 15, 20, 30, 40, 60]),
+    "h2h_max": ("h2h", "<=", [0, 1, 2, 3]),
+    "bookmakers_min": ("bookmakers", ">=", [2, 3, 4, 5, 6, 8]),
+    "rank_max": ("rank", "<=", [5, 10, 20, 30, 50, 100]),
 }
 
 CATEGORICAL_RULES = {
-    "side": [None, "home", "away"],
-    "gender": [None, "men", "women"],
-    "tour_level": [None, "atp", "wta", "challenger", "itf"],
-    "qualification": [None, True, False],
+    "side": ["home", "away"],
+    "gender": ["men", "women"],
+    "tour_level": ["atp", "wta", "challenger", "itf"],
+    "qualification": [True, False],
 }
 
 
@@ -73,23 +74,16 @@ def now_iso():
 def load_json(path, default):
     if not os.path.exists(path):
         return default
-
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
-
-        if isinstance(data, type(default)):
-            return data
-
-        return default
-
+        return data if isinstance(data, type(default)) else default
     except Exception:
         return default
 
 
 def save_json(path, data):
     ensure_dirs()
-
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
@@ -97,60 +91,48 @@ def save_json(path, data):
 
 def save_text(path, text):
     ensure_dirs()
-
     with open(path, "w", encoding="utf-8") as f:
         f.write(text)
 
 
-def safe_float(value, default=None):
+def safe_float(v, default=None):
     try:
-        if value is None or value == "":
+        if v is None or v == "":
             return default
-        return float(value)
+        return float(v)
     except Exception:
         return default
 
 
-def safe_int(value, default=None):
+def safe_int(v, default=None):
     try:
-        if value is None or value == "":
+        if v is None or v == "":
             return default
-        return int(float(value))
+        return int(float(v))
     except Exception:
         return default
 
 
-def get_nested(data, path, default=None):
-    cur = data
-
+def get_nested(d, path, default=None):
+    cur = d
     for part in path.split("."):
-        if not isinstance(cur, dict):
+        if not isinstance(cur, dict) or part not in cur:
             return default
-
-        if part not in cur:
-            return default
-
         cur = cur[part]
-
     return cur
 
 
 def normalize_result(value):
-    result = str(value or "").strip().lower()
-
-    if result in {"won", "win", "w"}:
+    r = str(value or "").strip().lower()
+    if r in {"won", "win", "w"}:
         return "win"
-
-    if result in {"lost", "loss", "lose", "l"}:
+    if r in {"lost", "loss", "lose", "l"}:
         return "loss"
-
-    if result in {"push", "void", "cancelled", "canceled"}:
+    if r in {"push", "void", "cancelled", "canceled"}:
         return "push"
-
-    if result == "pending":
+    if r == "pending":
         return "pending"
-
-    return result
+    return r
 
 
 def is_settled(pick):
@@ -158,17 +140,11 @@ def is_settled(pick):
 
 
 def side_value(pick):
-    raw = str(
-        pick.get("side")
-        or pick.get("pick")
-        or pick.get("selection")
-        or ""
-    ).strip().lower()
+    raw = str(pick.get("side") or pick.get("pick") or pick.get("selection") or "").lower()
 
-    if raw in {"home", "first", "1", "first_player", "player1", "player_1"}:
+    if raw in {"home", "first", "1", "first_player"}:
         return "home"
-
-    if raw in {"away", "second", "2", "second_player", "player2", "player_2"}:
+    if raw in {"away", "second", "2", "second_player"}:
         return "away"
 
     bet = str(pick.get("bet") or "").lower()
@@ -177,7 +153,6 @@ def side_value(pick):
 
     if first and first in bet:
         return "home"
-
     if second and second in bet:
         return "away"
 
@@ -189,9 +164,7 @@ def pick_profit(pick, stake=FLAT_STAKE):
     odds = safe_float(pick.get("odds"), None)
 
     if result == "win":
-        if odds is None:
-            return 0.0
-        return stake * (odds - 1.0)
+        return stake * (odds - 1.0) if odds else 0.0
 
     if result == "loss":
         return -stake
@@ -204,33 +177,28 @@ def max_drawdown(profits):
     peak = 0.0
     max_dd = 0.0
 
-    for profit in profits:
-        bankroll += profit
+    for p in profits:
+        bankroll += p
         peak = max(peak, bankroll)
-        drawdown = bankroll - peak
-        max_dd = min(max_dd, drawdown)
+        max_dd = min(max_dd, bankroll - peak)
 
     return round(max_dd, 4)
 
 
 def longest_streak(results, target):
     best = 0
-    current = 0
-
-    for result in results:
-        if result == target:
-            current += 1
-            best = max(best, current)
+    cur = 0
+    for r in results:
+        if r == target:
+            cur += 1
+            best = max(best, cur)
         else:
-            current = 0
-
+            cur = 0
     return best
 
 
 def extract_features(pick):
-    market_info = pick.get("market_info")
-    if not isinstance(market_info, dict):
-        market_info = {}
+    market_info = pick.get("market_info") if isinstance(pick.get("market_info"), dict) else {}
 
     first_strength = safe_float(pick.get("first_strength_score"), None)
     second_strength = safe_float(pick.get("second_strength_score"), None)
@@ -240,13 +208,11 @@ def extract_features(pick):
         strength_gap = abs(first_strength - second_strength)
 
     market_gap = safe_float(market_info.get("market_gap"), None)
-
     if market_gap is None:
-        home_implied = safe_float(market_info.get("home_implied"), None)
-        away_implied = safe_float(market_info.get("away_implied"), None)
-
-        if home_implied is not None and away_implied is not None:
-            market_gap = abs(home_implied - away_implied)
+        home = safe_float(market_info.get("home_implied"), None)
+        away = safe_float(market_info.get("away_implied"), None)
+        if home is not None and away is not None:
+            market_gap = abs(home - away)
 
     return {
         "confidence": safe_float(pick.get("confidence"), None),
@@ -268,149 +234,31 @@ def extract_features(pick):
 
 
 def enrich_pick(pick):
-    enriched = dict(pick)
-    enriched["_result_norm"] = normalize_result(pick.get("result"))
-    enriched["_profit_flat"] = round(pick_profit(pick, FLAT_STAKE), 4)
-    enriched["_features"] = extract_features(pick)
-
-    return enriched
-
-
-def valid_rule_combo(rule):
-    odds_min = rule.get("odds_min")
-    odds_max = rule.get("odds_max")
-
-    if odds_min is not None and odds_max is not None and odds_min > odds_max:
-        return False
-
-    strength_gap_min = rule.get("strength_gap_min")
-    strength_gap_max = rule.get("strength_gap_max")
-
-    if strength_gap_min is not None and strength_gap_max is not None and strength_gap_min > strength_gap_max:
-        return False
-
-    market_gap_min = rule.get("market_gap_min")
-    market_gap_max = rule.get("market_gap_max")
-
-    if market_gap_min is not None and market_gap_max is not None and market_gap_min > market_gap_max:
-        return False
-
-    return True
-
-
-def clean_rule(rule):
-    return {
-        key: value
-        for key, value in rule.items()
-        if value is not None
-    }
-
-
-def rule_complexity(rule):
-    return len(clean_rule(rule))
-
-
-def passes_rule(pick, rule):
-    features = pick.get("_features", {})
-
-    checks = [
-        ("confidence_min", "confidence", ">="),
-        ("quality_min", "quality", ">="),
-        ("edge_min", "edge", ">="),
-        ("odds_min", "odds", ">="),
-        ("odds_max", "odds", "<="),
-        ("market_gap_min", "market_gap", ">="),
-        ("market_gap_max", "market_gap", "<="),
-        ("strength_gap_min", "strength_gap", ">="),
-        ("strength_gap_max", "strength_gap", "<="),
-        ("h2h_max", "h2h", "<="),
-        ("bookmakers_min", "bookmakers", ">="),
-        ("rank_max", "rank", "<="),
-    ]
-
-    for rule_key, feature_key, operator in checks:
-        threshold = rule.get(rule_key)
-
-        if threshold is None:
-            continue
-
-        value = features.get(feature_key)
-
-        if value is None:
-            return False
-
-        if operator == ">=" and value < threshold:
-            return False
-
-        if operator == "<=" and value > threshold:
-            return False
-
-    for key in CATEGORICAL_RULES:
-        wanted = rule.get(key)
-
-        if wanted is None:
-            continue
-
-        actual = features.get(key)
-
-        if actual != wanted:
-            return False
-
-    return True
+    p = dict(pick)
+    p["_result_norm"] = normalize_result(pick.get("result"))
+    p["_profit_flat"] = round(pick_profit(pick, FLAT_STAKE), 4)
+    p["_features"] = extract_features(pick)
+    return p
 
 
 def evaluate_picks(picks):
-    settled = [
-        pick
-        for pick in picks
-        if pick.get("_result_norm") in {"win", "loss", "push"}
-    ]
+    settled = [p for p in picks if p.get("_result_norm") in {"win", "loss", "push"}]
 
-    wins = [
-        pick
-        for pick in settled
-        if pick.get("_result_norm") == "win"
-    ]
+    wins = [p for p in settled if p.get("_result_norm") == "win"]
+    losses = [p for p in settled if p.get("_result_norm") == "loss"]
+    pushes = [p for p in settled if p.get("_result_norm") == "push"]
 
-    losses = [
-        pick
-        for pick in settled
-        if pick.get("_result_norm") == "loss"
-    ]
-
-    pushes = [
-        pick
-        for pick in settled
-        if pick.get("_result_norm") == "push"
-    ]
-
-    profits = [
-        safe_float(pick.get("_profit_flat"), 0.0)
-        for pick in settled
-    ]
-
+    profits = [p.get("_profit_flat", 0.0) for p in settled]
     total_profit = round(sum(profits), 4)
     stake_sum = len(settled) * FLAT_STAKE
 
     roi = round((total_profit / stake_sum) * 100, 2) if stake_sum else 0.0
+    winrate = round((len(wins) / max(1, len(wins) + len(losses))) * 100, 2)
 
-    decided = len(wins) + len(losses)
-    winrate = round((len(wins) / decided) * 100, 2) if decided else 0.0
+    odds_values = [safe_float(p.get("odds"), None) for p in settled]
+    odds_values = [x for x in odds_values if x is not None]
 
-    odds_values = [
-        safe_float(pick.get("odds"), None)
-        for pick in settled
-    ]
-    odds_values = [
-        value
-        for value in odds_values
-        if value is not None
-    ]
-
-    results = [
-        pick.get("_result_norm")
-        for pick in settled
-    ]
+    results = [p.get("_result_norm") for p in settled]
 
     return {
         "picks": len(settled),
@@ -432,7 +280,7 @@ def strategy_score(stats):
         return -999999
 
     sample_bonus = math.log(max(1, stats["picks"]))
-    drawdown_abs = abs(stats["max_drawdown"])
+    dd_abs = abs(stats["max_drawdown"])
 
     score = (
         stats["profit"] * SCORE_WEIGHTS["profit"]
@@ -440,105 +288,207 @@ def strategy_score(stats):
         + stats["winrate"] * SCORE_WEIGHTS["winrate"]
         + stats["avg_odds"] * SCORE_WEIGHTS["avg_odds"]
         + sample_bonus * SCORE_WEIGHTS["sample_bonus"]
-        - drawdown_abs * SCORE_WEIGHTS["drawdown_penalty"]
+        - dd_abs * SCORE_WEIGHTS["drawdown_penalty"]
     )
 
     return round(score, 6)
 
 
-def generate_rule_candidates():
-    numeric_keys = list(RULE_GRID.keys())
-    categorical_keys = list(CATEGORICAL_RULES.keys())
-
-    numeric_blocks = [
-        ["confidence_min", "quality_min", "edge_min"],
-        ["odds_min", "odds_max"],
-        ["market_gap_min", "market_gap_max"],
-        ["strength_gap_min", "strength_gap_max"],
-        ["h2h_max", "bookmakers_min", "rank_max"],
-    ]
-
-    base_rules = [{}]
-
-    for block in numeric_blocks:
-        new_rules = []
-        values = [RULE_GRID[key] for key in block]
-
-        for combo in itertools.product(*values):
-            block_rule = {
-                key: value
-                for key, value in zip(block, combo)
-            }
-
-            if not valid_rule_combo(block_rule):
-                continue
-
-            for base_rule in base_rules:
-                merged = dict(base_rule)
-                merged.update(block_rule)
-
-                if not valid_rule_combo(merged):
-                    continue
-
-                if rule_complexity(merged) <= MAX_RULES_PER_COMBO:
-                    new_rules.append(merged)
-
-        base_rules = new_rules
-
-    all_rules = []
-    categorical_values = [
-        CATEGORICAL_RULES[key]
-        for key in categorical_keys
-    ]
-
-    for base_rule in base_rules:
-        for combo in itertools.product(*categorical_values):
-            rule = dict(base_rule)
-
-            for key, value in zip(categorical_keys, combo):
-                rule[key] = value
-
-            if not valid_rule_combo(rule):
-                continue
-
-            cleaned = clean_rule(rule)
-
-            if rule_complexity(cleaned) > MAX_RULES_PER_COMBO:
-                continue
-
-            all_rules.append(cleaned)
-
-            if len(all_rules) >= MAX_CANDIDATES:
-                return deduplicate_rules(all_rules)
-
-    return deduplicate_rules(all_rules)
+def rule_key(rule):
+    return json.dumps(rule, sort_keys=True, ensure_ascii=False)
 
 
-def deduplicate_rules(rules):
-    seen = set()
-    unique = []
+def clean_rule(rule):
+    return {k: v for k, v in rule.items() if v is not None}
 
-    for rule in rules:
-        key = json.dumps(rule, sort_keys=True, ensure_ascii=False)
 
-        if key in seen:
+def compatible(rule):
+    odds_min = rule.get("odds_min")
+    odds_max = rule.get("odds_max")
+    if odds_min is not None and odds_max is not None and odds_min > odds_max:
+        return False
+
+    sg_min = rule.get("strength_gap_min")
+    sg_max = rule.get("strength_gap_max")
+    if sg_min is not None and sg_max is not None and sg_min > sg_max:
+        return False
+
+    gap_min = rule.get("market_gap_min")
+    gap_max = rule.get("market_gap_max")
+    if gap_min is not None and gap_max is not None and gap_min > gap_max:
+        return False
+
+    return True
+
+
+def passes_rule(pick, rule):
+    f = pick.get("_features", {})
+
+    for rule_name, value in rule.items():
+        if rule_name in NUMERIC_RULES:
+            feature_key, op, _ = NUMERIC_RULES[rule_name]
+            actual = f.get(feature_key)
+
+            if actual is None:
+                return False
+
+            if op == ">=" and actual < value:
+                return False
+            if op == "<=" and actual > value:
+                return False
+
+        elif rule_name in CATEGORICAL_RULES:
+            actual = f.get(rule_name)
+            if actual != value:
+                return False
+
+    return True
+
+
+def make_atomic_rules():
+    rules = []
+
+    for rule_name, (_, _, values) in NUMERIC_RULES.items():
+        for value in values:
+            rules.append({rule_name: value})
+
+    for rule_name, values in CATEGORICAL_RULES.items():
+        for value in values:
+            rules.append({rule_name: value})
+
+    return rules
+
+
+def select_by_rule(picks, rule):
+    return [p for p in picks if passes_rule(p, rule)]
+
+
+def evaluate_rule(picks, rule):
+    selected = select_by_rule(picks, rule)
+
+    if len(selected) < MIN_PICKS:
+        return None
+
+    stats = evaluate_picks(selected)
+    score = strategy_score(stats)
+
+    return {
+        "score": score,
+        "rules": clean_rule(rule),
+        "stats": stats,
+    }
+
+
+def beam_search(picks):
+    atomic_rules = make_atomic_rules()
+
+    all_valid = {}
+    current_level = []
+
+    # Level 1
+    for rule in atomic_rules:
+        if not compatible(rule):
             continue
 
-        seen.add(key)
-        unique.append(rule)
+        row = evaluate_rule(picks, rule)
+        if not row:
+            continue
 
-    return unique
+        key = rule_key(row["rules"])
+        all_valid[key] = row
+        current_level.append(row)
+
+    current_level.sort(
+        key=lambda x: (
+            x["score"],
+            x["stats"]["profit"],
+            x["stats"]["roi"],
+            x["stats"]["picks"],
+        ),
+        reverse=True,
+    )
+    current_level = current_level[:BEAM_WIDTH]
+
+    # Level 2 do MAX_RULES
+    for _level in range(2, MAX_RULES + 1):
+        next_level = []
+        seen_this_level = set()
+
+        for base in current_level:
+            base_rule = base["rules"]
+
+            for atom in atomic_rules:
+                merged = dict(base_rule)
+
+                conflict = False
+                for k, v in atom.items():
+                    if k in merged and merged[k] != v:
+                        conflict = True
+                        break
+                    merged[k] = v
+
+                if conflict:
+                    continue
+
+                merged = clean_rule(merged)
+
+                if len(merged) != _level:
+                    continue
+
+                if not compatible(merged):
+                    continue
+
+                key = rule_key(merged)
+                if key in all_valid or key in seen_this_level:
+                    continue
+
+                seen_this_level.add(key)
+
+                row = evaluate_rule(picks, merged)
+                if not row:
+                    continue
+
+                all_valid[key] = row
+                next_level.append(row)
+
+        next_level.sort(
+            key=lambda x: (
+                x["score"],
+                x["stats"]["profit"],
+                x["stats"]["roi"],
+                x["stats"]["picks"],
+            ),
+            reverse=True,
+        )
+
+        current_level = next_level[:BEAM_WIDTH]
+
+        if not current_level:
+            break
+
+    evaluated = list(all_valid.values())
+    evaluated.sort(
+        key=lambda x: (
+            x["score"],
+            x["stats"]["profit"],
+            x["stats"]["roi"],
+            x["stats"]["picks"],
+        ),
+        reverse=True,
+    )
+
+    return evaluated
 
 
 def split_train_test(picks, test_ratio=0.25):
     ordered = sorted(
         picks,
-        key=lambda pick: (
-            str(pick.get("date") or ""),
-            str(pick.get("time") or ""),
-            str(pick.get("created_at") or ""),
-            str(pick.get("pick_id") or ""),
-        )
+        key=lambda p: (
+            str(p.get("date") or ""),
+            str(p.get("time") or ""),
+            str(p.get("created_at") or ""),
+            str(p.get("pick_id") or ""),
+        ),
     )
 
     if len(ordered) < 4:
@@ -553,65 +503,55 @@ def split_train_test(picks, test_ratio=0.25):
 def breakdown(picks, field):
     groups = defaultdict(list)
 
-    for pick in picks:
+    for p in picks:
         if field.startswith("_features."):
             key = field.split(".", 1)[1]
-            value = pick.get("_features", {}).get(key)
+            value = p.get("_features", {}).get(key)
         else:
-            value = get_nested(pick, field, None)
+            value = get_nested(p, field, None)
 
         if value is None or value == "":
             value = "unknown"
 
-        groups[str(value)].append(pick)
+        groups[str(value)].append(p)
 
     rows = []
-
-    for group, items in groups.items():
+    for key, items in groups.items():
         stats = evaluate_picks(items)
         rows.append({
-            "group": group,
+            "group": key,
             **stats,
         })
 
-    rows.sort(
-        key=lambda row: (
-            row["profit"],
-            row["roi"],
-            row["picks"],
-        ),
-        reverse=True,
-    )
-
+    rows.sort(key=lambda x: (x["profit"], x["roi"], x["picks"]), reverse=True)
     return rows
 
 
 def numeric_ranges(picks, feature_key):
     values = []
 
-    for pick in picks:
-        value = pick.get("_features", {}).get(feature_key)
-
-        if isinstance(value, (int, float)):
-            values.append(value)
+    for p in picks:
+        v = p.get("_features", {}).get(feature_key)
+        if isinstance(v, (int, float)):
+            values.append(v)
 
     if not values:
         return None
 
     values = sorted(values)
-    count = len(values)
+    n = len(values)
 
-    def quantile(percent):
-        index = int(round((count - 1) * percent))
-        return round(values[index], 4)
+    def q(percent):
+        idx = int(round((n - 1) * percent))
+        return round(values[idx], 4)
 
     return {
         "min": round(values[0], 4),
-        "p25": quantile(0.25),
-        "median": quantile(0.50),
-        "p75": quantile(0.75),
+        "p25": q(0.25),
+        "median": q(0.50),
+        "p75": q(0.75),
         "max": round(values[-1], 4),
-        "avg": round(sum(values) / count, 4),
+        "avg": round(sum(values) / n, 4),
     }
 
 
@@ -638,27 +578,19 @@ def format_rule(rule):
         "qualification": "qualification =",
     }
 
-    parts = []
-
-    for key, value in rule.items():
-        label = labels.get(key, key)
-        parts.append(f"{label} {value}")
-
-    return "; ".join(parts)
+    return "; ".join(f"{labels.get(k, k)} {v}" for k, v in rule.items())
 
 
-def public_pick(pick):
-    item = dict(pick)
-    item.pop("_features", None)
-    return item
+def public_pick(p):
+    x = dict(p)
+    x.pop("_features", None)
+    return x
 
 
 def make_markdown_report(
     generated_at,
     source_count,
     settled_count,
-    candidate_rules_tested,
-    valid_rules_over_min_sample,
     all_stats,
     best,
     top_rows,
@@ -678,12 +610,12 @@ def make_markdown_report(
     lines.append("")
     lines.append(f"- Source picks loaded: **{source_count}**")
     lines.append(f"- Settled picks used: **{settled_count}**")
-    lines.append(f"- Candidate rules tested: **{candidate_rules_tested}**")
-    lines.append(f"- Valid rules over minimum sample: **{valid_rules_over_min_sample}**")
     lines.append(f"- Minimum sample per valid strategy: **{MIN_PICKS} picks**")
-    lines.append(f"- Max candidates limit: **{MAX_CANDIDATES}**")
-    lines.append(f"- Max rules per combo: **{MAX_RULES_PER_COMBO}**")
+    lines.append(f"- Search mode: **beam search**")
+    lines.append(f"- Beam width: **{BEAM_WIDTH}**")
+    lines.append(f"- Max rules per tactic: **{MAX_RULES}**")
     lines.append("")
+
     lines.append("## Whole database baseline")
     lines.append("")
     lines.append("| Picks | W | L | Push | Winrate | Profit | ROI | Avg odds | Max DD |")
@@ -699,13 +631,6 @@ def make_markdown_report(
         lines.append("## Best strategy")
         lines.append("")
         lines.append("No strategy passed the minimum sample requirement.")
-        lines.append("")
-        lines.append("Try lowering `MIN_PICKS`, for example:")
-        lines.append("")
-        lines.append("```bash")
-        lines.append("MIN_PICKS=75 python tennis_optimizer.py")
-        lines.append("```")
-        lines.append("")
         return "\n".join(lines) + "\n"
 
     lines.append("## Best strategy found")
@@ -713,10 +638,6 @@ def make_markdown_report(
     lines.append(f"**Score:** {best['score']}")
     lines.append("")
     lines.append(f"**Rules:** {format_rule(best['rules'])}")
-    lines.append("")
-    lines.append("```json")
-    lines.append(json.dumps(best["rules"], indent=2, ensure_ascii=False))
-    lines.append("```")
     lines.append("")
     lines.append("| Split | Picks | W | L | Push | Winrate | Profit | ROI | Avg odds | Max DD |")
     lines.append("|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
@@ -735,28 +656,29 @@ def make_markdown_report(
     lines.append("")
     lines.append("## Recommended tactic")
     lines.append("")
-    lines.append("Use this optimizer as a filter layer on top of the existing tennis home/away machine.")
+    lines.append("Use this as a filter layer on top of the existing tennis home/away machine:")
+    lines.append("")
+    lines.append(f"```json\n{json.dumps(best['rules'], indent=2, ensure_ascii=False)}\n```")
     lines.append("")
     lines.append("Stake suggestion:")
     lines.append("")
-    lines.append("- Report simulation uses **flat 1u**.")
-    lines.append("- Live start suggestion: **0.5u flat** until at least 50 new forward-test picks.")
-    lines.append("- After forward confirmation: **1u flat**, no martingale.")
+    lines.append("- Historical test uses **flat 1u**.")
+    lines.append("- Conservative forward test: **0.5u flat** for at least 50 new picks.")
+    lines.append("- No martingale.")
     lines.append("")
-    lines.append("Important: this is historical optimization. The main validation number is the **Test 25%** result and then forward tracking.")
+    lines.append("Risk warning: this is historical optimization. The most important number is Test 25% and then forward tracking.")
     lines.append("")
 
     lines.append("## Top strategies")
     lines.append("")
-    lines.append("| Rank | Score | Picks | Winrate | Profit | ROI | Avg odds | Max DD | Rules |")
-    lines.append("|---:|---:|---:|---:|---:|---:|---:|---:|---|")
+    lines.append("| Rank | Score | Picks | Winrate | Profit | ROI | Max DD | Rules |")
+    lines.append("|---:|---:|---:|---:|---:|---:|---:|---|")
 
-    for index, row in enumerate(top_rows[:25], start=1):
-        stats = row["stats"]
+    for i, row in enumerate(top_rows[:25], start=1):
+        s = row["stats"]
         lines.append(
-            f"| {index} | {row['score']} | {stats['picks']} | {stats['winrate']}% | "
-            f"{stats['profit']}u | {stats['roi']}% | {stats['avg_odds']} | "
-            f"{stats['max_drawdown']}u | {format_rule(row['rules'])} |"
+            f"| {i} | {row['score']} | {s['picks']} | {s['winrate']}% | "
+            f"{s['profit']}u | {s['roi']}% | {s['max_drawdown']}u | {format_rule(row['rules'])} |"
         )
 
     lines.append("")
@@ -765,14 +687,11 @@ def make_markdown_report(
     lines.append("| Date | Match | Bet | Result | Odds | Profit |")
     lines.append("|---|---|---|---:|---:|---:|")
 
-    for pick in best_picks[:50]:
+    for p in best_picks[:50]:
         lines.append(
-            f"| {pick.get('date', '')} {pick.get('time', '')} | "
-            f"{pick.get('match', '')} | "
-            f"{pick.get('bet') or pick.get('selection') or pick.get('side', '')} | "
-            f"{pick.get('_result_norm')} | "
-            f"{pick.get('odds', '')} | "
-            f"{pick.get('_profit_flat')} |"
+            f"| {p.get('date','')} {p.get('time','')} | {p.get('match','')} | "
+            f"{p.get('bet') or p.get('selection') or p.get('side','')} | "
+            f"{p.get('_result_norm')} | {p.get('odds','')} | {p.get('_profit_flat')} |"
         )
 
     lines.append("")
@@ -782,13 +701,11 @@ def make_markdown_report(
     lines.append("|---|---:|---:|---:|---:|---:|---:|")
 
     for feature, data in ranges.items():
-        if not data:
-            continue
-
-        lines.append(
-            f"| {feature} | {data['min']} | {data['p25']} | {data['median']} | "
-            f"{data['p75']} | {data['max']} | {data['avg']} |"
-        )
+        if data:
+            lines.append(
+                f"| {feature} | {data['min']} | {data['p25']} | {data['median']} | "
+                f"{data['p75']} | {data['max']} | {data['avg']} |"
+            )
 
     lines.append("")
     lines.append("## Breakdown of best strategy")
@@ -800,11 +717,10 @@ def make_markdown_report(
         lines.append("| Group | Picks | Winrate | Profit | ROI | Avg odds | Max DD |")
         lines.append("|---|---:|---:|---:|---:|---:|---:|")
 
-        for row in rows[:15]:
+        for r in rows[:15]:
             lines.append(
-                f"| {row['group']} | {row['picks']} | {row['winrate']}% | "
-                f"{row['profit']}u | {row['roi']}% | {row['avg_odds']} | "
-                f"{row['max_drawdown']}u |"
+                f"| {r['group']} | {r['picks']} | {r['winrate']}% | {r['profit']}u | "
+                f"{r['roi']}% | {r['avg_odds']} | {r['max_drawdown']}u |"
             )
 
         lines.append("")
@@ -826,57 +742,15 @@ def main():
     ensure_dirs()
 
     raw = load_json(RESULTS_FILE, [])
-
     if not isinstance(raw, list):
         raw = []
 
-    enriched = [
-        enrich_pick(pick)
-        for pick in raw
-        if isinstance(pick, dict)
-    ]
-
-    settled = [
-        pick
-        for pick in enriched
-        if is_settled(pick)
-    ]
+    enriched = [enrich_pick(p) for p in raw if isinstance(p, dict)]
+    settled = [p for p in enriched if is_settled(p)]
 
     all_stats = evaluate_picks(settled)
 
-    candidates = generate_rule_candidates()
-
-    evaluated = []
-
-    for rule in candidates:
-        selected = [
-            pick
-            for pick in settled
-            if passes_rule(pick, rule)
-        ]
-
-        if len(selected) < MIN_PICKS:
-            continue
-
-        stats = evaluate_picks(selected)
-        score = strategy_score(stats)
-
-        evaluated.append({
-            "score": score,
-            "rules": rule,
-            "stats": stats,
-        })
-
-    evaluated.sort(
-        key=lambda row: (
-            row["score"],
-            row["stats"]["profit"],
-            row["stats"]["roi"],
-            row["stats"]["picks"],
-        ),
-        reverse=True,
-    )
-
+    evaluated = beam_search(settled)
     top_rows = evaluated[:TOP_N]
     best = top_rows[0] if top_rows else None
 
@@ -887,22 +761,16 @@ def main():
     ranges = {}
 
     if best:
-        best_picks = [
-            pick
-            for pick in settled
-            if passes_rule(pick, best["rules"])
-        ]
+        best_picks = [p for p in settled if passes_rule(p, best["rules"])]
 
-        train_picks, test_picks = split_train_test(best_picks)
-
-        train_stats = evaluate_picks(train_picks)
-        test_stats = evaluate_picks(test_picks)
+        train, test = split_train_test(best_picks)
+        train_stats = evaluate_picks(train)
+        test_stats = evaluate_picks(test)
 
         breakdown_fields = {
             "By side": "_features.side",
             "By gender": "_features.gender",
             "By tour level": "_features.tour_level",
-            "By qualification": "_features.qualification",
             "By bookmaker": "best_bookmaker",
             "By tournament": "tournament",
         }
@@ -932,10 +800,8 @@ def main():
         "source_count": len(raw),
         "settled_count": len(settled),
         "min_picks": MIN_PICKS,
-        "max_candidates": MAX_CANDIDATES,
-        "max_rules_per_combo": MAX_RULES_PER_COMBO,
-        "candidate_rules_tested": len(candidates),
-        "valid_rules_over_min_sample": len(evaluated),
+        "beam_width": BEAM_WIDTH,
+        "max_rules": MAX_RULES,
         "baseline": all_stats,
         "best": best,
         "train_75_stats": train_stats,
@@ -943,35 +809,30 @@ def main():
         "output_dir": OUTPUT_DIR,
     }
 
-    debug = {
-        "generated_at": generated_at,
-        "candidate_rules_tested": len(candidates),
-        "valid_rules_over_min_sample": len(evaluated),
-        "min_picks": MIN_PICKS,
-        "top_n": TOP_N,
-        "max_candidates": MAX_CANDIDATES,
-        "max_rules_per_combo": MAX_RULES_PER_COMBO,
-        "flat_stake": FLAT_STAKE,
-        "score_weights": SCORE_WEIGHTS,
-        "rule_grid": RULE_GRID,
-        "categorical_rules": CATEGORICAL_RULES,
-        "source_count": len(raw),
-        "settled_count": len(settled),
-        "missing_or_pending_count": len(enriched) - len(settled),
-    }
-
     save_json(SUMMARY_FILE, summary)
     save_json(BEST_RULES_FILE, best["rules"] if best else {})
     save_json(TABLE_FILE, top_rows)
-    save_json(PICKS_FILE, [public_pick(pick) for pick in best_picks])
+    save_json(PICKS_FILE, [public_pick(p) for p in best_picks])
+
+    debug = {
+        "generated_at": generated_at,
+        "search_mode": "beam_search",
+        "valid_rules_over_min_sample": len(evaluated),
+        "min_picks": MIN_PICKS,
+        "beam_width": BEAM_WIDTH,
+        "max_rules": MAX_RULES,
+        "score_weights": SCORE_WEIGHTS,
+        "numeric_rules": NUMERIC_RULES,
+        "categorical_rules": CATEGORICAL_RULES,
+        "missing_or_pending_count": len(enriched) - len(settled),
+    }
+
     save_json(DEBUG_FILE, debug)
 
     report = make_markdown_report(
         generated_at=generated_at,
         source_count=len(raw),
         settled_count=len(settled),
-        candidate_rules_tested=len(candidates),
-        valid_rules_over_min_sample=len(evaluated),
         all_stats=all_stats,
         best=best,
         top_rows=top_rows,
@@ -988,11 +849,9 @@ def main():
     print("TENNIS OPTIMIZER DONE")
     print(f"source picks: {len(raw)}")
     print(f"settled picks: {len(settled)}")
-    print(f"candidate rules tested: {len(candidates)}")
     print(f"valid rules over min sample: {len(evaluated)}")
-    print(f"min picks: {MIN_PICKS}")
-    print(f"max candidates: {MAX_CANDIDATES}")
-    print(f"max rules per combo: {MAX_RULES_PER_COMBO}")
+    print(f"beam width: {BEAM_WIDTH}")
+    print(f"max rules: {MAX_RULES}")
 
     if best:
         print("")
@@ -1001,21 +860,15 @@ def main():
         print("")
         print("FULL:")
         print(best["stats"])
-        print("")
         print("TRAIN 75%:")
         print(train_stats)
-        print("")
         print("TEST 25%:")
         print(test_stats)
     else:
-        print("")
-        print("No valid strategy found.")
-        print("Try lowering MIN_PICKS, for example:")
-        print("MIN_PICKS=75 python tennis_optimizer.py")
+        print("No valid strategy found. Try lowering MIN_PICKS.")
 
     print("")
     print(f"Report: {REPORT_FILE}")
-    print("")
 
 
 if __name__ == "__main__":
