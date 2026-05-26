@@ -57,7 +57,12 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add data/jakob_results.json data/jakob_settle_debug.json
+          git add \
+            data/jakob_results.json \
+            data/jakob_settle_debug.json \
+            data/jakob_settle_summary.json \
+            data/jakob_settle_table.csv \
+            data/jakob_settle_report.md
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
