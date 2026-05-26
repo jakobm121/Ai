@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-05-27T01:41:48.662694+02:00",
+  "source_file": "data/tennis_results.json",
+  "source_count": 442,
+  "settled_count": 431,
+  "min_picks": 100,
+  "beam_width": 350,
+  "max_rules": 6,
+  "baseline": {
+    "picks": 431,
+    "wins": 183,
+    "losses": 226,
+    "pushes": 22,
+    "winrate": 44.74,
+    "profit": -4.33,
+    "roi": -1.0,
+    "avg_odds": 2.2501,
+    "max_drawdown": -14.26,
+    "longest_win_streak": 5,
+    "longest_loss_streak": 8
+  },
+  "best": {
+    "score": 35.889873,
+    "rules": {
+      "tour_level": "challenger",
+      "gender": "men",
+      "bookmakers_min": 6,
+      "odds_min": 1.75
+    },
+    "stats": {
+      "picks": 121,
+      "wins": 62,
+      "losses": 52,
+      "pushes": 7,
+      "winrate": 54.39,
+      "profit": 23.13,
+      "roi": 19.12,
+      "avg_odds": 2.2571,
+      "max_drawdown": -4.5,
+      "longest_win_streak": 5,
+      "longest_loss_streak": 4
+    }
+  },
+  "train_75_stats": {
+    "picks": 90,
+    "wins": 47,
+    "losses": 38,
+    "pushes": 5,
+    "winrate": 55.29,
+    "profit": 18.64,
+    "roi": 20.71,
+    "avg_odds": 2.2292,
+    "max_drawdown": -4.65,
+    "longest_win_streak": 5,
+    "longest_loss_streak": 3
+  },
+  "test_25_stats": {
+    "picks": 31,
+    "wins": 15,
+    "losses": 14,
+    "pushes": 2,
+    "winrate": 51.72,
+    "profit": 4.49,
+    "roi": 14.48,
+    "avg_odds": 2.3381,
+    "max_drawdown": -4.0,
+    "longest_win_streak": 6,
+    "longest_loss_streak": 4
+  },
+  "output_dir": "tennis_optimizer"
+}
