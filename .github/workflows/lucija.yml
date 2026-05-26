@@ -1,0 +1,46 @@
+name: Lucija Picks
+
+on:
+  workflow_dispatch:
+  schedule:
+    # vsakih 20 minut med dnevom
+    - cron: "*/20 7-21 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lucija-picks
+  cancel-in-progress: false
+
+jobs:
+  lucija:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Lucija
+        run: python lucija.py
+
+      - name: Commit Lucija files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/lucija/
+
+          if git diff --cached --quiet; then
+            echo "No Lucija changes to commit."
+          else
+            git commit -m "Update Lucija picks"
+            git push
+          fi
