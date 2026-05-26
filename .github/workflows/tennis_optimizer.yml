@@ -3,8 +3,8 @@ name: Tennis Optimizer
 on:
   workflow_dispatch:
   schedule:
-    # Vsak dan zjutraj po Ljubljani približno 07:20 CET/CEST ni vedno isto v UTC,
-    # ampak za optimizer ni kritično, ker bere že settled results.
+    # Vsak dan ob 05:20 UTC.
+    # To je približno 06:20 pozimi oziroma 07:20 poleti v Sloveniji.
     - cron: "20 5 * * *"
 
 permissions:
@@ -27,6 +27,8 @@ jobs:
         env:
           MIN_PICKS: "100"
           TOP_N: "75"
+          MAX_CANDIDATES: "250000"
+          MAX_RULES_PER_COMBO: "6"
         run: |
           python tennis_optimizer.py
 
