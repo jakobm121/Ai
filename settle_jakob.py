@@ -2,6 +2,7 @@ import os
 import json
 import time
 import re
+import csv
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -16,6 +17,10 @@ DATA_DIR = "data"
 
 RESULTS_FILE = f"{DATA_DIR}/jakob_results.json"
 DEBUG_FILE = f"{DATA_DIR}/jakob_settle_debug.json"
+
+SUMMARY_FILE = f"{DATA_DIR}/jakob_settle_summary.json"
+TABLE_FILE = f"{DATA_DIR}/jakob_settle_table.csv"
+REPORT_FILE = f"{DATA_DIR}/jakob_settle_report.md"
 
 REQUEST_TIMEOUT = 30
 API_SLEEP_SECONDS = 0.30
@@ -50,11 +55,62 @@ def save_json(path, data):
         f.write("\n")
 
 
+def save_csv(path, rows):
+    ensure_dirs()
+
+    fieldnames = [
+        "date",
+        "time",
+        "rank",
+        "match",
+        "pick",
+        "side",
+        "line",
+        "odds",
+        "bookmaker",
+        "result",
+        "total_games",
+        "final_score",
+        "profit",
+        "stake",
+        "jakob_score",
+        "confidence",
+        "quality_score",
+        "edge_percent",
+        "market_gap",
+        "tournament",
+        "event_type",
+    ]
+
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for row in rows:
+            writer.writerow({k: row.get(k, "") for k in fieldnames})
+
+
+def save_text(path, text):
+    ensure_dirs()
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+
 def safe_float(v, default=0.0):
     try:
         if v is None or v == "":
             return default
         return float(v)
+    except Exception:
+        return default
+
+
+def safe_int(v, default=0):
+    try:
+        if v is None or v == "":
+            return default
+        return int(v)
     except Exception:
         return default
 
@@ -106,14 +162,25 @@ def fetch_fixture_by_event_key(event_key):
 
 
 def parse_set_pair_from_text(value):
+    """
+    Supports:
+      6-7
+      7-6(5)
+      6 - 7
+      10-8
+
+    Tie-break number in parentheses is ignored.
+    """
     if value is None:
         return None
 
     text = str(value).strip()
+
     if not text:
         return None
 
     match = re.search(r"(\d+)\s*-\s*(\d+)", text)
+
     if not match:
         return None
 
@@ -122,18 +189,20 @@ def parse_set_pair_from_text(value):
 
 def parse_score_number(value):
     """
-    API-Tennis can return tie-break scores like:
+    API-Tennis sometimes returns tie-break set scores like:
       6.5 / 7.7
-      7.10 / 6.8
+      6.8 / 7.10
+      7.8 / 6.6
 
-    For totals we only need normal games:
-      6.5 -> 6
+    For totals we only need games:
+      6.5  -> 6
       7.10 -> 7
     """
     if value is None:
         return None
 
     text = str(value).strip()
+
     if not text:
         return None
 
@@ -147,6 +216,14 @@ def parse_score_number(value):
 
 
 def parse_scores(scores):
+    """
+    Robust parser for API 'scores' array.
+
+    Handles:
+      {"score_first": "6", "score_second": "7"}
+      {"score_first": "6.5", "score_second": "7.7"}
+      {"score": "7-6(5)"}
+    """
     parsed = []
 
     if not isinstance(scores, list):
@@ -155,8 +232,10 @@ def parse_scores(scores):
     for s in scores:
         if not isinstance(s, dict):
             pair = parse_set_pair_from_text(s)
+
             if pair:
                 parsed.append(pair)
+
             continue
 
         first = s.get("score_first")
@@ -180,6 +259,7 @@ def parse_scores(scores):
             "value",
         ):
             pair = parse_set_pair_from_text(s.get(key))
+
             if pair:
                 parsed.append(pair)
                 break
@@ -188,6 +268,10 @@ def parse_scores(scores):
 
 
 def parse_scores_from_fixture(fixture):
+    """
+    First tries fixture['scores'].
+    Then falls back to fixture-level result/score strings if API returns score there.
+    """
     scores = fixture.get("scores") or []
     parsed = parse_scores(scores)
 
@@ -203,10 +287,12 @@ def parse_scores_from_fixture(fixture):
         "score",
     ):
         value = fixture.get(key)
+
         if not value:
             continue
 
         pairs = re.findall(r"(\d+)\s*-\s*(\d+)", str(value))
+
         if pairs:
             return [(int(a), int(b)) for a, b in pairs]
 
@@ -223,6 +309,7 @@ def final_score_string_from_parsed(parsed):
 
 def is_bad_terminal_status(status):
     s = str(status or "").lower().strip()
+
     compact = (
         s.replace(" ", "")
          .replace("-", "")
@@ -246,6 +333,9 @@ def is_bad_terminal_status(status):
 
 
 def compact_fixture_debug(fixture):
+    """
+    Saves score-related parts of the API fixture into debug file.
+    """
     if not isinstance(fixture, dict):
         return fixture
 
@@ -290,7 +380,8 @@ def settle_pick(pick, fixture):
     if not parsed:
         return False, "no_scores"
 
-    # Safety: finished tennis match with only one parsed set is unsafe for totals.
+    # Safety:
+    # Finished tennis match with only one parsed set is unsafe for totals.
     # Usually incomplete API data or retirement-like score.
     if len(parsed) < 2:
         return False, "incomplete_score_sets"
@@ -304,6 +395,7 @@ def settle_pick(pick, fixture):
         return False, "bad_side"
 
     stake = safe_float(pick.get("stake"), 1.0)
+
     if stake <= 0:
         stake = 1.0
 
@@ -332,34 +424,228 @@ def settle_pick(pick, fixture):
     return True, "settled"
 
 
-def summarize_results(results):
+def result_emoji(result):
+    r = str(result or "").lower()
+
+    if r == "win":
+        return "✅"
+    if r == "loss":
+        return "❌"
+    if r == "push":
+        return "➖"
+    if r == "void":
+        return "⚪"
+
+    return "⏳"
+
+
+def format_profit(value):
+    v = safe_float(value)
+
+    if v > 0:
+        return f"+{v:.2f}u"
+    if v < 0:
+        return f"{v:.2f}u"
+
+    return "0.00u"
+
+
+def make_table_row(pick):
+    market_info = pick.get("market_info") or {}
+
+    return {
+        "date": pick.get("date"),
+        "time": pick.get("time"),
+        "rank": pick.get("rank"),
+        "match": pick.get("match"),
+        "pick": pick.get("bet"),
+        "side": pick.get("side"),
+        "line": pick.get("line"),
+        "odds": pick.get("odds"),
+        "bookmaker": pick.get("best_bookmaker"),
+        "result": pick.get("result"),
+        "total_games": pick.get("total_games"),
+        "final_score": pick.get("final_score"),
+        "profit": pick.get("profit"),
+        "stake": pick.get("stake"),
+        "jakob_score": pick.get("jakob_score"),
+        "confidence": pick.get("confidence"),
+        "quality_score": pick.get("quality_score"),
+        "edge_percent": round(safe_float(pick.get("edge")) * 100, 2),
+        "market_gap": market_info.get("market_gap"),
+        "tournament": pick.get("tournament"),
+        "event_type": pick.get("event_type"),
+    }
+
+
+def summarize_subset(items):
+    wins = [x for x in items if str(x.get("result") or "").lower() == "win"]
+    losses = [x for x in items if str(x.get("result") or "").lower() == "loss"]
+    pushes = [x for x in items if str(x.get("result") or "").lower() == "push"]
+    voids = [x for x in items if str(x.get("result") or "").lower() == "void"]
+
+    graded = wins + losses
+
+    stake = sum(safe_float(x.get("stake"), 1.0) for x in graded)
+    profit = sum(safe_float(x.get("profit")) for x in items)
+
+    return {
+        "bets": len(items),
+        "graded": len(graded),
+        "wins": len(wins),
+        "losses": len(losses),
+        "pushes": len(pushes),
+        "voids": len(voids),
+        "stake": round(stake, 3),
+        "profit": round(profit, 3),
+        "win_rate_percent": round((len(wins) / len(graded) * 100), 2) if graded else 0.0,
+        "roi_percent": round((profit / stake * 100), 2) if stake else 0.0,
+    }
+
+
+def build_summary(results):
     settled = [
         x for x in results
         if isinstance(x, dict)
         and str(x.get("result") or "").lower() in {"win", "loss", "push", "void"}
     ]
 
-    wins = [x for x in settled if str(x.get("result") or "").lower() == "win"]
-    losses = [x for x in settled if str(x.get("result") or "").lower() == "loss"]
-    pushes = [x for x in settled if str(x.get("result") or "").lower() == "push"]
-    voids = [x for x in settled if str(x.get("result") or "").lower() == "void"]
+    pending = [
+        x for x in results
+        if isinstance(x, dict)
+        and str(x.get("result") or "pending").lower() == "pending"
+    ]
 
-    graded = wins + losses
-    profit = round(sum(safe_float(x.get("profit")) for x in settled), 3)
-    stake = round(sum(safe_float(x.get("stake"), 1.0) for x in graded), 3)
+    today = datetime.now(ZoneInfo(TZ_NAME)).date().isoformat()
+
+    settled_today = [
+        x for x in settled
+        if str(x.get("settled_at") or "").startswith(today)
+    ]
+
+    over = [
+        x for x in settled
+        if str(x.get("side") or "").lower() == "over"
+    ]
+
+    under = [
+        x for x in settled
+        if str(x.get("side") or "").lower() == "under"
+    ]
+
+    score_70_plus = [
+        x for x in settled
+        if safe_float(x.get("jakob_score")) >= 70
+    ]
+
+    score_72_plus = [
+        x for x in settled
+        if safe_float(x.get("jakob_score")) >= 72
+    ]
+
+    odds_210_or_less = [
+        x for x in settled
+        if safe_float(x.get("odds")) <= 2.10
+    ]
+
+    score_70_odds_210 = [
+        x for x in settled
+        if safe_float(x.get("jakob_score")) >= 70
+        and safe_float(x.get("odds")) <= 2.10
+    ]
 
     return {
-        "settled_total": len(settled),
-        "graded_total": len(graded),
-        "wins": len(wins),
-        "losses": len(losses),
-        "pushes": len(pushes),
-        "voids": len(voids),
-        "win_rate_percent": round((len(wins) / len(graded) * 100), 2) if graded else 0.0,
-        "profit": profit,
-        "stake": stake,
-        "roi_percent": round((profit / stake * 100), 2) if stake else 0.0,
+        "generated_at": now_iso(),
+        "timezone": TZ_NAME,
+        "results_file": RESULTS_FILE,
+        "pending": len(pending),
+        "all_settled": summarize_subset(settled),
+        "settled_today": summarize_subset(settled_today),
+        "over": summarize_subset(over),
+        "under": summarize_subset(under),
+        "score_70_plus": summarize_subset(score_70_plus),
+        "score_72_plus": summarize_subset(score_72_plus),
+        "odds_210_or_less": summarize_subset(odds_210_or_less),
+        "score_70_plus_and_odds_210_or_less": summarize_subset(score_70_odds_210),
     }
+
+
+def markdown_summary_table(title, summary):
+    return (
+        f"### {title}\n\n"
+        "| Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |\n"
+        "|---:|---:|---:|---:|---:|---:|---:|---:|\n"
+        f"| {summary['bets']} | {summary['wins']} | {summary['losses']} | "
+        f"{summary['pushes']} | {summary['voids']} | "
+        f"{summary['win_rate_percent']:.2f}% | "
+        f"{format_profit(summary['profit'])} | "
+        f"{summary['roi_percent']:.2f}% |\n\n"
+    )
+
+
+def build_markdown_report(results, summary_payload):
+    settled = [
+        x for x in results
+        if isinstance(x, dict)
+        and str(x.get("result") or "").lower() in {"win", "loss", "push", "void"}
+    ]
+
+    # Newest settled first, then date/time.
+    settled.sort(
+        key=lambda x: (
+            str(x.get("settled_at") or ""),
+            str(x.get("date") or ""),
+            str(x.get("time") or ""),
+            safe_int(x.get("rank"), 999999),
+        ),
+        reverse=True,
+    )
+
+    recent = settled[:80]
+
+    out = []
+    out.append("# Jakob Tennis Totals Settled Report\n\n")
+    out.append(f"Generated: `{summary_payload['generated_at']}`\n\n")
+    out.append(f"Pending picks: **{summary_payload['pending']}**\n\n")
+
+    out.append(markdown_summary_table("All settled", summary_payload["all_settled"]))
+    out.append(markdown_summary_table("Settled today", summary_payload["settled_today"]))
+    out.append(markdown_summary_table("Score ≥ 70", summary_payload["score_70_plus"]))
+    out.append(markdown_summary_table("Score ≥ 72", summary_payload["score_72_plus"]))
+    out.append(markdown_summary_table("Score ≥ 70 + Odds ≤ 2.10", summary_payload["score_70_plus_and_odds_210_or_less"]))
+    out.append(markdown_summary_table("Over", summary_payload["over"]))
+    out.append(markdown_summary_table("Under", summary_payload["under"]))
+
+    out.append("## Recent settled picks\n\n")
+    out.append(
+        "| Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |\n"
+    )
+    out.append(
+        "|---|---|---:|---|---|---:|---|---:|---:|---|---:|\n"
+    )
+
+    for pick in recent:
+        result = str(pick.get("result") or "")
+        emoji = result_emoji(result)
+        profit = format_profit(pick.get("profit"))
+        score = safe_float(pick.get("jakob_score"))
+
+        out.append(
+            f"| {pick.get('date') or ''} "
+            f"| {pick.get('time') or ''} "
+            f"| {pick.get('rank') or ''} "
+            f"| {pick.get('match') or ''} "
+            f"| {pick.get('bet') or ''} "
+            f"| {safe_float(pick.get('odds')):.2f} "
+            f"| {emoji} {result} "
+            f"| {score:.2f} "
+            f"| {pick.get('total_games') if pick.get('total_games') is not None else ''} "
+            f"| {pick.get('final_score') or ''} "
+            f"| {profit} |\n"
+        )
+
+    out.append("\n")
+    return "".join(out)
 
 
 def main():
@@ -468,10 +754,33 @@ def main():
     ]
 
     debug["pending_after"] = len(remaining_pending)
-    debug["summary_after_settle"] = summarize_results(results)
+
+    summary_payload = build_summary(results)
+    table_rows = [
+        make_table_row(x)
+        for x in results
+        if isinstance(x, dict)
+        and str(x.get("result") or "").lower() in {"win", "loss", "push", "void"}
+    ]
+
+    table_rows.sort(
+        key=lambda x: (
+            str(x.get("date") or ""),
+            str(x.get("time") or ""),
+            safe_int(x.get("rank"), 999999),
+        ),
+        reverse=True,
+    )
+
+    report_md = build_markdown_report(results, summary_payload)
+
+    debug["summary_after_settle"] = summary_payload
 
     save_json(RESULTS_FILE, results)
     save_json(DEBUG_FILE, debug)
+    save_json(SUMMARY_FILE, summary_payload)
+    save_csv(TABLE_FILE, table_rows)
+    save_text(REPORT_FILE, report_md)
 
     print("")
     print(
@@ -483,6 +792,9 @@ def main():
     )
     print(f"Saved {RESULTS_FILE}")
     print(f"Saved {DEBUG_FILE}")
+    print(f"Saved {SUMMARY_FILE}")
+    print(f"Saved {TABLE_FILE}")
+    print(f"Saved {REPORT_FILE}")
 
 
 if __name__ == "__main__":
