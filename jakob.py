@@ -21,9 +21,10 @@ PREDICTIONS_FILE = f"{DATA_DIR}/jakob_predictions.json"
 RESULTS_FILE = f"{DATA_DIR}/jakob_results.json"
 DEBUG_FILE = f"{DATA_DIR}/jakob_debug.json"
 RANKED_FILE = f"{DATA_DIR}/jakob_ranked_candidates.json"
+PLAY_FILE = f"{DATA_DIR}/jakob_play_picks.json"
 
-MODEL_VERSION = "jakob_tennis_totals_profile_v1"
-MODEL_NAME = "Jakob Tennis Totals Profile Model v1"
+MODEL_VERSION = "jakob_tennis_totals_profile_v2"
+MODEL_NAME = "Jakob Tennis Totals Profile Model v2"
 MARKET_NAME = "Over/Under by Games in Match"
 
 DAYS_AHEAD = 1
@@ -50,6 +51,10 @@ MODEL_PROB_MAX = 0.62
 
 MAIN_LINES_MIN = 18.5
 MAIN_LINES_MAX = 24.5
+
+MIN_JAKOB_SCORE_FOR_FINAL = 56.0
+MAX_UNDER_18_5_FINAL = 3
+MAX_LOW_UNDER_FINAL = 12
 
 
 JAKOB_FORMULA = {
@@ -861,6 +866,43 @@ def rank_tier_for_rank(rank):
     return "value", 0.25
 
 
+def market_gap_profile_value(side, line, market_gap):
+    side = str(side or "").lower()
+    line = safe_float(line)
+    market_gap = safe_float(market_gap)
+
+    if side == "under":
+        if market_gap <= 0:
+            return 0.0
+
+        if market_gap <= 0.35:
+            return market_gap / 0.35 * 0.55
+
+        if market_gap <= 0.65:
+            return 0.55 + ((market_gap - 0.35) / 0.30) * 0.35
+
+        if market_gap <= 0.78:
+            return 0.90 + ((market_gap - 0.65) / 0.13) * 0.08
+
+        if line <= 19.5:
+            return 0.82
+
+        return 0.95
+
+    if side == "over":
+        if market_gap <= 0.08:
+            return 1.0
+        if market_gap <= 0.20:
+            return 0.75
+        if market_gap <= 0.35:
+            return 0.45
+        if market_gap <= 0.55:
+            return 0.20
+        return 0.05
+
+    return clamp(market_gap / 0.80, 0, 1)
+
+
 def jakob_profile_score(pick):
     f = JAKOB_FORMULA
 
@@ -904,6 +946,8 @@ def jakob_profile_score(pick):
     h2h_matches = safe_int(pick.get("h2h_matches"))
     qualification = bool(pick.get("qualification"))
 
+    market_value = market_gap_profile_value(side, line, market_gap)
+
     score = 0.0
 
     score += f["w_confidence"] * clamp(confidence / 96.0, 0, 1)
@@ -911,7 +955,7 @@ def jakob_profile_score(pick):
     score += f["w_edge"] * clamp(edge / 0.16, 0, 1)
     score += f["w_abs_margin"] * clamp(margin / 5.0, 0, 1)
     score += f["w_bookmakers"] * clamp(bookmakers / 10.0, 0, 1)
-    score += f["w_market_gap"] * clamp(market_gap / 0.80, 0, 1)
+    score += f["w_market_gap"] * market_value
     score += f["w_avg_three"] * clamp(avg_three / 0.60, 0, 1)
     score += f["w_avg_close"] * clamp(avg_close / 0.80, 0, 1)
     score += f["w_min_recent"] * clamp(min_recent / 20.0, 0, 1)
@@ -940,7 +984,37 @@ def jakob_profile_score(pick):
     if side == "under":
         score += f["b_under"]
 
-    # Guardrails: ne pustimo, da ekstremno lep edge sam od sebe prevlada.
+    # Popravek v2:
+    # Market gap za UNDER je dober, ampak ne sme slepo zmagati.
+    # Over pri velikem favoritu dobi kazen.
+    if side == "under":
+        if line <= 18.5 and margin < 1.75:
+            score -= 4.0
+
+        if line <= 19.5 and margin < 1.25:
+            score -= 2.5
+
+        if line <= 19.5 and market_gap < 0.25:
+            score -= 2.0
+
+        if market_gap >= 0.78 and line <= 19.5:
+            score -= 1.5
+
+        if 0.35 <= market_gap <= 0.70:
+            score += 1.25
+
+    if side == "over":
+        if market_gap >= 0.55:
+            score -= 5.0
+        elif market_gap >= 0.40:
+            score -= 3.0
+        elif market_gap <= 0.10:
+            score += 1.5
+
+        if line <= 20.5 and margin < 2.0:
+            score -= 2.0
+
+    # Guardrails proti fake lepim številkam.
     if edge > 0.155:
         score -= 2.0
 
@@ -950,14 +1024,11 @@ def jakob_profile_score(pick):
     if odds > 2.18:
         score -= 1.0
 
-    if side == "over" and line <= 19.5:
-        score -= 2.0
+    if min_recent < 8:
+        score -= 1.0
 
-    if side == "over" and market_gap >= 0.55:
-        score -= 1.5
-
-    if side == "under" and line <= 20.5 and market_gap >= 0.35:
-        score += 1.0
+    if confidence < 72:
+        score -= 1.0
 
     return round(score, 8)
 
@@ -975,6 +1046,39 @@ def build_reasoning(pick):
         f"Confidence: {pick['confidence']:.1f}. "
         f"Quality: {pick['quality_score']:.1f}."
     )
+
+
+def make_play_pick(pick):
+    market_info = pick.get("market_info") or {}
+
+    return {
+        "rank": pick.get("rank"),
+        "tier": pick.get("rank_tier"),
+        "stake": pick.get("stake"),
+        "date": pick.get("date"),
+        "time": pick.get("time"),
+        "match": pick.get("match"),
+        "pick": pick.get("bet"),
+        "side": pick.get("side"),
+        "line": pick.get("line"),
+        "odds": pick.get("odds"),
+        "bookmaker": pick.get("best_bookmaker"),
+        "tournament": pick.get("tournament"),
+        "event_type": pick.get("event_type"),
+        "jakob_score": pick.get("jakob_score"),
+        "confidence": pick.get("confidence"),
+        "quality_score": pick.get("quality_score"),
+        "edge_percent": round(safe_float(pick.get("edge")) * 100, 2),
+        "model_prob_percent": round(safe_float(pick.get("model_prob")) * 100, 2),
+        "implied_prob_percent": round(safe_float(pick.get("implied_prob")) * 100, 2),
+        "expected_total_games": pick.get("expected_total_games"),
+        "expected_margin": pick.get("expected_margin"),
+        "bookmakers_used": pick.get("bookmakers_used"),
+        "market_gap": market_info.get("market_gap"),
+        "strength_gap": pick.get("strength_gap"),
+        "h2h_matches": pick.get("h2h_matches"),
+        "reasoning": pick.get("reasoning"),
+    }
 
 
 def main():
@@ -1015,6 +1119,10 @@ def main():
         "final_picks": 0,
         "errors": [],
         "formula": JAKOB_FORMULA,
+        "notes": {
+            "v2": "Market gap is direction-aware. Under gets capped bonus. Over gets high-gap penalty.",
+            "play_file": PLAY_FILE,
+        },
     }
 
     h2h_cache = {}
@@ -1115,6 +1223,7 @@ def main():
                 continue
 
             market_info = extract_home_away_odds(odds_blob)
+
             exp_games = expected_total_games(
                 first_form,
                 second_form,
@@ -1271,16 +1380,36 @@ def main():
     final = []
     over_count = 0
     under_count = 0
+    under_18_5_count = 0
+    low_under_count = 0
 
     for pick in ranked:
-        if pick["side"] == "over":
+        score = safe_float(pick.get("jakob_score"))
+        side = str(pick.get("side") or "").lower()
+        line = safe_float(pick.get("line"))
+
+        if score < MIN_JAKOB_SCORE_FOR_FINAL:
+            continue
+
+        if side == "over":
             if over_count >= MAX_OVER_PICKS:
                 continue
             over_count += 1
 
-        if pick["side"] == "under":
+        if side == "under":
             if under_count >= MAX_UNDER_PICKS:
                 continue
+
+            if line <= 18.5:
+                if under_18_5_count >= MAX_UNDER_18_5_FINAL:
+                    continue
+                under_18_5_count += 1
+
+            if line <= 20.5:
+                if low_under_count >= MAX_LOW_UNDER_FINAL:
+                    continue
+                low_under_count += 1
+
             under_count += 1
 
         final.append(pick)
@@ -1301,6 +1430,8 @@ def main():
     results = list(existing_by_id.values())
     results.sort(key=lambda x: (x.get("date") or "", x.get("time") or "", x.get("match") or ""))
 
+    play_picks = [make_play_pick(p) for p in final]
+
     payload = {
         "generated_at": now_iso(),
         "timezone": TZ_NAME,
@@ -1317,6 +1448,9 @@ def main():
             "max_ranked_save": MAX_RANKED_SAVE,
             "max_over_picks": MAX_OVER_PICKS,
             "max_under_picks": MAX_UNDER_PICKS,
+            "max_under_18_5_final": MAX_UNDER_18_5_FINAL,
+            "max_low_under_final": MAX_LOW_UNDER_FINAL,
+            "min_jakob_score_for_final": MIN_JAKOB_SCORE_FOR_FINAL,
             "min_recent_matches_each": MIN_RECENT_MATCHES_EACH,
             "min_bookmakers": MIN_BOOKMAKERS,
             "min_edge": MIN_EDGE,
@@ -1353,10 +1487,25 @@ def main():
         "ranked_candidates": ranked,
     }
 
+    play_payload = {
+        "generated_at": now_iso(),
+        "timezone": TZ_NAME,
+        "source": "API-Tennis",
+        "model": MODEL_NAME,
+        "model_version": MODEL_VERSION,
+        "summary": {
+            "final_picks": len(play_picks),
+            "over_picks": sum(1 for p in play_picks if p.get("side") == "over"),
+            "under_picks": sum(1 for p in play_picks if p.get("side") == "under"),
+        },
+        "picks_to_play": play_picks,
+    }
+
     save_json(PREDICTIONS_FILE, payload)
     save_json(RESULTS_FILE, results)
     save_json(DEBUG_FILE, debug)
     save_json(RANKED_FILE, ranked_payload)
+    save_json(PLAY_FILE, play_payload)
 
     print("")
     print(
@@ -1370,6 +1519,7 @@ def main():
     print(f"Saved {RESULTS_FILE}")
     print(f"Saved {DEBUG_FILE}")
     print(f"Saved {RANKED_FILE}")
+    print(f"Saved {PLAY_FILE}")
 
 
 if __name__ == "__main__":
