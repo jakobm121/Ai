@@ -1,0 +1,46 @@
+name: Tennis Optimizer
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Vsak dan zjutraj po Ljubljani približno 07:20 CET/CEST ni vedno isto v UTC,
+    # ampak za optimizer ni kritično, ker bere že settled results.
+    - cron: "20 5 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  tennis-optimizer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run tennis optimizer
+        env:
+          MIN_PICKS: "100"
+          TOP_N: "75"
+        run: |
+          python tennis_optimizer.py
+
+      - name: Commit optimizer report
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add tennis_optimizer.py
+          git add tennis_optimizer/
+
+          if git diff --cached --quiet; then
+            echo "No optimizer changes to commit"
+          else
+            git commit -m "Update tennis optimizer report"
+            git push
+          fi
