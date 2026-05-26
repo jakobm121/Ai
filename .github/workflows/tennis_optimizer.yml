@@ -27,7 +27,7 @@ jobs:
         env:
           MIN_PICKS: "100"
           TOP_N: "75"
-          MAX_CANDIDATES: "250000"
+          BEAM_WIDTH: "350"
           MAX_RULES_PER_COMBO: "6"
         run: |
           python tennis_optimizer.py
