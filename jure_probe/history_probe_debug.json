@@ -1,104 +1,180 @@
 {
-  "generated_at": "2026-05-28T00:31:09.767532+02:00",
-  "api_key_present": false,
-  "base_url": "https://v1.tennis.api-sports.io",
-  "host": "v1.tennis.api-sports.io",
-  "endpoint": "/fixtures",
-  "date_param": "date",
-  "dates": [
-    "2026-05-19",
-    "2026-05-20",
-    "2026-05-21",
-    "2026-05-22",
-    "2026-05-23",
-    "2026-05-24",
-    "2026-05-25",
-    "2026-05-26",
-    "2026-05-27",
-    "2026-05-28"
-  ],
-  "calls": [
-    {
-      "date": "2026-05-19",
-      "ok": false,
-      "status": null,
-      "url": "https://v1.tennis.api-sports.io/fixtures?date=2026-05-19",
-      "items_count": 0,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "date": "2026-05-20",
-      "ok": false,
-      "status": null,
-      "url": "https://v1.tennis.api-sports.io/fixtures?date=2026-05-20",
-      "items_count": 0,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "date": "2026-05-21",
-      "ok": false,
-      "status": null,
-      "url": "https://v1.tennis.api-sports.io/fixtures?date=2026-05-21",
-      "items_count": 0,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "date": "2026-05-22",
-      "ok": false,
-      "status": null,
-      "url": "https://v1.tennis.api-sports.io/fixtures?date=2026-05-22",
-      "items_count": 0,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "date": "2026-05-23",
-      "ok": false,
-      "status": null,
-      "url": "https://v1.tennis.api-sports.io/fixtures?date=2026-05-23",
-      "items_count": 0,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "date": "2026-05-24",
-      "ok": false,
-      "status": null,
-      "url": "https://v1.tennis.api-sports.io/fixtures?date=2026-05-24",
-      "items_count": 0,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "date": "2026-05-25",
-      "ok": false,
-      "status": null,
-      "url": "https://v1.tennis.api-sports.io/fixtures?date=2026-05-25",
-      "items_count": 0,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "date": "2026-05-26",
-      "ok": false,
-      "status": null,
-      "url": "https://v1.tennis.api-sports.io/fixtures?date=2026-05-26",
-      "items_count": 0,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "date": "2026-05-27",
-      "ok": false,
-      "status": null,
-      "url": "https://v1.tennis.api-sports.io/fixtures?date=2026-05-27",
-      "items_count": 0,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "date": "2026-05-28",
-      "ok": false,
-      "status": null,
-      "url": "https://v1.tennis.api-sports.io/fixtures?date=2026-05-28",
-      "items_count": 0,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+  "generated_at": "2026-05-28T00:48:37.060324+02:00",
+  "api_key_present": true,
+  "base_url": "https://api.api-tennis.com/tennis/",
+  "main_method": "get_fixtures",
+  "days_back": 10,
+  "start_date": "2026-05-19",
+  "end_date": "2026-05-28",
+  "total_items_found": 3490,
+  "sample_items_saved": 300,
+  "unique_fields": 56,
+  "best_variant": {
+    "name": "range_date_start_date_stop",
+    "items_count": 3441,
+    "params": {
+      "method": "get_fixtures",
+      "APIkey": "961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db",
+      "date_start": "2026-05-19",
+      "date_stop": "2026-05-28"
     }
-  ],
-  "total_items": 0,
-  "unique_fields": 0
+  },
+  "variants": [
+    {
+      "name": "range_date_start_date_stop",
+      "date": null,
+      "ok": true,
+      "status": 200,
+      "items_count": 3441,
+      "api_success": 1,
+      "api_error": null,
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date_start=2026-05-19&date_stop=2026-05-28"
+    },
+    {
+      "name": "range_from_to",
+      "date": null,
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&from=2026-05-19&to=2026-05-28"
+    },
+    {
+      "name": "single_date",
+      "date": "2026-05-19",
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date=2026-05-19"
+    },
+    {
+      "name": "single_date",
+      "date": "2026-05-20",
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date=2026-05-20"
+    },
+    {
+      "name": "single_date",
+      "date": "2026-05-21",
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date=2026-05-21"
+    },
+    {
+      "name": "single_date",
+      "date": "2026-05-22",
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date=2026-05-22"
+    },
+    {
+      "name": "single_date",
+      "date": "2026-05-23",
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date=2026-05-23"
+    },
+    {
+      "name": "single_date",
+      "date": "2026-05-24",
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date=2026-05-24"
+    },
+    {
+      "name": "single_date",
+      "date": "2026-05-25",
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date=2026-05-25"
+    },
+    {
+      "name": "single_date",
+      "date": "2026-05-26",
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date=2026-05-26"
+    },
+    {
+      "name": "single_date",
+      "date": "2026-05-27",
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date=2026-05-27"
+    },
+    {
+      "name": "single_date",
+      "date": "2026-05-28",
+      "ok": true,
+      "status": 200,
+      "items_count": 2,
+      "api_success": null,
+      "api_error": "1",
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_fixtures&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date=2026-05-28"
+    },
+    {
+      "name": "get_events_range_date_start_date_stop",
+      "date": null,
+      "ok": true,
+      "status": 200,
+      "items_count": 27,
+      "api_success": 1,
+      "api_error": null,
+      "api_message": null,
+      "error": null,
+      "url": "https://api.api-tennis.com/tennis/?method=get_events&APIkey=961f4036e041f75fbd4668cc3d354a4234ba677df4d8feab211ebd19934919db&date_start=2026-05-19&date_stop=2026-05-28"
+    }
+  ]
 }

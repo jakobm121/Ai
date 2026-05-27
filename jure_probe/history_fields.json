@@ -1,1 +1,461 @@
-[]
+[
+  {
+    "field": "pointbypoint[].points[].number_point",
+    "count": 35493,
+    "types": {
+      "str": 35493
+    },
+    "example": "1"
+  },
+  {
+    "field": "pointbypoint[].points[].score",
+    "count": 35493,
+    "types": {
+      "str": 35493
+    },
+    "example": "15 - 0"
+  },
+  {
+    "field": "pointbypoint[].points[].break_point",
+    "count": 35493,
+    "types": {
+      "null": 31443,
+      "str": 4050
+    },
+    "example": null
+  },
+  {
+    "field": "pointbypoint[].points[].set_point",
+    "count": 35493,
+    "types": {
+      "null": 35493
+    },
+    "example": null
+  },
+  {
+    "field": "pointbypoint[].points[].match_point",
+    "count": 35493,
+    "types": {
+      "null": 35493
+    },
+    "example": null
+  },
+  {
+    "field": "pointbypoint[].set_number",
+    "count": 8131,
+    "types": {
+      "str": 8131
+    },
+    "example": "Set 1"
+  },
+  {
+    "field": "pointbypoint[].number_game",
+    "count": 8131,
+    "types": {
+      "str": 8131
+    },
+    "example": "1"
+  },
+  {
+    "field": "pointbypoint[].player_served",
+    "count": 8131,
+    "types": {
+      "str": 8131
+    },
+    "example": "Second Player"
+  },
+  {
+    "field": "pointbypoint[].serve_winner",
+    "count": 8131,
+    "types": {
+      "str": 8131
+    },
+    "example": "Second Player"
+  },
+  {
+    "field": "pointbypoint[].serve_lost",
+    "count": 8131,
+    "types": {
+      "null": 5498,
+      "str": 2633
+    },
+    "example": null
+  },
+  {
+    "field": "pointbypoint[].score",
+    "count": 8131,
+    "types": {
+      "str": 8131
+    },
+    "example": "0 - 1"
+  },
+  {
+    "field": "pointbypoint[].points",
+    "count": 8131,
+    "types": {
+      "list": 8131
+    },
+    "example": null
+  },
+  {
+    "field": "pointbypoint[].points[]",
+    "count": 8131,
+    "types": {
+      "list_items": 42607
+    },
+    "example": null
+  },
+  {
+    "field": "scores[].score_first",
+    "count": 7277,
+    "types": {
+      "str": 7277
+    },
+    "example": "3"
+  },
+  {
+    "field": "scores[].score_second",
+    "count": 7277,
+    "types": {
+      "str": 7277
+    },
+    "example": "6"
+  },
+  {
+    "field": "scores[].score_set",
+    "count": 7277,
+    "types": {
+      "str": 7277
+    },
+    "example": "1"
+  },
+  {
+    "field": "statistics[].player_key",
+    "count": 4165,
+    "types": {
+      "int": 4165
+    },
+    "example": 2169
+  },
+  {
+    "field": "statistics[].stat_period",
+    "count": 4165,
+    "types": {
+      "str": 4165
+    },
+    "example": "match"
+  },
+  {
+    "field": "statistics[].stat_type",
+    "count": 4165,
+    "types": {
+      "str": 4165
+    },
+    "example": "Service"
+  },
+  {
+    "field": "statistics[].stat_name",
+    "count": 4165,
+    "types": {
+      "str": 4165
+    },
+    "example": "Aces"
+  },
+  {
+    "field": "statistics[].stat_value",
+    "count": 4165,
+    "types": {
+      "str": 4165
+    },
+    "example": "1"
+  },
+  {
+    "field": "statistics[].stat_won",
+    "count": 4165,
+    "types": {
+      "null": 2501,
+      "int": 1664
+    },
+    "example": null
+  },
+  {
+    "field": "statistics[].stat_total",
+    "count": 4165,
+    "types": {
+      "null": 2501,
+      "int": 1664
+    },
+    "example": null
+  },
+  {
+    "field": "_probe_variant",
+    "count": 3490,
+    "types": {
+      "str": 3490
+    },
+    "example": "range_date_start_date_stop"
+  },
+  {
+    "field": "_probe_date",
+    "count": 3490,
+    "types": {
+      "null": 3470,
+      "str": 20
+    },
+    "example": null
+  },
+  {
+    "field": "event_type_type",
+    "count": 3468,
+    "types": {
+      "str": 3468
+    },
+    "example": "Atp Singles"
+  },
+  {
+    "field": "event_key",
+    "count": 3441,
+    "types": {
+      "int": 3441
+    },
+    "example": 12127985
+  },
+  {
+    "field": "event_date",
+    "count": 3441,
+    "types": {
+      "str": 3441
+    },
+    "example": "2026-05-19"
+  },
+  {
+    "field": "event_time",
+    "count": 3441,
+    "types": {
+      "str": 3441
+    },
+    "example": "15:35"
+  },
+  {
+    "field": "event_first_player",
+    "count": 3441,
+    "types": {
+      "str": 3441
+    },
+    "example": "J. Brooksby"
+  },
+  {
+    "field": "first_player_key",
+    "count": 3441,
+    "types": {
+      "int": 3441
+    },
+    "example": 2169
+  },
+  {
+    "field": "event_second_player",
+    "count": 3441,
+    "types": {
+      "str": 3441
+    },
+    "example": "C. Ruud"
+  },
+  {
+    "field": "second_player_key",
+    "count": 3441,
+    "types": {
+      "int": 3441
+    },
+    "example": 430
+  },
+  {
+    "field": "event_final_result",
+    "count": 3441,
+    "types": {
+      "str": 3441
+    },
+    "example": "0 - 2"
+  },
+  {
+    "field": "event_game_result",
+    "count": 3441,
+    "types": {
+      "str": 3441
+    },
+    "example": "-"
+  },
+  {
+    "field": "event_serve",
+    "count": 3441,
+    "types": {
+      "null": 3438,
+      "str": 3
+    },
+    "example": null
+  },
+  {
+    "field": "event_winner",
+    "count": 3441,
+    "types": {
+      "str": 2965,
+      "null": 476
+    },
+    "example": "Second Player"
+  },
+  {
+    "field": "event_status",
+    "count": 3441,
+    "types": {
+      "str": 3441
+    },
+    "example": "Finished"
+  },
+  {
+    "field": "tournament_name",
+    "count": 3441,
+    "types": {
+      "str": 3441
+    },
+    "example": "Geneva"
+  },
+  {
+    "field": "tournament_key",
+    "count": 3441,
+    "types": {
+      "int": 3441
+    },
+    "example": 2207
+  },
+  {
+    "field": "tournament_round",
+    "count": 3441,
+    "types": {
+      "str": 3438,
+      "null": 3
+    },
+    "example": "ATP Geneva - 1/16-finals"
+  },
+  {
+    "field": "tournament_season",
+    "count": 3441,
+    "types": {
+      "str": 3441
+    },
+    "example": "2026"
+  },
+  {
+    "field": "event_live",
+    "count": 3441,
+    "types": {
+      "str": 3441
+    },
+    "example": "0"
+  },
+  {
+    "field": "event_first_player_logo",
+    "count": 3441,
+    "types": {
+      "str": 1784,
+      "null": 1657
+    },
+    "example": "https://api.api-tennis.com/logo-tennis/2169_j-brooksby.jpg"
+  },
+  {
+    "field": "event_second_player_logo",
+    "count": 3441,
+    "types": {
+      "str": 1782,
+      "null": 1659
+    },
+    "example": "https://api.api-tennis.com/logo-tennis/430_c-ruud.jpg"
+  },
+  {
+    "field": "event_qualification",
+    "count": 3441,
+    "types": {
+      "str": 3437,
+      "null": 4
+    },
+    "example": "False"
+  },
+  {
+    "field": "pointbypoint",
+    "count": 3441,
+    "types": {
+      "list": 3441
+    },
+    "example": null
+  },
+  {
+    "field": "pointbypoint[]",
+    "count": 3441,
+    "types": {
+      "list_items": 42142
+    },
+    "example": null
+  },
+  {
+    "field": "scores",
+    "count": 3441,
+    "types": {
+      "list": 3441
+    },
+    "example": null
+  },
+  {
+    "field": "scores[]",
+    "count": 3441,
+    "types": {
+      "list_items": 7277
+    },
+    "example": null
+  },
+  {
+    "field": "statistics",
+    "count": 3441,
+    "types": {
+      "list": 3441
+    },
+    "example": null
+  },
+  {
+    "field": "statistics[]",
+    "count": 3441,
+    "types": {
+      "list_items": 107756
+    },
+    "example": null
+  },
+  {
+    "field": "event_type_key",
+    "count": 27,
+    "types": {
+      "int": 27
+    },
+    "example": 267
+  },
+  {
+    "field": "param",
+    "count": 22,
+    "types": {
+      "str": 22
+    },
+    "example": "date_start"
+  },
+  {
+    "field": "msg",
+    "count": 22,
+    "types": {
+      "str": 22
+    },
+    "example": "Required parameter missing"
+  },
+  {
+    "field": "cod",
+    "count": 22,
+    "types": {
+      "int": 22
+    },
+    "example": 201
+  }
+]
