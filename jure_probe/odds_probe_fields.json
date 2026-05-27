@@ -1,0 +1,2578 @@
+[
+  {
+    "field": "_probe_event_key",
+    "count": 101,
+    "types": {
+      "int": 101
+    },
+    "example": 12127985
+  },
+  {
+    "field": "_probe_variant",
+    "count": 101,
+    "types": {
+      "str": 101
+    },
+    "example": "event_key"
+  },
+  {
+    "field": "Home/Away",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home/Away.Home",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home/Away.Home.bet365",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "6.00"
+  },
+  {
+    "field": "Home/Away.Home.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "6.50"
+  },
+  {
+    "field": "Home/Away.Home.Betfair",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "7.00"
+  },
+  {
+    "field": "Home/Away.Home.BetVictor",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "6.00"
+  },
+  {
+    "field": "Home/Away.Home.Pncl",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "7.36"
+  },
+  {
+    "field": "Home/Away.Home.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "6.05"
+  },
+  {
+    "field": "Home/Away.Away",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home/Away.Away.bet365",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.12"
+  },
+  {
+    "field": "Home/Away.Away.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.11"
+  },
+  {
+    "field": "Home/Away.Away.Betfair",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.10"
+  },
+  {
+    "field": "Home/Away.Away.BetVictor",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.10"
+  },
+  {
+    "field": "Home/Away.Away.Pncl",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.11"
+  },
+  {
+    "field": "Home/Away.Away.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.14"
+  },
+  {
+    "field": "Correct Score 1st Half",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.0:6",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.0:6.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "15.00"
+  },
+  {
+    "field": "Correct Score 1st Half.1:6",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.1:6.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "5.75"
+  },
+  {
+    "field": "Correct Score 1st Half.2:6",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.2:6.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "4.30"
+  },
+  {
+    "field": "Correct Score 1st Half.6:0",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.6:0.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "50.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:1",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.6:1.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "36.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:2",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.6:2.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "19.50"
+  },
+  {
+    "field": "Correct Score 1st Half.3:6",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.3:6.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "4.60"
+  },
+  {
+    "field": "Correct Score 1st Half.4:6",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.4:6.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "6.15"
+  },
+  {
+    "field": "Correct Score 1st Half.6:3",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.6:3.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "13.20"
+  },
+  {
+    "field": "Correct Score 1st Half.6:4",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.6:4.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "13.50"
+  },
+  {
+    "field": "Correct Score 1st Half.7:5",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.7:5.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "29.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:6",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.7:6.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "20.00"
+  },
+  {
+    "field": "Correct Score 1st Half.5:7",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.5:7.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:7",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 1st Half.6:7.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "12.50"
+  },
+  {
+    "field": "Odd/Even",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Odd/Even.Odd",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Odd/Even.Odd.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.86"
+  },
+  {
+    "field": "Odd/Even.Odd.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.86"
+  },
+  {
+    "field": "Odd/Even.Even",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Odd/Even.Even.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.86"
+  },
+  {
+    "field": "Odd/Even.Even.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.86"
+  },
+  {
+    "field": "Odd/Even (1st Set)",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Odd/Even (1st Set).Odd",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Odd/Even (1st Set).Odd.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.96"
+  },
+  {
+    "field": "Odd/Even (1st Set).Odd.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.96"
+  },
+  {
+    "field": "Odd/Even (1st Set).Even",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Odd/Even (1st Set).Even.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.77"
+  },
+  {
+    "field": "Odd/Even (1st Set).Even.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.77"
+  },
+  {
+    "field": "Home/Away (1st Set)",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home/Away (1st Set).Home",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home/Away (1st Set).Home.bet365",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "4.50"
+  },
+  {
+    "field": "Home/Away (1st Set).Home.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "3.80"
+  },
+  {
+    "field": "Home/Away (1st Set).Home.Pncl",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "5.42"
+  },
+  {
+    "field": "Home/Away (1st Set).Home.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "4.67"
+  },
+  {
+    "field": "Home/Away (1st Set).Away",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home/Away (1st Set).Away.bet365",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.20"
+  },
+  {
+    "field": "Home/Away (1st Set).Away.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.23"
+  },
+  {
+    "field": "Home/Away (1st Set).Away.Pncl",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.18"
+  },
+  {
+    "field": "Home/Away (1st Set).Away.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.20"
+  },
+  {
+    "field": "Set Betting",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Set Betting.2:0",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Set Betting.2:0.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "9.80"
+  },
+  {
+    "field": "Set Betting.2:0.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Set Betting.2:1",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Set Betting.2:1.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "13.50"
+  },
+  {
+    "field": "Set Betting.2:1.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "10.00"
+  },
+  {
+    "field": "Set Betting.0:2",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Set Betting.0:2.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.43"
+  },
+  {
+    "field": "Set Betting.0:2.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.40"
+  },
+  {
+    "field": "Set Betting.1:2",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Set Betting.1:2.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "4.25"
+  },
+  {
+    "field": "Set Betting.1:2.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "4.33"
+  },
+  {
+    "field": "Set / Match",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Set / Match.1/1",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Set / Match.1/1.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "9.00"
+  },
+  {
+    "field": "Set / Match.1/2",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Set / Match.1/2.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "6.60"
+  },
+  {
+    "field": "Set / Match.2/1",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Set / Match.2/1.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "19.50"
+  },
+  {
+    "field": "Set / Match.2/2",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Set / Match.2/2.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.26"
+  },
+  {
+    "field": "Home/Away (2nd Set)",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home/Away (2nd Set).Home",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home/Away (2nd Set).Home.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "4.55"
+  },
+  {
+    "field": "Home/Away (2nd Set).Away",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home/Away (2nd Set).Away.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.17"
+  },
+  {
+    "field": "Number of sets",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Number of sets.Away",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Number of sets.Away.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.30"
+  },
+  {
+    "field": "Number of sets.3",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Number of sets.3.Marathon",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "3.26"
+  },
+  {
+    "field": "Away Team Total (1st Set)",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Away Team Total (1st Set).Over",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Away Team Total (1st Set).Over.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "6.49"
+  },
+  {
+    "field": "Away Team Total (1st Set).Under",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Away Team Total (1st Set).Under.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.09"
+  },
+  {
+    "field": "Home Team Total (1st Set)",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home Team Total (1st Set).Over",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home Team Total (1st Set).Over.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "2.80"
+  },
+  {
+    "field": "Home Team Total (1st Set).Under",
+    "count": 59,
+    "types": {
+      "dict": 59
+    },
+    "example": null
+  },
+  {
+    "field": "Home Team Total (1st Set).Under.1xBet",
+    "count": 59,
+    "types": {
+      "str": 59
+    },
+    "example": "1.40"
+  },
+  {
+    "field": "Correct Score 2nd Half",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.0:6",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.0:6.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "10.20"
+  },
+  {
+    "field": "Correct Score 2nd Half.1:6",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.1:6.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "5.40"
+  },
+  {
+    "field": "Correct Score 2nd Half.2:6",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.2:6.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "4.25"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:0",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.6:0.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "50.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:1",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.6:1.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "41.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:2",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.6:2.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "26.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.3:6",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.3:6.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "4.70"
+  },
+  {
+    "field": "Correct Score 2nd Half.4:6",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.4:6.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "5.80"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:3",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.6:3.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "16.50"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:4",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.6:4.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "15.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.7:5",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.7:5.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "31.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.7:6",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.7:6.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "23.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.5:7",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.5:7.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:7",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Correct Score 2nd Half.6:7.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Home/Away (2nd Set).Home.Marathon",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "4.55"
+  },
+  {
+    "field": "Home/Away (2nd Set).Away.Marathon",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "1.17"
+  },
+  {
+    "field": "Odd/Even (2nd Set)",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Odd/Even (2nd Set).Odd",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Odd/Even (2nd Set).Odd.Marathon",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "2.02"
+  },
+  {
+    "field": "Odd/Even (2nd Set).Odd.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "2.02"
+  },
+  {
+    "field": "Odd/Even (2nd Set).Even",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Odd/Even (2nd Set).Even.Marathon",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "1.73"
+  },
+  {
+    "field": "Odd/Even (2nd Set).Even.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "1.73"
+  },
+  {
+    "field": "Away Team Total (2nd Set)",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Away Team Total (2nd Set).Over",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Away Team Total (2nd Set).Over.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "1.14"
+  },
+  {
+    "field": "Away Team Total (2nd Set).Under",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Away Team Total (2nd Set).Under.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "5.25"
+  },
+  {
+    "field": "Home Team Total (2nd Set)",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Home Team Total (2nd Set).Over",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Home Team Total (2nd Set).Over.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "1.85"
+  },
+  {
+    "field": "Home Team Total (2nd Set).Under",
+    "count": 57,
+    "types": {
+      "dict": 57
+    },
+    "example": null
+  },
+  {
+    "field": "Home Team Total (2nd Set).Under.1xBet",
+    "count": 57,
+    "types": {
+      "str": 57
+    },
+    "example": "1.89"
+  },
+  {
+    "field": "Home/Away.Home.Unibet",
+    "count": 56,
+    "types": {
+      "str": 56
+    },
+    "example": "6.25"
+  },
+  {
+    "field": "Home/Away.Away.Unibet",
+    "count": 56,
+    "types": {
+      "str": 56
+    },
+    "example": "1.12"
+  },
+  {
+    "field": "Home/Away.Home.10Bet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "6.00"
+  },
+  {
+    "field": "Home/Away.Away.10Bet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "1.10"
+  },
+  {
+    "field": "Correct Score 1st Half.0:6.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "15.00"
+  },
+  {
+    "field": "Correct Score 1st Half.1:6.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "5.50"
+  },
+  {
+    "field": "Correct Score 1st Half.2:6.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "5.50"
+  },
+  {
+    "field": "Correct Score 1st Half.6:0.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "101.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:1.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "51.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:2.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "26.00"
+  },
+  {
+    "field": "Correct Score 1st Half.3:6.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "3.75"
+  },
+  {
+    "field": "Correct Score 1st Half.4:6.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "7.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:3.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "23.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:4.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "11.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:5.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "29.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:6.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "19.00"
+  },
+  {
+    "field": "Correct Score 1st Half.5:7.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:7.bet365",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "11.00"
+  },
+  {
+    "field": "Home/Away (1st Set).Home.10Bet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "4.50"
+  },
+  {
+    "field": "Home/Away (1st Set).Away.10Bet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "1.17"
+  },
+  {
+    "field": "Set Betting.2:0.10Bet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "15.00"
+  },
+  {
+    "field": "Set Betting.2:0.Unibet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "12.50"
+  },
+  {
+    "field": "Set Betting.2:1.10Bet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Set Betting.2:1.Unibet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "11.50"
+  },
+  {
+    "field": "Set Betting.0:2.10Bet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "1.35"
+  },
+  {
+    "field": "Set Betting.0:2.Unibet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "1.38"
+  },
+  {
+    "field": "Set Betting.1:2.10Bet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "4.00"
+  },
+  {
+    "field": "Set Betting.1:2.Unibet",
+    "count": 55,
+    "types": {
+      "str": 55
+    },
+    "example": "4.60"
+  },
+  {
+    "field": "Odd/Even.Odd.bet365",
+    "count": 54,
+    "types": {
+      "str": 54
+    },
+    "example": "1.66"
+  },
+  {
+    "field": "Odd/Even.Even.bet365",
+    "count": 54,
+    "types": {
+      "str": 54
+    },
+    "example": "2.10"
+  },
+  {
+    "field": "Home/Away.Home.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "6.30"
+  },
+  {
+    "field": "Home/Away.Away.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "1.12"
+  },
+  {
+    "field": "Correct Score 1st Half.0:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "13.50"
+  },
+  {
+    "field": "Correct Score 1st Half.1:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "6.00"
+  },
+  {
+    "field": "Correct Score 1st Half.2:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "5.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:0.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "150.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:1.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "55.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:2.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "29.00"
+  },
+  {
+    "field": "Correct Score 1st Half.3:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "4.70"
+  },
+  {
+    "field": "Correct Score 1st Half.4:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "5.90"
+  },
+  {
+    "field": "Correct Score 1st Half.6:3.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "18.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:4.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:5.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "29.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "20.00"
+  },
+  {
+    "field": "Correct Score 1st Half.5:7.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:7.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "12.50"
+  },
+  {
+    "field": "Correct Score 2nd Half.0:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "13.50"
+  },
+  {
+    "field": "Correct Score 2nd Half.1:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "6.30"
+  },
+  {
+    "field": "Correct Score 2nd Half.2:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "4.75"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:0.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "150.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:1.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "55.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:2.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "30.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.3:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "5.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.4:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "5.50"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:3.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "16.50"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:4.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "14.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.7:5.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "29.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.7:6.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "20.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.5:7.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 2nd Half.6:7.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "12.50"
+  },
+  {
+    "field": "Home/Away (1st Set).Home.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "4.20"
+  },
+  {
+    "field": "Home/Away (1st Set).Away.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "1.20"
+  },
+  {
+    "field": "Set Betting.2:0.bet365",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Set Betting.2:0.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "13.50"
+  },
+  {
+    "field": "Set Betting.2:1.bet365",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "10.00"
+  },
+  {
+    "field": "Set Betting.2:1.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "10.25"
+  },
+  {
+    "field": "Set Betting.0:2.bet365",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "1.40"
+  },
+  {
+    "field": "Set Betting.0:2.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "1.42"
+  },
+  {
+    "field": "Set Betting.1:2.bet365",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "4.33"
+  },
+  {
+    "field": "Set Betting.1:2.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "4.10"
+  },
+  {
+    "field": "Home/Away (2nd Set).Home.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "4.20"
+  },
+  {
+    "field": "Home/Away (2nd Set).Away.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "1.20"
+  },
+  {
+    "field": "Number of sets.Away.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "1.33"
+  },
+  {
+    "field": "Number of sets.3.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "3.15"
+  },
+  {
+    "field": "Away Team Total (1st Set).Over.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "1.15"
+  },
+  {
+    "field": "Away Team Total (1st Set).Under.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "4.75"
+  },
+  {
+    "field": "Home Team Total (1st Set).Over.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "2.02"
+  },
+  {
+    "field": "Home Team Total (1st Set).Under.Betano",
+    "count": 53,
+    "types": {
+      "str": 53
+    },
+    "example": "1.70"
+  },
+  {
+    "field": "Home/Away.Home.Sbo",
+    "count": 43,
+    "types": {
+      "str": 43
+    },
+    "example": "1.83"
+  },
+  {
+    "field": "Home/Away.Away.Sbo",
+    "count": 43,
+    "types": {
+      "str": 43
+    },
+    "example": "1.83"
+  },
+  {
+    "field": "param",
+    "count": 42,
+    "types": {
+      "str": 42
+    },
+    "example": "date_start"
+  },
+  {
+    "field": "msg",
+    "count": 42,
+    "types": {
+      "str": 42
+    },
+    "example": "Required parameter missing"
+  },
+  {
+    "field": "cod",
+    "count": 42,
+    "types": {
+      "int": 42
+    },
+    "example": 201
+  },
+  {
+    "field": "Home/Away.Home.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "8.00"
+  },
+  {
+    "field": "Home/Away.Away.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "1.07"
+  },
+  {
+    "field": "Correct Score 1st Half.0:6.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 1st Half.1:6.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "5.50"
+  },
+  {
+    "field": "Correct Score 1st Half.2:6.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "5.50"
+  },
+  {
+    "field": "Correct Score 1st Half.6:0.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "51.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:1.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "41.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:2.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "29.00"
+  },
+  {
+    "field": "Correct Score 1st Half.3:6.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "4.00"
+  },
+  {
+    "field": "Correct Score 1st Half.4:6.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "6.50"
+  },
+  {
+    "field": "Correct Score 1st Half.6:3.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "21.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:4.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:5.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "26.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:6.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "17.00"
+  },
+  {
+    "field": "Correct Score 1st Half.5:7.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "15.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:7.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "11.00"
+  },
+  {
+    "field": "Home/Away (1st Set).Home.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "4.75"
+  },
+  {
+    "field": "Home/Away (1st Set).Home.BetVictor",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "4.33"
+  },
+  {
+    "field": "Home/Away (1st Set).Away.WilliamHill",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "1.15"
+  },
+  {
+    "field": "Home/Away (1st Set).Away.BetVictor",
+    "count": 40,
+    "types": {
+      "str": 40
+    },
+    "example": "1.18"
+  },
+  {
+    "field": "Odd/Even (1st Set).Odd.Betano",
+    "count": 38,
+    "types": {
+      "str": 38
+    },
+    "example": "1.95"
+  },
+  {
+    "field": "Odd/Even (1st Set).Even.Betano",
+    "count": 38,
+    "types": {
+      "str": 38
+    },
+    "example": "1.75"
+  },
+  {
+    "field": "Set Betting.2:0.WilliamHill",
+    "count": 38,
+    "types": {
+      "str": 38
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Set Betting.2:1.WilliamHill",
+    "count": 38,
+    "types": {
+      "str": 38
+    },
+    "example": "12.00"
+  },
+  {
+    "field": "Set Betting.0:2.WilliamHill",
+    "count": 38,
+    "types": {
+      "str": 38
+    },
+    "example": "1.36"
+  },
+  {
+    "field": "Set Betting.1:2.WilliamHill",
+    "count": 38,
+    "types": {
+      "str": 38
+    },
+    "example": "4.20"
+  },
+  {
+    "field": "Odd/Even (2nd Set).Odd.Betano",
+    "count": 38,
+    "types": {
+      "str": 38
+    },
+    "example": "2.00"
+  },
+  {
+    "field": "Odd/Even (2nd Set).Even.Betano",
+    "count": 38,
+    "types": {
+      "str": 38
+    },
+    "example": "1.70"
+  },
+  {
+    "field": "Number of sets.Away.10Bet",
+    "count": 37,
+    "types": {
+      "str": 37
+    },
+    "example": "1.28"
+  },
+  {
+    "field": "Number of sets.Away.bet365",
+    "count": 37,
+    "types": {
+      "str": 37
+    },
+    "example": "1.28"
+  },
+  {
+    "field": "Number of sets.3.10Bet",
+    "count": 37,
+    "types": {
+      "str": 37
+    },
+    "example": "3.25"
+  },
+  {
+    "field": "Number of sets.3.bet365",
+    "count": 37,
+    "types": {
+      "str": 37
+    },
+    "example": "3.50"
+  },
+  {
+    "field": "Correct Score 1st Half.0:6.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "15.00"
+  },
+  {
+    "field": "Correct Score 1st Half.1:6.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "5.50"
+  },
+  {
+    "field": "Correct Score 1st Half.2:6.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "4.33"
+  },
+  {
+    "field": "Correct Score 1st Half.6:0.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "46.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:1.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "34.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:2.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "19.00"
+  },
+  {
+    "field": "Correct Score 1st Half.3:6.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "4.33"
+  },
+  {
+    "field": "Correct Score 1st Half.4:6.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "6.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:3.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "12.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:4.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:5.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "26.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:6.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "19.00"
+  },
+  {
+    "field": "Correct Score 1st Half.5:7.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "12.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:7.BetVictor",
+    "count": 25,
+    "types": {
+      "str": 25
+    },
+    "example": "12.00"
+  },
+  {
+    "field": "Correct Score 1st Half.0:6.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 1st Half.1:6.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "7.50"
+  },
+  {
+    "field": "Correct Score 1st Half.2:6.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "5.50"
+  },
+  {
+    "field": "Correct Score 1st Half.6:0.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "46.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:1.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "26.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:2.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "19.00"
+  },
+  {
+    "field": "Correct Score 1st Half.3:6.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "5.50"
+  },
+  {
+    "field": "Correct Score 1st Half.4:6.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "6.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:3.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "11.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:4.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "11.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:5.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "21.00"
+  },
+  {
+    "field": "Correct Score 1st Half.7:6.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "17.00"
+  },
+  {
+    "field": "Correct Score 1st Half.5:7.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Correct Score 1st Half.6:7.10Bet",
+    "count": 16,
+    "types": {
+      "str": 16
+    },
+    "example": "12.00"
+  },
+  {
+    "field": "Set / Match.1/1.bet365",
+    "count": 15,
+    "types": {
+      "str": 15
+    },
+    "example": "8.00"
+  },
+  {
+    "field": "Set / Match.1/2.bet365",
+    "count": 15,
+    "types": {
+      "str": 15
+    },
+    "example": "9.00"
+  },
+  {
+    "field": "Set / Match.2/1.bet365",
+    "count": 15,
+    "types": {
+      "str": 15
+    },
+    "example": "17.00"
+  },
+  {
+    "field": "Set / Match.2/2.bet365",
+    "count": 15,
+    "types": {
+      "str": 15
+    },
+    "example": "1.25"
+  },
+  {
+    "field": "Win at least one set (Player 1)",
+    "count": 15,
+    "types": {
+      "dict": 15
+    },
+    "example": null
+  },
+  {
+    "field": "Win at least one set (Player 1).Yes",
+    "count": 15,
+    "types": {
+      "dict": 15
+    },
+    "example": null
+  },
+  {
+    "field": "Win at least one set (Player 1).Yes.bet365",
+    "count": 15,
+    "types": {
+      "str": 15
+    },
+    "example": "2.75"
+  },
+  {
+    "field": "Win at least one set (Player 1).No",
+    "count": 15,
+    "types": {
+      "dict": 15
+    },
+    "example": null
+  },
+  {
+    "field": "Win at least one set (Player 1).No.bet365",
+    "count": 15,
+    "types": {
+      "str": 15
+    },
+    "example": "1.40"
+  },
+  {
+    "field": "Win at least one set (Player 2)",
+    "count": 15,
+    "types": {
+      "dict": 15
+    },
+    "example": null
+  },
+  {
+    "field": "Win at least one set (Player 2).Yes",
+    "count": 15,
+    "types": {
+      "dict": 15
+    },
+    "example": null
+  },
+  {
+    "field": "Win at least one set (Player 2).Yes.bet365",
+    "count": 15,
+    "types": {
+      "str": 15
+    },
+    "example": "1.04"
+  },
+  {
+    "field": "Win at least one set (Player 2).No",
+    "count": 15,
+    "types": {
+      "dict": 15
+    },
+    "example": null
+  },
+  {
+    "field": "Win at least one set (Player 2).No.bet365",
+    "count": 15,
+    "types": {
+      "str": 15
+    },
+    "example": "13.00"
+  },
+  {
+    "field": "Home/Away.Home.888Sport",
+    "count": 13,
+    "types": {
+      "str": 13
+    },
+    "example": "8.00"
+  },
+  {
+    "field": "Home/Away.Away.888Sport",
+    "count": 13,
+    "types": {
+      "str": 13
+    },
+    "example": "1.06"
+  },
+  {
+    "field": "Home/Away (1st Set).Home.Betfair",
+    "count": 2,
+    "types": {
+      "str": 2
+    },
+    "example": "2.75"
+  },
+  {
+    "field": "Home/Away (1st Set).Away.Betfair",
+    "count": 2,
+    "types": {
+      "str": 2
+    },
+    "example": "1.40"
+  }
+]
