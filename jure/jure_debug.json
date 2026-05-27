@@ -1,0 +1,8 @@
+{
+  "generated_at": "2026-05-27T08:40:35.408183+02:00",
+  "accepted_keys": [],
+  "rejected": [],
+  "rejected_count": 0,
+  "dedupe_rule": "fixture/event + market + side",
+  "settle_rule": "fixture/event + side matched against data/tennis_results.json"
+}
