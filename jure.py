@@ -18,7 +18,6 @@ RESULTS_FILE = f"{OUTPUT_DIR}/jure_results.json"
 SUMMARY_FILE = f"{OUTPUT_DIR}/jure_summary.json"
 DEBUG_FILE = f"{OUTPUT_DIR}/jure_debug.json"
 
-# Taktika A = strožja taktika iz optimizerja.
 TACTIC_A = {
     "tour_level": "challenger",
     "bookmakers_min": 6,
@@ -26,7 +25,6 @@ TACTIC_A = {
     "edge_max": 0.20,
 }
 
-# Taktika B = širša taktika iz optimizerja.
 TACTIC_B = {
     "odds_min": 1.75,
     "quality_max": 90,
@@ -35,8 +33,6 @@ TACTIC_B = {
 
 STAKE_A = float(os.getenv("JURE_STAKE_A", "0.75"))
 STAKE_B = float(os.getenv("JURE_STAKE_B", "0.50"))
-
-# Če pick pade v A in B, ga obdržimo samo enkrat kot A+B s stake A.
 TACTIC_PRIORITY = ["A+B", "A", "B"]
 
 
@@ -53,10 +49,27 @@ def load_json(path, default):
         return default
     try:
         with open(path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        return data if isinstance(data, type(default)) else default
+            return json.load(f)
     except Exception:
         return default
+
+
+def extract_source_picks(raw_source):
+    if isinstance(raw_source, dict):
+        picks = raw_source.get("picks", [])
+    elif isinstance(raw_source, list):
+        picks = raw_source
+    else:
+        picks = []
+    return picks if isinstance(picks, list) else []
+
+
+def source_format(raw_source):
+    if isinstance(raw_source, dict):
+        return "dict_with_picks" if isinstance(raw_source.get("picks"), list) else "dict_without_picks"
+    if isinstance(raw_source, list):
+        return "list"
+    return type(raw_source).__name__
 
 
 def save_json(path, data):
@@ -121,10 +134,12 @@ def side_value(pick):
     bet = normalize_text(pick.get("bet"))
     first = normalize_text(pick.get("first_player_name"))
     second = normalize_text(pick.get("second_player_name"))
+
     if first and first in bet:
         return "home"
     if second and second in bet:
         return "away"
+
     return raw or None
 
 
@@ -146,25 +161,29 @@ def is_home_away_pick(pick):
         "correct score",
         "set betting",
     ]
+
     if any(w in market for w in bad_words):
         return False
     if bet.startswith("over ") or bet.startswith("under "):
         return False
-
     if not market:
         return True
+
     return "home/away" in market or market in {"winner", "match winner"}
 
 
 def market_gap(pick):
     info = pick.get("market_info") if isinstance(pick.get("market_info"), dict) else {}
+
     gap = safe_float(info.get("market_gap"), None)
     if gap is not None:
         return gap
+
     home = safe_float(info.get("home_implied"), None)
     away = safe_float(info.get("away_implied"), None)
     if home is not None and away is not None:
         return abs(home - away)
+
     return None
 
 
@@ -196,32 +215,44 @@ def feature_value(pick, name):
     return None
 
 
+def tactic_a_checks(pick):
+    values = {
+        "tour_level": feature_value(pick, "tour_level"),
+        "bookmakers": feature_value(pick, "bookmakers"),
+        "confidence": feature_value(pick, "confidence"),
+        "edge": feature_value(pick, "edge"),
+    }
+    checks = {
+        "tour_level_challenger": values["tour_level"] == TACTIC_A["tour_level"],
+        "bookmakers_min": values["bookmakers"] is not None and values["bookmakers"] >= TACTIC_A["bookmakers_min"],
+        "confidence_max": values["confidence"] is not None and values["confidence"] <= TACTIC_A["confidence_max"],
+        "edge_max": values["edge"] is not None and values["edge"] <= TACTIC_A["edge_max"],
+    }
+    return all(checks.values()), values, checks
+
+
+def tactic_b_checks(pick):
+    values = {
+        "odds": feature_value(pick, "odds"),
+        "quality": feature_value(pick, "quality"),
+        "edge": feature_value(pick, "edge"),
+    }
+    checks = {
+        "odds_min": values["odds"] is not None and values["odds"] >= TACTIC_B["odds_min"],
+        "quality_max": values["quality"] is not None and values["quality"] <= TACTIC_B["quality_max"],
+        "edge_max": values["edge"] is not None and values["edge"] <= TACTIC_B["edge_max"],
+    }
+    return all(checks.values()), values, checks
+
+
 def passes_tactic_a(pick):
-    if feature_value(pick, "tour_level") != TACTIC_A["tour_level"]:
-        return False
-    bookmakers = feature_value(pick, "bookmakers")
-    confidence = feature_value(pick, "confidence")
-    edge = feature_value(pick, "edge")
-    if bookmakers is None or bookmakers < TACTIC_A["bookmakers_min"]:
-        return False
-    if confidence is None or confidence > TACTIC_A["confidence_max"]:
-        return False
-    if edge is None or edge > TACTIC_A["edge_max"]:
-        return False
-    return True
+    ok, _, _ = tactic_a_checks(pick)
+    return ok
 
 
 def passes_tactic_b(pick):
-    odds = feature_value(pick, "odds")
-    quality = feature_value(pick, "quality")
-    edge = feature_value(pick, "edge")
-    if odds is None or odds < TACTIC_B["odds_min"]:
-        return False
-    if quality is None or quality > TACTIC_B["quality_max"]:
-        return False
-    if edge is None or edge > TACTIC_B["edge_max"]:
-        return False
-    return True
+    ok, _, _ = tactic_b_checks(pick)
+    return ok
 
 
 def tactic_label(pick):
@@ -247,8 +278,10 @@ def stake_for_label(label):
 def profit_for_pick(pick, stake=None):
     result = normalize_result(pick.get("result"))
     odds = safe_float(pick.get("odds"), None)
+
     if stake is None:
         stake = safe_float(pick.get("stake"), 0.0) or 0.0
+
     if result == "win":
         return round(stake * ((odds or 1.0) - 1.0), 4)
     if result == "loss":
@@ -288,11 +321,12 @@ def priority_index(label):
     try:
         return TACTIC_PRIORITY.index(label)
     except ValueError:
-        return 99
+        return 999
 
 
 def merge_unique(existing, incoming):
     by_key = {}
+
     for p in existing:
         if not isinstance(p, dict):
             continue
@@ -307,21 +341,26 @@ def merge_unique(existing, incoming):
         if key not in by_key:
             by_key[key] = p
             continue
+
         old = by_key[key]
         if is_settled(old) and not is_settled(p):
             continue
+
         old_label = old.get("jure_tactic")
         new_label = p.get("jure_tactic")
+
         if priority_index(new_label) < priority_index(old_label):
             merged = dict(old)
             merged.update(p)
             merged["jure_created_at"] = old.get("jure_created_at") or p.get("jure_created_at")
             by_key[key] = merged
+
     return list(by_key.values())
 
 
 def settle_from_main_results(jure_picks, main_results):
     result_index = {}
+
     for r in main_results:
         if not isinstance(r, dict):
             continue
@@ -331,14 +370,17 @@ def settle_from_main_results(jure_picks, main_results):
 
     settled = []
     still_pending = []
+
     for p in jure_picks:
         x = dict(p)
         key = x.get("jure_result_key") or result_match_key(x)
         main = result_index.get(key)
+
         if main and is_settled(main):
             for field in ["result", "settled_at", "settled_status", "event_winner", "final_score", "winner", "score"]:
                 if field in main:
                     x[field] = main[field]
+
             x["result"] = normalize_result(x.get("result"))
             x["profit"] = profit_for_pick(x, safe_float(x.get("stake"), 0.0) or 0.0)
             x["jure_settled_from"] = MAIN_RESULTS_FILE
@@ -346,6 +388,7 @@ def settle_from_main_results(jure_picks, main_results):
             settled.append(x)
         else:
             still_pending.append(x)
+
     return settled, still_pending
 
 
@@ -358,10 +401,12 @@ def evaluate(picks):
     wins = [p for p in settled if normalize_result(p.get("result")) == "win"]
     losses = [p for p in settled if normalize_result(p.get("result")) == "loss"]
     pushes = [p for p in settled if normalize_result(p.get("result")) == "push"]
+
     stake_sum = sum(safe_float(p.get("stake"), 0.0) or 0.0 for p in settled)
     profit = round(sum(safe_float(p.get("profit"), 0.0) or 0.0 for p in settled), 4)
     winrate = round(len(wins) / max(1, len(wins) + len(losses)) * 100, 2)
     roi = round(profit / stake_sum * 100, 2) if stake_sum else 0.0
+
     return {
         "picks": len(picks),
         "settled": len(settled),
@@ -394,6 +439,7 @@ def make_active_md(active, summary):
     lines.append("")
     lines.append(f"Active picks: **{len(active)}**")
     lines.append("")
+
     if not active:
         lines.append("No active Jure picks.")
         lines.append("")
@@ -401,6 +447,7 @@ def make_active_md(active, summary):
 
     lines.append("| Date | Time | Tactic | Stake | Match | Bet | Odds | Book | Conf | Quality | Edge |")
     lines.append("|---|---:|---:|---:|---|---|---:|---|---:|---:|---:|")
+
     for p in sorted(active, key=sort_pick_key):
         lines.append(
             f"| {p.get('date','')} | {p.get('time','')} | {p.get('jure_tactic','')} | "
@@ -408,33 +455,70 @@ def make_active_md(active, summary):
             f"{p.get('odds','')} | {p.get('best_bookmaker','')} | {p.get('confidence','')} | "
             f"{p.get('quality_score','')} | {p.get('edge','')} |"
         )
+
     lines.append("")
     return "\n".join(lines)
 
 
+def failed_check_names(checks):
+    return [key for key, ok in checks.items() if not ok]
+
+
 def main():
     ensure_dirs()
-    predictions = load_json(PREDICTIONS_FILE, [])
-    main_results = load_json(MAIN_RESULTS_FILE, [])
+
+    raw_predictions = load_json(PREDICTIONS_FILE, [])
+    raw_main_results = load_json(MAIN_RESULTS_FILE, [])
     previous_results = load_json(RESULTS_FILE, [])
+
+    predictions = extract_source_picks(raw_predictions)
+    main_results = extract_source_picks(raw_main_results)
+
+    if not isinstance(previous_results, list):
+        previous_results = []
 
     accepted = []
     rejected = []
+
     for pick in predictions:
         if not isinstance(pick, dict):
             continue
+
         reason = None
+        detail = {}
+
         if not is_home_away_pick(pick):
             reason = "not_home_away"
+            detail = {
+                "side_detected": side_value(pick),
+                "market": pick.get("market"),
+                "bet": pick.get("bet"),
+            }
         else:
             label = tactic_label(pick)
+            a_ok, a_values, a_checks = tactic_a_checks(pick)
+            b_ok, b_values, b_checks = tactic_b_checks(pick)
+
             if label:
-                accepted.append(prepare_pick(pick, label))
+                p = prepare_pick(pick, label)
+                p["jure_tactic_a_checks"] = a_checks
+                p["jure_tactic_b_checks"] = b_checks
+                accepted.append(p)
             else:
                 reason = "failed_tactics"
+                detail = {
+                    "tactic_a_values": a_values,
+                    "tactic_a_checks": a_checks,
+                    "tactic_a_failed": failed_check_names(a_checks),
+                    "tactic_b_values": b_values,
+                    "tactic_b_checks": b_checks,
+                    "tactic_b_failed": failed_check_names(b_checks),
+                }
+
         if reason:
             rejected.append({
                 "reason": reason,
+                "detail": detail,
                 "match": pick.get("match"),
                 "bet": pick.get("bet"),
                 "side": pick.get("side"),
@@ -449,15 +533,20 @@ def main():
 
     all_jure = merge_unique(previous_results, accepted)
     settled, pending = settle_from_main_results(all_jure, main_results)
+
     final_results = sorted(settled + pending, key=sort_pick_key)
     active = sorted([p for p in pending if not is_settled(p)], key=sort_pick_key)
 
     summary = {
         "generated_at": now_iso(),
         "predictions_file": PREDICTIONS_FILE,
+        "predictions_source_format": source_format(raw_predictions),
         "main_results_file": MAIN_RESULTS_FILE,
+        "main_results_source_format": source_format(raw_main_results),
         "output_dir": OUTPUT_DIR,
         "predictions_loaded": len(predictions),
+        "main_results_loaded": len(main_results),
+        "previous_results_loaded": len(previous_results),
         "accepted_from_current_predictions": len(accepted),
         "rejected_from_current_predictions": len(rejected),
         "active_count": len(active),
@@ -474,8 +563,29 @@ def main():
 
     debug = {
         "generated_at": summary["generated_at"],
-        "accepted_keys": [p.get("jure_key") for p in accepted],
-        "rejected": rejected[:500],
+        "predictions_file": PREDICTIONS_FILE,
+        "predictions_source_format": source_format(raw_predictions),
+        "predictions_loaded": len(predictions),
+        "main_results_file": MAIN_RESULTS_FILE,
+        "main_results_source_format": source_format(raw_main_results),
+        "main_results_loaded": len(main_results),
+        "accepted_count": len(accepted),
+        "accepted": [
+            {
+                "jure_key": p.get("jure_key"),
+                "match": p.get("match"),
+                "bet": p.get("bet"),
+                "jure_tactic": p.get("jure_tactic"),
+                "odds": p.get("odds"),
+                "confidence": p.get("confidence"),
+                "quality_score": p.get("quality_score"),
+                "edge": p.get("edge"),
+                "tour_level": p.get("tour_level"),
+                "bookmakers_used": p.get("bookmakers_used"),
+            }
+            for p in accepted
+        ],
+        "rejected": rejected[:1000],
         "rejected_count": len(rejected),
         "dedupe_rule": "fixture/event + market + side",
         "settle_rule": "fixture/event + side matched against data/tennis_results.json",
@@ -489,6 +599,7 @@ def main():
 
     print("")
     print("JURE DONE")
+    print(f"predictions source format: {source_format(raw_predictions)}")
     print(f"predictions loaded: {len(predictions)}")
     print(f"accepted current: {len(accepted)}")
     print(f"rejected current: {len(rejected)}")
@@ -500,6 +611,7 @@ def main():
     print(f"Active: {ACTIVE_FILE}")
     print(f"Results: {RESULTS_FILE}")
     print(f"Summary: {SUMMARY_FILE}")
+    print(f"Debug: {DEBUG_FILE}")
 
 
 if __name__ == "__main__":
