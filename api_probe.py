@@ -9,20 +9,19 @@ from collections import Counter, defaultdict
 
 TZ_NAME = "Europe/Ljubljana"
 
-# Your existing API style:
-# API_KEY = os.getenv("API_KEY")
-# BASE_URL = "https://api.api-tennis.com/tennis/"
 API_KEY = os.getenv("API_KEY", "")
 BASE_URL = os.getenv("API_TENNIS_BASE_URL", "https://api.api-tennis.com/tennis/").rstrip("/") + "/"
 
 OUTPUT_DIR = os.getenv("PROBE_DIR", "jure_probe")
 DAYS_BACK = int(os.getenv("DAYS_BACK", "10"))
 SLEEP_SECONDS = float(os.getenv("SLEEP_SECONDS", "0.35"))
-
-# Main method for API-Tennis. The probe will also try backup variants.
 MAIN_METHOD = os.getenv("API_METHOD", "get_fixtures")
 
-RAW_FILE = f"{OUTPUT_DIR}/history_raw.json"
+# Safety limits so GitHub never rejects the commit.
+MAX_RAW_ITEMS = int(os.getenv("MAX_RAW_ITEMS", "300"))
+MAX_VARIANT_DATA_CHARS = int(os.getenv("MAX_VARIANT_DATA_CHARS", "4000"))
+
+RAW_FILE = f"{OUTPUT_DIR}/history_raw_sample.json"
 FIELDS_FILE = f"{OUTPUT_DIR}/history_fields.json"
 SAMPLES_FILE = f"{OUTPUT_DIR}/history_samples.json"
 REPORT_FILE = f"{OUTPUT_DIR}/history_probe_report.md"
@@ -74,7 +73,7 @@ def api_get(params):
             try:
                 data = json.loads(body)
             except Exception:
-                data = {"_raw_text": body}
+                data = {"_raw_text": body[:MAX_VARIANT_DATA_CHARS]}
 
             return {
                 "ok": 200 <= status < 300,
@@ -97,14 +96,12 @@ def api_get(params):
 
 
 def extract_response_list(payload):
-    # API-Tennis usually returns {"success": 1, "result": [...]}
     if isinstance(payload, dict):
         for key in ["result", "response", "data", "fixtures", "matches", "events"]:
             value = payload.get(key)
             if isinstance(value, list):
                 return value
 
-        # Sometimes a successful response can be a dict of records.
         for key in ["result", "response", "data"]:
             value = payload.get(key)
             if isinstance(value, dict):
@@ -127,34 +124,55 @@ def payload_status(payload):
     }
 
 
+def compact_payload(payload):
+    if payload is None:
+        return None
+
+    if isinstance(payload, dict):
+        out = {}
+        for key in ["success", "error", "message"]:
+            if key in payload:
+                out[key] = payload.get(key)
+
+        items = extract_response_list(payload)
+        out["items_count"] = len(items)
+        out["items_sample"] = items[:3]
+        return out
+
+    if isinstance(payload, list):
+        return {
+            "items_count": len(payload),
+            "items_sample": payload[:3],
+        }
+
+    text = str(payload)
+    return text[:MAX_VARIANT_DATA_CHARS]
+
+
 def build_query_variants(start_date, end_date, single_dates):
-    variants = []
-
-    # Variant 1: most likely API-Tennis range format.
-    variants.append({
-        "name": "range_date_start_date_stop",
-        "params": {
-            "method": MAIN_METHOD,
-            "APIkey": API_KEY,
-            "date_start": start_date,
-            "date_stop": end_date,
+    variants = [
+        {
+            "name": "range_date_start_date_stop",
+            "params": {
+                "method": MAIN_METHOD,
+                "APIkey": API_KEY,
+                "date_start": start_date,
+                "date_stop": end_date,
+            },
+            "mode": "range",
         },
-        "mode": "range",
-    })
-
-    # Variant 2: another possible range naming.
-    variants.append({
-        "name": "range_from_to",
-        "params": {
-            "method": MAIN_METHOD,
-            "APIkey": API_KEY,
-            "from": start_date,
-            "to": end_date,
+        {
+            "name": "range_from_to",
+            "params": {
+                "method": MAIN_METHOD,
+                "APIkey": API_KEY,
+                "from": start_date,
+                "to": end_date,
+            },
+            "mode": "range",
         },
-        "mode": "range",
-    })
+    ]
 
-    # Variant 3: per-day date.
     for d in single_dates:
         variants.append({
             "name": "single_date",
@@ -167,7 +185,6 @@ def build_query_variants(start_date, end_date, single_dates):
             "mode": "daily",
         })
 
-    # Variant 4: if provider uses get_events instead of get_fixtures.
     variants.append({
         "name": "get_events_range_date_start_date_stop",
         "params": {
@@ -323,7 +340,8 @@ def make_report(generated_at, start_date, end_date, variants_log, best_variant, 
     lines.append(f"- Base URL: `{BASE_URL}`")
     lines.append(f"- API key present: **{bool(API_KEY)}**")
     lines.append(f"- Main method: `{MAIN_METHOD}`")
-    lines.append(f"- Date range: **{start_date} → {end_date}**")
+    lines.append(f"- Date range: **{start_date} â {end_date}**")
+    lines.append(f"- Raw sample limit: **{MAX_RAW_ITEMS} items**")
     lines.append("")
     lines.append("## Tried query variants")
     lines.append("")
@@ -350,7 +368,7 @@ def make_report(generated_at, start_date, end_date, variants_log, best_variant, 
 
     lines.append("## Overall")
     lines.append("")
-    lines.append(f"- Total unique match/event items: **{len(items)}**")
+    lines.append(f"- Total unique match/event items found: **{len(items)}**")
     lines.append(f"- Unique fields found: **{len(field_rows)}**")
     lines.append("")
     lines.append("## Top fields")
@@ -358,7 +376,7 @@ def make_report(generated_at, start_date, end_date, variants_log, best_variant, 
     lines.append("| Field | Count | Types | Example |")
     lines.append("|---|---:|---|---|")
 
-    for row in field_rows[:100]:
+    for row in field_rows[:120]:
         example = row.get("example")
         if isinstance(example, (dict, list)):
             example = json.dumps(example, ensure_ascii=False)[:80]
@@ -373,7 +391,7 @@ def make_report(generated_at, start_date, end_date, variants_log, best_variant, 
     lines.append("| Key | Date | Time | Tournament | Round | Player 1 | Player 2 | Status | Final | Sets |")
     lines.append("|---|---|---|---|---|---|---|---|---|---|")
 
-    for s in samples[:50]:
+    for s in samples[:80]:
         sets = " / ".join([
             str(s.get("first_set") or ""),
             str(s.get("second_set") or ""),
@@ -428,10 +446,9 @@ def main():
             "api_error": status.get("error"),
             "api_message": status.get("message"),
             "error": result.get("error"),
-            "data": result.get("data"),
+            "data_sample": compact_payload(result.get("data")),
         })
 
-        # Keep all successful items. If both range and daily work, dedupe later.
         for item in items:
             if isinstance(item, dict):
                 x = dict(item)
@@ -442,9 +459,10 @@ def main():
         time.sleep(SLEEP_SECONDS)
 
     all_items = dedupe_items(all_items)
+    raw_sample_items = all_items[:MAX_RAW_ITEMS]
 
     field_rows = collect_field_info(all_items)
-    samples = [guess_match_identity(item) for item in all_items[:200]]
+    samples = [guess_match_identity(item) for item in all_items[:300]]
 
     best_variant = None
     if variants_log:
@@ -454,6 +472,7 @@ def main():
 
     raw_out = {
         "generated_at": generated_at,
+        "note": "This file is intentionally a limited sample so GitHub can commit it safely.",
         "config": {
             "base_url": BASE_URL,
             "api_key_present": bool(API_KEY),
@@ -461,10 +480,17 @@ def main():
             "days_back": DAYS_BACK,
             "start_date": start_date,
             "end_date": end_date,
+            "max_raw_items": MAX_RAW_ITEMS,
         },
         "variants": variants_log,
-        "best_variant": best_variant,
-        "items": all_items,
+        "best_variant": {
+            "name": best_variant.get("name"),
+            "items_count": best_variant.get("items_count"),
+            "params": best_variant.get("params"),
+        } if best_variant else None,
+        "total_items_found": len(all_items),
+        "sample_items_saved": len(raw_sample_items),
+        "items_sample": raw_sample_items,
     }
 
     debug = {
@@ -475,7 +501,8 @@ def main():
         "days_back": DAYS_BACK,
         "start_date": start_date,
         "end_date": end_date,
-        "total_items": len(all_items),
+        "total_items_found": len(all_items),
+        "sample_items_saved": len(raw_sample_items),
         "unique_fields": len(field_rows),
         "best_variant": {
             "name": best_variant.get("name"),
@@ -522,7 +549,8 @@ def main():
     print(f"base url: {BASE_URL}")
     print(f"main method: {MAIN_METHOD}")
     print(f"date range: {start_date} -> {end_date}")
-    print(f"total items: {len(all_items)}")
+    print(f"total items found: {len(all_items)}")
+    print(f"sample items saved: {len(raw_sample_items)}")
     print(f"unique fields: {len(field_rows)}")
 
     if best_variant:
@@ -532,7 +560,7 @@ def main():
 
     print("")
     print(f"Report: {REPORT_FILE}")
-    print(f"Raw: {RAW_FILE}")
+    print(f"Raw sample: {RAW_FILE}")
     print(f"Fields: {FIELDS_FILE}")
     print(f"Samples: {SAMPLES_FILE}")
     print(f"Debug: {DEBUG_FILE}")
