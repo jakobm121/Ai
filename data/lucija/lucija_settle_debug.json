@@ -1,28 +1,34 @@
 {
-  "generated_at": "2026-05-27T14:46:46.159168+02:00",
+  "generated_at": "2026-05-27T18:31:59.332804+02:00",
   "source_results_file": "data/tennis_totals_results.json",
   "lucija_results_file": "data/lucija/lucija_results.json",
-  "source_results_count": 454,
+  "source_results_count": 457,
   "lucija_results_count": 4,
-  "updated": 0,
-  "still_pending": 4,
+  "updated": 2,
+  "still_pending": 2,
   "source_not_found": 0,
-  "source_not_settled": 4,
+  "source_not_settled": 2,
   "items": [
     {
       "pick_id": "ca1e287a22f056bcee1b9da95ee86913",
       "source_pick_id": "325f7f2f12fd9801d54c995907633af5",
       "match": "F. Jones - M. Bouzkova",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "win",
+      "profit": 1.15,
+      "total_games": 19,
+      "final_score": "0-6, 6-7",
       "match_method": "source_pick_id"
     },
     {
       "pick_id": "c618b940328b6dbca0380a422fcdd42e",
       "source_pick_id": "a9e6c3261cd104a71fee945f33e32d30",
       "match": "D. Snigur - P. Stearns",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "win",
+      "profit": 1.19,
+      "total_games": 16,
+      "final_score": "4-6, 0-6",
       "match_method": "source_pick_id"
     },
     {
