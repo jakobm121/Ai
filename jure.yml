@@ -1,0 +1,52 @@
+name: Jure
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Po tennis.py runu. UTC čas; poleti/zimi ni nujno isti lokalni čas, ampak ni kritično.
+    - cron: "35 6 * * *"
+    - cron: "35 10 * * *"
+    - cron: "35 14 * * *"
+    - cron: "35 18 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  jure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Jure aggregator
+        env:
+          DATA_DIR: "data"
+          JURE_DIR: "jure"
+          TENNIS_PREDICTIONS_FILE: "data/tennis_predictions.json"
+          TENNIS_RESULTS_FILE: "data/tennis_results.json"
+          JURE_STAKE_A: "0.75"
+          JURE_STAKE_B: "0.50"
+        run: |
+          python jure.py
+
+      - name: Commit Jure files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add jure.py
+          git add jure/
+
+          if git diff --cached --quiet; then
+            echo "No Jure changes to commit"
+          else
+            git commit -m "Update Jure picks"
+            git push
+          fi
