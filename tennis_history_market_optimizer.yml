@@ -1,0 +1,53 @@
+name: Tennis History Market Optimizer
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tennis-history-market-optimizer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run historical market optimizer
+        env:
+          PROBE_DIR: "jure_probe"
+          DATASET_FILE: "jure_probe/history_betting_dataset.json"
+          HISTORY_OPTIMIZER_DIR: "jure_probe"
+          MIN_ROWS: "30"
+          TOP_N: "100"
+        run: |
+          python history_market_optimizer.py
+
+      - name: Commit historical market optimizer
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add history_market_optimizer.py
+          git add jure_probe/history_market_optimizer_report.md
+          git add jure_probe/history_market_best_rules.json
+          git add jure_probe/history_market_optimizer_table.json
+          git add jure_probe/history_market_optimizer_picks.json
+          git add jure_probe/history_market_optimizer_summary.json
+          git add jure_probe/history_market_optimizer_debug.json
+
+          if git diff --cached --quiet; then
+            echo "No optimizer changes to commit"
+          else
+            git commit -m "Update tennis history market optimizer"
+            git pull --rebase --autostash origin main
+            git push
+          fi
