@@ -28,8 +28,13 @@ jobs:
           API_METHOD: "get_fixtures"
           DAYS_BACK: "10"
           PROBE_DIR: "jure_probe"
+          MAX_RAW_ITEMS: "300"
         run: |
           python api_probe.py
+
+      - name: Remove oversized old raw file if present
+        run: |
+          rm -f jure_probe/history_raw.json
 
       - name: Commit probe files
         run: |
@@ -37,7 +42,11 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add api_probe.py
-          git add jure_probe/
+          git add jure_probe/history_raw_sample.json
+          git add jure_probe/history_fields.json
+          git add jure_probe/history_samples.json
+          git add jure_probe/history_probe_debug.json
+          git add jure_probe/history_probe_report.md
 
           if git diff --cached --quiet; then
             echo "No probe changes to commit"
