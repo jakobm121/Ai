@@ -1,0 +1,301 @@
+{
+  "generated_at": "2026-05-28T01:18:50.644564+02:00",
+  "history_file": "jure_probe/history_raw_sample.json",
+  "odds_file": "jure_probe/odds_probe_raw.json",
+  "history_matches_loaded": 300,
+  "odds_items_loaded": 101,
+  "dataset_rows": 1031,
+  "supported_markets": [
+    "Home/Away",
+    "Home/Away (1st Set)",
+    "Home/Away (2nd Set)",
+    "Number of sets",
+    "Odd/Even",
+    "Odd/Even (1st Set)",
+    "Set / Match",
+    "Set Betting"
+  ],
+  "overall": {
+    "rows": 1031,
+    "wins": 400,
+    "losses": 631,
+    "winrate": 38.8,
+    "profit_flat": -112.07,
+    "roi": -10.87,
+    "avg_odds": 3.9514
+  },
+  "by_market": [
+    {
+      "group": "Set Betting",
+      "rows": 212,
+      "wins": 53,
+      "losses": 159,
+      "winrate": 25.0,
+      "profit_flat": -27.43,
+      "roi": -12.94,
+      "avg_odds": 5.7916
+    },
+    {
+      "group": "Set / Match",
+      "rows": 212,
+      "wins": 53,
+      "losses": 159,
+      "winrate": 25.0,
+      "profit_flat": -45.17,
+      "roi": -21.31,
+      "avg_odds": 6.726
+    },
+    {
+      "group": "Odd/Even",
+      "rows": 118,
+      "wins": 59,
+      "losses": 59,
+      "winrate": 50.0,
+      "profit_flat": -8.07,
+      "roi": -6.84,
+      "avg_odds": 1.8691
+    },
+    {
+      "group": "Odd/Even (1st Set)",
+      "rows": 118,
+      "wins": 59,
+      "losses": 59,
+      "winrate": 50.0,
+      "profit_flat": -8.32,
+      "roi": -7.05,
+      "avg_odds": 1.8762
+    },
+    {
+      "group": "Home/Away (1st Set)",
+      "rows": 106,
+      "wins": 53,
+      "losses": 53,
+      "winrate": 50.0,
+      "profit_flat": -3.03,
+      "roi": -2.86,
+      "avg_odds": 2.4498
+    },
+    {
+      "group": "Home/Away (2nd Set)",
+      "rows": 106,
+      "wins": 53,
+      "losses": 53,
+      "winrate": 50.0,
+      "profit_flat": -7.02,
+      "roi": -6.62,
+      "avg_odds": 2.3295
+    },
+    {
+      "group": "Home/Away",
+      "rows": 106,
+      "wins": 53,
+      "losses": 53,
+      "winrate": 50.0,
+      "profit_flat": -8.59,
+      "roi": -8.1,
+      "avg_odds": 3.0282
+    },
+    {
+      "group": "Number of sets",
+      "rows": 53,
+      "wins": 17,
+      "losses": 36,
+      "winrate": 32.08,
+      "profit_flat": -4.44,
+      "roi": -8.38,
+      "avg_odds": 2.8425
+    }
+  ],
+  "by_market_selection": [
+    {
+      "group": "Odd/Even / Even",
+      "rows": 59,
+      "wins": 37,
+      "losses": 22,
+      "winrate": 62.71,
+      "profit_flat": 9.91,
+      "roi": 16.8,
+      "avg_odds": 1.8702
+    },
+    {
+      "group": "Odd/Even (1st Set) / Even",
+      "rows": 59,
+      "wins": 36,
+      "losses": 23,
+      "winrate": 61.02,
+      "profit_flat": 5.77,
+      "roi": 9.78,
+      "avg_odds": 1.8022
+    },
+    {
+      "group": "Odd/Even (1st Set) / Odd",
+      "rows": 59,
+      "wins": 23,
+      "losses": 36,
+      "winrate": 38.98,
+      "profit_flat": -14.09,
+      "roi": -23.88,
+      "avg_odds": 1.9502
+    },
+    {
+      "group": "Odd/Even / Odd",
+      "rows": 59,
+      "wins": 22,
+      "losses": 37,
+      "winrate": 37.29,
+      "profit_flat": -17.98,
+      "roi": -30.47,
+      "avg_odds": 1.868
+    },
+    {
+      "group": "Home/Away (1st Set) / Away",
+      "rows": 53,
+      "wins": 32,
+      "losses": 21,
+      "winrate": 60.38,
+      "profit_flat": 11.71,
+      "roi": 22.09,
+      "avg_odds": 2.3545
+    },
+    {
+      "group": "Home/Away / Away",
+      "rows": 53,
+      "wins": 27,
+      "losses": 26,
+      "winrate": 50.94,
+      "profit_flat": -0.53,
+      "roi": -1.0,
+      "avg_odds": 2.7898
+    },
+    {
+      "group": "Home/Away (2nd Set) / Away",
+      "rows": 53,
+      "wins": 27,
+      "losses": 26,
+      "winrate": 50.94,
+      "profit_flat": -1.48,
+      "roi": -2.79,
+      "avg_odds": 2.2196
+    },
+    {
+      "group": "Set Betting / 2:1",
+      "rows": 53,
+      "wins": 11,
+      "losses": 42,
+      "winrate": 20.75,
+      "profit_flat": -3.72,
+      "roi": -7.02,
+      "avg_odds": 6.7085
+    },
+    {
+      "group": "Set / Match / 2/2",
+      "rows": 53,
+      "wins": 25,
+      "losses": 28,
+      "winrate": 47.17,
+      "profit_flat": -4.38,
+      "roi": -8.26,
+      "avg_odds": 3.3932
+    },
+    {
+      "group": "Number of sets / 3",
+      "rows": 53,
+      "wins": 17,
+      "losses": 36,
+      "winrate": 32.08,
+      "profit_flat": -4.44,
+      "roi": -8.38,
+      "avg_odds": 2.8425
+    },
+    {
+      "group": "Home/Away (2nd Set) / Home",
+      "rows": 53,
+      "wins": 26,
+      "losses": 27,
+      "winrate": 49.06,
+      "profit_flat": -5.54,
+      "roi": -10.45,
+      "avg_odds": 2.4394
+    },
+    {
+      "group": "Set Betting / 0:2",
+      "rows": 53,
+      "wins": 21,
+      "losses": 32,
+      "winrate": 39.62,
+      "profit_flat": -7.68,
+      "roi": -14.49,
+      "avg_odds": 4.7198
+    },
+    {
+      "group": "Set Betting / 2:0",
+      "rows": 53,
+      "wins": 15,
+      "losses": 38,
+      "winrate": 28.3,
+      "profit_flat": -7.68,
+      "roi": -14.49,
+      "avg_odds": 5.5102
+    },
+    {
+      "group": "Home/Away / Home",
+      "rows": 53,
+      "wins": 26,
+      "losses": 27,
+      "winrate": 49.06,
+      "profit_flat": -8.06,
+      "roi": -15.21,
+      "avg_odds": 3.2666
+    },
+    {
+      "group": "Set / Match / 2/1",
+      "rows": 53,
+      "wins": 7,
+      "losses": 46,
+      "winrate": 13.21,
+      "profit_flat": -8.25,
+      "roi": -15.57,
+      "avg_odds": 10.1151
+    },
+    {
+      "group": "Set Betting / 1:2",
+      "rows": 53,
+      "wins": 6,
+      "losses": 47,
+      "winrate": 11.32,
+      "profit_flat": -8.35,
+      "roi": -15.75,
+      "avg_odds": 6.2277
+    },
+    {
+      "group": "Set / Match / 1/1",
+      "rows": 53,
+      "wins": 19,
+      "losses": 34,
+      "winrate": 35.85,
+      "profit_flat": -11.29,
+      "roi": -21.3,
+      "avg_odds": 3.9353
+    },
+    {
+      "group": "Home/Away (1st Set) / Home",
+      "rows": 53,
+      "wins": 21,
+      "losses": 32,
+      "winrate": 39.62,
+      "profit_flat": -14.74,
+      "roi": -27.81,
+      "avg_odds": 2.5451
+    },
+    {
+      "group": "Set / Match / 1/2",
+      "rows": 53,
+      "wins": 2,
+      "losses": 51,
+      "winrate": 3.77,
+      "profit_flat": -21.25,
+      "roi": -40.09,
+      "avg_odds": 9.4604
+    }
+  ]
+}

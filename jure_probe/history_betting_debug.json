@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-05-28T01:18:50.644564+02:00",
+  "history_matches_loaded": 300,
+  "odds_items_loaded": 101,
+  "dataset_rows": 1031,
+  "skipped": {
+    "unsupported_market:Correct Score 1st Half": 59,
+    "unsupported_market:Correct Score 2nd Half": 57,
+    "unsupported_market:Odd/Even (2nd Set)": 57,
+    "unknown_result:Number of sets:Away": 59,
+    "unsupported_market:Win at least one set (Player 1)": 15,
+    "unsupported_market:Win at least one set (Player 2)": 15,
+    "unsupported_market:Away Team Total (1st Set)": 59,
+    "unsupported_market:Away Team Total (2nd Set)": 57,
+    "unsupported_market:Home Team Total (1st Set)": 59,
+    "unsupported_market:Home Team Total (2nd Set)": 57,
+    "unknown_result:Home/Away:Home": 6,
+    "unknown_result:Home/Away:Away": 6,
+    "unknown_result:Home/Away (1st Set):Home": 6,
+    "unknown_result:Home/Away (1st Set):Away": 6,
+    "unknown_result:Set Betting:2:0": 6,
+    "unknown_result:Set Betting:2:1": 6,
+    "unknown_result:Set Betting:0:2": 6,
+    "unknown_result:Set Betting:1:2": 6,
+    "unknown_result:Set / Match:1/1": 6,
+    "unknown_result:Set / Match:1/2": 6,
+    "unknown_result:Set / Match:2/1": 6,
+    "unknown_result:Set / Match:2/2": 6,
+    "unknown_result:Home/Away (2nd Set):Home": 6,
+    "unknown_result:Home/Away (2nd Set):Away": 6,
+    "unknown_result:Number of sets:3": 6,
+    "unsupported_market:param": 42,
+    "unsupported_market:msg": 42,
+    "unsupported_market:cod": 42
+  },
+  "history_file": "jure_probe/history_raw_sample.json",
+  "odds_file": "jure_probe/odds_probe_raw.json",
+  "notes": [
+    "Post-match statistics are not used as predictors here.",
+    "This builder only turns historical odds + finished scores into labelled betting rows.",
+    "Unknown result labels are skipped to avoid false optimizer signals."
+  ]
+}
