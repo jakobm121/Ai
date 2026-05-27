@@ -1,0 +1,52 @@
+name: Tennis Odds Probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tennis-odds-probe:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run API-Tennis odds probe
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          API_TENNIS_BASE_URL: "https://api.api-tennis.com/tennis/"
+          ODDS_METHOD: "get_odds"
+          PROBE_DIR: "jure_probe"
+          HISTORY_SAMPLE_FILE: "jure_probe/history_raw_sample.json"
+          MAX_EVENTS: "80"
+        run: |
+          python odds_probe.py
+
+      - name: Commit odds probe files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add odds_probe.py
+          git add jure_probe/odds_probe_raw.json
+          git add jure_probe/odds_probe_fields.json
+          git add jure_probe/odds_probe_debug.json
+          git add jure_probe/odds_probe_report.md
+
+          if git diff --cached --quiet; then
+            echo "No odds probe changes to commit"
+          else
+            git commit -m "Update tennis odds probe"
+            git pull --rebase --autostash origin main
+            git push
+          fi
