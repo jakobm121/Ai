@@ -1,36 +1,45 @@
 {
-  "generated_at": "2026-05-27T23:17:26.737658+02:00",
+  "generated_at": "2026-05-27T23:20:07.591053+02:00",
   "source_results_file": "data/tennis_totals_results.json",
   "lucija_results_file": "data/lucija/lucija_results.json",
   "source_results_count": 457,
   "lucija_results_count": 5,
-  "updated": 0,
-  "still_pending": 3,
+  "updated": 3,
+  "still_pending": 0,
   "source_not_found": 0,
-  "source_not_settled": 3,
+  "source_not_settled": 0,
   "items": [
     {
       "pick_id": "df1e281c906e2bffc092d84af7010d3d",
       "source_pick_id": "f36f6941812b47d9ffb26e93801d8455",
       "match": "T. Zink - R. Hohmann",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "win",
+      "profit": 1.0,
+      "total_games": 17,
+      "final_score": "6-3, 6-2",
       "match_method": "source_pick_id"
     },
     {
       "pick_id": "c505976b5c92cb636fe8fe219e74f928",
       "source_pick_id": "f40ecf3ba8e7b9c0fbdc7a108348e22e",
       "match": "L. Neumayer - T. Boyer",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "win",
+      "profit": 1.0,
+      "total_games": 17,
+      "final_score": "6-2, 6-3",
       "match_method": "source_pick_id"
     },
     {
       "pick_id": "7633761ea932fe120361081d13afa566",
       "source_pick_id": "8b9e36d02c1a6571652de4f83cd4774c",
       "match": "T. Zeuch - V. Durasovic",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "win",
+      "profit": 1.05,
+      "total_games": 18,
+      "final_score": "4-6, 2-6",
       "match_method": "source_pick_id"
     }
   ]
