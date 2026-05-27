@@ -3,11 +3,6 @@ name: Settle Jakob Tennis Totals Results
 on:
   workflow_dispatch:
 
-  schedule:
-    # Vsak dan ob 22:30 UTC
-    # To je približno 00:30 po Sloveniji poleti oziroma 23:30 pozimi
-    - cron: "30 22 * * *"
-
 permissions:
   contents: write
 
