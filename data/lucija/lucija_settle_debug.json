@@ -1,12 +1,45 @@
 {
-  "generated_at": "2026-05-27T01:36:33.428146+02:00",
+  "generated_at": "2026-05-27T14:46:46.159168+02:00",
   "source_results_file": "data/tennis_totals_results.json",
   "lucija_results_file": "data/lucija/lucija_results.json",
-  "source_results_count": 430,
-  "lucija_results_count": 0,
+  "source_results_count": 454,
+  "lucija_results_count": 4,
   "updated": 0,
-  "still_pending": 0,
+  "still_pending": 4,
   "source_not_found": 0,
-  "source_not_settled": 0,
-  "items": []
+  "source_not_settled": 4,
+  "items": [
+    {
+      "pick_id": "ca1e287a22f056bcee1b9da95ee86913",
+      "source_pick_id": "325f7f2f12fd9801d54c995907633af5",
+      "match": "F. Jones - M. Bouzkova",
+      "status": "source_not_settled",
+      "source_result": "pending",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "c618b940328b6dbca0380a422fcdd42e",
+      "source_pick_id": "a9e6c3261cd104a71fee945f33e32d30",
+      "match": "D. Snigur - P. Stearns",
+      "status": "source_not_settled",
+      "source_result": "pending",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "df1e281c906e2bffc092d84af7010d3d",
+      "source_pick_id": "f36f6941812b47d9ffb26e93801d8455",
+      "match": "T. Zink - R. Hohmann",
+      "status": "source_not_settled",
+      "source_result": "pending",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "c505976b5c92cb636fe8fe219e74f928",
+      "source_pick_id": "f40ecf3ba8e7b9c0fbdc7a108348e22e",
+      "match": "L. Neumayer - T. Boyer",
+      "status": "source_not_settled",
+      "source_result": "pending",
+      "match_method": "source_pick_id"
+    }
+  ]
 }
