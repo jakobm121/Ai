@@ -21,13 +21,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run tennis history probe
+      - name: Run API-Tennis history probe
         env:
-          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
-          API_TENNIS_BASE_URL: "https://v1.tennis.api-sports.io"
-          API_TENNIS_HOST: "v1.tennis.api-sports.io"
-          FIXTURES_ENDPOINT: "/fixtures"
-          DATE_PARAM: "date"
+          API_KEY: ${{ secrets.API_KEY }}
+          API_TENNIS_BASE_URL: "https://api.api-tennis.com/tennis/"
+          API_METHOD: "get_fixtures"
           DAYS_BACK: "10"
           PROBE_DIR: "jure_probe"
         run: |
