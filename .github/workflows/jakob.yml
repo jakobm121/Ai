@@ -3,11 +3,6 @@ name: Run Jakob Tennis Totals Machine
 on:
   workflow_dispatch:
 
-  schedule:
-    # Vsak dan ob 07:10 UTC
-    # To je približno 09:10 po Sloveniji poleti oziroma 08:10 pozimi
-    - cron: "10 7 * * *"
-
 permissions:
   contents: write
 
