@@ -2,9 +2,6 @@ name: Tennis Totals Value Model
 
 on:
   workflow_dispatch:
-  schedule:
-    # 09:20, 11:20, 13:20, 16:20 Balkan poleti
-    - cron: "20 7,9,11,14 * * *"
 
 permissions:
   contents: write
