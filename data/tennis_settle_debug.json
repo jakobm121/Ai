@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-27T13:29:59.864610+02:00",
-  "pending_checked": 29,
-  "updated": 7,
-  "still_pending": 22,
+  "generated_at": "2026-05-27T18:57:26.971976+02:00",
+  "pending_checked": 28,
+  "updated": 11,
+  "still_pending": 17,
   "not_found": 0,
   "errors": [],
   "checked": [
@@ -61,47 +61,20 @@
       "reason": "keep_pending_status:walk over"
     },
     {
-      "match": "A. Shvangiradze - A. Ushakov",
-      "event_key": 12130822,
-      "status": "Finished",
-      "winner": "First Player",
-      "score": "2 - 1",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "K. Nishiwaki - T. Takamisawa",
-      "event_key": 12131060,
-      "status": "Finished",
-      "winner": "First Player",
-      "score": "2 - 1",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
       "match": "L. Giustino - L. Nardi",
       "event_key": 12130725,
-      "status": "Set 3",
-      "winner": null,
-      "score": "1 - 1",
-      "changed": false,
-      "reason": "keep_pending_status:set 3"
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "1 - 2",
+      "changed": true,
+      "reason": "settled"
     },
     {
       "match": "T. Korpatsch - Xin. Wang",
       "event_key": 12130559,
-      "status": "Set 3",
-      "winner": null,
-      "score": "1 - 1",
-      "changed": false,
-      "reason": "keep_pending_status:set 3"
-    },
-    {
-      "match": "F. Cina - J. De Jong",
-      "event_key": 12130706,
       "status": "Finished",
-      "winner": "Second Player",
-      "score": "0 - 3",
+      "winner": "First Player",
+      "score": "2 - 1",
       "changed": true,
       "reason": "settled"
     },
@@ -117,78 +90,6 @@
     {
       "match": "D. Papamichail - L. Hietaranta",
       "event_key": 12130685,
-      "status": "Set 2",
-      "winner": null,
-      "score": "0 - 1",
-      "changed": false,
-      "reason": "keep_pending_status:set 2"
-    },
-    {
-      "match": "M. Navone - J. Mensik",
-      "event_key": 12130701,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "U. Humbert - Q. Halys",
-      "event_key": 12130704,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "J. Paolini - S. Sierra",
-      "event_key": 12130662,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "J. Fonseca - D. Prizmic",
-      "event_key": 12130599,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "H. Baptiste - Xiy. Wang",
-      "event_key": 12130561,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "N. Basavareddy - A. Michelsen",
-      "event_key": 12130658,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "J. Teichmann - M. Frech",
-      "event_key": 12130663,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "A. Prisacariu - B. Palicova",
-      "event_key": 12130687,
       "status": "Finished",
       "winner": "First Player",
       "score": "2 - 1",
@@ -196,8 +97,71 @@
       "reason": "settled"
     },
     {
-      "match": "I. Dyussebay - I. Yoruk",
-      "event_key": 12131204,
+      "match": "M. Navone - J. Mensik",
+      "event_key": 12130701,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "2 - 3",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "U. Humbert - Q. Halys",
+      "event_key": 12130704,
+      "status": "Set 3",
+      "winner": null,
+      "score": "0 - 2",
+      "changed": false,
+      "reason": "keep_pending_status:set 3"
+    },
+    {
+      "match": "J. Paolini - S. Sierra",
+      "event_key": 12130662,
+      "status": "Set 2",
+      "winner": null,
+      "score": "1 - 0",
+      "changed": false,
+      "reason": "keep_pending_status:set 2"
+    },
+    {
+      "match": "J. Fonseca - D. Prizmic",
+      "event_key": 12130599,
+      "status": "Set 2",
+      "winner": null,
+      "score": "0 - 1",
+      "changed": false,
+      "reason": "keep_pending_status:set 2"
+    },
+    {
+      "match": "H. Baptiste - Xiy. Wang",
+      "event_key": 12130561,
+      "status": "Set 1",
+      "winner": null,
+      "score": "0 - 0",
+      "changed": false,
+      "reason": "keep_pending_status:set 1"
+    },
+    {
+      "match": "N. Basavareddy - A. Michelsen",
+      "event_key": 12130658,
+      "status": "Set 3",
+      "winner": null,
+      "score": "0 - 2",
+      "changed": false,
+      "reason": "keep_pending_status:set 3"
+    },
+    {
+      "match": "J. Teichmann - M. Frech",
+      "event_key": 12130663,
+      "status": "Set 1",
+      "winner": null,
+      "score": "0 - 0",
+      "changed": false,
+      "reason": "keep_pending_status:set 1"
+    },
+    {
+      "match": "L. Vujovic - S. Janicijevic",
+      "event_key": 12130691,
       "status": "Finished",
       "winner": "First Player",
       "score": "2 - 0",
@@ -205,44 +169,17 @@
       "reason": "settled"
     },
     {
-      "match": "L. Vujovic - S. Janicijevic",
-      "event_key": 12130691,
-      "status": "Set 1",
-      "winner": null,
-      "score": "0 - 0",
-      "changed": false,
-      "reason": "keep_pending_status:set 1"
-    },
-    {
-      "match": "E. Ymer - G. A. Olivieri",
-      "event_key": 12131040,
+      "match": "S. Travaglia - H. Squire",
+      "event_key": 12131044,
       "status": "Finished",
-      "winner": "Second Player",
-      "score": "0 - 2",
+      "winner": "First Player",
+      "score": "2 - 0",
       "changed": true,
       "reason": "settled"
     },
     {
-      "match": "S. Travaglia - H. Squire",
-      "event_key": 12131044,
-      "status": "Set 1",
-      "winner": null,
-      "score": "0 - 0",
-      "changed": false,
-      "reason": "keep_pending_status:set 1"
-    },
-    {
       "match": "G. Hussey - D. Badenhorst",
       "event_key": 12131037,
-      "status": "",
-      "winner": null,
-      "score": "-",
-      "changed": false,
-      "reason": "keep_pending_status:unknown"
-    },
-    {
-      "match": "S. Atay - A. Wildgruber",
-      "event_key": 12131205,
       "status": "Finished",
       "winner": "First Player",
       "score": "2 - 0",
@@ -252,15 +189,69 @@
     {
       "match": "J. Garland - L. Nguyen Tan",
       "event_key": 12131324,
-      "status": "Set 2",
-      "winner": null,
-      "score": "1 - 0",
-      "changed": false,
-      "reason": "keep_pending_status:set 2"
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 0",
+      "changed": true,
+      "reason": "settled"
     },
     {
       "match": "M. Dhamne - R. Bertola",
       "event_key": 12131043,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "N. D. Ionel - K. Szymkowiak",
+      "event_key": 12131264,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "M. Favier - L. Ayala",
+      "event_key": 12131163,
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 1",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "M. Scaglia - A. Jamji",
+      "event_key": 12131250,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "D. A. Nunez - M. Malige",
+      "event_key": 12131117,
+      "status": "Set 2",
+      "winner": null,
+      "score": "0 - 1",
+      "changed": false,
+      "reason": "keep_pending_status:set 2"
+    },
+    {
+      "match": "T. Stringer - T. Dean",
+      "event_key": 12131387,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "Y. Shimizu - B. Tomic",
+      "event_key": 12130997,
       "status": "",
       "winner": null,
       "score": "-",
