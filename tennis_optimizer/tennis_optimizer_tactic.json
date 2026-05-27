@@ -1,22 +1,23 @@
 {
   "base_rules": {
+    "bookmakers_max": 10,
     "bookmakers_min": 6,
-    "confidence_max": 88,
-    "edge_max": 0.2,
-    "tour_level": "challenger"
+    "edge_max": 0.15,
+    "odds_min": 1.75,
+    "quality_max": 90
   },
   "base_stats": {
-    "picks": 103,
-    "wins": 58,
-    "losses": 40,
-    "pushes": 5,
-    "winrate": 59.18,
-    "profit": 25.2,
-    "roi": 24.47,
-    "avg_odds": 2.1274,
-    "max_drawdown": -5.0,
-    "longest_win_streak": 6,
-    "longest_loss_streak": 5
+    "picks": 125,
+    "wins": 68,
+    "losses": 51,
+    "pushes": 6,
+    "winrate": 57.14,
+    "profit": 24.37,
+    "roi": 19.5,
+    "avg_odds": 2.0968,
+    "max_drawdown": -4.55,
+    "longest_win_streak": 5,
+    "longest_loss_streak": 4
   },
   "stake": {
     "forward_test": "0.5u flat for next 50 live picks",
@@ -26,71 +27,35 @@
   "priority_a": [
     {
       "rules": {
-        "gender": "men"
+        "side": "home"
       },
       "labels": [
-        "gender=men"
+        "side=home"
       ],
       "stats": {
-        "picks": 91,
-        "wins": 52,
-        "losses": 34,
-        "pushes": 5,
-        "winrate": 60.47,
-        "profit": 23.69,
-        "roi": 26.03,
-        "avg_odds": 2.1179,
-        "max_drawdown": -5.0,
-        "longest_win_streak": 6,
-        "longest_loss_streak": 5
-      },
-      "test_25_stats": {
-        "picks": 23,
-        "wins": 15,
-        "losses": 8,
-        "pushes": 0,
-        "winrate": 65.22,
-        "profit": 9.24,
-        "roi": 40.17,
-        "avg_odds": 2.1778,
+        "picks": 55,
+        "wins": 35,
+        "losses": 16,
+        "pushes": 4,
+        "winrate": 68.63,
+        "profit": 20.59,
+        "roi": 37.44,
+        "avg_odds": 2.0005,
         "max_drawdown": -2.0,
-        "longest_win_streak": 8,
+        "longest_win_streak": 6,
         "longest_loss_streak": 2
-      }
-    },
-    {
-      "rules": {
-        "gender": "men",
-        "tour_level": "challenger"
-      },
-      "labels": [
-        "gender=men",
-        "tour_level=challenger"
-      ],
-      "stats": {
-        "picks": 91,
-        "wins": 52,
-        "losses": 34,
-        "pushes": 5,
-        "winrate": 60.47,
-        "profit": 23.69,
-        "roi": 26.03,
-        "avg_odds": 2.1179,
-        "max_drawdown": -5.0,
-        "longest_win_streak": 6,
-        "longest_loss_streak": 5
       },
       "test_25_stats": {
-        "picks": 23,
-        "wins": 15,
-        "losses": 8,
-        "pushes": 0,
-        "winrate": 65.22,
-        "profit": 9.24,
-        "roi": 40.17,
-        "avg_odds": 2.1778,
+        "picks": 14,
+        "wins": 7,
+        "losses": 4,
+        "pushes": 3,
+        "winrate": 63.64,
+        "profit": 5.59,
+        "roi": 39.93,
+        "avg_odds": 2.1793,
         "max_drawdown": -2.0,
-        "longest_win_streak": 8,
+        "longest_win_streak": 4,
         "longest_loss_streak": 2
       }
     },
@@ -102,136 +67,172 @@
         "odds=2.25+"
       ],
       "stats": {
-        "picks": 34,
-        "wins": 19,
-        "losses": 13,
-        "pushes": 2,
-        "winrate": 59.38,
-        "profit": 14.76,
-        "roi": 43.41,
-        "avg_odds": 2.4332,
-        "max_drawdown": -2.0,
-        "longest_win_streak": 4,
-        "longest_loss_streak": 2
-      },
-      "test_25_stats": {
-        "picks": 9,
-        "wins": 6,
-        "losses": 3,
-        "pushes": 0,
-        "winrate": 66.67,
-        "profit": 6.53,
-        "roi": 72.56,
-        "avg_odds": 2.56,
-        "max_drawdown": -2.0,
-        "longest_win_streak": 4,
-        "longest_loss_streak": 2
-      }
-    },
-    {
-      "rules": {
-        "odds_min": 2.25,
-        "tour_level": "challenger"
-      },
-      "labels": [
-        "odds=2.25+",
-        "tour_level=challenger"
-      ],
-      "stats": {
-        "picks": 34,
-        "wins": 19,
-        "losses": 13,
-        "pushes": 2,
-        "winrate": 59.38,
-        "profit": 14.76,
-        "roi": 43.41,
-        "avg_odds": 2.4332,
-        "max_drawdown": -2.0,
-        "longest_win_streak": 4,
-        "longest_loss_streak": 2
-      },
-      "test_25_stats": {
-        "picks": 9,
-        "wins": 6,
-        "losses": 3,
-        "pushes": 0,
-        "winrate": 66.67,
-        "profit": 6.53,
-        "roi": 72.56,
-        "avg_odds": 2.56,
-        "max_drawdown": -2.0,
-        "longest_win_streak": 4,
-        "longest_loss_streak": 2
-      }
-    },
-    {
-      "rules": {
-        "bookmakers_max": 7.999,
-        "bookmakers_min": 6
-      },
-      "labels": [
-        "bookmakers=6-7"
-      ],
-      "stats": {
-        "picks": 24,
+        "picks": 29,
         "wins": 17,
-        "losses": 7,
-        "pushes": 0,
-        "winrate": 70.83,
-        "profit": 12.07,
-        "roi": 50.29,
-        "avg_odds": 2.0983,
-        "max_drawdown": -1.07,
-        "longest_win_streak": 5,
-        "longest_loss_streak": 1
+        "losses": 11,
+        "pushes": 1,
+        "winrate": 60.71,
+        "profit": 15.71,
+        "roi": 54.17,
+        "avg_odds": 2.5531,
+        "max_drawdown": -4.0,
+        "longest_win_streak": 4,
+        "longest_loss_streak": 4
       },
       "test_25_stats": {
-        "picks": 6,
-        "wins": 4,
-        "losses": 2,
-        "pushes": 0,
-        "winrate": 66.67,
-        "profit": 3.49,
-        "roi": 58.17,
-        "avg_odds": 2.2483,
+        "picks": 8,
+        "wins": 6,
+        "losses": 1,
+        "pushes": 1,
+        "winrate": 85.71,
+        "profit": 9.02,
+        "roi": 112.75,
+        "avg_odds": 2.6275,
         "max_drawdown": -1.0,
         "longest_win_streak": 3,
         "longest_loss_streak": 1
+      }
+    },
+    {
+      "rules": {
+        "edge_max": 0.0799,
+        "edge_min": 0.06
+      },
+      "labels": [
+        "edge=0.06-0.079"
+      ],
+      "stats": {
+        "picks": 27,
+        "wins": 19,
+        "losses": 7,
+        "pushes": 1,
+        "winrate": 73.08,
+        "profit": 14.81,
+        "roi": 54.85,
+        "avg_odds": 2.1074,
+        "max_drawdown": -2.0,
+        "longest_win_streak": 6,
+        "longest_loss_streak": 2
+      },
+      "test_25_stats": {
+        "picks": 7,
+        "wins": 5,
+        "losses": 1,
+        "pushes": 1,
+        "winrate": 83.33,
+        "profit": 5.24,
+        "roi": 74.86,
+        "avg_odds": 2.27,
+        "max_drawdown": -1.0,
+        "longest_win_streak": 2,
+        "longest_loss_streak": 1
+      }
+    },
+    {
+      "rules": {
+        "bookmakers_min": 8,
+        "side": "home"
+      },
+      "labels": [
+        "bookmakers=8+",
+        "side=home"
+      ],
+      "stats": {
+        "picks": 38,
+        "wins": 27,
+        "losses": 11,
+        "pushes": 0,
+        "winrate": 71.05,
+        "profit": 16.36,
+        "roi": 43.05,
+        "avg_odds": 1.9732,
+        "max_drawdown": -2.41,
+        "longest_win_streak": 7,
+        "longest_loss_streak": 2
+      },
+      "test_25_stats": {
+        "picks": 10,
+        "wins": 8,
+        "losses": 2,
+        "pushes": 0,
+        "winrate": 80.0,
+        "profit": 7.4,
+        "roi": 74.0,
+        "avg_odds": 2.121,
+        "max_drawdown": -1.0,
+        "longest_win_streak": 5,
+        "longest_loss_streak": 1
+      }
+    },
+    {
+      "rules": {
+        "tour_level": "challenger"
+      },
+      "labels": [
+        "tour_level=challenger"
+      ],
+      "stats": {
+        "picks": 45,
+        "wins": 29,
+        "losses": 15,
+        "pushes": 1,
+        "winrate": 65.91,
+        "profit": 17.22,
+        "roi": 38.27,
+        "avg_odds": 2.0809,
+        "max_drawdown": -3.41,
+        "longest_win_streak": 4,
+        "longest_loss_streak": 2
+      },
+      "test_25_stats": {
+        "picks": 12,
+        "wins": 9,
+        "losses": 3,
+        "pushes": 0,
+        "winrate": 75.0,
+        "profit": 7.91,
+        "roi": 65.92,
+        "avg_odds": 2.1675,
+        "max_drawdown": -2.0,
+        "longest_win_streak": 7,
+        "longest_loss_streak": 2
       }
     }
   ],
   "priority_b": [
     {
       "rules": {
+        "gender": "men",
         "tour_level": "challenger"
       },
       "labels": [
+        "gender=men",
         "tour_level=challenger"
       ],
       "stats": {
-        "picks": 103,
-        "wins": 58,
-        "losses": 40,
-        "pushes": 5,
-        "winrate": 59.18,
-        "profit": 25.2,
-        "roi": 24.47,
-        "avg_odds": 2.1274,
-        "max_drawdown": -5.0,
-        "longest_win_streak": 6,
-        "longest_loss_streak": 5
+        "picks": 45,
+        "wins": 29,
+        "losses": 15,
+        "pushes": 1,
+        "winrate": 65.91,
+        "profit": 17.22,
+        "roi": 38.27,
+        "avg_odds": 2.0809,
+        "max_drawdown": -3.41,
+        "longest_win_streak": 4,
+        "longest_loss_streak": 2
       },
       "test_25_stats": {
-        "picks": 26,
-        "wins": 18,
-        "losses": 8,
+        "picks": 12,
+        "wins": 9,
+        "losses": 3,
         "pushes": 0,
-        "winrate": 69.23,
-        "profit": 12.77,
-        "roi": 49.12,
-        "avg_odds": 2.1777,
+        "winrate": 75.0,
+        "profit": 7.91,
+        "roi": 65.92,
+        "avg_odds": 2.1675,
         "max_drawdown": -2.0,
-        "longest_win_streak": 8,
+        "longest_win_streak": 7,
         "longest_loss_streak": 2
       }
     },
@@ -243,100 +244,63 @@
         "qualification=False"
       ],
       "stats": {
-        "picks": 87,
-        "wins": 48,
-        "losses": 34,
-        "pushes": 5,
-        "winrate": 58.54,
-        "profit": 20.03,
-        "roi": 23.02,
-        "avg_odds": 2.1269,
-        "max_drawdown": -5.0,
-        "longest_win_streak": 10,
-        "longest_loss_streak": 5
+        "picks": 99,
+        "wins": 54,
+        "losses": 39,
+        "pushes": 6,
+        "winrate": 58.06,
+        "profit": 21.44,
+        "roi": 21.66,
+        "avg_odds": 2.0951,
+        "max_drawdown": -4.0,
+        "longest_win_streak": 7,
+        "longest_loss_streak": 4
       },
       "test_25_stats": {
-        "picks": 22,
-        "wins": 16,
-        "losses": 6,
-        "pushes": 0,
-        "winrate": 72.73,
-        "profit": 12.91,
-        "roi": 58.68,
-        "avg_odds": 2.2073,
-        "max_drawdown": -1.05,
+        "picks": 25,
+        "wins": 14,
+        "losses": 8,
+        "pushes": 3,
+        "winrate": 63.64,
+        "profit": 10.02,
+        "roi": 40.08,
+        "avg_odds": 2.1836,
+        "max_drawdown": -2.0,
         "longest_win_streak": 7,
-        "longest_loss_streak": 1
+        "longest_loss_streak": 2
       }
     },
     {
       "rules": {
-        "qualification": false,
-        "tour_level": "challenger"
+        "odds_min": 2.25,
+        "qualification": false
       },
       "labels": [
-        "tour_level=challenger",
+        "odds=2.25+",
         "qualification=False"
       ],
       "stats": {
-        "picks": 87,
-        "wins": 48,
-        "losses": 34,
-        "pushes": 5,
-        "winrate": 58.54,
-        "profit": 20.03,
-        "roi": 23.02,
-        "avg_odds": 2.1269,
-        "max_drawdown": -5.0,
-        "longest_win_streak": 10,
-        "longest_loss_streak": 5
-      },
-      "test_25_stats": {
-        "picks": 22,
-        "wins": 16,
-        "losses": 6,
-        "pushes": 0,
-        "winrate": 72.73,
-        "profit": 12.91,
-        "roi": 58.68,
-        "avg_odds": 2.2073,
-        "max_drawdown": -1.05,
-        "longest_win_streak": 7,
-        "longest_loss_streak": 1
-      }
-    },
-    {
-      "rules": {
-        "bookmakers_max": 7.999,
-        "bookmakers_min": 6,
-        "tour_level": "challenger"
-      },
-      "labels": [
-        "bookmakers=6-7",
-        "tour_level=challenger"
-      ],
-      "stats": {
         "picks": 24,
-        "wins": 17,
-        "losses": 7,
-        "pushes": 0,
-        "winrate": 70.83,
-        "profit": 12.07,
-        "roi": 50.29,
-        "avg_odds": 2.0983,
-        "max_drawdown": -1.07,
-        "longest_win_streak": 5,
-        "longest_loss_streak": 1
+        "wins": 14,
+        "losses": 9,
+        "pushes": 1,
+        "winrate": 60.87,
+        "profit": 13.29,
+        "roi": 55.38,
+        "avg_odds": 2.5571,
+        "max_drawdown": -2.0,
+        "longest_win_streak": 3,
+        "longest_loss_streak": 2
       },
       "test_25_stats": {
         "picks": 6,
         "wins": 4,
-        "losses": 2,
-        "pushes": 0,
-        "winrate": 66.67,
-        "profit": 3.49,
-        "roi": 58.17,
-        "avg_odds": 2.2483,
+        "losses": 1,
+        "pushes": 1,
+        "winrate": 80.0,
+        "profit": 5.52,
+        "roi": 92.0,
+        "avg_odds": 2.5867,
         "max_drawdown": -1.0,
         "longest_win_streak": 3,
         "longest_loss_streak": 1
@@ -344,37 +308,69 @@
     },
     {
       "rules": {
-        "edge_min": 0.12,
-        "gender": "men",
-        "quality_min": 85
+        "bookmakers_min": 8
       },
       "labels": [
-        "quality=85+",
-        "edge=0.12+",
-        "gender=men"
+        "bookmakers=8+"
       ],
       "stats": {
-        "picks": 53,
-        "wins": 30,
-        "losses": 19,
-        "pushes": 4,
-        "winrate": 61.22,
-        "profit": 16.91,
-        "roi": 31.91,
-        "avg_odds": 2.2309,
-        "max_drawdown": -4.0,
+        "picks": 89,
+        "wins": 52,
+        "losses": 36,
+        "pushes": 1,
+        "winrate": 59.09,
+        "profit": 20.25,
+        "roi": 22.75,
+        "avg_odds": 2.0837,
+        "max_drawdown": -4.25,
         "longest_win_streak": 4,
         "longest_loss_streak": 4
       },
       "test_25_stats": {
-        "picks": 14,
-        "wins": 9,
-        "losses": 5,
+        "picks": 23,
+        "wins": 13,
+        "losses": 10,
         "pushes": 0,
-        "winrate": 64.29,
-        "profit": 5.13,
-        "roi": 36.64,
-        "avg_odds": 2.185,
+        "winrate": 56.52,
+        "profit": 6.02,
+        "roi": 26.17,
+        "avg_odds": 2.2048,
+        "max_drawdown": -4.0,
+        "longest_win_streak": 5,
+        "longest_loss_streak": 4
+      }
+    },
+    {
+      "rules": {
+        "bookmakers_min": 8,
+        "qualification": false
+      },
+      "labels": [
+        "bookmakers=8+",
+        "qualification=False"
+      ],
+      "stats": {
+        "picks": 65,
+        "wins": 39,
+        "losses": 25,
+        "pushes": 1,
+        "winrate": 60.94,
+        "profit": 17.86,
+        "roi": 27.48,
+        "avg_odds": 2.0831,
+        "max_drawdown": -4.25,
+        "longest_win_streak": 5,
+        "longest_loss_streak": 4
+      },
+      "test_25_stats": {
+        "picks": 17,
+        "wins": 11,
+        "losses": 6,
+        "pushes": 0,
+        "winrate": 64.71,
+        "profit": 8.16,
+        "roi": 48.0,
+        "avg_odds": 2.2488,
         "max_drawdown": -2.0,
         "longest_win_streak": 5,
         "longest_loss_streak": 2
@@ -384,74 +380,74 @@
   "avoid": [
     {
       "reason": "tournament",
-      "group": "Francavilla",
+      "group": "French Open",
       "stats": {
-        "picks": 9,
-        "winrate": 33.33,
-        "profit": -2.63,
-        "roi": -29.22,
-        "avg_odds": 2.1156,
-        "max_drawdown": -6.0
-      }
-    },
-    {
-      "reason": "quality",
-      "group": "80-84.9",
-      "stats": {
-        "picks": 13,
+        "picks": 12,
         "winrate": 41.67,
-        "profit": -2.63,
-        "roi": -20.23,
-        "avg_odds": 1.9062,
-        "max_drawdown": -5.23
-      }
-    },
-    {
-      "reason": "tournament",
-      "group": "Zagreb",
-      "stats": {
-        "picks": 8,
-        "winrate": 37.5,
-        "profit": -1.64,
-        "roi": -20.5,
-        "avg_odds": 2.1088,
-        "max_drawdown": -4.0
+        "profit": -1.78,
+        "roi": -14.83,
+        "avg_odds": 2.125,
+        "max_drawdown": -3.17
       }
     },
     {
       "reason": "edge",
       "group": "0.08-0.099",
       "stats": {
-        "picks": 8,
-        "winrate": 50.0,
-        "profit": -0.58,
-        "roi": -7.25,
-        "avg_odds": 1.8513,
-        "max_drawdown": -3.0
+        "picks": 21,
+        "winrate": 47.37,
+        "profit": -1.59,
+        "roi": -7.57,
+        "avg_odds": 1.9305,
+        "max_drawdown": -3.48
+      }
+    },
+    {
+      "reason": "tour",
+      "group": "itf",
+      "stats": {
+        "picks": 55,
+        "winrate": 46.0,
+        "profit": -1.18,
+        "roi": -2.15,
+        "avg_odds": 2.1022,
+        "max_drawdown": -6.05
+      }
+    },
+    {
+      "reason": "confidence",
+      "group": "85-87.9",
+      "stats": {
+        "picks": 12,
+        "winrate": 45.45,
+        "profit": -1.12,
+        "roi": -9.33,
+        "avg_odds": 2.0625,
+        "max_drawdown": -3.14
+      }
+    },
+    {
+      "reason": "quality",
+      "group": "80-84.9",
+      "stats": {
+        "picks": 35,
+        "winrate": 47.06,
+        "profit": -0.87,
+        "roi": -2.49,
+        "avg_odds": 2.0671,
+        "max_drawdown": -4.96
       }
     },
     {
       "reason": "odds",
       "group": "2.05-2.249",
       "stats": {
-        "picks": 30,
+        "picks": 29,
         "winrate": 46.43,
-        "profit": -0.28,
-        "roi": -0.93,
-        "avg_odds": 2.1273,
-        "max_drawdown": -3.0
-      }
-    },
-    {
-      "reason": "tournament",
-      "group": "Tunis",
-      "stats": {
-        "picks": 11,
-        "winrate": 44.44,
-        "profit": -0.11,
-        "roi": -1.0,
-        "avg_odds": 2.2173,
-        "max_drawdown": -3.3
+        "profit": -0.25,
+        "roi": -0.86,
+        "avg_odds": 2.1197,
+        "max_drawdown": -6.28
       }
     }
   ]
