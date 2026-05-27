@@ -1,55 +1,68 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-05-27T01:38:12.603985+02:00`
+Generated: `2026-05-27T23:19:40.431750+02:00`
 
-Pending picks: **2**
+Pending picks: **0**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 38 | 20 | 16 | 0 | 2 | 55.56% | +3.63u | 13.43% |
+| 51 | 27 | 22 | 0 | 2 | 55.10% | +4.64u | 12.62% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 21 | 8 | 11 | 0 | 2 | 42.11% | -2.15u | -15.06% |
+| 34 | 15 | 17 | 0 | 2 | 46.88% | -1.14u | -4.73% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 21 | 10 | 11 | 0 | 0 | 47.62% | -0.22u | -1.39% |
+| 33 | 17 | 16 | 0 | 0 | 51.52% | +1.54u | 6.23% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 17 | 8 | 9 | 0 | 0 | 47.06% | -0.20u | -1.60% |
+| 22 | 11 | 11 | 0 | 0 | 50.00% | +0.63u | 3.81% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 11 | 6 | 5 | 0 | 0 | 54.55% | +0.85u | 10.27% |
+| 20 | 11 | 9 | 0 | 0 | 55.00% | +1.63u | 10.89% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 4 | 2 | 2 | 0 | 0 | 50.00% | -0.18u | -6.00% |
+| 7 | 4 | 3 | 0 | 0 | 57.14% | +0.49u | 9.30% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 34 | 18 | 14 | 0 | 2 | 56.25% | +3.81u | 15.86% |
+| 44 | 23 | 19 | 0 | 2 | 54.76% | +4.15u | 13.17% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-05-27 | 18:00 | 2 | T. Zink - R. Hohmann | UNDER 20.5 games | 2.00 | ✅ win | 72.48 | 17 | 6-3, 6-2 | +0.75u |
+| 2026-05-27 | 17:00 | 6 | D. Dedura - S. Pieri | UNDER 20.5 games | 2.15 | ✅ win | 70.77 | 17 | 6-2, 6-3 | +0.86u |
+| 2026-05-27 | 16:50 | 4 | E. Lys - S. Cirstea | UNDER 19.5 games | 2.07 | ✅ win | 71.31 | 15 | 3-6, 0-6 | +0.80u |
+| 2026-05-27 | 16:15 | 5 | J. Teichmann - M. Frech | OVER 21.5 games | 1.93 | ✅ win | 71.24 | 22 | 7-5, 6-4 | +0.70u |
+| 2026-05-27 | 16:00 | 7 | L. Pokorny - M. Krumich | UNDER 20.5 games | 2.04 | ❌ loss | 70.08 | 30 | 7-5, 2-6, 4-6 | -0.75u |
+| 2026-05-27 | 14:45 | 3 | F. Jones - M. Bouzkova | UNDER 19.5 games | 2.15 | ✅ win | 72.19 | 19 | 0-6, 6-7 | +0.86u |
+| 2026-05-27 | 14:00 | 1 | M. Kostyuk - K. Volynets | UNDER 18.5 games | 2.20 | ❌ loss | 76.71 | 31 | 6-7, 6-3, 6-3 | -0.75u |
+| 2026-05-27 | 11:30 | 2 | E. Ymer - G. A. Olivieri | OVER 22.5 games | 1.99 | ❌ loss | 80.14 | 21 | 2-6, 6-7 | -0.75u |
+| 2026-05-27 | 11:00 | 1 | T. Korpatsch - Xin. Wang | OVER 21.5 games | 1.96 | ✅ win | 83.50 | 25 | 6-2, 2-6, 6-3 | +0.72u |
+| 2026-05-27 | 11:00 | 9 | C. McNally - B. Bencic | UNDER 20.0 games | 2.09 | ✅ win | 71.33 | 16 | 4-6, 0-6 | +0.82u |
+| 2026-05-27 | 10:00 | 8 | H. Mayot - S. Pankin | UNDER 20.5 games | 2.10 | ❌ loss | 71.37 | 31 | 6-3, 6-7, 3-6 | -0.75u |
+| 2026-05-26 | 20:00 | 3 | A. Mayo - E. Butvilas | UNDER 20.5 games | 2.08 | ❌ loss | 71.53 | 26 | 7-6, 7-6 | -0.75u |
+| 2026-05-26 | 20:00 | 13 | A. Mayo - E. Butvilas | UNDER 20.5 games | 2.08 | ❌ loss | 68.84 | 26 | 7-6, 7-6 | -0.75u |
 | 2026-05-26 | 18:30 | 19 | P. Sekulic - M. Krueger | UNDER 21.5 games | 2.18 | ⚪ void | 68.08 |  |  | 0.00u |
 | 2026-05-26 | 18:30 | 38 | D. Milavsky - Wu Tung-Lin | UNDER 21.5 games | 2.15 | ⚪ void | 60.18 |  |  | 0.00u |
 | 2026-05-26 | 17:00 | 16 | R. Hohmann - M. Cassone | UNDER 19.5 games | 2.00 | ❌ loss | 67.04 | 26 | 6-4, 1-6, 6-3 | -0.75u |
