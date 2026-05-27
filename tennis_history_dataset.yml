@@ -1,0 +1,49 @@
+name: Tennis History Dataset Builder
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tennis-history-dataset:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build historical betting dataset
+        env:
+          PROBE_DIR: "jure_probe"
+          HISTORY_FILE: "jure_probe/history_raw_sample.json"
+          ODDS_FILE: "jure_probe/odds_probe_raw.json"
+        run: |
+          python history_dataset_builder.py
+
+      - name: Commit historical betting dataset
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add history_dataset_builder.py
+          git add jure_probe/history_betting_dataset.json
+          git add jure_probe/history_betting_summary.json
+          git add jure_probe/history_betting_debug.json
+          git add jure_probe/history_betting_report.md
+
+          if git diff --cached --quiet; then
+            echo "No dataset changes to commit"
+          else
+            git commit -m "Update tennis history betting dataset"
+            git pull --rebase --autostash origin main
+            git push
+          fi
