@@ -2,12 +2,6 @@ name: Jure
 
 on:
   workflow_dispatch:
-  schedule:
-    # Po tennis.py runu. UTC čas; poleti/zimi ni nujno isti lokalni čas, ampak ni kritično.
-    - cron: "35 6 * * *"
-    - cron: "35 10 * * *"
-    - cron: "35 14 * * *"
-    - cron: "35 18 * * *"
 
 permissions:
   contents: write
