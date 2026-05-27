@@ -2,10 +2,7 @@ name: Lucija Picks
 
 on:
   workflow_dispatch:
-  schedule:
-    # vsakih 20 minut med dnevom
-    - cron: "*/20 7-21 * * *"
-
+  
 permissions:
   contents: write
 
