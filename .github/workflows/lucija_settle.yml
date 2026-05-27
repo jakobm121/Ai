@@ -2,9 +2,6 @@ name: Lucija Settle
 
 on:
   workflow_dispatch:
-  schedule:
-    # vsakih 30 minut med dnevom in zvečer
-    - cron: "*/30 10-23 * * *"
 
 permissions:
   contents: write
