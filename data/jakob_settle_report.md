@@ -1,6 +1,6 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-05-27T23:19:40.431750+02:00`
+Generated: `2026-05-28T23:44:15.862718+02:00`
 
 Pending picks: **0**
 
@@ -8,48 +8,58 @@ Pending picks: **0**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 51 | 27 | 22 | 0 | 2 | 55.10% | +4.64u | 12.62% |
+| 61 | 30 | 29 | 0 | 2 | 50.85% | +1.71u | 3.87% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 34 | 15 | 17 | 0 | 2 | 46.88% | -1.14u | -4.73% |
+| 10 | 3 | 7 | 0 | 0 | 30.00% | -2.92u | -39.00% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 33 | 17 | 16 | 0 | 0 | 51.52% | +1.54u | 6.23% |
+| 43 | 20 | 23 | 0 | 0 | 46.51% | -1.38u | -4.29% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 22 | 11 | 11 | 0 | 0 | 50.00% | +0.63u | 3.81% |
+| 29 | 11 | 18 | 0 | 0 | 37.93% | -4.62u | -21.25% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 20 | 11 | 9 | 0 | 0 | 55.00% | +1.63u | 10.89% |
+| 27 | 14 | 13 | 0 | 0 | 51.85% | +0.96u | 4.74% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 7 | 4 | 3 | 0 | 0 | 57.14% | +0.49u | 9.30% |
+| 8 | 4 | 4 | 0 | 0 | 50.00% | -0.26u | -4.37% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 44 | 23 | 19 | 0 | 2 | 54.76% | +4.15u | 13.17% |
+| 53 | 26 | 25 | 0 | 2 | 50.98% | +1.98u | 5.16% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-05-28 | 19:35 | 2 | K. Boulter - A. Potapova | UNDER 19.5 games | 2.07 | ❌ loss | 75.96 | 30 | 7-5, 4-6, 2-6 | -0.75u |
+| 2026-05-28 | 18:40 | 3 | V. Mboko - K. Siniakova | UNDER 20.5 games | 2.11 | ❌ loss | 72.93 | 30 | 5-7, 6-4, 6-2 | -0.75u |
+| 2026-05-28 | 17:40 | 1 | A. Ruzic - M. Keys | UNDER 18.5 games | 2.12 | ❌ loss | 79.99 | 20 | 4-6, 4-6 | -0.75u |
+| 2026-05-28 | 15:35 | 5 | A. Li - D. Parry | UNDER 20.5 games | 2.04 | ✅ win | 70.62 | 19 | 3-6, 4-6 | +0.78u |
+| 2026-05-28 | 15:30 | 3 | A. Kalinskaya - A. Korneeva | UNDER 20.5 games | 2.10 | ❌ loss | 73.61 | 23 | 7-6, 6-4 | -0.75u |
+| 2026-05-28 | 13:00 | 8 | A. Beckley - S. Napolitano | UNDER 20.5 games | 2.04 | ✅ win | 71.52 | 18 | 4-6, 2-6 | +0.78u |
+| 2026-05-28 | 11:00 | 1 | I. Jovic - E. Navarro | OVER 21.5 games | 1.91 | ❌ loss | 80.29 | 15 | 6-0, 6-3 | -0.75u |
+| 2026-05-28 | 11:00 | 5 | D. Vekic - N. Osaka | UNDER 20.5 games | 2.06 | ❌ loss | 74.91 | 23 | 6-7, 4-6 | -0.75u |
+| 2026-05-28 | 10:30 | 3 | P. Fajta - F. Roncadelli | UNDER 19.5 games | 2.15 | ❌ loss | 76.12 | 20 | 7-5, 6-2 | -0.75u |
+| 2026-05-28 | 10:00 | 10 | G. Dalmasso - R. Strombachs | UNDER 20.0 games | 2.02 | ✅ win | 70.06 | 17 | 2-6, 3-6 | +0.77u |
 | 2026-05-27 | 18:00 | 2 | T. Zink - R. Hohmann | UNDER 20.5 games | 2.00 | ✅ win | 72.48 | 17 | 6-3, 6-2 | +0.75u |
 | 2026-05-27 | 17:00 | 6 | D. Dedura - S. Pieri | UNDER 20.5 games | 2.15 | ✅ win | 70.77 | 17 | 6-2, 6-3 | +0.86u |
 | 2026-05-27 | 16:50 | 4 | E. Lys - S. Cirstea | UNDER 19.5 games | 2.07 | ✅ win | 71.31 | 15 | 3-6, 0-6 | +0.80u |
