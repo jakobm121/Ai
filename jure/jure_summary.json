@@ -1,15 +1,19 @@
 {
-  "generated_at": "2026-05-27T22:35:26.177168+02:00",
+  "generated_at": "2026-05-28T08:11:02.937578+02:00",
   "predictions_file": "data/tennis_predictions.json",
+  "predictions_source_format": "dict_with_picks",
   "main_results_file": "data/tennis_results.json",
+  "main_results_source_format": "list",
   "output_dir": "jure",
-  "predictions_loaded": 0,
-  "accepted_from_current_predictions": 0,
-  "rejected_from_current_predictions": 0,
-  "active_count": 0,
-  "results_count": 0,
+  "predictions_loaded": 15,
+  "main_results_loaded": 489,
+  "previous_results_loaded": 0,
+  "accepted_from_current_predictions": 2,
+  "rejected_from_current_predictions": 13,
+  "active_count": 2,
+  "results_count": 2,
   "settled_count": 0,
-  "pending_count": 0,
+  "pending_count": 2,
   "tactic_a": {
     "tour_level": "challenger",
     "bookmakers_min": 6,
@@ -24,9 +28,9 @@
   "stake_a": 0.75,
   "stake_b": 0.5,
   "overall": {
-    "picks": 0,
+    "picks": 2,
     "settled": 0,
-    "pending": 0,
+    "pending": 2,
     "wins": 0,
     "losses": 0,
     "pushes": 0,
@@ -35,5 +39,30 @@
     "roi": 0.0,
     "winrate": 0.0
   },
-  "by_tactic": {}
+  "by_tactic": {
+    "A": {
+      "picks": 1,
+      "settled": 0,
+      "pending": 1,
+      "wins": 0,
+      "losses": 0,
+      "pushes": 0,
+      "stake_sum": 0,
+      "profit": 0,
+      "roi": 0.0,
+      "winrate": 0.0
+    },
+    "B": {
+      "picks": 1,
+      "settled": 0,
+      "pending": 1,
+      "wins": 0,
+      "losses": 0,
+      "pushes": 0,
+      "stake_sum": 0,
+      "profit": 0,
+      "roi": 0.0,
+      "winrate": 0.0
+    }
+  }
 }
