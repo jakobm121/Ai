@@ -1,21 +1,12 @@
-# Lucija results
+# Lucija active predictions
 
-Generated: 2026-05-27T23:20:07.591165+02:00
+Generated: 2026-05-28T09:22:27.544246+02:00
 
-## Summary
-
-- Picks: 5
-- Pending: 0
-- Settled: 5
-- W/L/P/V: 5/0/0/0
-- Profit: 5.39u
-- ROI: 107.8%
-- Winrate: 100.0%
-
-| Date | Time | Match | Bet | Odds | Stake | Result | Profit | Score | Total |
-|---|---:|---|---|---:|---:|---|---:|---|---:|
-| 2026-05-27 | 12:45 | D. Snigur - P. Stearns | UNDER 20.0 games | 2.19 | 1.00 | win | 1.190 | 4-6, 0-6 | 16 |
-| 2026-05-27 | 14:15 | F. Jones - M. Bouzkova | UNDER 19.5 games | 2.15 | 1.00 | win | 1.150 | 0-6, 6-7 | 19 |
-| 2026-05-27 | 16:30 | T. Zeuch - V. Durasovic | UNDER 21.0 games | 2.05 | 1.00 | win | 1.050 | 4-6, 2-6 | 18 |
-| 2026-05-27 | 18:00 | T. Zink - R. Hohmann | UNDER 20.5 games | 2.00 | 1.00 | win | 1.000 | 6-3, 6-2 | 17 |
-| 2026-05-27 | 18:30 | L. Neumayer - T. Boyer | UNDER 21.5 games | 2.00 | 1.00 | win | 1.000 | 6-2, 6-3 | 17 |
+| Date | Time | Match | Bet | Odds | Stake | Conf | Quality | Gap | Strength gap | H2H | Avg 3-set | Avg close | Book |
+|---|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| 2026-05-28 | 11:00 | D. Vekic - N. Osaka | UNDER 20.5 games | 2.06 | 1.00 | 88.9 | 82.2 | 0.453 | 17.86 | 0 | 0.211 | 0.356 | Pncl |
+| 2026-05-28 | 11:00 | L. Wessels - V. Durasovic | UNDER 21.5 games | 2.14 | 1.00 | 85.7 | 81.3 | 0.309 | 20.70 | 0 | 0.250 | 0.317 | Pncl |
+| 2026-05-28 | 11:30 | K. Coppejans - F. Agamenone | UNDER 20.5 games | 2.14 | 1.00 | 88.1 | 83.8 | 0.315 | 9.58 | 0 | 0.198 | 0.417 | Pncl |
+| 2026-05-28 | 12:00 | D. Blanch - S. Kopp | UNDER 21.5 games | 2.10 | 1.00 | 88.1 | 80.5 | 0.269 | 4.25 | 0 | 0.208 | 0.420 | Betano |
+| 2026-05-28 | 13:30 | F. Bondioli - K. Feldbausch | UNDER 20.5 games | 2.10 | 1.00 | 88.1 | 82.2 | 0.344 | 26.75 | 0 | 0.222 | 0.430 | Betano |
+| 2026-05-28 | 14:00 | A. Li - D. Parry | UNDER 20.5 games | 2.04 | 1.00 | 91.7 | 83.0 | 0.407 | 20.14 | 0 | 0.243 | 0.339 | Unibet |
