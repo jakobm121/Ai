@@ -1,38 +1,38 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-05-28T23:44:15.862718+02:00`
+Generated: `2026-05-29T14:58:32.109870+02:00`
 
-Pending picks: **0**
+Pending picks: **4**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 61 | 30 | 29 | 0 | 2 | 50.85% | +1.71u | 3.87% |
+| 64 | 32 | 30 | 0 | 2 | 51.61% | +2.60u | 5.58% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 10 | 3 | 7 | 0 | 0 | 30.00% | -2.92u | -39.00% |
+| 3 | 2 | 1 | 0 | 0 | 66.67% | +0.88u | 39.29% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 43 | 20 | 23 | 0 | 0 | 46.51% | -1.38u | -4.29% |
+| 46 | 22 | 24 | 0 | 0 | 47.83% | -0.50u | -1.45% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 29 | 11 | 18 | 0 | 0 | 37.93% | -4.62u | -21.25% |
+| 31 | 12 | 19 | 0 | 0 | 38.71% | -4.60u | -19.78% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 27 | 14 | 13 | 0 | 0 | 51.85% | +0.96u | 4.74% |
+| 28 | 15 | 13 | 0 | 0 | 53.57% | +1.73u | 8.24% |
 
 ### Over
 
@@ -44,12 +44,15 @@ Pending picks: **0**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 53 | 26 | 25 | 0 | 2 | 50.98% | +1.98u | 5.16% |
+| 56 | 28 | 26 | 0 | 2 | 51.85% | +2.86u | 7.06% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-05-29 | 11:30 | 3 | D. Blanch - P. Fajta | UNDER 20.5 games | 2.03 | ✅ win | 73.61 | 17 | 6-2, 6-3 | +0.77u |
+| 2026-05-29 | 11:00 | 4 | L. Neumayer - R. Bertola | UNDER 20.0 games | 2.11 | ❌ loss | 72.83 | 23 | 6-4, 7-6 | -0.75u |
+| 2026-05-29 | 10:00 | 6 | D. Markovina - D. Ajdukovic | UNDER 18.5 games | 2.15 | ✅ win | 70.86 | 17 | 4-6, 1-6 | +0.86u |
 | 2026-05-28 | 19:35 | 2 | K. Boulter - A. Potapova | UNDER 19.5 games | 2.07 | ❌ loss | 75.96 | 30 | 7-5, 4-6, 2-6 | -0.75u |
 | 2026-05-28 | 18:40 | 3 | V. Mboko - K. Siniakova | UNDER 20.5 games | 2.11 | ❌ loss | 72.93 | 30 | 5-7, 6-4, 6-2 | -0.75u |
 | 2026-05-28 | 17:40 | 1 | A. Ruzic - M. Keys | UNDER 18.5 games | 2.12 | ❌ loss | 79.99 | 20 | 4-6, 4-6 | -0.75u |
