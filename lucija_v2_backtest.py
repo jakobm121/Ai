@@ -36,10 +36,10 @@ RULES_V1 = {
 # Ideja: za under hočemo manj 3-set in manj close-set potenciala.
 RULES_V2 = {
     "side": "under",
-    "avg_close_set_max": 0.35,
-    "avg_three_set_max": 0.35,
+    "avg_close_set_max": 0.40,
+    "avg_three_set_max": 0.40,
     "confidence_min": 0,
-    "h2h_max": 0,
+    "h2h_min": 0,
     "market_gap_min": 0.25,
     "quality_min": 0,
     "strength_gap_max": 30,
@@ -50,10 +50,10 @@ RULES_V2 = {
 # Market gap je pri overjih raje manjši, ker bolj izenačen match večkrat vleče total gor.
 RULES_V3 = {
     "side": "over",
-    "avg_close_set_min": 0.35,
+    "avg_close_set_min": 0.30,
     "avg_three_set_min": 0.25,
     "confidence_min": 0,
-    "h2h_max": 1,
+    "h2h_min": 0,
     "market_gap_max": 0.35,
     "quality_min": 0,
     "strength_gap_max": 35,
