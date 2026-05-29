@@ -1,61 +1,13 @@
 {
-  "generated_at": "2026-05-29T08:15:06.968262+02:00",
+  "generated_at": "2026-05-29T13:05:50.490329+02:00",
   "predictions_file": "data/tennis_predictions.json",
   "predictions_source_format": "dict_with_picks",
-  "predictions_loaded": 15,
+  "predictions_loaded": 10,
   "main_results_file": "data/tennis_results.json",
   "main_results_source_format": "list",
-  "main_results_loaded": 504,
-  "accepted_count": 7,
+  "main_results_loaded": 509,
+  "accepted_count": 5,
   "accepted": [
-    {
-      "jure_key": "7328d2d03021cf50388203a7d94545f8",
-      "match": "Y. Yang - H. Inoue",
-      "bet": "Y. Yang",
-      "jure_tactic": "B",
-      "odds": 2.1,
-      "confidence": 87.8,
-      "quality_score": 81.2,
-      "edge": 0.0992,
-      "tour_level": "itf",
-      "bookmakers_used": 9
-    },
-    {
-      "jure_key": "783e0618bf1ecfd6d4e077cd88cda5eb",
-      "match": "P. Bar Biryukov - F. Lechno-Wasiutynski",
-      "bet": "P. Bar Biryukov",
-      "jure_tactic": "B",
-      "odds": 1.81,
-      "confidence": 88,
-      "quality_score": 78.8,
-      "edge": 0.1075,
-      "tour_level": "itf",
-      "bookmakers_used": 6
-    },
-    {
-      "jure_key": "7c1dfe0ed054506c4ffb41ab66f99a3c",
-      "match": "J. Simundza - A. Raynel",
-      "bet": "A. Raynel",
-      "jure_tactic": "B",
-      "odds": 2.1,
-      "confidence": 88,
-      "quality_score": 85.1,
-      "edge": 0.1207,
-      "tour_level": "itf",
-      "bookmakers_used": 8
-    },
-    {
-      "jure_key": "0f6cc712ed69612b14914c3a642109d1",
-      "match": "K. Popovic - M. Oliver Sanchez",
-      "bet": "M. Oliver Sanchez",
-      "jure_tactic": "B",
-      "odds": 2.28,
-      "confidence": 88,
-      "quality_score": 87.7,
-      "edge": 0.1405,
-      "tour_level": "itf",
-      "bookmakers_used": 7
-    },
     {
       "jure_key": "f7a65f632214fcc6e35728d6d9b04689",
       "match": "S. Dols - M. Maquet",
@@ -69,26 +21,50 @@
       "bookmakers_used": 8
     },
     {
-      "jure_key": "154d318d9de901d42789abef9056d8e0",
-      "match": "S. Sakellaridis - S. Nagal",
-      "bet": "S. Sakellaridis",
+      "jure_key": "b902ce1d54cf908433cfdb4732e38dae",
+      "match": "M. Bergen - S. Atay",
+      "bet": "M. Bergen",
+      "jure_tactic": "B",
+      "odds": 2.12,
+      "confidence": 82.9,
+      "quality_score": 76.6,
+      "edge": 0.0818,
+      "tour_level": "itf",
+      "bookmakers_used": 10
+    },
+    {
+      "jure_key": "74d48f44380101dc05bb8c7358545a7c",
+      "match": "Y. Erel - D. Ostapenkov",
+      "bet": "D. Ostapenkov",
+      "jure_tactic": "B",
+      "odds": 2.63,
+      "confidence": 75.1,
+      "quality_score": 70.3,
+      "edge": 0.0994,
+      "tour_level": "itf",
+      "bookmakers_used": 6
+    },
+    {
+      "jure_key": "df75ab7f7ef2d921f4359d395497a22e",
+      "match": "C. H. Tseng - P. Martin Tiffon",
+      "bet": "P. Martin Tiffon",
       "jure_tactic": "A+B",
-      "odds": 1.83,
+      "odds": 1.93,
       "confidence": 88,
-      "quality_score": 86.3,
-      "edge": 0.1136,
+      "quality_score": 78.4,
+      "edge": 0.0819,
       "tour_level": "challenger",
       "bookmakers_used": 10
     },
     {
-      "jure_key": "c50385f59f7d4a8b651e176fd6a2ee51",
-      "match": "M. Chazal - A. Nagel",
-      "bet": "M. Chazal",
+      "jure_key": "642525ce4c961e235867c6c09fe6e81f",
+      "match": "E. Mamedova - E. Khayrutdinova",
+      "bet": "E. Mamedova",
       "jure_tactic": "B",
-      "odds": 2.1,
-      "confidence": 88,
-      "quality_score": 82.4,
-      "edge": 0.11,
+      "odds": 2.5,
+      "confidence": 73.1,
+      "quality_score": 66.7,
+      "edge": 0.0786,
       "tour_level": "itf",
       "bookmakers_used": 8
     }
@@ -141,44 +117,44 @@
       "reason": "failed_tactics",
       "detail": {
         "tactic_a_values": {
-          "tour_level": "challenger",
-          "bookmakers": 9,
+          "tour_level": "itf",
+          "bookmakers": 8,
           "confidence": 88.0,
-          "edge": 0.2855
+          "edge": 0.0752
         },
         "tactic_a_checks": {
-          "tour_level_challenger": true,
+          "tour_level_challenger": false,
           "bookmakers_min": true,
           "confidence_max": true,
-          "edge_max": false
+          "edge_max": true
         },
         "tactic_a_failed": [
-          "edge_max"
+          "tour_level_challenger"
         ],
         "tactic_b_values": {
-          "odds": 2.67,
-          "quality": 89.4,
-          "edge": 0.2855
+          "odds": 1.71,
+          "quality": 73.7,
+          "edge": 0.0752
         },
         "tactic_b_checks": {
-          "odds_min": true,
+          "odds_min": false,
           "quality_max": true,
-          "edge_max": false
+          "edge_max": true
         },
         "tactic_b_failed": [
-          "edge_max"
+          "odds_min"
         ]
       },
-      "match": "S. Pankin - E. Coulibaly",
-      "bet": "S. Pankin",
+      "match": "N. Djosic - V. Gonzalez-Galino",
+      "bet": "N. Djosic",
       "side": "home",
       "market": null,
-      "tour_level": "challenger",
-      "bookmakers_used": 9,
+      "tour_level": "itf",
+      "bookmakers_used": 8,
       "confidence": 88,
-      "quality_score": 89.4,
-      "edge": 0.2855,
-      "odds": 2.67
+      "quality_score": 73.7,
+      "edge": 0.0752,
+      "odds": 1.71
     },
     {
       "reason": "failed_tactics",
@@ -223,138 +199,6 @@
       "quality_score": 89.4,
       "edge": 0.2919,
       "odds": 2.8
-    },
-    {
-      "reason": "failed_tactics",
-      "detail": {
-        "tactic_a_values": {
-          "tour_level": "itf",
-          "bookmakers": 8,
-          "confidence": 88.0,
-          "edge": 0.2234
-        },
-        "tactic_a_checks": {
-          "tour_level_challenger": false,
-          "bookmakers_min": true,
-          "confidence_max": true,
-          "edge_max": false
-        },
-        "tactic_a_failed": [
-          "tour_level_challenger",
-          "edge_max"
-        ],
-        "tactic_b_values": {
-          "odds": 2.34,
-          "quality": 89.9,
-          "edge": 0.2234
-        },
-        "tactic_b_checks": {
-          "odds_min": true,
-          "quality_max": true,
-          "edge_max": false
-        },
-        "tactic_b_failed": [
-          "edge_max"
-        ]
-      },
-      "match": "M. Fuele - G. Campana Lee",
-      "bet": "M. Fuele",
-      "side": "home",
-      "market": null,
-      "tour_level": "itf",
-      "bookmakers_used": 8,
-      "confidence": 88,
-      "quality_score": 89.9,
-      "edge": 0.2234,
-      "odds": 2.34
-    },
-    {
-      "reason": "failed_tactics",
-      "detail": {
-        "tactic_a_values": {
-          "tour_level": "wta",
-          "bookmakers": 9,
-          "confidence": 88.0,
-          "edge": 0.2647
-        },
-        "tactic_a_checks": {
-          "tour_level_challenger": false,
-          "bookmakers_min": true,
-          "confidence_max": true,
-          "edge_max": false
-        },
-        "tactic_a_failed": [
-          "tour_level_challenger",
-          "edge_max"
-        ],
-        "tactic_b_values": {
-          "odds": 2.53,
-          "quality": 89.4,
-          "edge": 0.2647
-        },
-        "tactic_b_checks": {
-          "odds_min": true,
-          "quality_max": true,
-          "edge_max": false
-        },
-        "tactic_b_failed": [
-          "edge_max"
-        ]
-      },
-      "match": "Xiy. Wang - Y. Starodubtseva",
-      "bet": "Xiy. Wang",
-      "side": "home",
-      "market": null,
-      "tour_level": "wta",
-      "bookmakers_used": 9,
-      "confidence": 88,
-      "quality_score": 89.4,
-      "edge": 0.2647,
-      "odds": 2.53
-    },
-    {
-      "reason": "failed_tactics",
-      "detail": {
-        "tactic_a_values": {
-          "tour_level": "itf",
-          "bookmakers": 9,
-          "confidence": 88.0,
-          "edge": 0.169
-        },
-        "tactic_a_checks": {
-          "tour_level_challenger": false,
-          "bookmakers_min": true,
-          "confidence_max": true,
-          "edge_max": true
-        },
-        "tactic_a_failed": [
-          "tour_level_challenger"
-        ],
-        "tactic_b_values": {
-          "odds": 2.32,
-          "quality": 91.4,
-          "edge": 0.169
-        },
-        "tactic_b_checks": {
-          "odds_min": true,
-          "quality_max": false,
-          "edge_max": false
-        },
-        "tactic_b_failed": [
-          "quality_max",
-          "edge_max"
-        ]
-      },
-      "match": "L. Giovannini - N. Podoroska",
-      "bet": "N. Podoroska",
-      "side": "away",
-      "market": null,
-      "tour_level": "itf",
-      "bookmakers_used": 9,
-      "confidence": 88,
-      "quality_score": 91.4,
-      "edge": 0.169,
-      "odds": 2.32
     },
     {
       "reason": "failed_tactics",
@@ -443,7 +287,7 @@
       "odds": 2.25
     }
   ],
-  "rejected_count": 8,
+  "rejected_count": 5,
   "dedupe_rule": "fixture/event + market + side",
   "settle_rule": "fixture/event + side matched against data/tennis_results.json"
 }
