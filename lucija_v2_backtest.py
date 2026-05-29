@@ -38,10 +38,10 @@ RULES_V2 = {
     "side": "under",
     "avg_close_set_max": 0.35,
     "avg_three_set_max": 0.35,
-    "confidence_min": 80,
+    "confidence_min": 0,
     "h2h_max": 0,
     "market_gap_min": 0.25,
-    "quality_min": 72,
+    "quality_min": 0,
     "strength_gap_max": 30,
 }
 
@@ -52,10 +52,10 @@ RULES_V3 = {
     "side": "over",
     "avg_close_set_min": 0.35,
     "avg_three_set_min": 0.25,
-    "confidence_min": 80,
+    "confidence_min": 0,
     "h2h_max": 1,
     "market_gap_max": 0.35,
-    "quality_min": 72,
+    "quality_min": 0,
     "strength_gap_max": 35,
 }
 
