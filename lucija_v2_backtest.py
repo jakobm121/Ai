@@ -29,6 +29,7 @@ RULES_V1 = {
 }
 
 RULES_V2 = {
+    "side": "under",
     "avg_close_set_max": 0.35,
     "avg_three_set_max": 0.35,
     "confidence_min": 80,
