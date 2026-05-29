@@ -29,18 +29,13 @@ RULES_V1 = {
 }
 
 RULES_V2 = {
-    "side": "under",
-    "line_min": 20.0,
-    "line_max": 21.5,
-    "odds_min": 1.95,
-    "odds_max": 2.20,
-    "confidence_min": 83,
-    "quality_min": 76,
-    "market_gap_min": 0.25,
-    "strength_gap_max": 30,
-    "h2h_max": 0,
+    "avg_close_set_max": 0.35,
     "avg_three_set_max": 0.35,
-    "avg_close_set_max": 0.50,
+    "confidence_min": 80,
+    "h2h_max": 0,
+    "market_gap_min": 0.25,
+    "quality_min": 72,
+    "strength_gap_max": 30,
 }
 
 
