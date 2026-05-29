@@ -1,27 +1,9 @@
-# Lucija results
+# Lucija active predictions
 
-Generated: 2026-05-28T23:43:37.610156+02:00
+Generated: 2026-05-29T08:33:16.876994+02:00
 
-## Summary
-
-- Picks: 11
-- Pending: 0
-- Settled: 11
-- W/L/P/V: 8/3/0/0
-- Profit: 5.67u
-- ROI: 51.55%
-- Winrate: 72.73%
-
-| Date | Time | Match | Bet | Odds | Stake | Result | Profit | Score | Total |
-|---|---:|---|---|---:|---:|---|---:|---|---:|
-| 2026-05-27 | 12:45 | D. Snigur - P. Stearns | UNDER 20.0 games | 2.19 | 1.00 | win | 1.190 | 4-6, 0-6 | 16 |
-| 2026-05-27 | 14:15 | F. Jones - M. Bouzkova | UNDER 19.5 games | 2.15 | 1.00 | win | 1.150 | 0-6, 6-7 | 19 |
-| 2026-05-27 | 16:30 | T. Zeuch - V. Durasovic | UNDER 21.0 games | 2.05 | 1.00 | win | 1.050 | 4-6, 2-6 | 18 |
-| 2026-05-27 | 18:00 | T. Zink - R. Hohmann | UNDER 20.5 games | 2.00 | 1.00 | win | 1.000 | 6-3, 6-2 | 17 |
-| 2026-05-27 | 18:30 | L. Neumayer - T. Boyer | UNDER 21.5 games | 2.00 | 1.00 | win | 1.000 | 6-2, 6-3 | 17 |
-| 2026-05-28 | 11:00 | D. Vekic - N. Osaka | UNDER 20.5 games | 2.06 | 1.00 | loss | -1.000 | 6-7, 4-6 | 23 |
-| 2026-05-28 | 11:00 | L. Wessels - V. Durasovic | UNDER 21.5 games | 2.14 | 1.00 | loss | -1.000 | 5-7, 4-6 | 22 |
-| 2026-05-28 | 11:30 | K. Coppejans - F. Agamenone | UNDER 20.5 games | 2.14 | 1.00 | win | 1.140 | 2-6, 3-6 | 17 |
-| 2026-05-28 | 12:00 | D. Blanch - S. Kopp | UNDER 21.5 games | 2.10 | 1.00 | win | 1.100 | 6-3, 6-2 | 17 |
-| 2026-05-28 | 13:30 | F. Bondioli - K. Feldbausch | UNDER 20.5 games | 2.10 | 1.00 | loss | -1.000 | 7-6, 2-6, 1-6 | 28 |
-| 2026-05-28 | 14:00 | A. Li - D. Parry | UNDER 20.5 games | 2.04 | 1.00 | win | 1.040 | 3-6, 4-6 | 19 |
+| Date | Time | Match | Bet | Odds | Stake | Conf | Quality | Gap | Strength gap | H2H | Avg 3-set | Avg close | Book |
+|---|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| 2026-05-29 | 10:00 | S. Pankin - E. Coulibaly | UNDER 21.5 games | 1.98 | 1.00 | 90.1 | 77.8 | 0.313 | 27.10 | 0 | 0.167 | 0.352 | Betano |
+| 2026-05-29 | 14:30 | T. Daniel - M. Erhard | UNDER 21.0 games | 2.11 | 1.00 | 86.4 | 78.5 | 0.262 | 0.13 | 0 | 0.243 | 0.277 | Pncl |
+| 2026-05-29 | 16:30 | P. Stearns - B. Bencic | UNDER 20.5 games | 2.13 | 1.00 | 89.7 | 89.1 | 0.446 | 10.00 | 0 | 0.200 | 0.367 | Pncl |
