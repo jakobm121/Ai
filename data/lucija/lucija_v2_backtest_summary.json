@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T23:06:46.671875+02:00",
+  "generated_at": "2026-05-29T23:13:01.915810+02:00",
   "source_file": "data/tennis_totals_results.json",
   "source_count": 501,
   "settled_count": 492,
@@ -8,7 +8,6 @@
     "avg_close_set_min": 0.2,
     "avg_three_set_min": 0.15,
     "confidence_min": 80,
-    "h2h_max": 0,
     "market_gap_min": 0.25,
     "quality_min": 72,
     "strength_gap_max": 30
@@ -18,7 +17,6 @@
     "avg_close_set_max": 0.4,
     "avg_three_set_max": 0.4,
     "confidence_min": 70,
-    "h2h_min": 0,
     "market_gap_min": 0.25,
     "quality_min": 0,
     "strength_gap_max": 20
@@ -48,19 +46,19 @@
     "longest_loss_streak": 9
   },
   "v1": {
-    "picks": 110,
-    "settled": 108,
+    "picks": 146,
+    "settled": 144,
     "pending": 2,
-    "wins": 68,
-    "losses": 37,
+    "wins": 86,
+    "losses": 55,
     "pushes": 3,
-    "winrate": 64.76,
-    "profit": 33.49,
-    "roi": 31.01,
-    "avg_odds": 2.0475,
-    "max_drawdown": -8.12,
+    "winrate": 60.99,
+    "profit": 34.49,
+    "roi": 23.95,
+    "avg_odds": 2.0474,
+    "max_drawdown": -7.92,
     "longest_win_streak": 9,
-    "longest_loss_streak": 6
+    "longest_loss_streak": 4
   },
   "v2": {
     "picks": 81,
@@ -93,34 +91,34 @@
     "longest_loss_streak": 5
   },
   "v1_train_75": {
-    "picks": 82,
-    "settled": 82,
+    "picks": 109,
+    "settled": 109,
     "pending": 0,
-    "wins": 55,
-    "losses": 25,
+    "wins": 71,
+    "losses": 36,
     "pushes": 2,
-    "winrate": 68.75,
-    "profit": 31.91,
-    "roi": 38.91,
-    "avg_odds": 2.0418,
-    "max_drawdown": -4.9,
+    "winrate": 66.36,
+    "profit": 37.68,
+    "roi": 34.57,
+    "avg_odds": 2.0401,
+    "max_drawdown": -4.7,
     "longest_win_streak": 9,
-    "longest_loss_streak": 4
+    "longest_loss_streak": 3
   },
   "v1_test_25": {
-    "picks": 28,
-    "settled": 26,
+    "picks": 37,
+    "settled": 35,
     "pending": 2,
-    "wins": 13,
-    "losses": 12,
+    "wins": 15,
+    "losses": 19,
     "pushes": 1,
-    "winrate": 52.0,
-    "profit": 1.58,
-    "roi": 6.08,
-    "avg_odds": 2.0654,
-    "max_drawdown": -3.12,
-    "longest_win_streak": 6,
-    "longest_loss_streak": 3
+    "winrate": 44.12,
+    "profit": -3.19,
+    "roi": -9.11,
+    "avg_odds": 2.0703,
+    "max_drawdown": -6.92,
+    "longest_win_streak": 3,
+    "longest_loss_streak": 4
   },
   "v2_train_75": {
     "picks": 60,
