@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-05-29T15:39:43.731747+02:00",
+  "generated_at": "2026-05-29T18:23:07.055797+02:00",
   "source_results_file": "data/tennis_totals_results.json",
   "lucija_results_file": "data/lucija/lucija_results.json",
   "source_results_count": 501,
   "lucija_results_count": 18,
-  "updated": 0,
-  "still_pending": 7,
+  "updated": 5,
+  "still_pending": 2,
   "source_not_found": 0,
-  "source_not_settled": 7,
+  "source_not_settled": 2,
   "items": [
     {
       "pick_id": "cec6c90ff32373751a580173325c6fe7",
@@ -21,16 +21,22 @@
       "pick_id": "32fbf2a9720273255cf317fa544ddc44",
       "source_pick_id": "aecee4de5fd4af63717dac82d3c9ac6c",
       "match": "T. Daniel - M. Erhard",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 25,
+      "final_score": "6-7, 5-7",
       "match_method": "source_pick_id"
     },
     {
       "pick_id": "dd75265835e614b7be04847b303eeb41",
       "source_pick_id": "fe187b05c1d7ca4870a9c4d0297ac30c",
       "match": "S. Pankin - E. Coulibaly",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 32,
+      "final_score": "6-3, 4-6, 6-7",
       "match_method": "source_pick_id"
     },
     {
@@ -45,24 +51,33 @@
       "pick_id": "b6552b77ca3979296e81c2fe9e2e25f3",
       "source_pick_id": "abfa66daa491d8e7666d4cedc48931da",
       "match": "J. Teichmann - K. Muchova",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 19,
+      "final_score": "6-1, 7-5",
       "match_method": "source_pick_id"
     },
     {
       "pick_id": "a9069a7eba07e4ce1e5967ab56b4af4e",
       "source_pick_id": "2aaf1b18171cf048fa536f596d55b856",
       "match": "P. Lovric - J. Adams",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 28,
+      "final_score": "6-2, 4-6, 6-4",
       "match_method": "source_pick_id"
     },
     {
       "pick_id": "0f260d935e1c29b06eb5aac96511f6e2",
       "source_pick_id": "a18a0a65806c5f47ef31f4249b70a7ea",
       "match": "S. Sierra - S. Cirstea",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "win",
+      "profit": 0.99,
+      "total_games": 12,
+      "final_score": "0-6, 0-6",
       "match_method": "source_pick_id"
     }
   ]
