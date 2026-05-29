@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-29T22:50:11.875554+02:00",
+  "generated_at": "2026-05-29T22:57:14.757612+02:00",
   "source_file": "data/tennis_totals_results.json",
   "source_count": 501,
   "settled_count": 492,
   "v1_count": 110,
-  "v2_count": 54,
-  "v3_count": 43,
+  "v2_count": 64,
+  "v3_count": 51,
   "debug_sample": [
     {
       "pick_id": "5e84bbc19d5d5b47e050b272f9f1b257",
@@ -1457,12 +1457,10 @@
       ],
       "v2_failed": [
         "side",
-        "quality_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "quality_min",
         "market_gap_max"
       ]
     },
@@ -1501,12 +1499,10 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "h2h_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "h2h_max",
         "avg_close_set_min"
@@ -1628,14 +1624,12 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "market_gap_min",
         "h2h_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "avg_three_set_min"
       ]
     },
@@ -1731,7 +1725,7 @@
       "result": "win",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 21.5,
@@ -1758,14 +1752,11 @@
       ],
       "v2_failed": [
         "side",
-        "quality_min",
         "h2h_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
-      "v3_failed": [
-        "quality_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "2a0c3e3feb323758303735377a644b34",
@@ -2616,13 +2607,11 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "h2h_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max"
       ]
     },
@@ -3042,14 +3031,12 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "h2h_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max"
       ]
     },
@@ -3216,14 +3203,10 @@
         "quality_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_max",
         "avg_close_set_min"
       ]
@@ -3392,12 +3375,10 @@
       ],
       "v2_failed": [
         "side",
-        "confidence_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "confidence_min",
         "market_gap_max"
       ]
     },
@@ -3547,7 +3528,7 @@
       "result": "win",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 22.5,
@@ -3576,16 +3557,11 @@
       ],
       "v2_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "h2h_max",
         "avg_close_set_max"
       ],
-      "v3_failed": [
-        "confidence_min",
-        "quality_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "b8cf47b77947773d6d584eeb872aedd1",
@@ -3785,14 +3761,12 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "strength_gap_max",
         "h2h_max",
         "avg_three_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "strength_gap_max",
         "avg_close_set_min"
@@ -4467,14 +4441,12 @@
         "strength_gap_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max"
       ]
     },
@@ -4655,7 +4627,7 @@
       "result": "win",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 21.5,
@@ -4682,13 +4654,10 @@
       ],
       "v2_failed": [
         "side",
-        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": [
-        "quality_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "0ebb7262392df384c62071e8429bdcfe",
@@ -4769,14 +4738,10 @@
         "quality_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "avg_close_set_min"
       ]
     },
@@ -4816,15 +4781,11 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "h2h_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_max",
         "h2h_max"
       ]
@@ -5582,15 +5543,11 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side",
-        "confidence_min",
-        "quality_min"
+        "side"
       ]
     },
     {
@@ -6391,12 +6348,10 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "h2h_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "avg_close_set_min"
       ]
@@ -6560,14 +6515,10 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "avg_close_set_min"
       ]
     },
@@ -6649,16 +6600,12 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "h2h_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side",
-        "confidence_min",
-        "quality_min"
+        "side"
       ]
     },
     {
@@ -6781,15 +6728,11 @@
         "quality_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_max"
       ]
     },
@@ -7085,13 +7028,11 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side",
-        "confidence_min"
+        "side"
       ]
     },
     {
@@ -7300,13 +7241,11 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side",
-        "confidence_min"
+        "side"
       ]
     },
     {
@@ -7638,12 +7577,10 @@
         "confidence_min"
       ],
       "v2_failed": [
-        "confidence_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "avg_close_set_min"
       ]
@@ -7932,13 +7869,11 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "quality_min",
         "avg_three_set_min"
       ]
     },
@@ -8060,15 +7995,11 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side",
-        "confidence_min",
-        "quality_min"
+        "side"
       ]
     },
     {
@@ -8834,14 +8765,10 @@
       ],
       "v2_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_max"
       ]
     },
@@ -9645,14 +9572,10 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "avg_close_set_min"
       ]
     },
@@ -9693,17 +9616,13 @@
         "strength_gap_max"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side",
-        "confidence_min",
-        "quality_min"
+        "side"
       ]
     },
     {
@@ -9786,13 +9705,11 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "quality_min",
         "avg_three_set_min"
       ]
     },
@@ -9913,14 +9830,10 @@
         "quality_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_max",
         "avg_three_set_min"
       ]
@@ -10193,7 +10106,7 @@
       "result": "win",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 22.5,
@@ -10222,17 +10135,12 @@
       ],
       "v2_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
-      "v3_failed": [
-        "confidence_min",
-        "quality_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "006174b39353aff4099da3115afbfe81",
@@ -10586,11 +10494,9 @@
       ],
       "v2_failed": [
         "side",
-        "confidence_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
-        "confidence_min",
         "market_gap_max",
         "avg_close_set_min"
       ]
@@ -10824,7 +10730,7 @@
       "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 22.5,
@@ -10852,16 +10758,11 @@
       ],
       "v2_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
-      "v3_failed": [
-        "confidence_min",
-        "quality_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "134f1598e9fa6918171aaf988ed50f12",
@@ -11822,14 +11723,12 @@
         "strength_gap_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "market_gap_min",
         "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "strength_gap_max"
       ]
     },
@@ -11869,14 +11768,12 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "market_gap_min",
         "h2h_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "h2h_max",
         "avg_three_set_min"
       ]
@@ -12080,14 +11977,10 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "avg_close_set_min"
       ]
     },
@@ -12734,7 +12627,7 @@
       "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 22.5,
@@ -12761,13 +12654,10 @@
       ],
       "v2_failed": [
         "side",
-        "confidence_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": [
-        "confidence_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "7333c3deb626c3e8de939527b1dd3852",
@@ -12965,13 +12855,11 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side",
-        "confidence_min"
+        "side"
       ]
     },
     {
@@ -13216,13 +13104,11 @@
         "confidence_min"
       ],
       "v2_failed": [
-        "confidence_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max"
       ]
     },
@@ -13262,13 +13148,11 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "market_gap_min",
         "h2h_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "h2h_max",
         "avg_close_set_min"
       ]
@@ -13560,12 +13444,10 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
         "market_gap_min"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "avg_three_set_min",
         "avg_close_set_min"
       ]
@@ -14201,16 +14083,12 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side",
-        "confidence_min",
-        "quality_min"
+        "side"
       ]
     },
     {
@@ -14266,7 +14144,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": false,
+      "v2_ok": true,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14291,12 +14169,9 @@
       "v1_failed": [
         "confidence_min"
       ],
-      "v2_failed": [
-        "confidence_min"
-      ],
+      "v2_failed": [],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "avg_three_set_min",
         "avg_close_set_min"
@@ -14310,7 +14185,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": false,
+      "v2_ok": true,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14335,12 +14210,9 @@
       "v1_failed": [
         "quality_min"
       ],
-      "v2_failed": [
-        "quality_min"
-      ],
+      "v2_failed": [],
       "v3_failed": [
         "side",
-        "quality_min",
         "market_gap_max",
         "avg_close_set_min"
       ]
@@ -14381,14 +14253,10 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_max",
         "avg_three_set_min"
       ]
@@ -14471,14 +14339,10 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "h2h_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_max",
         "h2h_max",
         "avg_three_set_min",
@@ -14522,15 +14386,11 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "avg_three_set_min"
       ]
     },
@@ -14542,7 +14402,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": false,
+      "v2_ok": true,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14567,12 +14427,9 @@
       "v1_failed": [
         "confidence_min"
       ],
-      "v2_failed": [
-        "confidence_min"
-      ],
+      "v2_failed": [],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "avg_three_set_min",
         "avg_close_set_min"
@@ -14586,7 +14443,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": false,
+      "v2_ok": true,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14611,12 +14468,9 @@
       "v1_failed": [
         "quality_min"
       ],
-      "v2_failed": [
-        "quality_min"
-      ],
+      "v2_failed": [],
       "v3_failed": [
         "side",
-        "quality_min",
         "market_gap_max",
         "avg_three_set_min",
         "avg_close_set_min"
@@ -14630,7 +14484,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": false,
+      "v2_ok": true,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14656,12 +14510,9 @@
         "confidence_min",
         "avg_three_set_min"
       ],
-      "v2_failed": [
-        "confidence_min"
-      ],
+      "v2_failed": [],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "avg_three_set_min",
         "avg_close_set_min"
@@ -14675,7 +14526,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": false,
+      "v2_ok": true,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14701,12 +14552,9 @@
         "quality_min",
         "avg_three_set_min"
       ],
-      "v2_failed": [
-        "quality_min"
-      ],
+      "v2_failed": [],
       "v3_failed": [
         "side",
-        "quality_min",
         "market_gap_max",
         "avg_three_set_min",
         "avg_close_set_min"
@@ -14829,13 +14677,11 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "quality_min",
         "market_gap_min",
         "h2h_max"
       ],
       "v3_failed": [
         "side",
-        "quality_min",
         "avg_three_set_min",
         "avg_close_set_min"
       ]
@@ -14877,15 +14723,11 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "avg_three_set_min"
       ]
     },
@@ -14926,15 +14768,11 @@
         "strength_gap_max"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "strength_gap_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "strength_gap_max",
         "avg_close_set_min"
       ]
@@ -14975,14 +14813,10 @@
         "strength_gap_max"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "strength_gap_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_max",
         "strength_gap_max",
         "avg_three_set_min",
@@ -15067,12 +14901,10 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "quality_min",
         "market_gap_min"
       ],
       "v3_failed": [
         "side",
-        "quality_min",
         "avg_three_set_min",
         "avg_close_set_min"
       ]
@@ -15085,7 +14917,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": false,
+      "v2_ok": true,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -15111,14 +14943,9 @@
         "confidence_min",
         "quality_min"
       ],
-      "v2_failed": [
-        "confidence_min",
-        "quality_min"
-      ],
+      "v2_failed": [],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_max",
         "avg_close_set_min"
       ]
@@ -15286,12 +15113,10 @@
         "avg_close_set_min"
       ],
       "v2_failed": [
-        "quality_min",
         "market_gap_min"
       ],
       "v3_failed": [
         "side",
-        "quality_min",
         "avg_close_set_min"
       ]
     },
@@ -15373,16 +15198,12 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side",
-        "confidence_min",
-        "quality_min"
+        "side"
       ]
     },
     {
@@ -15501,15 +15322,11 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "avg_three_set_min"
       ]
     },
@@ -15521,7 +15338,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": false,
+      "v2_ok": true,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -15547,12 +15364,9 @@
         "confidence_min",
         "avg_three_set_min"
       ],
-      "v2_failed": [
-        "confidence_min"
-      ],
+      "v2_failed": [],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "avg_three_set_min",
         "avg_close_set_min"
@@ -16173,15 +15987,11 @@
         "strength_gap_max"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_max",
         "strength_gap_max"
       ]
@@ -16194,7 +16004,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": false,
+      "v2_ok": true,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -16219,12 +16029,9 @@
       "v1_failed": [
         "confidence_min"
       ],
-      "v2_failed": [
-        "confidence_min"
-      ],
+      "v2_failed": [],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "avg_three_set_min",
         "avg_close_set_min"
@@ -16307,13 +16114,11 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "avg_three_set_min"
       ]
     },
@@ -16611,12 +16416,10 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "confidence_min",
         "market_gap_min"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "avg_close_set_min"
       ]
     },
@@ -16868,14 +16671,12 @@
       ],
       "v2_failed": [
         "side",
-        "quality_min",
         "market_gap_min",
         "h2h_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "quality_min",
         "h2h_max"
       ]
     },
@@ -17410,12 +17211,10 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
         "h2h_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "avg_close_set_min"
       ]
@@ -18434,7 +18233,7 @@
       "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 20.5,
@@ -18461,15 +18260,10 @@
       ],
       "v2_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
-      "v3_failed": [
-        "confidence_min",
-        "quality_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "0d737dc0c54d31a9ae7d35ef3e9907df",
@@ -18890,12 +18684,10 @@
         "avg_close_set_min"
       ],
       "v2_failed": [
-        "confidence_min",
         "strength_gap_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "strength_gap_max",
         "avg_close_set_min"
@@ -19269,14 +19061,10 @@
         "quality_min"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "avg_close_set_min"
       ]
     },
@@ -19486,16 +19274,12 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "confidence_min",
-        "quality_min",
         "strength_gap_max",
         "h2h_max",
         "avg_three_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_max",
         "strength_gap_max",
         "h2h_max"
@@ -20207,7 +19991,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": false,
+      "v2_ok": true,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -20232,12 +20016,9 @@
       "v1_failed": [
         "confidence_min"
       ],
-      "v2_failed": [
-        "confidence_min"
-      ],
+      "v2_failed": [],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "avg_three_set_min",
         "avg_close_set_min"
@@ -20532,12 +20313,10 @@
       ],
       "v2_failed": [
         "side",
-        "quality_min",
         "market_gap_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
-        "quality_min",
         "avg_close_set_min"
       ]
     },
@@ -21134,7 +20913,7 @@
       "result": "pending",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 20.5,
@@ -21162,15 +20941,10 @@
       ],
       "v2_failed": [
         "side",
-        "confidence_min",
-        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": [
-        "confidence_min",
-        "quality_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "bfb966b874d9bbb830e7f6a0eba2a4da",
@@ -21288,12 +21062,10 @@
         "confidence_min"
       ],
       "v2_failed": [
-        "confidence_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "confidence_min",
         "market_gap_max",
         "avg_three_set_min"
       ]
