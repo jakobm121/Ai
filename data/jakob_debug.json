@@ -1,701 +1,53 @@
 {
-  "generated_at": "2026-05-28T17:02:27.884767+02:00",
+  "generated_at": "2026-05-29T08:24:23.196403+02:00",
   "model": "Jakob Tennis Totals Profile Model v2",
-  "fixtures_total": 455,
-  "scanned": 64,
+  "fixtures_total": 255,
+  "scanned": 143,
   "skipped": [
     {
-      "event_key": 12130440,
-      "match": "Halys/ Herbert - Bonzi/ Jacq",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130447,
-      "match": "Melo/ Molteni - Harrison/ Skupski",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130449,
-      "match": "Carreno-Busta/ Munar - Bolelli/ Vavassori",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130451,
-      "match": "Nouza/ Oberleitner - Arribage/ Olivetti",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130452,
-      "match": "Arevalo/ Pavic - Rinderknech/ Vacherot",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130455,
-      "match": "Doumbia/ Reboul - Machac/ Vocel",
+      "event_key": 12130438,
+      "match": "Gonzalez/ Gonzalez - Burruchaga/ Tirante",
       "reason": "not_singles"
     },
     {
-      "event_key": 12130458,
-      "match": "Reymond/ Sanchez - Cabral/ Salisbury",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130464,
-      "match": "Schnaitter/ Wallner - Andreozzi/ Guinard",
+      "event_key": 12130450,
+      "match": "Cerundolo/ Navone - Reyes-Varela/ Tabilo",
       "reason": "not_singles"
     },
     {
-      "event_key": 12130465,
-      "match": "Paul/ Willis - Etcheverry/ Ugo Carabelli",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130467,
-      "match": "Borges/ Zhang - Heliovaara/ Patten",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130470,
-      "match": "Kempen/ Klepac - Muhammad/ Stollar",
+      "event_key": 12130489,
+      "match": "Linette/ Starodubtseva - Jacquemot/ Rakotomanga Rajaonah",
       "reason": "not_singles"
     },
     {
-      "event_key": 12130476,
-      "match": "Mihalikova/ Nicholls - Lemaitre/ Rame",
+      "event_key": 12130931,
+      "match": "Dabrowski/ King - Zvonareva/ Olivetti",
       "reason": "not_singles"
     },
     {
-      "event_key": 12130478,
-      "match": "Dart/ Panova - Martins/ Sierra",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130480,
-      "match": "Ferro/ Parry - Cirstea/ Kalinskaya",
+      "event_key": 12130932,
+      "match": "Jacquemot/ Kouame - Stollar/ Harrison",
       "reason": "not_singles"
     },
     {
-      "event_key": 12130483,
-      "match": "Kostyuk/ Ruse - Mertens/ Zhang",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130486,
-      "match": "Kozyreva/ Shymanovich - Detiuc/ Khromacheva",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130487,
-      "match": "Rakhimova/ Siskova - Kichenok/ Ninomiya",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130488,
-      "match": "Maleckova/ Skoch - Danilina/ Krunic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130492,
-      "match": "Sutjiadi/ Tjen - Bouzkova/ Sorribes Tormo",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130494,
-      "match": "Oliynykova/ Udvardy - Bondar/ Frech",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130496,
-      "match": "Baptiste/ Williams - Kato/ Olmos",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130501,
-      "match": "Krueger/ Papa - Martinez/ Monday",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130503,
-      "match": "Bollipalli/ Ramanathan - Kumar/ Poling",
+      "event_key": 12130933,
+      "match": "Mihalikova/ Krawietz - Bucsa/ Matos",
       "reason": "not_singles"
     },
     {
-      "event_key": 12130505,
-      "match": "Puttergill/ Sweeny - Maginley/ Shick",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130661,
-      "match": "D. Kasatkina - S. Bandecchi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130675,
-      "match": "A. Rinderknech - M. Berrettini",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Correct Score 2nd Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Over/Under by Games (2nd Set)",
-        "Home/Away (2nd Set)",
-        "Over/Under by Games (3rd Set)",
-        "Odd/Even (2nd Set)",
-        "Home/Away (3rd Set)",
-        "Asian Handicap (3rd Set)",
-        "Odd/Even (3rd Set)",
-        "Asian Handicap (2nd Set)",
-        "Number of sets",
-        "Win at least one set (Player 1)",
-        "Win at least one set (Player 2)",
-        "Away Team Total (1st Set)",
-        "Away Team Total (2nd Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"40\": {\"1xBet\": \"1.75\", \"Marathon\": \"1.75\", \"Pncl\": \"1.83\"}, \"40.5\": {\"1xBet\": \"1.86\", \"Marathon\": \"1.81\", \"Unibet\": \"1.84\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.89\", \"Betano\": \"1.75\"}, \"41\": {\"1xBet\": \"1.86\", \"Marathon\": \"1.86\", \"Pncl\": \"1.97\"}, \"41.5\": {\"1xBet\": \"1.92\", \"bet365\": \"1.90\", \"Marathon\": \"1.92\", \"Unibet\": \"1.97\", \"BetVictor\": \"1.87\", \"Pncl\": \"2.04\", \"Betano\": \"1.87\"}, \"42\": {\"1xBet\": \"1.98\", \"Marathon\": \"1.98\", \"Pncl\": \"2.13\"}, \"42.5\": {\"1xBet\": \"2.03\", \"Marathon\": \"2.03\", \"Unibet\": \"2.12\", \"Betano\": \"2.00\"}, \"39.5\": {\"1xBet\": \"1.69\", \"Unibet\": \"1.73\", \"Pncl\": \"1.78\", \"Betano\": \"1.65\"}, \"44.5\": {\"Unibet\": \"2.48\", \"1xBet\": \"2.30\", \"Betano\": \"2.32\"}, \"37.5\": {\"1xBet\": \"1.50\", \"Unibet\": \"1.55\", \"Betano\": \"1.50\"}, \"38\": {\"1xBet\": \"1.53\"}, \"38.5\": {\"1xBet\": \"1.58\", \"Unibet\": \"1.63\", \"Betano\": \"1.55\"}, \"39\": {\"1xBet\": \"1.63\"}, \"43\": {\"1xBet\": \"2.09\"}, \"43.5\": {\"1xBet\": \"2.14\", \"Unibet\": \"2.28\", \"Betano\": \"2.15\"}, \"44\": {\"1xBet\": \"2.24\"}, \"34.5\": {\"Unibet\": \"1.37\", \"Betano\": \"1.32\"}, \"33.5\": {\"Unibet\": \"1.33\", \"Betano\": \"1.29\"}, \"35.5\": {\"Unibet\": \"1.44\", \"1xBet\": \"1.44\", \"Betano\": \"1.39\"}, \"36.5\": {\"Unibet\": \"1.52\", \"1xBet\": \"1.49\", \"Betano\": \"1.45\"}, \"45.5\": {\"Unibet\": \"2.80\", \"Betano\": \"2.52\"}, \"46.5\": {\"Unibet\": \"3.05\", \"Betano\": \"2.70\"}, \"47.5\": {\"Unibet\": \"3.30\", \"Betano\": \"2.90\"}, \"49.5\": {\"Betano\": \"3.50\"}, \"32.5\": {\"Betano\": \"1.24\"}, \"48.5\": {\"Betano\": \"3.20\"}, \"50.5\": {\"Betano\": \"3.80\"}, \"51.5\": {\"Betano\": \"4.25\"}}, \"Over/Under by Games in Match Under\": {\"40\": {\"1xBet\": \"1.99\", \"Marathon\": \"1.99\", \"Pncl\": \"2.05\"}, \"40.5\": {\"BetVictor\": \"1.91\", \"Marathon\": \"1.92\", \"Unibet\": \"1.93\", \"Pncl\": \"1.98\", \"1xBet\": \"1.97\", \"Betano\": \"1.98\"}, \"41\": {\"1xBet\": \"1.86\", \"Marathon\": \"1.86\", \"Pncl\": \"1.92\"}, \"41.5\": {\"1xBet\": \"1.79\", \"bet365\": \"1.80\", \"Marathon\": \"1.79\", \"Unibet\": \"1.80\", \"BetVictor\": \"1.87\", \"Pncl\": \"1.84\", \"Betano\": \"1.85\"}, \"42\": {\"1xBet\": \"1.72\", \"Marathon\": \"1.72\", \"Pncl\": \"1.77\"}, \"42.5\": {\"1xBet\": \"1.67\", \"Marathon\": \"1.67\", \"Unibet\": \"1.68\", \"Betano\": \"1.72\"}, \"39.5\": {\"1xBet\": \"2.04\", \"Unibet\": \"2.06\", \"Pncl\": \"2.10\", \"Betano\": \"2.12\"}, \"44.5\": {\"Unibet\": \"1.52\", \"1xBet\": \"1.49\", \"Betano\": \"1.55\"}, \"37.5\": {\"1xBet\": \"2.28\", \"Unibet\": \"2.40\", \"Betano\": \"2.42\"}, \"38\": {\"1xBet\": \"2.24\"}, \"38.5\": {\"1xBet\": \"2.17\", \"Unibet\": \"2.23\", \"Betano\": \"2.30\"}, \"39\": {\"1xBet\": \"2.11\"}, \"43\": {\"1xBet\": \"1.61\"}, \"43.5\": {\"1xBet\": \"1.57\", \"Unibet\": \"1.60\", \"Betano\": \"1.62\"}, \"44\": {\"1xBet\": \"1.53\"}, \"34.5\": {\"Unibe"
-    },
-    {
-      "event_key": 12130700,
-      "match": "L. van Assche - B. Nakashima",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Correct Score 2nd Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Over/Under by Games (2nd Set)",
-        "Home/Away (2nd Set)",
-        "Over/Under by Games (3rd Set)",
-        "Odd/Even (2nd Set)",
-        "Home/Away (3rd Set)",
-        "Asian Handicap (3rd Set)",
-        "Odd/Even (3rd Set)",
-        "Asian Handicap (2nd Set)",
-        "Number of sets",
-        "Win at least one set (Player 1)",
-        "Win at least one set (Player 2)",
-        "Away Team Total (1st Set)",
-        "Away Team Total (2nd Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"39.5\": {\"1xBet\": \"2.09\", \"Marathon\": \"2.09\", \"Unibet\": \"2.17\", \"Betano\": \"2.00\"}, \"37\": {\"1xBet\": \"1.80\", \"Marathon\": \"1.80\", \"Pncl\": \"1.89\"}, \"37.5\": {\"1xBet\": \"1.90\", \"Marathon\": \"1.86\", \"Unibet\": \"1.88\", \"BetVictor\": \"1.87\", \"Pncl\": \"1.97\", \"Betano\": \"1.75\"}, \"38\": {\"1xBet\": \"1.90\", \"Marathon\": \"1.90\", \"Pncl\": \"2.03\"}, \"38.5\": {\"1xBet\": \"1.96\", \"bet365\": \"1.83\", \"Marathon\": \"1.96\", \"Unibet\": \"2.00\", \"BetVictor\": \"1.91\", \"Pncl\": \"2.10\", \"Betano\": \"1.85\"}, \"39\": {\"1xBet\": \"2.03\", \"Marathon\": \"2.03\", \"Pncl\": \"2.12\"}, \"34.5\": {\"Betano\": \"1.47\", \"Unibet\": \"1.58\", \"1xBet\": \"1.53\"}, \"35\": {\"1xBet\": \"1.57\"}, \"35.5\": {\"1xBet\": \"1.63\", \"Unibet\": \"1.68\", \"Betano\": \"1.57\"}, \"36\": {\"1xBet\": \"1.68\"}, \"36.5\": {\"Betano\": \"1.65\", \"Unibet\": \"1.76\", \"Pncl\": \"1.83\", \"1xBet\": \"1.74\"}, \"40\": {\"1xBet\": \"2.16\"}, \"40.5\": {\"Betano\": \"2.15\", \"Unibet\": \"2.32\", \"1xBet\": \"2.21\"}, \"30.5\": {\"Betano\": \"1.26\"}, \"44.5\": {\"Betano\": \"2.95\"}, \"31.5\": {\"Betano\": \"1.32\"}, \"32.5\": {\"Betano\": \"1.37\"}, \"33.5\": {\"Betano\": \"1.44\"}, \"41.5\": {\"Betano\": \"2.32\"}, \"42.5\": {\"Betano\": \"2.50\"}, \"43.5\": {\"Betano\": \"2.72\"}, \"45.5\": {\"Betano\": \"3.25\"}, \"46.5\": {\"Betano\": \"3.55\"}, \"47.5\": {\"Betano\": \"3.95\"}, \"48.5\": {\"Betano\": \"4.40\"}, \"29.5\": {\"Betano\": \"1.21\"}}, \"Over/Under by Games in Match Under\": {\"39.5\": {\"1xBet\": \"1.63\", \"Marathon\": \"1.63\", \"Unibet\": \"1.66\", \"Betano\": \"1.72\"}, \"37\": {\"1xBet\": \"1.92\", \"Marathon\": \"1.92\", \"Pncl\": \"1.98\"}, \"37.5\": {\"1xBet\": \"1.92\", \"Marathon\": \"1.87\", \"Unibet\": \"1.88\", \"BetVictor\": \"1.87\", \"Pncl\": \"1.92\", \"Betano\": \"1.98\"}, \"38\": {\"1xBet\": \"1.82\", \"Marathon\": \"1.82\", \"Pncl\": \"1.85\"}, \"38.5\": {\"1xBet\": \"1.75\", \"bet365\": \"1.83\", \"Marathon\": \"1.75\", \"Unibet\": \"1.78\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.79\", \"Betano\": \"1.85\"}, \"39\": {\"1xBet\": \"1.68\", \"Marathon\": \"1.68\", \"Pncl\": \"1.76\"}, \"34.5\": {\"Betano\": \"2.50\", \"Unibet\": \"2.33\", \"1xBet\": \"2.21\"}, \"35\": {\"1xBet\": \"2.16\"}, \"35.5\": {\"Betano\": \"2.27\", \"Unibet\": \"2.14\", \"1xBet\": \"2.09\"}, \"36\": {\"1xBet\": \"2.03\"}, \"36.5\": {\"Betano\": \"2.12\", \"Unibet\": \"2.02\", \"Pncl\": \"2.05\", \"1xBet\": \"1.98\"}, \"40\": {\"1xBet\": \"1.57\"}, \"40.5\": {\"Betano\": \"1.62\", \"Unibet\": \"1.58\", \"1xBet\": \"1.53\"}, \"30.5\": {\"Betano\": \"3.50\"}, \"44.5\": {\"Betano\": \"1.35\"}, \"31.5\": {\"Betano\": \"3.10\"}, \"32.5\": {\"Betano\": \"2.85\"}, \"33.5\": {\"Betano\": \"2.62\"}, \"41.5\": {\"Betano\": \"1.53\"}, \"42.5\": {\"Betano\": \"1.47\"}, \"43.5\": {\"Betano\": \"1.40\"}, \"45.5\": {\"Betano\": \"1.30\"}, \"46.5\": {\"Betano\": \"1.25\"}, \"47.5\": {\"Betano\": \"1.21\"}, \"48.5\": {\"Betan"
-    },
-    {
-      "event_key": 12130703,
-      "match": "H. Hurkacz - F. Tiafoe",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130710,
-      "match": "J. Grabher - A. Anisimova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130711,
-      "match": "M. Chwalinska - E. Mertens",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130921,
-      "match": "F. Cobolli - Y. Wu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130922,
-      "match": "R. Collignon - B. Shelton",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Correct Score 2nd Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Over/Under by Games (2nd Set)",
-        "Home/Away (2nd Set)",
-        "Over/Under by Games (3rd Set)",
-        "Odd/Even (2nd Set)",
-        "Home/Away (3rd Set)",
-        "Asian Handicap (3rd Set)",
-        "Odd/Even (3rd Set)",
-        "Asian Handicap (2nd Set)",
-        "Number of sets",
-        "Win at least one set (Player 1)",
-        "Win at least one set (Player 2)",
-        "Away Team Total (1st Set)",
-        "Away Team Total (2nd Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"39.5\": {\"1xBet\": \"1.88\", \"bet365\": \"1.90\", \"Marathon\": \"1.83\", \"Unibet\": \"1.84\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.85\", \"Betano\": \"1.80\"}, \"38.5\": {\"1xBet\": \"1.71\", \"bet365\": \"1.83\", \"Marathon\": \"1.71\", \"Unibet\": \"1.71\", \"Betano\": \"1.70\"}, \"39\": {\"1xBet\": \"1.76\", \"Marathon\": \"1.76\", \"Pncl\": \"1.78\"}, \"40\": {\"1xBet\": \"1.87\", \"Marathon\": \"1.87\", \"Pncl\": \"1.92\"}, \"40.5\": {\"1xBet\": \"1.93\", \"bet365\": \"1.83\", \"Marathon\": \"1.93\", \"Unibet\": \"1.93\", \"Pncl\": \"1.96\", \"Betano\": \"1.90\"}, \"41\": {\"1xBet\": \"1.99\", \"Marathon\": \"1.99\", \"Pncl\": \"2.06\"}, \"36.5\": {\"1xBet\": \"1.53\", \"Unibet\": \"1.58\", \"Betano\": \"1.57\"}, \"37\": {\"1xBet\": \"1.56\"}, \"37.5\": {\"1xBet\": \"1.60\", \"Unibet\": \"1.64\", \"Betano\": \"1.62\"}, \"38\": {\"1xBet\": \"1.65\"}, \"41.5\": {\"1xBet\": \"2.04\", \"Unibet\": \"2.10\", \"Pncl\": \"2.15\", \"Betano\": \"2.05\"}, \"42\": {\"1xBet\": \"2.11\"}, \"42.5\": {\"1xBet\": \"2.17\", \"Unibet\": \"2.23\", \"Betano\": \"2.20\"}, \"43\": {\"1xBet\": \"2.24\"}, \"43.5\": {\"Betano\": \"2.37\", \"Unibet\": \"2.43\", \"1xBet\": \"2.30\"}, \"34.5\": {\"Betano\": \"1.42\"}, \"44.5\": {\"Betano\": \"2.55\"}, \"32.5\": {\"Betano\": \"1.32\"}, \"33.5\": {\"Betano\": \"1.38\"}, \"35.5\": {\"Betano\": \"1.50\"}, \"45.5\": {\"Betano\": \"2.80\"}, \"46.5\": {\"Betano\": \"3.00\"}, \"47.5\": {\"Betano\": \"3.20\"}, \"30.5\": {\"Betano\": \"1.19\"}, \"49.5\": {\"Betano\": \"3.90\"}, \"31.5\": {\"Betano\": \"1.26\"}, \"48.5\": {\"Betano\": \"3.55\"}, \"50.5\": {\"Betano\": \"4.20\"}, \"28.5\": {\"Betano\": \"1.18\"}, \"29.5\": {\"Betano\": \"1.18\"}}, \"Over/Under by Games in Match Under\": {\"39.5\": {\"1xBet\": \"1.95\", \"bet365\": \"1.80\", \"Marathon\": \"1.90\", \"Unibet\": \"1.93\", \"BetVictor\": \"1.91\", \"Pncl\": \"2.02\", \"Betano\": \"1.90\"}, \"38.5\": {\"1xBet\": \"2.02\", \"bet365\": \"1.83\", \"Marathon\": \"2.02\", \"Unibet\": \"2.08\", \"Betano\": \"2.05\"}, \"39\": {\"1xBet\": \"1.97\", \"Marathon\": \"1.97\", \"Pncl\": \"2.12\"}, \"40\": {\"1xBet\": \"1.85\", \"Marathon\": \"1.85\", \"Pncl\": \"1.97\"}, \"40.5\": {\"1xBet\": \"1.78\", \"bet365\": \"1.83\", \"Marathon\": \"1.78\", \"Unibet\": \"1.83\", \"Pncl\": \"1.91\", \"Betano\": \"1.80\"}, \"41\": {\"1xBet\": \"1.71\", \"Marathon\": \"1.71\", \"Pncl\": \"1.83\"}, \"36.5\": {\"1xBet\": \"2.21\", \"Unibet\": \"2.33\", \"Betano\": \"2.27\"}, \"37\": {\"1xBet\": \"2.18\"}, \"37.5\": {\"1xBet\": \"2.14\", \"Unibet\": \"2.20\", \"Betano\": \"2.15\"}, \"38\": {\"1xBet\": \"2.08\"}, \"41.5\": {\"1xBet\": \"1.66\", \"Unibet\": \"1.71\", \"Pncl\": \"1.76\", \"Betano\": \"1.70\"}, \"42\": {\"1xBet\": \"1.60\"}, \"42.5\": {\"1xBet\": \"1.55\", \"Unibet\": \"1.62\", \"Betano\": \"1.60\"}, \"43\": {\"1xBet\": \"1.53\"}, \"43.5\": {\"Betano\": \"1.52\", \"Unibet\": \"1.54\", \"1xBet\": \"1.49\"}, \"34.5\": {\"Betano\": \"2.65\"}, \"44.5\": {\"Betano\": \"1.45\"}, \"32.5"
-    },
-    {
-      "event_key": 12130927,
-      "match": "Y. Putintseva - C. Osorio",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130928,
-      "match": "Panova/ Bhambri - Kichenok/ Pel",
+      "event_key": 12130937,
+      "match": "Nicholls/ Patten - Melichar-Martinez/ Arribage",
       "reason": "not_singles"
     },
     {
-      "event_key": 12130930,
-      "match": "Routliffe/ Goransson - Stefani/ Arevalo",
+      "event_key": 12130938,
+      "match": "Guo/ Reboul - Zhang/ Puetz",
       "reason": "not_singles"
     },
     {
-      "event_key": 12130935,
-      "match": "Eikeri/ Miedler - Rakotomanga Rajaonah/ Reymond",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130936,
-      "match": "Hunter/ Nys - Danilina/ Tracy",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130939,
-      "match": "Siegemund/ Roger-Vasselin - Schuurs/ Cash",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130942,
-      "match": "Errani/ Vavassori - Perez/ Cabral",
+      "event_key": 12131360,
+      "match": "Guo/ Mladenovic - Hsieh S-/Wang",
       "reason": "not_singles"
-    },
-    {
-      "event_key": 12130963,
-      "match": "Berard/ Lagarrigue - Martin/ Picard",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12130965,
-      "match": "Leroux/ M'Chich - Car/ Nunez",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12130971,
-      "match": "D. Shnaider - M. Kessler",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12130996,
-      "match": "F. Cerundolo - H. Gaston",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131002,
-      "match": "Berlanga Bandera/ Garcia - Roselli/ Wang",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131003,
-      "match": "Iyengar/ Khayrutdinova - Kudryavtseva/ Xantava",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131034,
-      "match": "I. Jovic - E. Navarro",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131035,
-      "match": "Duckworth/ Trungelliti - Bolelli/ Vavassori",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131038,
-      "match": "Y. Takahashi - E. Winter",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131041,
-      "match": "F. Bondioli - K. Feldbausch",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131106,
-      "match": "Nam Ji/ Niklas-Salminen - Bertola/ Forti",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131109,
-      "match": "Senic/ Stankovic - Bayerlova/ Milovanovic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131114,
-      "match": "Messis/ Shirokyi - Popovic/ Vasilev",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131115,
-      "match": "Maric/ Radovanovic - Callerio/ Zanada",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131120,
-      "match": "Gerbaud/ Rius - Lalami Laaroussi/ Vankan",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131121,
-      "match": "D. Vallejo - M. Kouame",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131122,
-      "match": "A. Tabilo - V. Vacherot",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Correct Score 2nd Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Over/Under by Games (2nd Set)",
-        "Home/Away (2nd Set)",
-        "Over/Under by Games (3rd Set)",
-        "Odd/Even (2nd Set)",
-        "Home/Away (3rd Set)",
-        "Asian Handicap (3rd Set)",
-        "Odd/Even (3rd Set)",
-        "Asian Handicap (2nd Set)",
-        "Number of sets",
-        "Win at least one set (Player 1)",
-        "Win at least one set (Player 2)",
-        "Away Team Total (1st Set)",
-        "Away Team Total (2nd Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"39.5\": {\"Marathon\": \"2.03\", \"Unibet\": \"1.94\", \"Pncl\": \"2.05\", \"1xBet\": \"2.03\", \"Betano\": \"2.02\"}, \"35.5\": {\"Marathon\": \"1.59\", \"Unibet\": \"1.56\", \"1xBet\": \"1.59\", \"Betano\": \"1.62\"}, \"36\": {\"Marathon\": \"1.64\", \"1xBet\": \"1.64\"}, \"36.5\": {\"Marathon\": \"1.70\", \"bet365\": \"1.83\", \"Unibet\": \"1.63\", \"1xBet\": \"1.70\", \"Betano\": \"1.70\"}, \"37\": {\"Marathon\": \"1.75\", \"1xBet\": \"1.75\"}, \"37.5\": {\"Marathon\": \"1.81\", \"bet365\": \"1.83\", \"Unibet\": \"1.71\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.79\", \"1xBet\": \"1.86\", \"Betano\": \"1.78\"}, \"38\": {\"Marathon\": \"1.86\", \"Pncl\": \"1.84\", \"1xBet\": \"1.86\"}, \"38.5\": {\"Marathon\": \"1.92\", \"Unibet\": \"1.82\", \"BetVictor\": \"1.90\", \"Pncl\": \"1.91\", \"1xBet\": \"1.92\", \"Betano\": \"1.88\"}, \"39\": {\"Marathon\": \"1.98\", \"Pncl\": \"1.97\", \"1xBet\": \"1.98\"}, \"34.5\": {\"Marathon\": \"1.53\", \"Unibet\": \"1.50\", \"1xBet\": \"1.50\", \"Betano\": \"1.53\"}, \"35\": {\"Marathon\": \"1.57\", \"1xBet\": \"1.53\"}, \"40\": {\"Marathon\": \"2.18\", \"Pncl\": \"2.09\", \"1xBet\": \"2.11\"}, \"40.5\": {\"Marathon\": \"2.24\", \"Unibet\": \"2.14\", \"1xBet\": \"2.15\", \"Betano\": \"2.18\"}, \"41\": {\"1xBet\": \"2.18\"}, \"41.5\": {\"Betano\": \"2.35\", \"Unibet\": \"2.30\", \"1xBet\": \"2.24\"}, \"42\": {\"1xBet\": \"2.24\"}, \"42.5\": {\"Betano\": \"2.55\", \"Unibet\": \"2.50\", \"1xBet\": \"2.30\"}, \"44.5\": {\"Betano\": \"3.00\"}, \"31.5\": {\"Betano\": \"1.34\"}, \"32.5\": {\"Betano\": \"1.42\"}, \"33.5\": {\"Betano\": \"1.47\"}, \"43.5\": {\"Betano\": \"2.75\"}, \"45.5\": {\"Betano\": \"3.25\"}, \"30.5\": {\"Betano\": \"1.28\"}, \"46.5\": {\"Betano\": \"3.50\"}, \"47.5\": {\"Betano\": \"3.85\"}, \"48.5\": {\"Betano\": \"4.25\"}, \"28.5\": {\"Betano\": \"1.19\"}, \"29.5\": {\"Betano\": \"1.21\"}}, \"Over/Under by Games in Match Under\": {\"39.5\": {\"Marathon\": \"1.67\", \"Unibet\": \"1.81\", \"Pncl\": \"1.83\", \"1xBet\": \"1.67\", \"Betano\": \"1.70\"}, \"35.5\": {\"Marathon\": \"2.15\", \"Unibet\": \"2.33\", \"1xBet\": \"2.15\", \"Betano\": \"2.18\"}, \"36\": {\"Marathon\": \"2.10\", \"1xBet\": \"2.10\"}, \"36.5\": {\"Marathon\": \"2.03\", \"bet365\": \"1.83\", \"Unibet\": \"2.18\", \"1xBet\": \"2.03\", \"Betano\": \"2.05\"}, \"37\": {\"Marathon\": \"1.99\", \"1xBet\": \"1.99\"}, \"37.5\": {\"Marathon\": \"1.92\", \"bet365\": \"1.83\", \"Unibet\": \"2.06\", \"BetVictor\": \"1.91\", \"Pncl\": \"2.11\", \"1xBet\": \"1.97\", \"Betano\": \"1.93\"}, \"38\": {\"Marathon\": \"1.86\", \"Pncl\": \"2.04\", \"1xBet\": \"1.86\"}, \"38.5\": {\"Marathon\": \"1.79\", \"Unibet\": \"1.92\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.97\", \"1xBet\": \"1.79\", \"Betano\": \"1.82\"}, \"39\": {\"Marathon\": \"1.72\", \"Pncl\": \"1.89\", \"1xBet\": \"1.72\"}, \"34.5\": {\"Marathon\": \"2.21\", \"Unibet\": \"2.50\", \"1xBet\": \"2.28\", \"Betano\": \"2.35\"}, \"35\": {\"Marathon\": \"2.16\", \"1xBet\": \"2.24\"}, \"40"
-    },
-    {
-      "event_key": 12131123,
-      "match": "Z. Svajda - A. Walton",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131124,
-      "match": "M. Landaluce - V. Kopriva",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131125,
-      "match": "F. Diaz Acosta - L. Tien",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131126,
-      "match": "M. Arnaldi - S. Tsitsipas",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Correct Score 2nd Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Over/Under by Games (2nd Set)",
-        "Home/Away (2nd Set)",
-        "Over/Under by Games (3rd Set)",
-        "Odd/Even (2nd Set)",
-        "Home/Away (3rd Set)",
-        "Asian Handicap (3rd Set)",
-        "Odd/Even (3rd Set)",
-        "Asian Handicap (2nd Set)",
-        "Number of sets",
-        "Win at least one set (Player 1)",
-        "Win at least one set (Player 2)",
-        "Away Team Total (1st Set)",
-        "Away Team Total (2nd Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"39.5\": {\"Betano\": \"1.95\", \"Marathon\": \"1.92\", \"Unibet\": \"1.92\", \"Pncl\": \"2.00\", \"1xBet\": \"1.92\"}, \"36.5\": {\"Betano\": \"1.65\", \"Marathon\": \"1.60\", \"Unibet\": \"1.61\", \"1xBet\": \"1.60\"}, \"37\": {\"1xBet\": \"1.64\", \"Marathon\": \"1.64\"}, \"37.5\": {\"Betano\": \"1.72\", \"bet365\": \"1.80\", \"Marathon\": \"1.69\", \"Unibet\": \"1.68\", \"BetVictor\": \"1.83\", \"1xBet\": \"1.69\"}, \"38\": {\"1xBet\": \"1.75\", \"Marathon\": \"1.75\", \"Pncl\": \"1.79\"}, \"38.5\": {\"Betano\": \"1.83\", \"Marathon\": \"1.81\", \"Unibet\": \"1.79\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.86\", \"1xBet\": \"1.86\"}, \"39\": {\"1xBet\": \"1.86\", \"Marathon\": \"1.86\", \"Pncl\": \"1.93\"}, \"34.5\": {\"Betano\": \"1.50\", \"Unibet\": \"1.46\", \"1xBet\": \"1.50\"}, \"35\": {\"1xBet\": \"1.53\"}, \"35.5\": {\"Betano\": \"1.57\", \"Unibet\": \"1.53\", \"1xBet\": \"1.51\"}, \"36\": {\"1xBet\": \"1.54\"}, \"40\": {\"1xBet\": \"1.98\", \"Pncl\": \"2.09\"}, \"40.5\": {\"Betano\": \"2.10\", \"Unibet\": \"2.06\", \"1xBet\": \"2.03\"}, \"41\": {\"1xBet\": \"2.09\"}, \"41.5\": {\"Betano\": \"2.27\", \"Unibet\": \"2.23\", \"1xBet\": \"2.15\"}, \"42\": {\"1xBet\": \"2.27\"}, \"42.5\": {\"Betano\": \"2.50\", \"Unibet\": \"2.40\", \"1xBet\": \"2.33\"}, \"44.5\": {\"Betano\": \"2.90\"}, \"32.5\": {\"Betano\": \"1.38\"}, \"33.5\": {\"Betano\": \"1.44\"}, \"43.5\": {\"Betano\": \"2.65\"}, \"45.5\": {\"Betano\": \"3.15\"}, \"30.5\": {\"Betano\": \"1.25\"}, \"31.5\": {\"Betano\": \"1.32\"}, \"46.5\": {\"Betano\": \"3.40\"}, \"47.5\": {\"Betano\": \"3.70\"}, \"48.5\": {\"Betano\": \"4.10\"}, \"29.5\": {\"Betano\": \"1.19\"}}, \"Over/Under by Games in Match Under\": {\"39.5\": {\"Betano\": \"1.75\", \"Marathon\": \"1.79\", \"Unibet\": \"1.85\", \"Pncl\": \"1.87\", \"1xBet\": \"1.79\"}, \"36.5\": {\"Betano\": \"2.12\", \"Marathon\": \"2.14\", \"Unibet\": \"2.25\", \"1xBet\": \"2.14\"}, \"37\": {\"1xBet\": \"2.10\", \"Marathon\": \"2.10\"}, \"37.5\": {\"Betano\": \"2.00\", \"bet365\": \"1.90\", \"Marathon\": \"2.04\", \"Unibet\": \"2.12\", \"BetVictor\": \"1.91\", \"1xBet\": \"2.04\"}, \"38\": {\"1xBet\": \"1.99\", \"Marathon\": \"1.99\", \"Pncl\": \"2.10\"}, \"38.5\": {\"Betano\": \"1.87\", \"Marathon\": \"1.92\", \"Unibet\": \"1.98\", \"BetVictor\": \"1.91\", \"Pncl\": \"2.02\", \"1xBet\": \"1.97\"}, \"39\": {\"1xBet\": \"1.86\", \"Marathon\": \"1.86\", \"Pncl\": \"1.95\"}, \"34.5\": {\"Betano\": \"2.42\", \"Unibet\": \"2.65\", \"1xBet\": \"2.28\"}, \"35\": {\"1xBet\": \"2.24\"}, \"35.5\": {\"Betano\": \"2.27\", \"Unibet\": \"2.43\", \"1xBet\": \"2.26\"}, \"36\": {\"1xBet\": \"2.22\"}, \"40\": {\"1xBet\": \"1.72\", \"Pncl\": \"1.80\"}, \"40.5\": {\"Betano\": \"1.65\", \"Unibet\": \"1.73\", \"1xBet\": \"1.67\"}, \"41\": {\"1xBet\": \"1.61\"}, \"41.5\": {\"Betano\": \"1.57\", \"Unibet\": \"1.63\", \"1xBet\": \"1.56\"}, \"42\": {\"1xBet\": \"1.52\"}, \"42.5\": {\"Betano\": \"1.47\", \"Unibet\": \"1.54\", \"1xBet\": \"1.48\"}, \"44.5\": {\"Betano\": "
-    },
-    {
-      "event_key": 12131127,
-      "match": "D. Vekic - N. Osaka",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131128,
-      "match": "M. Sakkari - C. Liu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131130,
-      "match": "A. Kalinskaya - A. Korneeva",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131132,
-      "match": "J. Vasami - T. Compagnucci",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131134,
-      "match": "P. Fajta - F. Roncadelli",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131135,
-      "match": "D. Blanch - S. Kopp",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131136,
-      "match": "H. Barton - N. Gombos",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131168,
-      "match": "M. Matoula - A. Gasanova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131169,
-      "match": "Bulatova/ Matoula - Kulambayeva/ Zaar",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131170,
-      "match": "Herea/ Kostovic - Dang/ You",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131192,
-      "match": "D. Glinka - L. Broady",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131193,
-      "match": "C. Cretu - P. Kotov",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131194,
-      "match": "K. Coppejans - F. Agamenone",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131195,
-      "match": "R. Albot - T. Skatov",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131210,
-      "match": "P. Henning - L. Koenig",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131211,
-      "match": "G. Dalmasso - R. Strombachs",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131212,
-      "match": "A. Beckley - S. Napolitano",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131227,
-      "match": "M. Plunger - M. Donald",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131228,
-      "match": "K. De Schepper - M. Moeller",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131229,
-      "match": "Fumagalli/ Perfetti - Rohseano/ Rohseano",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131230,
-      "match": "Gundacker/ Pernas - Becirovic/ Stollecker",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131231,
-      "match": "Opitz/ Zeuch - Ahti/ Durasovic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131232,
-      "match": "Schoenhaus/ Wehnelt - Barsukov/ Ehrenschneider",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131233,
-      "match": "Neuss/ Nittmann - Poertner/ Zick",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131234,
-      "match": "Moratelli/ Tikhonova - Ortega Redondo/ Otzipka",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131235,
-      "match": "Martinez Cirez/ Teixido Garcia - Cavalle-Reimers/ Fita Boluda",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131347,
-      "match": "F. Comesana - L. Darderi",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Correct Score 2nd Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Over/Under by Games (2nd Set)",
-        "Home/Away (2nd Set)",
-        "Over/Under by Games (3rd Set)",
-        "Odd/Even (2nd Set)",
-        "Home/Away (3rd Set)",
-        "Asian Handicap (3rd Set)",
-        "Odd/Even (3rd Set)",
-        "Asian Handicap (2nd Set)",
-        "Number of sets",
-        "Win at least one set (Player 1)",
-        "Win at least one set (Player 2)",
-        "Away Team Total (1st Set)",
-        "Away Team Total (2nd Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"36\": {\"1xBet\": \"1.82\", \"Marathon\": \"1.82\", \"Pncl\": \"1.86\"}, \"36.5\": {\"Betano\": \"1.82\", \"Marathon\": \"1.87\", \"Unibet\": \"1.83\", \"BetVictor\": \"1.85\", \"Pncl\": \"1.93\", \"1xBet\": \"1.92\"}, \"37\": {\"1xBet\": \"1.91\", \"Marathon\": \"1.91\", \"Pncl\": \"1.99\"}, \"37.5\": {\"Betano\": \"1.91\", \"bet365\": \"1.83\", \"Marathon\": \"1.95\", \"Unibet\": \"1.92\", \"BetVictor\": \"1.90\", \"Pncl\": \"2.04\", \"1xBet\": \"1.95\"}, \"38\": {\"1xBet\": \"2.01\", \"Marathon\": \"2.01\"}, \"38.5\": {\"Betano\": \"2.05\", \"Marathon\": \"2.05\", \"1xBet\": \"2.05\"}, \"34.5\": {\"Betano\": \"1.65\", \"Unibet\": \"1.63\", \"1xBet\": \"1.64\"}, \"39.5\": {\"Betano\": \"2.20\", \"1xBet\": \"2.19\"}, \"33.5\": {\"Betano\": \"1.57\", \"Unibet\": \"1.56\", \"1xBet\": \"1.55\"}, \"34\": {\"1xBet\": \"1.59\"}, \"35\": {\"1xBet\": \"1.70\", \"Pncl\": \"1.78\"}, \"35.5\": {\"Betano\": \"1.72\", \"Unibet\": \"1.72\", \"Pncl\": \"1.80\", \"1xBet\": \"1.76\"}, \"39\": {\"1xBet\": \"2.13\"}, \"40\": {\"1xBet\": \"2.24\"}, \"40.5\": {\"Betano\": \"2.37\", \"1xBet\": \"2.30\"}, \"30.5\": {\"Betano\": \"1.37\"}, \"44.5\": {\"Betano\": \"3.30\"}, \"31.5\": {\"Betano\": \"1.45\"}, \"32.5\": {\"Betano\": \"1.53\"}, \"41.5\": {\"Betano\": \"2.60\"}, \"42.5\": {\"Betano\": \"2.80\"}, \"43.5\": {\"Betano\": \"3.00\"}, \"45.5\": {\"Betano\": \"3.55\"}, \"46.5\": {\"Betano\": \"3.85\"}, \"47.5\": {\"Betano\": \"4.20\"}, \"28.5\": {\"Betano\": \"1.22\"}, \"29.5\": {\"Betano\": \"1.29\"}}, \"Over/Under by Games in Match Under\": {\"36\": {\"1xBet\": \"1.90\", \"Marathon\": \"1.90\", \"Pncl\": \"2.02\"}, \"36.5\": {\"Betano\": \"1.88\", \"Marathon\": \"1.86\", \"Unibet\": \"1.92\", \"BetVictor\": \"1.90\", \"Pncl\": \"1.95\", \"1xBet\": \"1.90\"}, \"37\": {\"1xBet\": \"1.81\", \"Marathon\": \"1.81\", \"Pncl\": \"1.88\"}, \"37.5\": {\"Betano\": \"1.80\", \"bet365\": \"1.83\", \"Marathon\": \"1.76\", \"Unibet\": \"1.83\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.83\", \"1xBet\": \"1.76\"}, \"38\": {\"1xBet\": \"1.70\", \"Marathon\": \"1.70\"}, \"38.5\": {\"Betano\": \"1.70\", \"Marathon\": \"1.65\", \"1xBet\": \"1.65\"}, \"34.5\": {\"Betano\": \"2.12\", \"Unibet\": \"2.18\", \"1xBet\": \"2.07\"}, \"39.5\": {\"Betano\": \"1.60\", \"1xBet\": \"1.54\"}, \"33.5\": {\"Betano\": \"2.25\", \"Unibet\": \"2.33\", \"1xBet\": \"2.17\"}, \"34\": {\"1xBet\": \"2.13\"}, \"35\": {\"1xBet\": \"2.01\", \"Pncl\": \"2.10\"}, \"35.5\": {\"Betano\": \"2.00\", \"Unibet\": \"2.05\", \"Pncl\": \"2.09\", \"1xBet\": \"1.95\"}, \"39\": {\"1xBet\": \"1.59\"}, \"40\": {\"1xBet\": \"1.53\"}, \"40.5\": {\"Betano\": \"1.52\", \"1xBet\": \"1.49\"}, \"30.5\": {\"Betano\": \"2.85\"}, \"44.5\": {\"Betano\": \"1.29\"}, \"31.5\": {\"Betano\": \"2.57\"}, \"32.5\": {\"Betano\": \"2.35\"}, \"41.5\": {\"Betano\": \"1.44\"}, \"42.5\": {\"Betano\": \"1.38\"}, \"43.5\": {\"Betano\": \"1.34\"}, \"45.5\": {\"Betano\": \"1.25\"}, \"46.5\": {\"Betano\": \"1.22\"}, \"47.5\": {\"Betano\": \"1.19\"}, \"28"
-    },
-    {
-      "event_key": 12131348,
-      "match": "J-L. Struff - J. Faria",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131349,
-      "match": "A. Li - D. Parry",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131352,
-      "match": "Y. H. Hsu - M. Brunold",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131353,
-      "match": "P. Martin Tiffon - J. J. Schwaerzler",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131356,
-      "match": "Borrelli/ Liusso - Hipfl/ Oradini",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131357,
-      "match": "Aregger/ Senn - Milev/ Ratti",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131358,
-      "match": "Boehner/ Hodzic - Akli/ Salden",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131359,
-      "match": "Martinez Vaquero/ Webley-Smith - Firman/ Liu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131369,
-      "match": "Poulsen Brostrom/ Slavic - Noce/ Pampanin",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131370,
-      "match": "J. Sinner - J. M. Cerundolo",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131371,
-      "match": "O. Oliynykova - K. Birrell",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131373,
-      "match": "F. Auger-Aliassime - R. A. Burruchaga",
-      "reason": "not_pregame"
     },
     {
       "event_key": 12131374,
@@ -703,580 +55,234 @@
       "reason": "no_totals_market",
       "available_markets": [
         "Home/Away",
+        "Over/Under",
         "Correct Score 1st Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
         "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
         "Set Betting",
+        "Set / Match",
+        "Home/Away (2nd Set)",
         "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Asian Handicap (1st Set)"
+        "Away Team Total (1st Set)",
+        "Home Team Total (1st Set)"
       ],
-      "totals_market_preview": null
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"17.5\": {\"Marathon\": \"1.75\", \"Pncl\": \"1.82\", \"1xBet\": \"1.75\"}, \"17\": {\"Marathon\": \"1.56\", \"Pncl\": \"1.61\", \"1xBet\": \"1.56\"}, \"18\": {\"Marathon\": \"1.89\", \"Pncl\": \"1.98\", \"1xBet\": \"1.89\"}, \"16.5\": {\"Pncl\": \"1.49\"}, \"19\": {\"Pncl\": \"2.25\"}, \"18.5\": {\"Pncl\": \"2.13\", \"1xBet\": \"2.05\"}, \"19.5\": {\"1xBet\": \"2.45\"}}, \"Over/Under by Games in Match Under\": {\"17.5\": {\"Marathon\": \"1.95\", \"Pncl\": \"1.94\", \"1xBet\": \"1.95\"}, \"17\": {\"Marathon\": \"2.24\", \"Pncl\": \"2.32\", \"1xBet\": \"2.24\"}, \"18\": {\"Marathon\": \"1.79\", \"Pncl\": \"1.83\", \"1xBet\": \"1.79\"}, \"16.5\": {\"Pncl\": \"2.64\"}, \"19\": {\"Pncl\": \"1.58\"}, \"18.5\": {\"Pncl\": \"1.72\", \"1xBet\": \"1.68\"}, \"19.5\": {\"1xBet\": \"1.50\"}}}"
     },
     {
-      "event_key": 12131396,
-      "match": "Arseneault/ Peck - Liu/ Morais",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131397,
-      "match": "Dean/ Stepanov - Exsted/ Johnston",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131398,
-      "match": "Johnson/ van Loben Sels - Baris/ Matta",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131416,
-      "match": "J. Wang - M. Golovina",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131418,
-      "match": "Paul/ Willis - Chandrasekar/ Yuzuki",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131419,
-      "match": "Arevalo/ Pavic - Hilderbrand/ Paris",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131420,
-      "match": "Bittoun/ Strombachs - Hurrion/ Hussey",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131421,
-      "match": "Fajta/ Makk - Britto/ Saraiva Dos Santos",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131422,
-      "match": "Mansouri/ Neuchrist - Bondioli/ Caniato",
+      "event_key": 12131415,
+      "match": "Matushkina/ Uchijima - Cadar -/Grubor",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131423,
-      "match": "Battiston/ Castagnola - Grevelius/ Heinonen",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131424,
-      "match": "A. Magadan - Oh Chan-Yeong",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131425,
-      "match": "Cho Seung Woo - M. Dellavedova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131426,
-      "match": "T. Ichikawa - Y. Jeong",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131427,
-      "match": "S. Shin - N. Tajima",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131428,
-      "match": "K. Isomura - H. Hashimoto",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131429,
-      "match": "D. J. Kim - H. Heck",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131430,
-      "match": "U. Park - Y. Jeong",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131431,
-      "match": "K. Saitoh - T. Sach",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131432,
-      "match": "S. Fukuda - Y. Tomida",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131433,
-      "match": "K. Otsuka - K. Matsuda",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131434,
-      "match": "H. Shiraishi - T. Masabayashi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131435,
-      "match": "Y. Taka - E. Zhu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131436,
-      "match": "Ja. Delaney - K. Nishiwaki",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131437,
-      "match": "H. Koyama - N. Koizumi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131438,
-      "match": "Y. Kusuhara - S. Matsuoka",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131439,
-      "match": "J. Yamasaki - L. Vithoontien",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131440,
-      "match": "V. Bielinskyi - M. Maksimovic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131441,
-      "match": "T. Pereira - N. Lopez Cherubino",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131442,
-      "match": "N. Vukadin - O. Wallin",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131443,
-      "match": "A. Wazny - D. Sakellaridis",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131444,
-      "match": "A. Pisaric - K. Juhas",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131445,
-      "match": "D. Shirokyi - S. Gulin",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131446,
-      "match": "A. Vasilev - A. Arzhankin",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131447,
-      "match": "M. Martineau - S. Zick",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131448,
-      "match": "M. Petkovic - N. Ehrenschneider",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131449,
-      "match": "H. Abe - C. Kim",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131450,
-      "match": "A. Miyamoto - M. Uemura",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131451,
-      "match": "S. Noguchi - S. Tsujioka",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131452,
-      "match": "C. Y. Tsao - S. Y. Cheuk",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131453,
-      "match": "K. Hayasaka - N. Yoshimoto",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131454,
-      "match": "Kim Eunchae - Y. Kim",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131455,
-      "match": "R. Matsuda - F. A. Lin",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131456,
-      "match": "K. Tamura - N. Nishino",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131457,
-      "match": "E. Chiesa - G. M. Dittmann",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131458,
-      "match": "V. Ivanov - S. Sakellaridi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131459,
-      "match": "T. Lukas - G. Ce",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131460,
-      "match": "J. Niemeier - G. Pedone",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131461,
-      "match": "X. Sun - M. Horvit",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131462,
-      "match": "M. Guo - H. Inoue",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131463,
-      "match": "Z. Li - D. Khomutsianskaya",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131464,
-      "match": "M. Ozeki - Z. Bai",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131465,
-      "match": "H. Shi - A. Raina",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131466,
-      "match": "S. Wei - J. Wang",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131467,
-      "match": "Y. Yang - C. Zhu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131468,
-      "match": "E. R. Bertea - D. Glushkova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131469,
-      "match": "E. Vedder - K. Day",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131470,
-      "match": "Oh Chan-Yeong/Roh - Jeong/ Kim",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131471,
-      "match": "Oki/ Saitoh - Isomura/ Ochi",
+      "event_key": 12131479,
+      "match": "Cash/ Glasspool - Pavlasek/ Rikl",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131472,
-      "match": "Shin/ Sim - Magadan/ Tajima",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131473,
-      "match": "Fukuda/ Masabayashi - Ando/ Jones",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131474,
-      "match": "Matsuda/ Takahata - Kawahashi/ Shiraishi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131475,
-      "match": "Koizumi/ Taka - Tomida/ Yamasaki",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131476,
-      "match": "Kusuhara/ Tanaka - Delaney/ Sinclair",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131477,
-      "match": "Gayk/ Stanke - Negritu/ Oetzbach",
+      "event_key": 12131481,
+      "match": "Arends/ Pel - Krajicek/ Mektic",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131478,
-      "match": "Zhang/ Zheng - Li/ Wan I",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131486,
-      "match": "Prihodko/ Sakamoto - Pokorny/ Poljak",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131487,
-      "match": "P. Lovric - V. Artemeva",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131488,
-      "match": "V. Steiner - A. Korpanec Davies",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131489,
-      "match": "R. Zelnickova - N. Daubnerova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131490,
-      "match": "L. Claeys - I. Balus",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131491,
-      "match": "G. S. Popa - B. Barbulescu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131492,
-      "match": "S. Drugdova - M. Vogt",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131493,
-      "match": "L. Svatikova - M. Argyrokastriti",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131494,
-      "match": "Behr/ Simunovic - Overbeck/ Wallin",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131503,
-      "match": "Jans/ Loof - Martos Gornes/ Walkow",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131518,
-      "match": "Karol/ Serdarusic - Forcano/ Izquierdo Luque",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131519,
-      "match": "S. Stankovic - N. Jovic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131520,
-      "match": "V. Radjenovic - B. Butulija",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131521,
-      "match": "S. Popovic - E. Zanada",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131522,
-      "match": "D. Klok - P. Aunion",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131523,
-      "match": "L. Gagliardo - A. Thanos",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131524,
-      "match": "Jankanj/ Novakovic - Taylor/ Walkin",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131526,
-      "match": "R. Perot - H. Car",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131527,
-      "match": "M. Domenc - D. Jade",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131528,
-      "match": "Added/ Nagel - Domenc/ Jade",
+      "event_key": 12131482,
+      "match": "Cash/ Tracy - Droguet/ Gaston",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131529,
-      "match": "M. Okalova - R. Brantmeier",
+      "event_key": 12131483,
+      "match": "Perez/ Schuurs - Errani/ Tagger",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131484,
+      "match": "Kalinina/ Yastremska - Maria/ Sonmez",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131504,
+      "match": "T. A. Tirante - P. Carreno-Busta",
       "reason": "no_totals_market",
       "available_markets": [
         "Home/Away",
-        "Home/Away (1st Set)",
+        "Over/Under",
         "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
         "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Over/Under by Games (3rd Set)",
+        "Odd/Even (2nd Set)",
+        "Home/Away (3rd Set)",
+        "Asian Handicap (3rd Set)",
+        "Odd/Even (3rd Set)",
+        "Asian Handicap (2nd Set)",
         "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Asian Handicap (1st Set)"
+        "Win at least one set (Player 1)",
+        "Win at least one set (Player 2)",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)"
       ],
-      "totals_market_preview": null
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"39.5\": {\"1xBet\": \"2.05\", \"bet365\": \"1.83\", \"Marathon\": \"2.05\", \"Unibet\": \"2.08\", \"BetVictor\": \"1.95\", \"Betano\": \"2.07\"}, \"37\": {\"1xBet\": \"1.79\", \"Marathon\": \"1.79\", \"Pncl\": \"1.84\"}, \"37.5\": {\"1xBet\": \"1.88\", \"Marathon\": \"1.84\", \"Unibet\": \"1.82\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.89\", \"Betano\": \"1.82\"}, \"38\": {\"1xBet\": \"1.89\", \"Marathon\": \"1.89\", \"Pncl\": \"1.97\"}, \"38.5\": {\"1xBet\": \"1.94\", \"bet365\": \"1.83\", \"Marathon\": \"1.94\", \"Unibet\": \"1.94\", \"BetVictor\": \"1.95\", \"Pncl\": \"2.04\", \"Betano\": \"1.93\"}, \"39\": {\"Pncl\": \"2.13\", \"Marathon\": \"1.99\", \"1xBet\": \"1.99\"}, \"40\": {\"1xBet\": \"2.13\", \"Marathon\": \"2.13\"}, \"34.5\": {\"1xBet\": \"1.53\", \"Unibet\": \"1.55\", \"Betano\": \"1.57\"}, \"33.5\": {\"Marathon\": \"1.46\", \"Unibet\": \"1.49\", \"1xBet\": \"1.46\", \"Betano\": \"1.50\"}, \"34\": {\"1xBet\": \"1.49\"}, \"35\": {\"Marathon\": \"1.57\", \"1xBet\": \"1.57\"}, \"35.5\": {\"Marathon\": \"1.63\", \"Unibet\": \"1.64\", \"1xBet\": \"1.63\", \"Betano\": \"1.65\"}, \"36\": {\"1xBet\": \"1.68\"}, \"36.5\": {\"Pncl\": \"1.79\", \"Unibet\": \"1.73\", \"1xBet\": \"1.74\", \"Betano\": \"1.72\"}, \"40.5\": {\"Marathon\": \"2.17\", \"Unibet\": \"2.25\", \"1xBet\": \"2.17\", \"Betano\": \"2.25\"}, \"41\": {\"Marathon\": \"2.28\", \"1xBet\": \"2.28\"}, \"41.5\": {\"Marathon\": \"2.35\", \"1xBet\": \"2.35\", \"Betano\": \"2.42\"}, \"42\": {\"Marathon\": \"2.43\", \"1xBet\": \"2.43\"}, \"42.5\": {\"Marathon\": \"2.52\", \"1xBet\": \"2.52\", \"Betano\": \"2.62\"}, \"32.5\": {\"Unibet\": \"1.43\", \"Betano\": \"1.45\"}, \"30.5\": {\"Betano\": \"1.30\"}, \"44.5\": {\"Betano\": \"3.05\"}, \"49.5\": {\"Betano\": \"4.30\"}, \"31.5\": {\"Betano\": \"1.37\"}, \"43.5\": {\"Betano\": \"2.82\"}, \"45.5\": {\"Betano\": \"3.35\"}, \"46.5\": {\"Betano\": \"3.60\"}, \"47.5\": {\"Betano\": \"3.90\"}, \"48.5\": {\"Betano\": \"4.35\"}, \"28.5\": {\"Betano\": \"1.18\"}, \"29.5\": {\"Betano\": \"1.23\"}}, \"Over/Under by Games in Match Under\": {\"39.5\": {\"1xBet\": \"1.65\", \"bet365\": \"1.83\", \"Marathon\": \"1.65\", \"Unibet\": \"1.70\", \"BetVictor\": \"1.80\", \"Betano\": \"1.67\"}, \"37\": {\"1xBet\": \"1.94\", \"Marathon\": \"1.94\", \"Pncl\": \"2.04\"}, \"37.5\": {\"1xBet\": \"1.94\", \"Marathon\": \"1.89\", \"Unibet\": \"1.92\", \"BetVictor\": \"1.91\", \"Pncl\": \"1.97\", \"Betano\": \"1.88\"}, \"38\": {\"1xBet\": \"1.83\", \"Marathon\": \"1.83\", \"Pncl\": \"1.91\"}, \"38.5\": {\"1xBet\": \"1.77\", \"bet365\": \"1.83\", \"Marathon\": \"1.77\", \"Unibet\": \"1.81\", \"BetVictor\": \"1.80\", \"Pncl\": \"1.84\", \"Betano\": \"1.78\"}, \"39\": {\"Pncl\": \"1.78\", \"Marathon\": \"1.71\", \"1xBet\": \"1.71\"}, \"40\": {\"1xBet\": \"1.59\", \"Marathon\": \"1.59\"}, \"34.5\": {\"1xBet\": \"2.21\", \"Unibet\": \"2.35\", \"Betano\": \"2.27\"}, \"33.5\": {\"Marathon\": \"2.38\", \"Unibet\": \"2.50\", \"1xBet\": \"2.38\", \"Betano\": \"2.40\"},"
     },
     {
-      "event_key": 12131530,
-      "match": "L. Zaar - X. You",
-      "reason": "not_pregame"
+      "event_key": 12131505,
+      "match": "K. Khachanov - J. De Jong",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Over/Under by Games (3rd Set)",
+        "Odd/Even (2nd Set)",
+        "Home/Away (3rd Set)",
+        "Asian Handicap (3rd Set)",
+        "Odd/Even (3rd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Win at least one set (Player 1)",
+        "Win at least one set (Player 2)",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"39.5\": {\"10Bet\": \"2.00\", \"Marathon\": \"2.05\", \"Unibet\": \"2.05\", \"1xBet\": \"2.05\", \"Betano\": \"2.05\"}, \"37\": {\"Pncl\": \"1.85\", \"Marathon\": \"1.80\", \"1xBet\": \"1.80\"}, \"37.5\": {\"Pncl\": \"1.91\", \"Marathon\": \"1.85\", \"Unibet\": \"1.79\", \"BetVictor\": \"1.83\", \"1xBet\": \"1.90\", \"Betano\": \"1.80\"}, \"38\": {\"Pncl\": \"1.98\", \"Marathon\": \"1.90\", \"1xBet\": \"1.90\"}, \"38.5\": {\"Pncl\": \"2.06\", \"bet365\": \"1.83\", \"Marathon\": \"1.96\", \"Unibet\": \"1.92\", \"BetVictor\": \"1.91\", \"1xBet\": \"1.96\", \"Betano\": \"1.93\"}, \"39\": {\"1xBet\": \"2.02\", \"Marathon\": \"2.02\", \"Pncl\": \"2.14\"}, \"34.5\": {\"Marathon\": \"1.54\", \"Unibet\": \"1.54\", \"1xBet\": \"1.54\", \"Betano\": \"1.57\"}, \"33.5\": {\"Marathon\": \"1.47\", \"Unibet\": \"1.47\", \"1xBet\": \"1.47\", \"Betano\": \"1.50\"}, \"34\": {\"Marathon\": \"1.50\", \"1xBet\": \"1.50\"}, \"35\": {\"Marathon\": \"1.58\", \"1xBet\": \"1.58\"}, \"35.5\": {\"Marathon\": \"1.64\", \"Unibet\": \"1.62\", \"1xBet\": \"1.64\", \"Betano\": \"1.65\"}, \"36\": {\"Marathon\": \"1.69\", \"1xBet\": \"1.69\"}, \"36.5\": {\"Pncl\": \"1.81\", \"Unibet\": \"1.71\", \"1xBet\": \"1.76\", \"Betano\": \"1.75\"}, \"40\": {\"Marathon\": \"2.15\", \"1xBet\": \"2.15\"}, \"40.5\": {\"Marathon\": \"2.21\", \"Unibet\": \"2.23\", \"1xBet\": \"2.21\", \"Betano\": \"2.22\"}, \"41\": {\"Marathon\": \"2.30\", \"1xBet\": \"2.30\"}, \"41.5\": {\"Marathon\": \"2.35\", \"Unibet\": \"2.38\", \"1xBet\": \"2.35\", \"Betano\": \"2.37\"}, \"42\": {\"Marathon\": \"2.43\", \"1xBet\": \"2.43\"}, \"42.5\": {\"Marathon\": \"2.52\", \"1xBet\": \"2.52\", \"Betano\": \"2.57\"}, \"30.5\": {\"Betano\": \"1.30\"}, \"44.5\": {\"Betano\": \"3.00\"}, \"31.5\": {\"Betano\": \"1.36\"}, \"32.5\": {\"Betano\": \"1.45\"}, \"43.5\": {\"Betano\": \"2.77\"}, \"45.5\": {\"Betano\": \"3.25\"}, \"46.5\": {\"Betano\": \"3.50\"}, \"47.5\": {\"Betano\": \"3.80\"}, \"48.5\": {\"Betano\": \"4.20\"}, \"29.5\": {\"Betano\": \"1.21\"}}, \"Over/Under by Games in Match Under\": {\"39.5\": {\"10Bet\": \"1.75\", \"Marathon\": \"1.65\", \"Unibet\": \"1.72\", \"1xBet\": \"1.65\", \"Betano\": \"1.70\"}, \"37\": {\"Pncl\": \"2.03\", \"Marathon\": \"1.92\", \"1xBet\": \"1.92\"}, \"37.5\": {\"Pncl\": \"1.98\", \"Marathon\": \"1.88\", \"Unibet\": \"1.96\", \"BetVictor\": \"1.91\", \"1xBet\": \"1.92\", \"Betano\": \"1.90\"}, \"38\": {\"Pncl\": \"1.89\", \"Marathon\": \"1.82\", \"1xBet\": \"1.82\"}, \"38.5\": {\"Pncl\": \"1.82\", \"bet365\": \"1.83\", \"Marathon\": \"1.75\", \"Unibet\": \"1.82\", \"BetVictor\": \"1.83\", \"1xBet\": \"1.75\", \"Betano\": \"1.78\"}, \"39\": {\"1xBet\": \"1.69\", \"Marathon\": \"1.69\", \"Pncl\": \"1.77\"}, \"34.5\": {\"Marathon\": \"2.19\", \"Unibet\": \"2.38\", \"1xBet\": \"2.19\", \"Betano\": \"2.25\"}, \"33.5\": {\"Marathon\": \"2.35\", \"Unibet\": \"2.55\", \"1xBet\": \"2.35\", \"Betano\": \"2.40\"}, \"34\": {\"Marathon\": \"2.28\", \"1xBet\": \"2.28\"}, \"35\": {\"Marathon\": "
     },
     {
-      "event_key": 12131531,
-      "match": "L. Radivojevic - A. Ibragimova",
-      "reason": "not_pregame"
+      "event_key": 12131506,
+      "match": "A. De Minaur - J. Mensik",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Over/Under by Games (3rd Set)",
+        "Odd/Even (2nd Set)",
+        "Home/Away (3rd Set)",
+        "Asian Handicap (3rd Set)",
+        "Odd/Even (3rd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Win at least one set (Player 1)",
+        "Win at least one set (Player 2)",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"39.5\": {\"1xBet\": \"2.21\", \"bet365\": \"1.90\", \"Marathon\": \"2.21\", \"Unibet\": \"2.32\", \"Betano\": \"2.20\"}, \"35\": {\"1xBet\": \"1.73\", \"Marathon\": \"1.73\", \"Pncl\": \"1.89\"}, \"35.5\": {\"1xBet\": \"1.80\", \"Marathon\": \"1.80\", \"Unibet\": \"1.80\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.96\", \"Betano\": \"1.75\"}, \"36\": {\"1xBet\": \"1.86\", \"Marathon\": \"1.86\", \"Pncl\": \"2.04\"}, \"36.5\": {\"1xBet\": \"1.95\", \"bet365\": \"1.83\", \"Marathon\": \"1.90\", \"Unibet\": \"1.92\", \"BetVictor\": \"1.91\", \"Pncl\": \"2.12\", \"Betano\": \"1.87\"}, \"37\": {\"1xBet\": \"1.95\", \"Marathon\": \"1.95\"}, \"37.5\": {\"1xBet\": \"1.99\", \"bet365\": \"1.83\", \"Marathon\": \"1.99\", \"Unibet\": \"2.02\", \"Betano\": \"1.93\"}, \"38\": {\"1xBet\": \"2.05\", \"Marathon\": \"2.05\"}, \"38.5\": {\"1xBet\": \"2.09\", \"bet365\": \"1.83\", \"Marathon\": \"2.09\", \"Unibet\": \"2.17\", \"Betano\": \"2.07\"}, \"39\": {\"1xBet\": \"2.16\", \"Marathon\": \"2.16\"}, \"34.5\": {\"1xBet\": \"1.67\", \"Unibet\": \"1.71\", \"Pncl\": \"1.84\", \"Betano\": \"1.67\"}, \"31.5\": {\"1xBet\": \"1.43\", \"Unibet\": \"1.45\", \"Betano\": \"1.44\"}, \"32\": {\"1xBet\": \"1.47\"}, \"32.5\": {\"1xBet\": \"1.50\", \"Unibet\": \"1.55\", \"Betano\": \"1.53\"}, \"33\": {\"1xBet\": \"1.53\"}, \"33.5\": {\"1xBet\": \"1.58\", \"Unibet\": \"1.62\", \"Betano\": \"1.60\"}, \"34\": {\"1xBet\": \"1.62\", \"Pncl\": \"1.79\"}, \"40\": {\"1xBet\": \"2.33\"}, \"40.5\": {\"1xBet\": \"2.38\", \"Unibet\": \"2.55\", \"Betano\": \"2.37\"}, \"41\": {\"Marathon\": \"2.43\", \"1xBet\": \"2.43\"}, \"41.5\": {\"Unibet\": \"2.75\", \"1xBet\": \"2.49\", \"Betano\": \"2.55\"}, \"42\": {\"Marathon\": \"2.41\", \"1xBet\": \"2.43\"}, \"42.5\": {\"Unibet\": \"3.00\", \"1xBet\": \"2.49\", \"Betano\": \"2.77\"}, \"30.5\": {\"Unibet\": \"1.43\", \"Betano\": \"1.37\"}, \"43.5\": {\"Unibet\": \"3.25\", \"Betano\": \"3.00\"}, \"44.5\": {\"Betano\": \"3.25\"}, \"45.5\": {\"Betano\": \"3.50\"}, \"46.5\": {\"Betano\": \"3.75\"}, \"47.5\": {\"Betano\": \"4.05\"}, \"48.5\": {\"Betano\": \"4.30\"}, \"28.5\": {\"Betano\": \"1.21\"}, \"29.5\": {\"Unibet\": \"1.33\"}}, \"Over/Under by Games in Match Under\": {\"39.5\": {\"1xBet\": \"1.53\", \"bet365\": \"1.80\", \"Marathon\": \"1.53\", \"Unibet\": \"1.58\", \"Betano\": \"1.60\"}, \"35\": {\"1xBet\": \"1.97\", \"Marathon\": \"1.97\", \"Pncl\": \"1.98\"}, \"35.5\": {\"1xBet\": \"1.90\", \"Marathon\": \"1.90\", \"Unibet\": \"1.96\", \"BetVictor\": \"1.91\", \"Pncl\": \"1.93\", \"Betano\": \"1.95\"}, \"36\": {\"1xBet\": \"1.86\", \"Marathon\": \"1.86\", \"Pncl\": \"1.84\"}, \"36.5\": {\"1xBet\": \"1.88\", \"bet365\": \"1.83\", \"Marathon\": \"1.83\", \"Unibet\": \"1.84\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.78\", \"Betano\": \"1.85\"}, \"37\": {\"1xBet\": \"1.78\", \"Marathon\": \"1.78\"}, \"37.5\": {\"1xBet\": \"1.73\", \"bet365\": \"1.83\", \"Marathon\": \"1.73\", \"Unibet\": \"1.76\", \"Betano\": \"1.78\"}, \"38\": {\"1xBet\": \"1.67\", \""
     },
     {
-      "event_key": 12131532,
-      "match": "M. S. Popa - L. Samson",
-      "reason": "not_pregame"
+      "event_key": 12131507,
+      "match": "N. Borges - A. Rublev",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Over/Under by Games (3rd Set)",
+        "Odd/Even (2nd Set)",
+        "Home/Away (3rd Set)",
+        "Asian Handicap (3rd Set)",
+        "Odd/Even (3rd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Win at least one set (Player 1)",
+        "Win at least one set (Player 2)",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"34.5\": {\"1xBet\": \"1.61\", \"Marathon\": \"1.61\", \"Unibet\": \"1.65\", \"Betano\": \"1.65\"}, \"35\": {\"1xBet\": \"1.66\", \"Marathon\": \"1.66\"}, \"35.5\": {\"1xBet\": \"1.72\", \"bet365\": \"1.83\", \"Marathon\": \"1.72\", \"Unibet\": \"1.75\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.79\", \"Betano\": \"1.75\"}, \"36\": {\"1xBet\": \"1.77\", \"Marathon\": \"1.77\", \"Pncl\": \"1.85\"}, \"36.5\": {\"1xBet\": \"1.88\", \"bet365\": \"1.83\", \"Marathon\": \"1.83\", \"Unibet\": \"1.86\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.80\", \"Betano\": \"1.85\"}, \"37\": {\"1xBet\": \"1.86\", \"Marathon\": \"1.86\", \"Pncl\": \"1.85\"}, \"37.5\": {\"1xBet\": \"1.89\", \"Marathon\": \"1.89\", \"Unibet\": \"1.97\", \"BetVictor\": \"1.90\", \"Pncl\": \"1.91\", \"Betano\": \"1.95\"}, \"38\": {\"1xBet\": \"1.95\", \"Marathon\": \"1.95\", \"Pncl\": \"1.97\"}, \"39.5\": {\"1xBet\": \"2.12\", \"Unibet\": \"2.28\", \"Betano\": \"2.25\"}, \"31.5\": {\"Marathon\": \"1.44\", \"Unibet\": \"1.42\", \"1xBet\": \"1.44\", \"Betano\": \"1.44\"}, \"32\": {\"Marathon\": \"1.47\", \"1xBet\": \"1.47\"}, \"32.5\": {\"1xBet\": \"1.44\", \"Unibet\": \"1.50\", \"Betano\": \"1.52\"}, \"33\": {\"1xBet\": \"1.47\"}, \"33.5\": {\"1xBet\": \"1.52\", \"Unibet\": \"1.58\", \"Betano\": \"1.57\"}, \"34\": {\"1xBet\": \"1.55\"}, \"38.5\": {\"1xBet\": \"2.00\", \"Unibet\": \"2.10\", \"Pncl\": \"2.05\", \"Betano\": \"2.07\"}, \"39\": {\"1xBet\": \"2.06\"}, \"40\": {\"1xBet\": \"2.21\"}, \"40.5\": {\"1xBet\": \"2.28\", \"Unibet\": \"2.45\", \"Betano\": \"2.42\"}, \"41\": {\"1xBet\": \"2.35\"}, \"41.5\": {\"1xBet\": \"2.43\", \"Unibet\": \"2.70\", \"Betano\": \"2.62\"}, \"30.5\": {\"Unibet\": \"1.35\", \"Betano\": \"1.37\"}, \"44.5\": {\"Unibet\": \"3.45\", \"Betano\": \"3.30\"}, \"42.5\": {\"Unibet\": \"2.95\", \"Betano\": \"2.82\"}, \"43.5\": {\"Unibet\": \"3.20\", \"Betano\": \"3.05\"}, \"27.5\": {\"Betano\": \"1.18\"}, \"45.5\": {\"Betano\": \"3.60\"}, \"46.5\": {\"Betano\": \"3.95\"}, \"47.5\": {\"Betano\": \"4.35\"}, \"28.5\": {\"Betano\": \"1.23\"}, \"29.5\": {\"Betano\": \"1.29\"}}, \"Over/Under by Games in Match Under\": {\"34.5\": {\"1xBet\": \"2.12\", \"Marathon\": \"2.12\", \"Unibet\": \"2.20\", \"Betano\": \"2.10\"}, \"35\": {\"1xBet\": \"2.06\", \"Marathon\": \"2.06\"}, \"35.5\": {\"1xBet\": \"2.00\", \"bet365\": \"1.83\", \"Marathon\": \"2.00\", \"Unibet\": \"2.05\", \"BetVictor\": \"1.91\", \"Pncl\": \"2.08\", \"Betano\": \"1.98\"}, \"36\": {\"1xBet\": \"1.96\", \"Marathon\": \"1.96\", \"Pncl\": \"2.01\"}, \"36.5\": {\"1xBet\": \"1.95\", \"bet365\": \"1.83\", \"Marathon\": \"1.90\", \"Unibet\": \"1.92\", \"BetVictor\": \"1.91\", \"Pncl\": \"2.09\", \"Betano\": \"1.87\"}, \"37\": {\"1xBet\": \"1.86\", \"Marathon\": \"1.86\", \"Pncl\": \"2.03\"}, \"37.5\": {\"1xBet\": \"1.81\", \"Marathon\": \"1.81\", \"Unibet\": \"1.82\", \"BetVictor\": \"1.83\", \"Pncl\": \"1.97\", \"Betano\": \"1.75\"}, \"38\": {\"1xBet\": \"1.74\", \"Marathon\": \"1.74\", \"Pncl\": \"1.90\"}, \"39.5\": "
     },
     {
-      "event_key": 12131533,
-      "match": "D. Papamichail - A. Prisacariu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131534,
-      "match": "E. Milovanovic - L. Vujovic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131535,
-      "match": "T. Kostovic - J. Struplova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131536,
-      "match": "Karatancheva/ McAdoo - Palicova/ Struplova",
+      "event_key": 12131511,
+      "match": "Granollers/ Zeballos - Kirkov/ Stevens",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131537,
-      "match": "Jecan/ Pavel - Broady/ Whitehouse",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131538,
-      "match": "Paulson/ Romios - Lammons/ Withrow",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131539,
-      "match": "Kadhe/ Zormann Da Silva - Goldhoff/ Winegar",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131540,
-      "match": "Cozbinov/ Snitari - Banthia/ Kielan",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131542,
-      "match": "I. Primorac - A. Zantedeschi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131543,
-      "match": "S. Mikaca - V. Paganetti",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131544,
-      "match": "E. Korokozidi - M. Weckerle",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131545,
-      "match": "Sun/ Zhang - Ivanov/ Weckerle",
+      "event_key": 12131512,
+      "match": "Selekhmeteva/ Zakharova - Bucsa/ Melichar-Martinez",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131546,
-      "match": "Drazic/ Perez Garcia - Dernikovic/ Miskovic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131547,
-      "match": "Adkar/ Horvit - Bednarczyk/ Franke",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131548,
-      "match": "Ewald/ Gorska - Bennemann/ Chiesa",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131549,
-      "match": "Sakellaridis/ Sakellaridis - Sabanov/ Sabanov",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131550,
-      "match": "Kalender/ Poljicak - Tabata/ Wazny",
+      "event_key": 12131513,
+      "match": "Siniakova/ Townsend - Arango/ Jovic",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131551,
-      "match": "Maksimovic/ Markovina - Kajin/ Planinsek",
-      "reason": "not_pregame"
+      "event_key": 12131514,
+      "match": "Dabrowski/ Stefani - Pridankina/ Tang",
+      "reason": "not_singles"
     },
     {
-      "event_key": 12131552,
-      "match": "M. Miladinovic - D. Ajdukovic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131553,
-      "match": "N. Karma - M. Poljicak",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131554,
-      "match": "F. Andaloro - D. Markovina",
-      "reason": "not_pregame"
+      "event_key": 12131515,
+      "match": "Ostapenko/ Routliffe - Aoyama/ Liang",
+      "reason": "not_singles"
     },
     {
       "event_key": 12131555,
@@ -1316,11 +322,9 @@
         "Asian Handicap (Games)",
         "Set Betting",
         "Home/Away (2nd Set)",
-        "Away Team Total (1st Set)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
+        "Away Team Total (1st Set)"
       ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"14.5\": {\"1xBet\": \"1.71\"}, \"14\": {\"1xBet\": \"1.36\"}, \"15\": {\"1xBet\": \"2.10\"}}, \"Over/Under by Games in Match Under\": {\"14.5\": {\"1xBet\": \"2.00\"}, \"14\": {\"1xBet\": \"2.84\"}, \"15\": {\"1xBet\": \"1.64\"}}}"
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"14.5\": {\"Marathon\": \"1.72\", \"1xBet\": \"1.70\"}, \"14\": {\"Marathon\": \"1.36\", \"1xBet\": \"1.35\"}, \"15\": {\"Marathon\": \"2.10\", \"1xBet\": \"2.08\"}}, \"Over/Under by Games in Match Under\": {\"14.5\": {\"Marathon\": \"1.99\", \"1xBet\": \"2.01\"}, \"14\": {\"Marathon\": \"2.84\", \"1xBet\": \"2.88\"}, \"15\": {\"Marathon\": \"1.64\", \"1xBet\": \"1.65\"}}}"
     },
     {
       "event_key": 12131560,
@@ -1335,326 +339,11 @@
       "second_matches": 9
     },
     {
-      "event_key": 12131562,
-      "match": "D. Turkmen - D. Dilek",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131563,
-      "match": "A. Subasic - D. Soke",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131564,
-      "match": "E. Sartz-Lunde - I. Dyussebay",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131565,
-      "match": "A. Kakenova - I. Kurt",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131566,
-      "match": "K. Diatlova - A. Arystanbekova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131567,
-      "match": "S. Muto - S. Ryan Ziegann",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131568,
-      "match": "G. Lomakin - L. McFadzean",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131569,
-      "match": "T. Zhang - W. Kong",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131570,
-      "match": "A. Wang - A. McLeod",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131571,
-      "match": "F. Meng - S. Imai",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131572,
-      "match": "T. Huang - M. Zhang",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131573,
-      "match": "Y. C. Chen - W. Trongcharoenchaikul",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131574,
-      "match": "X. D. Chen - Y. Zeng",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131575,
-      "match": "Lin/ Yang - Chen/ Wang",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131576,
-      "match": "Yang/ Zhang - Huang/ Lu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131577,
-      "match": "Han/ Zhang - Hsieh/ Inui",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131578,
-      "match": "Liu/ Zeng - Tang/ Trongcharoenchaikul",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131579,
-      "match": "Hashimoto/ Heck - Choe/ Park",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131580,
-      "match": "Beckley/ Donski - Henning/ Lock",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131581,
-      "match": "Neos/ Pankin - Montsi/ van Schalkwyk",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131584,
-      "match": "A. Shubladze - H. Sato",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131585,
-      "match": "Guo/ Zhu - Khomutsianskaya/ Zelinskaya",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131586,
-      "match": "Barry/ Sato - Yang/ Yashina",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131587,
-      "match": "An/ Ren - Wang/ Ye",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131588,
-      "match": "S. Sorger - L. Borrelli",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131589,
-      "match": "M. Sciahbasi - M. Mazza",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131590,
-      "match": "N. Hipfl - G. Ferrari",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131591,
-      "match": "O. Crawford - M. Pizzigoni",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131592,
-      "match": "P. Basile - O. Poulsen Brostrom",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12131593,
-      "match": "J. Schlageter - A. Oetzbach",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131594,
-      "match": "L. Wessels - V. Durasovic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131595,
-      "match": "N. Torner Sensano - R. Caballero Chica",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"17.5\": {\"1xBet\": \"1.79\", \"Pncl\": \"1.85\"}, \"17\": {\"1xBet\": \"1.59\"}, \"18\": {\"1xBet\": \"1.94\"}}, \"Over/Under by Games in Match Under\": {\"17.5\": {\"1xBet\": \"1.90\", \"Pncl\": \"1.90\"}, \"17\": {\"1xBet\": \"2.18\"}, \"18\": {\"1xBet\": \"1.75\"}}}"
-    },
-    {
-      "event_key": 12131596,
-      "match": "A. M. Coromina Boluda - L. Mair",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131597,
-      "match": "F. Sziedat - E. Tse",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131598,
-      "match": "J. Lim - S. Lam",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131599,
-      "match": "A. Malygina - M. Maquet",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131600,
-      "match": "C. Langlais - C. Kuhl",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131601,
-      "match": "S. Dols - C. Raschdorf",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131602,
-      "match": "K. Molnar - J. Adams",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131603,
-      "match": "Andrienko/ Maquet - Dinoto Fernandez/ Paun",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131604,
-      "match": "N. Podoroska - S. Costoulas",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131605,
-      "match": "G. Maristany - A. Teixido Garcia",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131607,
-      "match": "J. Garland - A. Fita Boluda",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131608,
-      "match": "Koprivova/ Srutwa - Gobbi Monllau/ Higuita Barraza",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131609,
-      "match": "Boroczky/ Molnar - Korpanec Davies/ Popa",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131610,
-      "match": "Kalman/ Mihalka - Bak-Szabo/ Kis-Czako",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131611,
-      "match": "Coulibaly/ Hemery - Alkaya/ Azkara",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131613,
-      "match": "Ruehl/ Veldheer - Pujol Navarro/ Winter Lopez",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131614,
-      "match": "A. Mujakic - K. Friberg",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131615,
-      "match": "D. Salazar - A. Raynel",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131616,
-      "match": "J. Simundza - M. Majdandzic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131617,
-      "match": "H. Best - G. Campana Lee",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131618,
-      "match": "M. Fuele - J. Kupcic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131619,
-      "match": "N. Ifi - V. Gonzalez-Galino",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131620,
-      "match": "A. Boros - N. Djosic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131621,
-      "match": "D. Obradovic - S. Corbinais",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131622,
-      "match": "S. Cooper - R. De Alba",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131623,
-      "match": "V. Markov - R. Faucon",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131624,
-      "match": "M. McKennon - P. Perez Ramos",
-      "reason": "not_pregame"
+      "event_key": 12131583,
+      "match": "O. Kimhi - G. Hussey",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 5,
+      "second_matches": 9
     },
     {
       "event_key": 12131625,
@@ -1682,358 +371,9 @@
       "reason": "no_odds"
     },
     {
-      "event_key": 12131630,
-      "match": "B. Artnak - D. Eichenseher",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131631,
-      "match": "F. Fumagalli - T. Chavez",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131632,
-      "match": "M. Figl - C. Mueller",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131633,
-      "match": "M. Mikovic - K. Sultanov",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131634,
-      "match": "M. Homberg - A. Bellifemine",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131635,
-      "match": "A. Weis - N. Toffanin",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"17.5\": {\"1xBet\": \"1.74\", \"Marathon\": \"1.74\"}, \"17\": {\"1xBet\": \"1.55\"}, \"18\": {\"1xBet\": \"1.88\", \"Pncl\": \"1.93\"}}, \"Over/Under by Games in Match Under\": {\"17.5\": {\"1xBet\": \"1.96\", \"Marathon\": \"1.96\"}, \"17\": {\"1xBet\": \"2.26\"}, \"18\": {\"1xBet\": \"1.80\", \"Pncl\": \"1.83\"}}}"
-    },
-    {
-      "event_key": 12131638,
-      "match": "M. Bobichon - A. Megrabian",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131639,
-      "match": "R. Catry - D. Lara Salmeron",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131640,
-      "match": "Y. Erel - K. Edengren",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131641,
-      "match": "D. Prasievi - L. Rossi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131642,
-      "match": "D. Sarksian - D. Ostapenkov",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131643,
-      "match": "A. Timini - V. Ursu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131644,
-      "match": "T. Sahtali - N. Makhlouf",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131645,
-      "match": "Y. Sborowsky - Y. Dlimi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131646,
-      "match": "F. Tabacco - M. Scaglia",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131647,
-      "match": "G. Vulpitta - R. Matsuda",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131648,
-      "match": "G. Marques - I. Almazan Valiente",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131649,
-      "match": "M. Molder - A. Dougaz",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131650,
-      "match": "A. Ouakaa - L. Lestir",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131651,
-      "match": "N. Tepmahc - B. Willwerth",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131652,
-      "match": "P. Bar Biryukov - M. Khodorchenko",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131653,
-      "match": "G. Biondolillo - F. Lechno-Wasiutynski",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131654,
-      "match": "G. Bosio - L. Rottoli",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131655,
-      "match": "A. Majchrzak - G. Shebekin",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131656,
-      "match": "K. Szymkowiak - E. Pleshivtsev",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131657,
-      "match": "L. Bocchi - R. Tiukaev",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131658,
-      "match": "I. Iutkin - E. Agafonov",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131659,
-      "match": "M. Tammaro - A. Binda",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131660,
-      "match": "A. Chepelev - N. Mashtakov",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131661,
-      "match": "A. Nagel - M. Malige",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131662,
-      "match": "G. M. Noce - L. Ratti",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131663,
-      "match": "G. Oradini - N. Ciavarella",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131664,
-      "match": "M. Visser - M. Schoenhaus",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131665,
-      "match": "K. Wehnelt - C. Hewitt",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131666,
-      "match": "V. Pohle - E. Lopez Alcaraz",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12131667,
-      "match": "M. Jovanovic - A. Amiraghyan",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"17.5\": {\"1xBet\": \"1.99\"}, \"17\": {\"1xBet\": \"1.78\"}, \"18\": {\"1xBet\": \"2.22\"}}, \"Over/Under by Games in Match Under\": {\"17.5\": {\"1xBet\": \"1.72\"}, \"17\": {\"1xBet\": \"1.90\"}, \"18\": {\"1xBet\": \"1.57\"}}}"
-    },
-    {
-      "event_key": 12131668,
-      "match": "K. Kroitor - A. Danilova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131669,
-      "match": "A. Sagandikova - D. Koreshkova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131670,
-      "match": "N. Shevardnadze - D. Kuznetsova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131671,
-      "match": "A. Yesaian - A. Bazderova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131672,
-      "match": "S. Yuldasheva - A. Wirges",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131673,
-      "match": "M. Mikhaylova - A. Sedysheva",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131674,
-      "match": "A. Lepskaya - V. Taranova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131675,
-      "match": "E. Cayetano - D. Guzman",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Home/Away (1st Set)",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Correct Score 1st Half",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"20.5\": {\"Pncl\": \"1.83\"}, \"21\": {\"Pncl\": \"1.93\"}, \"20\": {\"Pncl\": \"1.70\"}, \"21.5\": {\"Pncl\": \"2.02\"}, \"22\": {\"Pncl\": \"2.17\"}}, \"Over/Under by Games in Match Under\": {\"20.5\": {\"Pncl\": \"1.98\"}, \"21\": {\"Pncl\": \"1.89\"}, \"20\": {\"Pncl\": \"2.15\"}, \"21.5\": {\"Pncl\": \"1.79\"}, \"22\": {\"Pncl\": \"1.69\"}}}"
-    },
-    {
-      "event_key": 12131676,
-      "match": "E. Mamedova - E. Khayrutdinova",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Correct Score 1st Half",
-        "Home/Away (1st Set)",
-        "Set Betting",
-        "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Asian Handicap (1st Set)"
-      ],
-      "totals_market_preview": null
-    },
-    {
       "event_key": 12131677,
       "match": "M. Rapolu - L. Ma",
       "reason": "no_odds"
-    },
-    {
-      "event_key": 12131679,
-      "match": "L. Giovannini - A. Moratelli",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131680,
-      "match": "M. Hontama - E. Mandlik",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131682,
-      "match": "Knezevic/ Tadic - Bieldiugin/ Voljavec",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131683,
-      "match": "Campana Lee/ Majdandzic - Djokic/ Milanovic",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131684,
-      "match": "Corbinais/ Ifi - Poritskyi/ Salazar",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131685,
-      "match": "Bilardo/ Valletta - Boros/ Fuele",
-      "reason": "not_singles"
     },
     {
       "event_key": 12131686,
@@ -2046,279 +386,90 @@
       "reason": "not_singles"
     },
     {
-      "event_key": 12131688,
-      "match": "Ozdemir/ Turker - Duran/ Sengul",
-      "reason": "not_singles"
-    },
-    {
       "event_key": 12131689,
       "match": "Schaertlin/ Wright - Cooper/ Faucon",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131690,
-      "match": "Alam/ Trainauskas - Hribar/ Jarc",
-      "reason": "not_pregame"
+      "event_key": 12131743,
+      "match": "J. Fonseca - N. Djokovic",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Over/Under by Games (3rd Set)",
+        "Odd/Even (2nd Set)",
+        "Home/Away (3rd Set)",
+        "Asian Handicap (3rd Set)",
+        "Odd/Even (3rd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"39.5\": {\"Marathon\": \"1.91\", \"Unibet\": \"1.92\", \"BetVictor\": \"2.00\", \"1xBet\": \"1.96\", \"Betano\": \"1.91\"}, \"35.5\": {\"Marathon\": \"1.50\", \"1xBet\": \"1.50\", \"Betano\": \"1.55\"}, \"36\": {\"Marathon\": \"1.52\", \"1xBet\": \"1.52\"}, \"36.5\": {\"Marathon\": \"1.57\", \"1xBet\": \"1.57\", \"Betano\": \"1.62\"}, \"37\": {\"Marathon\": \"1.61\", \"1xBet\": \"1.61\"}, \"37.5\": {\"Marathon\": \"1.66\", \"1xBet\": \"1.66\", \"Betano\": \"1.70\"}, \"38\": {\"Marathon\": \"1.72\", \"1xBet\": \"1.72\"}, \"38.5\": {\"Marathon\": \"1.78\", \"BetVictor\": \"1.83\", \"1xBet\": \"1.78\", \"Betano\": \"1.78\"}, \"39\": {\"Marathon\": \"1.85\", \"1xBet\": \"1.85\"}, \"40\": {\"Marathon\": \"1.97\", \"1xBet\": \"1.97\"}, \"40.5\": {\"Marathon\": \"2.03\", \"1xBet\": \"2.03\", \"Betano\": \"2.05\"}, \"41\": {\"Marathon\": \"2.11\", \"1xBet\": \"2.11\"}, \"41.5\": {\"Marathon\": \"2.17\", \"1xBet\": \"2.17\", \"Betano\": \"2.22\"}, \"42\": {\"Marathon\": \"2.24\", \"1xBet\": \"2.24\"}, \"42.5\": {\"Marathon\": \"2.30\", \"1xBet\": \"2.30\", \"Betano\": \"2.37\"}, \"43\": {\"Marathon\": \"2.42\", \"1xBet\": \"2.42\"}, \"43.5\": {\"Marathon\": \"2.49\", \"1xBet\": \"2.49\", \"Betano\": \"2.57\"}, \"30.5\": {\"Betano\": \"1.23\"}, \"34.5\": {\"Betano\": \"1.47\"}, \"44.5\": {\"Betano\": \"2.80\"}, \"49.5\": {\"Betano\": \"4.40\"}, \"31.5\": {\"Betano\": \"1.29\"}, \"32.5\": {\"Betano\": \"1.36\"}, \"33.5\": {\"Betano\": \"1.42\"}, \"45.5\": {\"Betano\": \"3.05\"}, \"46.5\": {\"Betano\": \"3.30\"}, \"47.5\": {\"Betano\": \"3.60\"}, \"48.5\": {\"Betano\": \"3.95\"}, \"29.5\": {\"Betano\": \"1.17\"}}, \"Over/Under by Games in Match Under\": {\"39.5\": {\"Marathon\": \"1.82\", \"Unibet\": \"1.84\", \"BetVictor\": \"1.75\", \"1xBet\": \"1.86\", \"Betano\": \"1.80\"}, \"35.5\": {\"Marathon\": \"2.28\", \"1xBet\": \"2.28\", \"Betano\": \"2.32\"}, \"36\": {\"Marathon\": \"2.24\", \"1xBet\": \"2.24\"}, \"36.5\": {\"Marathon\": \"2.14\", \"1xBet\": \"2.14\", \"Betano\": \"2.18\"}, \"37\": {\"Marathon\": \"2.09\", \"1xBet\": \"2.09\"}, \"37.5\": {\"Marathon\": \"2.04\", \"1xBet\": \"2.04\", \"Betano\": \"2.05\"}, \"38\": {\"Marathon\": \"1.98\", \"1xBet\": \"1.98\"}, \"38.5\": {\"Marathon\": \"1.93\", \"BetVictor\": \"1.91\", \"1xBet\": \"1.93\", \"Betano\": \"1.93\"}, \"39\": {\"Marathon\": \"1.87\", \"1xBet\": \"1.87\"}, \"40\": {\"Marathon\": \"1.76\", \"1xBet\": \"1.76\"}, \"40.5\": {\"Marathon\": \"1.70\", \"1xBet\": \"1.70\", \"Betano\": \"1.70\"}, \"41\": {\"Marathon\": \"1.63\", \"1xBet\": \"1.63\"}, \"41.5\": {\"Marathon\": \"1.58\", \"1xBet\": \"1.58\", \"Betano\": \"1.60\"}, \"42\": {\"Marathon\": \"1.53\", \"1xBet\": \"1.53\"}, \"42.5\": {\"Marathon\": \"1.49\", \"1xBet\": \"1.49\", \"Betano\": \"1.52\"}, \"43\": {\"Marathon\": \"1.44\", \"1xBet\": \"1.44\"}, \"43.5\": {\"Marathon\": \"1.42\", \"1xBet\": \"1.42\", \"Betano\": \"1.44\"}, \"30.5\": {\"Betano\": \"3.75\"}, \"34.5\": {\"Betano\": \"2.52\"}, \"44.5\": {\"Betano\": "
     },
     {
-      "event_key": 12131691,
-      "match": "Mishkin/ Ostapenkov - Mintz/ Ursu",
+      "event_key": 12131744,
+      "match": "A. Michelsen - R. Jodar",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Over/Under by Games (3rd Set)",
+        "Odd/Even (2nd Set)",
+        "Home/Away (3rd Set)",
+        "Asian Handicap (3rd Set)",
+        "Odd/Even (3rd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Win at least one set (Player 1)",
+        "Win at least one set (Player 2)",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"34.5\": {\"Pncl\": \"1.93\", \"bet365\": \"1.83\", \"Marathon\": \"1.90\", \"Unibet\": \"1.84\", \"BetVictor\": \"1.85\", \"1xBet\": \"1.95\", \"Betano\": \"1.82\"}, \"33\": {\"1xBet\": \"1.73\", \"Marathon\": \"1.73\", \"Pncl\": \"1.83\"}, \"33.5\": {\"1xBet\": \"1.79\", \"Marathon\": \"1.79\", \"Unibet\": \"1.76\", \"Betfair\": \"1.83\", \"Pncl\": \"1.82\", \"Betano\": \"1.75\"}, \"34\": {\"1xBet\": \"1.85\", \"Marathon\": \"1.85\", \"Pncl\": \"1.87\"}, \"35\": {\"Pncl\": \"2.01\", \"Marathon\": \"1.96\", \"1xBet\": \"1.96\"}, \"35.5\": {\"Pncl\": \"2.08\", \"bet365\": \"1.90\", \"Marathon\": \"2.02\", \"Unibet\": \"1.98\", \"BetVictor\": \"1.91\", \"1xBet\": \"2.02\", \"Betano\": \"1.91\"}, \"36\": {\"10Bet\": \"2.00\", \"Marathon\": \"2.08\", \"Pncl\": \"2.12\", \"1xBet\": \"2.08\"}, \"36.5\": {\"10Bet\": \"2.00\", \"bet365\": \"1.83\", \"Marathon\": \"2.12\", \"Unibet\": \"2.10\", \"BetVictor\": \"1.91\", \"1xBet\": \"2.12\", \"Betano\": \"2.02\"}, \"37\": {\"10Bet\": \"1.95\", \"Marathon\": \"2.18\", \"1xBet\": \"2.18\"}, \"37.5\": {\"10Bet\": \"2.00\", \"Marathon\": \"2.24\", \"Unibet\": \"2.23\", \"1xBet\": \"2.24\", \"Betano\": \"2.15\"}, \"30.5\": {\"Marathon\": \"1.46\", \"Unibet\": \"1.46\", \"1xBet\": \"1.46\", \"Betano\": \"1.47\"}, \"39.5\": {\"Marathon\": \"2.49\", \"Unibet\": \"2.60\", \"1xBet\": \"2.49\", \"Betano\": \"2.42\"}, \"31.5\": {\"Marathon\": \"1.56\", \"Unibet\": \"1.56\", \"1xBet\": \"1.56\", \"Betano\": \"1.57\"}, \"32\": {\"1xBet\": \"1.61\"}, \"32.5\": {\"Marathon\": \"1.68\", \"Unibet\": \"1.66\", \"Pncl\": \"1.83\", \"1xBet\": \"1.68\", \"Betano\": \"1.65\"}, \"38\": {\"Marathon\": \"2.33\", \"1xBet\": \"2.33\"}, \"38.5\": {\"Marathon\": \"2.41\", \"Unibet\": \"2.38\", \"1xBet\": \"2.41\", \"Betano\": \"2.27\"}, \"39\": {\"Marathon\": \"2.42\", \"1xBet\": \"2.42\"}, \"40\": {\"Marathon\": \"2.41\", \"1xBet\": \"2.41\"}, \"40.5\": {\"Marathon\": \"2.46\", \"Unibet\": \"2.80\", \"1xBet\": \"2.46\", \"Betano\": \"2.65\"}, \"31\": {\"Marathon\": \"1.50\", \"1xBet\": \"1.50\"}, \"41.5\": {\"Unibet\": \"3.10\", \"Betano\": \"2.85\"}, \"42.5\": {\"Unibet\": \"3.35\", \"Betano\": \"3.05\"}, \"28.5\": {\"Unibet\": \"1.30\", \"Betano\": \"1.29\"}, \"29.5\": {\"Unibet\": \"1.37\", \"Betano\": \"1.38\"}, \"27.5\": {\"Betano\": \"1.21\"}, \"44.5\": {\"Betano\": \"3.60\"}, \"43.5\": {\"Betano\": \"3.30\"}, \"45.5\": {\"Betano\": \"3.90\"}, \"46.5\": {\"Betano\": \"4.20\"}, \"47.5\": {\"Betano\": \"4.30\"}}, \"Over/Under by Games in Match Under\": {\"34.5\": {\"Pncl\": \"1.95\", \"bet365\": \"1.83\", \"Marathon\": \"1.83\", \"Unibet\": \"1.95\", \"BetVictor\": \"1.90\", \"1xBet\": \"1.88\", \"Betano\": \"1.90\"}, \"33\": {\"1xBet\": \"1.97\", \"Marathon\": \"1.97\", \"Pncl\": \"2.04\"}, \"33.5\": {\"1xBet\": \"1.92\", \"Marathon\": \"1.92\", \"Unibet\": \"2.04\", \"Betfair\": \"1.83\", \"Pncl\": \"2.07\", \"Betano\": \"1.98\"}, \"34\": {\"1xBet\": \"1.87\", \"Marathon\": \"1.87\", \"Pncl\": \"2.00\"}, \"35\": {\"Pncl\": \""
+    },
+    {
+      "event_key": 12131750,
+      "match": "Nys/ Roger-Vasselin - Ho/ Jebens",
       "reason": "not_singles"
-    },
-    {
-      "event_key": 12131692,
-      "match": "Edengren/ Timini - Sarksian/ Shin",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131693,
-      "match": "Hermassi/ Nsairi - Dlimi/ Sahtali",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131694,
-      "match": "Matsuda/ Rankin - Coquelin/ Vulpitta",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131695,
-      "match": "Jamji/ Robert - Mouhan/ Smiej",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131696,
-      "match": "Makhlouf/ Valente - De Carvalho/ Scaglia",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131697,
-      "match": "Aghayan/ Avanesyan - Bojarski/ Majchrzak",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131698,
-      "match": "Biondolillo/ Lorusso - Khodorchenko/ Shebekin",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131699,
-      "match": "Pleshivtsev/ Vishenchuk Vishenko - Burtsev/ Valetov",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131700,
-      "match": "Bocchi/ Bosio - Lechno-Wasiutynski/ Szymkowiak",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131701,
-      "match": "Faut/ Kaouk - Perot/ Villard",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131702,
-      "match": "Berard/ Lagarrigue - Car/ Nunez",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131703,
-      "match": "Casanova/ Parizzia - Taddia/ Volpi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131704,
-      "match": "Arzhankin/ George - Jovic/ Mirarchi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131705,
-      "match": "Brune/ Tse - Gerald Gonzalez/ Rodero",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131706,
-      "match": "Artemeva/ Zelnickova - Steiner/ Zhenikhova",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131707,
-      "match": "Ksandinov/ Rozhkova - Bazderova/ Khomitskaya",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131708,
-      "match": "Sagandikova/ Yuldasheva - Belyaeva/ Koreshkova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131709,
-      "match": "Kroitor/ Kuznetsova - Amiraghyan/ Yesaian",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131710,
-      "match": "Kovacevic/ Mikhaylova - Parentini/ Safi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131711,
-      "match": "K. I. Kosaner - X. Massotte",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131712,
-      "match": "J. Sadzik - M. Cho",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131713,
-      "match": "N. Raguin - M. Vukovic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131714,
-      "match": "D. Tazabekov - M. Salbiev",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131715,
-      "match": "B. Azar - J. Dembo",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131716,
-      "match": "D. Clerc - R. Lawlor",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131717,
-      "match": "T. Kawaguchi - F. Roussel",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131718,
-      "match": "L. Yunez - A. Blus",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131719,
-      "match": "A. Abbas - M. Carrascosa Diaz",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131720,
-      "match": "S. Azam - E. Giurescu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131721,
-      "match": "A. Dubreuil - C. Thies",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12131722,
-      "match": "M. E. Sik - M. Savano",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131723,
-      "match": "J. Bothma - A. Rusher",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131724,
-      "match": "L. Couturier - O. Ogunsakin",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12131725,
-      "match": "E. Gonzalez - O. Majdandzic",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12131726,
-      "match": "K. Pantaratorn - N. Raghuram",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131727,
-      "match": "P. Berezina - L. V. Pop",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131728,
-      "match": "M. Lauva - S. Sim",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131729,
-      "match": "I. Marinkovic - H. Crinebouch",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131730,
-      "match": "L. Boulard - S. Meabe",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131731,
-      "match": "Y. J. Lin - A. Terentyeva",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131732,
-      "match": "I. Pistola - N. Lee",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131733,
-      "match": "Z. Wei - E. Dotsenko",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131734,
-      "match": "D. Britton - P. Rivoli",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131735,
-      "match": "M. V. Pop - R. Yoshida",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131736,
-      "match": "S. Ye - A. Kharchenko",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131737,
-      "match": "S. Bielinska - J. Van Zyl",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131738,
-      "match": "A. Brunet-Brady - K. Zajickova",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131739,
-      "match": "V. Sekerkova - C. Hoo",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131740,
-      "match": "M. Bastianelli - O. Traynor",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12131741,
-      "match": "E. V. Eigelsbach - M. Sohns",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12131742,
-      "match": "E. F. Wiesenfeld - F. De Bresser",
-      "reason": "no_odds"
     },
     {
       "event_key": 12131751,
@@ -2326,82 +477,80 @@
       "reason": "no_odds"
     },
     {
-      "event_key": 12131756,
-      "match": "S. Garakani - M. Lazarenko",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131757,
-      "match": "M. Favier - L. Moyano",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131758,
-      "match": "A. Bertacchi - A. Urso",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131759,
-      "match": "V. Bedini - L. Thomas Iglesias",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131760,
-      "match": "K. Popovic - L. Luciano",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131761,
-      "match": "E. Mazzoni - N. Sousa Salazar",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131762,
-      "match": "G. Mais - M. Oliver Sanchez",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131763,
-      "match": "A. Lukosiute - K. Bartel",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131764,
-      "match": "Oliver Sanchez/ Urso - Kawano Cho/ Sousa Salazar",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131765,
-      "match": "Lopez/ Tahiri - Fernandez/ Moyano",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131766,
-      "match": "Bartel/ Sysoeva - Lukosiute/ Popovic",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131767,
-      "match": "De Baene/ Mais - Luciano/ Mariani",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131768,
-      "match": "A. Grubor - Y. Dmitrichenko",
+      "event_key": 12131752,
+      "match": "C. Ruud - T. Paul",
       "reason": "no_totals_market",
       "available_markets": [
         "Home/Away",
+        "Over/Under",
         "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
         "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
         "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Over/Under by Games (3rd Set)",
+        "Odd/Even (2nd Set)",
+        "Home/Away (3rd Set)",
+        "Asian Handicap (3rd Set)",
+        "Odd/Even (3rd Set)",
+        "Asian Handicap (2nd Set)",
         "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Asian Handicap (1st Set)"
+        "Win at least one set (Player 1)",
+        "Win at least one set (Player 2)",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)"
       ],
-      "totals_market_preview": null
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"39.5\": {\"10Bet\": \"2.00\", \"Marathon\": \"2.11\", \"Unibet\": \"2.20\", \"1xBet\": \"2.11\", \"Betano\": \"1.90\"}, \"36.5\": {\"Pncl\": \"1.79\", \"Marathon\": \"1.76\", \"Unibet\": \"1.80\", \"1xBet\": \"1.76\", \"Betano\": \"1.60\"}, \"37\": {\"Pncl\": \"1.85\", \"Marathon\": \"1.82\", \"1xBet\": \"1.82\"}, \"37.5\": {\"Pncl\": \"1.93\", \"bet365\": \"1.80\", \"Marathon\": \"1.87\", \"Unibet\": \"1.91\", \"BetVictor\": \"1.87\", \"1xBet\": \"1.92\", \"Betano\": \"1.67\"}, \"38\": {\"1xBet\": \"1.92\", \"Marathon\": \"1.92\", \"Pncl\": \"1.99\"}, \"38.5\": {\"1xBet\": \"1.98\", \"bet365\": \"1.83\", \"Marathon\": \"1.98\", \"Unibet\": \"2.04\", \"BetVictor\": \"1.87\", \"Pncl\": \"2.06\", \"Betano\": \"1.78\"}, \"39\": {\"10Bet\": \"2.00\", \"Marathon\": \"2.05\", \"Pncl\": \"2.14\", \"1xBet\": \"2.05\"}, \"34.5\": {\"Marathon\": \"1.55\", \"Unibet\": \"1.61\", \"1xBet\": \"1.55\", \"Betano\": \"1.45\"}, \"33.5\": {\"Marathon\": \"1.48\", \"Unibet\": \"1.54\", \"1xBet\": \"1.48\", \"Betano\": \"1.40\"}, \"34\": {\"Marathon\": \"1.50\", \"1xBet\": \"1.50\"}, \"35\": {\"Marathon\": \"1.59\", \"1xBet\": \"1.59\"}, \"35.5\": {\"Marathon\": \"1.65\", \"Unibet\": \"1.71\", \"1xBet\": \"1.65\", \"Betano\": \"1.53\"}, \"36\": {\"Marathon\": \"1.70\", \"1xBet\": \"1.70\"}, \"40\": {\"Marathon\": \"2.18\", \"1xBet\": \"2.18\"}, \"40.5\": {\"1xBet\": \"2.24\", \"Unibet\": \"2.38\", \"Betano\": \"2.02\"}, \"41\": {\"Marathon\": \"2.35\", \"1xBet\": \"2.35\"}, \"41.5\": {\"Marathon\": \"2.43\", \"Unibet\": \"2.60\", \"1xBet\": \"2.43\", \"Betano\": \"2.20\"}, \"42\": {\"Marathon\": \"2.38\", \"1xBet\": \"2.38\"}, \"42.5\": {\"Marathon\": \"2.46\", \"Unibet\": \"2.80\", \"1xBet\": \"2.43\", \"Betano\": \"2.37\"}, \"30.5\": {\"Unibet\": \"1.32\", \"Betano\": \"1.23\"}, \"44.5\": {\"Unibet\": \"3.40\", \"Betano\": \"2.77\"}, \"31.5\": {\"Unibet\": \"1.40\", \"Betano\": \"1.29\"}, \"32.5\": {\"Unibet\": \"1.47\", \"Betano\": \"1.35\"}, \"43.5\": {\"Unibet\": \"3.10\", \"Betano\": \"2.55\"}, \"49.5\": {\"Betano\": \"4.40\"}, \"45.5\": {\"Betano\": \"3.00\"}, \"46.5\": {\"Betano\": \"3.25\"}, \"47.5\": {\"Betano\": \"3.55\"}, \"48.5\": {\"Betano\": \"3.95\"}, \"29.5\": {\"Betano\": \"1.18\"}}, \"Over/Under by Games in Match Under\": {\"39.5\": {\"10Bet\": \"1.75\", \"Marathon\": \"1.62\", \"Unibet\": \"1.65\", \"1xBet\": \"1.62\", \"Betano\": \"1.80\"}, \"36.5\": {\"Pncl\": \"2.11\", \"Marathon\": \"1.95\", \"Unibet\": \"2.00\", \"1xBet\": \"1.95\", \"Betano\": \"2.20\"}, \"37\": {\"Pncl\": \"2.03\", \"Marathon\": \"1.90\", \"1xBet\": \"1.90\"}, \"37.5\": {\"Pncl\": \"1.96\", \"bet365\": \"1.90\", \"Marathon\": \"1.86\", \"Unibet\": \"1.87\", \"BetVictor\": \"1.87\", \"1xBet\": \"1.90\", \"Betano\": \"2.07\"}, \"38\": {\"1xBet\": \"1.80\", \"Marathon\": \"1.80\", \"Pncl\": \"1.88\"}, \"38.5\": {\"1xBet\": \"1.74\", \"bet365\": \"1.83\", \"Marathon\": \"1.74\", \"Unibet\": \"1.76\", \"BetVictor\": \"1.87\", \"Pncl\": \"1.82\", \"Betano\": \"1.93\"}, \"39"
+    },
+    {
+      "event_key": 12131753,
+      "match": "Q. Halys - A. Zverev",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Over/Under by Games (3rd Set)",
+        "Odd/Even (2nd Set)",
+        "Home/Away (3rd Set)",
+        "Asian Handicap (3rd Set)",
+        "Odd/Even (3rd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Win at least one set (Player 1)",
+        "Win at least one set (Player 2)",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"30.5\": {\"Betfair\": \"1.62\", \"bet365\": \"1.83\", \"Marathon\": \"1.67\", \"Unibet\": \"1.72\", \"1xBet\": \"1.67\", \"Betano\": \"1.70\"}, \"31.5\": {\"Pncl\": \"1.85\", \"bet365\": \"1.83\", \"Marathon\": \"1.84\", \"Unibet\": \"1.84\", \"Betfair\": \"1.83\", \"BetVictor\": \"1.83\", \"1xBet\": \"1.88\", \"Betano\": \"1.80\"}, \"32\": {\"Pncl\": \"1.96\", \"Marathon\": \"1.91\", \"1xBet\": \"1.91\"}, \"32.5\": {\"Pncl\": \"2.07\", \"Marathon\": \"1.99\", \"Unibet\": \"2.08\", \"Betfair\": \"2.00\", \"1xBet\": \"1.99\", \"Betano\": \"2.00\"}, \"33\": {\"Pncl\": \"2.13\", \"Marathon\": \"2.05\", \"1xBet\": \"2.05\"}, \"29.5\": {\"Betfair\": \"1.44\", \"Marathon\": \"1.49\", \"Unibet\": \"1.49\", \"1xBet\": \"1.49\", \"Betano\": \"1.50\"}, \"30\": {\"10Bet\": \"1.70\", \"Marathon\": \"1.56\", \"1xBet\": \"1.56\"}, \"31\": {\"Pncl\": \"1.78\", \"Marathon\": \"1.75\", \"1xBet\": \"1.75\"}, \"27.5\": {\"Marathon\": \"1.22\", \"Unibet\": \"1.30\", \"1xBet\": \"1.22\", \"Betano\": \"1.26\"}, \"34.5\": {\"Betano\": \"2.22\", \"Unibet\": \"2.40\", \"Betfair\": \"2.25\", \"1xBet\": \"2.21\"}, \"33.5\": {\"Betfair\": \"2.10\", \"Unibet\": \"2.23\", \"1xBet\": \"2.10\", \"Betano\": \"2.07\"}, \"34\": {\"Marathon\": \"2.16\", \"1xBet\": \"2.16\"}, \"35\": {\"Marathon\": \"2.30\", \"1xBet\": \"2.30\"}, \"35.5\": {\"Betano\": \"2.35\", \"Unibet\": \"2.55\", \"Betfair\": \"2.38\", \"1xBet\": \"2.38\"}, \"36\": {\"Marathon\": \"2.38\", \"1xBet\": \"2.38\"}, \"36.5\": {\"Betano\": \"2.52\", \"Unibet\": \"2.80\", \"1xBet\": \"2.43\"}, \"37\": {\"Marathon\": \"2.16\"}, \"37.5\": {\"Unibet\": \"2.95\", \"Betano\": \"2.60\"}, \"38\": {\"Marathon\": \"2.30\"}, \"38.5\": {\"Betano\": \"2.85\", \"Unibet\": \"3.25\"}, \"28\": {\"Marathon\": \"1.25\", \"1xBet\": \"1.25\"}, \"28.5\": {\"Unibet\": \"1.41\", \"1xBet\": \"1.34\", \"Betano\": \"1.42\"}, \"29\": {\"Marathon\": \"1.39\", \"1xBet\": \"1.39\"}, \"39.5\": {\"Unibet\": \"3.35\", \"Betano\": \"3.00\"}, \"44.5\": {\"Betano\": \"4.50\"}, \"40.5\": {\"Betano\": \"3.30\"}, \"41.5\": {\"Betano\": \"3.50\"}, \"42.5\": {\"Betano\": \"3.85\"}, \"43.5\": {\"Betano\": \"4.10\"}, \"45.5\": {\"Betano\": \"4.80\"}, \"46.5\": {\"Betano\": \"4.60\"}, \"47.5\": {\"Betano\": \"4.85\"}, \"26.5\": {\"Betano\": \"1.20\"}, \"25.5\": {\"Betano\": \"1.12\"}}, \"Over/Under by Games in Match Under\": {\"30.5\": {\"Betano\": \"2.02\", \"bet365\": \"1.83\", \"Marathon\": \"2.08\", \"Unibet\": \"2.10\", \"Betfair\": \"2.20\", \"1xBet\": \"2.08\"}, \"31.5\": {\"Pncl\": \"2.03\", \"bet365\": \"1.83\", \"Marathon\": \"1.89\", \"Unibet\": \"1.94\", \"Betfair\": \"1.83\", \"BetVictor\": \"1.91\", \"1xBet\": \"1.94\", \"Betano\": \"1.90\"}, \"32\": {\"Pncl\": \"1.93\", \"Marathon\": \"1.81\", \"1xBet\": \"1.81\"}, \"32.5\": {\"Pncl\": \"1.82\", \"Marathon\": \"1.73\", \"Unibet\": \"1.73\", \"Betfair\": \"1.73\", \"1xBet\": \"1.73\", \"Betano\": \"1.72\"}, \"33\": {\"Pncl\": \"1.77\", \"Marathon\": \"1.67\", \"1xBet\": \"1.67\"}, \"29.5\": "
     },
     {
       "event_key": 12131770,
@@ -2409,481 +558,14 @@
       "reason": "not_singles"
     },
     {
-      "event_key": 12131772,
-      "match": "O. Center - B. Fernandez",
-      "reason": "not_enough_recent_matches",
-      "first_matches": 2,
-      "second_matches": 4
-    },
-    {
-      "event_key": 12131773,
-      "match": "M. Crossley - M. Castillo Meza",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Home/Away (1st Set)",
-        "Correct Score 1st Half",
-        "Set Betting",
-        "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Asian Handicap (1st Set)",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set / Match",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19\": {\"1xBet\": \"2.13\"}, \"18\": {\"1xBet\": \"1.79\"}, \"18.5\": {\"1xBet\": \"1.95\"}}, \"Over/Under by Games in Match Under\": {\"19\": {\"1xBet\": \"1.62\"}, \"18\": {\"1xBet\": \"1.89\"}, \"18.5\": {\"1xBet\": \"1.75\"}}}"
-    },
-    {
-      "event_key": 12131774,
-      "match": "T. Evans - J. Brown",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Home/Away (1st Set)",
-        "Correct Score 1st Half",
-        "Set Betting",
-        "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Asian Handicap (1st Set)",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19.5\": {\"1xBet\": \"1.83\"}, \"20.5\": {\"Marathon\": \"1.95\"}, \"21\": {\"Marathon\": \"2.06\"}, \"19\": {\"1xBet\": \"1.70\"}, \"20\": {\"1xBet\": \"1.95\"}, \"18.5\": {\"Pncl\": \"1.70\"}}, \"Over/Under by Games in Match Under\": {\"19.5\": {\"1xBet\": \"1.86\"}, \"20.5\": {\"Marathon\": \"1.75\"}, \"21\": {\"Marathon\": \"1.66\"}, \"19\": {\"1xBet\": \"2.01\"}, \"20\": {\"1xBet\": \"1.74\"}, \"18.5\": {\"Pncl\": \"2.03\"}}}"
-    },
-    {
-      "event_key": 12131775,
-      "match": "A. Kockinis - D. Plekhanova",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Home/Away (1st Set)",
-        "Correct Score 1st Half",
-        "Set Betting",
-        "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Asian Handicap (1st Set)",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19\": {\"1xBet\": \"1.90\"}, \"18\": {\"1xBet\": \"1.63\"}, \"18.5\": {\"1xBet\": \"1.78\"}}, \"Over/Under by Games in Match Under\": {\"19\": {\"1xBet\": \"1.78\"}, \"18\": {\"1xBet\": \"2.11\"}, \"18.5\": {\"1xBet\": \"1.91\"}}}"
-    },
-    {
-      "event_key": 12131776,
-      "match": "A. Lutkemeyer - K. Nguyen",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Home/Away (1st Set)",
-        "Correct Score 1st Half",
-        "Asian Handicap (1st Set)",
-        "Set Betting",
-        "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set / Match",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19.5\": {\"Pncl\": \"1.73\"}, \"20.5\": {\"1xBet\": \"1.87\"}, \"21\": {\"1xBet\": \"1.98\"}, \"19\": {\"Pncl\": \"1.57\"}, \"20\": {\"1xBet\": \"1.75\"}}, \"Over/Under by Games in Match Under\": {\"19.5\": {\"Pncl\": \"2.04\"}, \"20.5\": {\"1xBet\": \"1.82\"}, \"21\": {\"1xBet\": \"1.72\"}, \"19\": {\"Pncl\": \"2.26\"}, \"20\": {\"1xBet\": \"1.94\"}}}"
-    },
-    {
-      "event_key": 12131777,
-      "match": "V. Miroshnichenko - K. Liu",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12131778,
-      "match": "L. Taylor - K. Evans",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Home/Away (1st Set)",
-        "Correct Score 1st Half",
-        "Set Betting",
-        "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Asian Handicap (1st Set)",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set / Match",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Home/Away (2nd Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19\": {\"1xBet\": \"1.82\"}, \"18\": {\"1xBet\": \"1.57\"}, \"18.5\": {\"1xBet\": \"1.73\"}, \"19.5\": {\"1xBet\": \"1.96\"}, \"20\": {\"1xBet\": \"2.11\"}}, \"Over/Under by Games in Match Under\": {\"19\": {\"1xBet\": \"1.86\"}, \"18\": {\"1xBet\": \"2.22\"}, \"18.5\": {\"1xBet\": \"1.98\"}, \"19.5\": {\"1xBet\": \"1.74\"}, \"20\": {\"1xBet\": \"1.63\"}}}"
-    },
-    {
-      "event_key": 12131779,
-      "match": "A. Wang - E. Alvarez Sande",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Home/Away (1st Set)",
-        "Correct Score 1st Half",
-        "Set Betting",
-        "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Asian Handicap (1st Set)",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set / Match",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"20.5\": {\"1xBet\": \"1.79\"}, \"21\": {\"1xBet\": \"1.88\"}, \"20\": {\"1xBet\": \"1.67\"}, \"21.5\": {\"Pncl\": \"2.05\"}, \"22\": {\"Pncl\": \"2.20\"}}, \"Over/Under by Games in Match Under\": {\"20.5\": {\"1xBet\": \"1.90\"}, \"21\": {\"1xBet\": \"1.80\"}, \"20\": {\"1xBet\": \"2.05\"}, \"21.5\": {\"Pncl\": \"1.78\"}, \"22\": {\"Pncl\": \"1.67\"}}}"
-    },
-    {
-      "event_key": 12131780,
-      "match": "Brown/ Evans - Giribalan/ Haile",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131781,
-      "match": "Alvarez Sande/ Murphy - Castillo Meza/ Nguyen",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131782,
-      "match": "Jones/ Thorne - Arangio/ Liu",
-      "reason": "not_singles"
-    },
-    {
-      "event_key": 12131783,
-      "match": "Chan/ Turley - Evans/ Hamilton",
+      "event_key": 12131771,
+      "match": "Cayetano/ Daniel - Brantmeier/ Sholokhova",
       "reason": "not_singles"
     },
     {
       "event_key": 12131784,
       "match": "Berlanga Bandera/ Garcia - Ma/ Ngounoue",
       "reason": "not_singles"
-    },
-    {
-      "event_key": 12131786,
-      "match": "M. Arseneault - N. Zamora",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19.5\": {\"1xBet\": \"1.76\"}, \"19\": {\"1xBet\": \"1.62\"}, \"20\": {\"1xBet\": \"1.78\"}, \"20.5\": {\"1xBet\": \"1.90\"}, \"21\": {\"1xBet\": \"2.03\"}, \"21.5\": {\"Pncl\": \"1.96\"}, \"22\": {\"Pncl\": \"2.03\"}, \"22.5\": {\"Pncl\": \"2.16\"}}, \"Over/Under by Games in Match Under\": {\"19.5\": {\"1xBet\": \"1.94\"}, \"19\": {\"1xBet\": \"2.14\"}, \"20\": {\"1xBet\": \"1.90\"}, \"20.5\": {\"1xBet\": \"1.79\"}, \"21\": {\"1xBet\": \"1.68\"}, \"21.5\": {\"Pncl\": \"1.86\"}, \"22\": {\"Pncl\": \"1.70\"}, \"22.5\": {\"Pncl\": \"1.62\"}}}"
-    },
-    {
-      "event_key": 12131787,
-      "match": "K. Bigun - A. Guajardo",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Correct Score 1st Half",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Number of sets",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Asian Handicap (Sets)",
-        "Home/Away (2nd Set)"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"17.5\": {\"Pncl\": \"1.75\"}, \"18.5\": {\"Pncl\": \"2.15\"}, \"19\": {\"Pncl\": \"2.56\"}, \"17\": {\"Pncl\": \"1.48\"}, \"18\": {\"Pncl\": \"1.99\"}}, \"Over/Under by Games in Match Under\": {\"17.5\": {\"Pncl\": \"2.00\"}, \"18.5\": {\"Pncl\": \"1.65\"}, \"19\": {\"Pncl\": \"1.47\"}, \"17\": {\"Pncl\": \"2.55\"}, \"18\": {\"Pncl\": \"1.84\"}}}"
-    },
-    {
-      "event_key": 12131788,
-      "match": "T. Dean - I. Vasa",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"22.5\": {\"Pncl\": \"2.14\"}, \"22\": {\"1xBet\": \"1.89\"}, \"23\": {\"1xBet\": \"2.10\"}, \"21\": {\"1xBet\": \"1.65\"}, \"21.5\": {\"1xBet\": \"1.76\"}, \"20.5\": {\"Pncl\": \"1.67\"}}, \"Over/Under by Games in Match Under\": {\"22.5\": {\"Pncl\": \"1.68\"}, \"22\": {\"1xBet\": \"1.79\"}, \"23\": {\"1xBet\": \"1.64\"}, \"21\": {\"1xBet\": \"2.08\"}, \"21.5\": {\"1xBet\": \"1.94\"}, \"20.5\": {\"Pncl\": \"2.16\"}}}"
-    },
-    {
-      "event_key": 12131789,
-      "match": "M. Exsted - V. Kalina",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Home/Away (2nd Set)",
-        "Correct Score 1st Half",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"21.5\": {\"1xBet\": \"1.89\"}, \"21\": {\"1xBet\": \"1.79\"}, \"22\": {\"1xBet\": \"2.05\"}, \"20.5\": {\"bet365\": \"1.83\"}, \"20\": {\"Pncl\": \"1.67\"}}, \"Over/Under by Games in Match Under\": {\"21.5\": {\"1xBet\": \"1.80\"}, \"21\": {\"1xBet\": \"1.89\"}, \"22\": {\"1xBet\": \"1.67\"}, \"20.5\": {\"bet365\": \"1.83\"}, \"20\": {\"Pncl\": \"2.10\"}}}"
-    },
-    {
-      "event_key": 12131790,
-      "match": "S. Johnson - O. Baris",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"21.5\": {\"1xBet\": \"1.80\"}, \"21\": {\"1xBet\": \"1.69\"}, \"22\": {\"1xBet\": \"1.94\"}, \"20.5\": {\"Pncl\": \"1.71\"}, \"22.5\": {\"Pncl\": \"2.05\"}, \"23\": {\"Pncl\": \"2.17\"}}, \"Over/Under by Games in Match Under\": {\"21.5\": {\"1xBet\": \"1.89\"}, \"21\": {\"1xBet\": \"2.02\"}, \"22\": {\"1xBet\": \"1.75\"}, \"20.5\": {\"Pncl\": \"2.13\"}, \"22.5\": {\"Pncl\": \"1.78\"}, \"23\": {\"Pncl\": \"1.69\"}}}"
-    },
-    {
-      "event_key": 12131791,
-      "match": "N. Johnston - L. Marionneau",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Correct Score 1st Half",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"20.5\": {\"Pncl\": \"1.76\"}, \"21\": {\"1xBet\": \"1.83\"}, \"20\": {\"Pncl\": \"1.62\"}, \"21.5\": {\"1xBet\": \"1.93\"}, \"22\": {\"1xBet\": \"2.08\"}, \"22.5\": {\"Pncl\": \"2.17\"}}, \"Over/Under by Games in Match Under\": {\"20.5\": {\"Pncl\": \"2.07\"}, \"21\": {\"1xBet\": \"1.85\"}, \"20\": {\"Pncl\": \"2.29\"}, \"21.5\": {\"1xBet\": \"1.77\"}, \"22\": {\"1xBet\": \"1.65\"}, \"22.5\": {\"Pncl\": \"1.64\"}}}"
-    },
-    {
-      "event_key": 12131792,
-      "match": "M. Mesarovic - A. Vales",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Correct Score 1st Half",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"21\": {\"1xBet\": \"1.76\"}, \"21.5\": {\"1xBet\": \"1.87\"}, \"22\": {\"Marathon\": \"2.02\"}, \"20.5\": {\"Pncl\": \"1.76\"}, \"20\": {\"Pncl\": \"1.64\"}}, \"Over/Under by Games in Match Under\": {\"21\": {\"1xBet\": \"1.93\"}, \"21.5\": {\"1xBet\": \"1.82\"}, \"22\": {\"Marathon\": \"1.69\"}, \"20.5\": {\"Pncl\": \"2.03\"}, \"20\": {\"Pncl\": \"2.22\"}}}"
-    },
-    {
-      "event_key": 12131793,
-      "match": "O. Ojakaar - W. Mayew",
-      "reason": "no_totals_market",
-      "available_markets": [
-        "Home/Away",
-        "Over/Under",
-        "Total - Home",
-        "Total - Away",
-        "Odd/Even",
-        "Result/Total Goals",
-        "Over/Under by Games in Match",
-        "Odd/Even (1st Set)",
-        "Over/Under (1st Set)",
-        "Home/Away (1st Set)",
-        "Asian Handicap (1st Set)",
-        "Asian Handicap (Sets)",
-        "Asian Handicap (Games)",
-        "Set Betting",
-        "Set / Match",
-        "Home/Away (2nd Set)",
-        "Number of sets",
-        "Away Team Total (1st Set)",
-        "Home Team Total (1st Set)",
-        "Correct Score 1st Half",
-        "Win In Straigh Sets (Player 1)",
-        "Win In Straigh Sets (Player 2)",
-        "Home First Service Game - Winners Winner",
-        "Away First Service Game - Winners Winner"
-      ],
-      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"20.5\": {\"1xBet\": \"1.77\"}, \"21\": {\"Pncl\": \"1.93\"}, \"20\": {\"1xBet\": \"1.64\"}, \"21.5\": {\"Pncl\": \"1.97\"}, \"22\": {\"Pncl\": \"2.13\"}}, \"Over/Under by Games in Match Under\": {\"20.5\": {\"1xBet\": \"1.93\"}, \"21\": {\"Pncl\": \"1.89\"}, \"20\": {\"1xBet\": \"2.10\"}, \"21.5\": {\"Pncl\": \"1.75\"}, \"22\": {\"Pncl\": \"1.65\"}}}"
     },
     {
       "event_key": 12131794,
@@ -2893,67 +575,1178 @@
     {
       "event_key": 12131795,
       "match": "Landau/ Rolland - Gorzny/ Marionneau",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12131796,
       "match": "Mesarovic/ Suarez - Johnson/ van Loben Sels",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131798,
+      "match": "Iyengar/ Khayrutdinova - Kononova/ Okalova",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131797,
-      "match": "Liu/ Morais - Falck/ Shearer",
+      "event_key": 12131803,
+      "match": "Balaji/ Demoliner - Schnaitter/ Wallner",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131799,
-      "match": "A. Shvangiradze - L. Rossi",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131800,
-      "match": "Y. Erel - M. Shin",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131801,
-      "match": "Chong/ Erjavec - Kato/ Olmos",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131802,
-      "match": "Parks/ Pigossi - Mertens/ Zhang",
+      "event_key": 12131808,
+      "match": "Bergs/ Collignon - Nouza/ Oberleitner",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131804,
-      "match": "M. Bobichon - V. Ursu",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131805,
-      "match": "R. Catry - D. Ostapenkov",
-      "reason": "not_pregame"
-    },
-    {
-      "event_key": 12131806,
-      "match": "Becirovic/ Stollecker - Homberg/ Mueller",
+      "event_key": 12131811,
+      "match": "Joint/ Vandewinkel - Danilina/ Krunic",
       "reason": "not_singles"
     },
     {
-      "event_key": 12131861,
-      "match": "Oliynykova/ Udvardy - Fossa Huergo/ Korpatsch",
+      "event_key": 12131814,
+      "match": "A. Magadan - K. Saitoh",
       "reason": "not_pregame"
     },
     {
-      "event_key": 12131862,
-      "match": "Fumagalli/ Perfetti - Horoz/ Hrazdil",
+      "event_key": 12131815,
+      "match": "U. Park - M. Dellavedova",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131816,
+      "match": "S. Shin - Y. Jeong",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131817,
+      "match": "H. Hashimoto - D. J. Kim",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131818,
+      "match": "Ja. Delaney - L. Vithoontien",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131819,
+      "match": "S. Fukuda - K. Matsuda",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131820,
+      "match": "S. Matsuoka - E. Zhu",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131821,
+      "match": "H. Shiraishi - H. Koyama",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131822,
+      "match": "L. McFadzean - S. Imai",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131823,
+      "match": "A. McLeod - Y. C. Chen",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131824,
+      "match": "M. Zhang - Y. Zeng",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131825,
+      "match": "T. Zhang - S. Muto",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131829,
+      "match": "D. Klok - S. Gulin",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19.5\": {\"1xBet\": \"2.05\", \"Pncl\": \"2.15\"}, \"17.5\": {\"1xBet\": \"1.52\", \"Pncl\": \"1.55\"}, \"19\": {\"1xBet\": \"1.92\", \"Pncl\": \"2.00\"}, \"18\": {\"1xBet\": \"1.63\", \"Pncl\": \"1.66\"}, \"18.5\": {\"1xBet\": \"1.79\", \"Pncl\": \"1.83\"}, \"20.5\": {\"1xBet\": \"2.23\"}, \"20\": {\"1xBet\": \"2.13\"}}, \"Over/Under by Games in Match Under\": {\"19.5\": {\"1xBet\": \"1.65\", \"Pncl\": \"1.70\"}, \"17.5\": {\"1xBet\": \"2.30\", \"Pncl\": \"2.46\"}, \"19\": {\"1xBet\": \"1.77\", \"Pncl\": \"1.81\"}, \"18\": {\"1xBet\": \"2.11\", \"Pncl\": \"2.22\"}, \"18.5\": {\"1xBet\": \"1.90\", \"Pncl\": \"1.95\"}, \"20.5\": {\"1xBet\": \"1.55\"}, \"20\": {\"1xBet\": \"1.62\"}}}"
+    },
+    {
+      "event_key": 12131832,
+      "match": "H. Abe - S. Y. Cheuk",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131833,
+      "match": "R. Matsuda - Kim Eunchae",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131834,
+      "match": "A. Miyamoto - N. Yoshimoto",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131835,
+      "match": "S. Noguchi - N. Nishino",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131836,
+      "match": "V. Ivanov - X. Sun",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131837,
+      "match": "E. Korokozidi - G. M. Dittmann",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131838,
+      "match": "H. Shi - M. Golovina",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131839,
+      "match": "A. Shubladze - Z. Li",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131840,
+      "match": "J. Wang - Z. Bai",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131841,
+      "match": "Y. Yang - H. Inoue",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131842,
+      "match": "A. Fita Boluda - K. Day",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131843,
+      "match": "Choe/ Park - Jeong/ Kim",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131844,
+      "match": "Oki/ Saitoh - Shin/ Sim",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131845,
+      "match": "Kawahashi/ Shiraishi - Delaney/ Sinclair",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131846,
+      "match": "Tomida/ Yamasaki - Fukuda/ Masabayashi",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131847,
+      "match": "Lin/ Yang - Han/ Zhang",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131848,
+      "match": "Liu/ Zeng - Huang/ Lu",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131849,
+      "match": "Arakawa/ Katsumi - Ishii/ Wakana",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131850,
+      "match": "Kim/ Lin - Im/ Kim Eunchae",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12131851,
+      "match": "Khomutsianskaya/ Zelinskaya - Wang/ Ye",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131852,
+      "match": "Zhang/ Zheng - Barry/ Sato",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131853,
+      "match": "N. Raguin - M. Salbiev",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131854,
+      "match": "J. Sadzik - K. I. Kosaner",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131855,
+      "match": "L. V. Pop - M. Lauva",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131859,
+      "match": "E. R. Bertea - L. Zaar",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131860,
+      "match": "Y. J. Lin - L. Boulard",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131875,
+      "match": "Bhambri/ Venus - Bolelli/ Vavassori",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131876,
+      "match": "Bellucci/ Marozsan - Heliovaara/ Patten",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131880,
+      "match": "S. Azam - L. Yunez",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131881,
+      "match": "J. Dembo - R. Lawlor",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131882,
+      "match": "M. E. Sik - F. Roussel",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131883,
+      "match": "M. V. Pop - S. Ye",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131884,
+      "match": "H. Crinebouch - I. Pistola",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131885,
+      "match": "E. Dotsenko - D. Britton",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131888,
+      "match": "Martos Gornes/ Walkow - Grevelius/ Heinonen",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131889,
+      "match": "Bertola/ Forti - Ruehl/ Veldheer",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131890,
+      "match": "Fajta/ Makk - Pokorny/ Poljak",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131891,
+      "match": "V. Radjenovic - A. Thanos",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 3,
+      "second_matches": 5
+    },
+    {
+      "event_key": 12131892,
+      "match": "Maric/ Radovanovic - Arzhankin/ George",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131893,
+      "match": "Jankanj/ Novakovic - Popovic/ Vasilev",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131894,
+      "match": "H. Car - D. Jade",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131895,
+      "match": "Car/ Nunez - Lalami Laaroussi/ Vankan",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131899,
+      "match": "Dang/ You - Kulambayeva/ Zaar",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131900,
+      "match": "Palicova/ Struplova - Bayerlova/ Milovanovic",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131903,
+      "match": "G. Bosio - I. Iutkin",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"17.5\": {\"bet365\": \"1.72\", \"Marathon\": \"1.68\", \"Pncl\": \"1.71\", \"1xBet\": \"1.68\"}, \"19.5\": {\"Marathon\": \"2.32\", \"1xBet\": \"2.32\"}, \"19\": {\"1xBet\": \"2.16\", \"Pncl\": \"2.28\"}, \"18\": {\"1xBet\": \"1.83\", \"Pncl\": \"1.88\"}, \"18.5\": {\"1xBet\": \"1.99\", \"Pncl\": \"2.07\"}, \"17\": {\"Pncl\": \"1.53\"}}, \"Over/Under by Games in Match Under\": {\"17.5\": {\"bet365\": \"2.00\", \"Marathon\": \"2.01\", \"Pncl\": \"2.14\", \"1xBet\": \"2.01\"}, \"19.5\": {\"Marathon\": \"1.51\", \"1xBet\": \"1.51\"}, \"19\": {\"1xBet\": \"1.60\", \"Pncl\": \"1.63\"}, \"18\": {\"1xBet\": \"1.85\", \"Pncl\": \"1.94\"}, \"18.5\": {\"1xBet\": \"1.72\", \"Pncl\": \"1.76\"}, \"17\": {\"Pncl\": \"2.52\"}}}"
+    },
+    {
+      "event_key": 12131904,
+      "match": "L. Bocchi - G. Shebekin",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131905,
+      "match": "Bocchi/ Bosio - Bojarski/ Majchrzak",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131906,
+      "match": "V. Taranova - M. Jovanovic",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 5,
+      "second_matches": 5
+    },
+    {
+      "event_key": 12131907,
+      "match": "A. Sagandikova - A. Sedysheva",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131908,
+      "match": "D. Kuznetsova - A. Bazderova",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Over/Under by Games in Match",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Home Team Total (1st Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19.5\": {\"Pncl\": \"1.93\"}, \"20.5\": {\"Pncl\": \"2.17\", \"Betano\": \"1.83\"}, \"19\": {\"Pncl\": \"1.77\"}, \"20\": {\"Pncl\": \"2.05\"}, \"18.5\": {\"Pncl\": \"1.66\"}}, \"Over/Under by Games in Match Under\": {\"19.5\": {\"Pncl\": \"1.88\"}, \"20.5\": {\"Pncl\": \"1.69\", \"Betano\": \"1.83\"}, \"19\": {\"Pncl\": \"2.05\"}, \"20\": {\"Pncl\": \"1.78\"}, \"18.5\": {\"Pncl\": \"2.23\"}}}"
+    },
+    {
+      "event_key": 12131909,
+      "match": "K. Kroitor - S. Yuldasheva",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"16.5\": {\"Marathon\": \"1.48\", \"1xBet\": \"1.48\"}, \"17.5\": {\"1xBet\": \"1.80\", \"Pncl\": \"1.87\"}, \"17\": {\"Marathon\": \"1.61\", \"1xBet\": \"1.61\"}, \"18\": {\"Marathon\": \"1.97\", \"1xBet\": \"1.97\"}, \"18.5\": {\"Marathon\": \"2.12\", \"1xBet\": \"2.12\"}}, \"Over/Under by Games in Match Under\": {\"16.5\": {\"Marathon\": \"2.40\", \"1xBet\": \"2.40\"}, \"17.5\": {\"1xBet\": \"1.89\", \"Pncl\": \"1.95\"}, \"17\": {\"Marathon\": \"2.15\", \"1xBet\": \"2.15\"}, \"18\": {\"1xBet\": \"1.73\"}, \"18.5\": {\"Marathon\": \"1.61\", \"1xBet\": \"1.61\"}}}"
+    },
+    {
+      "event_key": 12131910,
+      "match": "Sagandikova/ Yuldasheva - Kroitor/ Kuznetsova",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131911,
+      "match": "Bazderova/ Khomitskaya - Parentini/ Safi",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131912,
+      "match": "P. Perez Ramos - S. Cooper",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 2,
+      "second_matches": 9
+    },
+    {
+      "event_key": 12131913,
+      "match": "Lammons/ Withrow - Jecan/ Pavel",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131914,
+      "match": "Banthia/ Kielan - Goldhoff/ Winegar",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131917,
+      "match": "S. Mikaca - J. Niemeier",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"16.5\": {\"Marathon\": \"1.46\", \"1xBet\": \"1.46\"}, \"17.5\": {\"Pncl\": \"1.82\", \"1xBet\": \"1.76\"}, \"17\": {\"Marathon\": \"1.57\", \"1xBet\": \"1.57\"}, \"18\": {\"Marathon\": \"1.90\", \"1xBet\": \"1.90\"}, \"18.5\": {\"Marathon\": \"2.07\", \"1xBet\": \"2.07\"}}, \"Over/Under by Games in Match Under\": {\"16.5\": {\"Marathon\": \"2.45\", \"1xBet\": \"2.45\"}, \"17.5\": {\"Pncl\": \"1.97\", \"1xBet\": \"1.94\"}, \"17\": {\"Marathon\": \"2.22\", \"1xBet\": \"2.22\"}, \"18\": {\"Marathon\": \"1.78\", \"1xBet\": \"1.78\"}, \"18.5\": {\"Marathon\": \"1.64\", \"1xBet\": \"1.64\"}}}"
+    },
+    {
+      "event_key": 12131918,
+      "match": "Ivanov/ Weckerle - Adkar/ Horvit",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131919,
+      "match": "Dernikovic/ Miskovic - Bennemann/ Chiesa",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131920,
+      "match": "Behr/ Simunovic - Sakellaridis/ Sakellaridis",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131921,
+      "match": "Kalender/ Poljicak - Maksimovic/ Markovina",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131923,
+      "match": "A. Chepelev - M. Poljicak",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131924,
+      "match": "A. Arystanbekova - D. Dilek",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 9,
+      "second_matches": 3
+    },
+    {
+      "event_key": 12131925,
+      "match": "Bittoun/ Strombachs - Henning/ Lock",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131926,
+      "match": "Montsi/ van Schalkwyk - Alkaya/ Azkara",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131928,
+      "match": "L. Rossi - V. Ursu",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"20.5\": {\"Marathon\": \"1.70\", \"1xBet\": \"1.70\"}, \"21.5\": {\"Marathon\": \"1.91\", \"1xBet\": \"1.91\"}, \"19.5\": {\"Marathon\": \"1.54\", \"1xBet\": \"1.54\"}, \"21\": {\"1xBet\": \"1.80\"}, \"22\": {\"Marathon\": \"2.08\", \"1xBet\": \"2.08\"}, \"22.5\": {\"1xBet\": \"2.21\"}, \"20\": {\"Marathon\": \"1.63\", \"1xBet\": \"1.63\"}}, \"Over/Under by Games in Match Under\": {\"20.5\": {\"Marathon\": \"1.98\", \"1xBet\": \"1.98\"}, \"21.5\": {\"Marathon\": \"1.78\", \"1xBet\": \"1.78\"}, \"19.5\": {\"Marathon\": \"2.25\", \"1xBet\": \"2.25\"}, \"21\": {\"1xBet\": \"1.88\"}, \"22\": {\"Marathon\": \"1.65\", \"1xBet\": \"1.65\"}, \"22.5\": {\"1xBet\": \"1.56\"}, \"20\": {\"Marathon\": \"2.11\", \"1xBet\": \"2.11\"}}}"
+    },
+    {
+      "event_key": 12131930,
+      "match": "Mishkin/ Ostapenkov - Sarksian/ Shin",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131931,
+      "match": "O. Crawford - M. Sciahbasi",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 10,
+      "second_matches": 5
+    },
+    {
+      "event_key": 12131933,
+      "match": "J. Schlageter - V. Durasovic",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 5,
+      "second_matches": 10
+    },
+    {
+      "event_key": 12131937,
+      "match": "R. Zelnickova - G. S. Popa",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131939,
+      "match": "Poulsen Brostrom/ Slavic - Casanova/ Parizzia",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131940,
+      "match": "Hipfl/ Oradini - Milev/ Ratti",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131941,
+      "match": "Neuss/ Nittmann - Negritu/ Oetzbach",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131942,
+      "match": "Martinez Vaquero/ Webley-Smith - Cavalle-Reimers/ Fita Boluda",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131943,
+      "match": "Moratelli/ Tikhonova - Akli/ Salden",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131946,
+      "match": "Korpanec Davies/ Popa - Gobbi Monllau/ Higuita Barraza",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131948,
+      "match": "Kumar/ Poling - Evans/ Searle",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131950,
+      "match": "Karol/ Serdarusic - Mansouri/ Neuchrist",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131953,
+      "match": "N. Djosic - V. Gonzalez-Galino",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 9,
+      "second_matches": 5
+    },
+    {
+      "event_key": 12131955,
+      "match": "A. Weis - K. Sultanov",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 2,
+      "second_matches": 8
+    },
+    {
+      "event_key": 12131957,
+      "match": "C. Mueller - G. La Vela",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"20.5\": {\"bet365\": \"1.90\", \"Marathon\": \"1.85\", \"1xBet\": \"1.85\"}, \"19.5\": {\"Marathon\": \"1.62\", \"1xBet\": \"1.62\"}, \"21\": {\"1xBet\": \"1.95\"}, \"21.5\": {\"Marathon\": \"2.04\", \"1xBet\": \"2.05\"}, \"20\": {\"Marathon\": \"1.72\", \"1xBet\": \"1.72\"}}, \"Over/Under by Games in Match Under\": {\"20.5\": {\"1xBet\": \"1.84\", \"Marathon\": \"1.84\"}, \"19.5\": {\"Marathon\": \"2.11\", \"1xBet\": \"2.10\"}, \"21\": {\"1xBet\": \"1.74\"}, \"21.5\": {\"Marathon\": \"1.66\", \"1xBet\": \"1.65\"}, \"20\": {\"Marathon\": \"1.98\", \"1xBet\": \"1.98\"}}}"
+    },
+    {
+      "event_key": 12131960,
+      "match": "L. Lestir - I. Almazan Valiente",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 5,
+      "second_matches": 8
+    },
+    {
+      "event_key": 12131966,
+      "match": "A. Lukosiute - N. Sousa Salazar",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"16.5\": {\"Marathon\": \"2.15\", \"1xBet\": \"2.14\"}, \"17.5\": {\"Marathon\": \"2.79\", \"1xBet\": \"2.79\"}, \"17\": {\"1xBet\": \"2.53\"}, \"15.5\": {\"1xBet\": \"1.59\"}, \"16\": {\"1xBet\": \"1.83\", \"Pncl\": \"1.92\"}, \"18\": {\"1xBet\": \"2.10\"}, \"18.5\": {\"1xBet\": \"2.28\"}}, \"Over/Under by Games in Match Under\": {\"16.5\": {\"Marathon\": \"1.62\", \"1xBet\": \"1.62\"}, \"17.5\": {\"Marathon\": \"1.36\", \"1xBet\": \"1.36\"}, \"17\": {\"1xBet\": \"1.44\"}, \"15.5\": {\"1xBet\": \"2.15\"}, \"16\": {\"1xBet\": \"1.85\", \"Pncl\": \"1.87\"}, \"18\": {\"1xBet\": \"1.64\"}, \"18.5\": {\"1xBet\": \"1.53\"}}}"
+    },
+    {
+      "event_key": 12131968,
+      "match": "L. Thomas Iglesias - M. Lazarenko",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"16.5\": {\"Marathon\": \"1.75\", \"Pncl\": \"1.83\", \"1xBet\": \"1.75\"}, \"17.5\": {\"Marathon\": \"2.17\", \"1xBet\": \"2.15\"}, \"17\": {\"Marathon\": \"1.95\", \"1xBet\": \"1.94\"}, \"15.5\": {\"Marathon\": \"1.38\", \"1xBet\": \"1.38\"}, \"16\": {\"Marathon\": \"1.50\", \"1xBet\": \"1.50\"}}, \"Over/Under by Games in Match Under\": {\"16.5\": {\"Marathon\": \"1.95\", \"Pncl\": \"1.93\", \"1xBet\": \"1.95\"}, \"17.5\": {\"Marathon\": \"1.58\", \"1xBet\": \"1.59\"}, \"17\": {\"Marathon\": \"1.74\", \"1xBet\": \"1.75\"}, \"15.5\": {\"Marathon\": \"2.71\", \"1xBet\": \"2.71\"}, \"16\": {\"Marathon\": \"2.38\", \"1xBet\": \"2.38\"}}}"
+    },
+    {
+      "event_key": 12131971,
+      "match": "J. Lim - V. Pohle",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19.5\": {\"1xBet\": \"1.78\", \"Pncl\": \"1.83\"}, \"20.5\": {\"1xBet\": \"2.00\", \"Pncl\": \"2.10\"}, \"19\": {\"1xBet\": \"1.65\", \"Pncl\": \"1.68\"}, \"20\": {\"1xBet\": \"1.89\", \"Pncl\": \"1.94\"}, \"18.5\": {\"1xBet\": \"1.55\", \"Pncl\": \"1.60\"}}, \"Over/Under by Games in Match Under\": {\"19.5\": {\"1xBet\": \"1.91\", \"Pncl\": \"1.93\"}, \"20.5\": {\"1xBet\": \"1.69\", \"Pncl\": \"1.74\"}, \"19\": {\"1xBet\": \"2.08\", \"Pncl\": \"2.11\"}, \"20\": {\"1xBet\": \"1.79\", \"Pncl\": \"1.80\"}, \"18.5\": {\"1xBet\": \"2.23\", \"Pncl\": \"2.34\"}}}"
+    },
+    {
+      "event_key": 12131972,
+      "match": "R. Caballero Chica - C. Langlais",
+      "reason": "not_enough_recent_matches",
+      "first_matches": 3,
+      "second_matches": 10
+    },
+    {
+      "event_key": 12131974,
+      "match": "Bieldiugin/ Voljavec - Bilardo/ Valletta",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131975,
+      "match": "Poritskyi/ Salazar - Djokic/ Milanovic",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131976,
+      "match": "Bellifemine/ Kovac - Alam/ Trainauskas",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131977,
+      "match": "Fumagalli/ Perfetti - Homberg/ Mueller",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131978,
+      "match": "De Carvalho/ Scaglia - Hermassi/ Nsairi",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131979,
+      "match": "Coquelin/ Vulpitta - Jamji/ Robert",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131980,
+      "match": "Added/ Nagel - Faut/ Kaouk",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131981,
+      "match": "Opitz/ Zeuch - Schoenhaus/ Wehnelt",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131982,
+      "match": "Oliver Sanchez/ Urso - Luciano/ Mariani",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131983,
+      "match": "Lukosiute/ Popovic - Fernandez/ Moyano",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12131984,
+      "match": "A. Rusher - M. Carrascosa Diaz",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131985,
+      "match": "O. Majdandzic - O. Ogunsakin",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131986,
+      "match": "N. Raghuram - C. Thies",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131987,
+      "match": "E. V. Eigelsbach - K. Zajickova",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131988,
+      "match": "S. Bielinska - O. Traynor",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131989,
+      "match": "C. Hoo - F. De Bresser",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12131998,
+      "match": "Steiner/ Zhenikhova - Bak-Szabo/ Kis-Czako",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12132004,
+      "match": "M. Crossley - K. Liu",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12132005,
+      "match": "T. Evans - O. Center",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19.5\": {\"1xBet\": \"1.67\"}, \"20.5\": {\"1xBet\": \"1.90\", \"Betano\": \"1.93\"}, \"21\": {\"1xBet\": \"2.02\"}, \"21.5\": {\"1xBet\": \"2.12\"}, \"20\": {\"1xBet\": \"1.78\"}, \"19\": {\"1xBet\": \"1.67\"}, \"18.5\": {\"1xBet\": \"1.57\"}}, \"Over/Under by Games in Match Under\": {\"19.5\": {\"1xBet\": \"2.03\"}, \"20.5\": {\"1xBet\": \"1.79\", \"Betano\": \"1.75\"}, \"21\": {\"1xBet\": \"1.69\"}, \"21.5\": {\"1xBet\": \"1.61\"}, \"20\": {\"1xBet\": \"1.90\"}, \"19\": {\"1xBet\": \"2.05\"}, \"18.5\": {\"1xBet\": \"2.19\"}}}"
+    },
+    {
+      "event_key": 12132006,
+      "match": "A. Lutkemeyer - D. Plekhanova",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19.5\": {\"1xBet\": \"1.58\"}, \"20.5\": {\"1xBet\": \"1.80\", \"Betano\": \"1.80\"}, \"21\": {\"Marathon\": \"1.88\", \"1xBet\": \"1.89\"}, \"21.5\": {\"Pncl\": \"1.98\", \"1xBet\": \"1.98\"}, \"20\": {\"Marathon\": \"1.67\", \"1xBet\": \"1.67\"}, \"22\": {\"Pncl\": \"2.12\"}}, \"Over/Under by Games in Match Under\": {\"19.5\": {\"1xBet\": \"2.17\"}, \"20.5\": {\"1xBet\": \"1.89\", \"Betano\": \"1.88\"}, \"21\": {\"Marathon\": \"1.80\", \"1xBet\": \"1.79\"}, \"21.5\": {\"Pncl\": \"1.75\", \"1xBet\": \"1.70\"}, \"20\": {\"Marathon\": \"2.05\", \"1xBet\": \"2.05\"}, \"22\": {\"Pncl\": \"1.65\"}}}"
+    },
+    {
+      "event_key": 12132007,
+      "match": "A. Wang - K. Evans",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Correct Score 2nd Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Away Team Total (1st Set)",
+        "Away Team Total (2nd Set)",
+        "Home Team Total (1st Set)",
+        "Home Team Total (2nd Set)",
+        "Win In Straigh Sets (Player 1)",
+        "Win In Straigh Sets (Player 2)",
+        "Home First Service Game - Winners Winner",
+        "Away First Service Game - Winners Winner"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"19.5\": {\"Betano\": \"1.85\", \"1xBet\": \"1.87\"}, \"20.5\": {\"1xBet\": \"2.12\"}, \"19\": {\"Marathon\": \"1.85\", \"1xBet\": \"1.73\"}, \"20\": {\"1xBet\": \"2.01\"}, \"18.5\": {\"1xBet\": \"1.62\"}, \"17.5\": {\"1xBet\": \"1.48\"}, \"18\": {\"1xBet\": \"1.58\"}}, \"Over/Under by Games in Match Under\": {\"19.5\": {\"Betano\": \"1.82\", \"1xBet\": \"1.82\"}, \"20.5\": {\"1xBet\": \"1.61\"}, \"19\": {\"Marathon\": \"1.83\", \"1xBet\": \"1.97\"}, \"20\": {\"1xBet\": \"1.70\"}, \"18.5\": {\"1xBet\": \"2.11\"}, \"17.5\": {\"1xBet\": \"2.40\"}, \"18\": {\"1xBet\": \"2.20\"}}}"
+    },
+    {
+      "event_key": 12132008,
+      "match": "Brown/ Evans - Chan/ Turley",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12132009,
+      "match": "K. Bigun - O. Ojakaar",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Correct Score 1st Half",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Over/Under (1st Set)",
+        "Home/Away (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Number of sets",
+        "Over/Under",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Odd/Even (1st Set)",
+        "Asian Handicap (Sets)",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"21.5\": {\"1xBet\": \"1.73\"}, \"20.5\": {\"Pncl\": \"1.73\"}, \"21\": {\"Pncl\": \"1.82\"}, \"22\": {\"Pncl\": \"2.06\"}, \"22.5\": {\"Marathon\": \"2.14\"}, \"20\": {\"Pncl\": \"1.60\"}}, \"Over/Under by Games in Match Under\": {\"21.5\": {\"1xBet\": \"1.94\"}, \"20.5\": {\"Pncl\": \"2.00\"}, \"21\": {\"Pncl\": \"1.91\"}, \"22\": {\"Pncl\": \"1.69\"}, \"22.5\": {\"Marathon\": \"1.60\"}, \"20\": {\"Pncl\": \"2.21\"}}}"
+    },
+    {
+      "event_key": 12132010,
+      "match": "T. Dean - S. Johnson",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Home/Away (1st Set)",
+        "Over/Under",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Correct Score 1st Half",
+        "Result/Total Goals",
+        "Win In Straigh Sets (Player 1)",
+        "Win In Straigh Sets (Player 2)",
+        "Home First Service Game - Winners Winner",
+        "Away First Service Game - Winners Winner"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"20.5\": {\"1xBet\": \"1.78\"}, \"21\": {\"Pncl\": \"1.92\"}, \"21.5\": {\"Pncl\": \"2.06\"}, \"22\": {\"Pncl\": \"2.22\"}, \"22.5\": {\"Marathon\": \"2.23\"}, \"20\": {\"Pncl\": \"1.71\"}}, \"Over/Under by Games in Match Under\": {\"20.5\": {\"1xBet\": \"1.89\"}, \"21\": {\"Pncl\": \"1.83\"}, \"21.5\": {\"Pncl\": \"1.77\"}, \"22\": {\"Pncl\": \"1.66\"}, \"22.5\": {\"Marathon\": \"1.55\"}, \"20\": {\"Pncl\": \"2.14\"}}}"
+    },
+    {
+      "event_key": 12132011,
+      "match": "V. Kalina - A. Vales",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Home/Away (1st Set)",
+        "Over/Under",
+        "Correct Score 1st Half",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Result/Total Goals",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Win In Straigh Sets (Player 1)",
+        "Win In Straigh Sets (Player 2)",
+        "Home First Service Game - Winners Winner",
+        "Away First Service Game - Winners Winner"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"20.5\": {\"Pncl\": \"2.07\"}, \"19.5\": {\"1xBet\": \"1.80\"}, \"21\": {\"Marathon\": \"2.06\"}, \"21.5\": {\"Marathon\": \"2.17\"}, \"20\": {\"Pncl\": \"1.94\"}, \"19\": {\"Pncl\": \"1.68\"}, \"18.5\": {\"Pncl\": \"1.59\"}}, \"Over/Under by Games in Match Under\": {\"20.5\": {\"Pncl\": \"1.68\"}, \"19.5\": {\"1xBet\": \"1.86\"}, \"21\": {\"Marathon\": \"1.66\"}, \"21.5\": {\"Marathon\": \"1.58\"}, \"20\": {\"Pncl\": \"1.77\"}, \"19\": {\"Pncl\": \"2.06\"}, \"18.5\": {\"Pncl\": \"2.23\"}}}"
+    },
+    {
+      "event_key": 12132012,
+      "match": "L. Marionneau - N. Zamora",
+      "reason": "no_totals_market",
+      "available_markets": [
+        "Home/Away",
+        "Home/Away (1st Set)",
+        "Over/Under",
+        "Total - Home",
+        "Total - Away",
+        "Odd/Even",
+        "Over/Under by Games in Match",
+        "Odd/Even (1st Set)",
+        "Over/Under (1st Set)",
+        "Asian Handicap (1st Set)",
+        "Asian Handicap (Sets)",
+        "Asian Handicap (Games)",
+        "Set Betting",
+        "Set / Match",
+        "Over/Under by Games (2nd Set)",
+        "Home/Away (2nd Set)",
+        "Odd/Even (2nd Set)",
+        "Asian Handicap (2nd Set)",
+        "Number of sets",
+        "Correct Score 1st Half",
+        "Result/Total Goals",
+        "Win In Straigh Sets (Player 1)",
+        "Win In Straigh Sets (Player 2)",
+        "Home First Service Game - Winners Winner",
+        "Away First Service Game - Winners Winner"
+      ],
+      "totals_market_preview": "{\"Over/Under by Games in Match Over\": {\"20.5\": {\"Pncl\": \"1.71\"}, \"21\": {\"Pncl\": \"1.79\"}, \"21.5\": {\"1xBet\": \"1.86\"}, \"22\": {\"Pncl\": \"2.03\"}, \"22.5\": {\"Pncl\": \"2.17\"}}, \"Over/Under by Games in Match Under\": {\"20.5\": {\"Pncl\": \"2.03\"}, \"21\": {\"Pncl\": \"1.93\"}, \"21.5\": {\"1xBet\": \"1.80\"}, \"22\": {\"Pncl\": \"1.70\"}, \"22.5\": {\"Pncl\": \"1.62\"}}}"
+    },
+    {
+      "event_key": 12132013,
+      "match": "Gorzny/ Marionneau - Exsted/ Johnston",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12132014,
+      "match": "Falck/ Shearer - Mesarovic/ Suarez",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12132015,
+      "match": "Arangio/ Liu - Alvarez Sande/ Murphy",
       "reason": "not_singles"
     }
   ],
-  "candidates_raw": 8,
-  "ranked_candidates": 6,
-  "final_picks": 3,
+  "candidates_raw": 73,
+  "ranked_candidates": 44,
+  "final_picks": 6,
   "errors": [],
   "formula": {
     "w_confidence": 15.319894178503324,
