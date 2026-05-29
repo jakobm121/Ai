@@ -1,0 +1,50 @@
+name: Lucija V2 Backtest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lucija-v2-backtest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Lucija v2 backtest
+        env:
+          DATA_DIR: "data"
+          LUCIJA_DIR: "data/lucija"
+          TENNIS_TOTALS_RESULTS_FILE: "data/tennis_totals_results.json"
+        run: |
+          python lucija_v2_backtest.py
+
+      - name: Commit Lucija v2 backtest
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add lucija_v2_backtest.py
+          git add data/lucija/lucija_v2_backtest_report.md
+          git add data/lucija/lucija_v2_backtest_summary.json
+          git add data/lucija/lucija_v2_backtest_picks.json
+          git add data/lucija/lucija_v2_backtest_blocked_from_v1.json
+          git add data/lucija/lucija_v2_backtest_debug.json
+
+          if git diff --cached --quiet; then
+            echo "No Lucija v2 backtest changes to commit"
+          else
+            git commit -m "Update Lucija v2 backtest"
+            git pull --rebase --autostash origin main
+            git push
+          fi
