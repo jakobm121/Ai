@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-29T23:01:33.553062+02:00",
+  "generated_at": "2026-05-29T23:06:46.671875+02:00",
   "source_file": "data/tennis_totals_results.json",
   "source_count": 501,
   "settled_count": 492,
   "v1_count": 110,
-  "v2_count": 123,
-  "v3_count": 67,
+  "v2_count": 81,
+  "v3_count": 62,
   "debug_sample": [
     {
       "pick_id": "5e84bbc19d5d5b47e050b272f9f1b257",
@@ -41,6 +41,7 @@
         "h2h_max"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_three_set_max"
       ],
       "v3_failed": [
@@ -85,6 +86,7 @@
       "v2_failed": [
         "side",
         "market_gap_min",
+        "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -259,7 +261,7 @@
       "result": "win",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": true,
+      "v3_ok": false,
       "metrics": {
         "side": "over",
         "line": 21.5,
@@ -289,7 +291,9 @@
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": []
+      "v3_failed": [
+        "avg_three_set_min"
+      ]
     },
     {
       "pick_id": "699fb5d2d989975db924892639a3b157",
@@ -329,8 +333,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -449,6 +452,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -491,6 +495,7 @@
       ],
       "v2_failed": [
         "side",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -545,7 +550,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -568,11 +573,13 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -657,7 +664,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -738,7 +746,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -814,10 +823,12 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -856,7 +867,8 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -939,7 +951,8 @@
       ],
       "v3_failed": [
         "side",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -951,7 +964,7 @@
       "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": true,
+      "v3_ok": false,
       "metrics": {
         "side": "over",
         "line": 22.5,
@@ -980,7 +993,9 @@
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": []
+      "v3_failed": [
+        "avg_three_set_min"
+      ]
     },
     {
       "pick_id": "48fdf7d7008db3716b104995d4434754",
@@ -1016,6 +1031,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -1138,6 +1154,7 @@
       "v1_failed": [],
       "v2_failed": [
         "side",
+        "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -1154,7 +1171,7 @@
       "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 21.5,
@@ -1183,9 +1200,7 @@
         "side",
         "market_gap_min"
       ],
-      "v3_failed": [
-        "avg_close_set_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "03a1d68fae439ffb7a43ae79fb1a127b",
@@ -1295,6 +1310,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -1468,7 +1484,8 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -1627,7 +1644,8 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -1959,10 +1977,12 @@
       ],
       "v2_failed": [
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -2043,6 +2063,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -2090,7 +2111,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -2170,6 +2192,7 @@
       ],
       "v2_failed": [
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -2265,7 +2288,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -2288,10 +2311,13 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -2326,11 +2352,13 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -2342,7 +2370,7 @@
       "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 21.5,
@@ -2371,9 +2399,7 @@
         "side",
         "market_gap_min"
       ],
-      "v3_failed": [
-        "avg_close_set_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "25973c500141bcb2e6321ac936442252",
@@ -2450,6 +2476,7 @@
       ],
       "v2_failed": [
         "side",
+        "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -2496,7 +2523,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -2538,7 +2566,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -2580,7 +2609,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -2616,7 +2645,8 @@
       "v1_failed": [],
       "v2_failed": [],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -2651,6 +2681,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_three_set_max"
       ],
       "v3_failed": [
@@ -2665,7 +2696,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -2690,7 +2721,9 @@
       "v1_failed": [
         "h2h_max"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -3071,7 +3104,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -3150,10 +3184,12 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -3197,7 +3233,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -3367,8 +3403,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max",
-        "avg_close_set_min"
+        "strength_gap_max"
       ]
     },
     {
@@ -3425,7 +3460,7 @@
       "result": "win",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": true,
+      "v3_ok": false,
       "metrics": {
         "side": "over",
         "line": 22.5,
@@ -3457,7 +3492,9 @@
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": []
+      "v3_failed": [
+        "avg_three_set_min"
+      ]
     },
     {
       "pick_id": "b8cf47b77947773d6d584eeb872aedd1",
@@ -3494,8 +3531,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -3576,7 +3612,8 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -3615,7 +3652,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -3660,8 +3698,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max",
-        "avg_close_set_min"
+        "strength_gap_max"
       ]
     },
     {
@@ -3900,6 +3937,7 @@
       "v2_failed": [
         "side",
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": []
@@ -3975,6 +4013,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -4063,7 +4102,8 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
@@ -4329,7 +4369,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -4352,7 +4392,9 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -4400,7 +4442,7 @@
       "v3_failed": [
         "side",
         "strength_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -4411,7 +4453,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -4436,7 +4478,9 @@
       "v1_failed": [
         "avg_three_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -4480,7 +4524,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -4492,7 +4536,7 @@
       "result": "win",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": true,
+      "v3_ok": false,
       "metrics": {
         "side": "over",
         "line": 21.5,
@@ -4522,7 +4566,9 @@
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": []
+      "v3_failed": [
+        "avg_three_set_min"
+      ]
     },
     {
       "pick_id": "0ebb7262392df384c62071e8429bdcfe",
@@ -4601,11 +4647,11 @@
         "quality_min"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_three_set_max"
       ],
       "v3_failed": [
-        "side",
-        "avg_close_set_min"
+        "side"
       ]
     },
     {
@@ -4648,7 +4694,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -4864,7 +4911,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -4887,10 +4934,13 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -4928,10 +4978,12 @@
       ],
       "v2_failed": [
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -5014,7 +5066,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -5174,6 +5226,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -5218,7 +5271,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -5261,7 +5314,8 @@
         "strength_gap_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -5341,6 +5395,7 @@
       ],
       "v2_failed": [
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -5387,7 +5442,8 @@
         "market_gap_min"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -5428,7 +5484,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -5439,7 +5496,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -5464,7 +5521,9 @@
       "v1_failed": [
         "h2h_max"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -5509,7 +5568,8 @@
         "market_gap_min"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -5520,7 +5580,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -5543,11 +5603,12 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "market_gap_max",
-        "avg_close_set_min"
+        "market_gap_max"
       ]
     },
     {
@@ -5642,7 +5703,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -5665,10 +5726,12 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -5875,7 +5938,8 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
@@ -5960,8 +6024,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -6167,7 +6230,8 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -6178,7 +6242,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -6201,11 +6265,12 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -6245,7 +6310,8 @@
         "market_gap_min"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -6329,7 +6395,8 @@
         "market_gap_min"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -6413,7 +6480,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -6424,7 +6492,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -6450,9 +6518,12 @@
         "h2h_max",
         "avg_close_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
+        "avg_three_set_min",
         "avg_close_set_min"
       ]
     },
@@ -6576,6 +6647,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
+        "avg_three_set_min",
         "avg_close_set_min"
       ]
     },
@@ -6827,7 +6899,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -6953,8 +7026,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -7034,10 +7106,12 @@
       ],
       "v2_failed": [
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -7082,7 +7156,8 @@
       ],
       "v3_failed": [
         "side",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -7094,7 +7169,7 @@
       "result": "void",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": true,
+      "v3_ok": false,
       "metrics": {
         "side": "over",
         "line": 21.5,
@@ -7123,7 +7198,9 @@
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": []
+      "v3_failed": [
+        "avg_three_set_min"
+      ]
     },
     {
       "pick_id": "3b05e0944de15590a7861bbbc458f28d",
@@ -7160,6 +7237,7 @@
       ],
       "v2_failed": [
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -7202,11 +7280,12 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -7255,7 +7334,7 @@
       "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 21.5,
@@ -7285,9 +7364,7 @@
         "market_gap_min",
         "avg_three_set_max"
       ],
-      "v3_failed": [
-        "avg_close_set_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "5566b09b37570ec07c8a9bee48e5031f",
@@ -7366,8 +7443,7 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "market_gap_max",
-        "avg_close_set_min"
+        "market_gap_max"
       ]
     },
     {
@@ -7404,6 +7480,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -7466,7 +7543,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -7491,9 +7568,12 @@
       "v1_failed": [
         "h2h_max"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -7573,7 +7653,8 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -7691,8 +7772,7 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -7774,10 +7854,12 @@
       ],
       "v2_failed": [
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -7860,6 +7942,7 @@
       ],
       "v2_failed": [
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -7908,7 +7991,7 @@
       "v3_failed": [
         "side",
         "strength_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -7987,8 +8070,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -8031,7 +8113,7 @@
         "side",
         "market_gap_max",
         "strength_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -8161,7 +8243,8 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -8240,7 +8323,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -8282,7 +8366,8 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -8399,6 +8484,7 @@
         "h2h_max"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -8438,6 +8524,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -8483,8 +8570,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -8569,7 +8655,8 @@
         "strength_gap_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -8581,7 +8668,7 @@
       "result": "win",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": false,
+      "v3_ok": true,
       "metrics": {
         "side": "over",
         "line": 21.5,
@@ -8610,9 +8697,7 @@
         "market_gap_min",
         "avg_three_set_max"
       ],
-      "v3_failed": [
-        "avg_close_set_min"
-      ]
+      "v3_failed": []
     },
     {
       "pick_id": "065ab33523468f280e4202ce8945f73c",
@@ -8649,7 +8734,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -8701,7 +8787,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -8724,7 +8810,9 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -8948,7 +9036,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -8973,7 +9061,9 @@
       "v1_failed": [
         "avg_three_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -9059,8 +9149,7 @@
         "avg_three_set_max"
       ],
       "v3_failed": [
-        "market_gap_max",
-        "avg_close_set_min"
+        "market_gap_max"
       ]
     },
     {
@@ -9141,7 +9230,8 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
@@ -9183,10 +9273,12 @@
         "h2h_max"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -9310,7 +9402,8 @@
         "market_gap_min"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -9398,8 +9491,7 @@
         "side",
         "market_gap_max",
         "strength_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -9496,7 +9588,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -9519,11 +9611,13 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -9780,8 +9874,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -9821,7 +9914,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -9901,6 +9995,7 @@
       "v1_failed": [],
       "v2_failed": [
         "side",
+        "strength_gap_max",
         "avg_three_set_max"
       ],
       "v3_failed": []
@@ -9944,7 +10039,8 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -9980,6 +10076,7 @@
       "v1_failed": [],
       "v2_failed": [
         "side",
+        "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -10024,7 +10121,7 @@
       "v3_failed": [
         "side",
         "strength_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -10062,7 +10159,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -10100,8 +10197,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -10154,7 +10250,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -10177,9 +10273,12 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -10220,8 +10319,7 @@
         "avg_three_set_max"
       ],
       "v3_failed": [
-        "market_gap_max",
-        "avg_close_set_min"
+        "market_gap_max"
       ]
     },
     {
@@ -10262,8 +10360,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -10387,10 +10484,12 @@
       ],
       "v2_failed": [
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -10474,6 +10573,7 @@
       ],
       "v2_failed": [
         "side",
+        "confidence_min",
         "market_gap_min"
       ],
       "v3_failed": []
@@ -10512,11 +10612,13 @@
         "h2h_max"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -10676,10 +10778,12 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -10721,7 +10825,8 @@
         "strength_gap_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -10845,12 +10950,12 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -10861,7 +10966,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -10884,12 +10989,13 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -11007,7 +11113,8 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
@@ -11052,8 +11159,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -11139,8 +11245,7 @@
         "side",
         "market_gap_max",
         "strength_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -11151,7 +11256,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -11174,7 +11279,9 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -11261,7 +11368,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -11299,7 +11407,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -11424,7 +11532,8 @@
       ],
       "v3_failed": [
         "side",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -11508,8 +11617,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -11546,7 +11654,8 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -11581,6 +11690,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_three_set_max"
       ],
       "v3_failed": [
@@ -11626,7 +11736,8 @@
         "strength_gap_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -11665,11 +11776,11 @@
         "market_gap_min"
       ],
       "v2_failed": [
+        "confidence_min",
         "market_gap_min"
       ],
       "v3_failed": [
-        "side",
-        "avg_close_set_min"
+        "side"
       ]
     },
     {
@@ -11795,7 +11906,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -11930,7 +12042,7 @@
       "result": "win",
       "v1_ok": true,
       "v2_ok": false,
-      "v3_ok": true,
+      "v3_ok": false,
       "metrics": {
         "side": "over",
         "line": 20.5,
@@ -11956,7 +12068,9 @@
         "side",
         "avg_close_set_max"
       ],
-      "v3_failed": []
+      "v3_failed": [
+        "avg_three_set_min"
+      ]
     },
     {
       "pick_id": "5762d62cb9cb7a4dba85d1f0949748e9",
@@ -11993,12 +12107,12 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -12041,7 +12155,8 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -12079,8 +12194,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -12091,7 +12205,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -12116,10 +12230,13 @@
       "v1_failed": [
         "h2h_max"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -12162,8 +12279,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -12301,7 +12417,7 @@
       "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": true,
+      "v3_ok": false,
       "metrics": {
         "side": "over",
         "line": 22.5,
@@ -12331,7 +12447,9 @@
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": []
+      "v3_failed": [
+        "avg_three_set_min"
+      ]
     },
     {
       "pick_id": "7333c3deb626c3e8de939527b1dd3852",
@@ -12422,7 +12540,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -12445,7 +12563,9 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -12531,7 +12651,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -12610,7 +12731,8 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -12814,7 +12936,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -12892,7 +13014,8 @@
         "market_gap_min"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -12932,7 +13055,8 @@
         "market_gap_min"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -13189,7 +13313,8 @@
       ],
       "v3_failed": [
         "side",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -13201,7 +13326,7 @@
       "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": true,
+      "v3_ok": false,
       "metrics": {
         "side": "over",
         "line": 21.5,
@@ -13232,7 +13357,9 @@
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": []
+      "v3_failed": [
+        "avg_three_set_min"
+      ]
     },
     {
       "pick_id": "a9fead5132b0f425e0c3ba5ad709d06c",
@@ -13395,7 +13522,8 @@
         "market_gap_min"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -13474,6 +13602,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -13490,7 +13619,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -13513,9 +13642,12 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -13652,7 +13784,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -13675,10 +13807,13 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -13806,8 +13941,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -13818,7 +13952,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -13843,11 +13977,13 @@
       "v1_failed": [
         "quality_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -13928,7 +14064,8 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side"
@@ -14057,8 +14194,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -14098,8 +14234,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -14140,8 +14275,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -14182,8 +14316,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -14222,8 +14355,7 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -14262,8 +14394,7 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -14347,7 +14478,8 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
@@ -14396,7 +14528,8 @@
       ],
       "v3_failed": [
         "side",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -14441,8 +14574,7 @@
         "side",
         "market_gap_max",
         "strength_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -14525,8 +14657,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -14566,7 +14697,8 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -14660,7 +14792,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14685,7 +14817,9 @@
       "v1_failed": [
         "avg_three_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -14728,10 +14862,12 @@
         "avg_close_set_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
+        "avg_three_set_min",
         "avg_close_set_min"
       ]
     },
@@ -14812,6 +14948,7 @@
         "market_gap_min"
       ],
       "v2_failed": [
+        "confidence_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
@@ -14827,7 +14964,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14852,11 +14989,12 @@
       "v1_failed": [
         "avg_three_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -14867,7 +15005,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14892,11 +15030,12 @@
       "v1_failed": [
         "avg_three_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -14981,8 +15120,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15022,8 +15160,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15063,8 +15200,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15224,12 +15360,12 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15267,8 +15403,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15350,7 +15485,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15434,8 +15569,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15472,7 +15606,8 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side"
@@ -15513,7 +15648,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15600,7 +15735,8 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -15640,8 +15776,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15682,8 +15817,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15810,8 +15944,7 @@
       "v3_failed": [
         "side",
         "strength_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -15851,6 +15984,7 @@
       "v2_failed": [
         "side",
         "market_gap_min",
+        "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -15893,7 +16027,8 @@
         "strength_gap_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -16018,7 +16153,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -16142,7 +16277,8 @@
         "avg_close_set_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
@@ -16224,8 +16360,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -16384,7 +16519,8 @@
       "v1_failed": [],
       "v2_failed": [],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -16507,7 +16643,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -16590,7 +16727,8 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -16627,7 +16765,8 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
@@ -16642,7 +16781,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -16665,7 +16804,9 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max"
@@ -16705,6 +16846,7 @@
         "h2h_max"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -16758,7 +16900,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -16784,10 +16926,13 @@
         "confidence_min",
         "h2h_max"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -16909,7 +17054,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -16954,7 +17100,7 @@
       "v3_failed": [
         "side",
         "strength_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -16998,7 +17144,8 @@
       ],
       "v3_failed": [
         "side",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -17040,7 +17187,8 @@
       ],
       "v3_failed": [
         "side",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -17084,7 +17232,7 @@
       "v3_failed": [
         "side",
         "strength_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -17122,8 +17270,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -17200,6 +17347,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -17248,8 +17396,7 @@
         "side",
         "market_gap_max",
         "strength_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -17488,10 +17635,12 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -17576,7 +17725,8 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "strength_gap_max"
+        "strength_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -17587,7 +17737,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -17610,9 +17760,12 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -17623,7 +17776,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -17646,9 +17799,12 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -17702,7 +17858,7 @@
       "side": "under",
       "result": "void",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -17725,10 +17881,12 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -17947,7 +18105,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -17970,7 +18128,9 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "avg_three_set_min"
@@ -18018,8 +18178,7 @@
       "v3_failed": [
         "side",
         "strength_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -18076,7 +18235,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -18099,7 +18258,9 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "avg_three_set_min"
@@ -18232,6 +18393,7 @@
         "side",
         "market_gap_max",
         "strength_gap_max",
+        "avg_three_set_min",
         "avg_close_set_min"
       ]
     },
@@ -18269,10 +18431,12 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -18328,7 +18492,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -18351,7 +18515,9 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -18393,10 +18559,12 @@
       ],
       "v2_failed": [
         "market_gap_min",
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -18479,8 +18647,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -18518,7 +18685,8 @@
         "avg_close_set_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -18529,7 +18697,7 @@
       "side": "under",
       "result": "void",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -18555,11 +18723,12 @@
         "h2h_max",
         "avg_three_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -18654,7 +18823,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -18679,10 +18848,11 @@
       "v1_failed": [
         "h2h_max"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
-        "side",
-        "avg_close_set_min"
+        "side"
       ]
     },
     {
@@ -18722,6 +18892,7 @@
       "v2_failed": [
         "side",
         "market_gap_min",
+        "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -18759,6 +18930,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -18846,7 +19018,8 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -18889,8 +19062,7 @@
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -18975,7 +19147,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -19053,6 +19226,7 @@
       "v2_failed": [
         "side",
         "market_gap_min",
+        "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -19066,7 +19240,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -19089,9 +19263,12 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -19221,7 +19398,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -19246,12 +19423,13 @@
       "v1_failed": [
         "avg_three_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -19292,8 +19470,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -19328,6 +19505,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -19343,7 +19521,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -19366,7 +19544,9 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -19453,7 +19633,7 @@
       "v3_failed": [
         "side",
         "strength_gap_max",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -19506,7 +19686,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -19531,12 +19711,13 @@
       "v1_failed": [
         "confidence_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -19579,8 +19760,7 @@
         "side",
         "market_gap_max",
         "strength_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -19632,7 +19812,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -19655,7 +19835,9 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "avg_three_set_min"
@@ -19699,8 +19881,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -19783,7 +19964,8 @@
         "strength_gap_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -19823,6 +20005,7 @@
       "v2_failed": [
         "side",
         "market_gap_min",
+        "strength_gap_max",
         "avg_three_set_max"
       ],
       "v3_failed": []
@@ -19861,7 +20044,8 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
@@ -19906,7 +20090,8 @@
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
@@ -19957,7 +20142,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -19980,7 +20165,9 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "strength_gap_max"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -20027,8 +20214,7 @@
         "side",
         "market_gap_max",
         "strength_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -20112,8 +20298,7 @@
       ],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -20188,8 +20373,7 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "market_gap_max",
-        "avg_close_set_min"
+        "market_gap_max"
       ]
     },
     {
@@ -20275,8 +20459,7 @@
         "side",
         "market_gap_max",
         "strength_gap_max",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -20313,8 +20496,7 @@
       "v2_failed": [],
       "v3_failed": [
         "side",
-        "avg_three_set_min",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -20352,6 +20534,7 @@
       ],
       "v2_failed": [
         "side",
+        "strength_gap_max",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -20406,7 +20589,7 @@
       "result": "pending",
       "v1_ok": false,
       "v2_ok": false,
-      "v3_ok": true,
+      "v3_ok": false,
       "metrics": {
         "side": "over",
         "line": 20.5,
@@ -20437,7 +20620,9 @@
         "market_gap_min",
         "avg_close_set_max"
       ],
-      "v3_failed": []
+      "v3_failed": [
+        "avg_three_set_min"
+      ]
     },
     {
       "pick_id": "bfb966b874d9bbb830e7f6a0eba2a4da",
@@ -20473,11 +20658,12 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
         "side",
-        "avg_close_set_min"
+        "avg_three_set_min"
       ]
     },
     {
@@ -20514,10 +20700,12 @@
         "market_gap_min"
       ],
       "v2_failed": [
-        "market_gap_min"
+        "market_gap_min",
+        "strength_gap_max"
       ],
       "v3_failed": [
-        "side"
+        "side",
+        "avg_three_set_min"
       ]
     },
     {
@@ -20594,11 +20782,13 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "strength_gap_max",
         "avg_close_set_max"
       ],
       "v3_failed": [
         "side",
-        "market_gap_max"
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     },
     {
