@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-30T08:53:01.689145+02:00",
+  "generated_at": "2026-05-30T11:52:43.620355+02:00",
   "source_file": "data/tennis_totals_predictions.json",
   "source_format": "dict_with_picks",
-  "source_picks": 17,
-  "lucija_picks": 6,
-  "rejected_picks": 11,
+  "source_picks": 16,
+  "lucija_picks": 4,
+  "rejected_picks": 12,
   "rules": {
     "avg_close_set_max": 0.55,
     "avg_close_set_min": 0.2,
@@ -49,22 +49,6 @@
       }
     },
     {
-      "pick_id": "79180dd7d62a4b326b629dbb17d9e844",
-      "source_pick_id": "2546aeefd8f3027d23e3c042fd58a488",
-      "match": "L. Zaar - L. Samson",
-      "bet": "UNDER 19.5 games",
-      "odds": 2.16,
-      "metrics": {
-        "avg_three_set": 0.15,
-        "avg_close_set": 0.3583,
-        "market_gap": 0.3333,
-        "confidence": 83.7,
-        "quality_score": 81.9,
-        "strength_gap": 10.5,
-        "h2h_matches": 0
-      }
-    },
-    {
       "pick_id": "5d5edc0191da76c7377e6cad3ea812ce",
       "source_pick_id": "09b2ad3b47ccbd59a5d25b099b0e3ac4",
       "match": "D. Shnaider - O. Oliynykova",
@@ -74,8 +58,8 @@
         "avg_three_set": 0.3166,
         "avg_close_set": 0.262,
         "market_gap": 0.4414,
-        "confidence": 91.7,
-        "quality_score": 81.3,
+        "confidence": 90.9,
+        "quality_score": 79.9,
         "strength_gap": 6.69,
         "h2h_matches": 0
       }
@@ -90,25 +74,9 @@
         "avg_three_set": 0.2875,
         "avg_close_set": 0.3604,
         "market_gap": 0.6062,
-        "confidence": 87.3,
-        "quality_score": 81.2,
+        "confidence": 86.5,
+        "quality_score": 79.5,
         "strength_gap": 9.75,
-        "h2h_matches": 0
-      }
-    },
-    {
-      "pick_id": "5bfa1b76a1af4790d1a45eea8910f6e9",
-      "source_pick_id": "dd3b1143c77802b28b082e08d2eb609e",
-      "match": "M. Homberg - K. Sultanov",
-      "bet": "UNDER 20.0 games",
-      "odds": 2.11,
-      "metrics": {
-        "avg_three_set": 0.1736,
-        "avg_close_set": 0.2755,
-        "market_gap": 0.3176,
-        "confidence": 85.7,
-        "quality_score": 77.8,
-        "strength_gap": 0.22,
         "h2h_matches": 0
       }
     }
@@ -120,15 +88,15 @@
       "bet": "UNDER 20.5 games",
       "date": "2026-05-30",
       "time": "13:45",
-      "odds": 2.14,
+      "odds": 2.15,
       "confidence": 88.9,
-      "quality_score": 86.3,
+      "quality_score": 86.9,
       "metrics": {
         "avg_three_set": 0.1181,
         "avg_close_set": 0.2581,
         "market_gap": 0.1237,
         "confidence": 88.9,
-        "quality_score": 86.3,
+        "quality_score": 86.9,
         "strength_gap": 5.43,
         "h2h_matches": 0
       },
@@ -154,14 +122,14 @@
       "date": "2026-05-30",
       "time": "15:00",
       "odds": 1.88,
-      "confidence": 91.2,
-      "quality_score": 84.0,
+      "confidence": 90.4,
+      "quality_score": 82.6,
       "metrics": {
         "avg_three_set": 0.3667,
         "avg_close_set": 0.4574,
         "market_gap": 0.0525,
-        "confidence": 91.2,
-        "quality_score": 84.0,
+        "confidence": 90.4,
+        "quality_score": 82.6,
         "strength_gap": 6.99,
         "h2h_matches": 1
       },
@@ -178,104 +146,6 @@
       "failed": [
         "market_gap_min",
         "h2h_max"
-      ]
-    },
-    {
-      "pick_id": "7af61fafb0fce5ea516e0546d73713a3",
-      "match": "C. Langlais - F. Sziedat",
-      "bet": "UNDER 19.5 games",
-      "date": "2026-05-30",
-      "time": "12:00",
-      "odds": 2.19,
-      "confidence": 83.7,
-      "quality_score": 82.7,
-      "metrics": {
-        "avg_three_set": 0.2,
-        "avg_close_set": 0.3166,
-        "market_gap": 0.1925,
-        "confidence": 83.7,
-        "quality_score": 82.7,
-        "strength_gap": 57.6,
-        "h2h_matches": 0
-      },
-      "checks": {
-        "avg_three_set_min": true,
-        "avg_close_set_min": true,
-        "avg_close_set_max": true,
-        "confidence_min": true,
-        "quality_min": true,
-        "market_gap_min": false,
-        "strength_gap_max": false,
-        "h2h_max": true
-      },
-      "failed": [
-        "market_gap_min",
-        "strength_gap_max"
-      ]
-    },
-    {
-      "pick_id": "72eb3a2553f1747ca22594676e76ac6d",
-      "match": "M. Sakkari - M. Chwalinska",
-      "bet": "UNDER 20.5 games",
-      "date": "2026-05-30",
-      "time": "11:00",
-      "odds": 2.18,
-      "confidence": 84.5,
-      "quality_score": 82.6,
-      "metrics": {
-        "avg_three_set": 0.1736,
-        "avg_close_set": 0.2349,
-        "market_gap": 0.0985,
-        "confidence": 84.5,
-        "quality_score": 82.6,
-        "strength_gap": 60.89,
-        "h2h_matches": 0
-      },
-      "checks": {
-        "avg_three_set_min": true,
-        "avg_close_set_min": true,
-        "avg_close_set_max": true,
-        "confidence_min": true,
-        "quality_min": true,
-        "market_gap_min": false,
-        "strength_gap_max": false,
-        "h2h_max": true
-      },
-      "failed": [
-        "market_gap_min",
-        "strength_gap_max"
-      ]
-    },
-    {
-      "pick_id": "991501567c89257ebc911eb15e70a4a8",
-      "match": "V. Durasovic - M. Petkovic",
-      "bet": "UNDER 21.0 games",
-      "date": "2026-05-30",
-      "time": "14:00",
-      "odds": 2.13,
-      "confidence": 85.7,
-      "quality_score": 79.9,
-      "metrics": {
-        "avg_three_set": 0.2666,
-        "avg_close_set": 0.3889,
-        "market_gap": 0.2897,
-        "confidence": 85.7,
-        "quality_score": 79.9,
-        "strength_gap": 38.49,
-        "h2h_matches": 0
-      },
-      "checks": {
-        "avg_three_set_min": true,
-        "avg_close_set_min": true,
-        "avg_close_set_max": true,
-        "confidence_min": true,
-        "quality_min": true,
-        "market_gap_min": true,
-        "strength_gap_max": false,
-        "h2h_max": true
-      },
-      "failed": [
-        "strength_gap_max"
       ]
     },
     {
@@ -308,38 +178,6 @@
       },
       "failed": [
         "h2h_max"
-      ]
-    },
-    {
-      "pick_id": "346417d19c7806174819ebe34f46fd59",
-      "match": "R. Albot - C. Cretu",
-      "bet": "UNDER 20.0 games",
-      "date": "2026-05-30",
-      "time": "10:00",
-      "odds": 2.1,
-      "confidence": 86.5,
-      "quality_score": 78.9,
-      "metrics": {
-        "avg_three_set": 0.1805,
-        "avg_close_set": 0.3298,
-        "market_gap": 0.3623,
-        "confidence": 86.5,
-        "quality_score": 78.9,
-        "strength_gap": 51.62,
-        "h2h_matches": 0
-      },
-      "checks": {
-        "avg_three_set_min": true,
-        "avg_close_set_min": true,
-        "avg_close_set_max": true,
-        "confidence_min": true,
-        "quality_min": true,
-        "market_gap_min": true,
-        "strength_gap_max": false,
-        "h2h_max": true
-      },
-      "failed": [
-        "strength_gap_max"
       ]
     },
     {
@@ -376,38 +214,6 @@
       ]
     },
     {
-      "pick_id": "7dc6df1121f9ce8f4073973744935185",
-      "match": "M. Vogt - P. Lovric",
-      "bet": "OVER 20.5 games",
-      "date": "2026-05-30",
-      "time": "10:00",
-      "odds": 1.96,
-      "confidence": 83.5,
-      "quality_score": 78.4,
-      "metrics": {
-        "avg_three_set": 0.375,
-        "avg_close_set": 0.4292,
-        "market_gap": 0.1966,
-        "confidence": 83.5,
-        "quality_score": 78.4,
-        "strength_gap": 3.18,
-        "h2h_matches": 0
-      },
-      "checks": {
-        "avg_three_set_min": true,
-        "avg_close_set_min": true,
-        "avg_close_set_max": true,
-        "confidence_min": true,
-        "quality_min": true,
-        "market_gap_min": false,
-        "strength_gap_max": true,
-        "h2h_max": true
-      },
-      "failed": [
-        "market_gap_min"
-      ]
-    },
-    {
       "pick_id": "e3d063af88b6ee0dc9913cf1aff7425a",
       "match": "T. Sahtali - I. Almazan Valiente",
       "bet": "UNDER 20.0 games",
@@ -440,20 +246,86 @@
       ]
     },
     {
+      "pick_id": "95d633a6bc56da74edd18dd3ea5213f9",
+      "match": "J. Ruggeri - G. Maristany",
+      "bet": "UNDER 19.5 games",
+      "date": "2026-05-30",
+      "time": "12:00",
+      "odds": 2.08,
+      "confidence": 85.7,
+      "quality_score": 77.7,
+      "metrics": {
+        "avg_three_set": 0.25,
+        "avg_close_set": 0.4166,
+        "market_gap": 0.3881,
+        "confidence": 85.7,
+        "quality_score": 77.7,
+        "strength_gap": 35.6,
+        "h2h_matches": 1
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": true,
+        "strength_gap_max": false,
+        "h2h_max": false
+      },
+      "failed": [
+        "strength_gap_max",
+        "h2h_max"
+      ]
+    },
+    {
+      "pick_id": "271d53ccc287935370a802e93b168e88",
+      "match": "A. Vrancken Peeters - G. Knutson",
+      "bet": "UNDER 20.0 games",
+      "date": "2026-05-30",
+      "time": "11:30",
+      "odds": 2.17,
+      "confidence": 78.4,
+      "quality_score": 77.6,
+      "metrics": {
+        "avg_three_set": 0.1111,
+        "avg_close_set": 0.4537,
+        "market_gap": 0.3368,
+        "confidence": 78.4,
+        "quality_score": 77.6,
+        "strength_gap": 5.56,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": false,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": false,
+        "quality_min": true,
+        "market_gap_min": true,
+        "strength_gap_max": true,
+        "h2h_max": true
+      },
+      "failed": [
+        "avg_three_set_min",
+        "confidence_min"
+      ]
+    },
+    {
       "pick_id": "51b23264899c6e1e084be695c77075ff",
       "match": "A. Kalinskaya - C. Osorio",
       "bet": "UNDER 21.5 games",
       "date": "2026-05-30",
       "time": "13:00",
       "odds": 2.01,
-      "confidence": 83.4,
-      "quality_score": 78.1,
+      "confidence": 82.6,
+      "quality_score": 76.5,
       "metrics": {
         "avg_three_set": 0.2222,
         "avg_close_set": 0.3704,
         "market_gap": 0.0414,
-        "confidence": 83.4,
-        "quality_score": 78.1,
+        "confidence": 82.6,
+        "quality_score": 76.5,
         "strength_gap": 16.12,
         "h2h_matches": 2
       },
@@ -470,6 +342,135 @@
       "failed": [
         "market_gap_min",
         "h2h_max"
+      ]
+    },
+    {
+      "pick_id": "620474640a8d1032fe867ae5961326bc",
+      "match": "L. Klimovicova - T. Martincova",
+      "bet": "UNDER 21.5 games",
+      "date": "2026-05-30",
+      "time": "13:00",
+      "odds": 2.0,
+      "confidence": 88.5,
+      "quality_score": 75.9,
+      "metrics": {
+        "avg_three_set": 0.2222,
+        "avg_close_set": 0.3334,
+        "market_gap": 0.1915,
+        "confidence": 88.5,
+        "quality_score": 75.9,
+        "strength_gap": 17.66,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": false,
+        "strength_gap_max": true,
+        "h2h_max": true
+      },
+      "failed": [
+        "market_gap_min"
+      ]
+    },
+    {
+      "pick_id": "53a6dd755bfc4cec68120a19d2e79345",
+      "match": "M. Fuele - N. Djosic",
+      "bet": "UNDER 19.5 games",
+      "date": "2026-05-30",
+      "time": "11:00",
+      "odds": 2.06,
+      "confidence": 85.7,
+      "quality_score": 74.7,
+      "metrics": {
+        "avg_three_set": 0.1111,
+        "avg_close_set": 0.3403,
+        "market_gap": 0.526,
+        "confidence": 85.7,
+        "quality_score": 74.7,
+        "strength_gap": 11.88,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": false,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": true,
+        "strength_gap_max": true,
+        "h2h_max": true
+      },
+      "failed": [
+        "avg_three_set_min"
+      ]
+    },
+    {
+      "pick_id": "8ecd4fd5c9e1a30fa2ad95d55187e38d",
+      "match": "V. Durasovic - M. Petkovic",
+      "bet": "UNDER 21.5 games",
+      "date": "2026-05-30",
+      "time": "14:00",
+      "odds": 2.0,
+      "confidence": 87.7,
+      "quality_score": 74.2,
+      "metrics": {
+        "avg_three_set": 0.2777,
+        "avg_close_set": 0.3611,
+        "market_gap": 0.2897,
+        "confidence": 87.7,
+        "quality_score": 74.2,
+        "strength_gap": 43.45,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": true,
+        "strength_gap_max": false,
+        "h2h_max": true
+      },
+      "failed": [
+        "strength_gap_max"
+      ]
+    },
+    {
+      "pick_id": "4c49618976d5f6624be82d1c837ac3f1",
+      "match": "A. Nagel - D. Jade",
+      "bet": "UNDER 20.5 games",
+      "date": "2026-05-30",
+      "time": "14:30",
+      "odds": 2.1,
+      "confidence": 78.9,
+      "quality_score": 73.9,
+      "metrics": {
+        "avg_three_set": 0.25,
+        "avg_close_set": 0.325,
+        "market_gap": 0.128,
+        "confidence": 78.9,
+        "quality_score": 73.9,
+        "strength_gap": 6.9,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": false,
+        "quality_min": true,
+        "market_gap_min": false,
+        "strength_gap_max": true,
+        "h2h_max": true
+      },
+      "failed": [
+        "confidence_min",
+        "market_gap_min"
       ]
     }
   ]
