@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T13:05:50.490329+02:00",
+  "generated_at": "2026-05-30T09:04:01.504265+02:00",
   "predictions_file": "data/tennis_predictions.json",
   "predictions_source_format": "dict_with_picks",
   "main_results_file": "data/tennis_results.json",
@@ -7,13 +7,13 @@
   "output_dir": "jure",
   "predictions_loaded": 10,
   "main_results_loaded": 509,
-  "previous_results_loaded": 9,
+  "previous_results_loaded": 13,
   "accepted_from_current_predictions": 5,
   "rejected_from_current_predictions": 5,
-  "active_count": 11,
+  "active_count": 1,
   "results_count": 13,
-  "settled_count": 2,
-  "pending_count": 11,
+  "settled_count": 12,
+  "pending_count": 1,
   "tactic_a": {
     "tour_level": "challenger",
     "bookmakers_min": 6,
@@ -29,15 +29,15 @@
   "stake_b": 0.5,
   "overall": {
     "picks": 13,
-    "settled": 2,
-    "pending": 11,
-    "wins": 1,
-    "losses": 1,
-    "pushes": 0,
-    "stake_sum": 1.25,
-    "profit": 0.325,
-    "roi": 26.0,
-    "winrate": 50.0
+    "settled": 12,
+    "pending": 1,
+    "wins": 2,
+    "losses": 7,
+    "pushes": 3,
+    "stake_sum": 6.75,
+    "profit": -2.3025,
+    "roi": -34.11,
+    "winrate": 22.22
   },
   "by_tactic": {
     "A": {
@@ -54,26 +54,26 @@
     },
     "A+B": {
       "picks": 2,
-      "settled": 0,
-      "pending": 2,
-      "wins": 0,
-      "losses": 0,
+      "settled": 2,
+      "pending": 0,
+      "wins": 1,
+      "losses": 1,
       "pushes": 0,
-      "stake_sum": 0,
-      "profit": 0,
-      "roi": 0.0,
-      "winrate": 0.0
+      "stake_sum": 1.5,
+      "profit": -0.1275,
+      "roi": -8.5,
+      "winrate": 50.0
     },
     "B": {
       "picks": 10,
-      "settled": 1,
-      "pending": 9,
+      "settled": 9,
+      "pending": 1,
       "wins": 0,
-      "losses": 1,
-      "pushes": 0,
-      "stake_sum": 0.5,
-      "profit": -0.5,
-      "roi": -100.0,
+      "losses": 6,
+      "pushes": 3,
+      "stake_sum": 4.5,
+      "profit": -3.0,
+      "roi": -66.67,
       "winrate": 0.0
     }
   }
