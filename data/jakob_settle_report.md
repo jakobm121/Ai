@@ -1,32 +1,32 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-05-29T14:58:32.109870+02:00`
+Generated: `2026-05-30T08:36:36.704607+02:00`
 
-Pending picks: **4**
+Pending picks: **0**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 64 | 32 | 30 | 0 | 2 | 51.61% | +2.60u | 5.58% |
+| 68 | 35 | 31 | 0 | 2 | 53.03% | +4.42u | 8.93% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 3 | 2 | 1 | 0 | 0 | 66.67% | +0.88u | 39.29% |
+| 4 | 3 | 1 | 0 | 0 | 75.00% | +1.82u | 60.70% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 46 | 22 | 24 | 0 | 0 | 47.83% | -0.50u | -1.45% |
+| 50 | 25 | 25 | 0 | 0 | 50.00% | +1.32u | 3.53% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 31 | 12 | 19 | 0 | 0 | 38.71% | -4.60u | -19.78% |
+| 34 | 14 | 20 | 0 | 0 | 41.18% | -3.64u | -14.28% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
@@ -44,12 +44,16 @@ Pending picks: **4**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 56 | 28 | 26 | 0 | 2 | 51.85% | +2.86u | 7.06% |
+| 60 | 31 | 27 | 0 | 2 | 53.45% | +4.68u | 10.76% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-05-29 | 18:30 | 5 | Y. H. Hsu - J. Vasami | UNDER 20.5 games | 2.15 | ✅ win | 71.66 | 17 | 2-6, 3-6 | +0.86u |
+| 2026-05-29 | 17:30 | 1 | P. Stearns - B. Bencic | UNDER 20.5 games | 2.13 | ✅ win | 77.12 | 18 | 3-6, 3-6 | +0.85u |
+| 2026-05-29 | 13:30 | 3 | M. Andreeva - M. Bouzkova | UNDER 18.5 games | 2.15 | ✅ win | 72.72 | 18 | 6-4, 6-2 | +0.86u |
+| 2026-05-29 | 13:15 | 1 | J. Teichmann - K. Muchova | UNDER 18.5 games | 2.12 | ❌ loss | 77.66 | 19 | 6-1, 7-5 | -0.75u |
 | 2026-05-29 | 11:30 | 3 | D. Blanch - P. Fajta | UNDER 20.5 games | 2.03 | ✅ win | 73.61 | 17 | 6-2, 6-3 | +0.77u |
 | 2026-05-29 | 11:00 | 4 | L. Neumayer - R. Bertola | UNDER 20.0 games | 2.11 | ❌ loss | 72.83 | 23 | 6-4, 7-6 | -0.75u |
 | 2026-05-29 | 10:00 | 6 | D. Markovina - D. Ajdukovic | UNDER 18.5 games | 2.15 | ✅ win | 70.86 | 17 | 4-6, 1-6 | +0.86u |

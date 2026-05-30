@@ -1,3188 +1,12 @@
 {
-  "generated_at": "2026-05-29T14:58:26.109790+02:00",
+  "generated_at": "2026-05-30T08:36:33.927633+02:00",
   "results_file": "data/jakob_results.json",
-  "pending_before": 7,
-  "updated": 3,
-  "still_pending": 4,
+  "pending_before": 4,
+  "updated": 4,
+  "still_pending": 0,
   "not_found": 0,
   "errors": [],
   "items": [
-    {
-      "event_key": 12131827,
-      "pick_id": "88027e7332fe483627c582deeae70d80",
-      "match": "D. Markovina - D. Ajdukovic",
-      "bet": "UNDER 18.5 games",
-      "side": "under",
-      "line": 18.5,
-      "odds": 2.15,
-      "stake": 0.75,
-      "jakob_score": 70.86151836,
-      "rank": 6,
-      "rank_tier": "elite",
-      "status": "settled",
-      "api_status": "Finished",
-      "result": "win",
-      "total_games": 17,
-      "final_score": "4-6, 1-6",
-      "profit": 0.862,
-      "raw_scores": [
-        {
-          "score_first": "4",
-          "score_second": "6",
-          "score_set": "1"
-        },
-        {
-          "score_first": "1",
-          "score_second": "6",
-          "score_set": "2"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "0 - 2",
-        "event_game_result": "-",
-        "event_winner": "Second Player",
-        "event_status": "Finished",
-        "pointbypoint": [
-          {
-            "set_number": "Set 1",
-            "number_game": "1",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "1 - 0",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "2",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "1 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "3",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "2 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "4",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "2 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "5",
-            "player_served": "First Player",
-            "serve_winner": "Second Player",
-            "serve_lost": "First Player",
-            "score": "2 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "6",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "2 - 4",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "7",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "3 - 4",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "8",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "9",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "10",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "11",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "8",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "3 - 5",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "9",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "4 - 5",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "8",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "9",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "10",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "11",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "12",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "13",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "14",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "15",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "16",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "17",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "18",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "19",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "10",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "4 - 6",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "1",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "1 - 0",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "2",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "1 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "40 - A",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "8",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "9",
-                "score": "40 - A",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "10",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "11",
-                "score": "40 - A",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "3",
-            "player_served": "First Player",
-            "serve_winner": "Second Player",
-            "serve_lost": "First Player",
-            "score": "1 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "4",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "1 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "5",
-            "player_served": "First Player",
-            "serve_winner": "Second Player",
-            "serve_lost": "First Player",
-            "score": "1 - 4",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "8",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "9",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "10",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "11",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "12",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "13",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "6",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "1 - 5",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "7",
-            "player_served": "First Player",
-            "serve_winner": "Second Player",
-            "serve_lost": "First Player",
-            "score": "1 - 6",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": "First Play",
-                "set_point": "First Play",
-                "match_point": "First Play"
-              }
-            ]
-          }
-        ],
-        "scores": [
-          {
-            "score_first": "4",
-            "score_second": "6",
-            "score_set": "1"
-          },
-          {
-            "score_first": "1",
-            "score_second": "6",
-            "score_set": "2"
-          }
-        ]
-      }
-    },
-    {
-      "event_key": 12131749,
-      "pick_id": "897d0593663d36a4efacffa8f2b12f85",
-      "match": "L. Neumayer - R. Bertola",
-      "bet": "UNDER 20.0 games",
-      "side": "under",
-      "line": 20.0,
-      "odds": 2.11,
-      "stake": 0.75,
-      "jakob_score": 72.82981707,
-      "rank": 4,
-      "rank_tier": "elite",
-      "status": "settled",
-      "api_status": "Finished",
-      "result": "loss",
-      "total_games": 23,
-      "final_score": "6-4, 7-6",
-      "profit": -0.75,
-      "raw_scores": [
-        {
-          "score_first": "6",
-          "score_second": "4",
-          "score_set": "1"
-        },
-        {
-          "score_first": "7.7",
-          "score_second": "6.3",
-          "score_set": "2"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "2 - 0",
-        "event_game_result": "-",
-        "event_winner": "First Player",
-        "event_status": "Finished",
-        "pointbypoint": [
-          {
-            "set_number": "Set 1",
-            "number_game": "1",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "0 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "2",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "1 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "3",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "2 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "A - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "8",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "9",
-                "score": "A - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "10",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "11",
-                "score": "A - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "12",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "13",
-                "score": "A - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "4",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "3 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "5",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "3 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "6",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "4 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "40 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "7",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "4 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "8",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "5 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "40 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "9",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "5 - 4",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "10",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "6 - 4",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "1",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "0 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "2",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "1 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "3",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "1 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "4",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "2 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "8",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "9",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "10",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "11",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "12",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "13",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "14",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "15",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "5",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "2 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "6",
-            "player_served": "First Player",
-            "serve_winner": "Second Player",
-            "serve_lost": "First Player",
-            "score": "2 - 4",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "7",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "3 - 4",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "8",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "4 - 4",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "9",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "5 - 4",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "10",
-            "player_served": "First Player",
-            "serve_winner": "Second Player",
-            "serve_lost": "First Player",
-            "score": "5 - 5",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "11",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "5 - 6",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "40 - A",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "12",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "6 - 6",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "8",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "9",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "10",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "11",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "12",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "13",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2 TieBreak",
-            "number_game": "1",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "1 - 0"
-          },
-          {
-            "set_number": "Set 2 TieBreak",
-            "number_game": "2",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "2 - 0"
-          },
-          {
-            "set_number": "Set 2 TieBreak",
-            "number_game": "3",
-            "player_served": "First Player",
-            "serve_winner": "Second Player",
-            "serve_lost": "First Player",
-            "score": "2 - 1"
-          },
-          {
-            "set_number": "Set 2 TieBreak",
-            "number_game": "4",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "3 - 1"
-          },
-          {
-            "set_number": "Set 2 TieBreak",
-            "number_game": "5",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "4 - 1"
-          },
-          {
-            "set_number": "Set 2 TieBreak",
-            "number_game": "6",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "5 - 1"
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "13",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "7 - 6",
-            "points": [
-              {
-                "number_point": "1",
-                "score": " - ",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2 TieBreak",
-            "number_game": "7",
-            "player_served": "First Player",
-            "serve_winner": "Second Player",
-            "serve_lost": "First Player",
-            "score": "5 - 2"
-          },
-          {
-            "set_number": "Set 2 TieBreak",
-            "number_game": "8",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "6 - 2"
-          },
-          {
-            "set_number": "Set 2 TieBreak",
-            "number_game": "9",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "6 - 3"
-          },
-          {
-            "set_number": "Set 2 TieBreak",
-            "number_game": "10",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "7 - 3"
-          }
-        ],
-        "scores": [
-          {
-            "score_first": "6",
-            "score_second": "4",
-            "score_set": "1"
-          },
-          {
-            "score_first": "7.7",
-            "score_second": "6.3",
-            "score_set": "2"
-          }
-        ]
-      }
-    },
-    {
-      "event_key": 12131813,
-      "pick_id": "47475ceaeb19fad3327062401fa2bbd9",
-      "match": "D. Blanch - P. Fajta",
-      "bet": "UNDER 20.5 games",
-      "side": "under",
-      "line": 20.5,
-      "odds": 2.03,
-      "stake": 0.75,
-      "jakob_score": 73.61088387,
-      "rank": 3,
-      "rank_tier": "elite",
-      "status": "settled",
-      "api_status": "Finished",
-      "result": "win",
-      "total_games": 17,
-      "final_score": "6-2, 6-3",
-      "profit": 0.772,
-      "raw_scores": [
-        {
-          "score_first": "6",
-          "score_second": "2",
-          "score_set": "1"
-        },
-        {
-          "score_first": "6",
-          "score_second": "3",
-          "score_set": "2"
-        }
-      ],
-      "score_debug": {
-        "event_final_result": "2 - 0",
-        "event_game_result": "-",
-        "event_winner": "First Player",
-        "event_status": "Finished",
-        "pointbypoint": [
-          {
-            "set_number": "Set 1",
-            "number_game": "1",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "0 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "2",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "1 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "0 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "0 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "3",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "2 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "40 - A",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "8",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "9",
-                "score": "A - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "10",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "11",
-                "score": "A - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "4",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "3 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "5",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "3 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "6",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "4 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "7",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "5 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "40 - 0",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 1",
-            "number_game": "8",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "6 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "1",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "0 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "2",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "1 - 1",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "8",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "9",
-                "score": "40 - A",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "10",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "11",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "12",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "13",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "3",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "1 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "30 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "4",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "2 - 2",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "A - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "5",
-            "player_served": "Second Player",
-            "serve_winner": "Second Player",
-            "serve_lost": null,
-            "score": "2 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "15 - 30",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "15 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "30 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "6",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "3 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "0 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "15 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "7",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "4 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "30 - 15",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "4",
-                "score": "40 - 15",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "5",
-                "score": "40 - 30",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "6",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "7",
-                "score": "A - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "8",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "9",
-                "score": "40 - A",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "10",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "11",
-                "score": "A - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "12",
-                "score": "40 - 40",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "13",
-                "score": "A - 40",
-                "break_point": "First Play",
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "8",
-            "player_served": "First Player",
-            "serve_winner": "First Player",
-            "serve_lost": null,
-            "score": "5 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "40 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              }
-            ]
-          },
-          {
-            "set_number": "Set 2",
-            "number_game": "9",
-            "player_served": "Second Player",
-            "serve_winner": "First Player",
-            "serve_lost": "Second Player",
-            "score": "6 - 3",
-            "points": [
-              {
-                "number_point": "1",
-                "score": "15 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "2",
-                "score": "30 - 0",
-                "break_point": null,
-                "set_point": null,
-                "match_point": null
-              },
-              {
-                "number_point": "3",
-                "score": "40 - 0",
-                "break_point": "First Play",
-                "set_point": "First Play",
-                "match_point": "First Play"
-              }
-            ]
-          }
-        ],
-        "scores": [
-          {
-            "score_first": "6",
-            "score_second": "2",
-            "score_set": "1"
-          },
-          {
-            "score_first": "6",
-            "score_second": "3",
-            "score_set": "2"
-          }
-        ]
-      }
-    },
     {
       "event_key": 12131754,
       "pick_id": "7e0521042de0d0cdaf32a8d8a79fc929",
@@ -3195,24 +19,29 @@
       "jakob_score": 77.6606557,
       "rank": 1,
       "rank_tier": "elite",
-      "status": "not_finished",
-      "api_status": "Set 2",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "loss",
+      "total_games": 19,
+      "final_score": "6-1, 7-5",
+      "profit": -0.75,
       "raw_scores": [
         {
           "score_first": "6",
           "score_second": "1",
           "score_set": "1"
+        },
+        {
+          "score_first": "7",
+          "score_second": "5",
+          "score_set": "2"
         }
       ],
       "score_debug": {
-        "event_final_result": "1 - 0",
-        "event_game_result": "40 - 30",
-        "event_winner": null,
-        "event_status": "Set 2",
+        "event_final_result": "2 - 0",
+        "event_game_result": "-",
+        "event_winner": "First Player",
+        "event_status": "Finished",
         "pointbypoint": [
           {
             "set_number": "Set 1",
@@ -3542,6 +371,693 @@
                 "match_point": null
               }
             ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "1",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "0 - 1",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "40 - A",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "8",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "9",
+                "score": "40 - A",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "10",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "11",
+                "score": "40 - A",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "2",
+            "player_served": "First Player",
+            "serve_winner": "Second Player",
+            "serve_lost": "First Player",
+            "score": "0 - 2",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "3",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "0 - 3",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "4",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "1 - 3",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "A - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "5",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "1 - 4",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "40 - 0",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "40 - A",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "6",
+            "player_served": "First Player",
+            "serve_winner": "Second Player",
+            "serve_lost": "First Player",
+            "score": "1 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "0 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "40 - A",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "8",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "9",
+                "score": "A - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "10",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "11",
+                "score": "A - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "12",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "13",
+                "score": "40 - A",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "14",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "15",
+                "score": "40 - A",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "7",
+            "player_served": "Second Player",
+            "serve_winner": "First Player",
+            "serve_lost": "Second Player",
+            "score": "2 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "8",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "3 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "9",
+            "player_served": "Second Player",
+            "serve_winner": "First Player",
+            "serve_lost": "Second Player",
+            "score": "4 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "10",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "5 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "40 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "11",
+            "player_served": "Second Player",
+            "serve_winner": "First Player",
+            "serve_lost": "Second Player",
+            "score": "6 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "0 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "A - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "12",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "7 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": null,
+                "set_point": "First Play",
+                "match_point": "First Play"
+              }
+            ]
           }
         ],
         "scores": [
@@ -3549,6 +1065,11 @@
             "score_first": "6",
             "score_second": "1",
             "score_set": "1"
+          },
+          {
+            "score_first": "7",
+            "score_second": "5",
+            "score_set": "2"
           }
         ]
       }
@@ -3565,24 +1086,29 @@
       "jakob_score": 72.72010326,
       "rank": 3,
       "rank_tier": "elite",
-      "status": "not_finished",
-      "api_status": "Set 2",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "win",
+      "total_games": 18,
+      "final_score": "6-4, 6-2",
+      "profit": 0.862,
       "raw_scores": [
         {
           "score_first": "6",
           "score_second": "4",
           "score_set": "1"
+        },
+        {
+          "score_first": "6",
+          "score_second": "2",
+          "score_set": "2"
         }
       ],
       "score_debug": {
-        "event_final_result": "1 - 0",
-        "event_game_result": "30 - 40",
-        "event_winner": null,
-        "event_status": "Set 2",
+        "event_final_result": "2 - 0",
+        "event_game_result": "-",
+        "event_winner": "First Player",
+        "event_status": "Finished",
         "pointbypoint": [
           {
             "set_number": "Set 1",
@@ -4075,6 +1601,387 @@
                 "match_point": null
               }
             ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "1",
+            "player_served": "Second Player",
+            "serve_winner": "First Player",
+            "serve_lost": "Second Player",
+            "score": "1 - 0",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "A - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "2",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "2 - 0",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "A - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "3",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "2 - 1",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "40 - 0",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "40 - A",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "4",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "3 - 1",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "40 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "5",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "3 - 2",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "6",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "4 - 2",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "40 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "7",
+            "player_served": "Second Player",
+            "serve_winner": "First Player",
+            "serve_lost": "Second Player",
+            "score": "5 - 2",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "40 - 0",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "8",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "6 - 2",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": null,
+                "set_point": "First Play",
+                "match_point": "First Play"
+              }
+            ]
           }
         ],
         "scores": [
@@ -4082,6 +1989,11 @@
             "score_first": "6",
             "score_second": "4",
             "score_set": "1"
+          },
+          {
+            "score_first": "6",
+            "score_second": "2",
+            "score_set": "2"
           }
         ]
       }
@@ -4098,30 +2010,837 @@
       "jakob_score": 77.1234698,
       "rank": 1,
       "rank_tier": "elite",
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "win",
+      "total_games": 18,
+      "final_score": "3-6, 3-6",
+      "profit": 0.847,
       "raw_scores": [
         {
-          "score_first": "0",
-          "score_second": "0",
+          "score_first": "3",
+          "score_second": "6",
           "score_set": "1"
+        },
+        {
+          "score_first": "3",
+          "score_second": "6",
+          "score_set": "2"
         }
       ],
       "score_debug": {
-        "event_final_result": "-",
+        "event_final_result": "0 - 2",
         "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
+        "event_winner": "Second Player",
+        "event_status": "Finished",
+        "pointbypoint": [
+          {
+            "set_number": "Set 1",
+            "number_game": "1",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "0 - 1",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "2",
+            "player_served": "First Player",
+            "serve_winner": "Second Player",
+            "serve_lost": "First Player",
+            "score": "0 - 2",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "3",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "0 - 3",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "4",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "1 - 3",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "5",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "1 - 4",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "0 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "6",
+            "player_served": "First Player",
+            "serve_winner": "Second Player",
+            "serve_lost": "First Player",
+            "score": "1 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "7",
+            "player_served": "Second Player",
+            "serve_winner": "First Player",
+            "serve_lost": "Second Player",
+            "score": "2 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "40 - 0",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "8",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "3 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "9",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "3 - 6",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "1",
+            "player_served": "First Player",
+            "serve_winner": "Second Player",
+            "serve_lost": "First Player",
+            "score": "0 - 1",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "40 - A",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "2",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "0 - 2",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "0 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "3",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "1 - 2",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "4",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "1 - 3",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "0 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "5",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "2 - 3",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "A - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "8",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "9",
+                "score": "A - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "10",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "11",
+                "score": "A - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "6",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "2 - 4",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "0 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "7",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "3 - 4",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "8",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "3 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "9",
+            "player_served": "First Player",
+            "serve_winner": "Second Player",
+            "serve_lost": "First Player",
+            "score": "3 - 6",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": "First Play",
+                "set_point": "First Play",
+                "match_point": "First Play"
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "40 - A",
+                "break_point": "First Play",
+                "set_point": "First Play",
+                "match_point": "First Play"
+              }
+            ]
+          }
+        ],
         "scores": [
           {
-            "score_first": "0",
-            "score_second": "0",
+            "score_first": "3",
+            "score_second": "6",
             "score_set": "1"
+          },
+          {
+            "score_first": "3",
+            "score_second": "6",
+            "score_set": "2"
           }
         ]
       }
@@ -4138,64 +2857,952 @@
       "jakob_score": 71.65990485,
       "rank": 5,
       "rank_tier": "elite",
-      "status": "not_finished",
-      "api_status": "",
-      "result": "pending",
-      "total_games": null,
-      "final_score": null,
-      "profit": null,
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "win",
+      "total_games": 17,
+      "final_score": "2-6, 3-6",
+      "profit": 0.862,
       "raw_scores": [
         {
-          "score_first": "0",
-          "score_second": "0",
+          "score_first": "2",
+          "score_second": "6",
           "score_set": "1"
+        },
+        {
+          "score_first": "3",
+          "score_second": "6",
+          "score_set": "2"
         }
       ],
       "score_debug": {
-        "event_final_result": "-",
+        "event_final_result": "0 - 2",
         "event_game_result": "-",
-        "event_winner": null,
-        "event_status": "",
-        "pointbypoint": [],
+        "event_winner": "Second Player",
+        "event_status": "Finished",
+        "pointbypoint": [
+          {
+            "set_number": "Set 1",
+            "number_game": "1",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "0 - 1",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "2",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "1 - 1",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "40 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "3",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "1 - 2",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "4",
+            "player_served": "First Player",
+            "serve_winner": "Second Player",
+            "serve_lost": "First Player",
+            "score": "1 - 3",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "A - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "8",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "9",
+                "score": "40 - A",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "5",
+            "player_served": "Second Player",
+            "serve_winner": "First Player",
+            "serve_lost": "Second Player",
+            "score": "2 - 3",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "0 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "40 - A",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "8",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "9",
+                "score": "A - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "6",
+            "player_served": "First Player",
+            "serve_winner": "Second Player",
+            "serve_lost": "First Player",
+            "score": "2 - 4",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "40 - A",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "7",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "2 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 1",
+            "number_game": "8",
+            "player_served": "First Player",
+            "serve_winner": "Second Player",
+            "serve_lost": "First Player",
+            "score": "2 - 6",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "40 - A",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "8",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "9",
+                "score": "40 - A",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "1",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "0 - 1",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "0 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "2",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "1 - 1",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "40 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "3",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "1 - 2",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "0 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "4",
+            "player_served": "First Player",
+            "serve_winner": "Second Player",
+            "serve_lost": "First Player",
+            "score": "1 - 3",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "15 - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "5",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "1 - 4",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "40 - 15",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "A - 40",
+                "break_point": "First Play",
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "8",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "9",
+                "score": "40 - A",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "6",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "2 - 4",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "7",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "2 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "15 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "40 - A",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "8",
+            "player_served": "First Player",
+            "serve_winner": "First Player",
+            "serve_lost": null,
+            "score": "3 - 5",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "0 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "0 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "15 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "40 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "6",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "7",
+                "score": "A - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "8",
+                "score": "40 - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "9",
+                "score": "A - 40",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              }
+            ]
+          },
+          {
+            "set_number": "Set 2",
+            "number_game": "9",
+            "player_served": "Second Player",
+            "serve_winner": "Second Player",
+            "serve_lost": null,
+            "score": "3 - 6",
+            "points": [
+              {
+                "number_point": "1",
+                "score": "15 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "2",
+                "score": "30 - 0",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "3",
+                "score": "30 - 15",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "4",
+                "score": "30 - 30",
+                "break_point": null,
+                "set_point": null,
+                "match_point": null
+              },
+              {
+                "number_point": "5",
+                "score": "30 - 40",
+                "break_point": null,
+                "set_point": "First Play",
+                "match_point": "First Play"
+              }
+            ]
+          }
+        ],
         "scores": [
           {
-            "score_first": "0",
-            "score_second": "0",
+            "score_first": "2",
+            "score_second": "6",
             "score_set": "1"
+          },
+          {
+            "score_first": "3",
+            "score_second": "6",
+            "score_set": "2"
           }
         ]
       }
     }
   ],
-  "pending_after": 4,
+  "pending_after": 0,
   "summary_after_settle": {
-    "generated_at": "2026-05-29T14:58:32.109870+02:00",
+    "generated_at": "2026-05-30T08:36:36.704607+02:00",
     "timezone": "Europe/Ljubljana",
     "results_file": "data/jakob_results.json",
-    "pending": 4,
+    "pending": 0,
     "all_settled": {
-      "bets": 64,
-      "graded": 62,
-      "wins": 32,
-      "losses": 30,
+      "bets": 68,
+      "graded": 66,
+      "wins": 35,
+      "losses": 31,
       "pushes": 0,
       "voids": 2,
-      "stake": 46.5,
-      "profit": 2.597,
-      "win_rate_percent": 51.61,
-      "roi_percent": 5.58
+      "stake": 49.5,
+      "profit": 4.418,
+      "win_rate_percent": 53.03,
+      "roi_percent": 8.93
     },
     "settled_today": {
-      "bets": 3,
-      "graded": 3,
-      "wins": 2,
+      "bets": 4,
+      "graded": 4,
+      "wins": 3,
       "losses": 1,
       "pushes": 0,
       "voids": 0,
-      "stake": 2.25,
-      "profit": 0.884,
-      "win_rate_percent": 66.67,
-      "roi_percent": 39.29
+      "stake": 3.0,
+      "profit": 1.821,
+      "win_rate_percent": 75.0,
+      "roi_percent": 60.7
     },
     "over": {
       "bets": 8,
@@ -4210,40 +3817,40 @@
       "roi_percent": -4.37
     },
     "under": {
-      "bets": 56,
-      "graded": 54,
-      "wins": 28,
-      "losses": 26,
+      "bets": 60,
+      "graded": 58,
+      "wins": 31,
+      "losses": 27,
       "pushes": 0,
       "voids": 2,
-      "stake": 40.5,
-      "profit": 2.859,
-      "win_rate_percent": 51.85,
-      "roi_percent": 7.06
+      "stake": 43.5,
+      "profit": 4.68,
+      "win_rate_percent": 53.45,
+      "roi_percent": 10.76
     },
     "score_70_plus": {
-      "bets": 46,
-      "graded": 46,
-      "wins": 22,
-      "losses": 24,
+      "bets": 50,
+      "graded": 50,
+      "wins": 25,
+      "losses": 25,
       "pushes": 0,
       "voids": 0,
-      "stake": 34.5,
-      "profit": -0.499,
-      "win_rate_percent": 47.83,
-      "roi_percent": -1.45
+      "stake": 37.5,
+      "profit": 1.322,
+      "win_rate_percent": 50.0,
+      "roi_percent": 3.53
     },
     "score_72_plus": {
-      "bets": 31,
-      "graded": 31,
-      "wins": 12,
-      "losses": 19,
+      "bets": 34,
+      "graded": 34,
+      "wins": 14,
+      "losses": 20,
       "pushes": 0,
       "voids": 0,
-      "stake": 23.25,
-      "profit": -4.6,
-      "win_rate_percent": 38.71,
-      "roi_percent": -19.78
+      "stake": 25.5,
+      "profit": -3.641,
+      "win_rate_percent": 41.18,
+      "roi_percent": -14.28
     },
     "odds_210_or_less": {
       "bets": 41,
