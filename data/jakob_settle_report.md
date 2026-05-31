@@ -1,55 +1,61 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-05-30T08:36:36.704607+02:00`
+Generated: `2026-05-31T10:24:54.112443+02:00`
 
-Pending picks: **0**
+Pending picks: **7**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 68 | 35 | 31 | 0 | 2 | 53.03% | +4.42u | 8.93% |
+| 74 | 38 | 34 | 0 | 2 | 52.78% | +4.40u | 8.15% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 4 | 3 | 1 | 0 | 0 | 75.00% | +1.82u | 60.70% |
+| 6 | 3 | 3 | 0 | 0 | 50.00% | -0.02u | -0.36% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 50 | 25 | 25 | 0 | 0 | 50.00% | +1.32u | 3.53% |
+| 56 | 28 | 28 | 0 | 0 | 50.00% | +1.31u | 3.11% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 34 | 14 | 20 | 0 | 0 | 41.18% | -3.64u | -14.28% |
+| 39 | 17 | 22 | 0 | 0 | 43.59% | -2.91u | -9.94% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 28 | 15 | 13 | 0 | 0 | 53.57% | +1.73u | 8.24% |
+| 32 | 17 | 15 | 0 | 0 | 53.12% | +1.63u | 6.80% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 8 | 4 | 4 | 0 | 0 | 50.00% | -0.26u | -4.37% |
+| 9 | 5 | 4 | 0 | 0 | 55.56% | +0.40u | 5.90% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 60 | 31 | 27 | 0 | 2 | 53.45% | +4.68u | 10.76% |
+| 65 | 33 | 30 | 0 | 2 | 52.38% | +4.00u | 8.47% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-05-30 | 16:00 | 3 | C. Gauff - A. Potapova | UNDER 20.5 games | 2.01 | ❌ loss | 74.85 | 33 | 6-4, 6-7, 4-6 | -0.75u |
+| 2026-05-30 | 15:15 | 6 | M. Krumich - M. Erhard | UNDER 20.5 games | 2.20 | ❌ loss | 71.59 | 27 | 6-3, 2-6, 6-4 | -0.75u |
+| 2026-05-30 | 15:00 | 4 | V. Mboko - M. Keys | OVER 21.5 games | 1.88 | ✅ win | 74.65 | 33 | 3-6, 7-5, 5-7 | +0.66u |
+| 2026-05-30 | 14:00 | 2 | D. Parry - A. Anisimova | UNDER 19.5 games | 2.10 | ❌ loss | 77.29 | 32 | 6-3, 4-6, 7-6 | -0.75u |
+| 2026-05-30 | 12:00 | 5 | D. Shnaider - O. Oliynykova | UNDER 20.5 games | 1.99 | ✅ win | 72.44 | 19 | 7-5, 6-1 | +0.74u |
+| 2026-05-30 | 11:30 | 1 | A. Krueger - H. Klugman | UNDER 19.5 games | 2.11 | ✅ win | 81.48 | 15 | 6-1, 6-2 | +0.83u |
 | 2026-05-29 | 18:30 | 5 | Y. H. Hsu - J. Vasami | UNDER 20.5 games | 2.15 | ✅ win | 71.66 | 17 | 2-6, 3-6 | +0.86u |
 | 2026-05-29 | 17:30 | 1 | P. Stearns - B. Bencic | UNDER 20.5 games | 2.13 | ✅ win | 77.12 | 18 | 3-6, 3-6 | +0.85u |
 | 2026-05-29 | 13:30 | 3 | M. Andreeva - M. Bouzkova | UNDER 18.5 games | 2.15 | ✅ win | 72.72 | 18 | 6-4, 6-2 | +0.86u |
