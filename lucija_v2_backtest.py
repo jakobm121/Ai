@@ -35,13 +35,13 @@ RULES_V1 = {
 # Ideja: za under hočemo manj 3-set in manj close-set potenciala.
 RULES_V2 = {
     "side": "under",
-    "avg_close_set_max": 0.36,
-    "avg_three_set_max": 0.36,
-    "confidence_min": 79,
+    "avg_close_set_max": 0.35,
+    "avg_three_set_max": 0.35,
+    "confidence_min": 80,
     "h2h_max": 0,
-    "market_gap_min": 0.27,
-    "quality_min": 70,
-    "strength_gap_max": 33,
+    "market_gap_min": 0.25,
+    "quality_min": 72,
+    "strength_gap_max": 30,
 }
 
 # OVER test.
