@@ -4330,7 +4330,7 @@
     "first_strength_score": 81.9,
     "second_strength_score": 57.1,
     "h2h_matches": 0,
-    "result": "pending",
+    "result": "loss",
     "created_at": "2026-05-31T10:16:15.938318+02:00",
     "reasoning": "Lucija selected UNDER 20.5 games in N. Vukadin - D. Ajdukovic using optimizer rule: confidence >= 80, quality >= 72, market_gap >= 0.25, strength_gap <= 30, h2h <= 0, avg_three_set >= 0.15, avg_close_set between 0.2 and 0.55.",
     "source_pick_id": "00174ceff7fa57e43438be36bf37f81b",
@@ -4364,7 +4364,15 @@
       "strength_gap_max": true,
       "h2h_max": true
     },
-    "profit": null
+    "profit": -1.0,
+    "settled_at": "2026-06-01T01:50:18.938269+02:00",
+    "settled_status": "Finished",
+    "event_winner": "First Player",
+    "final_score": "2-6, 7-5, 6-3",
+    "total_games": 29,
+    "settled_from": "data/tennis_totals_results.json",
+    "settled_source_pick_id": "00174ceff7fa57e43438be36bf37f81b",
+    "lucija_settled_at": "2026-06-01T01:50:55.811026+02:00"
   },
   {
     "pick_id": "cd29ea5cb98911c6f24f8ba7c4257dc9",
@@ -4497,7 +4505,7 @@
     "first_strength_score": 78.72,
     "second_strength_score": 50.12,
     "h2h_matches": 0,
-    "result": "pending",
+    "result": "win",
     "created_at": "2026-05-31T10:16:15.938427+02:00",
     "reasoning": "Lucija selected UNDER 19.0 games in K. Sultanov - T. Chavez using optimizer rule: confidence >= 80, quality >= 72, market_gap >= 0.25, strength_gap <= 30, h2h <= 0, avg_three_set >= 0.15, avg_close_set between 0.2 and 0.55.",
     "source_pick_id": "427d76ee646548157e9066358a42d322",
@@ -4531,6 +4539,14 @@
       "strength_gap_max": true,
       "h2h_max": true
     },
-    "profit": null
+    "profit": 1.04,
+    "settled_at": "2026-06-01T01:50:19.606100+02:00",
+    "settled_status": "Finished",
+    "event_winner": "First Player",
+    "final_score": "6-0, 7-5",
+    "total_games": 18,
+    "settled_from": "data/tennis_totals_results.json",
+    "settled_source_pick_id": "427d76ee646548157e9066358a42d322",
+    "lucija_settled_at": "2026-06-01T01:50:55.811039+02:00"
   }
 ]
