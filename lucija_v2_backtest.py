@@ -42,7 +42,7 @@ RULES_V2 = {
     "market_gap_min": 0.27,
     "quality_min": 70,
     "strength_gap_max": 33,
-}i
+}
 
 # OVER test.
 # Kontra logika: za over hočemo več close-set / 3-set potenciala.
