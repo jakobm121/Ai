@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-30T09:11:49.754178+02:00",
+  "generated_at": "2026-05-31T22:33:14.269188+02:00",
   "source_file": "data/tennis_totals_results.json",
-  "source_count": 518,
-  "settled_count": 500,
-  "v1_count": 153,
-  "v2_count": 98,
-  "v3_count": 60,
+  "source_count": 542,
+  "settled_count": 523,
+  "v1_count": 158,
+  "v2_count": 92,
+  "v3_count": 63,
   "debug_sample": [
     {
       "pick_id": "5e84bbc19d5d5b47e050b272f9f1b257",
@@ -120,6 +120,7 @@
       "v1_failed": [],
       "v2_failed": [
         "side",
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": []
@@ -814,6 +815,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -1260,6 +1262,7 @@
       "v1_failed": [],
       "v2_failed": [
         "side",
+        "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -1426,6 +1429,7 @@
       ],
       "v2_failed": [
         "side",
+        "quality_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -1709,6 +1713,8 @@
       ],
       "v2_failed": [
         "side",
+        "quality_min",
+        "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -1875,6 +1881,7 @@
         "strength_gap_max"
       ],
       "v2_failed": [
+        "market_gap_min",
         "strength_gap_max",
         "avg_close_set_max"
       ],
@@ -2414,6 +2421,7 @@
       "v1_failed": [],
       "v2_failed": [
         "side",
+        "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -2537,6 +2545,7 @@
         "confidence_min"
       ],
       "v2_failed": [
+        "confidence_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -2619,6 +2628,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -2658,6 +2668,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "market_gap_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
@@ -2739,6 +2750,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "strength_gap_max",
         "avg_close_set_max"
       ],
@@ -3118,6 +3130,8 @@
         "quality_min"
       ],
       "v2_failed": [
+        "confidence_min",
+        "quality_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
@@ -3462,6 +3476,7 @@
       ],
       "v2_failed": [
         "side",
+        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
@@ -3516,7 +3531,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -3539,7 +3554,9 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "market_gap_min"
+      ],
       "v3_failed": [
         "side",
         "avg_three_set_min"
@@ -3985,6 +4002,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -4027,6 +4045,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "strength_gap_max",
         "avg_close_set_max"
       ],
@@ -4531,6 +4550,7 @@
       ],
       "v2_failed": [
         "side",
+        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
@@ -4613,6 +4633,9 @@
         "quality_min"
       ],
       "v2_failed": [
+        "confidence_min",
+        "quality_min",
+        "market_gap_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
@@ -4655,6 +4678,7 @@
         "quality_min"
       ],
       "v2_failed": [
+        "quality_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -5187,6 +5211,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -5396,6 +5421,8 @@
         "market_gap_min"
       ],
       "v2_failed": [
+        "confidence_min",
+        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
@@ -6192,7 +6219,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -6215,7 +6242,9 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "market_gap_min"
+      ],
       "v3_failed": [
         "side",
         "avg_three_set_min",
@@ -6340,6 +6369,7 @@
         "market_gap_min"
       ],
       "v2_failed": [
+        "quality_min",
         "market_gap_min"
       ],
       "v3_failed": [
@@ -6546,6 +6576,8 @@
         "quality_min"
       ],
       "v2_failed": [
+        "confidence_min",
+        "quality_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
@@ -6670,6 +6702,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -7383,6 +7416,7 @@
         "confidence_min"
       ],
       "v2_failed": [
+        "confidence_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
@@ -7487,7 +7521,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -7510,7 +7544,9 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "market_gap_min"
+      ],
       "v3_failed": [
         "side",
         "avg_three_set_min"
@@ -7670,6 +7706,7 @@
         "market_gap_min"
       ],
       "v2_failed": [
+        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
@@ -7793,6 +7830,8 @@
         "market_gap_min"
       ],
       "v2_failed": [
+        "confidence_min",
+        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
@@ -8465,6 +8504,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -8673,6 +8713,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -8714,6 +8755,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -8880,6 +8922,7 @@
         "avg_close_set_max"
       ],
       "v2_failed": [
+        "market_gap_min",
         "strength_gap_max",
         "avg_close_set_max"
       ],
@@ -8921,6 +8964,7 @@
       "v1_failed": [],
       "v2_failed": [
         "side",
+        "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
       ],
@@ -9249,6 +9293,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "strength_gap_max",
         "avg_close_set_max"
       ],
@@ -9332,6 +9377,7 @@
         "market_gap_min"
       ],
       "v2_failed": [
+        "quality_min",
         "market_gap_min"
       ],
       "v3_failed": [
@@ -9376,6 +9422,7 @@
         "strength_gap_max"
       ],
       "v2_failed": [
+        "quality_min",
         "market_gap_min",
         "strength_gap_max",
         "avg_three_set_max",
@@ -9589,6 +9636,7 @@
         "quality_min"
       ],
       "v2_failed": [
+        "confidence_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -9845,6 +9893,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -9890,6 +9939,8 @@
       ],
       "v2_failed": [
         "side",
+        "confidence_min",
+        "quality_min",
         "market_gap_min",
         "strength_gap_max",
         "avg_three_set_max"
@@ -10251,6 +10302,7 @@
       ],
       "v2_failed": [
         "side",
+        "confidence_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
@@ -10506,6 +10558,8 @@
       ],
       "v2_failed": [
         "side",
+        "confidence_min",
+        "quality_min",
         "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
@@ -11702,6 +11756,8 @@
         "market_gap_min"
       ],
       "v2_failed": [
+        "confidence_min",
+        "quality_min",
         "market_gap_min"
       ],
       "v3_failed": [
@@ -12406,6 +12462,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -13012,6 +13069,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -13534,7 +13592,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -13557,7 +13615,9 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "market_gap_min"
+      ],
       "v3_failed": [
         "side",
         "avg_three_set_min"
@@ -13681,6 +13741,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -13762,6 +13823,7 @@
         "market_gap_min"
       ],
       "v2_failed": [
+        "confidence_min",
         "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
@@ -13823,7 +13885,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -13848,7 +13910,9 @@
       "v1_failed": [
         "confidence_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "confidence_min"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -13933,6 +13997,8 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "confidence_min",
+        "quality_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -13990,7 +14056,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14016,7 +14082,10 @@
         "confidence_min",
         "quality_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "confidence_min",
+        "quality_min"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -14060,6 +14129,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "confidence_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
@@ -14117,7 +14187,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14142,7 +14212,9 @@
       "v1_failed": [
         "quality_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "quality_min"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -14200,7 +14272,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14226,7 +14298,9 @@
         "quality_min",
         "avg_three_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "quality_min"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -14350,6 +14424,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "quality_min",
         "market_gap_min"
       ],
       "v3_failed": [
@@ -14394,6 +14469,8 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "confidence_min",
+        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
@@ -14484,6 +14561,7 @@
         "strength_gap_max"
       ],
       "v2_failed": [
+        "quality_min",
         "strength_gap_max"
       ],
       "v3_failed": [
@@ -14572,6 +14650,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "quality_min",
         "market_gap_min"
       ],
       "v3_failed": [
@@ -14588,7 +14667,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -14614,7 +14693,10 @@
         "confidence_min",
         "quality_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "confidence_min",
+        "quality_min"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -14656,6 +14738,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "strength_gap_max",
         "avg_close_set_max"
       ],
@@ -14868,6 +14951,8 @@
         "market_gap_min"
       ],
       "v2_failed": [
+        "confidence_min",
+        "quality_min",
         "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
@@ -15008,7 +15093,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -15034,7 +15119,9 @@
         "confidence_min",
         "avg_three_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "confidence_min"
+      ],
       "v3_failed": [
         "side",
         "market_gap_max",
@@ -15655,6 +15742,7 @@
         "strength_gap_max"
       ],
       "v2_failed": [
+        "quality_min",
         "strength_gap_max",
         "avg_close_set_max"
       ],
@@ -16327,6 +16415,7 @@
       ],
       "v2_failed": [
         "side",
+        "quality_min",
         "market_gap_min",
         "avg_three_set_max",
         "avg_close_set_max"
@@ -17110,6 +17199,7 @@
         "strength_gap_max"
       ],
       "v2_failed": [
+        "market_gap_min",
         "strength_gap_max"
       ],
       "v3_failed": [
@@ -17275,6 +17365,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -17564,6 +17655,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -17704,7 +17796,7 @@
       "side": "under",
       "result": "win",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -17727,7 +17819,9 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "market_gap_min"
+      ],
       "v3_failed": [
         "side",
         "avg_three_set_min"
@@ -18264,6 +18358,7 @@
         "avg_three_set_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "strength_gap_max"
       ],
       "v3_failed": [
@@ -18681,6 +18776,7 @@
         "quality_min"
       ],
       "v2_failed": [
+        "market_gap_min",
         "avg_three_set_max"
       ],
       "v3_failed": [
@@ -18740,7 +18836,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -18763,7 +18859,9 @@
         "gender": "women"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "market_gap_min"
+      ],
       "v3_failed": [
         "side",
         "avg_close_set_min"
@@ -19292,6 +19390,7 @@
       },
       "v1_failed": [],
       "v2_failed": [
+        "market_gap_min",
         "avg_close_set_max"
       ],
       "v3_failed": [
@@ -19374,6 +19473,7 @@
         "strength_gap_max"
       ],
       "v2_failed": [
+        "market_gap_min",
         "strength_gap_max"
       ],
       "v3_failed": [
@@ -19912,6 +20012,7 @@
       ],
       "v2_failed": [
         "side",
+        "quality_min",
         "market_gap_min",
         "avg_three_set_max"
       ],
@@ -20380,7 +20481,7 @@
       "side": "under",
       "result": "loss",
       "v1_ok": true,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -20403,7 +20504,9 @@
         "gender": "men"
       },
       "v1_failed": [],
-      "v2_failed": [],
+      "v2_failed": [
+        "market_gap_min"
+      ],
       "v3_failed": [
         "side",
         "avg_three_set_min",
@@ -20529,6 +20632,7 @@
       ],
       "v2_failed": [
         "side",
+        "quality_min",
         "market_gap_min",
         "avg_close_set_max"
       ],
@@ -20751,7 +20855,7 @@
       "match": "L. Zaar - L. Samson",
       "bet": "UNDER 19.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": true,
       "v2_ok": true,
       "v3_ok": false,
@@ -20788,7 +20892,7 @@
       "match": "M. Homberg - K. Sultanov",
       "bet": "UNDER 20.0 games",
       "side": "under",
-      "result": "pending",
+      "result": "win",
       "v1_ok": true,
       "v2_ok": true,
       "v3_ok": false,
@@ -20826,7 +20930,7 @@
       "match": "M. Vogt - P. Lovric",
       "bet": "OVER 20.5 games",
       "side": "over",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
       "v3_ok": true,
@@ -20867,7 +20971,7 @@
       "match": "R. Albot - C. Cretu",
       "bet": "UNDER 20.0 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
       "v3_ok": false,
@@ -20905,12 +21009,52 @@
       ]
     },
     {
+      "pick_id": "53a6dd755bfc4cec68120a19d2e79345",
+      "date": "2026-05-30",
+      "match": "M. Fuele - N. Djosic",
+      "bet": "UNDER 19.5 games",
+      "side": "under",
+      "result": "void",
+      "v1_ok": false,
+      "v2_ok": true,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.06,
+        "confidence": 85.7,
+        "quality_score": 74.7,
+        "edge": 0.0846,
+        "bookmakers_used": 3,
+        "market_gap": 0.526,
+        "market_favorite_side": "home",
+        "strength_gap": 11.88,
+        "h2h_matches": 0,
+        "avg_three_set": 0.1111,
+        "avg_close_set": 0.3403,
+        "avg_total_games_players": 18.61,
+        "avg_over_21_5_rate": 0.1736,
+        "avg_win_rate": 0.5903,
+        "tour_level": "itf",
+        "gender": "men"
+      },
+      "v1_failed": [
+        "avg_three_set_min"
+      ],
+      "v2_failed": [],
+      "v3_failed": [
+        "side",
+        "market_gap_max",
+        "avg_three_set_min"
+      ]
+    },
+    {
       "pick_id": "72eb3a2553f1747ca22594676e76ac6d",
       "date": "2026-05-30",
       "match": "M. Sakkari - M. Chwalinska",
       "bet": "UNDER 20.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
       "v3_ok": false,
@@ -20955,9 +21099,9 @@
       "match": "T. Sahtali - I. Almazan Valiente",
       "bet": "UNDER 20.0 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": false,
-      "v2_ok": true,
+      "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
@@ -20982,7 +21126,9 @@
       "v1_failed": [
         "avg_three_set_min"
       ],
-      "v2_failed": [],
+      "v2_failed": [
+        "market_gap_min"
+      ],
       "v3_failed": [
         "side",
         "avg_three_set_min",
@@ -20995,7 +21141,7 @@
       "match": "A. Krueger - H. Klugman",
       "bet": "UNDER 19.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "win",
       "v1_ok": true,
       "v2_ok": false,
       "v3_ok": false,
@@ -21003,10 +21149,10 @@
         "side": "under",
         "line": 19.5,
         "odds": 2.11,
-        "confidence": 87.3,
-        "quality_score": 81.2,
+        "confidence": 86.5,
+        "quality_score": 79.5,
         "edge": 0.0961,
-        "bookmakers_used": 5,
+        "bookmakers_used": 4,
         "market_gap": 0.6062,
         "market_favorite_side": "home",
         "strength_gap": 9.75,
@@ -21030,12 +21176,54 @@
       ]
     },
     {
+      "pick_id": "271d53ccc287935370a802e93b168e88",
+      "date": "2026-05-30",
+      "match": "A. Vrancken Peeters - G. Knutson",
+      "bet": "UNDER 20.0 games",
+      "side": "under",
+      "result": "loss",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 20.0,
+        "odds": 2.17,
+        "confidence": 78.4,
+        "quality_score": 77.6,
+        "edge": 0.1092,
+        "bookmakers_used": 3,
+        "market_gap": 0.3368,
+        "market_favorite_side": "away",
+        "strength_gap": 5.56,
+        "h2h_matches": 0,
+        "avg_three_set": 0.1111,
+        "avg_close_set": 0.4537,
+        "avg_total_games_players": 19.33,
+        "avg_over_21_5_rate": 0.2222,
+        "avg_win_rate": 0.4444,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "v1_failed": [
+        "confidence_min",
+        "avg_three_set_min"
+      ],
+      "v2_failed": [
+        "avg_close_set_max"
+      ],
+      "v3_failed": [
+        "side",
+        "avg_three_set_min"
+      ]
+    },
+    {
       "pick_id": "7af61fafb0fce5ea516e0546d73713a3",
       "date": "2026-05-30",
       "match": "C. Langlais - F. Sziedat",
       "bet": "UNDER 19.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
       "v3_ok": false,
@@ -21079,7 +21267,7 @@
       "match": "D. Shnaider - O. Oliynykova",
       "bet": "UNDER 20.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "win",
       "v1_ok": true,
       "v2_ok": true,
       "v3_ok": false,
@@ -21087,10 +21275,10 @@
         "side": "under",
         "line": 20.5,
         "odds": 1.99,
-        "confidence": 91.7,
-        "quality_score": 81.3,
+        "confidence": 90.9,
+        "quality_score": 79.9,
         "edge": 0.0675,
-        "bookmakers_used": 8,
+        "bookmakers_used": 7,
         "market_gap": 0.4414,
         "market_favorite_side": "home",
         "strength_gap": 6.69,
@@ -21113,12 +21301,56 @@
       ]
     },
     {
+      "pick_id": "95d633a6bc56da74edd18dd3ea5213f9",
+      "date": "2026-05-30",
+      "match": "J. Ruggeri - G. Maristany",
+      "bet": "UNDER 19.5 games",
+      "side": "under",
+      "result": "loss",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.08,
+        "confidence": 85.7,
+        "quality_score": 77.7,
+        "edge": 0.0892,
+        "bookmakers_used": 3,
+        "market_gap": 0.3881,
+        "market_favorite_side": "away",
+        "strength_gap": 35.6,
+        "h2h_matches": 1,
+        "avg_three_set": 0.25,
+        "avg_close_set": 0.4166,
+        "avg_total_games_players": 20.0,
+        "avg_over_21_5_rate": 0.3,
+        "avg_win_rate": 0.65,
+        "tour_level": "itf",
+        "gender": "women"
+      },
+      "v1_failed": [
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "strength_gap_max",
+        "avg_close_set_max"
+      ],
+      "v3_failed": [
+        "side",
+        "market_gap_max",
+        "strength_gap_max",
+        "avg_three_set_min"
+      ]
+    },
+    {
       "pick_id": "51b23264899c6e1e084be695c77075ff",
       "date": "2026-05-30",
       "match": "A. Kalinskaya - C. Osorio",
       "bet": "UNDER 21.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
       "v3_ok": false,
@@ -21126,10 +21358,10 @@
         "side": "under",
         "line": 21.5,
         "odds": 2.01,
-        "confidence": 83.4,
-        "quality_score": 78.1,
+        "confidence": 82.6,
+        "quality_score": 76.5,
         "edge": 0.0725,
-        "bookmakers_used": 9,
+        "bookmakers_used": 8,
         "market_gap": 0.0414,
         "market_favorite_side": "home",
         "strength_gap": 16.12,
@@ -21155,22 +21387,63 @@
       ]
     },
     {
+      "pick_id": "620474640a8d1032fe867ae5961326bc",
+      "date": "2026-05-30",
+      "match": "L. Klimovicova - T. Martincova",
+      "bet": "UNDER 21.5 games",
+      "side": "under",
+      "result": "void",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.0,
+        "confidence": 88.5,
+        "quality_score": 75.9,
+        "edge": 0.07,
+        "bookmakers_used": 4,
+        "market_gap": 0.1915,
+        "market_favorite_side": "away",
+        "strength_gap": 17.66,
+        "h2h_matches": 0,
+        "avg_three_set": 0.2222,
+        "avg_close_set": 0.3334,
+        "avg_total_games_players": 20.0,
+        "avg_over_21_5_rate": 0.2222,
+        "avg_win_rate": 0.5,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "v1_failed": [
+        "market_gap_min"
+      ],
+      "v2_failed": [
+        "market_gap_min"
+      ],
+      "v3_failed": [
+        "side",
+        "avg_three_set_min"
+      ]
+    },
+    {
       "pick_id": "e884c13bca7289825a4909ff0cadf2fd",
       "date": "2026-05-30",
       "match": "D. Blanch - K. Feldbausch",
       "bet": "UNDER 20.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": false,
       "v2_ok": false,
       "v3_ok": false,
       "metrics": {
         "side": "under",
         "line": 20.5,
-        "odds": 2.14,
+        "odds": 2.15,
         "confidence": 88.9,
-        "quality_score": 86.3,
-        "edge": 0.1027,
+        "quality_score": 86.9,
+        "edge": 0.1049,
         "bookmakers_used": 7,
         "market_gap": 0.1237,
         "market_favorite_side": "away",
@@ -21203,7 +21476,7 @@
       "match": "C. H. Tseng - L. Neumayer",
       "bet": "UNDER 21.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": false,
       "v2_ok": true,
       "v3_ok": false,
@@ -21244,7 +21517,7 @@
       "match": "D. Parry - A. Anisimova",
       "bet": "UNDER 19.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": true,
       "v2_ok": true,
       "v3_ok": false,
@@ -21282,7 +21555,7 @@
       "match": "V. Durasovic - M. Petkovic",
       "bet": "UNDER 21.0 games",
       "side": "under",
-      "result": "pending",
+      "result": "win",
       "v1_ok": false,
       "v2_ok": false,
       "v3_ok": false,
@@ -21310,6 +21583,7 @@
         "strength_gap_max"
       ],
       "v2_failed": [
+        "market_gap_min",
         "strength_gap_max",
         "avg_close_set_max"
       ],
@@ -21320,12 +21594,98 @@
       ]
     },
     {
+      "pick_id": "8ecd4fd5c9e1a30fa2ad95d55187e38d",
+      "date": "2026-05-30",
+      "match": "V. Durasovic - M. Petkovic",
+      "bet": "UNDER 21.5 games",
+      "side": "under",
+      "result": "win",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.0,
+        "confidence": 87.7,
+        "quality_score": 74.2,
+        "edge": 0.07,
+        "bookmakers_used": 3,
+        "market_gap": 0.2897,
+        "market_favorite_side": "away",
+        "strength_gap": 43.45,
+        "h2h_matches": 0,
+        "avg_three_set": 0.2777,
+        "avg_close_set": 0.3611,
+        "avg_total_games_players": 20.445,
+        "avg_over_21_5_rate": 0.3889,
+        "avg_win_rate": 0.6666,
+        "tour_level": "itf",
+        "gender": "men"
+      },
+      "v1_failed": [
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "market_gap_min",
+        "strength_gap_max",
+        "avg_close_set_max"
+      ],
+      "v3_failed": [
+        "side",
+        "strength_gap_max",
+        "avg_three_set_min"
+      ]
+    },
+    {
+      "pick_id": "4c49618976d5f6624be82d1c837ac3f1",
+      "date": "2026-05-30",
+      "match": "A. Nagel - D. Jade",
+      "bet": "UNDER 20.5 games",
+      "side": "under",
+      "result": "win",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.1,
+        "confidence": 78.9,
+        "quality_score": 73.9,
+        "edge": 0.0938,
+        "bookmakers_used": 3,
+        "market_gap": 0.128,
+        "market_favorite_side": "home",
+        "strength_gap": 6.9,
+        "h2h_matches": 0,
+        "avg_three_set": 0.25,
+        "avg_close_set": 0.325,
+        "avg_total_games_players": 19.6,
+        "avg_over_21_5_rate": 0.25,
+        "avg_win_rate": 0.7,
+        "tour_level": "itf",
+        "gender": "men"
+      },
+      "v1_failed": [
+        "confidence_min",
+        "market_gap_min"
+      ],
+      "v2_failed": [
+        "market_gap_min"
+      ],
+      "v3_failed": [
+        "side",
+        "avg_three_set_min"
+      ]
+    },
+    {
       "pick_id": "2dc7dadb7e6156f8b3793e1bf68d2d29",
       "date": "2026-05-30",
       "match": "V. Mboko - M. Keys",
       "bet": "OVER 21.5 games",
       "side": "over",
-      "result": "pending",
+      "result": "win",
       "v1_ok": false,
       "v2_ok": false,
       "v3_ok": true,
@@ -21333,10 +21693,10 @@
         "side": "over",
         "line": 21.5,
         "odds": 1.88,
-        "confidence": 91.2,
-        "quality_score": 84.0,
+        "confidence": 90.4,
+        "quality_score": 82.6,
         "edge": 0.0881,
-        "bookmakers_used": 8,
+        "bookmakers_used": 7,
         "market_gap": 0.0525,
         "market_favorite_side": "home",
         "strength_gap": 6.99,
@@ -21366,7 +21726,7 @@
       "match": "M. Krumich - M. Erhard",
       "bet": "UNDER 20.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": true,
       "v2_ok": true,
       "v3_ok": false,
@@ -21404,7 +21764,7 @@
       "match": "C. Gauff - A. Potapova",
       "bet": "UNDER 20.5 games",
       "side": "under",
-      "result": "pending",
+      "result": "loss",
       "v1_ok": true,
       "v2_ok": false,
       "v3_ok": false,
@@ -21436,6 +21796,747 @@
       "v3_failed": [
         "side",
         "market_gap_max"
+      ]
+    },
+    {
+      "pick_id": "37ba30e7c200202423c4685e8250b8cc",
+      "date": "2026-05-31",
+      "match": "G. Hussey - E. Winter",
+      "bet": "OVER 22.5 games",
+      "side": "over",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": true,
+      "metrics": {
+        "side": "over",
+        "line": 22.5,
+        "odds": 2.07,
+        "confidence": 94.6,
+        "quality_score": 86.3,
+        "edge": 0.1369,
+        "bookmakers_used": 6,
+        "market_gap": 0.032,
+        "market_favorite_side": "away",
+        "strength_gap": 16.0,
+        "h2h_matches": 0,
+        "avg_three_set": 0.4732,
+        "avg_close_set": 0.3676,
+        "avg_total_games_players": 23.13,
+        "avg_over_21_5_rate": 0.5357,
+        "avg_win_rate": 0.8035,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "v1_failed": [
+        "market_gap_min"
+      ],
+      "v2_failed": [
+        "side",
+        "market_gap_min",
+        "avg_three_set_max",
+        "avg_close_set_max"
+      ],
+      "v3_failed": []
+    },
+    {
+      "pick_id": "cda53e385c0de862794d214f17236eb8",
+      "date": "2026-05-31",
+      "match": "A. Zantedeschi - V. Ivanov",
+      "bet": "UNDER 20.0 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": true,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 20.0,
+        "odds": 2.04,
+        "confidence": 87.7,
+        "quality_score": 76.9,
+        "edge": 0.0798,
+        "bookmakers_used": 3,
+        "market_gap": 0.3098,
+        "market_favorite_side": "home",
+        "strength_gap": 26.67,
+        "h2h_matches": 0,
+        "avg_three_set": 0.0556,
+        "avg_close_set": 0.2777,
+        "avg_total_games_players": 17.17,
+        "avg_over_21_5_rate": 0.0556,
+        "avg_win_rate": 0.6667,
+        "tour_level": "itf",
+        "gender": "women"
+      },
+      "v1_failed": [
+        "avg_three_set_min"
+      ],
+      "v2_failed": [],
+      "v3_failed": [
+        "side",
+        "avg_three_set_min",
+        "avg_close_set_min"
+      ]
+    },
+    {
+      "pick_id": "00174ceff7fa57e43438be36bf37f81b",
+      "date": "2026-05-31",
+      "match": "N. Vukadin - D. Ajdukovic",
+      "bet": "UNDER 20.5 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": true,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.1,
+        "confidence": 85.7,
+        "quality_score": 78.9,
+        "edge": 0.0938,
+        "bookmakers_used": 3,
+        "market_gap": 0.2747,
+        "market_favorite_side": "away",
+        "strength_gap": 24.8,
+        "h2h_matches": 0,
+        "avg_three_set": 0.2,
+        "avg_close_set": 0.2167,
+        "avg_total_games_players": 18.0,
+        "avg_over_21_5_rate": 0.2,
+        "avg_win_rate": 0.7,
+        "tour_level": "itf",
+        "gender": "men"
+      },
+      "v1_failed": [],
+      "v2_failed": [
+        "market_gap_min"
+      ],
+      "v3_failed": [
+        "side",
+        "avg_three_set_min",
+        "avg_close_set_min"
+      ]
+    },
+    {
+      "pick_id": "427d76ee646548157e9066358a42d322",
+      "date": "2026-05-31",
+      "match": "K. Sultanov - T. Chavez",
+      "bet": "UNDER 19.0 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": true,
+      "v2_ok": true,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 19.0,
+        "odds": 2.04,
+        "confidence": 84.1,
+        "quality_score": 73.4,
+        "edge": 0.0798,
+        "bookmakers_used": 3,
+        "market_gap": 0.4906,
+        "market_favorite_side": "home",
+        "strength_gap": 28.6,
+        "h2h_matches": 0,
+        "avg_three_set": 0.1736,
+        "avg_close_set": 0.2234,
+        "avg_total_games_players": 17.93,
+        "avg_over_21_5_rate": 0.1736,
+        "avg_win_rate": 0.6389,
+        "tour_level": "itf",
+        "gender": "men"
+      },
+      "v1_failed": [],
+      "v2_failed": [],
+      "v3_failed": [
+        "side",
+        "market_gap_max",
+        "avg_three_set_min",
+        "avg_close_set_min"
+      ]
+    },
+    {
+      "pick_id": "dc006059df7f6587d80cb44b92677142",
+      "date": "2026-05-31",
+      "match": "M. Kostyuk - I. Swiatek",
+      "bet": "UNDER 20.5 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": true,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.0,
+        "confidence": 90.9,
+        "quality_score": 80.6,
+        "edge": 0.07,
+        "bookmakers_used": 7,
+        "market_gap": 0.4208,
+        "market_favorite_side": "away",
+        "strength_gap": 7.7,
+        "h2h_matches": 1,
+        "avg_three_set": 0.1556,
+        "avg_close_set": 0.1945,
+        "avg_total_games_players": 18.22,
+        "avg_over_21_5_rate": 0.1556,
+        "avg_win_rate": 0.9,
+        "tour_level": "wta",
+        "gender": "women"
+      },
+      "v1_failed": [
+        "avg_close_set_min"
+      ],
+      "v2_failed": [],
+      "v3_failed": [
+        "side",
+        "market_gap_max",
+        "avg_three_set_min",
+        "avg_close_set_min"
+      ]
+    },
+    {
+      "pick_id": "edbe3e199dd0b440c2f3d78834aa891c",
+      "date": "2026-05-31",
+      "match": "S. Cirstea - Xiy. Wang",
+      "bet": "UNDER 19.5 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": true,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.0,
+        "confidence": 90.9,
+        "quality_score": 79.7,
+        "edge": 0.07,
+        "bookmakers_used": 7,
+        "market_gap": 0.6206,
+        "market_favorite_side": "home",
+        "strength_gap": 17.25,
+        "h2h_matches": 1,
+        "avg_three_set": 0.125,
+        "avg_close_set": 0.2916,
+        "avg_total_games_players": 18.72,
+        "avg_over_21_5_rate": 0.125,
+        "avg_win_rate": 0.875,
+        "tour_level": "wta",
+        "gender": "women"
+      },
+      "v1_failed": [
+        "avg_three_set_min"
+      ],
+      "v2_failed": [],
+      "v3_failed": [
+        "side",
+        "market_gap_max",
+        "avg_three_set_min",
+        "avg_close_set_min"
+      ]
+    },
+    {
+      "pick_id": "6f041c3da65c5c7c9a02e7130a08cb1d",
+      "date": "2026-05-31",
+      "match": "A. Krueger - G. Knutson",
+      "bet": "UNDER 19.5 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": true,
+      "v2_ok": true,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.09,
+        "confidence": 86.5,
+        "quality_score": 78.3,
+        "edge": 0.0915,
+        "bookmakers_used": 4,
+        "market_gap": 0.5697,
+        "market_favorite_side": "home",
+        "strength_gap": 22.0,
+        "h2h_matches": 1,
+        "avg_three_set": 0.2361,
+        "avg_close_set": 0.2905,
+        "avg_total_games_players": 19.7,
+        "avg_over_21_5_rate": 0.2916,
+        "avg_win_rate": 0.5347,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "v1_failed": [],
+      "v2_failed": [],
+      "v3_failed": [
+        "side",
+        "market_gap_max",
+        "avg_three_set_min",
+        "avg_close_set_min"
+      ]
+    },
+    {
+      "pick_id": "02720a19afd00f7da6881d6a5ffbaa6b",
+      "date": "2026-05-31",
+      "match": "G. Minnen - V. Hruncakova",
+      "bet": "UNDER 20.5 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": true,
+      "v2_ok": true,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.0,
+        "confidence": 86.4,
+        "quality_score": 74.5,
+        "edge": 0.07,
+        "bookmakers_used": 5,
+        "market_gap": 0.5143,
+        "market_favorite_side": "home",
+        "strength_gap": 0.49,
+        "h2h_matches": 1,
+        "avg_three_set": 0.1666,
+        "avg_close_set": 0.3345,
+        "avg_total_games_players": 19.93,
+        "avg_over_21_5_rate": 0.2222,
+        "avg_win_rate": 0.6459,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "v1_failed": [],
+      "v2_failed": [],
+      "v3_failed": [
+        "side",
+        "market_gap_max",
+        "avg_three_set_min"
+      ]
+    },
+    {
+      "pick_id": "205558fb8403badd2070507aa0160680",
+      "date": "2026-05-31",
+      "match": "M. Martineau - S. Jong",
+      "bet": "OVER 22.0 games",
+      "side": "over",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": true,
+      "metrics": {
+        "side": "over",
+        "line": 22.0,
+        "odds": 1.82,
+        "confidence": 94.4,
+        "quality_score": 74.3,
+        "edge": 0.0705,
+        "bookmakers_used": 3,
+        "market_gap": 0.1262,
+        "market_favorite_side": "home",
+        "strength_gap": 1.75,
+        "h2h_matches": 0,
+        "avg_three_set": 0.4236,
+        "avg_close_set": 0.6169,
+        "avg_total_games_players": 23.19,
+        "avg_over_21_5_rate": 0.4861,
+        "avg_win_rate": 0.4722,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "v1_failed": [
+        "market_gap_min",
+        "avg_close_set_max"
+      ],
+      "v2_failed": [
+        "side",
+        "market_gap_min",
+        "avg_three_set_max",
+        "avg_close_set_max"
+      ],
+      "v3_failed": []
+    },
+    {
+      "pick_id": "c57c140e2031e36d2f332da2ce17b672",
+      "date": "2026-05-31",
+      "match": "O. Prihodko - M. Krajci",
+      "bet": "UNDER 20.0 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 20.0,
+        "odds": 2.15,
+        "confidence": 76.5,
+        "quality_score": 72.5,
+        "edge": 0.1049,
+        "bookmakers_used": 3,
+        "market_gap": 0.4518,
+        "market_favorite_side": "home",
+        "strength_gap": 16.81,
+        "h2h_matches": 0,
+        "avg_three_set": 0.1111,
+        "avg_close_set": 0.5913,
+        "avg_total_games_players": 20.485,
+        "avg_over_21_5_rate": 0.2937,
+        "avg_win_rate": 0.254,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "v1_failed": [
+        "confidence_min",
+        "avg_three_set_min",
+        "avg_close_set_max"
+      ],
+      "v2_failed": [
+        "avg_close_set_max"
+      ],
+      "v3_failed": [
+        "side",
+        "market_gap_max",
+        "avg_three_set_min"
+      ]
+    },
+    {
+      "pick_id": "074c227853299822fc779840b91cbdf7",
+      "date": "2026-05-31",
+      "match": "P. Brown - K. Chopra",
+      "bet": "UNDER 20.0 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 20.0,
+        "odds": 2.13,
+        "confidence": 85.7,
+        "quality_score": 77.3,
+        "edge": 0.1005,
+        "bookmakers_used": 3,
+        "market_gap": 0.5042,
+        "market_favorite_side": "away",
+        "strength_gap": 10.05,
+        "h2h_matches": 0,
+        "avg_three_set": 0.1389,
+        "avg_close_set": 0.4861,
+        "avg_total_games_players": 20.445,
+        "avg_over_21_5_rate": 0.3333,
+        "avg_win_rate": 0.3889,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "v1_failed": [
+        "avg_three_set_min"
+      ],
+      "v2_failed": [
+        "avg_close_set_max"
+      ],
+      "v3_failed": [
+        "side",
+        "market_gap_max",
+        "avg_three_set_min"
+      ]
+    },
+    {
+      "pick_id": "a8b308ccb5466609564a0c69c71538c7",
+      "date": "2026-05-31",
+      "match": "E. Svitolina - B. Bencic",
+      "bet": "UNDER 21.5 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.05,
+        "confidence": 90.9,
+        "quality_score": 84.8,
+        "edge": 0.0822,
+        "bookmakers_used": 7,
+        "market_gap": 0.2271,
+        "market_favorite_side": "home",
+        "strength_gap": 14.3,
+        "h2h_matches": 2,
+        "avg_three_set": 0.1,
+        "avg_close_set": 0.275,
+        "avg_total_games_players": 18.35,
+        "avg_over_21_5_rate": 0.1,
+        "avg_win_rate": 0.8,
+        "tour_level": "wta",
+        "gender": "women"
+      },
+      "v1_failed": [
+        "market_gap_min",
+        "avg_three_set_min"
+      ],
+      "v2_failed": [
+        "market_gap_min"
+      ],
+      "v3_failed": [
+        "side",
+        "avg_three_set_min",
+        "avg_close_set_min"
+      ]
+    },
+    {
+      "pick_id": "f8a04b31c35ac8af3aa6dabe93ee6c75",
+      "date": "2026-05-31",
+      "match": "L. Pokorny - E. Vasa",
+      "bet": "UNDER 22.0 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 22.0,
+        "odds": 2.03,
+        "confidence": 87.2,
+        "quality_score": 73.3,
+        "edge": 0.0774,
+        "bookmakers_used": 3,
+        "market_gap": 0.0146,
+        "market_favorite_side": "home",
+        "strength_gap": 35.28,
+        "h2h_matches": 0,
+        "avg_three_set": 0.3055,
+        "avg_close_set": 0.4213,
+        "avg_total_games_players": 21.055,
+        "avg_over_21_5_rate": 0.4166,
+        "avg_win_rate": 0.5555,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "v1_failed": [
+        "market_gap_min",
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "market_gap_min",
+        "strength_gap_max",
+        "avg_close_set_max"
+      ],
+      "v3_failed": [
+        "side",
+        "strength_gap_max",
+        "avg_three_set_min"
+      ]
+    },
+    {
+      "pick_id": "8ad3adb2cbdcafa0aeea5d297102936d",
+      "date": "2026-05-31",
+      "match": "M. Sawangkaew - A. Ito",
+      "bet": "UNDER 20.5 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.05,
+        "confidence": 89.3,
+        "quality_score": 80.9,
+        "edge": 0.0822,
+        "bookmakers_used": 5,
+        "market_gap": 0.2043,
+        "market_favorite_side": "home",
+        "strength_gap": 36.78,
+        "h2h_matches": 0,
+        "avg_three_set": 0.2222,
+        "avg_close_set": 0.2686,
+        "avg_total_games_players": 19.78,
+        "avg_over_21_5_rate": 0.2777,
+        "avg_win_rate": 0.5,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "v1_failed": [
+        "market_gap_min",
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "market_gap_min",
+        "strength_gap_max"
+      ],
+      "v3_failed": [
+        "side",
+        "strength_gap_max",
+        "avg_three_set_min",
+        "avg_close_set_min"
+      ]
+    },
+    {
+      "pick_id": "a5659222ff572ab688d0980da6d8733d",
+      "date": "2026-05-31",
+      "match": "R. Masarova - C. Naef",
+      "bet": "OVER 22.5 games",
+      "side": "over",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": true,
+      "metrics": {
+        "side": "over",
+        "line": 22.5,
+        "odds": 2.05,
+        "confidence": 88.9,
+        "quality_score": 85.2,
+        "edge": 0.1322,
+        "bookmakers_used": 4,
+        "market_gap": 0.1666,
+        "market_favorite_side": "home",
+        "strength_gap": 11.8,
+        "h2h_matches": 0,
+        "avg_three_set": 0.6,
+        "avg_close_set": 0.3417,
+        "avg_total_games_players": 23.1,
+        "avg_over_21_5_rate": 0.55,
+        "avg_win_rate": 0.5,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "v1_failed": [
+        "market_gap_min"
+      ],
+      "v2_failed": [
+        "side",
+        "market_gap_min",
+        "avg_three_set_max"
+      ],
+      "v3_failed": []
+    },
+    {
+      "pick_id": "9fc8e74c596aff09d801c569e89eae18",
+      "date": "2026-05-31",
+      "match": "M. Krumich - K. Feldbausch",
+      "bet": "UNDER 21.5 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.02,
+        "confidence": 89.9,
+        "quality_score": 79.6,
+        "edge": 0.075,
+        "bookmakers_used": 6,
+        "market_gap": 0.222,
+        "market_favorite_side": "away",
+        "strength_gap": 7.12,
+        "h2h_matches": 0,
+        "avg_three_set": 0.25,
+        "avg_close_set": 0.3542,
+        "avg_total_games_players": 20.06,
+        "avg_over_21_5_rate": 0.3125,
+        "avg_win_rate": 0.75,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "v1_failed": [
+        "market_gap_min"
+      ],
+      "v2_failed": [
+        "market_gap_min"
+      ],
+      "v3_failed": [
+        "side",
+        "avg_three_set_min"
+      ]
+    },
+    {
+      "pick_id": "c60eb796ff428b378ceb7266179d2573",
+      "date": "2026-05-31",
+      "match": "M. Schoenhaus - M. Petkovic",
+      "bet": "UNDER 20.5 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": true,
+      "v2_ok": true,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.11,
+        "confidence": 85.7,
+        "quality_score": 77.8,
+        "edge": 0.0961,
+        "bookmakers_used": 3,
+        "market_gap": 0.313,
+        "market_favorite_side": "home",
+        "strength_gap": 29.5,
+        "h2h_matches": 3,
+        "avg_three_set": 0.2916,
+        "avg_close_set": 0.3055,
+        "avg_total_games_players": 20.615,
+        "avg_over_21_5_rate": 0.3472,
+        "avg_win_rate": 0.8125,
+        "tour_level": "itf",
+        "gender": "men"
+      },
+      "v1_failed": [],
+      "v2_failed": [],
+      "v3_failed": [
+        "side",
+        "avg_three_set_min"
+      ]
+    },
+    {
+      "pick_id": "76150536a9349ad86e69a8e83af72956",
+      "date": "2026-05-31",
+      "match": "M. Andreeva - J. Teichmann",
+      "bet": "UNDER 18.5 games",
+      "side": "under",
+      "result": "pending",
+      "v1_ok": false,
+      "v2_ok": false,
+      "v3_ok": false,
+      "metrics": {
+        "side": "under",
+        "line": 18.5,
+        "odds": 2.0,
+        "confidence": 76.9,
+        "quality_score": 70.7,
+        "edge": 0.07,
+        "bookmakers_used": 8,
+        "market_gap": 0.7662,
+        "market_favorite_side": "home",
+        "strength_gap": 7.5,
+        "h2h_matches": 0,
+        "avg_three_set": 0.25,
+        "avg_close_set": 0.375,
+        "avg_total_games_players": 19.875,
+        "avg_over_21_5_rate": 0.25,
+        "avg_win_rate": 0.75,
+        "tour_level": "wta",
+        "gender": "women"
+      },
+      "v1_failed": [
+        "confidence_min",
+        "quality_min"
+      ],
+      "v2_failed": [
+        "avg_close_set_max"
+      ],
+      "v3_failed": [
+        "side",
+        "market_gap_max",
+        "avg_three_set_min"
       ]
     }
   ]
