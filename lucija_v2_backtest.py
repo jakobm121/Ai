@@ -37,9 +37,9 @@ RULES_V2 = {
     "side": "under",
     "avg_close_set_max": 0.36,
     "avg_three_set_max": 0.36,
-    "confidence_min": 75
-    "market_gap_min": 0.30
-    "quality_min": 70
+    "confidence_min": 75,
+    "market_gap_min": 0.30,
+    "quality_min": 70,
     "strength_gap_max": 30,
 }
 
