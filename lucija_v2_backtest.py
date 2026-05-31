@@ -37,12 +37,12 @@ RULES_V2 = {
     "side": "under",
     "avg_close_set_max": 0.36,
     "avg_three_set_max": 0.36,
-    "confidence_min": 75,
+    "confidence_min": 79,
     "h2h_max": 0,
-    "market_gap_min": 0.30,
+    "market_gap_min": 0.27,
     "quality_min": 70,
-    "strength_gap_max": 30,
-}
+    "strength_gap_max": 33,
+}i
 
 # OVER test.
 # Kontra logika: za over hočemo več close-set / 3-set potenciala.
