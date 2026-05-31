@@ -1,55 +1,62 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-05-31T10:24:54.112443+02:00`
+Generated: `2026-06-01T01:54:24.752931+02:00`
 
-Pending picks: **7**
+Pending picks: **0**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 74 | 38 | 34 | 0 | 2 | 52.78% | +4.40u | 8.15% |
+| 81 | 41 | 38 | 0 | 2 | 51.90% | +3.69u | 6.23% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 6 | 3 | 3 | 0 | 0 | 50.00% | -0.02u | -0.36% |
+| 7 | 3 | 4 | 0 | 0 | 42.86% | -0.71u | -13.58% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 56 | 28 | 28 | 0 | 0 | 50.00% | +1.31u | 3.11% |
+| 63 | 31 | 32 | 0 | 0 | 49.21% | +0.59u | 1.26% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 39 | 17 | 22 | 0 | 0 | 43.59% | -2.91u | -9.94% |
+| 45 | 20 | 25 | 0 | 0 | 44.44% | -2.87u | -8.50% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 32 | 17 | 15 | 0 | 0 | 53.12% | +1.63u | 6.80% |
+| 38 | 20 | 18 | 0 | 0 | 52.63% | +1.67u | 5.86% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 9 | 5 | 4 | 0 | 0 | 55.56% | +0.40u | 5.90% |
+| 10 | 6 | 4 | 0 | 0 | 60.00% | +1.19u | 15.80% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 65 | 33 | 30 | 0 | 2 | 52.38% | +4.00u | 8.47% |
+| 71 | 35 | 34 | 0 | 2 | 50.72% | +2.50u | 4.84% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-05-31 | 13:00 | 5 | T. Duran - S. Vujic | UNDER 21.5 games | 2.20 | ❌ loss | 72.41 | 23 | 6-4, 7-6 | -0.75u |
+| 2026-05-31 | 13:00 | 1 | R. Masarova - C. Naef | OVER 22.5 games | 2.05 | ✅ win | 79.50 | 26 | 4-6, 6-4, 6-0 | +0.79u |
+| 2026-05-31 | 13:00 | 7 | M. Sawangkaew - A. Ito | UNDER 20.5 games | 2.05 | ❌ loss | 70.88 | 22 | 7-6, 6-3 | -0.75u |
+| 2026-05-31 | 11:30 | 3 | G. Minnen - V. Hruncakova | UNDER 20.5 games | 2.00 | ✅ win | 75.66 | 20 | 7-6, 6-1 | +0.75u |
+| 2026-05-31 | 11:30 | 2 | A. Krueger - G. Knutson | UNDER 19.5 games | 2.09 | ❌ loss | 79.41 | 23 | 6-4, 7-6 | -0.75u |
+| 2026-05-31 | 11:00 | 4 | S. Cirstea - Xiy. Wang | UNDER 19.5 games | 2.00 | ❌ loss | 75.21 | 22 | 6-3, 7-6 | -0.75u |
+| 2026-05-31 | 11:00 | 6 | M. Kostyuk - I. Swiatek | UNDER 20.5 games | 2.00 | ✅ win | 72.29 | 19 | 7-5, 6-1 | +0.75u |
 | 2026-05-30 | 16:00 | 3 | C. Gauff - A. Potapova | UNDER 20.5 games | 2.01 | ❌ loss | 74.85 | 33 | 6-4, 6-7, 4-6 | -0.75u |
 | 2026-05-30 | 15:15 | 6 | M. Krumich - M. Erhard | UNDER 20.5 games | 2.20 | ❌ loss | 71.59 | 27 | 6-3, 2-6, 6-4 | -0.75u |
 | 2026-05-30 | 15:00 | 4 | V. Mboko - M. Keys | OVER 21.5 games | 1.88 | ✅ win | 74.65 | 33 | 3-6, 7-5, 5-7 | +0.66u |
@@ -123,5 +130,4 @@ Pending picks: **7**
 | 2026-05-26 | 10:30 | 35 | R. Bertola - M. Echargui | UNDER 21.5 games | 2.06 | ❌ loss | 62.38 | 26 | 6-2, 3-6, 6-3 | -0.75u |
 | 2026-05-26 | 10:30 | 2 | L. Castagnola - H. Squire | UNDER 18.5 games | 2.19 | ✅ win | 75.91 | 17 | 3-6, 2-6 | +0.89u |
 | 2026-05-26 | 10:10 | 7 | M. Alkaya - Y. Takahashi | UNDER 20.5 games | 2.07 | ❌ loss | 73.96 | 22 | 3-6, 6-7 | -0.75u |
-| 2026-05-26 | 10:00 | 10 | M. Alkaya - Y. Takahashi | UNDER 20.5 games | 2.07 | ❌ loss | 71.14 | 22 | 3-6, 6-7 | -0.75u |
 
