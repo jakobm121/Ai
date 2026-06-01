@@ -8,6 +8,9 @@ on:
       - "sabina/**"
       - ".github/workflows/run_sabina.yml"
 
+permissions:
+  contents: write
+
 jobs:
   run-sabina:
     runs-on: ubuntu-latest
@@ -15,6 +18,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -32,9 +37,24 @@ jobs:
 
       - name: Show Sabina output
         run: |
-          find sabina -maxdepth 3 -type f -print
+          echo "Sabina files:"
+          find sabina -maxdepth 4 -type f -print
 
-      - name: Upload Sabina results
+      - name: Commit Sabina results to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add sabina/results/
+
+          if git diff --cached --quiet; then
+            echo "No Sabina result changes to commit."
+          else
+            git commit -m "Update Sabina results"
+            git push
+          fi
+
+      - name: Upload Sabina results as artifact too
         uses: actions/upload-artifact@v4
         with:
           name: sabina-results
