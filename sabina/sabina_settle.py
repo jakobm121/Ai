@@ -1,22 +1,13 @@
 import csv
 import json
 import os
-import time
-import requests
-from datetime import datetime, timedelta
+from datetime import datetime
 from zoneinfo import ZoneInfo
 
 
-# =========================
-# CONFIG
-# =========================
-
-API_KEY = os.getenv("TENNIS_API_KEY") or os.getenv("API_KEY")
-BASE_URL = "https://api.api-tennis.com/tennis/"
-REQUEST_TIMEOUT = 30
-API_SLEEP_SECONDS = 0.35
-
 TZ_NAME = "Europe/Ljubljana"
+
+MAIN_RESULTS_FILE = "data/tennis_results.json"
 
 SABINA_DIR = "sabina"
 RESULTS_DIR = os.path.join(SABINA_DIR, "results")
@@ -28,10 +19,6 @@ SETTLED_JSON = os.path.join(RESULTS_DIR, "sabina_settled.json")
 SETTLED_CSV = os.path.join(RESULTS_DIR, "sabina_settled.csv")
 PENDING_CSV = os.path.join(RESULTS_DIR, "sabina_pending.csv")
 
-
-# =========================
-# BASIC HELPERS
-# =========================
 
 def ensure_dirs():
     os.makedirs(RESULTS_DIR, exist_ok=True)
@@ -47,8 +34,7 @@ def load_json(path, default):
 
     try:
         with open(path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        return data
+            return json.load(f)
     except Exception:
         return default
 
@@ -69,211 +55,12 @@ def safe_float(value, default=0.0):
         return default
 
 
-def safe_int(value, default=0):
-    try:
-        if value is None:
-            return default
-        text = str(value).strip()
-        if "." in text:
-            text = text.split(".", 1)[0]
-        return int(text)
-    except Exception:
-        return default
-
-
 def normalize_status(value):
     return str(value or "").strip().lower()
 
 
-def is_already_settled(pick):
-    status = normalize_status(
-        pick.get("sabina_result")
-        or pick.get("result")
-        or "pending"
-    )
-    return status in {"win", "loss", "void", "cancelled", "retired", "walkover"}
-
-
-def get_pick_date(pick):
-    date_s = pick.get("date")
-    if not date_s:
-        return None
-
-    try:
-        return datetime.strptime(date_s, "%Y-%m-%d").date()
-    except Exception:
-        return None
-
-
-def final_score_from_match(match):
-    """
-    API-Tennis usually gives either event_final_result or scores.
-    We support both.
-    """
-    direct = match.get("event_final_result") or match.get("event_result")
-    if direct:
-        return str(direct)
-
-    scores = match.get("scores") or []
-    parts = []
-
-    if isinstance(scores, list):
-        for s in scores:
-            a = s.get("score_first")
-            b = s.get("score_second")
-            if a is None or b is None:
-                continue
-            parts.append(f"{a}-{b}")
-
-    return ", ".join(parts)
-
-
-# =========================
-# API
-# =========================
-
-def api_call(params, retries=3):
-    if not API_KEY:
-        raise RuntimeError("Missing TENNIS_API_KEY or API_KEY secret/env variable.")
-
-    params = params.copy()
-    params["APIkey"] = API_KEY
-
-    for attempt in range(retries):
-        try:
-            res = requests.get(
-                BASE_URL,
-                params=params,
-                timeout=REQUEST_TIMEOUT,
-            )
-
-            if res.status_code in {429, 500, 502, 503, 504}:
-                wait = 3 * (attempt + 1)
-                print(f"API retry HTTP {res.status_code}, sleeping {wait}s")
-                time.sleep(wait)
-                continue
-
-            if res.status_code >= 400:
-                raise RuntimeError(f"HTTP {res.status_code}: {res.text[:400]}")
-
-            return res.json()
-
-        except Exception as e:
-            if attempt == retries - 1:
-                raise
-            wait = 2 * (attempt + 1)
-            print(f"API exception {e}, sleeping {wait}s")
-            time.sleep(wait)
-
-    raise RuntimeError("API failed after retries")
-
-
-def fetch_fixtures_for_date(date_value):
-    date_s = date_value.strftime("%Y-%m-%d")
-
-    data = api_call({
-        "method": "get_fixtures",
-        "date_start": date_s,
-        "date_stop": date_s,
-    })
-
-    time.sleep(API_SLEEP_SECONDS)
-
-    if data.get("success") != 1:
-        print(f"Fixtures error for {date_s}: {data}")
-        return []
-
-    result = data.get("result") or []
-    if not isinstance(result, list):
-        return []
-
-    print(f"Fetched fixtures {date_s}: {len(result)}")
-    return result
-
-
-def fetch_fixtures_for_dates(dates):
-    fixtures_by_event_key = {}
-
-    for d in sorted(dates):
-        for match in fetch_fixtures_for_date(d):
-            event_key = str(match.get("event_key") or "")
-            if event_key:
-                fixtures_by_event_key[event_key] = match
-
-    return fixtures_by_event_key
-
-
-# =========================
-# SETTLE LOGIC
-# =========================
-
-def winner_key_from_match(match):
-    winner = match.get("event_winner")
-
-    first_key = safe_int(match.get("first_player_key"))
-    second_key = safe_int(match.get("second_player_key"))
-
-    if winner == "First Player":
-        return first_key
-
-    if winner == "Second Player":
-        return second_key
-
-    return None
-
-
-def settle_pick(pick, match):
-    """
-    Mutates and returns a settled/pending pick.
-    """
-    out = dict(pick)
-
-    event_status = str(match.get("event_status") or "")
-    status_norm = normalize_status(event_status)
-
-    out["settled_status"] = event_status
-    out["event_winner"] = match.get("event_winner")
-    out["final_score"] = final_score_from_match(match)
-
-    # Not done yet.
-    if status_norm not in {
-        "finished",
-        "cancelled",
-        "postponed",
-        "retired",
-        "walkover",
-        "abandoned",
-        "interrupted",
-    }:
-        out["sabina_result"] = "pending"
-        return out
-
-    stake = safe_float(out.get("sabina_stake") or out.get("stake"), 0.0)
-    odds = safe_float(out.get("odds"), 0.0)
-
-    # Void-like outcomes.
-    if status_norm in {"cancelled", "postponed", "abandoned", "interrupted"}:
-        out["sabina_result"] = "void"
-        out["sabina_profit"] = 0.0
-        out["settled_at"] = now_local_iso()
-        return out
-
-    winner_key = winner_key_from_match(match)
-    player_key = safe_int(out.get("player_key"))
-
-    if not winner_key or not player_key:
-        out["sabina_result"] = "pending"
-        return out
-
-    if winner_key == player_key:
-        out["sabina_result"] = "win"
-        out["sabina_profit"] = round(stake * (odds - 1.0), 4)
-    else:
-        out["sabina_result"] = "loss"
-        out["sabina_profit"] = round(-stake, 4)
-
-    out["settled_at"] = now_local_iso()
-    return out
+def is_settled_result(value):
+    return normalize_status(value) in {"win", "loss", "void", "cancelled", "retired", "walkover"}
 
 
 def load_sabina_history():
@@ -282,7 +69,6 @@ def load_sabina_history():
     if isinstance(history, list):
         return history
 
-    # Fallback: if history does not exist yet, use latest Sabina predictions.
     predictions = load_json(SABINA_PREDICTIONS_FILE, {})
     if isinstance(predictions, dict) and isinstance(predictions.get("picks"), list):
         return predictions["picks"]
@@ -290,79 +76,145 @@ def load_sabina_history():
     return []
 
 
-def dates_to_check_for_pending(history):
-    dates = set()
-    today = datetime.now(ZoneInfo(TZ_NAME)).date()
+def load_main_results():
+    data = load_json(MAIN_RESULTS_FILE, [])
 
-    for pick in history:
-        if not isinstance(pick, dict):
+    if isinstance(data, list):
+        return data
+
+    if isinstance(data, dict):
+        if isinstance(data.get("picks"), list):
+            return data["picks"]
+        if isinstance(data.get("results"), list):
+            return data["results"]
+
+    return []
+
+
+def make_result_indexes(main_results):
+    by_fixture = {}
+    by_event = {}
+    by_pick = {}
+
+    for r in main_results:
+        if not isinstance(r, dict):
             continue
 
-        if is_already_settled(pick):
+        result = normalize_status(r.get("result"))
+        if result not in {"win", "loss", "void"}:
             continue
 
-        d = get_pick_date(pick)
-        if not d:
-            continue
+        fixture_id = str(r.get("fixture_id") or "").strip()
+        event_key = str(r.get("event_key") or "").strip()
+        pick_id = str(r.get("pick_id") or "").strip()
 
-        # Check pick date plus next day, because tennis matches can finish after midnight.
-        dates.add(d)
-        dates.add(d + timedelta(days=1))
+        if fixture_id:
+            by_fixture[fixture_id] = r
+        if event_key:
+            by_event[event_key] = r
+        if pick_id:
+            by_pick[pick_id] = r
 
-        # Also check today, useful when date parsing or timezone is slightly off.
-        dates.add(today)
-
-    return dates
+    return by_fixture, by_event, by_pick
 
 
-def settle_history(history, fixtures_by_event_key):
-    settled_history = []
+def find_matching_result(pick, indexes):
+    by_fixture, by_event, by_pick = indexes
 
+    pick_id = str(pick.get("pick_id") or "").strip()
+    fixture_id = str(pick.get("fixture_id") or "").strip()
+    event_key = str(pick.get("event_key") or "").strip()
+
+    if pick_id and pick_id in by_pick:
+        return by_pick[pick_id]
+
+    if fixture_id and fixture_id in by_fixture:
+        return by_fixture[fixture_id]
+
+    if event_key and event_key in by_event:
+        return by_event[event_key]
+
+    return None
+
+
+def settle_profit_from_main_result(pick, main_result):
+    """
+    Main result profit uses original stake.
+    Sabina uses sabina_stake, so calculate Sabina profit separately.
+    """
+    result = normalize_status(main_result.get("result"))
+    odds = safe_float(pick.get("odds"), 0.0)
+    stake = safe_float(pick.get("sabina_stake") or pick.get("stake"), 0.0)
+
+    if result == "win":
+        return round(stake * (odds - 1.0), 4)
+
+    if result == "loss":
+        return round(-stake, 4)
+
+    return 0.0
+
+
+def settle_history_from_main_results(history, main_results):
+    indexes = make_result_indexes(main_results)
+
+    updated = []
     newly_settled = 0
-    still_pending = 0
     already_settled = 0
-    missing_fixture = 0
+    still_pending = 0
+    missing = 0
 
     for pick in history:
         if not isinstance(pick, dict):
             continue
 
-        if is_already_settled(pick):
-            settled_history.append(pick)
+        old_status = normalize_status(pick.get("sabina_result") or pick.get("result") or "pending")
+
+        if old_status in {"win", "loss", "void"}:
+            updated.append(pick)
             already_settled += 1
             continue
 
-        event_key = str(pick.get("event_key") or pick.get("fixture_id") or "")
-        match = fixtures_by_event_key.get(event_key)
+        main_result = find_matching_result(pick, indexes)
 
-        if not match:
-            settled_history.append(pick)
-            missing_fixture += 1
+        if not main_result:
+            pick2 = dict(pick)
+            pick2["sabina_result"] = "pending"
+            updated.append(pick2)
+            still_pending += 1
+            missing += 1
             continue
 
-        before = normalize_status(pick.get("sabina_result") or pick.get("result") or "pending")
-        updated = settle_pick(pick, match)
-        after = normalize_status(updated.get("sabina_result") or "pending")
+        result = normalize_status(main_result.get("result"))
 
-        if before == "pending" and after in {"win", "loss", "void"}:
-            newly_settled += 1
-
-        if after == "pending":
+        if result not in {"win", "loss", "void"}:
+            pick2 = dict(pick)
+            pick2["sabina_result"] = "pending"
+            updated.append(pick2)
             still_pending += 1
+            continue
 
-        settled_history.append(updated)
+        pick2 = dict(pick)
+        pick2["sabina_result"] = result
+        pick2["sabina_profit"] = settle_profit_from_main_result(pick2, main_result)
+        pick2["settled_at"] = main_result.get("settled_at") or now_local_iso()
+        pick2["settled_status"] = main_result.get("settled_status", "")
+        pick2["event_winner"] = main_result.get("event_winner", "")
+        pick2["final_score"] = main_result.get("final_score", "")
 
-    return settled_history, {
+        if "total_games" in main_result:
+            pick2["total_games"] = main_result.get("total_games")
+
+        updated.append(pick2)
+        newly_settled += 1
+
+    return updated, {
         "newly_settled": newly_settled,
-        "still_pending": still_pending,
         "already_settled": already_settled,
-        "missing_fixture": missing_fixture,
+        "still_pending": still_pending,
+        "missing_in_main_results": missing,
     }
 
-
-# =========================
-# REPORTING
-# =========================
 
 def stats(history):
     settled = [
@@ -375,18 +227,18 @@ def stats(history):
     profit = sum(safe_float(p.get("sabina_profit"), 0.0) for p in settled)
     stake = sum(safe_float(p.get("sabina_stake") or p.get("stake"), 0.0) for p in settled)
 
-    roi = profit / stake if stake else 0.0
-    wr = wins / len(settled) if settled else 0.0
-
     pending = sum(
         1 for p in history
-        if normalize_status(p.get("sabina_result") or p.get("result") or "pending") == "pending"
+        if normalize_status(p.get("sabina_result") or "pending") == "pending"
     )
 
     voids = sum(
         1 for p in history
         if normalize_status(p.get("sabina_result")) == "void"
     )
+
+    roi = profit / stake if stake else 0.0
+    wr = wins / len(settled) if settled else 0.0
 
     return {
         "total_history": len(history),
@@ -448,56 +300,40 @@ def main():
     ensure_dirs()
 
     history = load_sabina_history()
-
     if not history:
         raise SystemExit(
             "No Sabina history found. Expected sabina/results/sabina_history.json "
             "or sabina/results/sabina_predictions.json"
         )
 
-    dates = dates_to_check_for_pending(history)
+    main_results = load_main_results()
+    if not main_results:
+        raise SystemExit(f"No main results found at {MAIN_RESULTS_FILE}")
 
-    if not dates:
-        print("No pending Sabina picks to settle.")
-        report = {
-            "generated_at": now_local_iso(),
-            "timezone": TZ_NAME,
-            "summary": stats(history),
-            "picks": history,
-        }
-        save_json(SETTLED_JSON, report)
-        write_csv(SETTLED_CSV, history)
-        write_csv(PENDING_CSV, [])
-        return
-
-    fixtures_by_event_key = fetch_fixtures_for_dates(dates)
-
-    updated_history, settle_summary = settle_history(history, fixtures_by_event_key)
-
+    updated_history, settle_summary = settle_history_from_main_results(history, main_results)
     summary = stats(updated_history)
 
     report = {
         "generated_at": now_local_iso(),
         "timezone": TZ_NAME,
         "source_history_file": SABINA_HISTORY_FILE,
+        "source_main_results_file": MAIN_RESULTS_FILE,
         "settle_summary": settle_summary,
         "summary": summary,
         "picks": updated_history,
     }
 
-    # Keep Sabina history updated in-place.
     save_json(SABINA_HISTORY_FILE, updated_history)
-
-    # Also write clean reports.
     save_json(SETTLED_JSON, report)
 
     settled_rows = [
         p for p in updated_history
         if normalize_status(p.get("sabina_result")) in {"win", "loss", "void"}
     ]
+
     pending_rows = [
         p for p in updated_history
-        if normalize_status(p.get("sabina_result") or p.get("result") or "pending") == "pending"
+        if normalize_status(p.get("sabina_result") or "pending") == "pending"
     ]
 
     write_csv(SETTLED_CSV, settled_rows)
@@ -505,36 +341,27 @@ def main():
 
     print("")
     print("SABINA SETTLE DONE")
-    print(f"History file:      {SABINA_HISTORY_FILE}")
-    print(f"Settled JSON:      {SETTLED_JSON}")
-    print(f"Settled CSV:       {SETTLED_CSV}")
-    print(f"Pending CSV:       {PENDING_CSV}")
+    print(f"Source main results: {MAIN_RESULTS_FILE}")
+    print(f"History file:        {SABINA_HISTORY_FILE}")
+    print(f"Settled JSON:        {SETTLED_JSON}")
+    print(f"Settled CSV:         {SETTLED_CSV}")
+    print(f"Pending CSV:         {PENDING_CSV}")
     print("")
-    print(f"Newly settled:     {settle_summary['newly_settled']}")
-    print(f"Still pending:     {settle_summary['still_pending']}")
-    print(f"Already settled:   {settle_summary['already_settled']}")
-    print(f"Missing fixture:   {settle_summary['missing_fixture']}")
+    print(f"Newly settled:       {settle_summary['newly_settled']}")
+    print(f"Already settled:     {settle_summary['already_settled']}")
+    print(f"Still pending:       {settle_summary['still_pending']}")
+    print(f"Missing in results:  {settle_summary['missing_in_main_results']}")
     print("")
-    print(f"Total history:     {summary['total_history']}")
-    print(f"Settled bets:      {summary['settled_bets']}")
-    print(f"Wins/Losses:       {summary['wins']} / {summary['losses']}")
-    print(f"Voids:             {summary['voids']}")
-    print(f"Pending:           {summary['pending']}")
-    print(f"Profit:            {summary['profit']:+.2f}u")
-    print(f"Stake:             {summary['stake']:.2f}u")
-    print(f"ROI:               {summary['roi'] * 100:.1f}%")
-    print(f"Win rate:          {summary['win_rate'] * 100:.1f}%")
+    print(f"Total history:       {summary['total_history']}")
+    print(f"Settled bets:        {summary['settled_bets']}")
+    print(f"Wins/Losses:         {summary['wins']} / {summary['losses']}")
+    print(f"Voids:               {summary['voids']}")
+    print(f"Pending:             {summary['pending']}")
+    print(f"Profit:              {summary['profit']:+.2f}u")
+    print(f"Stake:               {summary['stake']:.2f}u")
+    print(f"ROI:                 {summary['roi'] * 100:.1f}%")
+    print(f"Win rate:            {summary['win_rate'] * 100:.1f}%")
     print("")
-
-    for pick in settled_rows[-20:]:
-        print(
-            f"{pick.get('date')} {pick.get('time')} | "
-            f"{pick.get('match')} | "
-            f"{pick.get('bet')} @ {pick.get('odds')} | "
-            f"{pick.get('sabina_result')} | "
-            f"{safe_float(pick.get('sabina_profit'), 0.0):+.2f}u | "
-            f"{pick.get('final_score')}"
-        )
 
 
 if __name__ == "__main__":
