@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-01T08:13:37.200081+02:00",
+  "generated_at": "2026-06-01T13:56:02.757791+02:00",
   "model_version": "lucija_v1",
   "model_name": "Lucija Tennis Totals Filter v1",
   "source_file": "data/tennis_totals_predictions.json",
   "source_format": "dict_with_picks",
-  "source_picks": 20,
-  "lucija_picks": 2,
-  "rejected_picks": 18,
+  "source_picks": 19,
+  "lucija_picks": 4,
+  "rejected_picks": 15,
   "rules": {
     "avg_close_set_max": 0.55,
     "avg_close_set_min": 0.2,
@@ -19,7 +19,7 @@
   },
   "stake": 1.0,
   "sides": {
-    "under": 1,
+    "under": 3,
     "over": 1
   }
 }
