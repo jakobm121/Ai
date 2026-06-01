@@ -1,0 +1,53 @@
+name: Run Sabina
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tennis_predictions.py"
+      - "sabina/**"
+      - ".github/workflows/run_sabina.yml"
+
+jobs:
+  run-sabina:
+    runs-on: ubuntu-latest
+
+    env:
+      TENNIS_API_KEY: ${{ secrets.TENNIS_API_KEY }}
+      API_KEY: ${{ secrets.TENNIS_API_KEY }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run tennis value model
+        run: |
+          python tennis_predictions.py
+
+      - name: Run Sabina filter
+        run: |
+          python sabina/sabina.py
+
+      - name: Show Sabina files
+        run: |
+          echo "Sabina output:"
+          find sabina -maxdepth 3 -type f -print
+
+      - name: Upload Sabina results
+        uses: actions/upload-artifact@v4
+        with:
+          name: sabina-results
+          path: |
+            sabina/results/sabina_predictions.json
+            sabina/results/sabina_today.csv
+            sabina/results/sabina_history.json
