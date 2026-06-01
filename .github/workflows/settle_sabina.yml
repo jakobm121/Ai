@@ -1,0 +1,49 @@
+name: Settle Sabina
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Vsak dan ob 23:10 Ljubljana časa v poletnem času je 21:10 UTC.
+    # Pozimi bo to 22:10 po Ljubljani, ampak za settle ni kritično.
+    - cron: "10 21 * * *"
+
+jobs:
+  settle-sabina:
+    runs-on: ubuntu-latest
+
+    env:
+      TENNIS_API_KEY: ${{ secrets.TENNIS_API_KEY }}
+      API_KEY: ${{ secrets.TENNIS_API_KEY }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Settle Sabina picks
+        run: |
+          python sabina/sabina_settle.py
+
+      - name: Show Sabina files
+        run: |
+          echo "Sabina output:"
+          find sabina -maxdepth 3 -type f -print
+
+      - name: Upload Sabina settled results
+        uses: actions/upload-artifact@v4
+        with:
+          name: sabina-settled-results
+          path: |
+            sabina/results/sabina_history.json
+            sabina/results/sabina_settled.json
+            sabina/results/sabina_settled.csv
+            sabina/results/sabina_pending.csv
