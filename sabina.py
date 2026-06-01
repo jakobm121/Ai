@@ -227,15 +227,15 @@ def time_splits(picks: List[Pick], k: int = 3) -> List[List[Pick]]:
     return splits
 
 
-def group_report(picks: List[Pick], field: str) -> List[Tuple[str, Stats]]:
+def group_report(picks: List[Pick], field: str, cfg: Optional[Dict[str, Any]] = None) -> List[Tuple[str, Stats]]:
     groups: Dict[str, Stats] = defaultdict(Stats)
     for p in picks:
         key = str(get_nested(p, field, p.get(field, "unknown")) or "unknown")
-        groups[key].add(p, stake=sabina_stake(p))
+        groups[key].add(p, stake=sabina_stake_configured(p, cfg) if cfg else sabina_stake(p))
     return sorted(groups.items(), key=lambda kv: kv[1].profit, reverse=True)
 
 
-def export_csv(path: str | Path, picks: List[Pick]) -> None:
+def export_csv(path: str | Path, picks: List[Pick], cfg: Optional[Dict[str, Any]] = None) -> None:
     fields = [
         "date", "time", "match", "bet", "odds", "sabina_stake", "sabina_profit",
         "result", "tour_level", "event_type", "best_bookmaker", "bookmakers_used",
@@ -247,7 +247,7 @@ def export_csv(path: str | Path, picks: List[Pick]) -> None:
         writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         for p in picks:
-            stake = sabina_stake(p)
+            stake = sabina_stake_configured(p, cfg) if cfg else sabina_stake(p)
             row = {
                 "date": p.get("date"),
                 "time": p.get("time"),
@@ -275,19 +275,107 @@ def export_csv(path: str | Path, picks: List[Pick]) -> None:
             writer.writerow(row)
 
 
+
+def deep_update(base: Dict[str, Any], override: Dict[str, Any]) -> Dict[str, Any]:
+    out = dict(base)
+    for k, v in override.items():
+        if isinstance(v, dict) and isinstance(out.get(k), dict):
+            out[k] = deep_update(out[k], v)
+        else:
+            out[k] = v
+    return out
+
+
+def load_yaml_config(path: str | Path) -> Dict[str, Any]:
+    try:
+        import yaml  # type: ignore
+    except ImportError as exc:
+        raise RuntimeError(
+            "YAML config requires PyYAML. Install it with: pip install pyyaml"
+        ) from exc
+
+    with open(path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+    if not isinstance(data, dict):
+        raise ValueError("YAML config must be a mapping/object at the top level.")
+    return data
+
+
+DEFAULT_CONFIG: Dict[str, Any] = {
+    "filter": {
+        "min_gap": 0.06,
+        "max_opponent_l5_game_diff": 1.5,
+        "max_odds": 2.60,
+        "min_bookmakers": 0,
+        "block_qualification": False,
+        "block_atp": False,
+    },
+    "stake": {
+        "base": 0.75,
+        "opp_l5_gd_boost_threshold": 0.5,
+        "opp_l5_gd_boost": 0.25,
+        "player_fatigue_7d_boost_threshold": 1,
+        "player_fatigue_7d_boost": 0.25,
+        "wta_penalty": 0.25,
+        "min": 0.50,
+        "max": 1.25,
+    },
+    "output": {
+        "csv_fields": [
+            "date", "time", "match", "bet", "odds", "sabina_stake", "sabina_profit",
+            "result", "tour_level", "event_type", "best_bookmaker", "bookmakers_used",
+            "best_to_median_gap", "edge", "model_prob", "implied_prob",
+            "opponent_l5_game_diff", "player_l5_fatigue_7d", "score_diff", "quality_score",
+            "fixture_id", "pick_id",
+        ]
+    }
+}
+
+
+def sabina_stake_configured(p: Pick, cfg: Dict[str, Any]) -> float:
+    scfg = cfg.get("stake", {})
+    stake = as_float(scfg.get("base"), default=0.75)
+
+    opp_l5_gd = as_float(get_nested(p, "opponent_form.last_5.game_diff_avg"), default=999.0)
+    player_fatigue_7d = as_float(get_nested(p, "player_form.last_5.fatigue_matches_7d"), default=0.0)
+    tour = str(p.get("tour_level", "")).lower()
+
+    if opp_l5_gd <= as_float(scfg.get("opp_l5_gd_boost_threshold"), default=0.5):
+        stake += as_float(scfg.get("opp_l5_gd_boost"), default=0.25)
+    if player_fatigue_7d >= as_float(scfg.get("player_fatigue_7d_boost_threshold"), default=1.0):
+        stake += as_float(scfg.get("player_fatigue_7d_boost"), default=0.25)
+    if tour == "wta":
+        stake -= as_float(scfg.get("wta_penalty"), default=0.25)
+
+    return max(as_float(scfg.get("min"), default=0.50), min(stake, as_float(scfg.get("max"), default=1.25)))
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Sabina tennis value filter/backtester")
     ap.add_argument("input", help="Path to tennis_results JSON export")
+    ap.add_argument("--config", help="Path to Sabina YAML config, e.g. sabina.yml")
     ap.add_argument("--export", help="Export Sabina-selected picks to CSV")
     ap.add_argument("--mode", choices=["settled", "candidates", "all"], default="settled",
                     help="settled=backtest win/loss only; candidates=unsettled/non-final picks; all=all selected")
-    ap.add_argument("--gap", type=float, default=0.06, help="Minimum best_to_median_gap")
-    ap.add_argument("--opp-gd", type=float, default=1.5, help="Max opponent last-5 game_diff_avg")
-    ap.add_argument("--max-odds", type=float, default=2.60, help="Maximum odds")
-    ap.add_argument("--min-bookmakers", type=int, default=0, help="Minimum bookmakers_used")
+    ap.add_argument("--gap", type=float, default=None, help="Minimum best_to_median_gap; overrides YAML")
+    ap.add_argument("--opp-gd", type=float, default=None, help="Max opponent last-5 game_diff_avg; overrides YAML")
+    ap.add_argument("--max-odds", type=float, default=None, help="Maximum odds; overrides YAML")
+    ap.add_argument("--min-bookmakers", type=int, default=None, help="Minimum bookmakers_used; overrides YAML")
     ap.add_argument("--block-qualification", action="store_true", help="Block qualification matches")
     ap.add_argument("--block-atp", action="store_true", help="Block ATP tour_level")
     args = ap.parse_args()
+
+    cfg = dict(DEFAULT_CONFIG)
+    if args.config:
+        cfg = deep_update(cfg, load_yaml_config(args.config))
+    fcfg = cfg["filter"]
+
+    # CLI flags override YAML only when explicitly provided.
+    gap = args.gap if args.gap is not None else as_float(fcfg.get("min_gap"), default=0.06)
+    opp_gd = args.opp_gd if args.opp_gd is not None else as_float(fcfg.get("max_opponent_l5_game_diff"), default=1.5)
+    max_odds = args.max_odds if args.max_odds is not None else as_float(fcfg.get("max_odds"), default=2.60)
+    min_bookmakers = args.min_bookmakers if args.min_bookmakers is not None else int(as_float(fcfg.get("min_bookmakers"), default=0))
+    block_qualification = bool(args.block_qualification or fcfg.get("block_qualification", False))
+    block_atp = bool(args.block_atp or fcfg.get("block_atp", False))
 
     raw = load_picks(args.input)
     deduped = dedupe_picks(raw)
@@ -295,12 +383,12 @@ def main() -> None:
         p for p in deduped
         if sabina_play(
             p,
-            min_gap=args.gap,
-            max_opp_l5_game_diff=args.opp_gd,
-            max_odds=args.max_odds,
-            min_bookmakers=args.min_bookmakers,
-            block_qualification=args.block_qualification,
-            block_atp=args.block_atp,
+            min_gap=gap,
+            max_opp_l5_game_diff=opp_gd,
+            max_odds=max_odds,
+            min_bookmakers=min_bookmakers,
+            block_qualification=block_qualification,
+            block_atp=block_atp,
         )
     ]
 
@@ -316,12 +404,12 @@ def main() -> None:
     print(f"Input records:          {len(raw)}")
     print(f"Deduped records:        {len(deduped)}")
     print(f"Selected records:       {len(selected)}")
-    print(f"Formula: gap >= {args.gap}, opponent L5 game diff <= {args.opp_gd}, odds <= {args.max_odds}")
-    if args.min_bookmakers:
-        print(f"Extra:   bookmakers_used >= {args.min_bookmakers}")
-    if args.block_qualification:
+    print(f"Formula: gap >= {gap}, opponent L5 game diff <= {opp_gd}, odds <= {max_odds}")
+    if min_bookmakers:
+        print(f"Extra:   bookmakers_used >= {min_bookmakers}")
+    if block_qualification:
         print("Extra:   qualification blocked")
-    if args.block_atp:
+    if block_atp:
         print("Extra:   ATP blocked")
     print("=" * 92)
 
@@ -331,28 +419,28 @@ def main() -> None:
         sabina = Stats()
         for p in settled_selected:
             original.add(p, stake=as_float(p.get("stake"), default=1.0), use_original_profit=True)
-            sabina.add(p, stake=sabina_stake(p), use_original_profit=False)
+            sabina.add(p, stake=sabina_stake_configured(p, cfg), use_original_profit=False)
         print(summarize("Original staking", original))
         print(summarize("Sabina staking", sabina))
         print("\nTime stability, Sabina staking:")
         for i, split in enumerate(time_splits(settled_selected, 3), 1):
             st = Stats()
             for p in split:
-                st.add(p, stake=sabina_stake(p))
+                st.add(p, stake=sabina_stake_configured(p, cfg))
             print(summarize(f"Split {i}/3", st))
 
         print("\nBy tour_level:")
-        for key, st in group_report(settled_selected, "tour_level")[:12]:
+        for key, st in group_report(settled_selected, "tour_level", cfg)[:12]:
             print(summarize(key[:22], st))
 
         print("\nBy event_type:")
-        for key, st in group_report(settled_selected, "event_type")[:12]:
+        for key, st in group_report(settled_selected, "event_type", cfg)[:12]:
             print(summarize(key[:22], st))
     else:
         print("No settled selected picks in this mode. Use --mode settled for backtest or --mode all.")
 
     if args.export:
-        export_csv(args.export, selected)
+        export_csv(args.export, selected, cfg)
         print(f"\nExported: {args.export}")
 
 

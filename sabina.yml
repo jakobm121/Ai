@@ -1,0 +1,55 @@
+# Sabina config v1
+# Namen: filter čez AI77 tennis picke za nove kandidate ali backtest.
+
+filter:
+  # Glavni PLAY pogoji
+  min_gap: 0.06                         # best_to_median_gap >= 0.06
+  max_opponent_l5_game_diff: 1.5         # opponent_form.last_5.game_diff_avg <= 1.5
+  max_odds: 2.60                         # odds <= 2.60
+
+  # Dodatni varnostni filtri
+  min_bookmakers: 0                      # npr. 6 ali 8, če želiš več market coverage
+  block_qualification: false             # true = blokira qualification tekme
+  block_atp: false                       # true = blokira tour_level == atp
+
+stake:
+  base: 0.75
+
+  # Boost, če je opponent recentno slabši po game-diffu
+  opp_l5_gd_boost_threshold: 0.5
+  opp_l5_gd_boost: 0.25
+
+  # Boost, če ima naš igralec svež tekmovalni ritem
+  player_fatigue_7d_boost_threshold: 1
+  player_fatigue_7d_boost: 0.25
+
+  # WTA penalty zaradi slabše stabilnosti v backtestu
+  wta_penalty: 0.25
+
+  min: 0.50
+  max: 1.25
+
+output:
+  csv_fields:
+    - date
+    - time
+    - match
+    - bet
+    - odds
+    - sabina_stake
+    - sabina_profit
+    - result
+    - tour_level
+    - event_type
+    - best_bookmaker
+    - bookmakers_used
+    - best_to_median_gap
+    - edge
+    - model_prob
+    - implied_prob
+    - opponent_l5_game_diff
+    - player_l5_fatigue_7d
+    - score_diff
+    - quality_score
+    - fixture_id
+    - pick_id
