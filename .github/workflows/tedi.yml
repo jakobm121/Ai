@@ -1,0 +1,49 @@
+name: Tedi Picks
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tedi-picks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Tedi
+        run: python tedi.py
+
+      - name: Commit Tedi outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/tedi/tedi_predictions.json
+          git add data/tedi/tedi_v2_test_predictions.json
+          git add data/tedi/tedi_results.json
+          git add data/tedi/tedi_summary.json
+          git add data/tedi/tedi_debug.json
+          git add data/tedi/tedi_table.md
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update Tedi picks"
+
+          git pull --rebase --autostash origin main
+          git push origin main
