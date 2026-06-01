@@ -1,55 +1,62 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-01T01:54:24.752931+02:00`
+Generated: `2026-06-01T22:00:48.746623+02:00`
 
-Pending picks: **0**
+Pending picks: **1**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 81 | 41 | 38 | 0 | 2 | 51.90% | +3.69u | 6.23% |
+| 88 | 43 | 42 | 1 | 2 | 50.59% | +2.30u | 3.61% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 7 | 3 | 4 | 0 | 0 | 42.86% | -0.71u | -13.58% |
+| 14 | 5 | 8 | 1 | 0 | 38.46% | -2.10u | -21.55% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 63 | 31 | 32 | 0 | 0 | 49.21% | +0.59u | 1.26% |
+| 70 | 33 | 36 | 1 | 0 | 47.83% | -0.80u | -1.54% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 45 | 20 | 25 | 0 | 0 | 44.44% | -2.87u | -8.50% |
+| 51 | 22 | 28 | 1 | 0 | 44.00% | -3.51u | -9.35% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 38 | 20 | 18 | 0 | 0 | 52.63% | +1.67u | 5.86% |
+| 41 | 21 | 20 | 0 | 0 | 51.22% | +0.94u | 3.06% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 10 | 6 | 4 | 0 | 0 | 60.00% | +1.19u | 15.80% |
+| 11 | 6 | 5 | 0 | 0 | 54.55% | +0.43u | 5.27% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 71 | 35 | 34 | 0 | 2 | 50.72% | +2.50u | 4.84% |
+| 77 | 37 | 37 | 1 | 2 | 50.00% | +1.87u | 3.36% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-01 | 20:15 | 3 | A. Sabalenka - N. Osaka | UNDER 20.0 games | 2.09 | ❌ loss | 70.41 | 21 | 7-5, 6-3 | -0.75u |
+| 2026-06-01 | 18:00 | 2 | M. Houkes - E. Nava | UNDER 20.5 games | 2.12 | ❌ loss | 74.64 | 23 | 4-6, 6-7 | -0.75u |
+| 2026-06-01 | 14:30 | 1 | M. Alkaya - A. Azkara | UNDER 20.5 games | 2.15 | ❌ loss | 75.11 | 27 | 6-4, 3-6, 2-6 | -0.75u |
+| 2026-06-01 | 11:30 | 5 | T. Duran - K. van Wyk | UNDER 19.5 games | 2.03 | ✅ win | 74.53 | 17 | 6-3, 6-2 | +0.77u |
+| 2026-06-01 | 11:30 | 3 | A. Holmgren - J. Watt | UNDER 22.5 games | 2.12 | ✅ win | 75.81 | 20 | 2-6, 5-7 | +0.84u |
+| 2026-06-01 | 10:00 | 6 | L. Carboni - J. Sels | UNDER 20.0 games | 2.14 | ➖ push | 72.54 | 20 | 6-4, 6-4 | 0.00u |
+| 2026-06-01 | 10:00 | 1 | D. Dutra Da Silva - A. Martin | OVER 22.5 games | 2.04 | ❌ loss | 77.78 | 18 | 2-6, 4-6 | -0.75u |
 | 2026-05-31 | 13:00 | 5 | T. Duran - S. Vujic | UNDER 21.5 games | 2.20 | ❌ loss | 72.41 | 23 | 6-4, 7-6 | -0.75u |
 | 2026-05-31 | 13:00 | 1 | R. Masarova - C. Naef | OVER 22.5 games | 2.05 | ✅ win | 79.50 | 26 | 4-6, 6-4, 6-0 | +0.79u |
 | 2026-05-31 | 13:00 | 7 | M. Sawangkaew - A. Ito | UNDER 20.5 games | 2.05 | ❌ loss | 70.88 | 22 | 7-6, 6-3 | -0.75u |
@@ -123,11 +130,4 @@ Pending picks: **0**
 | 2026-05-26 | 12:00 | 12 | L. Djere - T. Skatov | UNDER 20.0 games | 2.11 | ✅ win | 69.39 | 19 | 4-6, 3-6 | +0.83u |
 | 2026-05-26 | 12:00 | 3 | D. Glinka - S. Latinovic | UNDER 19.5 games | 2.06 | ✅ win | 74.01 | 18 | 6-3, 6-3 | +0.80u |
 | 2026-05-26 | 11:00 | 5 | E. Navarro - J. Tjen | UNDER 20.5 games | 2.00 | ✅ win | 74.69 | 19 | 6-4, 6-3 | +0.75u |
-| 2026-05-26 | 11:00 | 9 | E. Navarro - J. Tjen | UNDER 20.5 games | 2.00 | ✅ win | 71.92 | 19 | 6-4, 6-3 | +0.75u |
-| 2026-05-26 | 11:00 | 12 | D. Vekic - A. Tubello | UNDER 20.5 games | 1.98 | ✅ win | 71.14 | 17 | 6-3, 6-2 | +0.73u |
-| 2026-05-26 | 11:00 | 11 | D. Vekic - A. Tubello | UNDER 20.5 games | 1.98 | ✅ win | 69.56 | 17 | 6-3, 6-2 | +0.73u |
-| 2026-05-26 | 10:30 | 18 | S. Nagal - S. Fomin | UNDER 20.5 games | 2.10 | ✅ win | 66.59 | 18 | 6-4, 6-2 | +0.82u |
-| 2026-05-26 | 10:30 | 35 | R. Bertola - M. Echargui | UNDER 21.5 games | 2.06 | ❌ loss | 62.38 | 26 | 6-2, 3-6, 6-3 | -0.75u |
-| 2026-05-26 | 10:30 | 2 | L. Castagnola - H. Squire | UNDER 18.5 games | 2.19 | ✅ win | 75.91 | 17 | 3-6, 2-6 | +0.89u |
-| 2026-05-26 | 10:10 | 7 | M. Alkaya - Y. Takahashi | UNDER 20.5 games | 2.07 | ❌ loss | 73.96 | 22 | 3-6, 6-7 | -0.75u |
 
