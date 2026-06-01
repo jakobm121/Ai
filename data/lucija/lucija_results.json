@@ -4680,7 +4680,7 @@
     "first_strength_score": 63.21,
     "second_strength_score": 55.07,
     "h2h_matches": 0,
-    "result": "pending",
+    "result": "loss",
     "created_at": "2026-06-01T08:13:37.198624+02:00",
     "reasoning": "Lucija selected UNDER 20.5 games in M. Alkaya - A. Azkara using optimizer rule: confidence >= 80, quality >= 72, market_gap >= 0.25, strength_gap <= 30, h2h <= 0, avg_three_set >= 0.15, avg_close_set between 0.2 and 0.55.",
     "source_pick_id": "37b82c2006a64339919ab112a548d05a",
@@ -4714,7 +4714,15 @@
       "strength_gap_max": true,
       "h2h_max": true
     },
-    "profit": null
+    "profit": -1.0,
+    "settled_at": "2026-06-01T21:59:54.120092+02:00",
+    "settled_status": "Finished",
+    "event_winner": "Second Player",
+    "final_score": "6-4, 3-6, 2-6",
+    "total_games": 27,
+    "settled_from": "data/tennis_totals_results.json",
+    "settled_source_pick_id": "37b82c2006a64339919ab112a548d05a",
+    "lucija_settled_at": "2026-06-01T22:01:15.483413+02:00"
   },
   {
     "pick_id": "e10935d8980cad46090531c770a571a5",
@@ -4847,7 +4855,7 @@
     "first_strength_score": 52.1,
     "second_strength_score": 56.5,
     "h2h_matches": 0,
-    "result": "pending",
+    "result": "void",
     "created_at": "2026-06-01T08:13:37.198743+02:00",
     "reasoning": "Lucija selected OVER 22.0 games in Y. Watanuki - P. Boscardin Dias using optimizer rule: confidence >= 80, quality >= 72, market_gap >= 0.25, strength_gap <= 30, h2h <= 0, avg_three_set >= 0.15, avg_close_set between 0.2 and 0.55.",
     "source_pick_id": "b6233a83b61cc03f05156e06ccd4ea47",
@@ -4881,7 +4889,15 @@
       "strength_gap_max": true,
       "h2h_max": true
     },
-    "profit": null
+    "profit": 0.0,
+    "settled_at": "2026-06-01T21:59:56.768285+02:00",
+    "settled_status": "Retired",
+    "event_winner": "Second Player",
+    "final_score": null,
+    "total_games": null,
+    "settled_from": "data/tennis_totals_results.json",
+    "settled_source_pick_id": "b6233a83b61cc03f05156e06ccd4ea47",
+    "lucija_settled_at": "2026-06-01T22:01:15.483425+02:00"
   },
   {
     "pick_id": "4afc47db39ebb2585bf2e6c157372379",
@@ -5014,7 +5030,7 @@
     "first_strength_score": 34.6,
     "second_strength_score": 28.27,
     "h2h_matches": 0,
-    "result": "pending",
+    "result": "win",
     "created_at": "2026-06-01T13:56:02.756733+02:00",
     "reasoning": "Lucija selected UNDER 21.5 games in F. Ferreira Silva - P. Martinez using optimizer rule: confidence >= 80, quality >= 72, market_gap >= 0.25, strength_gap <= 30, h2h <= 0, avg_three_set >= 0.15, avg_close_set between 0.2 and 0.55.",
     "source_pick_id": "dee12d307e49ab767dd45e5b20edd9be",
@@ -5048,7 +5064,15 @@
       "strength_gap_max": true,
       "h2h_max": true
     },
-    "profit": null
+    "profit": 0.98,
+    "settled_at": "2026-06-01T21:59:53.475664+02:00",
+    "settled_status": "Finished",
+    "event_winner": "Second Player",
+    "final_score": "2-6, 5-7",
+    "total_games": 20,
+    "settled_from": "data/tennis_totals_results.json",
+    "settled_source_pick_id": "dee12d307e49ab767dd45e5b20edd9be",
+    "lucija_settled_at": "2026-06-01T22:01:15.483435+02:00"
   },
   {
     "pick_id": "b85bbe31a0827eae3371d655040a64f8",
@@ -5181,7 +5205,7 @@
     "first_strength_score": 27.28,
     "second_strength_score": 56.33,
     "h2h_matches": 0,
-    "result": "pending",
+    "result": "loss",
     "created_at": "2026-06-01T13:56:02.756818+02:00",
     "reasoning": "Lucija selected UNDER 21.5 games in R. Hohmann - A. Soriano Barrera using optimizer rule: confidence >= 80, quality >= 72, market_gap >= 0.25, strength_gap <= 30, h2h <= 0, avg_three_set >= 0.15, avg_close_set between 0.2 and 0.55.",
     "source_pick_id": "66930777e9221fc33500bee2b07b867c",
@@ -5215,6 +5239,14 @@
       "strength_gap_max": true,
       "h2h_max": true
     },
-    "profit": null
+    "profit": -1.0,
+    "settled_at": "2026-06-01T21:59:59.420652+02:00",
+    "settled_status": "Finished",
+    "event_winner": "First Player",
+    "final_score": "6-2, 6-7, 6-3",
+    "total_games": 30,
+    "settled_from": "data/tennis_totals_results.json",
+    "settled_source_pick_id": "66930777e9221fc33500bee2b07b867c",
+    "lucija_settled_at": "2026-06-01T22:01:15.483442+02:00"
   }
 ]
