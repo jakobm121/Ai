@@ -1,0 +1,44 @@
+name: Lucija Formula Optimizer 150
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lucija-formula-optimizer-150:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Lucija formula optimizer 150
+        run: python lucija_formula_optimizer_150.py
+
+      - name: Commit optimizer outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/lucija/lucija_formula_optimizer_150_summary.json
+          git add data/lucija/lucija_formula_optimizer_150_top_rules.json
+          git add data/lucija/lucija_formula_optimizer_150_report.md
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update Lucija formula optimizer 150"
+          git pull --rebase origin main
+          git push origin main
