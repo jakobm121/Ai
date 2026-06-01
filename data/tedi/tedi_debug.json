@@ -1,0 +1,642 @@
+{
+  "generated_at": "2026-06-01T08:14:02.839337+02:00",
+  "source_file": "data/tennis_totals_predictions.json",
+  "source_format": "dict_with_picks",
+  "source_picks": 20,
+  "main_picks": 7,
+  "v2_test_picks": 1,
+  "rejected_picks": 12,
+  "main_rules": {
+    "side": "under",
+    "line_min": 19.5,
+    "line_max": 22.5,
+    "avg_three_set_min": 0.15,
+    "avg_three_set_max": 0.35,
+    "strength_gap_min": 0,
+    "strength_gap_max": 30
+  },
+  "v2_test_rules": {
+    "side": "under",
+    "avg_close_set_max": 0.35,
+    "avg_three_set_max": 0.35,
+    "confidence_min": 80,
+    "h2h_max": 0,
+    "market_gap_min": 0.25,
+    "quality_min": 72,
+    "strength_gap_max": 30
+  },
+  "accepted_main": [
+    {
+      "pick_id": "aa03d4db3f2bfa6179075f037b2795f6",
+      "source_pick_id": "37b82c2006a64339919ab112a548d05a",
+      "match": "M. Alkaya - A. Azkara",
+      "bet": "UNDER 20.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.15,
+        "avg_three_set": 0.1875,
+        "avg_close_set": 0.3645,
+        "avg_total_games": 19.375,
+        "avg_over_21_5_rate": 0.25,
+        "market_gap": 0.4744,
+        "confidence": 88.9,
+        "quality_score": 86.9,
+        "edge": 0.1049,
+        "strength_gap": 7.88,
+        "h2h_matches": 0,
+        "bookmakers_used": 7,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    },
+    {
+      "pick_id": "5a209d1825b50801052cedb1e2745531",
+      "source_pick_id": "ddc60ff943b12a852b89be7a75e83fd6",
+      "match": "M. Sawangkaew - L. Klimovicova",
+      "bet": "UNDER 20.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.09,
+        "avg_three_set": 0.2222,
+        "avg_close_set": 0.2592,
+        "avg_total_games": 19.945,
+        "avg_over_21_5_rate": 0.2777,
+        "market_gap": 0.1627,
+        "confidence": 88.9,
+        "quality_score": 84.1,
+        "edge": 0.0915,
+        "strength_gap": 28.11,
+        "h2h_matches": 0,
+        "bookmakers_used": 7,
+        "tour_level": "challenger",
+        "gender": "women"
+      }
+    },
+    {
+      "pick_id": "922c55ab47422523792d3994069aba37",
+      "source_pick_id": "27941ef7227747fed2c8a66351129e0f",
+      "match": "A. Potapova - A. Kalinskaya",
+      "bet": "UNDER 21.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.02,
+        "avg_three_set": 0.3278,
+        "avg_close_set": 0.3945,
+        "avg_total_games": 21.27,
+        "avg_over_21_5_rate": 0.4278,
+        "market_gap": 0.3166,
+        "confidence": 91.7,
+        "quality_score": 83.4,
+        "edge": 0.075,
+        "strength_gap": 23.85,
+        "h2h_matches": 1,
+        "bookmakers_used": 8,
+        "tour_level": "wta",
+        "gender": "women"
+      }
+    },
+    {
+      "pick_id": "6d9dbdff8a455fc19a248af91c52e2e9",
+      "source_pick_id": "ecebd026c6592678391fb228a2493849",
+      "match": "E. Yaneva - L. Pigato",
+      "bet": "UNDER 20.0 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.0,
+        "odds": 2.14,
+        "avg_three_set": 0.15,
+        "avg_close_set": 0.375,
+        "avg_total_games": 18.75,
+        "avg_over_21_5_rate": 0.2,
+        "market_gap": 0.1964,
+        "confidence": 85.7,
+        "quality_score": 81.3,
+        "edge": 0.1027,
+        "strength_gap": 23.2,
+        "h2h_matches": 0,
+        "bookmakers_used": 3,
+        "tour_level": "challenger",
+        "gender": "women"
+      }
+    },
+    {
+      "pick_id": "a7c0ed8c8921b11d3014a7396a0b6d5d",
+      "source_pick_id": "49a3a9270cea38d73ee4536c20e7e061",
+      "match": "J. Pinnington Jones - A. Vukic",
+      "bet": "UNDER 22.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 22.5,
+        "odds": 2.05,
+        "avg_three_set": 0.2,
+        "avg_close_set": 0.4313,
+        "avg_total_games": 20.19,
+        "avg_over_21_5_rate": 0.2625,
+        "market_gap": 0.1203,
+        "confidence": 88.5,
+        "quality_score": 78.4,
+        "edge": 0.0822,
+        "strength_gap": 9.62,
+        "h2h_matches": 0,
+        "bookmakers_used": 4,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    },
+    {
+      "pick_id": "134c80782a437bde2357d66769746089",
+      "source_pick_id": "62dcd951ebf61d2c110c482ec618acd6",
+      "match": "G. Kravchenko - M. Wiskandt",
+      "bet": "UNDER 21.0 games",
+      "metrics": {
+        "side": "under",
+        "line": 21.0,
+        "odds": 2.14,
+        "avg_three_set": 0.2222,
+        "avg_close_set": 0.2592,
+        "avg_total_games": 19.275,
+        "avg_over_21_5_rate": 0.2222,
+        "market_gap": 0.0586,
+        "confidence": 82.8,
+        "quality_score": 78.3,
+        "edge": 0.1027,
+        "strength_gap": 13.12,
+        "h2h_matches": 0,
+        "bookmakers_used": 3,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    },
+    {
+      "pick_id": "7c0a93b6633b520c4e20441538c057d9",
+      "source_pick_id": "7f118cefc38370cbd62401c1d85800ba",
+      "match": "F. Ferreira Silva - P. Martinez",
+      "bet": "UNDER 20.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.16,
+        "avg_three_set": 0.3111,
+        "avg_close_set": 0.2602,
+        "avg_total_games": 20.78,
+        "avg_over_21_5_rate": 0.3111,
+        "market_gap": 0.2618,
+        "confidence": 76.8,
+        "quality_score": 78.0,
+        "edge": 0.107,
+        "strength_gap": 6.33,
+        "h2h_matches": 0,
+        "bookmakers_used": 5,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    }
+  ],
+  "accepted_v2_test": [
+    {
+      "pick_id": "58cbfd2bb77941724f35ba905587bdae",
+      "source_pick_id": "a14e999b9da64b80f16849a3dccc0299",
+      "match": "M. Houkes - E. Nava",
+      "bet": "UNDER 20.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.12,
+        "avg_three_set": 0.0714,
+        "avg_close_set": 0.2916,
+        "avg_total_games": 18.465,
+        "avg_over_21_5_rate": 0.1429,
+        "market_gap": 0.5497,
+        "confidence": 88.9,
+        "quality_score": 84.2,
+        "edge": 0.0983,
+        "strength_gap": 9.61,
+        "h2h_matches": 0,
+        "bookmakers_used": 7,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "source_pick_id": "c2276558ab356a98640a58dbe153e4ea",
+      "match": "D. Dutra Da Silva - A. Martin",
+      "bet": "OVER 22.5 games",
+      "date": "2026-06-01",
+      "time": "10:00",
+      "odds": 2.04,
+      "metrics": {
+        "side": "over",
+        "line": 22.5,
+        "odds": 2.04,
+        "avg_three_set": 0.4778,
+        "avg_close_set": 0.3963,
+        "avg_total_games": 23.06,
+        "avg_over_21_5_rate": 0.5278,
+        "market_gap": 0.1226,
+        "confidence": 92.9,
+        "quality_score": 86.4,
+        "edge": 0.1298,
+        "strength_gap": 5.63,
+        "h2h_matches": 0,
+        "bookmakers_used": 4,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "side",
+        "avg_three_set_max"
+      ],
+      "v2_failed": [
+        "side",
+        "avg_close_set_max",
+        "avg_three_set_max",
+        "market_gap_min"
+      ]
+    },
+    {
+      "source_pick_id": "b6233a83b61cc03f05156e06ccd4ea47",
+      "match": "Y. Watanuki - P. Boscardin Dias",
+      "bet": "OVER 22.0 games",
+      "date": "2026-06-01",
+      "time": "14:00",
+      "odds": 1.96,
+      "metrics": {
+        "side": "over",
+        "line": 22.0,
+        "odds": 1.96,
+        "avg_three_set": 0.4857,
+        "avg_close_set": 0.5191,
+        "avg_total_games": 23.205,
+        "avg_over_21_5_rate": 0.5357,
+        "market_gap": 0.2667,
+        "confidence": 92.3,
+        "quality_score": 83.3,
+        "edge": 0.1098,
+        "strength_gap": 4.4,
+        "h2h_matches": 0,
+        "bookmakers_used": 3,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "side",
+        "avg_three_set_max"
+      ],
+      "v2_failed": [
+        "side",
+        "avg_close_set_max",
+        "avg_three_set_max"
+      ]
+    },
+    {
+      "source_pick_id": "4a06430c038782039c162ba7889a9966",
+      "match": "L. Castelnuovo - M. Gonzalez Fernandez",
+      "bet": "UNDER 21.5 games",
+      "date": "2026-06-01",
+      "time": "13:00",
+      "odds": 2.05,
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.05,
+        "avg_three_set": 0.3611,
+        "avg_close_set": 0.4039,
+        "avg_total_games": 21.25,
+        "avg_over_21_5_rate": 0.4722,
+        "market_gap": 0.2408,
+        "confidence": 90.9,
+        "quality_score": 83.1,
+        "edge": 0.0822,
+        "strength_gap": 48.03,
+        "h2h_matches": 0,
+        "bookmakers_used": 7,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "avg_three_set_max",
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "avg_close_set_max",
+        "avg_three_set_max",
+        "market_gap_min",
+        "strength_gap_max"
+      ]
+    },
+    {
+      "source_pick_id": "e0c32be587ba1496bfd5fea69a613a88",
+      "match": "E. Kalieva - T. Gibson",
+      "bet": "OVER 20.5 games",
+      "date": "2026-06-01",
+      "time": "11:30",
+      "odds": 2.0,
+      "metrics": {
+        "side": "over",
+        "line": 20.5,
+        "odds": 2.0,
+        "avg_three_set": 0.5,
+        "avg_close_set": 0.4062,
+        "avg_total_games": 22.875,
+        "avg_over_21_5_rate": 0.5,
+        "market_gap": 0.4572,
+        "confidence": 82.3,
+        "quality_score": 81.5,
+        "edge": 0.0962,
+        "strength_gap": 27.75,
+        "h2h_matches": 1,
+        "bookmakers_used": 9,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "main_failed": [
+        "side",
+        "avg_three_set_max"
+      ],
+      "v2_failed": [
+        "side",
+        "avg_close_set_max",
+        "avg_three_set_max",
+        "h2h_max"
+      ]
+    },
+    {
+      "source_pick_id": "d3c9595da8c860c3a893b136d1abc826",
+      "match": "L. Midon - Z. Kolar",
+      "bet": "OVER 22.0 games",
+      "date": "2026-06-01",
+      "time": "14:00",
+      "odds": 1.96,
+      "metrics": {
+        "side": "over",
+        "line": 22.0,
+        "odds": 1.96,
+        "avg_three_set": 0.4286,
+        "avg_close_set": 0.5834,
+        "avg_total_games": 23.86,
+        "avg_over_21_5_rate": 0.5,
+        "market_gap": 0.1607,
+        "confidence": 87.1,
+        "quality_score": 80.2,
+        "edge": 0.1098,
+        "strength_gap": 10.0,
+        "h2h_matches": 1,
+        "bookmakers_used": 3,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "side",
+        "avg_three_set_max"
+      ],
+      "v2_failed": [
+        "side",
+        "avg_close_set_max",
+        "avg_three_set_max",
+        "h2h_max",
+        "market_gap_min"
+      ]
+    },
+    {
+      "source_pick_id": "847d3e72a3a2e051a1de35afe1fd838b",
+      "match": "M. Chwalinska - D. Parry",
+      "bet": "UNDER 20.5 games",
+      "date": "2026-06-01",
+      "time": "13:00",
+      "odds": 2.1,
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.1,
+        "avg_three_set": 0.381,
+        "avg_close_set": 0.3466,
+        "avg_total_games": 21.2,
+        "avg_over_21_5_rate": 0.4524,
+        "market_gap": 0.2477,
+        "confidence": 87.3,
+        "quality_score": 79.7,
+        "edge": 0.0938,
+        "strength_gap": 30.15,
+        "h2h_matches": 0,
+        "bookmakers_used": 5,
+        "tour_level": "wta",
+        "gender": "women"
+      },
+      "main_failed": [
+        "avg_three_set_max",
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "avg_three_set_max",
+        "market_gap_min",
+        "strength_gap_max"
+      ]
+    },
+    {
+      "source_pick_id": "879dfdc18f04a833f38f4fc15156cdd2",
+      "match": "C. Naef - M. Inglis",
+      "bet": "UNDER 19.5 games",
+      "date": "2026-06-01",
+      "time": "16:00",
+      "odds": 2.0,
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.0,
+        "avg_three_set": 0.3125,
+        "avg_close_set": 0.3563,
+        "avg_total_games": 20.44,
+        "avg_over_21_5_rate": 0.3125,
+        "market_gap": 0.4587,
+        "confidence": 90.9,
+        "quality_score": 79.7,
+        "edge": 0.07,
+        "strength_gap": 33.05,
+        "h2h_matches": 0,
+        "bookmakers_used": 7,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "main_failed": [
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "avg_close_set_max",
+        "strength_gap_max"
+      ]
+    },
+    {
+      "source_pick_id": "5a1afa35e97d591f0e93c30da48a1865",
+      "match": "M. Stojsavljevic - E. Jones",
+      "bet": "UNDER 20.0 games",
+      "date": "2026-06-01",
+      "time": "13:00",
+      "odds": 2.13,
+      "metrics": {
+        "side": "under",
+        "line": 20.0,
+        "odds": 2.13,
+        "avg_three_set": 0.125,
+        "avg_close_set": 0.2812,
+        "avg_total_games": 18.525,
+        "avg_over_21_5_rate": 0.1965,
+        "market_gap": 0.2835,
+        "confidence": 85.7,
+        "quality_score": 78.2,
+        "edge": 0.1005,
+        "strength_gap": 43.47,
+        "h2h_matches": 0,
+        "bookmakers_used": 3,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "main_failed": [
+        "avg_three_set_min",
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "strength_gap_max"
+      ]
+    },
+    {
+      "source_pick_id": "62e817409932fc906caa8aee0e70a995",
+      "match": "A. Holmgren - J. Watt",
+      "bet": "UNDER 22.5 games",
+      "date": "2026-06-01",
+      "time": "11:30",
+      "odds": 2.12,
+      "metrics": {
+        "side": "under",
+        "line": 22.5,
+        "odds": 2.12,
+        "avg_three_set": 0.1111,
+        "avg_close_set": 0.4259,
+        "avg_total_games": 19.935,
+        "avg_over_21_5_rate": 0.1825,
+        "market_gap": 0.5894,
+        "confidence": 85.7,
+        "quality_score": 77.6,
+        "edge": 0.0983,
+        "strength_gap": 17.35,
+        "h2h_matches": 0,
+        "bookmakers_used": 3,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "avg_three_set_min"
+      ],
+      "v2_failed": [
+        "avg_close_set_max"
+      ]
+    },
+    {
+      "source_pick_id": "1b24d3cab5471f1f2520153ec75c8776",
+      "match": "P. Kotov - G. Den Ouden",
+      "bet": "UNDER 21.5 games",
+      "date": "2026-06-01",
+      "time": "14:00",
+      "odds": 2.1,
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.1,
+        "avg_three_set": 0.2778,
+        "avg_close_set": 0.3824,
+        "avg_total_games": 20.585,
+        "avg_over_21_5_rate": 0.2778,
+        "market_gap": 0.0421,
+        "confidence": 80.5,
+        "quality_score": 77.4,
+        "edge": 0.0938,
+        "strength_gap": 54.19,
+        "h2h_matches": 0,
+        "bookmakers_used": 6,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "avg_close_set_max",
+        "market_gap_min",
+        "strength_gap_max"
+      ]
+    },
+    {
+      "source_pick_id": "1e719d44dbe7af20cc1d3ad355de7200",
+      "match": "T. Duran - K. van Wyk",
+      "bet": "UNDER 19.5 games",
+      "date": "2026-06-01",
+      "time": "11:30",
+      "odds": 2.03,
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.03,
+        "avg_three_set": 0.0625,
+        "avg_close_set": 0.3472,
+        "avg_total_games": 18.61,
+        "avg_over_21_5_rate": 0.1736,
+        "market_gap": 0.5852,
+        "confidence": 88.5,
+        "quality_score": 77.1,
+        "edge": 0.0774,
+        "strength_gap": 49.53,
+        "h2h_matches": 1,
+        "bookmakers_used": 4,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "avg_three_set_min",
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "h2h_max",
+        "strength_gap_max"
+      ]
+    },
+    {
+      "source_pick_id": "a4204901868e7fcfd5e455e110e0a9c0",
+      "match": "G. Cadenasso - D. Merida Aguilar",
+      "bet": "OVER 21.5 games",
+      "date": "2026-06-01",
+      "time": "20:30",
+      "odds": 1.89,
+      "metrics": {
+        "side": "over",
+        "line": 21.5,
+        "odds": 1.89,
+        "avg_three_set": 0.3166,
+        "avg_close_set": 0.4806,
+        "avg_total_games": 21.405,
+        "avg_over_21_5_rate": 0.4222,
+        "market_gap": 0.1666,
+        "confidence": 84.1,
+        "quality_score": 76.7,
+        "edge": 0.086,
+        "strength_gap": 0.27,
+        "h2h_matches": 1,
+        "bookmakers_used": 6,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "side"
+      ],
+      "v2_failed": [
+        "side",
+        "avg_close_set_max",
+        "h2h_max",
+        "market_gap_min"
+      ]
+    }
+  ]
+}
