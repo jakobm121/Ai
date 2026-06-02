@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-02T08:32:22.901324+02:00",
+  "generated_at": "2026-06-02T22:39:40.101585+02:00",
   "model_version": "tedi_v1",
   "model_name": "Tedi Tennis Totals Filter v1",
   "source_file": "data/tennis_totals_predictions.json",
   "source_format": "dict_with_picks",
-  "source_picks": 20,
+  "source_picks": 0,
   "main_strategy": "tedi_main_150",
   "main_rules": {
     "side": "under",
@@ -15,7 +15,7 @@
     "strength_gap_min": 0,
     "strength_gap_max": 30
   },
-  "main_picks": 5,
+  "main_picks": 0,
   "v2_test_strategy": "tedi_v2_test",
   "v2_test_rules": {
     "side": "under",
@@ -27,13 +27,9 @@
     "quality_min": 72,
     "strength_gap_max": 30
   },
-  "v2_test_picks": 1,
-  "rejected_picks": 15,
+  "v2_test_picks": 0,
+  "rejected_picks": 0,
   "stake": 1.0,
-  "main_sides": {
-    "under": 5
-  },
-  "v2_test_sides": {
-    "under": 1
-  }
+  "main_sides": {},
+  "v2_test_sides": {}
 }
