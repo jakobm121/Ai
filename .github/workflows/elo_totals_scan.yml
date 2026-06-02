@@ -1,0 +1,83 @@
+name: ELO Totals Scan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/tennis_totals_results.json"
+      - "ratings/tennis_elo.json"
+      - "ratings/elo_lookup.py"
+      - "ratings/elo_totals_scan.py"
+      - ".github/workflows/elo_totals_scan.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: elo-totals-scan
+  cancel-in-progress: false
+
+jobs:
+  elo-totals-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Pull latest changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git pull --rebase --autostash origin main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check source files
+        run: |
+          test -f data/tennis_totals_results.json
+          test -f ratings/tennis_elo.json
+          test -f ratings/elo_lookup.py
+          test -f ratings/elo_totals_scan.py
+          echo "All source files found."
+
+      - name: Run ELO totals scan
+        run: |
+          python ratings/elo_totals_scan.py
+
+      - name: Show scan files
+        run: |
+          find ratings -maxdepth 2 -type f -print
+
+      - name: Commit ELO totals scan
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add ratings/elo_totals_scan.json
+          git add ratings/elo_totals_scan_table.md
+
+          if git diff --cached --quiet; then
+            echo "No ELO totals scan changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update ELO totals scan"
+          git pull --rebase --autostash origin main
+          git push origin main
+
+      - name: Upload ELO totals scan artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: elo-totals-scan
+          path: |
+            ratings/elo_totals_scan.json
+            ratings/elo_totals_scan_table.md
+          if-no-files-found: error
