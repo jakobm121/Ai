@@ -1,0 +1,40 @@
+name: Test ELO Lookup
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "ratings/tennis_elo.json"
+      - "ratings/elo_lookup.py"
+      - ".github/workflows/test_elo_lookup.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-elo-lookup
+  cancel-in-progress: false
+
+jobs:
+  test-elo-lookup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check required files
+        run: |
+          test -f ratings/tennis_elo.json
+          test -f ratings/elo_lookup.py
+          echo "ELO files found."
+
+      - name: Run ELO lookup test
+        run: |
+          python ratings/elo_lookup.py
