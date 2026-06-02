@@ -1,0 +1,114 @@
+name: Tennis Totals Full Chain
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tennis-totals-full-chain
+  cancel-in-progress: false
+
+jobs:
+  totals-chain:
+    runs-on: ubuntu-latest
+
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
+      TENNIS_API_KEY: ${{ secrets.API_KEY }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Create folders
+        run: |
+          mkdir -p data
+          mkdir -p web
+          mkdir -p jakob/results
+          mkdir -p tedi/results
+          mkdir -p lucija/results
+          mkdir -p hana/results
+
+      - name: Run tennis totals value model
+        run: |
+          python tennis_totals_predictions.py
+
+      - name: Build tennis totals site
+        run: |
+          python build_tennis_totals_site.py
+
+      - name: Run Jakob
+        run: |
+          python jakob.py
+
+      - name: Run Tedi
+        run: |
+          python tedi.py
+
+      - name: Run Lucija
+        run: |
+          python lucija.py
+
+      - name: Run Hana
+        run: |
+          python hana.py
+
+      - name: Show generated files
+        if: always()
+        run: |
+          echo "DATA:"
+          find data -maxdepth 2 -type f -print || true
+
+          echo "WEB:"
+          find web -maxdepth 2 -type f -print || true
+
+          echo "MODEL FOLDERS:"
+          find jakob tedi lucija hana -maxdepth 4 -type f -print || true
+
+      - name: Commit all totals chain outputs
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/ || true
+          git add web/ || true
+          git add jakob/ || true
+          git add tedi/ || true
+          git add lucija/ || true
+          git add hana/ || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Run tennis totals full chain"
+            git push
+          fi
+
+      - name: Upload full chain artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tennis-totals-full-chain-output
+          path: |
+            data/**
+            web/**
+            jakob/**
+            tedi/**
+            lucija/**
+            hana/**
+          if-no-files-found: warn
