@@ -1,0 +1,54 @@
+name: Value ELO Filter
+
+on:
+  workflow_dispatch:
+
+  workflow_run:
+    workflows:
+      - Tennis Value Predictions
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+jobs:
+  value-elo-filter:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run value ELO filter
+        run: |
+          python ratings/value_elo_filter.py
+
+      - name: Commit ELO filtered files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/tennis_value_elo_predictions.json
+          git add data/tennis_value_elo_results.json
+          git add ratings/value_elo_predictions_table.md
+          git add ratings/value_elo_results_report.json
+          git add ratings/value_elo_missing.json
+
+          if git diff --cached --quiet; then
+            echo "No ELO filter changes to commit."
+          else
+            git commit -m "Update value ELO filtered picks"
+            git push
+          fi
