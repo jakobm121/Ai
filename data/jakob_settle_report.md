@@ -1,55 +1,69 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-01T22:00:48.746623+02:00`
+Generated: `2026-06-02T22:09:01.658982+02:00`
 
-Pending picks: **1**
+Pending picks: **2**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 88 | 43 | 42 | 1 | 2 | 50.59% | +2.30u | 3.61% |
+| 102 | 51 | 47 | 1 | 3 | 52.04% | +4.88u | 6.64% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 14 | 5 | 8 | 1 | 0 | 38.46% | -2.10u | -21.55% |
+| 14 | 8 | 5 | 0 | 1 | 61.54% | +2.58u | 26.46% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 70 | 33 | 36 | 1 | 0 | 47.83% | -0.80u | -1.54% |
+| 84 | 41 | 41 | 1 | 1 | 50.00% | +1.78u | 2.90% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 51 | 22 | 28 | 1 | 0 | 44.00% | -3.51u | -9.35% |
+| 64 | 30 | 32 | 1 | 1 | 48.39% | -0.18u | -0.38% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 41 | 21 | 20 | 0 | 0 | 51.22% | +0.94u | 3.06% |
+| 51 | 27 | 24 | 0 | 0 | 52.94% | +2.53u | 6.62% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 11 | 6 | 5 | 0 | 0 | 54.55% | +0.43u | 5.27% |
+| 14 | 8 | 6 | 0 | 0 | 57.14% | +1.13u | 10.79% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 77 | 37 | 37 | 1 | 2 | 50.00% | +1.87u | 3.36% |
+| 88 | 43 | 41 | 1 | 3 | 51.19% | +3.75u | 5.95% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-02 | 18:00 | 10 | D. Dedura - M. Wiskandt | UNDER 20.5 games | 2.08 | ✅ win | 75.16 | 17 | 6-1, 6-4 | +0.81u |
+| 2026-06-02 | 17:00 | 11 | M. Bulgaru - N. Noha Akugue | UNDER 19.5 games | 2.17 | ❌ loss | 73.94 | 25 | 6-7, 5-7 | -0.75u |
+| 2026-06-02 | 16:00 | 7 | T. Duran - S. Napolitano | UNDER 20.5 games | 2.20 | ⚪ void | 75.79 |  |  | 0.00u |
+| 2026-06-02 | 16:00 | 13 | B. Shick - R. Hohmann | UNDER 20.5 games | 2.00 | ❌ loss | 73.85 | 26 | 6-4, 3-6, 6-1 | -0.75u |
+| 2026-06-02 | 13:30 | 12 | M. Mrva - D. Svrcina | UNDER 20.5 games | 2.00 | ❌ loss | 73.93 | 31 | 5-7, 6-3, 6-4 | -0.75u |
+| 2026-06-02 | 13:00 | 15 | D. Papamichail - C. Paquet | OVER 20.5 games | 2.00 | ✅ win | 72.96 | 21 | 5-7, 3-6 | +0.75u |
+| 2026-06-02 | 12:00 | 25 | T. Daniel - J. Forejtek | OVER 22.5 games | 2.05 | ❌ loss | 70.54 | 20 | 7-6, 6-1 | -0.75u |
+| 2026-06-02 | 12:00 | 6 | A. Martin - V. Kopriva | UNDER 19.5 games | 2.00 | ✅ win | 76.34 | 16 | 0-6, 4-6 | +0.75u |
+| 2026-06-02 | 11:30 | 2 | V. Royer - N. Alvarez Varona | UNDER 20.5 games | 2.20 | ✅ win | 80.68 | 19 | 6-4, 6-3 | +0.90u |
+| 2026-06-02 | 11:30 | 1 | N. Bartunkova - H. Dart | OVER 21.5 games | 1.93 | ✅ win | 83.48 | 30 | 3-6, 6-3, 7-5 | +0.70u |
+| 2026-06-02 | 11:30 | 9 | A. Eala - P. Hon | UNDER 19.5 games | 2.01 | ✅ win | 75.29 | 14 | 6-0, 6-2 | +0.76u |
+| 2026-06-02 | 10:30 | 8 | S. Baez - S. Gueymard Wayenburg | UNDER 19.5 games | 2.12 | ✅ win | 75.63 | 19 | 6-4, 6-3 | +0.84u |
+| 2026-06-02 | 10:00 | 4 | S. Rawat - E. Winter | UNDER 19.5 games | 2.10 | ✅ win | 77.27 | 17 | 3-6, 2-6 | +0.82u |
+| 2026-06-02 | 10:00 | 5 | M. Echargui - C. H. Tseng | UNDER 20.5 games | 2.00 | ❌ loss | 76.65 | 26 | 4-6, 6-1, 3-6 | -0.75u |
 | 2026-06-01 | 20:15 | 3 | A. Sabalenka - N. Osaka | UNDER 20.0 games | 2.09 | ❌ loss | 70.41 | 21 | 7-5, 6-3 | -0.75u |
 | 2026-06-01 | 18:00 | 2 | M. Houkes - E. Nava | UNDER 20.5 games | 2.12 | ❌ loss | 74.64 | 23 | 4-6, 6-7 | -0.75u |
 | 2026-06-01 | 14:30 | 1 | M. Alkaya - A. Azkara | UNDER 20.5 games | 2.15 | ❌ loss | 75.11 | 27 | 6-4, 3-6, 2-6 | -0.75u |
@@ -116,18 +130,4 @@ Pending picks: **1**
 | 2026-05-26 | 13:30 | 21 | L. Midon - J. Reis Da Silva | OVER 22.5 games | 2.07 | ❌ loss | 65.47 | 20 | 7-6, 6-1 | -0.75u |
 | 2026-05-26 | 13:30 | 39 | J. Vasami - G. Tabacco | UNDER 21.5 games | 1.97 | ✅ win | 59.19 | 20 | 6-1, 7-6 | +0.73u |
 | 2026-05-26 | 13:00 | 42 | T. Berkieta - S. Kopp | OVER 20.5 games | 1.88 | ✅ win | 57.98 | 25 | 5-7, 6-7 | +0.66u |
-| 2026-05-26 | 13:00 | 38 | T. Berkieta - S. Kopp | OVER 20.5 games | 1.88 | ✅ win | 58.59 | 25 | 5-7, 6-7 | +0.66u |
-| 2026-05-26 | 13:00 | 4 | L. Siegemund - N. Osaka | UNDER 19.5 games | 2.17 | ❌ loss | 75.45 | 22 | 3-6, 6-7 | -0.75u |
-| 2026-05-26 | 13:00 | 6 | L. Siegemund - N. Osaka | UNDER 19.5 games | 2.17 | ❌ loss | 72.87 | 22 | 3-6, 6-7 | -0.75u |
-| 2026-05-26 | 13:00 | 9 | J. Clarke - M. Karol | UNDER 20.5 games | 2.13 | ❌ loss | 73.63 | 28 | 6-4, 4-6, 2-6 | -0.75u |
-| 2026-05-26 | 13:00 | 8 | J. Clarke - M. Karol | UNDER 20.5 games | 2.13 | ❌ loss | 71.93 | 28 | 6-4, 4-6, 2-6 | -0.75u |
-| 2026-05-26 | 12:30 | 3 | L. Noskova - M. Sakkari | UNDER 20.5 games | 2.15 | ❌ loss | 76.51 | 25 | 5-7, 6-7 | -0.75u |
-| 2026-05-26 | 12:30 | 5 | L. Noskova - M. Sakkari | UNDER 20.5 games | 2.15 | ❌ loss | 73.58 | 25 | 5-7, 6-7 | -0.75u |
-| 2026-05-26 | 12:30 | 14 | A. Li - S. Zhang | UNDER 20.5 games | 1.95 | ✅ win | 67.82 | 18 | 6-4, 6-2 | +0.71u |
-| 2026-05-26 | 12:15 | 10 | L. Djere - T. Skatov | UNDER 20.0 games | 2.11 | ✅ win | 72.13 | 19 | 4-6, 3-6 | +0.83u |
-| 2026-05-26 | 12:05 | 6 | D. Glinka - S. Latinovic | UNDER 19.5 games | 2.06 | ✅ win | 74.24 | 18 | 6-3, 6-3 | +0.80u |
-| 2026-05-26 | 12:00 | 27 | S. Pieri - J. Kym | UNDER 21.5 games | 2.16 | ✅ win | 64.88 | 20 | 6-1, 7-6 | +0.87u |
-| 2026-05-26 | 12:00 | 12 | L. Djere - T. Skatov | UNDER 20.0 games | 2.11 | ✅ win | 69.39 | 19 | 4-6, 3-6 | +0.83u |
-| 2026-05-26 | 12:00 | 3 | D. Glinka - S. Latinovic | UNDER 19.5 games | 2.06 | ✅ win | 74.01 | 18 | 6-3, 6-3 | +0.80u |
-| 2026-05-26 | 11:00 | 5 | E. Navarro - J. Tjen | UNDER 20.5 games | 2.00 | ✅ win | 74.69 | 19 | 6-4, 6-3 | +0.75u |
 
