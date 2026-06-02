@@ -13,7 +13,7 @@ concurrency:
 jobs:
   totals-settle-chain:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     env:
       API_KEY: ${{ secrets.API_KEY }}
@@ -70,7 +70,14 @@ jobs:
         run: |
           python lucija_settle.py
 
-      - name: Settle Hana
+      - name: Check source result files for Hana
+        run: |
+          test -f data/jakob_results.json
+          test -f data/tedi/tedi_results.json
+          test -f data/lucija/lucija_results.json
+          echo "Hana source result files exist."
+
+      - name: Settle Hana from source results
         run: |
           python hana_settle.py
 
