@@ -1,6 +1,6 @@
 # ELO totals scan
 
-Generated: 2026-06-03T01:07:49.087057+02:00
+Generated: 2026-06-03T01:08:28.822393+02:00
 
 ## Base
 
