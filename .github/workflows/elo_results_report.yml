@@ -1,0 +1,87 @@
+name: ELO Results Report
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/tennis_results.json"
+      - "data/tennis_totals_results.json"
+      - "ratings/tennis_elo.json"
+      - "ratings/elo_lookup.py"
+      - "ratings/elo_results_report.py"
+      - ".github/workflows/elo_results_report.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: elo-results-report
+  cancel-in-progress: false
+
+jobs:
+  elo-results-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Pull latest changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git pull --rebase --autostash origin main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check source files
+        run: |
+          test -f ratings/tennis_elo.json
+          test -f ratings/elo_lookup.py
+          test -f ratings/elo_results_report.py
+          test -f data/tennis_results.json
+          test -f data/tennis_totals_results.json
+          echo "All ELO report source files found."
+
+      - name: Build ELO results report
+        run: |
+          python ratings/elo_results_report.py
+
+      - name: Show ELO report files
+        run: |
+          find ratings -maxdepth 2 -type f -print
+
+      - name: Commit ELO results report
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add ratings/elo_results_report.json
+          git add ratings/elo_results_missing.json
+          git add ratings/elo_results_table.md
+
+          if git diff --cached --quiet; then
+            echo "No ELO report changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update ELO results report"
+          git pull --rebase --autostash origin main
+          git push origin main
+
+      - name: Upload ELO report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: elo-results-report
+          path: |
+            ratings/elo_results_report.json
+            ratings/elo_results_missing.json
+            ratings/elo_results_table.md
+          if-no-files-found: error
