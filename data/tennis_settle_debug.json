@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-01T22:12:15.023234+02:00",
-  "pending_checked": 22,
-  "updated": 13,
-  "still_pending": 9,
+  "generated_at": "2026-06-02T22:17:36.590031+02:00",
+  "pending_checked": 30,
+  "updated": 18,
+  "still_pending": 12,
   "not_found": 0,
   "errors": [],
   "checked": [
@@ -72,33 +72,33 @@
     {
       "match": "M. Stoiana - L. Sun",
       "event_key": 12132527,
-      "status": "Interrupted",
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 1",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "F. Tiafoe - M. Arnaldi",
+      "event_key": 12132419,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "2 - 3",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "A. Martin - B. Ellis",
+      "event_key": 12132440,
+      "status": "",
       "winner": null,
-      "score": "1 - 1",
+      "score": "-",
       "changed": false,
-      "reason": "keep_pending_status:interrupted"
+      "reason": "keep_pending_status:unknown"
     },
     {
-      "match": "J. J. Schwaerzler - M. Dodig",
-      "event_key": 12132418,
-      "status": "Finished",
-      "winner": "Second Player",
-      "score": "1 - 2",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "M. Huesler - Z. Zhang",
-      "event_key": 12132536,
-      "status": "Finished",
-      "winner": "Second Player",
-      "score": "1 - 2",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "M. Sawangkaew - L. Klimovicova",
-      "event_key": 12132544,
+      "match": "J. Wang - J. Lu",
+      "event_key": 12132627,
       "status": "Finished",
       "winner": "First Player",
       "score": "2 - 0",
@@ -106,80 +106,80 @@
       "reason": "settled"
     },
     {
-      "match": "P. Kotov - G. Den Ouden",
-      "event_key": 12132414,
-      "status": "Finished",
-      "winner": "Second Player",
-      "score": "0 - 2",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "F. Ferreira Silva - P. Martinez",
-      "event_key": 12132411,
-      "status": "Finished",
-      "winner": "Second Player",
-      "score": "0 - 2",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "T. Skatov - V. Gaubas",
-      "event_key": 12132394,
-      "status": "Finished",
-      "winner": "First Player",
-      "score": "2 - 1",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "Y. Watanuki - P. Boscardin Dias",
-      "event_key": 12132347,
-      "status": "Retired",
-      "winner": "Second Player",
-      "score": "1 - 1",
-      "changed": true,
-      "reason": "void_status:retired"
-    },
-    {
-      "match": "T. Pieri - V. Bosio",
-      "event_key": 12132547,
-      "status": "Finished",
-      "winner": "First Player",
-      "score": "2 - 1",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "J. M. Cerundolo - M. Berrettini",
-      "event_key": 12132313,
-      "status": "Finished",
-      "winner": "Second Player",
-      "score": "0 - 3",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "F. Auger-Aliassime - A. Tabilo",
-      "event_key": 12132422,
-      "status": "Finished",
-      "winner": "First Player",
-      "score": "3 - 0",
-      "changed": true,
-      "reason": "settled"
-    },
-    {
-      "match": "F. Tiafoe - M. Arnaldi",
-      "event_key": 12132419,
-      "status": "Set 2",
+      "match": "R. Bertola - F. Maestrelli",
+      "event_key": 12132386,
+      "status": "Cancelled",
       "winner": null,
-      "score": "0 - 1",
-      "changed": false,
-      "reason": "keep_pending_status:set 2"
+      "score": "-",
+      "changed": true,
+      "reason": "void_status:cancelled"
     },
     {
-      "match": "L. Giustino - M. Topo",
-      "event_key": 12132412,
+      "match": "N. Sanchez Izquierdo - L. Pavlovic",
+      "event_key": 12132345,
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 1",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "M. Bellucci - A. Bolt",
+      "event_key": 12132316,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "M. Petkovic - A. Moro Canas",
+      "event_key": 12132416,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "C. Cretu - J. Vasami",
+      "event_key": 12132390,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "N. Bartunkova - H. Dart",
+      "event_key": 12132533,
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 1",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "D. Papamichail - C. Paquet",
+      "event_key": 12132569,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "0 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "G. Pedone - E. Gorgodze",
+      "event_key": 12132570,
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 0",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "R. Bautista-Agut - H. Barton",
+      "event_key": 12132338,
       "status": "Finished",
       "winner": "Second Player",
       "score": "1 - 2",
@@ -187,8 +187,44 @@
       "reason": "settled"
     },
     {
-      "match": "B. Kuzuhara - A. Fenty",
-      "event_key": 12132606,
+      "match": "Y. Shimizu - D. Sweeny",
+      "event_key": 12132442,
+      "status": "",
+      "winner": null,
+      "score": "-",
+      "changed": false,
+      "reason": "keep_pending_status:unknown"
+    },
+    {
+      "match": "S. Shimabukuro - S. Mochizuki",
+      "event_key": 12132325,
+      "status": "Interrupted",
+      "winner": null,
+      "score": "1 - 0",
+      "changed": false,
+      "reason": "keep_pending_status:interrupted"
+    },
+    {
+      "match": "T. Preston - A. Dudeney",
+      "event_key": 12132528,
+      "status": "Interrupted",
+      "winner": null,
+      "score": "1 - 0",
+      "changed": false,
+      "reason": "keep_pending_status:interrupted"
+    },
+    {
+      "match": "T. Daniel - J. Forejtek",
+      "event_key": 12132710,
+      "status": "Finished",
+      "winner": "First Player",
+      "score": "2 - 0",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "A. Gillan - A. Kulikova",
+      "event_key": 12132816,
       "status": "Finished",
       "winner": "Second Player",
       "score": "0 - 2",
@@ -196,13 +232,49 @@
       "reason": "settled"
     },
     {
-      "match": "H. Matsuoka - M. Imamura",
-      "event_key": 12132524,
+      "match": "J. Watt - H. Wendelken",
+      "event_key": 12132749,
       "status": "Finished",
       "winner": "Second Player",
-      "score": "0 - 2",
+      "score": "1 - 2",
       "changed": true,
       "reason": "settled"
+    },
+    {
+      "match": "V. Durasovic - N. Gombos",
+      "event_key": 12132708,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "1 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "C. Chidekh - F. Romano",
+      "event_key": 12132750,
+      "status": "Finished",
+      "winner": "Second Player",
+      "score": "1 - 2",
+      "changed": true,
+      "reason": "settled"
+    },
+    {
+      "match": "A. Tomljanovic - K. Swan",
+      "event_key": 12132525,
+      "status": "Interrupted",
+      "winner": null,
+      "score": "0 - 1",
+      "changed": false,
+      "reason": "keep_pending_status:interrupted"
+    },
+    {
+      "match": "F. Forti - R. Opelka",
+      "event_key": 12132701,
+      "status": "Cancelled",
+      "winner": null,
+      "score": "-",
+      "changed": true,
+      "reason": "void_status:cancelled"
     }
   ]
 }
