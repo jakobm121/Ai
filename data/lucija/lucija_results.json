@@ -5380,7 +5380,7 @@
     "first_strength_score": 52.75,
     "second_strength_score": 79.0,
     "h2h_matches": 0,
-    "result": "pending",
+    "result": "win",
     "created_at": "2026-06-02T08:31:48.163803+02:00",
     "reasoning": "Lucija selected UNDER 20.5 games in V. Royer - N. Alvarez Varona using optimizer rule: confidence >= 80, quality >= 72, market_gap >= 0.25, strength_gap <= 30, h2h <= 0, avg_three_set >= 0.15, avg_close_set between 0.2 and 0.55.",
     "source_pick_id": "a506ed88602da0c7316a824f91a53d2c",
@@ -5414,6 +5414,14 @@
       "strength_gap_max": true,
       "h2h_max": true
     },
-    "profit": null
+    "profit": 1.2,
+    "settled_at": "2026-06-02T22:06:59.600890+02:00",
+    "settled_status": "Finished",
+    "event_winner": "First Player",
+    "final_score": "6-4, 6-3",
+    "total_games": 19,
+    "settled_from": "data/tennis_totals_results.json",
+    "settled_source_pick_id": "a506ed88602da0c7316a824f91a53d2c",
+    "lucija_settled_at": "2026-06-02T22:10:22.981699+02:00"
   }
 ]
