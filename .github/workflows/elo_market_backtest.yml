@@ -15,9 +15,10 @@ on:
         description: "Minimalna ELO razlika za pick"
         required: false
         default: "60"
-
-permissions:
-  contents: write
+      bookmaker:
+        description: "Bookmaker za oddse; prazno = best available"
+        required: false
+        default: ""
 
 jobs:
   elo-form-market-backtest:
@@ -29,10 +30,14 @@ jobs:
       BACKTEST_DAYS_BACK: ${{ github.event.inputs.days_back || '5' }}
       FORM_DAYS_BACK: ${{ github.event.inputs.form_days_back || '45' }}
       MIN_ELO_DIFF: ${{ github.event.inputs.min_elo_diff || '60' }}
+      BOOKMAKER: ${{ github.event.inputs.bookmaker || '' }}
+      REQUEST_SLEEP: "0.15"
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -53,15 +58,10 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add ratings/elo_form_market_backtest.py || true
-          git add ratings/elo_form_market_backtest_report.json || true
-          git add ratings/elo_form_market_backtest_rows.json || true
-          git add ratings/elo_form_market_backtest_missing.json || true
-          git add ratings/elo_form_market_backtest_table.md || true
+          test -f ratings/elo_form_market_backtest_report.json && git add ratings/elo_form_market_backtest_report.json
+          test -f ratings/elo_form_market_backtest_rows.json && git add ratings/elo_form_market_backtest_rows.json
+          test -f ratings/elo_form_market_backtest_missing.json && git add ratings/elo_form_market_backtest_missing.json
+          test -f ratings/elo_form_market_backtest_table.md && git add ratings/elo_form_market_backtest_table.md
 
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Update ELO form market backtest"
-            git push
-          fi
+          git commit -m "Update ELO form market backtest" || echo "No changes to commit"
+          git push
