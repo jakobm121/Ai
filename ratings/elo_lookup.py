@@ -20,6 +20,29 @@ _SURFACE_ALIASES = {
     "carpet": "carpet",
 }
 
+_NOISE_TOKENS = {
+    "atp",
+    "wta",
+    "itf",
+    "challenger",
+    "men",
+    "women",
+    "woman",
+    "man",
+    "boys",
+    "girls",
+    "singles",
+    "single",
+    "doubles",
+    "double",
+    "qualification",
+    "qualifying",
+    "qualifier",
+    "q",
+    "main",
+    "draw",
+}
+
 
 def load_json(path, default):
     if not os.path.exists(path):
@@ -42,21 +65,28 @@ def safe_float(value, default=None):
 
 
 def normalize_text(value):
+    """
+    Normalizira ime:
+    - odstrani accente
+    - O'Connell -> o connell
+    - Tung-Lin -> tung lin
+    - odstrani oklepaje/države
+    """
     text = str(value or "").strip().lower()
     text = unicodedata.normalize("NFKD", text)
     text = "".join(ch for ch in text if not unicodedata.combining(ch))
 
-    # remove brackets/countries/noise
     text = re.sub(r"\([^)]*\)", " ", text)
     text = re.sub(r"\[[^\]]*\]", " ", text)
 
-    # common punctuation
     text = text.replace(",", " ")
     text = text.replace("-", " ")
     text = text.replace("_", " ")
     text = text.replace(".", " ")
+    text = text.replace("'", " ")
+    text = text.replace("’", " ")
+    text = text.replace("`", " ")
 
-    # keep letters/numbers/spaces only
     text = re.sub(r"[^a-z0-9\s]", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
@@ -73,7 +103,6 @@ def normalize_surface(surface):
 
 def detect_tour_from_text(value):
     text = normalize_text(value)
-
     if not text:
         return None
 
@@ -94,7 +123,6 @@ def detect_tour_from_text(value):
 
 def normalize_tour(tour):
     text = normalize_text(tour)
-
     if not text:
         return None
 
@@ -110,73 +138,127 @@ def split_name_tokens(name):
         return []
 
     tokens = n.split()
-
-    # Remove obvious non-name words if they sneak in
-    bad = {
-        "atp", "wta", "itf", "challenger", "men", "women",
-        "singles", "doubles", "qualification", "qualifying",
-    }
-    tokens = [t for t in tokens if t not in bad]
+    tokens = [t for t in tokens if t not in _NOISE_TOKENS]
     return tokens
+
+
+def is_initial(token):
+    return bool(token) and len(token) == 1 and token.isalpha()
+
+
+def add_variant(variants, kind, value):
+    value = normalize_text(value)
+    if value:
+        variants.add((kind, value))
+        variants.add(("compact", value.replace(" ", "")))
+
+
+def add_token_variant(variants, kind, tokens):
+    tokens = [t for t in tokens if t]
+    if tokens:
+        add_variant(variants, kind, " ".join(tokens))
 
 
 def name_variants(name):
     """
-    Returns matching variants:
-    - exact normalized full name
-    - compact name
-    - initial_last
-    - last_initial
-    - last
-    Supports:
-      J. Brooksby
-      Brooksby J.
-      Brooksby, Jenson
-      Jenson Brooksby
+    Robustno generira variante za:
+    - J. Brooksby
+    - Brooksby J.
+    - Jenson Brooksby
+    - C. O'Connell / OConnell C.
+    - P. Boscardin Dias
+    - J. C. Prado Angelo
+    - Wu Tung-Lin / Tung-Lin Wu
+    - C. H. Tseng / Chun Hsin Tseng
     """
-    raw = str(name or "").strip()
-    tokens = split_name_tokens(raw)
-
+    tokens = split_name_tokens(name)
     variants = set()
 
     if not tokens:
         return variants
 
     full = " ".join(tokens)
-    variants.add(("exact", full))
-    variants.add(("compact", "".join(tokens)))
+    add_variant(variants, "exact", full)
 
     if len(tokens) == 1:
-        variants.add(("last", tokens[0]))
+        add_variant(variants, "last", tokens[0])
         return variants
 
     first = tokens[0]
     last = tokens[-1]
 
-    # Normal First Last
-    variants.add(("initial_last", f"{first[0]} {last}"))
-    variants.add(("last_initial", f"{last} {first[0]}"))
-    variants.add(("last", last))
+    initials = [t for t in tokens if is_initial(t)]
+    name_parts = [t for t in tokens if not is_initial(t)]
 
-    # Reversed: Brooksby J / Brooksby Jenson
-    rev_last = tokens[0]
-    rev_first = tokens[-1]
-    variants.add(("initial_last", f"{rev_first[0]} {rev_last}"))
-    variants.add(("last_initial", f"{rev_last} {rev_first[0]}"))
-    variants.add(("last", rev_last))
+    # Normal first-last and last-first.
+    add_token_variant(variants, "exact", tokens)
+    add_token_variant(variants, "exact", list(reversed(tokens)))
 
-    # Two-token special: "j brooksby" and "brooksby j"
+    add_token_variant(variants, "initial_last", [first[0], last])
+    add_token_variant(variants, "last_initial", [last, first[0]])
+    add_token_variant(variants, "last", [last])
+
+    # Two token basic cases.
     if len(tokens) == 2:
         a, b = tokens
-        if len(a) == 1:
-            variants.add(("initial_last", f"{a} {b}"))
-            variants.add(("last_initial", f"{b} {a}"))
-            variants.add(("last", b))
+        add_token_variant(variants, "initial_last", [a[0], b])
+        add_token_variant(variants, "last_initial", [b, a[0]])
+        add_token_variant(variants, "initial_last", [b[0], a])
+        add_token_variant(variants, "last_initial", [a, b[0]])
+        add_token_variant(variants, "last", [a])
+        add_token_variant(variants, "last", [b])
 
-        if len(b) == 1:
-            variants.add(("initial_last", f"{b} {a}"))
-            variants.add(("last_initial", f"{a} {b}"))
-            variants.add(("last", a))
+    # Multi-word surname / initials.
+    # P Boscardin Dias -> boscardin dias p, p boscardin dias
+    if initials and name_parts:
+        initials_joined = "".join(initials)
+
+        # Last name can be one or more final non-initial parts.
+        for surname_len in range(1, min(3, len(name_parts)) + 1):
+            surname_parts = name_parts[-surname_len:]
+            add_token_variant(variants, "initial_last", initials + surname_parts)
+            add_token_variant(variants, "initial_last", [initials_joined] + surname_parts)
+            add_token_variant(variants, "last_initial", surname_parts + initials)
+            add_token_variant(variants, "last_initial", surname_parts + [initials_joined])
+            add_token_variant(variants, "last", surname_parts)
+
+        # Full non-initial name + initials reversed.
+        add_token_variant(variants, "last_initial", name_parts + initials)
+        add_token_variant(variants, "last_initial", name_parts + [initials_joined])
+        add_token_variant(variants, "initial_last", initials + name_parts)
+        add_token_variant(variants, "initial_last", [initials_joined] + name_parts)
+
+    # Multi-word names without initials.
+    # Wu Tung Lin -> Tung Lin Wu, Lin Wu Tung
+    if len(tokens) >= 3:
+        add_token_variant(variants, "exact", tokens[1:] + tokens[:1])
+        add_token_variant(variants, "exact", tokens[-1:] + tokens[:-1])
+
+        # Last two as surname.
+        add_token_variant(variants, "last_initial", tokens[-2:] + [tokens[0][0]])
+        add_token_variant(variants, "initial_last", [tokens[0][0]] + tokens[-2:])
+        add_token_variant(variants, "last", tokens[-2:])
+
+        # First two as surname/name group.
+        add_token_variant(variants, "last_initial", tokens[:2] + [tokens[-1][0]])
+        add_token_variant(variants, "initial_last", [tokens[-1][0]] + tokens[:2])
+        add_token_variant(variants, "last", tokens[:2])
+
+    # Apostrophe/space compact special:
+    # o connell -> oconnell and connell are both available.
+    for i in range(len(tokens)):
+        add_variant(variants, "last", tokens[i])
+
+    # Adjacent token compounds:
+    # o connell -> oconnell, tung lin -> tunglin
+    if len(tokens) >= 2:
+        for i in range(len(tokens) - 1):
+            compound = tokens[i] + tokens[i + 1]
+            add_variant(variants, "compound", compound)
+            if i == len(tokens) - 2:
+                add_token_variant(variants, "initial_last", [tokens[0][0], compound])
+                add_token_variant(variants, "last_initial", [compound, tokens[0][0]])
+                add_variant(variants, "last", compound)
 
     return variants
 
@@ -208,10 +290,6 @@ def get_record_tour(record, fallback_tour=None):
         value = record.get(key)
         tour = normalize_tour(value)
         if tour:
-            if tour == "atp":
-                return "atp"
-            if tour == "wta":
-                return "wta"
             return tour
 
     return normalize_tour(fallback_tour)
@@ -245,7 +323,6 @@ def get_surface_elo(record, surface):
     if not surface:
         return None
 
-    # Direct fields
     direct_keys = [
         f"{surface}_elo",
         f"{surface}_rating",
@@ -258,18 +335,21 @@ def get_surface_elo(record, surface):
         if value is not None:
             return value
 
-    # Nested surface dicts
-    for parent_key in ["surface_elo", "surface_elos", "surface_ratings", "surfaces", "by_surface"]:
+    for parent_key in [
+        "surface_elo",
+        "surface_elos",
+        "surface_ratings",
+        "surfaces",
+        "by_surface",
+    ]:
         parent = record.get(parent_key)
         if not isinstance(parent, dict):
             continue
 
-        # surface: number
         value = safe_float(parent.get(surface), None)
         if value is not None:
             return value
 
-        # surface: {elo: number}
         child = parent.get(surface)
         if isinstance(child, dict):
             for key in ["elo", "rating", "current_elo", "current_rating"]:
@@ -294,14 +374,38 @@ def get_match_count(record):
 
 def flatten_elo_payload(payload):
     """
-    Supports many possible tennis_elo.json shapes:
-    - list of player dicts
+    Podpira različne oblike tennis_elo.json:
+    - list igralcev
     - {player_name: rating_dict}
     - {tour: {player_name: rating_dict}}
     - {"players": [...]}
     - {"ratings": [...]}
     """
     rows = []
+
+    def append_row(name, record, fallback_tour=None):
+        if not name or not isinstance(record, dict):
+            return
+
+        overall = get_overall_elo(record)
+        if overall is None:
+            return
+
+        final_name = get_record_name(record, name)
+        if not final_name:
+            return
+
+        tour = get_record_tour(record, fallback_tour)
+
+        rows.append({
+            "name": final_name,
+            "norm_name": normalize_text(final_name),
+            "compact_name": compact_text(final_name),
+            "tour": tour,
+            "overall_elo": overall,
+            "record": record,
+            "matches": get_match_count(record),
+        })
 
     def walk(obj, fallback_name=None, fallback_tour=None):
         if isinstance(obj, list):
@@ -312,7 +416,7 @@ def flatten_elo_payload(payload):
         if not isinstance(obj, dict):
             return
 
-        # Container keys
+        # Container keys.
         for key in ["players", "ratings", "data", "items", "rows"]:
             value = obj.get(key)
             if isinstance(value, list):
@@ -323,45 +427,23 @@ def flatten_elo_payload(payload):
                 walk(value, fallback_tour=fallback_tour)
                 return
 
-        # Player-like record
-        name = get_record_name(obj, fallback_name)
-        overall = get_overall_elo(obj)
-
-        if name and overall is not None:
-            tour = get_record_tour(obj, fallback_tour)
-            rows.append({
-                "name": name,
-                "norm_name": normalize_text(name),
-                "compact_name": compact_text(name),
-                "tour": tour,
-                "overall_elo": overall,
-                "record": obj,
-                "matches": get_match_count(obj),
-            })
+        # Direct player-like dict.
+        direct_name = get_record_name(obj, fallback_name)
+        direct_overall = get_overall_elo(obj)
+        if direct_name and direct_overall is not None:
+            append_row(direct_name, obj, fallback_tour=fallback_tour)
             return
 
-        # Dict nesting, often {tour: {...}} or {player: {...}}
+        # Nested dict.
         for key, value in obj.items():
             key_tour = normalize_tour(key) or fallback_tour
 
             if isinstance(value, dict):
-                # Could be { "Jannik Sinner": {"elo": 2100}}
-                possible_name = key
                 possible_overall = get_overall_elo(value)
-
                 if possible_overall is not None:
-                    tour = get_record_tour(value, key_tour)
-                    rows.append({
-                        "name": get_record_name(value, possible_name),
-                        "norm_name": normalize_text(get_record_name(value, possible_name)),
-                        "compact_name": compact_text(get_record_name(value, possible_name)),
-                        "tour": tour,
-                        "overall_elo": possible_overall,
-                        "record": value,
-                        "matches": get_match_count(value),
-                    })
+                    append_row(key, value, fallback_tour=key_tour)
                 else:
-                    walk(value, fallback_name=possible_name, fallback_tour=key_tour)
+                    walk(value, fallback_name=key, fallback_tour=key_tour)
 
             elif isinstance(value, list):
                 walk(value, fallback_tour=key_tour)
@@ -372,6 +454,12 @@ def flatten_elo_payload(payload):
 
 _ELO_CACHE = None
 _INDEX_CACHE = None
+
+
+def clear_cache():
+    global _ELO_CACHE, _INDEX_CACHE
+    _ELO_CACHE = None
+    _INDEX_CACHE = None
 
 
 def load_elo_rows():
@@ -399,6 +487,7 @@ def build_index():
         "initial_last": {},
         "last_initial": {},
         "last": {},
+        "compound": {},
         "all": rows,
     }
 
@@ -423,9 +512,39 @@ def tour_matches(row_tour, wanted_tour):
     if wanted_tour == row_tour:
         return True
 
-    # Challenger je lahko moški tour, ampak za ATP/WTA value model raje ne mešamo preveč.
-    # Zato tu NI avtomatskega challenger=atp.
+    # Namerno ne mešamo challenger = atp.
+    # Če boš želel posebej, raje testiramo ločeno.
     return False
+
+
+def player_score(row, query_name, wanted_tour=None):
+    wanted_tour = normalize_tour(wanted_tour)
+
+    q_norm = normalize_text(query_name)
+    q_compact = compact_text(query_name)
+
+    name_norm = row.get("norm_name") or normalize_text(row.get("name"))
+    name_compact = row.get("compact_name") or compact_text(row.get("name"))
+
+    s_norm = SequenceMatcher(None, q_norm, name_norm).ratio()
+    s_compact = SequenceMatcher(None, q_compact, name_compact).ratio()
+
+    # Token overlap pomaga pri multi-word priimkih.
+    q_tokens = set(q_norm.split())
+    n_tokens = set(name_norm.split())
+    overlap = 0.0
+    if q_tokens and n_tokens:
+        overlap = len(q_tokens & n_tokens) / max(len(q_tokens), len(n_tokens))
+
+    score = max(s_norm, s_compact, overlap)
+
+    if wanted_tour and normalize_tour(row.get("tour")) == wanted_tour:
+        score += 0.05
+
+    # Malo preferiramo bolj zanesljive ratinge z več matchi.
+    score += min((row.get("matches") or 0), 500) / 100000.0
+
+    return score
 
 
 def choose_best(candidates, query_name, wanted_tour=None):
@@ -433,63 +552,109 @@ def choose_best(candidates, query_name, wanted_tour=None):
         return None
 
     wanted_tour = normalize_tour(wanted_tour)
-
     filtered = [c for c in candidates if tour_matches(c.get("tour"), wanted_tour)]
+
     if filtered:
         candidates = filtered
 
-    q_norm = normalize_text(query_name)
-    q_compact = compact_text(query_name)
+    return sorted(
+        candidates,
+        key=lambda row: player_score(row, query_name, wanted_tour),
+        reverse=True,
+    )[0]
 
-    def score(row):
-        name_norm = row.get("norm_name") or normalize_text(row.get("name"))
-        name_compact = row.get("compact_name") or compact_text(row.get("name"))
 
-        s1 = SequenceMatcher(None, q_norm, name_norm).ratio()
-        s2 = SequenceMatcher(None, q_compact, name_compact).ratio()
-        s = max(s1, s2)
+def get_suggestions(name, tour=None, limit=5):
+    """
+    Diagnostika za missing imena.
+    Vrne top najbližje igralce iz ELO baze.
+    """
+    index = build_index()
+    rows = index.get("all", [])
 
-        # small bonus for wanted tour
-        if wanted_tour and normalize_tour(row.get("tour")) == wanted_tour:
-            s += 0.05
+    scored = []
+    for row in rows:
+        if not tour_matches(row.get("tour"), tour):
+            continue
 
-        # small bonus for more matches / more reliable rating
-        s += min((row.get("matches") or 0), 500) / 100000.0
+        score = player_score(row, name, tour)
+        scored.append((score, row))
 
-        return s
+    scored.sort(key=lambda x: x[0], reverse=True)
 
-    return sorted(candidates, key=score, reverse=True)[0]
+    out = []
+    seen = set()
+
+    for score, row in scored:
+        key = (row.get("name"), row.get("tour"))
+        if key in seen:
+            continue
+        seen.add(key)
+
+        out.append({
+            "name": row.get("name"),
+            "tour": row.get("tour"),
+            "overall_elo": row.get("overall_elo"),
+            "matches": row.get("matches"),
+            "score": round(score, 4),
+        })
+
+        if len(out) >= limit:
+            break
+
+    return out
+
+
+def _matched_result(name, chosen, method, attempts):
+    return {
+        "matched": True,
+        "input_name": name,
+        "matched_name": chosen["name"],
+        "match_method": method,
+        "tour": chosen.get("tour"),
+        "overall_elo": chosen.get("overall_elo"),
+        "record": chosen.get("record"),
+        "attempts": attempts,
+        "suggestions": [],
+    }
+
+
+def _unmatched_result(name, tour, attempts):
+    return {
+        "matched": False,
+        "input_name": name,
+        "matched_name": None,
+        "match_method": None,
+        "tour": normalize_tour(tour),
+        "overall_elo": None,
+        "record": None,
+        "attempts": attempts,
+        "suggestions": get_suggestions(name, tour=tour, limit=5),
+    }
 
 
 def find_player(name, tour=None):
     index = build_index()
     variants = name_variants(name)
-
     attempts = []
 
-    # Strong exact-ish passes
-    for kind in ["exact", "compact", "initial_last", "last_initial"]:
+    # 1) Najmočnejši matchi.
+    for kind in ["exact", "compact", "initial_last", "last_initial", "compound"]:
         for variant_kind, key in variants:
             if variant_kind != kind:
                 continue
 
             attempts.append(f"{kind}:{key}")
             candidates = index.get(kind, {}).get(key, [])
-            if candidates:
-                chosen = choose_best(candidates, name, tour)
-                if chosen:
-                    return {
-                        "matched": True,
-                        "input_name": name,
-                        "matched_name": chosen["name"],
-                        "match_method": kind,
-                        "tour": chosen.get("tour"),
-                        "overall_elo": chosen.get("overall_elo"),
-                        "record": chosen.get("record"),
-                        "attempts": attempts,
-                    }
 
-    # Last name fallback only if not too ambiguous after tour filter
+            if not candidates:
+                continue
+
+            chosen = choose_best(candidates, name, tour)
+            if chosen:
+                return _matched_result(name, chosen, kind, attempts)
+
+    # 2) Last-name fallback, ampak samo če ni preveč dvoumno.
     for variant_kind, key in variants:
         if variant_kind != "last":
             continue
@@ -505,40 +670,22 @@ def find_player(name, tour=None):
 
         if len(use_candidates) == 1:
             chosen = use_candidates[0]
-            return {
-                "matched": True,
-                "input_name": name,
-                "matched_name": chosen["name"],
-                "match_method": "last_unique",
-                "tour": chosen.get("tour"),
-                "overall_elo": chosen.get("overall_elo"),
-                "record": chosen.get("record"),
-                "attempts": attempts,
-            }
+            return _matched_result(name, chosen, "last_unique", attempts)
 
         chosen = choose_best(use_candidates, name, tour)
         if chosen:
-            q = normalize_text(name)
-            c = normalize_text(chosen["name"])
-            ratio = SequenceMatcher(None, q, c).ratio()
+            ratio = player_score(chosen, name, tour)
 
-            # Only accept fuzzy last fallback if reasonably strong
-            if ratio >= 0.72:
-                return {
-                    "matched": True,
-                    "input_name": name,
-                    "matched_name": chosen["name"],
-                    "match_method": f"last_fuzzy_{round(ratio, 3)}",
-                    "tour": chosen.get("tour"),
-                    "overall_elo": chosen.get("overall_elo"),
-                    "record": chosen.get("record"),
-                    "attempts": attempts,
-                }
+            # Last-name fuzzy naj bo strožji, ker je tu največ false positive nevarnosti.
+            if ratio >= 0.78:
+                return _matched_result(
+                    name,
+                    chosen,
+                    f"last_fuzzy_{round(ratio, 3)}",
+                    attempts,
+                )
 
-    # Full fuzzy fallback
-    q_norm = normalize_text(name)
-    q_compact = compact_text(name)
-
+    # 3) Full fuzzy fallback.
     best = None
     best_score = 0.0
 
@@ -546,40 +693,21 @@ def find_player(name, tour=None):
         if not tour_matches(row.get("tour"), tour):
             continue
 
-        n_norm = row.get("norm_name") or normalize_text(row.get("name"))
-        n_compact = row.get("compact_name") or compact_text(row.get("name"))
-
-        score = max(
-            SequenceMatcher(None, q_norm, n_norm).ratio(),
-            SequenceMatcher(None, q_compact, n_compact).ratio(),
-        )
-
+        score = player_score(row, name, tour)
         if score > best_score:
             best_score = score
             best = row
 
-    if best and best_score >= 0.86:
-        return {
-            "matched": True,
-            "input_name": name,
-            "matched_name": best["name"],
-            "match_method": f"full_fuzzy_{round(best_score, 3)}",
-            "tour": best.get("tour"),
-            "overall_elo": best.get("overall_elo"),
-            "record": best.get("record"),
-            "attempts": attempts,
-        }
+    # Prag ni prenizek, da ne potrjujemo napačnih igralcev.
+    if best and best_score >= 0.88:
+        return _matched_result(
+            name,
+            best,
+            f"full_fuzzy_{round(best_score, 3)}",
+            attempts,
+        )
 
-    return {
-        "matched": False,
-        "input_name": name,
-        "matched_name": None,
-        "match_method": None,
-        "tour": normalize_tour(tour),
-        "overall_elo": None,
-        "record": None,
-        "attempts": attempts,
-    }
+    return _unmatched_result(name, tour, attempts)
 
 
 def get_player_elo(player_name, surface=None, tour=None):
@@ -602,17 +730,17 @@ def get_player_elo(player_name, surface=None, tour=None):
 
 def get_elo_signal(player_name, opponent_name, surface=None, tour=None):
     """
-    Compatible output for existing scripts.
+    Kompatibilen output za obstoječe skripte.
 
-    For match winner:
+    Za match winner:
     - player_name = picked player
     - opponent_name = opponent
-    - agrees_with_pick = picked player has higher ELO
+    - agrees_with_pick = picked player ima višji ELO
 
-    For totals:
+    Za totals:
     - player_name = first player
     - opponent_name = second player
-    - agrees_with_pick only means first player has higher ELO
+    - agrees_with_pick pomeni samo first player ima višji ELO
     """
     player = get_player_elo(player_name, surface=surface, tour=tour)
     opponent = get_player_elo(opponent_name, surface=surface, tour=tour)
@@ -655,6 +783,7 @@ def get_elo_signal(player_name, opponent_name, surface=None, tour=None):
             "overall_elo": player.get("overall_elo"),
             "surface_elo": player.get("surface_elo"),
             "attempts": player.get("attempts", []),
+            "suggestions": player.get("suggestions", []),
         },
         "opponent": {
             "matched": opponent.get("matched"),
@@ -665,6 +794,7 @@ def get_elo_signal(player_name, opponent_name, surface=None, tour=None):
             "overall_elo": opponent.get("overall_elo"),
             "surface_elo": opponent.get("surface_elo"),
             "attempts": opponent.get("attempts", []),
+            "suggestions": opponent.get("suggestions", []),
         },
     }
 
@@ -673,13 +803,29 @@ if __name__ == "__main__":
     rows = load_elo_rows()
     print(f"ELO rows loaded: {len(rows)}")
 
-    for q in [
-        "J. Brooksby",
-        "Brooksby J.",
-        "Jenson Brooksby",
-        "A. Kalinskaya",
-        "Kalinskaya A.",
-    ]:
+    tests = [
+        ("J. Brooksby", "atp"),
+        ("Brooksby J.", "atp"),
+        ("Jenson Brooksby", "atp"),
+        ("A. Kalinskaya", "wta"),
+        ("Kalinskaya A.", "wta"),
+        ("C. O'Connell", "atp"),
+        ("OConnell C.", "atp"),
+        ("P. Boscardin Dias", "atp"),
+        ("J. C. Prado Angelo", "atp"),
+        ("Wu Tung-Lin", "atp"),
+        ("C. H. Tseng", "atp"),
+    ]
+
+    for q, t in tests:
         print("")
-        print(q)
-        print(find_player(q))
+        print(q, t)
+        result = find_player(q, tour=t)
+        print({
+            "matched": result.get("matched"),
+            "matched_name": result.get("matched_name"),
+            "method": result.get("match_method"),
+            "tour": result.get("tour"),
+            "overall_elo": result.get("overall_elo"),
+            "suggestions": result.get("suggestions"),
+        })
