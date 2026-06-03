@@ -1,12 +1,12 @@
 # Tedi settled results
 
-Generated: 2026-06-02T22:55:38.946441+02:00
+Generated: 2026-06-03T16:11:30.520222+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 14 | 13 | 1 | 5 | 7 | 1 | 41.67% | -1.52u | -11.69% |
+| tedi_main_150 | 18 | 16 | 2 | 8 | 7 | 1 | 53.33% | 1.71u | 10.69% |
 | tedi_v2_test | 5 | 5 | 0 | 2 | 3 | 0 | 40.0% | -0.82u | -16.4% |
 
 ## Results
@@ -31,4 +31,8 @@ Generated: 2026-06-02T22:55:38.946441+02:00
 | 2026-06-02 | 11:30 | tedi_v2_test | win | 1.20 | V. Royer - N. Alvarez Varona | UNDER 20.5 games | 2.20 | 19 | 6-4, 6-3 |
 | 2026-06-02 | 15:00 | tedi_main_150 | loss | -1.00 | R. Bautista-Agut - H. Barton | UNDER 21.5 games | 2.14 | 35 | 4-6, 7-6, 5-7 |
 | 2026-06-02 | 15:30 | tedi_main_150 | loss | -1.00 | J. Pinnington Jones - A. Vukic | UNDER 22.5 games | 2.15 | 27 | 6-2, 4-6, 3-6 |
-| 2026-06-02 | 17:30 | tedi_main_150 | pending | 0.00 | A. Krueger - H. Sakatsume | UNDER 20.5 games | 2.00 |  |  |
+| 2026-06-02 | 17:30 | tedi_main_150 | win | 1.00 | A. Krueger - H. Sakatsume | UNDER 20.5 games | 2.00 | 19 | 6-4, 6-3 |
+| 2026-06-03 | 11:30 | tedi_main_150 | win | 1.20 | A. Krueger - H. Sakatsume | UNDER 19.5 games | 2.20 | 19 | 6-4, 6-3 |
+| 2026-06-03 | 12:30 | tedi_main_150 | win | 1.03 | S. Baez - T. Boyer | UNDER 20.5 games | 2.03 | 18 | 6-2, 6-4 |
+| 2026-06-03 | 13:00 | tedi_main_150 | pending | 0.00 | H. Squire - P. Martinez | UNDER 21.5 games | 2.00 |  |  |
+| 2026-06-03 | 18:30 | tedi_main_150 | pending | 0.00 | A. Martin - B. Ellis | UNDER 21.5 games | 2.17 |  |  |

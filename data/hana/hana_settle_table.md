@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-02T22:55:39.079710+02:00
+Generated: 2026-06-03T16:11:30.649513+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 116 | 116 | 57 | 53 | 6 | 51.82% | 7.4u | 6.73% |
+| 124 | 124 | 62 | 55 | 7 | 52.99% | 10.83u | 9.26% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 13 | 13 | 7 | 6 | 0 | 53.85% | 1.4u | 10.77% |
-| single | 101 | 101 | 49 | 46 | 6 | 51.58% | 5.8u | 6.11% |
-| triple | 2 | 2 | 1 | 1 | 0 | 50.0% | 0.2u | 10.0% |
+| double | 14 | 14 | 8 | 6 | 0 | 57.14% | 2.4u | 17.14% |
+| single | 107 | 107 | 52 | 48 | 7 | 52.0% | 7.2u | 7.2% |
+| triple | 3 | 3 | 2 | 1 | 0 | 66.67% | 1.23u | 41.0% |
 
 ## Results
 
@@ -117,6 +117,7 @@ Generated: 2026-06-02T22:55:39.079710+02:00
 | 2026-06-01 | 15:15 | single | tedi | push | 0.00 | E. Yaneva - L. Pigato | UNDER 20.0 games | 2.14 | 20 | 6-7, 1-6 |
 | 2026-06-01 | 16:00 | single | tedi | win | 1.08 | M. Lajal - L. Riedi | UNDER 22.5 games | 2.08 | 21 | 6-2, 7-6 |
 | 2026-06-01 | 16:00 | double | lucija, tedi | loss | -1.00 | R. Hohmann - A. Soriano Barrera | UNDER 21.5 games | 2.03 | 30 | 6-2, 6-7, 6-3 |
+| 2026-06-01 | 16:30 | single | jakob | win | 1.00 | C. Naef - M. Inglis | UNDER 19.5 games | 2.00 | 17 | 6-2, 6-3 |
 | 2026-06-01 | 18:00 | double | jakob, tedi | loss | -1.00 | M. Houkes - E. Nava | UNDER 20.5 games | 2.12 | 23 | 4-6, 6-7 |
 | 2026-06-01 | 20:15 | single | jakob | loss | -1.00 | A. Sabalenka - N. Osaka | UNDER 20.0 games | 2.09 | 21 | 7-5, 6-3 |
 | 2026-06-02 | 10:00 | single | jakob | loss | -1.00 | M. Echargui - C. H. Tseng | UNDER 20.5 games | 2.00 | 26 | 4-6, 6-1, 3-6 |
@@ -135,4 +136,11 @@ Generated: 2026-06-02T22:55:39.079710+02:00
 | 2026-06-02 | 16:00 | single | jakob | loss | -1.00 | B. Shick - R. Hohmann | UNDER 20.5 games | 2.00 | 26 | 6-4, 3-6, 6-1 |
 | 2026-06-02 | 16:00 | single | jakob | push | 0.00 | T. Duran - S. Napolitano | UNDER 20.5 games | 2.20 | None | None |
 | 2026-06-02 | 17:00 | single | jakob | loss | -1.00 | M. Bulgaru - N. Noha Akugue | UNDER 19.5 games | 2.17 | 25 | 6-7, 5-7 |
+| 2026-06-02 | 17:30 | double | jakob, tedi | win | 1.00 | A. Krueger - H. Sakatsume | UNDER 20.5 games | 2.00 | 19 | 6-4, 6-3 |
 | 2026-06-02 | 18:00 | single | jakob | win | 1.08 | D. Dedura - M. Wiskandt | UNDER 20.5 games | 2.08 | 17 | 6-1, 6-4 |
+| 2026-06-03 | 10:30 | single | jakob | push | 0.00 | M. Bassem Sobhy - N. Makhlouf | UNDER 19.0 games | 2.13 | None | None |
+| 2026-06-03 | 10:30 | single | jakob | loss | -1.00 | M. Hageman - M. Masiianskaia | UNDER 19.5 games | 2.01 | 22 | 6-4, 7-5 |
+| 2026-06-03 | 11:30 | single | tedi | win | 1.20 | A. Krueger - H. Sakatsume | UNDER 19.5 games | 2.20 | 19 | 6-4, 6-3 |
+| 2026-06-03 | 11:30 | single | jakob | win | 1.20 | M. Topo - E. Nava | UNDER 20.5 games | 2.20 | 19 | 3-6, 4-6 |
+| 2026-06-03 | 12:30 | single | jakob | loss | -1.00 | A. Sabalenka - D. Shnaider | UNDER 19.0 games | 2.10 | 27 | 6-3, 5-7, 0-6 |
+| 2026-06-03 | 12:30 | triple | jakob, lucija, tedi | win | 1.03 | S. Baez - T. Boyer | UNDER 20.5 games | 2.03 | 18 | 6-2, 6-4 |

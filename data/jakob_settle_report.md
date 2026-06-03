@@ -1,38 +1,38 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-02T22:55:38.847888+02:00`
+Generated: `2026-06-03T16:11:30.417026+02:00`
 
-Pending picks: **2**
+Pending picks: **3**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 102 | 51 | 47 | 1 | 3 | 52.04% | +4.88u | 6.64% |
+| 109 | 55 | 49 | 1 | 4 | 52.88% | +6.55u | 8.40% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 14 | 8 | 5 | 0 | 1 | 61.54% | +2.58u | 26.46% |
+| 7 | 4 | 2 | 0 | 1 | 66.67% | +1.67u | 37.16% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 84 | 41 | 41 | 1 | 1 | 50.00% | +1.78u | 2.90% |
+| 91 | 45 | 43 | 1 | 2 | 51.14% | +3.46u | 5.24% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 64 | 30 | 32 | 1 | 1 | 48.39% | -0.18u | -0.38% |
+| 68 | 33 | 32 | 1 | 2 | 50.77% | +2.24u | 4.60% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 51 | 27 | 24 | 0 | 0 | 52.94% | +2.53u | 6.62% |
+| 56 | 30 | 26 | 0 | 0 | 53.57% | +3.30u | 7.87% |
 
 ### Over
 
@@ -44,12 +44,19 @@ Pending picks: **2**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 88 | 43 | 41 | 1 | 3 | 51.19% | +3.75u | 5.95% |
+| 95 | 47 | 43 | 1 | 4 | 52.22% | +5.42u | 8.03% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-03 | 12:30 | 5 | S. Baez - T. Boyer | UNDER 20.5 games | 2.03 | ✅ win | 73.87 | 18 | 6-2, 6-4 | +0.77u |
+| 2026-06-03 | 12:30 | 9 | A. Sabalenka - D. Shnaider | UNDER 19.0 games | 2.10 | ❌ loss | 71.17 | 27 | 6-3, 5-7, 0-6 | -0.75u |
+| 2026-06-03 | 11:30 | 3 | M. Topo - E. Nava | UNDER 20.5 games | 2.20 | ✅ win | 76.29 | 19 | 3-6, 4-6 | +0.90u |
+| 2026-06-03 | 11:30 | 2 | A. Krueger - H. Sakatsume | UNDER 20.5 games | 2.00 | ✅ win | 76.83 | 19 | 6-4, 6-3 | +0.75u |
+| 2026-06-03 | 10:30 | 8 | M. Hageman - M. Masiianskaia | UNDER 19.5 games | 2.01 | ❌ loss | 71.65 | 22 | 6-4, 7-5 | -0.75u |
+| 2026-06-03 | 10:30 | 6 | M. Bassem Sobhy - N. Makhlouf | UNDER 19.0 games | 2.13 | ⚪ void | 73.24 |  |  | 0.00u |
+| 2026-06-01 | 16:30 | 4 | C. Naef - M. Inglis | UNDER 19.5 games | 2.00 | ✅ win | 70.09 | 17 | 6-2, 6-3 | +0.75u |
 | 2026-06-02 | 18:00 | 10 | D. Dedura - M. Wiskandt | UNDER 20.5 games | 2.08 | ✅ win | 75.16 | 17 | 6-1, 6-4 | +0.81u |
 | 2026-06-02 | 17:00 | 11 | M. Bulgaru - N. Noha Akugue | UNDER 19.5 games | 2.17 | ❌ loss | 73.94 | 25 | 6-7, 5-7 | -0.75u |
 | 2026-06-02 | 16:00 | 7 | T. Duran - S. Napolitano | UNDER 20.5 games | 2.20 | ⚪ void | 75.79 |  |  | 0.00u |
@@ -123,11 +130,4 @@ Pending picks: **2**
 | 2026-05-26 | 15:00 | 7 | P. O. Fellin - P. Martin Tiffon | UNDER 19.5 games | 2.00 | ❌ loss | 72.82 | 20 | 4-6, 4-6 | -0.75u |
 | 2026-05-26 | 15:00 | 31 | M. Brunold - M. Giunta | UNDER 21.5 games | 2.20 | ❌ loss | 64.05 | 26 | 7-6, 7-6 | -0.75u |
 | 2026-05-26 | 15:00 | 1 | H. Vandewinkel - M. Keys | UNDER 18.5 games | 2.14 | ✅ win | 80.51 | 15 | 3-6, 0-6 | +0.85u |
-| 2026-05-26 | 15:00 | 13 | A. Korneeva - E. Cocciaretto | UNDER 20.5 games | 2.05 | ✅ win | 69.93 | 18 | 6-3, 6-3 | +0.79u |
-| 2026-05-26 | 15:00 | 15 | A. Korneeva - E. Cocciaretto | UNDER 20.5 games | 2.05 | ✅ win | 67.48 | 18 | 6-3, 6-3 | +0.79u |
-| 2026-05-26 | 14:30 | 17 | A. Kalinina - D. Parry | UNDER 20.5 games | 1.98 | ❌ loss | 66.92 | 24 | 6-0, 2-6, 4-6 | -0.75u |
-| 2026-05-26 | 13:30 | 1 | L. Midon - J. Reis Da Silva | OVER 22.5 games | 2.07 | ❌ loss | 89.31 | 20 | 7-6, 6-1 | -0.75u |
-| 2026-05-26 | 13:30 | 21 | L. Midon - J. Reis Da Silva | OVER 22.5 games | 2.07 | ❌ loss | 65.47 | 20 | 7-6, 6-1 | -0.75u |
-| 2026-05-26 | 13:30 | 39 | J. Vasami - G. Tabacco | UNDER 21.5 games | 1.97 | ✅ win | 59.19 | 20 | 6-1, 7-6 | +0.73u |
-| 2026-05-26 | 13:00 | 42 | T. Berkieta - S. Kopp | OVER 20.5 games | 1.88 | ✅ win | 57.98 | 25 | 5-7, 6-7 | +0.66u |
 
