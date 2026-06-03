@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-03T09:13:09.196075+02:00",
+  "generated_at": "2026-06-03T12:34:06.059057+02:00",
   "source_file": "data/tennis_predictions.json",
   "elo_file": "ratings/tennis_elo.json",
   "total_source_predictions": 15,
-  "confirmed_in_current_run": 3,
-  "added": 3,
-  "updated": 0,
-  "total_saved_predictions": 3,
+  "confirmed_in_current_run": 4,
+  "added": 1,
+  "updated": 3,
+  "total_saved_predictions": 4,
   "picks": [
     {
       "pick_id": "12f64b1316e9c3d2c120c610611f26ae",
@@ -24,7 +24,7 @@
       "value_score": null,
       "elo_confirmed": true,
       "elo_overall_diff": 81.51,
-      "elo_surface_diff": 81.51
+      "elo_surface_diff": null
     },
     {
       "pick_id": "7cd4f856b67853104776e4b452415ece",
@@ -42,7 +42,7 @@
       "value_score": null,
       "elo_confirmed": true,
       "elo_overall_diff": 71.42,
-      "elo_surface_diff": 71.42
+      "elo_surface_diff": null
     },
     {
       "pick_id": "5b128125f0452092ae5e5e513cd9767f",
@@ -60,7 +60,25 @@
       "value_score": null,
       "elo_confirmed": true,
       "elo_overall_diff": 4.48,
-      "elo_surface_diff": 4.48
+      "elo_surface_diff": null
+    },
+    {
+      "pick_id": "504a675b5c14bfdfcee17a0ebb2fc09e",
+      "created_at": "2026-06-03T08:35:54.336805+02:00",
+      "date": "2026-06-03",
+      "tour_level": "challenger",
+      "event_type": "Challenger Men Singles",
+      "match": "E. Ymer - C. O'Connell",
+      "bet": "E. Ymer",
+      "opponent": "C. O'Connell",
+      "odds": 2.12,
+      "stake": 1.5,
+      "model_probability": null,
+      "edge": 0.1883,
+      "value_score": null,
+      "elo_confirmed": true,
+      "elo_overall_diff": 29.45,
+      "elo_surface_diff": null
     }
   ]
 }
