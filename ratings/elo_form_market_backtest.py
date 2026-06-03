@@ -3,71 +3,45 @@ import os
 import sys
 import time
 from collections import defaultdict
-from datetime import datetime, date, timedelta
+from datetime import datetime, timedelta, date
 from zoneinfo import ZoneInfo
 
 import requests
 
+# Import iz ratings/
+sys.path.append(os.path.dirname(__file__))
 
-# ============================================================
-# CONFIG
-# ============================================================
+from elo_lookup import get_elo_signal
+
 
 TZ_NAME = "Europe/Ljubljana"
-TZ = ZoneInfo(TZ_NAME)
-
-API_KEY = os.getenv("TENNIS_API_KEY") or os.getenv("API_KEY")
 BASE_URL = "https://api.api-tennis.com/tennis/"
 
-BACKTEST_DAYS_BACK = int(os.getenv("BACKTEST_DAYS_BACK", "5"))
-FORM_DAYS_BACK = int(os.getenv("FORM_DAYS_BACK", "45"))
-MIN_ELO_DIFF = float(os.getenv("MIN_ELO_DIFF", "60"))
+API_KEY = os.getenv("TENNIS_API_KEY") or os.getenv("API_KEY")
 
-BOOKMAKER = os.getenv("BOOKMAKER", "").strip().lower()
-REQUEST_SLEEP = float(os.getenv("REQUEST_SLEEP", "0.15"))
+BACKTEST_DAYS_BACK = int(os.getenv("BACKTEST_DAYS_BACK", "5"))
+MIN_ELO_DIFF = float(os.getenv("MIN_ELO_DIFF", "60"))
+MIN_ODDS = float(os.getenv("MIN_ODDS", "1.90"))
+MAX_ODDS = float(os.getenv("MAX_ODDS", "2.70"))
+REQUEST_SLEEP = float(os.getenv("REQUEST_SLEEP", "0.03"))
 
 OUTPUT_REPORT_FILE = "ratings/elo_form_market_backtest_report.json"
 OUTPUT_ROWS_FILE = "ratings/elo_form_market_backtest_rows.json"
 OUTPUT_MISSING_FILE = "ratings/elo_form_market_backtest_missing.json"
 OUTPUT_TABLE_FILE = "ratings/elo_form_market_backtest_table.md"
 
-SCRIPT_DIR = os.path.dirname(__file__)
-if SCRIPT_DIR not in sys.path:
-    sys.path.append(SCRIPT_DIR)
 
-try:
-    from elo_lookup import get_elo_signal
-except Exception as e:
-    raise RuntimeError(f"Cannot import ratings/elo_lookup.py: {e}")
-
-
-# ============================================================
-# BASIC HELPERS
-# ============================================================
-
-def now_local():
-    return datetime.now(TZ)
+def now_iso():
+    return datetime.now(ZoneInfo(TZ_NAME)).isoformat()
 
 
 def today_local():
-    return now_local().date()
+    return datetime.now(ZoneInfo(TZ_NAME)).date()
 
 
-def now_iso():
-    return now_local().isoformat()
-
-
-def ymd(d):
-    if isinstance(d, datetime):
-        return d.date().isoformat()
-    if isinstance(d, date):
-        return d.isoformat()
-    return str(d)
-
-
-def daterange(start_date, stop_date):
+def date_range(start_date, end_date):
     d = start_date
-    while d <= stop_date:
+    while d <= end_date:
         yield d
         d += timedelta(days=1)
 
@@ -91,46 +65,22 @@ def safe_float(value, default=None):
             return default
         if isinstance(value, str):
             value = value.strip().replace(",", ".")
-            if value == "":
+            if not value:
                 return default
         return float(value)
     except Exception:
         return default
 
 
-def safe_int(value, default=None):
-    try:
-        if value is None or value == "":
-            return default
-        return int(value)
-    except Exception:
-        return default
+def norm(value):
+    return str(value or "").strip()
 
 
-def norm_name(name):
-    return " ".join(str(name or "").strip().lower().split())
+def norm_lower(value):
+    return norm(value).lower()
 
 
-def clean_name(name):
-    return " ".join(str(name or "").strip().split())
-
-
-def pct(x):
-    return round(x * 100, 2)
-
-
-def round2(x):
-    try:
-        return round(float(x), 2)
-    except Exception:
-        return x
-
-
-# ============================================================
-# API TENNIS
-# ============================================================
-
-def fetch_api(method, params=None, retries=3, sleep_base=1.2):
+def fetch_api(method, params=None, retries=3):
     if not API_KEY:
         raise RuntimeError("Missing env var TENNIS_API_KEY or API_KEY")
 
@@ -142,635 +92,371 @@ def fetch_api(method, params=None, retries=3, sleep_base=1.2):
 
     for attempt in range(1, retries + 1):
         try:
-            r = requests.get(BASE_URL, params=params, timeout=45)
+            r = requests.get(BASE_URL, params=params, timeout=35)
             r.raise_for_status()
             data = r.json()
 
             if isinstance(data, dict):
-                success = data.get("success")
-                if success == 0 and data.get("error"):
-                    last_error = data.get("error")
-                    time.sleep(sleep_base * attempt)
-                    continue
+                result = data.get("result")
+                if result is None:
+                    result = data.get("data")
+                if result is None:
+                    result = []
+                return result
 
-            return data
+            if isinstance(data, list):
+                return data
 
+            return []
         except Exception as e:
             last_error = e
-            time.sleep(sleep_base * attempt)
+            if attempt < retries:
+                time.sleep(1.5 * attempt)
 
     raise RuntimeError(f"API request failed for {method}: {last_error}")
 
 
-def api_result_list(payload):
-    if not isinstance(payload, dict):
-        return []
+def collect_fixtures(start_date, end_date):
+    out = []
 
-    result = payload.get("result")
-
-    if isinstance(result, list):
-        return result
-
-    if isinstance(result, dict):
-        return list(result.values())
-
-    return []
-
-
-def api_result_dict(payload):
-    if not isinstance(payload, dict):
-        return {}
-
-    result = payload.get("result")
-
-    if isinstance(result, dict):
-        return result
-
-    return {}
-
-
-def collect_fixtures(start_date, stop_date):
-    fixtures = []
-
-    for d in daterange(start_date, stop_date):
-        ds = ymd(d)
+    for d in date_range(start_date, end_date):
+        ds = d.isoformat()
         print(f"Fetching fixtures: {ds}")
 
         try:
-            data = fetch_api("get_fixtures", {
+            rows = fetch_api("get_fixtures", {
                 "date_start": ds,
                 "date_stop": ds,
             })
-            rows = api_result_list(data)
-            print(f"  fixtures: {len(rows)}")
-            fixtures.extend(rows)
-
         except Exception as e:
-            print(f"  fixtures failed: {e}")
+            print(f"  fixtures error: {e}")
+            rows = []
 
+        if not isinstance(rows, list):
+            rows = []
+
+        print(f"  fixtures: {len(rows)}")
+        out.extend(rows)
         time.sleep(REQUEST_SLEEP)
 
-    return fixtures
+    return out
 
 
-def fetch_match_odds(match_key):
-    if not match_key:
-        return {}
-
-    try:
-        data = fetch_api("get_odds", {
-            "match_key": match_key,
-        })
-
-        result = api_result_dict(data)
-
-        # API Tennis get_odds response:
-        # result = { "159923": { "Home/Away": { "Home": {...}, "Away": {...} } } }
-        match_odds = (
-            result.get(str(match_key))
-            or result.get(match_key)
-            or {}
-        )
-
-        return match_odds if isinstance(match_odds, dict) else {}
-
-    except Exception as e:
-        return {"_error": str(e)}
-
-
-# ============================================================
-# FIXTURE PARSING
-# ============================================================
-
-def parse_match_dt(fx):
-    date_str = (
-        fx.get("event_date")
-        or fx.get("date")
-        or fx.get("match_date")
-        or ""
+def fixture_key(row):
+    return (
+        row.get("event_key")
+        or row.get("match_key")
+        or row.get("id")
+        or row.get("fixture_key")
     )
 
-    time_str = (
-        fx.get("event_time")
-        or fx.get("time")
-        or fx.get("match_time")
-        or "00:00"
+
+def first_player(row):
+    return (
+        row.get("event_first_player")
+        or row.get("first_player")
+        or row.get("first_player_name")
+        or row.get("player_1")
+        or row.get("home_player")
     )
 
-    raw = f"{date_str} {time_str}".strip()
 
-    for fmt in [
-        "%Y-%m-%d %H:%M",
-        "%Y-%m-%d %H:%M:%S",
-        "%Y-%m-%d",
-    ]:
-        try:
-            dt = datetime.strptime(raw, fmt)
-            return dt.replace(tzinfo=TZ)
-        except Exception:
-            pass
+def second_player(row):
+    return (
+        row.get("event_second_player")
+        or row.get("second_player")
+        or row.get("second_player_name")
+        or row.get("player_2")
+        or row.get("away_player")
+    )
+
+
+def infer_surface(row):
+    raw = " ".join([
+        norm(row.get("event_surface")),
+        norm(row.get("surface")),
+        norm(row.get("court_surface")),
+        norm(row.get("tournament_surface")),
+        norm(row.get("tournament_name")),
+        norm(row.get("event_type")),
+    ]).lower()
+
+    if "clay" in raw:
+        return "clay"
+    if "hard" in raw:
+        return "hard"
+    if "grass" in raw:
+        return "grass"
+    if "carpet" in raw:
+        return "carpet"
 
     return None
 
 
-def get_match_key(fx):
-    return (
-        fx.get("event_key")
-        or fx.get("match_key")
-        or fx.get("id")
-        or fx.get("fixture_key")
-    )
+def infer_tour(row):
+    raw = " ".join([
+        norm(row.get("event_type")),
+        norm(row.get("tournament_name")),
+        norm(row.get("league_name")),
+        norm(row.get("event_league")),
+        norm(row.get("tournament_type")),
+    ]).lower()
 
-
-def get_first_player(fx):
-    return clean_name(
-        fx.get("event_first_player")
-        or fx.get("first_player")
-        or fx.get("home_player")
-        or fx.get("player_home")
-        or fx.get("player1")
-    )
-
-
-def get_second_player(fx):
-    return clean_name(
-        fx.get("event_second_player")
-        or fx.get("second_player")
-        or fx.get("away_player")
-        or fx.get("player_away")
-        or fx.get("player2")
-    )
-
-
-def get_surface(fx):
-    raw = (
-        fx.get("event_surface")
-        or fx.get("surface")
-        or fx.get("court_surface")
-        or fx.get("tournament_surface")
-        or ""
-    )
-
-    raw_l = str(raw).strip().lower()
-
-    if not raw_l:
-        return None
-
-    if "clay" in raw_l:
-        return "clay"
-    if "hard" in raw_l:
-        return "hard"
-    if "grass" in raw_l:
-        return "grass"
-    if "indoor" in raw_l:
-        return "indoor"
-
-    return raw_l
-
-
-def infer_tour(fx):
-    fields = [
-        fx.get("event_type_type"),
-        fx.get("event_type"),
-        fx.get("tournament_name"),
-        fx.get("league_name"),
-        fx.get("event_name"),
-    ]
-
-    text = " ".join(str(x or "") for x in fields).lower()
-
-    if "wta" in text or "women" in text or "women's" in text:
+    if "wta" in raw or "women" in raw:
         return "wta"
-
-    if "atp" in text or "men" in text or "men's" in text:
+    if "atp" in raw or "men" in raw:
         return "atp"
-
-    if "challenger" in text:
+    if "challenger" in raw:
         return "challenger"
-
-    if "itf" in text:
+    if "itf" in raw:
         return "itf"
 
     return None
 
 
-def get_tournament(fx):
-    return clean_name(
-        fx.get("tournament_name")
-        or fx.get("event_type_type")
-        or fx.get("league_name")
-        or fx.get("event_name")
-        or ""
+def is_singles(row):
+    raw = " ".join([
+        norm(row.get("event_type")),
+        norm(row.get("tournament_name")),
+    ]).lower()
+
+    if "doubles" in raw or "double" in raw:
+        return False
+
+    p1 = first_player(row)
+    p2 = second_player(row)
+
+    if not p1 or not p2:
+        return False
+
+    # doubles pogosto vsebujejo "/" ali "+"
+    if "/" in p1 or "/" in p2 or " / " in p1 or " / " in p2:
+        return False
+
+    return True
+
+
+def parse_winner_side(row):
+    p1 = norm(first_player(row))
+    p2 = norm(second_player(row))
+
+    winner = (
+        row.get("event_winner")
+        or row.get("winner")
+        or row.get("match_winner")
+        or row.get("event_winner_player")
     )
 
+    w = norm(winner)
+    wl = w.lower()
 
-def get_status(fx):
-    return str(
-        fx.get("event_status")
-        or fx.get("status")
-        or fx.get("match_status")
-        or ""
-    ).strip().lower()
+    if not w:
+        return None
+
+    if wl in {"first player", "first_player", "player 1", "player_1", "1", "home"}:
+        return "p1"
+
+    if wl in {"second player", "second_player", "player 2", "player_2", "2", "away"}:
+        return "p2"
+
+    if p1 and wl == p1.lower():
+        return "p1"
+
+    if p2 and wl == p2.lower():
+        return "p2"
+
+    if p1 and p1.lower() in wl:
+        return "p1"
+
+    if p2 and p2.lower() in wl:
+        return "p2"
+
+    return None
 
 
-def is_finished(fx):
-    status = get_status(fx)
+def is_finished(row):
+    status = norm_lower(row.get("event_status") or row.get("status") or row.get("match_status"))
+    final_result = norm(row.get("event_final_result") or row.get("final_result"))
 
-    if status in {"finished", "finished after retirement", "retired", "walkover", "ended"}:
+    if parse_winner_side(row):
         return True
 
-    if fx.get("event_final_result"):
+    if status in {"finished", "ended", "final", "complete", "completed"}:
         return True
 
-    if fx.get("event_winner") or fx.get("event_winner_key"):
+    if final_result:
         return True
 
     return False
 
 
-def get_winner_name(fx):
-    first = get_first_player(fx)
-    second = get_second_player(fx)
+def flatten_dicts(obj):
+    found = []
 
-    winner_raw = (
-        fx.get("event_winner")
-        or fx.get("winner")
-        or fx.get("match_winner")
-        or ""
-    )
+    if isinstance(obj, dict):
+        found.append(obj)
+        for v in obj.values():
+            found.extend(flatten_dicts(v))
+    elif isinstance(obj, list):
+        for item in obj:
+            found.extend(flatten_dicts(item))
 
-    winner_key = (
-        fx.get("event_winner_key")
-        or fx.get("winner_key")
-        or ""
-    )
-
-    first_key = str(fx.get("first_player_key") or fx.get("event_first_player_key") or "")
-    second_key = str(fx.get("second_player_key") or fx.get("event_second_player_key") or "")
-
-    wr = str(winner_raw or "").strip()
-    wrl = wr.lower()
-
-    if winner_key and first_key and str(winner_key) == str(first_key):
-        return first
-
-    if winner_key and second_key and str(winner_key) == str(second_key):
-        return second
-
-    first_norm = norm_name(first)
-    second_norm = norm_name(second)
-    winner_norm = norm_name(wr)
-
-    if not winner_norm:
-        return None
-
-    if winner_norm in {"first player", "first", "home", "1", "player 1", "player1"}:
-        return first
-
-    if winner_norm in {"second player", "second", "away", "2", "player 2", "player2"}:
-        return second
-
-    if winner_norm == first_norm:
-        return first
-
-    if winner_norm == second_norm:
-        return second
-
-    if first_norm and first_norm in winner_norm:
-        return first
-
-    if second_norm and second_norm in winner_norm:
-        return second
-
-    if winner_norm and winner_norm in first_norm:
-        return first
-
-    if winner_norm and winner_norm in second_norm:
-        return second
-
-    return None
+    return found
 
 
-# ============================================================
-# ODDS PARSING
-# ============================================================
+def market_looks_match_winner(d):
+    text = " ".join(str(v) for v in d.values() if isinstance(v, (str, int, float))).lower()
 
-def extract_home_away_odds(match_odds):
-    if not isinstance(match_odds, dict):
-        return None
+    bad_markets = [
+        "total",
+        "over",
+        "under",
+        "set",
+        "handicap",
+        "spread",
+        "correct score",
+        "games",
+        "aces",
+    ]
 
-    if match_odds.get("_error"):
-        return None
+    good_markets = [
+        "winner",
+        "match winner",
+        "match_winner",
+        "home/away",
+        "home away",
+        "to win",
+        "1x2",
+        "moneyline",
+    ]
 
-    market = (
-        match_odds.get("Home/Away")
-        or match_odds.get("home/away")
-        or match_odds.get("Home Away")
-        or match_odds.get("Match Winner")
-        or match_odds.get("Winner")
-    )
+    if any(bad in text for bad in bad_markets):
+        return False
 
-    if not isinstance(market, dict):
-        # Sometimes markets can be nested with slightly different names.
-        for k, v in match_odds.items():
-            if isinstance(k, str) and k.strip().lower() in {
-                "home/away",
-                "home away",
-                "match winner",
-                "winner",
-                "moneyline",
-            }:
-                market = v
-                break
+    if any(good in text for good in good_markets):
+        return True
 
-    if not isinstance(market, dict):
-        return None
+    # API-Tennis včasih vrne samo odd_1 / odd_2 brez market imena.
+    keys = {str(k).lower() for k in d.keys()}
+    if ("odd_1" in keys and "odd_2" in keys) or ("home_odd" in keys and "away_odd" in keys):
+        return True
 
-    home_books = (
-        market.get("Home")
-        or market.get("home")
-        or market.get("1")
-        or market.get("First")
-        or market.get("first")
-    )
-
-    away_books = (
-        market.get("Away")
-        or market.get("away")
-        or market.get("2")
-        or market.get("Second")
-        or market.get("second")
-    )
-
-    if not isinstance(home_books, dict) or not isinstance(away_books, dict):
-        return None
-
-    home_odd, home_book = choose_odd(home_books)
-    away_odd, away_book = choose_odd(away_books)
-
-    if not home_odd or not away_odd:
-        return None
-
-    return {
-        "home_odd": home_odd,
-        "away_odd": away_odd,
-        "home_bookmaker": home_book,
-        "away_bookmaker": away_book,
-    }
+    return False
 
 
-def choose_odd(book_odds):
-    if not isinstance(book_odds, dict):
+P1_ODD_KEYS = {
+    "odd_1", "odd1", "odd_home", "home_odd", "home", "player_1_odd",
+    "first_odd", "odd_first", "odd_first_player", "event_odd_1",
+    "price_1", "coef_1", "coefficient_1",
+}
+
+P2_ODD_KEYS = {
+    "odd_2", "odd2", "odd_away", "away_odd", "away", "player_2_odd",
+    "second_odd", "odd_second", "odd_second_player", "event_odd_2",
+    "price_2", "coef_2", "coefficient_2",
+}
+
+
+def extract_odds_pair(odds_payload):
+    p1_prices = []
+    p2_prices = []
+
+    for d in flatten_dicts(odds_payload):
+        if not isinstance(d, dict):
+            continue
+
+        if not market_looks_match_winner(d):
+            continue
+
+        for k, v in d.items():
+            lk = str(k).lower().strip()
+            price = safe_float(v)
+
+            if price is None:
+                continue
+
+            if price < 1.01 or price > 20:
+                continue
+
+            if lk in P1_ODD_KEYS:
+                p1_prices.append(price)
+            elif lk in P2_ODD_KEYS:
+                p2_prices.append(price)
+
+    if not p1_prices or not p2_prices:
         return None, None
 
-    parsed = []
-
-    for book, odd in book_odds.items():
-        o = safe_float(odd)
-        if o and o > 1.01:
-            parsed.append((str(book).strip(), o))
-
-    if not parsed:
-        return None, None
-
-    if BOOKMAKER:
-        for book, odd in parsed:
-            if book.lower() == BOOKMAKER:
-                return odd, book
-
-    # Best available odd.
-    parsed.sort(key=lambda x: x[1], reverse=True)
-    return parsed[0][1], parsed[0][0]
+    # vzamemo najboljšo dosegljivo kvoto iz vrnjenih bookmakerjev
+    return max(p1_prices), max(p2_prices)
 
 
-# ============================================================
-# FORM
-# ============================================================
-
-def build_player_history(fixtures):
-    history = defaultdict(list)
-
-    for fx in fixtures:
-        if not is_finished(fx):
-            continue
-
-        dt = parse_match_dt(fx)
-        if not dt:
-            continue
-
-        first = get_first_player(fx)
-        second = get_second_player(fx)
-        winner = get_winner_name(fx)
-
-        if not first or not second or not winner:
-            continue
-
-        first_norm = norm_name(first)
-        second_norm = norm_name(second)
-        winner_norm = norm_name(winner)
-
-        first_win = winner_norm == first_norm
-        second_win = winner_norm == second_norm
-
-        if not first_win and not second_win:
-            continue
-
-        base = {
-            "date": dt.isoformat(),
-            "match_key": get_match_key(fx),
-            "tournament": get_tournament(fx),
-            "surface": get_surface(fx),
-            "tour": infer_tour(fx),
-        }
-
-        history[first_norm].append({
-            **base,
-            "player": first,
-            "opponent": second,
-            "result": "win" if first_win else "loss",
-        })
-
-        history[second_norm].append({
-            **base,
-            "player": second,
-            "opponent": first,
-            "result": "win" if second_win else "loss",
-        })
-
-    for p in history:
-        history[p].sort(key=lambda r: r["date"])
-
-    return history
+def fetch_odds_for_match(match_key):
+    # api-tennis endpoint za odds po match_key
+    try:
+        return fetch_api("get_odds", {"match_key": match_key}, retries=2)
+    except Exception:
+        return []
 
 
-def player_form(history, player, before_dt, n):
-    p = norm_name(player)
-    rows = history.get(p, [])
+def odds_bucket(odds):
+    if odds is None:
+        return "unknown"
 
-    before_iso = before_dt.isoformat() if before_dt else "9999"
+    if odds < 1.90:
+        return "<1.90"
+    if odds < 2.00:
+        return "1.90-2.00"
+    if odds < 2.20:
+        return "2.00-2.20"
+    if odds < 2.50:
+        return "2.20-2.50"
+    if odds <= 2.70:
+        return "2.50-2.70"
 
-    past = [r for r in rows if r.get("date") < before_iso]
-    last = past[-n:]
-
-    wins = sum(1 for r in last if r.get("result") == "win")
-    losses = sum(1 for r in last if r.get("result") == "loss")
-    total = wins + losses
-
-    return {
-        "n": total,
-        "wins": wins,
-        "losses": losses,
-        "win_rate": round(wins / total * 100, 2) if total else None,
-    }
+    return ">2.70"
 
 
-def form_diff(fa, fb):
-    if fa.get("win_rate") is None or fb.get("win_rate") is None:
-        return None
-    return round(fa["win_rate"] - fb["win_rate"], 2)
+def elo_bucket(abs_diff):
+    if abs_diff < 60:
+        return "<60"
+    if abs_diff < 80:
+        return "60-80"
+    if abs_diff < 100:
+        return "80-100"
+    if abs_diff < 120:
+        return "100-120"
+    if abs_diff < 150:
+        return "120-150"
+    if abs_diff < 180:
+        return "150-180"
+    if abs_diff < 220:
+        return "180-220"
+    return "220+"
 
-
-# ============================================================
-# PICK LOGIC
-# ============================================================
-
-def get_elo_for_match(first, second, surface, tour):
-    signal = get_elo_signal(
-        first,
-        second,
-        surface=surface,
-        tour=tour,
-    )
-
-    if not signal.get("matched"):
-        return signal
-
-    overall_diff = signal.get("overall_elo_diff")
-    surface_diff = signal.get("surface_elo_diff")
-
-    signal["abs_overall_elo_diff"] = abs(overall_diff) if overall_diff is not None else None
-    signal["abs_surface_elo_diff"] = abs(surface_diff) if surface_diff is not None else None
-
-    return signal
-
-
-def choose_pick(first, second, odds, elo_signal, form_first_5, form_second_5, form_first_10, form_second_10):
-    if not elo_signal.get("matched"):
-        return None
-
-    elo_diff = elo_signal.get("overall_elo_diff")
-    if elo_diff is None:
-        return None
-
-    abs_elo = abs(elo_diff)
-
-    if abs_elo < MIN_ELO_DIFF:
-        return None
-
-    if elo_diff > 0:
-        pick_player = first
-        opponent = second
-        pick_side = "home"
-        pick_odd = odds["home_odd"]
-        opponent_odd = odds["away_odd"]
-        form5_diff = form_diff(form_first_5, form_second_5)
-        form10_diff = form_diff(form_first_10, form_second_10)
-    else:
-        pick_player = second
-        opponent = first
-        pick_side = "away"
-        pick_odd = odds["away_odd"]
-        opponent_odd = odds["home_odd"]
-        form5_diff = form_diff(form_second_5, form_first_5)
-        form10_diff = form_diff(form_second_10, form_first_10)
-
-    form5_component = form5_diff if form5_diff is not None else 0.0
-    form10_component = form10_diff if form10_diff is not None else 0.0
-
-    # Form je samo dodatni signal za analizo, ne zavrže picka.
-    # Combined score pomaga kasneje videti, če je kombinacija močnejša.
-    combined_score = abs_elo + (form5_component * 0.50) + (form10_component * 0.25)
-
-    market_implied = round(100 / pick_odd, 2) if pick_odd else None
-
-    return {
-        "pick_player": pick_player,
-        "opponent": opponent,
-        "pick_side": pick_side,
-        "odds": pick_odd,
-        "opponent_odds": opponent_odd,
-        "abs_elo_diff": round2(abs_elo),
-        "elo_side": "first" if elo_diff > 0 else "second",
-        "form5_diff": form5_diff,
-        "form10_diff": form10_diff,
-        "combined_score": round2(combined_score),
-        "market_implied_pct": market_implied,
-    }
-
-
-def settle_pick(pick_player, winner_name, odds):
-    if not pick_player or not winner_name or not odds:
-        return {
-            "result": "unknown",
-            "profit": 0.0,
-            "stake": 0.0,
-        }
-
-    is_win = norm_name(pick_player) == norm_name(winner_name)
-
-    if is_win:
-        return {
-            "result": "win",
-            "profit": round2(odds - 1.0),
-            "stake": 1.0,
-        }
-
-    return {
-        "result": "loss",
-        "profit": -1.0,
-        "stake": 1.0,
-    }
-
-
-# ============================================================
-# STATS
-# ============================================================
 
 def empty_stats():
     return {
-        "rows": 0,
+        "n": 0,
         "wins": 0,
         "losses": 0,
         "profit": 0.0,
         "stake": 0.0,
         "avg_odds_sum": 0.0,
-        "avg_elo_sum": 0.0,
-        "avg_combined_sum": 0.0,
+        "avg_abs_elo_sum": 0.0,
     }
 
 
-def add_stat(stats, key, row):
-    if key not in stats:
-        stats[key] = empty_stats()
-
+def update_stats(stats, key, row):
     s = stats[key]
-    result = row.get("result")
-    profit = safe_float(row.get("profit"), 0.0)
-    stake = safe_float(row.get("stake"), 0.0)
-    odds = safe_float(row.get("odds"), 0.0)
-    elo = safe_float(row.get("abs_elo_diff"), 0.0)
-    combined = safe_float(row.get("combined_score"), 0.0)
+    s["n"] += 1
+    s["stake"] += 1.0
+    s["profit"] += row["profit"]
+    s["avg_odds_sum"] += row["odds"]
+    s["avg_abs_elo_sum"] += row["abs_overall_elo_diff"]
 
-    s["rows"] += 1
-    s["profit"] += profit
-    s["stake"] += stake
-    s["avg_odds_sum"] += odds
-    s["avg_elo_sum"] += elo
-    s["avg_combined_sum"] += combined
-
-    if result == "win":
+    if row["result"] == "win":
         s["wins"] += 1
-    elif result == "loss":
+    else:
         s["losses"] += 1
 
 
@@ -778,407 +464,310 @@ def finalize_stats(stats):
     out = {}
 
     for key, s in stats.items():
-        rows = s["rows"]
-        wins = s["wins"]
-        losses = s["losses"]
-        graded = wins + losses
+        n = s["n"]
         stake = s["stake"]
         profit = s["profit"]
+        wins = s["wins"]
 
         out[key] = {
-            "rows": rows,
-            "wins": wins,
-            "losses": losses,
-            "win_rate": round(wins / graded * 100, 2) if graded else 0.0,
-            "profit": round2(profit),
-            "stake": round2(stake),
+            "n": n,
+            "wins": s["wins"],
+            "losses": s["losses"],
+            "win_rate": round(wins / n * 100, 2) if n else 0.0,
+            "profit": round(profit, 3),
+            "stake": round(stake, 3),
             "roi": round(profit / stake * 100, 2) if stake else 0.0,
-            "avg_odds": round(s["avg_odds_sum"] / rows, 3) if rows else 0.0,
-            "avg_abs_elo_diff": round(s["avg_elo_sum"] / rows, 2) if rows else 0.0,
-            "avg_combined_score": round(s["avg_combined_sum"] / rows, 2) if rows else 0.0,
+            "avg_odds": round(s["avg_odds_sum"] / n, 3) if n else 0.0,
+            "avg_abs_overall_elo_diff": round(s["avg_abs_elo_sum"] / n, 2) if n else 0.0,
         }
 
     return out
 
 
-def elo_bucket(abs_elo):
-    x = safe_float(abs_elo, 0.0)
-
-    if x < 60:
-        return "<60"
-    if x < 90:
-        return "60-90"
-    if x < 120:
-        return "90-120"
-    if x < 150:
-        return "120-150"
-    if x < 180:
-        return "150-180"
-    if x < 220:
-        return "180-220"
-    return "220+"
-
-
-def odds_bucket(odds):
-    x = safe_float(odds, 0.0)
-
-    if x < 1.40:
-        return "<1.40"
-    if x < 1.60:
-        return "1.40-1.60"
-    if x < 1.80:
-        return "1.60-1.80"
-    if x < 2.00:
-        return "1.80-2.00"
-    if x < 2.30:
-        return "2.00-2.30"
-    if x < 2.70:
-        return "2.30-2.70"
-    return "2.70+"
-
-
-def form_bucket(v):
-    if v is None:
-        return "unknown"
-
-    x = safe_float(v, 0.0)
-
-    if x >= 30:
-        return "+30 or more"
-    if x >= 15:
-        return "+15 to +30"
-    if x >= 0:
-        return "0 to +15"
-    if x >= -15:
-        return "-15 to 0"
-    if x >= -30:
-        return "-30 to -15"
-    return "-30 or less"
-
-
-# ============================================================
-# MAIN COLLECTOR
-# ============================================================
-
 def collect_rows():
-    target_stop = today_local()
-    target_start = target_stop - timedelta(days=BACKTEST_DAYS_BACK)
+    end_date = today_local()
+    start_date = end_date - timedelta(days=BACKTEST_DAYS_BACK)
 
-    form_start = target_start - timedelta(days=FORM_DAYS_BACK)
-    form_stop = target_stop
+    print(f"Fetching fixtures: {start_date} -> {end_date}")
 
-    print(f"Fetching fixtures for form: {ymd(form_start)} -> {ymd(form_stop)}")
-    all_fixtures = collect_fixtures(form_start, form_stop)
-
-    history = build_player_history(all_fixtures)
-
-    target_fixtures = []
-    for fx in all_fixtures:
-        dt = parse_match_dt(fx)
-        if not dt:
-            continue
-        if target_start <= dt.date() <= target_stop:
-            target_fixtures.append(fx)
-
-    print(f"Target fixtures: {len(target_fixtures)}")
+    fixtures = collect_fixtures(start_date, end_date)
 
     rows = []
     missing = []
+    counters = defaultdict(int)
 
-    for i, fx in enumerate(target_fixtures, start=1):
-        match_key = get_match_key(fx)
-        dt = parse_match_dt(fx)
-        first = get_first_player(fx)
-        second = get_second_player(fx)
-        winner = get_winner_name(fx)
-        surface = get_surface(fx)
-        tour = infer_tour(fx)
-        tournament = get_tournament(fx)
+    target_fixtures = []
 
-        if not is_finished(fx):
+    for f in fixtures:
+        counters["fixtures_total"] += 1
+
+        if not isinstance(f, dict):
+            counters["bad_fixture_object"] += 1
             continue
 
-        if not match_key or not first or not second or not winner:
-            missing.append({
-                "reason": "missing_basic_match_data",
-                "match_key": match_key,
-                "date": dt.isoformat() if dt else None,
-                "first_player": first,
-                "second_player": second,
-                "winner": winner,
-                "raw_status": get_status(fx),
-            })
+        if not is_singles(f):
+            counters["not_singles"] += 1
             continue
 
-        print(f"Fetching odds: {i}/{len(target_fixtures)} match_key={match_key}")
-
-        match_odds = fetch_match_odds(match_key)
-        odds = extract_home_away_odds(match_odds)
-
-        if not odds:
-            missing.append({
-                "reason": "missing_home_away_odds",
-                "match_key": match_key,
-                "date": dt.isoformat() if dt else None,
-                "match": f"{first} - {second}",
-                "raw_odds_keys": list(match_odds.keys()) if isinstance(match_odds, dict) else None,
-                "odds_error": match_odds.get("_error") if isinstance(match_odds, dict) else None,
-            })
-            time.sleep(REQUEST_SLEEP)
+        if not is_finished(f):
+            counters["not_finished"] += 1
             continue
 
-        elo_signal = get_elo_for_match(first, second, surface, tour)
+        winner_side = parse_winner_side(f)
+        if not winner_side:
+            counters["missing_winner"] += 1
+            continue
 
-        if not elo_signal.get("matched"):
+        key = fixture_key(f)
+        if not key:
+            counters["missing_match_key"] += 1
+            continue
+
+        p1 = first_player(f)
+        p2 = second_player(f)
+
+        if not p1 or not p2:
+            counters["missing_players"] += 1
+            continue
+
+        tour = infer_tour(f)
+        surface = infer_surface(f)
+
+        signal = get_elo_signal(p1, p2, surface=surface, tour=tour)
+
+        if not signal.get("matched"):
+            counters["elo_unmatched"] += 1
             missing.append({
-                "reason": "elo_not_matched",
-                "match_key": match_key,
-                "date": dt.isoformat() if dt else None,
-                "match": f"{first} - {second}",
-                "first_player": first,
-                "second_player": second,
+                "reason": "elo_unmatched",
+                "date": f.get("event_date"),
+                "match_key": key,
+                "player_1": p1,
+                "player_2": p2,
                 "tour": tour,
                 "surface": surface,
-                "first_matched": elo_signal.get("player", {}).get("matched"),
-                "second_matched": elo_signal.get("opponent", {}).get("matched"),
-                "first_method": elo_signal.get("player", {}).get("match_method"),
-                "second_method": elo_signal.get("opponent", {}).get("match_method"),
+                "player_1_matched": signal.get("player", {}).get("matched"),
+                "player_2_matched": signal.get("opponent", {}).get("matched"),
+                "player_1_method": signal.get("player", {}).get("match_method"),
+                "player_2_method": signal.get("opponent", {}).get("match_method"),
             })
-            time.sleep(REQUEST_SLEEP)
             continue
 
-        form_first_5 = player_form(history, first, dt, 5)
-        form_second_5 = player_form(history, second, dt, 5)
-        form_first_10 = player_form(history, first, dt, 10)
-        form_second_10 = player_form(history, second, dt, 10)
-
-        pick = choose_pick(
-            first,
-            second,
-            odds,
-            elo_signal,
-            form_first_5,
-            form_second_5,
-            form_first_10,
-            form_second_10,
-        )
-
-        if not pick:
-            missing.append({
-                "reason": "no_pick_min_elo_filter",
-                "match_key": match_key,
-                "date": dt.isoformat() if dt else None,
-                "match": f"{first} - {second}",
-                "overall_elo_diff": elo_signal.get("overall_elo_diff"),
-                "abs_overall_elo_diff": elo_signal.get("abs_overall_elo_diff"),
-                "min_elo_diff": MIN_ELO_DIFF,
-            })
-            time.sleep(REQUEST_SLEEP)
+        diff = signal.get("overall_elo_diff")
+        if diff is None:
+            counters["elo_diff_missing"] += 1
             continue
 
-        settlement = settle_pick(pick["pick_player"], winner, pick["odds"])
+        abs_diff = abs(float(diff))
 
-        row = {
-            "generated_at": now_iso(),
-            "match_key": match_key,
-            "date": dt.date().isoformat() if dt else None,
-            "time": dt.strftime("%H:%M") if dt else None,
-            "datetime": dt.isoformat() if dt else None,
-            "tournament": tournament,
+        if abs_diff < MIN_ELO_DIFF:
+            counters["elo_diff_too_low"] += 1
+            continue
+
+        pick_side = "p1" if diff > 0 else "p2"
+        pick_name = p1 if pick_side == "p1" else p2
+
+        target_fixtures.append({
+            "fixture": f,
+            "match_key": key,
+            "player_1": p1,
+            "player_2": p2,
+            "pick_side": pick_side,
+            "pick_name": pick_name,
+            "winner_side": winner_side,
             "tour": tour,
             "surface": surface,
-            "match": f"{first} - {second}",
-            "first_player": first,
-            "second_player": second,
-            "winner": winner,
+            "overall_elo_diff": round(float(diff), 2),
+            "abs_overall_elo_diff": round(abs_diff, 2),
+            "player_1_elo": signal.get("player", {}).get("overall_elo"),
+            "player_2_elo": signal.get("opponent", {}).get("overall_elo"),
+            "player_1_matched_name": signal.get("player", {}).get("matched_name"),
+            "player_2_matched_name": signal.get("opponent", {}).get("matched_name"),
+        })
 
-            "pick": pick["pick_player"],
-            "opponent": pick["opponent"],
-            "pick_side": pick["pick_side"],
-            "odds": pick["odds"],
-            "opponent_odds": pick["opponent_odds"],
-            "home_odd": odds["home_odd"],
-            "away_odd": odds["away_odd"],
-            "home_bookmaker": odds["home_bookmaker"],
-            "away_bookmaker": odds["away_bookmaker"],
+    print(f"Target fixtures after ELO filter: {len(target_fixtures)}")
 
-            "result": settlement["result"],
-            "profit": settlement["profit"],
-            "stake": settlement["stake"],
+    for i, item in enumerate(target_fixtures, start=1):
+        key = item["match_key"]
 
-            "overall_elo_diff_first_minus_second": round2(elo_signal.get("overall_elo_diff")),
-            "surface_elo_diff_first_minus_second": round2(elo_signal.get("surface_elo_diff")),
-            "abs_elo_diff": pick["abs_elo_diff"],
-            "elo_side": pick["elo_side"],
+        if i <= 10 or i % 25 == 0:
+            print(f"Fetching odds: {i}/{len(target_fixtures)} match_key={key}")
 
-            "first_form_5": form_first_5,
-            "second_form_5": form_second_5,
-            "first_form_10": form_first_10,
-            "second_form_10": form_second_10,
-            "form5_diff_for_pick": pick["form5_diff"],
-            "form10_diff_for_pick": pick["form10_diff"],
+        odds_payload = fetch_odds_for_match(key)
+        p1_odds, p2_odds = extract_odds_pair(odds_payload)
 
-            "combined_score": pick["combined_score"],
-            "market_implied_pct": pick["market_implied_pct"],
-            "min_elo_diff": MIN_ELO_DIFF,
+        if p1_odds is None or p2_odds is None:
+            counters["odds_missing"] += 1
+            missing.append({
+                "reason": "odds_missing",
+                "date": item["fixture"].get("event_date"),
+                "match_key": key,
+                "player_1": item["player_1"],
+                "player_2": item["player_2"],
+                "pick": item["pick_name"],
+                "overall_elo_diff": item["overall_elo_diff"],
+            })
+            time.sleep(REQUEST_SLEEP)
+            continue
+
+        pick_odds = p1_odds if item["pick_side"] == "p1" else p2_odds
+
+        if pick_odds < MIN_ODDS or pick_odds > MAX_ODDS:
+            counters["odds_out_of_range"] += 1
+            time.sleep(REQUEST_SLEEP)
+            continue
+
+        result = "win" if item["pick_side"] == item["winner_side"] else "loss"
+        profit = round(pick_odds - 1.0, 3) if result == "win" else -1.0
+
+        row = {
+            "date": item["fixture"].get("event_date"),
+            "time": item["fixture"].get("event_time"),
+            "match_key": key,
+            "match": f"{item['player_1']} vs {item['player_2']}",
+            "player_1": item["player_1"],
+            "player_2": item["player_2"],
+            "pick": item["pick_name"],
+            "pick_side": item["pick_side"],
+            "winner_side": item["winner_side"],
+            "result": result,
+            "odds": round(pick_odds, 3),
+            "player_1_odds": round(p1_odds, 3),
+            "player_2_odds": round(p2_odds, 3),
+            "stake": 1.0,
+            "profit": profit,
+            "tour": item["tour"],
+            "surface": item["surface"],
+            "overall_elo_diff": item["overall_elo_diff"],
+            "abs_overall_elo_diff": item["abs_overall_elo_diff"],
+            "elo_bucket": elo_bucket(item["abs_overall_elo_diff"]),
+            "odds_bucket": odds_bucket(pick_odds),
+            "player_1_elo": item["player_1_elo"],
+            "player_2_elo": item["player_2_elo"],
+            "player_1_matched_name": item["player_1_matched_name"],
+            "player_2_matched_name": item["player_2_matched_name"],
+            "rule": f"ELO-only: higher overall ELO, abs diff >= {MIN_ELO_DIFF}, odds {MIN_ODDS}-{MAX_ODDS}",
         }
 
         rows.append(row)
+        counters["picks"] += 1
         time.sleep(REQUEST_SLEEP)
 
     meta = {
-        "generated_at": now_iso(),
-        "timezone": TZ_NAME,
-        "api": "api-tennis.com",
-        "target_start": ymd(target_start),
-        "target_stop": ymd(target_stop),
-        "backtest_days_back": BACKTEST_DAYS_BACK,
-        "form_start": ymd(form_start),
-        "form_stop": ymd(form_stop),
-        "form_days_back": FORM_DAYS_BACK,
-        "min_elo_diff": MIN_ELO_DIFF,
-        "bookmaker": BOOKMAKER or "best_available",
-        "all_fixtures": len(all_fixtures),
-        "target_fixtures": len(target_fixtures),
-        "rows": len(rows),
-        "missing": len(missing),
+        "fixtures_total": counters["fixtures_total"],
+        "not_singles": counters["not_singles"],
+        "not_finished": counters["not_finished"],
+        "missing_winner": counters["missing_winner"],
+        "missing_match_key": counters["missing_match_key"],
+        "missing_players": counters["missing_players"],
+        "elo_unmatched": counters["elo_unmatched"],
+        "elo_diff_missing": counters["elo_diff_missing"],
+        "elo_diff_too_low": counters["elo_diff_too_low"],
+        "elo_candidates": len(target_fixtures),
+        "odds_checked": len(target_fixtures),
+        "odds_missing": counters["odds_missing"],
+        "odds_out_of_range": counters["odds_out_of_range"],
+        "picks": len(rows),
     }
 
     return rows, missing, meta
 
 
 def build_report(rows, missing, meta):
-    stats = {}
+    stats = defaultdict(empty_stats)
 
     for row in rows:
-        add_stat(stats, "overall", row)
+        update_stats(stats, "overall", row)
+        update_stats(stats, f"tour:{row.get('tour') or 'unknown'}", row)
+        update_stats(stats, f"surface:{row.get('surface') or 'unknown'}", row)
+        update_stats(stats, f"elo:{row.get('elo_bucket')}", row)
+        update_stats(stats, f"odds:{row.get('odds_bucket')}", row)
 
-        add_stat(stats, f"tour:{row.get('tour') or 'unknown'}", row)
-        add_stat(stats, f"surface:{row.get('surface') or 'unknown'}", row)
-        add_stat(stats, f"elo_bucket:{elo_bucket(row.get('abs_elo_diff'))}", row)
-        add_stat(stats, f"odds_bucket:{odds_bucket(row.get('odds'))}", row)
-        add_stat(stats, f"form5_pick_edge:{form_bucket(row.get('form5_diff_for_pick'))}", row)
-        add_stat(stats, f"form10_pick_edge:{form_bucket(row.get('form10_diff_for_pick'))}", row)
-
-        if safe_float(row.get("form5_diff_for_pick"), 0.0) >= 0:
-            add_stat(stats, "elo_and_form5_agree", row)
-        else:
-            add_stat(stats, "elo_and_form5_disagree", row)
-
-        if safe_float(row.get("form10_diff_for_pick"), 0.0) >= 0:
-            add_stat(stats, "elo_and_form10_agree", row)
-        else:
-            add_stat(stats, "elo_and_form10_disagree", row)
-
-    finalized = finalize_stats(stats)
-
-    top_rows = sorted(
-        rows,
-        key=lambda r: (
-            safe_float(r.get("combined_score"), 0.0),
-            safe_float(r.get("abs_elo_diff"), 0.0),
-        ),
-        reverse=True,
-    )[:50]
-
-    return {
+    report = {
         "generated_at": now_iso(),
+        "timezone": TZ_NAME,
+        "mode": "elo_only_market_backtest",
+        "settings": {
+            "backtest_days_back": BACKTEST_DAYS_BACK,
+            "min_elo_diff": MIN_ELO_DIFF,
+            "min_odds": MIN_ODDS,
+            "max_odds": MAX_ODDS,
+            "stake": "1u flat",
+        },
         "meta": meta,
-        "summary": finalized,
-        "top_rows_sample": top_rows,
+        "overall": finalize_stats({"overall": stats["overall"]}).get("overall", {}),
+        "stats": finalize_stats(stats),
+        "rows_count": len(rows),
         "missing_count": len(missing),
     }
 
+    return report
 
-def build_table(report):
+
+def build_table(report, rows):
     lines = []
-
-    meta = report["meta"]
-    summary = report["summary"]
-
-    lines.append("# ELO + Form + Market Backtest")
+    lines.append("# ELO-only market backtest")
     lines.append("")
     lines.append(f"Generated: {report['generated_at']}")
     lines.append("")
-    lines.append("## Meta")
+    lines.append("## Settings")
     lines.append("")
-    lines.append(f"- Target window: {meta['target_start']} -> {meta['target_stop']}")
-    lines.append(f"- Backtest days back: {meta['backtest_days_back']}")
-    lines.append(f"- Form window: {meta['form_start']} -> {meta['form_stop']}")
-    lines.append(f"- Form days back: {meta['form_days_back']}")
-    lines.append(f"- Min ELO diff: {meta['min_elo_diff']}")
-    lines.append(f"- Bookmaker: {meta['bookmaker']}")
-    lines.append(f"- Target fixtures: {meta['target_fixtures']}")
-    lines.append(f"- Pick rows: {meta['rows']}")
-    lines.append(f"- Missing/skipped: {meta['missing']}")
+    lines.append(f"- Days back: {report['settings']['backtest_days_back']}")
+    lines.append(f"- Min ELO diff: {report['settings']['min_elo_diff']}")
+    lines.append(f"- Odds range: {report['settings']['min_odds']} - {report['settings']['max_odds']}")
+    lines.append(f"- Stake: {report['settings']['stake']}")
     lines.append("")
-
-    lines.append("## Summary")
+    lines.append("## Funnel")
     lines.append("")
-    lines.append("| Bucket | Rows | W-L | WR | Profit | Stake | ROI | Avg odds | Avg ELO diff | Avg combined |")
-    lines.append("|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
+    lines.append("| Step | Count |")
+    lines.append("|---|---:|")
 
-    preferred_order = [
-        "overall",
-        "elo_and_form5_agree",
-        "elo_and_form5_disagree",
-        "elo_and_form10_agree",
-        "elo_and_form10_disagree",
-    ]
+    for k, v in report["meta"].items():
+        lines.append(f"| {k} | {v} |")
 
-    keys = []
-    for k in preferred_order:
-        if k in summary:
-            keys.append(k)
+    lines.append("")
+    lines.append("## Stats")
+    lines.append("")
+    lines.append("| Bucket | N | W-L | WR | Profit | ROI | Avg odds | Avg abs ELO diff |")
+    lines.append("|---|---:|---:|---:|---:|---:|---:|---:|")
 
-    for k in sorted(summary.keys()):
-        if k not in keys:
-            keys.append(k)
-
-    for key in keys:
-        s = summary[key]
+    for key, s in report["stats"].items():
         lines.append(
-            f"| {key} | {s['rows']} | {s['wins']}-{s['losses']} | "
-            f"{s['win_rate']}% | {s['profit']}u | {s['stake']}u | "
-            f"{s['roi']}% | {s['avg_odds']} | {s['avg_abs_elo_diff']} | {s['avg_combined_score']} |"
+            f"| {key} | {s['n']} | {s['wins']}-{s['losses']} | "
+            f"{s['win_rate']}% | {s['profit']}u | {s['roi']}% | "
+            f"{s['avg_odds']} | {s['avg_abs_overall_elo_diff']} |"
         )
 
     lines.append("")
-    lines.append("## Top rows sample")
+    lines.append("## Picks")
     lines.append("")
-    lines.append("| Date | Match | Pick | Odds | Result | Profit | ELO diff | F5 diff | F10 diff | Combined |")
-    lines.append("|---|---|---|---:|---|---:|---:|---:|---:|---:|")
+    lines.append("| Date | Match | Pick | Odds | ELO diff | Result | Profit |")
+    lines.append("|---|---|---|---:|---:|---:|---:|")
 
-    for row in report.get("top_rows_sample", [])[:25]:
+    for r in rows[:300]:
         lines.append(
-            f"| {row.get('date')} | {row.get('match')} | {row.get('pick')} | "
-            f"{row.get('odds')} | {row.get('result')} | {row.get('profit')} | "
-            f"{row.get('abs_elo_diff')} | {row.get('form5_diff_for_pick')} | "
-            f"{row.get('form10_diff_for_pick')} | {row.get('combined_score')} |"
+            f"| {r.get('date')} | {r.get('match')} | {r.get('pick')} | "
+            f"{r.get('odds')} | {r.get('abs_overall_elo_diff')} | "
+            f"{r.get('result')} | {r.get('profit')} |"
         )
 
-    lines.append("")
     return "\n".join(lines)
 
 
 def main():
     rows, missing, meta = collect_rows()
     report = build_report(rows, missing, meta)
-    table = build_table(report)
-
-    missing_payload = {
-        "generated_at": now_iso(),
-        "meta": meta,
-        "missing": missing,
-    }
 
     save_json(OUTPUT_REPORT_FILE, report)
     save_json(OUTPUT_ROWS_FILE, rows)
-    save_json(OUTPUT_MISSING_FILE, missing_payload)
-    save_text(OUTPUT_TABLE_FILE, table)
+    save_json(OUTPUT_MISSING_FILE, {
+        "generated_at": report["generated_at"],
+        "missing": missing,
+        "meta": meta,
+    })
+    save_text(OUTPUT_TABLE_FILE, build_table(report, rows))
 
     print("")
-    print("ELO + FORM + MARKET BACKTEST DONE")
+    print("ELO-ONLY MARKET BACKTEST DONE")
     print(f"Rows:      {len(rows)}")
     print(f"Missing:   {len(missing)}")
     print(f"Report:    {OUTPUT_REPORT_FILE}")
@@ -1186,10 +775,8 @@ def main():
     print(f"Missing:   {OUTPUT_MISSING_FILE}")
     print(f"Table:     {OUTPUT_TABLE_FILE}")
     print("")
-
-    overall = report["summary"].get("overall", {})
     print("Overall:")
-    print(json.dumps(overall, indent=2, ensure_ascii=False))
+    print(report.get("overall", {}))
     print("")
 
 
