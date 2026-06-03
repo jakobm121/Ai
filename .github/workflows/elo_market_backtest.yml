@@ -1,4 +1,4 @@
-name: ELO Only Market Backtest
+name: ELO Form Market Backtest
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
         required: false
         default: "5"
       min_elo_diff:
-        description: "Minimalna absolutna ELO razlika za pick"
+        description: "Minimalna ELO razlika za pick"
         required: false
         default: "60"
       min_odds:
@@ -21,7 +21,7 @@ on:
         default: "2.70"
 
 jobs:
-  elo-only-market-backtest:
+  elo-form-market-backtest:
     runs-on: ubuntu-latest
 
     env:
@@ -35,6 +35,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -46,16 +48,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Run ELO only market backtest
+      - name: Run ELO-only market backtest
         run: |
           python ratings/elo_form_market_backtest.py
-
-      - name: Show generated files
-        run: |
-          ls -lah ratings/elo_form_market_backtest_report.json || true
-          ls -lah ratings/elo_form_market_backtest_rows.json || true
-          ls -lah ratings/elo_form_market_backtest_missing.json || true
-          ls -lah ratings/elo_form_market_backtest_table.md || true
 
       - name: Commit backtest outputs
         run: |
@@ -67,5 +62,5 @@ jobs:
           git add ratings/elo_form_market_backtest_missing.json || true
           git add ratings/elo_form_market_backtest_table.md || true
 
-          git commit -m "Update ELO only market backtest" || echo "No changes to commit"
-          git push
+          git commit -m "Update ELO-only market backtest" || echo "No changes to commit"
+          git push || echo "Nothing to push"
