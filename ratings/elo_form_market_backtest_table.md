@@ -1,82 +1,40 @@
-# ELO + Form + Market Backtest
+# ELO-only market backtest
 
-Generated: 2026-06-03T09:28:09.182398+02:00
+Generated: 2026-06-03T09:40:27.268237+02:00
 
-## Meta
+## Settings
 
-- Target window: 2026-05-29 -> 2026-06-03
-- Backtest days back: 5
-- Form window: 2026-04-14 -> 2026-06-03
-- Form days back: 45
+- Days back: 5
 - Min ELO diff: 60.0
-- Bookmaker: best_available
-- Target fixtures: 1633
-- Pick rows: 68
-- Missing/skipped: 1565
+- Odds range: 1.9 - 2.7
+- Stake: 1u flat
 
-## Summary
+## Funnel
 
-| Bucket | Rows | W-L | WR | Profit | Stake | ROI | Avg odds | Avg ELO diff | Avg combined |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| overall | 68 | 39-29 | 57.35% | -8.96u | 68.0u | -13.18% | 1.945 | 140.39 | 141.37 |
-| elo_and_form5_agree | 48 | 29-19 | 60.42% | -3.74u | 48.0u | -7.79% | 1.804 | 142.05 | 150.36 |
-| elo_and_form5_disagree | 20 | 10-10 | 50.0% | -5.22u | 20.0u | -26.1% | 2.285 | 136.41 | 119.79 |
-| elo_and_form10_agree | 44 | 27-17 | 61.36% | -4.23u | 44.0u | -9.61% | 1.735 | 150.17 | 158.28 |
-| elo_and_form10_disagree | 24 | 12-12 | 50.0% | -4.73u | 24.0u | -19.71% | 2.331 | 122.48 | 110.37 |
-| elo_bucket:120-150 | 5 | 3-2 | 60.0% | 0.13u | 5.0u | 2.6% | 2.052 | 130.06 | 131.76 |
-| elo_bucket:150-180 | 8 | 5-3 | 62.5% | -1.0u | 8.0u | -12.5% | 1.498 | 160.71 | 158.15 |
-| elo_bucket:180-220 | 5 | 4-1 | 80.0% | 0.15u | 5.0u | 3.0% | 1.25 | 200.09 | 198.42 |
-| elo_bucket:220+ | 11 | 9-2 | 81.82% | -0.97u | 11.0u | -8.82% | 1.125 | 317.8 | 320.73 |
-| elo_bucket:60-90 | 29 | 13-16 | 44.83% | -5.16u | 29.0u | -17.79% | 2.283 | 72.06 | 72.98 |
-| elo_bucket:90-120 | 10 | 5-5 | 50.0% | -2.11u | 10.0u | -21.1% | 2.52 | 102.49 | 105.28 |
-| form10_pick_edge:+15 to +30 | 12 | 6-6 | 50.0% | -4.34u | 12.0u | -36.17% | 1.572 | 137.51 | 150.01 |
-| form10_pick_edge:+30 or more | 3 | 1-2 | 33.33% | -1.92u | 3.0u | -64.0% | 2.433 | 160.31 | 193.4 |
-| form10_pick_edge:-15 to 0 | 12 | 8-4 | 66.67% | 0.64u | 12.0u | 5.33% | 2.023 | 147.69 | 140.59 |
-| form10_pick_edge:-30 or less | 2 | 0-2 | 0.0% | -2.0u | 2.0u | -100.0% | 3.305 | 93.99 | 58.05 |
-| form10_pick_edge:-30 to -15 | 10 | 4-6 | 40.0% | -3.37u | 10.0u | -33.7% | 2.505 | 97.92 | 84.56 |
-| form10_pick_edge:0 to +15 | 29 | 20-9 | 68.97% | 2.03u | 29.0u | 7.0% | 1.73 | 154.36 | 158.07 |
-| form5_pick_edge:+15 to +30 | 15 | 10-5 | 66.67% | -0.12u | 15.0u | -0.8% | 1.59 | 149.67 | 162.47 |
-| form5_pick_edge:+30 or more | 6 | 2-4 | 33.33% | -2.44u | 6.0u | -40.67% | 2.435 | 90.2 | 119.94 |
-| form5_pick_edge:-30 or less | 5 | 2-3 | 40.0% | -1.98u | 5.0u | -39.6% | 2.368 | 120.25 | 90.87 |
-| form5_pick_edge:-30 to -15 | 15 | 8-7 | 53.33% | -3.24u | 15.0u | -21.6% | 2.258 | 141.8 | 129.43 |
-| form5_pick_edge:0 to +15 | 27 | 17-10 | 62.96% | -1.18u | 27.0u | -4.37% | 1.782 | 149.34 | 150.4 |
-| odds_bucket:1.40-1.60 | 11 | 8-3 | 72.73% | 0.89u | 11.0u | 8.09% | 1.473 | 115.17 | 111.05 |
-| odds_bucket:1.60-1.80 | 5 | 2-3 | 40.0% | -1.71u | 5.0u | -34.2% | 1.668 | 111.86 | 115.76 |
-| odds_bucket:1.80-2.00 | 9 | 7-2 | 77.78% | 4.33u | 9.0u | 48.11% | 1.916 | 83.07 | 80.72 |
-| odds_bucket:2.00-2.30 | 4 | 2-2 | 50.0% | 0.29u | 4.0u | 7.25% | 2.138 | 93.07 | 86.98 |
-| odds_bucket:2.30-2.70 | 7 | 2-5 | 28.57% | -2.08u | 7.0u | -29.71% | 2.496 | 86.02 | 98.71 |
-| odds_bucket:2.70+ | 7 | 0-7 | 0.0% | -7.0u | 7.0u | -100.0% | 4.937 | 86.67 | 80.61 |
-| odds_bucket:<1.40 | 25 | 18-7 | 72.0% | -3.68u | 25.0u | -14.72% | 1.197 | 215.68 | 219.33 |
-| surface:unknown | 68 | 39-29 | 57.35% | -8.96u | 68.0u | -13.18% | 1.945 | 140.39 | 141.37 |
-| tour:atp | 31 | 17-14 | 54.84% | -4.2u | 31.0u | -13.55% | 2.068 | 128.02 | 129.45 |
-| tour:wta | 37 | 22-15 | 59.46% | -4.76u | 37.0u | -12.86% | 1.842 | 150.76 | 151.36 |
+| Step | Count |
+|---|---:|
+| fixtures_total | 1633 |
+| not_singles | 491 |
+| not_finished | 0 |
+| missing_winner | 341 |
+| missing_match_key | 0 |
+| missing_players | 0 |
+| elo_unmatched | 600 |
+| elo_diff_missing | 0 |
+| elo_diff_too_low | 126 |
+| elo_candidates | 75 |
+| odds_checked | 75 |
+| odds_missing | 75 |
+| odds_out_of_range | 0 |
+| picks | 0 |
 
-## Top rows sample
+## Stats
 
-| Date | Match | Pick | Odds | Result | Profit | ELO diff | F5 diff | F10 diff | Combined |
-|---|---|---|---:|---|---:|---:|---:|---:|---:|
-| 2026-05-30 | A. Sabalenka - D. Kasatkina | A. Sabalenka | 1.1 | win | 0.1 | 461.16 | -20.0 | -5.0 | 449.91 |
-| 2026-05-29 | E. Svitolina - T. Korpatsch | E. Svitolina | 1.07 | win | 0.07 | 385.35 | 20.0 | 10.0 | 397.85 |
-| 2026-05-31 | J. De Jong - A. Zverev | A. Zverev | 1.07 | win | 0.07 | 353.33 | 0.0 | 10.0 | 355.83 |
-| 2026-05-29 | Q. Halys - A. Zverev | A. Zverev | 1.06 | win | 0.06 | 349.58 | 0.0 | 8.57 | 351.72 |
-| 2026-05-29 | M. Kostyuk - V. Golubic | M. Kostyuk | 1.08 | win | 0.08 | 293.86 | 20.0 | 30.0 | 311.36 |
-| 2026-06-01 | A. Sabalenka - N. Osaka | A. Sabalenka | 1.25 | win | 0.25 | 300.96 | 0.0 | 0.0 | 300.96 |
-| 2026-05-29 | M. Linette - I. Swiatek | I. Swiatek | 1.04 | win | 0.04 | 269.19 | 20.0 | 10.0 | 281.69 |
-| 2026-05-31 | M. Andreeva - J. Teichmann | M. Andreeva | 1.13 | win | 0.13 | 274.02 | 0.0 | 10.0 | 276.52 |
-| 2026-05-29 | J. Teichmann - K. Muchova | K. Muchova | 1.13 | loss | -1.0 | 279.69 | -20.0 | 5.0 | 270.94 |
-| 2026-05-30 | D. Parry - A. Anisimova | A. Anisimova | 1.22 | loss | -1.0 | 254.02 | 20.0 | 20.0 | 269.02 |
-| 2026-05-31 | S. Cirstea - Xiy. Wang | S. Cirstea | 1.23 | win | 0.23 | 274.69 | -20.0 | -10.0 | 262.19 |
-| 2026-05-30 | F. Cerundolo - Z. Svajda | F. Cerundolo | 1.1 | loss | -1.0 | 216.25 | 0.0 | 17.14 | 220.53 |
-| 2026-05-29 | S. Sierra - S. Cirstea | S. Cirstea | 1.3 | win | 0.3 | 215.6 | 0.0 | 0.0 | 215.6 |
-| 2026-06-01 | F. Cobolli - Z. Svajda | F. Cobolli | 1.13 | win | 0.13 | 194.29 | 0.0 | 20.0 | 199.29 |
-| 2026-05-29 | M. Andreeva - M. Bouzkova | M. Andreeva | 1.16 | win | 0.16 | 181.7 | 0.0 | 22.86 | 187.41 |
-| 2026-05-29 | N. Borges - A. Rublev | A. Rublev | 1.37 | win | 0.37 | 167.73 | 20.0 | 14.44 | 181.34 |
-| 2026-05-29 | J. Fonseca - N. Djokovic | N. Djokovic | 1.65 | loss | -1.0 | 172.16 | 6.67 | 4.17 | 176.54 |
-| 2026-06-02 | R. Jodar - A. Zverev | A. Zverev | 1.31 | win | 0.31 | 170.0 | 0.0 | 0.0 | 170.0 |
-| 2026-05-30 | J. Faria - F. Tiafoe | F. Tiafoe | 1.56 | win | 0.56 | 192.61 | -40.0 | -13.33 | 169.28 |
-| 2026-05-29 | P. Stearns - B. Bencic | B. Bencic | 1.4 | win | 0.4 | 161.12 | 0.0 | 15.87 | 165.09 |
-| 2026-05-30 | N. Hibino - M. Bolkvadze | M. Bolkvadze | 2.33 | loss | -1.0 | 134.52 | 40.0 | 26.67 | 161.19 |
-| 2026-05-31 | N. Hibino - V. Valdmannova | V. Valdmannova | 1.67 | loss | -1.0 | 119.41 | 60.0 | 47.14 | 161.19 |
-| 2026-05-30 | C. Gauff - A. Potapova | C. Gauff | 1.28 | loss | -1.0 | 157.1 | 0.0 | 0.0 | 157.1 |
-| 2026-05-30 | C. H. Tseng - L. Neumayer | L. Neumayer | 1.49 | win | 0.49 | 143.81 | 20.0 | 10.0 | 156.31 |
-| 2026-06-01 | F. Tiafoe - M. Arnaldi | F. Tiafoe | 2.05 | loss | -1.0 | 154.94 | 0.0 | -18.57 | 150.3 |
+| Bucket | N | W-L | WR | Profit | ROI | Avg odds | Avg abs ELO diff |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| overall | 0 | 0-0 | 0.0% | 0.0u | 0.0% | 0.0 | 0.0 |
+
+## Picks
+
+| Date | Match | Pick | Odds | ELO diff | Result | Profit |
+|---|---|---|---:|---:|---:|---:|
