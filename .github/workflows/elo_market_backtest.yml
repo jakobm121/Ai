@@ -31,13 +31,10 @@ jobs:
       MIN_ELO_DIFF: ${{ github.event.inputs.min_elo_diff || '60' }}
       MIN_ODDS: ${{ github.event.inputs.min_odds || '1.90' }}
       MAX_ODDS: ${{ github.event.inputs.max_odds || '2.70' }}
-      REQUEST_SLEEP: "0.03"
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -53,15 +50,22 @@ jobs:
         run: |
           python ratings/elo_form_market_backtest.py
 
+      - name: Show generated files
+        run: |
+          ls -lah ratings/elo_form_market_backtest_report.json || true
+          ls -lah ratings/elo_form_market_backtest_rows.json || true
+          ls -lah ratings/elo_form_market_backtest_missing.json || true
+          ls -lah ratings/elo_form_market_backtest_table.md || true
+
       - name: Commit backtest outputs
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add -A ratings/elo_form_market_backtest_report.json \
-                   ratings/elo_form_market_backtest_rows.json \
-                   ratings/elo_form_market_backtest_missing.json \
-                   ratings/elo_form_market_backtest_table.md
+          git add ratings/elo_form_market_backtest_report.json || true
+          git add ratings/elo_form_market_backtest_rows.json || true
+          git add ratings/elo_form_market_backtest_missing.json || true
+          git add ratings/elo_form_market_backtest_table.md || true
 
           git commit -m "Update ELO only market backtest" || echo "No changes to commit"
           git push
