@@ -16,6 +16,9 @@ on:
         required: false
         default: "60"
 
+permissions:
+  contents: write
+
 jobs:
   elo-form-market-backtest:
     runs-on: ubuntu-latest
@@ -50,10 +53,15 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add ratings/elo_form_market_backtest_report.json \
-                  ratings/elo_form_market_backtest_rows.json \
-                  ratings/elo_form_market_backtest_missing.json \
-                  ratings/elo_form_market_backtest_table.md
+          git add ratings/elo_form_market_backtest.py || true
+          git add ratings/elo_form_market_backtest_report.json || true
+          git add ratings/elo_form_market_backtest_rows.json || true
+          git add ratings/elo_form_market_backtest_missing.json || true
+          git add ratings/elo_form_market_backtest_table.md || true
 
-          git commit -m "Update ELO form market backtest" || echo "No changes to commit"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update ELO form market backtest"
+            git push
+          fi
