@@ -1,6 +1,6 @@
 # Value + ELO predictions
 
-Generated: 2026-06-03T12:34:28.822433+02:00
+Generated: 2026-06-03T14:18:13.894000+02:00
 
 ## Open / saved ELO-confirmed value picks
 
@@ -10,10 +10,11 @@ Generated: 2026-06-03T12:34:28.822433+02:00
 | 2026-06-03 | challenger | H. Squire - P. Martinez | H. Squire | 2.62 | 1.25 | 0.2099 | 71.42 |  |
 | 2026-06-03 | challenger | Y. Shimizu - D. Sweeny | Y. Shimizu | 2.2 | 1.5 | 0.2055 | 4.48 |  |
 | 2026-06-03 | challenger | E. Ymer - C. O'Connell | E. Ymer | 2.12 | 1.5 | 0.1883 | 29.45 |  |
+| 2026-06-03 | challenger | R. Montgomery - L. Boskovic | L. Boskovic | 2.55 | 1.25 | 0.2078 | 60.16 |  |
 
 ## Settled ELO-confirmed value picks
 
-Overall: **72-75**, WR **48.98%**, Profit **7.72u**, ROI **4.32%**, Avg odds **2.217**
+Overall: **76-79**, WR **49.03%**, Profit **8.525u**, ROI **4.54%**, Avg odds **2.219**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -44,10 +45,10 @@ Overall: **72-75**, WR **48.98%**, Profit **7.72u**, ROI **4.32%**, Avg odds **2
 | 2026-05-10 | atp | L. Tien - A. Bublik | L. Tien | 2.82 | 1.25 | win | 2.275 | 32.55 |  |
 | 2026-05-10 | atp | T. Paul - L. Darderi | T. Paul | 1.78 | 1.0 | loss | -1.0 | 98.98 |  |
 | 2026-05-10 | wta | L. Siegemund - Ka. Pliskova | Ka. Pliskova | 1.89 | 1.0 | win | 0.89 | 69.03 |  |
-| 2026-05-11 | atp | M. Bellucci - M. Landaluce | M. Landaluce | 1.96 | 1.0 | win | 0.96 | 33.95 | 33.95 |
+| 2026-05-11 | atp | M. Bellucci - M. Landaluce | M. Landaluce | 1.96 | 1.0 | win | 0.96 | 58.21 |  |
 | 2026-05-11 | atp | A. Rublev - A. Davidovich Fokina | A. Rublev | 1.7 | 1.0 | win | 0.7 | 44.33 |  |
-| 2026-05-11 | challenger | M. Mrva - F. Cina | M. Mrva | 2.44 | 1.25 | loss | -1.25 | 72.23 |  |
-| 2026-05-11 | challenger | N. Fatic - D. Kuzmanov | N. Fatic | 1.84 | 1.0 | win | 0.84 | 10.3 |  |
+| 2026-05-11 | challenger | M. Mrva - F. Cina | M. Mrva | 2.44 | 1.25 | loss | -1.25 | 48.63 |  |
+| 2026-05-11 | challenger | N. Fatic - D. Kuzmanov | N. Fatic | 1.84 | 1.0 | win | 0.84 | 10.48 |  |
 | 2026-05-11 | challenger | A. Charaeva - A. Tubello | A. Tubello | 2.47 | 1.25 | loss | -1.25 | 49.0 |  |
 | 2026-05-11 | challenger | S. Nagal - P. Herbert | P. Herbert | 2.05 | 1.25 | loss | -1.25 | 53.61 |  |
 | 2026-05-12 | challenger | S. Zhang - H. Sakatsume | H. Sakatsume | 2.62 | 1.25 | loss | -1.25 | 5.1 |  |
@@ -90,12 +91,12 @@ Overall: **72-75**, WR **48.98%**, Profit **7.72u**, ROI **4.32%**, Avg odds **2
 | 2026-05-18 | atp | J. Reis Da Silva - C. Hemery | C. Hemery | 1.97 | 1.0 | loss | -1.0 | 9.03 |  |
 | 2026-05-19 | atp | C. Smith - A. Guillen Meza | A. Guillen Meza | 2.49 | 1.25 | loss | -1.25 | 39.71 |  |
 | 2026-05-19 | wta | K. Juvan - A. Siskova | A. Siskova | 2.65 | 1.25 | loss | -1.25 | 10.83 |  |
-| 2026-05-19 | atp | N. Fatic - L. Mikrut | N. Fatic | 1.93 | 1.0 | win | 0.93 | 11.19 |  |
+| 2026-05-19 | atp | N. Fatic - L. Mikrut | N. Fatic | 1.93 | 1.0 | win | 0.93 | 11.37 |  |
 | 2026-05-19 | atp | L. Midon - R. Carballes Baena | L. Midon | 2.8 | 1.25 | loss | -1.25 | 34.64 |  |
 | 2026-05-19 | wta | A. Li - E. Alexandrova | A. Li | 1.84 | 1.25 | win | 1.05 | 18.88 |  |
 | 2026-05-19 | atp | R. Sakamoto - P. Martinez | R. Sakamoto | 1.73 | 1.0 | loss | -1.0 | 57.59 |  |
 | 2026-05-20 | atp | A. Fery - P. Martinez | A. Fery | 2.37 | 1.5 | loss | -1.5 | 86.97 |  |
-| 2026-05-20 | challenger | A. Nedic - M. Alkaya | M. Alkaya | 2.61 | 1.25 | loss | -1.25 | 33.7 |  |
+| 2026-05-20 | challenger | A. Nedic - M. Alkaya | M. Alkaya | 2.61 | 1.25 | loss | -1.25 | 0.47 |  |
 | 2026-05-20 | atp | L. Darderi - Y. Hanfmann | L. Darderi | 1.7 | 1.0 | win | 0.7 | 46.87 |  |
 | 2026-05-22 | itf | M. Kobori - M. Yamaguchi | M. Kobori | 2.75 | 1.0 | win | 1.75 | 11.84 |  |
 | 2026-05-21 | wta | M. Bouzkova - A. Li | M. Bouzkova | 1.9 | 1.0 | loss | -1.0 | 15.95 |  |
@@ -119,22 +120,22 @@ Overall: **72-75**, WR **48.98%**, Profit **7.72u**, ROI **4.32%**, Avg odds **2
 | 2026-05-26 | challenger | C. Smith - T. Svajda | T. Svajda | 2.75 | 1.0 | loss | -1.0 | 15.47 |  |
 | 2026-05-27 | wta | J. Teichmann - M. Frech | J. Teichmann | 2.37 | 1.5 | win | 2.055 | 14.17 |  |
 | 2026-05-27 | itf | A. Prisacariu - B. Palicova | A. Prisacariu | 2.75 | 1.25 | win | 2.1875 | 14.52 |  |
-| 2026-05-27 | itf | J. Chan - A. Wang | J. Chan | 1.9 | 1.0 | loss | -1.0 | 13.03 | 13.03 |
+| 2026-05-27 | itf | J. Chan - A. Wang | J. Chan | 1.9 | 1.0 | loss | -1.0 | 19.52 |  |
 | 2026-05-28 | challenger | C. H. Tseng - L. Midon | L. Midon | 2.68 | 1.25 | loss | -1.25 | 101.2 |  |
 | 2026-05-28 | atp | A. Rinderknech - M. Berrettini | A. Rinderknech | 1.96 | 1.25 | loss | -1.25 | 14.12 |  |
 | 2026-05-29 | itf | Y. Yang - H. Inoue | Y. Yang | 2.1 | 1.0 | loss | -1.0 | 9.96 |  |
 | 2026-05-29 | challenger | S. Sakellaridis - S. Nagal | S. Sakellaridis | 1.83 | 1.25 | win | 1.0375 | 92.36 |  |
 | 2026-06-02 | challenger | M. Stoiana - L. Sun | M. Stoiana | 2.6 | 1.25 | win | 2.0 | 14.3 |  |
 | 2026-06-01 | challenger | J. J. Schwaerzler - M. Dodig | M. Dodig | 2.53 | 1.25 | win | 1.9125 | 1.01 |  |
-| 2026-06-01 | challenger | M. Sawangkaew - L. Klimovicova | M. Sawangkaew | 1.72 | 1.0 | win | 0.72 | 43.36 |  |
+| 2026-06-01 | challenger | M. Sawangkaew - L. Klimovicova | M. Sawangkaew | 1.72 | 1.0 | win | 0.72 | 41.93 |  |
 | 2026-06-01 | challenger | F. Ferreira Silva - P. Martinez | F. Ferreira Silva | 2.62 | 1.25 | loss | -1.25 | 80.07 |  |
 | 2026-06-02 | challenger | R. Bertola - F. Maestrelli | R. Bertola | 2.2 | 1.25 | void |  | 42.26 |  |
 | 2026-06-02 | challenger | N. Sanchez Izquierdo - L. Pavlovic | N. Sanchez Izquierdo | 2.02 | 1.25 | win | 1.275 | 0.05 |  |
-| 2026-06-02 | challenger | M. Bellucci - A. Bolt | A. Bolt | 2.25 | 1.5 | win | 1.875 | 29.72 | 29.72 |
-| 2026-06-02 | challenger | M. Petkovic - A. Moro Canas | M. Petkovic | 2.76 | 1.25 | loss | -1.25 | 10.22 |  |
+| 2026-06-02 | challenger | M. Bellucci - A. Bolt | A. Bolt | 2.25 | 1.5 | win | 1.875 | 29.72 |  |
+| 2026-06-02 | challenger | M. Petkovic - A. Moro Canas | M. Petkovic | 2.76 | 1.25 | loss | -1.25 | 45.01 |  |
 | 2026-06-02 | challenger | D. Papamichail - C. Paquet | D. Papamichail | 2.61 | 1.25 | loss | -1.25 | 96.04 |  |
 | 2026-06-02 | challenger | G. Pedone - E. Gorgodze | G. Pedone | 1.85 | 1.0 | win | 0.85 | 2.65 |  |
-| 2026-06-02 | challenger | V. Durasovic - N. Gombos | V. Durasovic | 2.4 | 1.5 | loss | -1.5 | 3.33 |  |
+| 2026-06-02 | challenger | V. Durasovic - N. Gombos | V. Durasovic | 2.4 | 1.5 | loss | -1.5 | 4.1 |  |
 | 2026-05-05 | challenger | Wu Tung-Lin - J. McCabe | Wu Tung-Lin | 1.68 | 1.5 | loss | -1.5 | 65.39 |  |
 | 2026-05-05 | challenger | M. Tobon - E. Ribeiro | M. Tobon | 2.5 | 1.25 | win | 1.875 | 34.16 |  |
 | 2026-05-05 | itf | M. Sieg - E. Mandlik | M. Sieg | 2.75 | 1.25 | loss | -1.25 | 115.61 |  |
@@ -168,3 +169,11 @@ Overall: **72-75**, WR **48.98%**, Profit **7.72u**, ROI **4.32%**, Avg odds **2
 | 2026-05-29 | itf | N. Djosic - V. Gonzalez-Galino | N. Djosic | 1.71 | 0.75 | win | 0.5325 | 10.48 |  |
 | 2026-05-29 | challenger | C. H. Tseng - P. Martin Tiffon | P. Martin Tiffon | 1.93 | 1.0 | loss | -1.0 | 102.88 |  |
 | 2026-06-02 | challenger | C. Cretu - J. Vasami | C. Cretu | 2.38 | 1.5 | loss | -1.5 | 103.07 |  |
+| 2026-05-06 | challenger | A. Tubello - E. Yaneva | A. Tubello | 2.1 | 1.25 | win | 1.375 | 21.2 |  |
+| 2026-05-11 | challenger | R. Bertola - C. Sanchez Jover | C. Sanchez Jover | 2.54 | 0.75 | win | 1.155 | 0.15 |  |
+| 2026-05-20 | atp | I. Buse - J. Mensik | I. Buse | 2.58 | 1.25 | win | 1.975 | 162.28 |  |
+| 2026-05-21 | challenger | M. Poljicak - M. Mrva | M. Poljicak | 1.84 | 1.25 | win | 1.05 | 23.6 |  |
+| 2026-05-26 | challenger | A. Martin - J. Kovalik | J. Kovalik | 1.9 | 0.75 | loss | -0.75 | 6.6 |  |
+| 2026-05-27 | atp | M. Navone - J. Mensik | M. Navone | 2.09 | 1.5 | loss | -1.5 | 149.86 |  |
+| 2026-05-27 | atp | N. Basavareddy - A. Michelsen | N. Basavareddy | 2.65 | 1.25 | loss | -1.25 | 19.69 |  |
+| 2026-05-29 | itf | L. Giovannini - N. Podoroska | N. Podoroska | 2.32 | 1.25 | loss | -1.25 | 10.42 |  |
