@@ -1,46 +1,34 @@
-name: ELO form market backtest
+name: ELO Form Market Backtest
 
 on:
   workflow_dispatch:
     inputs:
-      target_days_back:
-        description: "How many completed days back to backtest"
+      days_back:
+        description: "Koliko dni nazaj testira"
         required: false
         default: "5"
       form_days_back:
-        description: "How many days of score history to use for last 5/10 form"
+        description: "Koliko dni zgodovine za formo"
         required: false
-        default: "120"
-      elo_threshold:
-        description: "Minimum absolute ELO diff for ELO confirmation"
+        default: "45"
+      min_elo_diff:
+        description: "Minimalna ELO razlika za pick"
         required: false
-        default: "50"
-      form5_threshold:
-        description: "Minimum last-5 win-rate edge"
-        required: false
-        default: "0.10"
-      form10_threshold:
-        description: "Minimum last-10 win-rate edge"
-        required: false
-        default: "0.10"
+        default: "60"
 
 jobs:
   elo-form-market-backtest:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     env:
-      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-      ELO_FORM_TARGET_DAYS_BACK: ${{ github.event.inputs.target_days_back || '5' }}
-      ELO_FORM_HISTORY_DAYS_BACK: ${{ github.event.inputs.form_days_back || '120' }}
-      ELO_CONFIRM_THRESHOLD: ${{ github.event.inputs.elo_threshold || '50' }}
-      FORM5_CONFIRM_THRESHOLD: ${{ github.event.inputs.form5_threshold || '0.10' }}
-      FORM10_CONFIRM_THRESHOLD: ${{ github.event.inputs.form10_threshold || '0.10' }}
+      TENNIS_API_KEY: ${{ secrets.TENNIS_API_KEY }}
+      API_KEY: ${{ secrets.API_KEY }}
+      BACKTEST_DAYS_BACK: ${{ github.event.inputs.days_back || '5' }}
+      FORM_DAYS_BACK: ${{ github.event.inputs.form_days_back || '45' }}
+      MIN_ELO_DIFF: ${{ github.event.inputs.min_elo_diff || '60' }}
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -48,13 +36,24 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run ELO form market backtest
-        run: python ratings/elo_form_market_backtest.py
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
-      - name: Commit reports
+      - name: Run ELO form market backtest
+        run: |
+          python ratings/elo_form_market_backtest.py
+
+      - name: Commit backtest outputs
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add data/elo_form_market_backtest_matches.json ratings/elo_form_market_backtest_report.json ratings/elo_form_market_backtest_table.md
+
+          git add ratings/elo_form_market_backtest_report.json \
+                  ratings/elo_form_market_backtest_rows.json \
+                  ratings/elo_form_market_backtest_missing.json \
+                  ratings/elo_form_market_backtest_table.md
+
           git commit -m "Update ELO form market backtest" || echo "No changes to commit"
           git push
