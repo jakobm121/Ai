@@ -1,4 +1,4 @@
-name: ELO Form Market Backtest
+name: ELO Only Market Backtest
 
 on:
   workflow_dispatch:
@@ -7,37 +7,37 @@ on:
         description: "Koliko dni nazaj testira"
         required: false
         default: "5"
-      form_days_back:
-        description: "Koliko dni zgodovine za formo"
-        required: false
-        default: "45"
       min_elo_diff:
-        description: "Minimalna ELO razlika za pick"
+        description: "Minimalna absolutna ELO razlika za pick"
         required: false
         default: "60"
-      bookmaker:
-        description: "Bookmaker za oddse; prazno = best available"
+      min_odds:
+        description: "Minimalna kvota"
         required: false
-        default: ""
+        default: "1.90"
+      max_odds:
+        description: "Maksimalna kvota"
+        required: false
+        default: "2.70"
 
 jobs:
-  elo-form-market-backtest:
+  elo-only-market-backtest:
     runs-on: ubuntu-latest
 
     env:
       TENNIS_API_KEY: ${{ secrets.TENNIS_API_KEY }}
       API_KEY: ${{ secrets.API_KEY }}
       BACKTEST_DAYS_BACK: ${{ github.event.inputs.days_back || '5' }}
-      FORM_DAYS_BACK: ${{ github.event.inputs.form_days_back || '45' }}
       MIN_ELO_DIFF: ${{ github.event.inputs.min_elo_diff || '60' }}
-      BOOKMAKER: ${{ github.event.inputs.bookmaker || '' }}
-      REQUEST_SLEEP: "0.15"
+      MIN_ODDS: ${{ github.event.inputs.min_odds || '1.90' }}
+      MAX_ODDS: ${{ github.event.inputs.max_odds || '2.70' }}
+      REQUEST_SLEEP: "0.03"
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -49,7 +49,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Run ELO form market backtest
+      - name: Run ELO only market backtest
         run: |
           python ratings/elo_form_market_backtest.py
 
@@ -58,10 +58,10 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          test -f ratings/elo_form_market_backtest_report.json && git add ratings/elo_form_market_backtest_report.json
-          test -f ratings/elo_form_market_backtest_rows.json && git add ratings/elo_form_market_backtest_rows.json
-          test -f ratings/elo_form_market_backtest_missing.json && git add ratings/elo_form_market_backtest_missing.json
-          test -f ratings/elo_form_market_backtest_table.md && git add ratings/elo_form_market_backtest_table.md
+          git add -A ratings/elo_form_market_backtest_report.json \
+                   ratings/elo_form_market_backtest_rows.json \
+                   ratings/elo_form_market_backtest_missing.json \
+                   ratings/elo_form_market_backtest_table.md
 
-          git commit -m "Update ELO form market backtest" || echo "No changes to commit"
+          git commit -m "Update ELO only market backtest" || echo "No changes to commit"
           git push
