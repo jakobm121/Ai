@@ -1,21 +1,166 @@
 {
-  "generated_at": "2026-06-03T09:49:09.803252+02:00",
+  "generated_at": "2026-06-03T09:54:34.300891+02:00",
   "timezone": "Europe/Ljubljana",
+  "source": "api-tennis",
+  "strategy": "elo_only_market_backtest",
   "settings": {
-    "days_back": 5,
+    "backtest_days_back": 5,
     "min_elo_diff": 60.0,
     "min_odds": 1.9,
-    "max_odds": 2.7,
-    "api": "api-tennis",
-    "source": "https://api.api-tennis.com/tennis/"
+    "max_odds": 2.7
   },
   "meta": {
-    "fixtures_fetched": 1633,
-    "unique_fixtures": 1633,
-    "elo_candidates": 82,
-    "final_rows": 0,
-    "missing_rows": 1480
+    "fixtures_total": 1633,
+    "elo_candidates": 83,
+    "rows": 18,
+    "missing": 1615,
+    "date_start": "2026-05-29",
+    "date_end": "2026-06-03"
   },
-  "stats": {},
-  "sample_rows": []
+  "overall": {
+    "n": 18,
+    "wins": 9,
+    "losses": 9,
+    "win_rate": 50.0,
+    "profit": 0.95,
+    "stake": 18.0,
+    "roi": 5.28,
+    "avg_odds": 2.204,
+    "avg_abs_overall_elo_diff": 87.59
+  },
+  "by_elo_bucket": {
+    "120-150": {
+      "n": 2,
+      "wins": 1,
+      "losses": 1,
+      "win_rate": 50.0,
+      "profit": -0.02,
+      "stake": 2.0,
+      "roi": -1.0,
+      "avg_odds": 2.155,
+      "avg_abs_overall_elo_diff": 128.9
+    },
+    "150-180": {
+      "n": 1,
+      "wins": 0,
+      "losses": 1,
+      "win_rate": 0.0,
+      "profit": -1.0,
+      "stake": 1.0,
+      "roi": -100.0,
+      "avg_odds": 2.05,
+      "avg_abs_overall_elo_diff": 154.94
+    },
+    "60-80": {
+      "n": 9,
+      "wins": 4,
+      "losses": 5,
+      "win_rate": 44.44,
+      "profit": -0.45,
+      "stake": 9.0,
+      "roi": -5.0,
+      "avg_odds": 2.181,
+      "avg_abs_overall_elo_diff": 70.31
+    },
+    "80-100": {
+      "n": 6,
+      "wins": 4,
+      "losses": 2,
+      "win_rate": 66.67,
+      "profit": 2.42,
+      "stake": 6.0,
+      "roi": 40.33,
+      "avg_odds": 2.28,
+      "avg_abs_overall_elo_diff": 88.52
+    }
+  },
+  "by_odds_bucket": {
+    "1.90-2.00": {
+      "n": 7,
+      "wins": 5,
+      "losses": 2,
+      "win_rate": 71.43,
+      "profit": 2.74,
+      "stake": 7.0,
+      "roi": 39.14,
+      "avg_odds": 1.95,
+      "avg_abs_overall_elo_diff": 86.04
+    },
+    "2.00-2.20": {
+      "n": 2,
+      "wins": 1,
+      "losses": 1,
+      "win_rate": 50.0,
+      "profit": 0.05,
+      "stake": 2.0,
+      "roi": 2.5,
+      "avg_odds": 2.05,
+      "avg_abs_overall_elo_diff": 111.63
+    },
+    "2.20-2.40": {
+      "n": 4,
+      "wins": 2,
+      "losses": 2,
+      "win_rate": 50.0,
+      "profit": 0.54,
+      "stake": 4.0,
+      "roi": 13.5,
+      "avg_odds": 2.27,
+      "avg_abs_overall_elo_diff": 86.29
+    },
+    "2.40-2.70": {
+      "n": 5,
+      "wins": 1,
+      "losses": 4,
+      "win_rate": 20.0,
+      "profit": -2.38,
+      "stake": 5.0,
+      "roi": -47.6,
+      "avg_odds": 2.568,
+      "avg_abs_overall_elo_diff": 81.2
+    }
+  },
+  "by_tour": {
+    "atp": {
+      "n": 8,
+      "wins": 5,
+      "losses": 3,
+      "win_rate": 62.5,
+      "profit": 2.5,
+      "stake": 8.0,
+      "roi": 31.25,
+      "avg_odds": 2.21,
+      "avg_abs_overall_elo_diff": 83.13
+    },
+    "wta": {
+      "n": 10,
+      "wins": 4,
+      "losses": 6,
+      "win_rate": 40.0,
+      "profit": -1.55,
+      "stake": 10.0,
+      "roi": -15.5,
+      "avg_odds": 2.199,
+      "avg_abs_overall_elo_diff": 91.17
+    }
+  },
+  "by_surface": {
+    "unknown": {
+      "n": 18,
+      "wins": 9,
+      "losses": 9,
+      "win_rate": 50.0,
+      "profit": 0.95,
+      "stake": 18.0,
+      "roi": 5.28,
+      "avg_odds": 2.204,
+      "avg_abs_overall_elo_diff": 87.59
+    }
+  },
+  "missing_summary": {
+    "elo_unmatched": 915,
+    "winner_unknown": 476,
+    "elo_diff_too_low": 159,
+    "odds_missing_or_out_of_range": 65
+  }
 }
