@@ -35,20 +35,18 @@ jobs:
         run: |
           python ratings/value_elo_filter.py
 
-      - name: Commit ELO filtered files
+      - name: Commit ELO prediction files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
           git add data/tennis_value_elo_predictions.json
-          git add data/tennis_value_elo_results.json
           git add ratings/value_elo_predictions_table.md
-          git add ratings/value_elo_results_report.json
           git add ratings/value_elo_missing.json
 
           if git diff --cached --quiet; then
-            echo "No ELO filter changes to commit."
+            echo "No ELO prediction changes to commit."
           else
-            git commit -m "Update value ELO filtered picks"
+            git commit -m "Update value ELO predictions"
             git push
           fi
