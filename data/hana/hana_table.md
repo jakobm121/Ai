@@ -1,29 +1,32 @@
 # Hana totals hub
 
-Generated: 2026-06-03T10:14:01.103537+02:00
+Generated: 2026-06-04T07:53:06.209691+02:00
 
 ## Active unique picks
 
 | Date | Time | Match | Pick | Consensus | Machines | Best odds | Book | Conf | Quality | Edge | 3-set | Close | Gap | Strength |
 |---|---:|---|---|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| 2026-06-03 | 10:30 | M. Bassem Sobhy - N. Makhlouf | UNDER 19.0 games | single | Jakob | 2.13 | Pncl | 82.1 | 76.3 | 0.101 | 0.299 | 0.275 | 0.665 | 34.78 |
-| 2026-06-03 | 10:30 | M. Hageman - M. Masiianskaia | UNDER 19.5 games | single | Jakob | 2.01 | Pncl | 88.5 | 76.6 | 0.072 | 0.445 | 0.278 | 0.550 | 43.78 |
-| 2026-06-03 | 11:30 | A. Krueger - H. Sakatsume | UNDER 19.5 games | single | Tedi | 2.20 | Superbet | 82.3 | 84.2 | 0.116 | 0.325 | 0.165 | 0.471 | 7.80 |
-| 2026-06-03 | 11:30 | A. Krueger - H. Sakatsume | UNDER 20.5 games | single | Jakob | 2.00 | Betfair | 92.5 | 82.5 | 0.070 | 0.325 | 0.165 | 0.471 | 7.80 |
-| 2026-06-03 | 11:30 | M. Topo - E. Nava | UNDER 20.5 games | single | Jakob | 2.20 | Pncl | 86.9 | 85.9 | 0.116 | 0.150 | 0.267 | 0.540 | 45.23 |
-| 2026-06-03 | 12:30 | S. Baez - T. Boyer | UNDER 20.5 games | triple | Jakob + Tedi + Lucija | 2.03 | Pncl | 90.9 | 82.6 | 0.077 | 0.278 | 0.435 | 0.477 | 22.55 |
-| 2026-06-03 | 12:30 | A. Sabalenka - D. Shnaider | UNDER 19.0 games | single | Jakob | 2.10 | Pncl | 82.1 | 75.4 | 0.094 | 0.217 | 0.315 | 0.729 | 22.17 |
-| 2026-06-03 | 13:00 | H. Squire - P. Martinez | UNDER 21.5 games | single | Tedi | 2.00 | Betfair | 91.7 | 82.0 | 0.070 | 0.278 | 0.278 | 0.210 | 17.12 |
-| 2026-06-03 | 13:30 | K. Deichmann - A. Mazzola | OVER 22.0 games | single | Jakob | 2.05 | 1xBet | 82.6 | 78.7 | 0.131 | 0.417 | 0.353 | 0.006 | 14.19 |
-| 2026-06-03 | 14:00 | P. Boscardin Dias - M. Mrva | OVER 22.5 games | single | Jakob | 2.15 | Superbet | 94.8 | 86.4 | 0.155 | 0.564 | 0.536 | 0.138 | 19.33 |
-| 2026-06-03 | 14:30 | T. Pieri - S. Costoulas | UNDER 18.5 games | single | Jakob | 2.06 | Pncl | 81.6 | 77.6 | 0.085 | 0.200 | 0.242 | 0.645 | 7.30 |
-| 2026-06-03 | 15:30 | N. Bartunkova - G. Knutson | OVER 20.5 games | single | Lucija | 1.90 | bet365 | 89.5 | 82.9 | 0.094 | 0.476 | 0.356 | 0.463 | 6.00 |
-| 2026-06-03 | 18:30 | A. Martin - B. Ellis | UNDER 21.5 games | double | Tedi + Lucija | 2.17 | Pncl | 86.9 | 85.7 | 0.109 | 0.222 | 0.449 | 0.271 | 13.44 |
+| 2026-06-04 | 10:00 | A. Beckley - T. Duran | UNDER 20.5 games | single | Tedi | 2.20 | Betfair | 80.6 | 82.5 | 0.116 | 0.200 | 0.350 | 0.012 | 23.20 |
+| 2026-06-04 | 10:00 | R. Guna - G. Ghetu | UNDER 19.5 games | single | Jakob | 2.11 | Pncl | 86.5 | 78.6 | 0.096 | 0.381 | 0.269 | 0.546 | 28.61 |
+| 2026-06-04 | 10:00 | R. Tiukaev - I. Iutkin | OVER 20.5 games | single | Lucija | 1.85 | Pncl | 85.3 | 74.2 | 0.080 | 0.350 | 0.492 | 0.255 | 2.50 |
+| 2026-06-04 | 11:00 | V. Sachko - V. Kopriva | UNDER 20.5 games | single | Jakob | 2.00 | Betfair | 88.2 | 80.2 | 0.070 | 0.167 | 0.394 | 0.536 | 12.39 |
+| 2026-06-04 | 11:30 | R. Strombachs - P. Henning | UNDER 20.5 games | double | Jakob + Tedi | 2.12 | Superbet | 89.7 | 87.6 | 0.098 | 0.167 | 0.222 | 0.421 | 6.44 |
+| 2026-06-04 | 12:00 | D. Dedura - J. Reis Da Silva | UNDER 21.5 games | double | Tedi + Lucija | 2.05 | Betano | 91.7 | 85.3 | 0.082 | 0.322 | 0.408 | 0.262 | 22.42 |
+| 2026-06-04 | 12:00 | A. Krueger - J. Tjen | UNDER 21.5 games | single | Tedi | 2.04 | Pncl | 83.7 | 81.2 | 0.080 | 0.200 | 0.333 | 0.076 | 10.30 |
+| 2026-06-04 | 12:30 | R. Sramkova - T. Wuerth | UNDER 19.5 games | single | Jakob | 2.10 | Pncl | 76.8 | 76.8 | 0.094 | 0.261 | 0.291 | 0.533 | 3.29 |
+| 2026-06-04 | 13:00 | A. Eala - A. Charaeva | UNDER 19.5 games | single | Jakob | 2.16 | Pncl | 88.5 | 91.0 | 0.107 | 0.156 | 0.470 | 0.453 | 38.23 |
+| 2026-06-04 | 13:00 | C. Monnet - T. Prozorova | UNDER 19.5 games | single | Jakob | 2.16 | Pncl | 86.9 | 87.7 | 0.107 | 0.111 | 0.278 | 0.367 | 64.67 |
+| 2026-06-04 | 13:00 | O. Virtanen - A. Vukic | UNDER 22.0 games | single | Tedi | 2.20 | Pncl | 83.7 | 81.0 | 0.116 | 0.338 | 0.410 | 0.392 | 18.88 |
+| 2026-06-04 | 13:30 | M. Trungelliti - Y. H. Hsu | UNDER 19.5 games | triple | Jakob + Tedi + Lucija | 2.10 | Pncl | 88.9 | 83.0 | 0.094 | 0.254 | 0.504 | 0.675 | 27.97 |
+| 2026-06-04 | 14:00 | R. Montgomery - L. Boskovic | UNDER 20.5 games | triple | Tedi + Lucija + Tedi V2 | 2.00 | Betfair | 92.2 | 84.3 | 0.070 | 0.322 | 0.286 | 0.279 | 11.84 |
+| 2026-06-04 | 15:00 | M. Kostyuk - M. Andreeva | UNDER 21.5 games | single | Tedi | 2.01 | Pncl | 90.4 | 82.1 | 0.072 | 0.261 | 0.211 | 0.116 | 12.20 |
+| 2026-06-04 | 15:00 | N. Bartunkova - G. Knutson | OVER 20.5 games | single | Lucija | 1.90 | bet365 | 96.0 | 89.8 | 0.094 | 0.445 | 0.389 | 0.434 | 4.00 |
+| 2026-06-04 | 15:30 | H. Barton - N. Gombos | UNDER 20.5 games | single | Jakob | 2.20 | Pncl | 84.3 | 83.5 | 0.116 | 0.388 | 0.352 | 0.491 | 23.25 |
 
 ## Consensus summary
 
 | Consensus | Count |
 |---|---:|
-| triple | 1 |
-| double | 1 |
-| single | 11 |
+| triple | 2 |
+| double | 2 |
+| single | 12 |
