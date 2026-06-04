@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-04T07:40:11.478740+02:00",
+  "generated_at": "2026-06-04T14:10:56.687271+02:00",
   "source_file": "data/tennis_predictions.json",
   "elo_file": "ratings/tennis_elo.json",
   "total_source_predictions": 15,
-  "confirmed_in_current_run": 2,
-  "added": 1,
-  "updated": 1,
-  "total_saved_predictions": 6,
+  "confirmed_in_current_run": 4,
+  "added": 2,
+  "updated": 2,
+  "total_saved_predictions": 8,
   "picks": [
     {
       "pick_id": "12f64b1316e9c3d2c120c610611f26ae",
@@ -82,7 +82,7 @@
     },
     {
       "pick_id": "f044260c06eb0eb8255cf34d60afc17e",
-      "created_at": "2026-06-04T07:32:37.286161+02:00",
+      "created_at": "2026-06-04T11:52:30.962841+02:00",
       "date": "2026-06-04",
       "tour_level": "challenger",
       "event_type": "Challenger Women Singles",
@@ -100,7 +100,7 @@
     },
     {
       "pick_id": "9b75ba8fe5b84e3f7653490a57947891",
-      "created_at": "2026-06-04T07:34:16.541800+02:00",
+      "created_at": "2026-06-04T11:53:40.572189+02:00",
       "date": "2026-06-04",
       "tour_level": "challenger",
       "event_type": "Challenger Women Singles",
@@ -114,6 +114,42 @@
       "value_score": null,
       "elo_confirmed": true,
       "elo_overall_diff": 79.88,
+      "elo_surface_diff": null
+    },
+    {
+      "pick_id": "894bf73f2d99b25ac6fbcaa5c2ebd620",
+      "created_at": "2026-06-04T11:54:59.062817+02:00",
+      "date": "2026-06-04",
+      "tour_level": "challenger",
+      "event_type": "Challenger Women Singles",
+      "match": "A. Krueger - J. Tjen",
+      "bet": "A. Krueger",
+      "opponent": "J. Tjen",
+      "odds": 1.8,
+      "stake": 1.25,
+      "model_probability": null,
+      "edge": 0.1044,
+      "value_score": null,
+      "elo_confirmed": true,
+      "elo_overall_diff": 82.46,
+      "elo_surface_diff": null
+    },
+    {
+      "pick_id": "8da0f81f4414538b7a50aeca41533a7d",
+      "created_at": "2026-06-04T11:52:18.140959+02:00",
+      "date": "2026-06-04",
+      "tour_level": "challenger",
+      "event_type": "Challenger Men Singles",
+      "match": "M. H. Rehberg - M. Moeller",
+      "bet": "M. Moeller",
+      "opponent": "M. H. Rehberg",
+      "odds": 2.71,
+      "stake": 1.25,
+      "model_probability": null,
+      "edge": 0.1845,
+      "value_score": null,
+      "elo_confirmed": true,
+      "elo_overall_diff": 34.87,
       "elo_surface_diff": null
     }
   ]
