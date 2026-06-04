@@ -1,16 +1,16 @@
 # Lucija results
 
-Generated: 2026-06-03T16:11:30.585455+02:00
+Generated: 2026-06-04T07:23:47.841642+02:00
 
 ## Summary
 
 - Picks: 34
-- Pending: 2
-- Settled: 32
-- W/L/P/V: 18/13/0/1
-- Profit: 6.45u
-- ROI: 20.81%
-- Winrate: 58.06%
+- Pending: 1
+- Settled: 33
+- W/L/P/V: 18/14/0/1
+- Profit: 5.45u
+- ROI: 17.03%
+- Winrate: 56.25%
 
 | Date | Time | Match | Bet | Odds | Stake | Result | Profit | Score | Total |
 |---|---:|---|---|---:|---:|---|---:|---|---:|
@@ -47,4 +47,4 @@ Generated: 2026-06-03T16:11:30.585455+02:00
 | 2026-06-02 | 11:30 | V. Royer - N. Alvarez Varona | UNDER 20.5 games | 2.20 | 1.00 | win | 1.200 | 6-4, 6-3 | 19 |
 | 2026-06-03 | 12:30 | S. Baez - T. Boyer | UNDER 20.5 games | 2.03 | 1.00 | win | 1.030 | 6-2, 6-4 | 18 |
 | 2026-06-03 | 15:30 | N. Bartunkova - G. Knutson | OVER 20.5 games | 1.90 | 1.00 | pending | 0.000 |  |  |
-| 2026-06-03 | 18:30 | A. Martin - B. Ellis | UNDER 21.5 games | 2.17 | 1.00 | pending | 0.000 |  |  |
+| 2026-06-03 | 18:30 | A. Martin - B. Ellis | UNDER 21.5 games | 2.17 | 1.00 | loss | -1.000 | 7-6, 7-6 | 26 |

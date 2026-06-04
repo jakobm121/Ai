@@ -1,58 +1,28 @@
 {
-  "generated_at": "2026-06-03T16:11:30.520222+02:00",
+  "generated_at": "2026-06-04T07:23:47.776474+02:00",
   "settled_now": [
     {
-      "pick_id": "180ff993ea284b04007c194c3204d6ef",
-      "source_pick_id": "bbbdc5324c1e98805860afa8a2aad2d1",
-      "strategy": "tedi_main_150",
-      "match": "A. Krueger - H. Sakatsume",
-      "bet": "UNDER 20.5 games",
-      "result": "win",
-      "profit": 1.0,
-      "total_games": 19,
-      "final_score": "6-4, 6-3"
-    },
-    {
-      "pick_id": "8f2b7f9fa007684a2b651d16233142da",
-      "source_pick_id": "a0c57df14d198bc60208fb11bd311632",
-      "strategy": "tedi_main_150",
-      "match": "A. Krueger - H. Sakatsume",
-      "bet": "UNDER 19.5 games",
-      "result": "win",
-      "profit": 1.2,
-      "total_games": 19,
-      "final_score": "6-4, 6-3"
-    },
-    {
-      "pick_id": "a6245fc8a42baf350ff91662e03b3e8c",
-      "source_pick_id": "5f4e6d45db7fc5c7be4caa6948080ccc",
-      "strategy": "tedi_main_150",
-      "match": "S. Baez - T. Boyer",
-      "bet": "UNDER 20.5 games",
-      "result": "win",
-      "profit": 1.03,
-      "total_games": 18,
-      "final_score": "6-2, 6-4"
-    }
-  ],
-  "missing_source": [
-    {
-      "tedi_pick_id": "f485776613f359803e82fdf3452b6087",
-      "source_pick_id": "6454e12e3613482345dff03410678447",
-      "strategy": "tedi_main_150",
-      "match": "A. Martin - B. Ellis",
-      "bet": "UNDER 21.5 games",
-      "key": "12132440|over/under by games in match|under|21.5",
-      "reason": "no_settled_source_match"
-    },
-    {
-      "tedi_pick_id": "78f4d5f9f86ca9a94c206238e0b43f26",
+      "pick_id": "78f4d5f9f86ca9a94c206238e0b43f26",
       "source_pick_id": "f98385a27a0245dd1f94b66d2b8898e4",
       "strategy": "tedi_main_150",
       "match": "H. Squire - P. Martinez",
       "bet": "UNDER 21.5 games",
-      "key": "12133077|over/under by games in match|under|21.5",
-      "reason": "no_settled_source_match"
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 23,
+      "final_score": "7-6, 6-4"
+    },
+    {
+      "pick_id": "f485776613f359803e82fdf3452b6087",
+      "source_pick_id": "6454e12e3613482345dff03410678447",
+      "strategy": "tedi_main_150",
+      "match": "A. Martin - B. Ellis",
+      "bet": "UNDER 21.5 games",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 26,
+      "final_score": "7-6, 7-6"
     }
-  ]
+  ],
+  "missing_source": []
 }

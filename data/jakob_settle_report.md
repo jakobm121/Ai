@@ -1,55 +1,58 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-03T16:11:30.417026+02:00`
+Generated: `2026-06-04T07:23:47.677818+02:00`
 
-Pending picks: **3**
+Pending picks: **0**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 109 | 55 | 49 | 1 | 4 | 52.88% | +6.55u | 8.40% |
+| 112 | 55 | 51 | 1 | 5 | 51.89% | +5.05u | 6.36% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 7 | 4 | 2 | 0 | 1 | 66.67% | +1.67u | 37.16% |
+| 3 | 0 | 2 | 0 | 1 | 0.00% | -1.50u | -100.00% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 91 | 45 | 43 | 1 | 2 | 51.14% | +3.46u | 5.24% |
+| 94 | 45 | 45 | 1 | 3 | 50.00% | +1.96u | 2.90% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 68 | 33 | 32 | 1 | 2 | 50.77% | +2.24u | 4.60% |
+| 71 | 33 | 34 | 1 | 3 | 49.25% | +0.74u | 1.48% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 56 | 30 | 26 | 0 | 0 | 53.57% | +3.30u | 7.87% |
+| 58 | 30 | 27 | 0 | 1 | 52.63% | +2.55u | 5.97% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 14 | 8 | 6 | 0 | 0 | 57.14% | +1.13u | 10.79% |
+| 16 | 8 | 8 | 0 | 0 | 50.00% | -0.37u | -3.06% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 95 | 47 | 43 | 1 | 4 | 52.22% | +5.42u | 8.03% |
+| 96 | 47 | 43 | 1 | 5 | 52.22% | +5.42u | 8.03% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-03 | 14:30 | 4 | T. Pieri - S. Costoulas | UNDER 18.5 games | 2.06 | ⚪ void | 75.96 |  |  | 0.00u |
+| 2026-06-03 | 14:00 | 1 | P. Boscardin Dias - M. Mrva | OVER 22.5 games | 2.15 | ❌ loss | 80.57 | 20 | 4-6, 4-6 | -0.75u |
+| 2026-06-03 | 13:30 | 7 | K. Deichmann - A. Mazzola | OVER 22.0 games | 2.05 | ❌ loss | 72.76 | 19 | 6-7, 0-6 | -0.75u |
 | 2026-06-03 | 12:30 | 5 | S. Baez - T. Boyer | UNDER 20.5 games | 2.03 | ✅ win | 73.87 | 18 | 6-2, 6-4 | +0.77u |
 | 2026-06-03 | 12:30 | 9 | A. Sabalenka - D. Shnaider | UNDER 19.0 games | 2.10 | ❌ loss | 71.17 | 27 | 6-3, 5-7, 0-6 | -0.75u |
 | 2026-06-03 | 11:30 | 3 | M. Topo - E. Nava | UNDER 20.5 games | 2.20 | ✅ win | 76.29 | 19 | 3-6, 4-6 | +0.90u |
@@ -127,7 +130,4 @@ Pending picks: **3**
 | 2026-05-26 | 16:20 | 1 | H. Vandewinkel - M. Keys | UNDER 18.5 games | 2.14 | ✅ win | 79.21 | 15 | 3-6, 0-6 | +0.85u |
 | 2026-05-26 | 16:00 | 4 | S. Vujic - S. Napolitano | UNDER 19.5 games | 2.03 | ✅ win | 73.63 | 18 | 2-6, 4-6 | +0.77u |
 | 2026-05-26 | 16:00 | 2 | P. O. Fellin - P. Martin Tiffon | UNDER 19.5 games | 2.00 | ❌ loss | 73.93 | 20 | 4-6, 4-6 | -0.75u |
-| 2026-05-26 | 15:00 | 7 | P. O. Fellin - P. Martin Tiffon | UNDER 19.5 games | 2.00 | ❌ loss | 72.82 | 20 | 4-6, 4-6 | -0.75u |
-| 2026-05-26 | 15:00 | 31 | M. Brunold - M. Giunta | UNDER 21.5 games | 2.20 | ❌ loss | 64.05 | 26 | 7-6, 7-6 | -0.75u |
-| 2026-05-26 | 15:00 | 1 | H. Vandewinkel - M. Keys | UNDER 18.5 games | 2.14 | ✅ win | 80.51 | 15 | 3-6, 0-6 | +0.85u |
 

@@ -5555,7 +5555,7 @@
     "first_strength_score": 54.61,
     "second_strength_score": 41.17,
     "h2h_matches": 0,
-    "result": "pending",
+    "result": "loss",
     "created_at": "2026-06-03T10:14:01.044610+02:00",
     "reasoning": "Lucija selected UNDER 21.5 games in A. Martin - B. Ellis using optimizer rule: confidence >= 80, quality >= 72, market_gap >= 0.25, strength_gap <= 30, h2h <= 0, avg_three_set >= 0.15, avg_close_set between 0.2 and 0.55.",
     "source_pick_id": "6454e12e3613482345dff03410678447",
@@ -5589,7 +5589,15 @@
       "strength_gap_max": true,
       "h2h_max": true
     },
-    "profit": null
+    "profit": -1.0,
+    "settled_at": "2026-06-04T07:23:43.943198+02:00",
+    "settled_status": "Finished",
+    "event_winner": "First Player",
+    "final_score": "7-6, 7-6",
+    "total_games": 26,
+    "settled_from": "data/tennis_totals_results.json",
+    "settled_source_pick_id": "6454e12e3613482345dff03410678447",
+    "lucija_settled_at": "2026-06-04T07:23:47.841500+02:00"
   },
   {
     "pick_id": "f831e40425e4165c17e232356bae5f50",

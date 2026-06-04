@@ -1,19 +1,19 @@
 # Hana settled results
 
-Generated: 2026-06-03T16:11:30.649513+02:00
+Generated: 2026-06-04T07:23:47.904055+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 124 | 124 | 62 | 55 | 7 | 52.99% | 10.83u | 9.26% |
+| 129 | 129 | 62 | 59 | 8 | 51.24% | 6.83u | 5.64% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 14 | 14 | 8 | 6 | 0 | 57.14% | 2.4u | 17.14% |
-| single | 107 | 107 | 52 | 48 | 7 | 52.0% | 7.2u | 7.2% |
+| double | 15 | 15 | 8 | 7 | 0 | 53.33% | 1.4u | 9.33% |
+| single | 111 | 111 | 52 | 51 | 8 | 50.49% | 4.2u | 4.08% |
 | triple | 3 | 3 | 2 | 1 | 0 | 66.67% | 1.23u | 41.0% |
 
 ## Results
@@ -144,3 +144,8 @@ Generated: 2026-06-03T16:11:30.649513+02:00
 | 2026-06-03 | 11:30 | single | jakob | win | 1.20 | M. Topo - E. Nava | UNDER 20.5 games | 2.20 | 19 | 3-6, 4-6 |
 | 2026-06-03 | 12:30 | single | jakob | loss | -1.00 | A. Sabalenka - D. Shnaider | UNDER 19.0 games | 2.10 | 27 | 6-3, 5-7, 0-6 |
 | 2026-06-03 | 12:30 | triple | jakob, lucija, tedi | win | 1.03 | S. Baez - T. Boyer | UNDER 20.5 games | 2.03 | 18 | 6-2, 6-4 |
+| 2026-06-03 | 13:00 | single | tedi | loss | -1.00 | H. Squire - P. Martinez | UNDER 21.5 games | 2.00 | 23 | 7-6, 6-4 |
+| 2026-06-03 | 13:30 | single | jakob | loss | -1.00 | K. Deichmann - A. Mazzola | OVER 22.0 games | 2.05 | 19 | 6-7, 0-6 |
+| 2026-06-03 | 14:00 | single | jakob | loss | -1.00 | P. Boscardin Dias - M. Mrva | OVER 22.5 games | 2.15 | 20 | 4-6, 4-6 |
+| 2026-06-03 | 14:30 | single | jakob | push | 0.00 | T. Pieri - S. Costoulas | UNDER 18.5 games | 2.06 | None | None |
+| 2026-06-03 | 18:30 | double | lucija, tedi | loss | -1.00 | A. Martin - B. Ellis | UNDER 21.5 games | 2.17 | 26 | 7-6, 7-6 |

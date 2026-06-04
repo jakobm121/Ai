@@ -1,20 +1,23 @@
 {
-  "generated_at": "2026-06-03T16:11:30.585254+02:00",
+  "generated_at": "2026-06-04T07:23:47.841465+02:00",
   "source_results_file": "data/tennis_totals_results.json",
   "lucija_results_file": "data/lucija/lucija_results.json",
   "source_results_count": 609,
   "lucija_results_count": 34,
   "updated": 1,
-  "still_pending": 2,
+  "still_pending": 1,
   "source_not_found": 0,
-  "source_not_settled": 2,
+  "source_not_settled": 1,
   "items": [
     {
       "pick_id": "cb9d7096afbd2b3c0d5913a6fe3a2dd2",
       "source_pick_id": "6454e12e3613482345dff03410678447",
       "match": "A. Martin - B. Ellis",
-      "status": "source_not_settled",
-      "source_result": "pending",
+      "status": "settled",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 26,
+      "final_score": "7-6, 7-6",
       "match_method": "source_pick_id"
     },
     {
@@ -23,17 +26,6 @@
       "match": "N. Bartunkova - G. Knutson",
       "status": "source_not_settled",
       "source_result": "pending",
-      "match_method": "source_pick_id"
-    },
-    {
-      "pick_id": "e1d91df966f2438b72a4e34f47ca642f",
-      "source_pick_id": "5f4e6d45db7fc5c7be4caa6948080ccc",
-      "match": "S. Baez - T. Boyer",
-      "status": "settled",
-      "result": "win",
-      "profit": 1.03,
-      "total_games": 18,
-      "final_score": "6-2, 6-4",
       "match_method": "source_pick_id"
     }
   ]
