@@ -1,0 +1,55 @@
+name: Value ELO Settle
+
+on:
+  workflow_dispatch:
+
+  workflow_run:
+    workflows:
+      - Tennis Value Settle
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+jobs:
+  value-elo-settle:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run value ELO settle
+        run: |
+          python ratings/value_elo_settle.py
+
+      - name: Commit ELO settled files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/tennis_value_elo_predictions.json
+          git add data/tennis_value_elo_results.json
+          git add ratings/value_elo_predictions_table.md
+          git add ratings/value_elo_results_table.md
+          git add ratings/value_elo_results_report.json
+          git add ratings/value_elo_settle_missing.json
+
+          if git diff --cached --quiet; then
+            echo "No ELO settle changes to commit."
+          else
+            git commit -m "Settle value ELO picks"
+            git push
+          fi
