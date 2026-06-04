@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-04T14:10:56.687271+02:00",
+  "generated_at": "2026-06-04T22:46:26.463981+02:00",
   "source_file": "data/tennis_predictions.json",
   "elo_file": "ratings/tennis_elo.json",
   "total_source_predictions": 15,
-  "confirmed_in_current_run": 4,
-  "added": 2,
-  "updated": 2,
-  "total_saved_predictions": 8,
+  "confirmed_in_current_run": 5,
+  "added": 1,
+  "updated": 4,
+  "total_saved_predictions": 9,
   "picks": [
     {
       "pick_id": "12f64b1316e9c3d2c120c610611f26ae",
@@ -150,6 +150,24 @@
       "value_score": null,
       "elo_confirmed": true,
       "elo_overall_diff": 34.87,
+      "elo_surface_diff": null
+    },
+    {
+      "pick_id": "b10605dd40c153c4030c5c686240c574",
+      "created_at": "2026-06-04T11:55:01.922941+02:00",
+      "date": "2026-06-04",
+      "tour_level": "challenger",
+      "event_type": "Challenger Men Singles",
+      "match": "S. Shimabukuro - E. Ymer",
+      "bet": "E. Ymer",
+      "opponent": "S. Shimabukuro",
+      "odds": 2.12,
+      "stake": 1.25,
+      "model_probability": null,
+      "edge": 0.1283,
+      "value_score": null,
+      "elo_confirmed": true,
+      "elo_overall_diff": 4.54,
       "elo_surface_diff": null
     }
   ]
