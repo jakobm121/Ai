@@ -120,6 +120,18 @@ def compact_match_key(row):
     ])
 
 
+def sort_rows_by_date(rows):
+    return sorted(
+        rows,
+        key=lambda r: (
+            str(r.get("date") or ""),
+            str(r.get("match") or ""),
+            str(r.get("bet") or r.get("player_name") or r.get("pick") or ""),
+            str(r.get("opponent") or r.get("opponent_name") or ""),
+        ),
+    )
+
+
 def build_value_results_maps(value_result_rows):
     by_pick_key = {}
     by_compact_key = {}
@@ -162,7 +174,6 @@ def make_elo_result_row(prediction_row, settled_row, match_method):
         },
     }
 
-    # Če settled row nima česa, vzemi iz ELO predictiona.
     fallback_keys = [
         "date",
         "tour_level",
@@ -206,7 +217,9 @@ def merge_by_pick_id(existing_rows, new_rows):
 
         merged[key] = row
 
-    return list(merged.values()), added, updated
+    merged_rows = sort_rows_by_date(list(merged.values()))
+
+    return merged_rows, added, updated
 
 
 def calc_stats(rows):
@@ -334,6 +347,10 @@ def settle_elo_predictions():
         settled_now,
     )
 
+    remaining_predictions = sort_rows_by_date(remaining_predictions)
+    settled_now = sort_rows_by_date(settled_now)
+    merged_results = sort_rows_by_date(merged_results)
+
     predictions_output = {
         "generated_at": now_iso(),
         "source_file": (
@@ -379,6 +396,8 @@ def settle_elo_predictions():
 
 
 def build_predictions_table(predictions_rows):
+    predictions_rows = sort_rows_by_date(predictions_rows)
+
     lines = []
 
     lines.append("# Value + ELO predictions")
@@ -410,6 +429,7 @@ def build_predictions_table(predictions_rows):
 
 
 def build_results_table(result_rows):
+    result_rows = sort_rows_by_date(result_rows)
     stats = calc_stats(result_rows)
 
     lines = []
@@ -449,7 +469,7 @@ def build_results_table(result_rows):
 
 
 def build_report(info):
-    rows = info["result_rows"]
+    rows = sort_rows_by_date(info["result_rows"])
 
     return {
         "generated_at": now_iso(),
