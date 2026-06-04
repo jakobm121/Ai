@@ -1,7 +1,11 @@
 {
-  "generated_at": "2026-06-04T22:46:48.218567+02:00",
-  "source_file": "data/tennis_results.json",
+  "generated_at": "2026-06-04T23:08:32.033313+02:00",
+  "source_predictions_file": "data/tennis_value_elo_predictions.json",
+  "source_results_file": "data/tennis_results.json",
   "elo_file": "ratings/tennis_elo.json",
+  "settled_in_current_run": 9,
+  "added": 0,
+  "updated": 9,
   "confirmed_settled_results": 192,
   "results": [
     {
@@ -24574,11 +24578,19 @@
         "agrees_with_pick": true,
         "overall_elo_diff": 4.48,
         "surface_elo_diff": null,
-        "player_matched_name": "Ayano Shimizu",
-        "opponent_matched_name": "Dane Sweeny",
-        "player_match_method": "compact",
-        "opponent_match_method": "compact"
-      }
+        "player_matched_name": null,
+        "opponent_matched_name": null,
+        "player_match_method": null,
+        "opponent_match_method": null
+      },
+      "elo_settle": {
+        "settled_at": "2026-06-04T23:08:32.033230+02:00",
+        "settle_match_method": "pick_key",
+        "source_predictions_file": "data/tennis_value_elo_predictions.json",
+        "source_results_file": "data/tennis_results.json"
+      },
+      "opponent": "D. Sweeny",
+      "value_score": null
     },
     {
       "pick_id": "12f64b1316e9c3d2c120c610611f26ae",
@@ -24726,11 +24738,19 @@
         "agrees_with_pick": true,
         "overall_elo_diff": 81.51,
         "surface_elo_diff": null,
-        "player_matched_name": "Sho Shimabukuro",
-        "opponent_matched_name": "Shintaro Mochizuki",
-        "player_match_method": "compact",
-        "opponent_match_method": "compact"
-      }
+        "player_matched_name": null,
+        "opponent_matched_name": null,
+        "player_match_method": null,
+        "opponent_match_method": null
+      },
+      "elo_settle": {
+        "settled_at": "2026-06-04T23:08:32.033195+02:00",
+        "settle_match_method": "pick_key",
+        "source_predictions_file": "data/tennis_value_elo_predictions.json",
+        "source_results_file": "data/tennis_results.json"
+      },
+      "opponent": "S. Mochizuki",
+      "value_score": null
     },
     {
       "pick_id": "504a675b5c14bfdfcee17a0ebb2fc09e",
@@ -24878,11 +24898,19 @@
         "agrees_with_pick": true,
         "overall_elo_diff": 39.11,
         "surface_elo_diff": null,
-        "player_matched_name": "Ye Xin Ma",
-        "opponent_matched_name": "Christopher Oconnell",
-        "player_match_method": "compact",
-        "opponent_match_method": "compact"
-      }
+        "player_matched_name": null,
+        "opponent_matched_name": null,
+        "player_match_method": null,
+        "opponent_match_method": null
+      },
+      "elo_settle": {
+        "settled_at": "2026-06-04T23:08:32.033237+02:00",
+        "settle_match_method": "pick_key",
+        "source_predictions_file": "data/tennis_value_elo_predictions.json",
+        "source_results_file": "data/tennis_results.json"
+      },
+      "opponent": "C. O'Connell",
+      "value_score": null
     },
     {
       "pick_id": "3eaf51ec0e64b3a422a9910a66527ac9",
@@ -25182,11 +25210,19 @@
         "agrees_with_pick": true,
         "overall_elo_diff": 71.42,
         "surface_elo_diff": null,
-        "player_matched_name": "Henri Squire",
-        "opponent_matched_name": "Pedro Martinez",
-        "player_match_method": "compact",
-        "opponent_match_method": "compact"
-      }
+        "player_matched_name": null,
+        "opponent_matched_name": null,
+        "player_match_method": null,
+        "opponent_match_method": null
+      },
+      "elo_settle": {
+        "settled_at": "2026-06-04T23:08:32.033222+02:00",
+        "settle_match_method": "pick_key",
+        "source_predictions_file": "data/tennis_value_elo_predictions.json",
+        "source_results_file": "data/tennis_results.json"
+      },
+      "opponent": "P. Martinez",
+      "value_score": null
     },
     {
       "pick_id": "5b12a51c0a58c9ed8d9228465f877609",
@@ -28523,11 +28559,19 @@
         "agrees_with_pick": true,
         "overall_elo_diff": 60.16,
         "surface_elo_diff": null,
-        "player_matched_name": "Lea Boskovic",
-        "opponent_matched_name": "Robin Montgomery",
-        "player_match_method": "compact",
-        "opponent_match_method": "compact"
-      }
+        "player_matched_name": null,
+        "opponent_matched_name": null,
+        "player_match_method": null,
+        "opponent_match_method": null
+      },
+      "elo_settle": {
+        "settled_at": "2026-06-04T23:08:32.033241+02:00",
+        "settle_match_method": "pick_key",
+        "source_predictions_file": "data/tennis_value_elo_predictions.json",
+        "source_results_file": "data/tennis_results.json"
+      },
+      "opponent": "R. Montgomery",
+      "value_score": null
     },
     {
       "pick_id": "b10605dd40c153c4030c5c686240c574",
@@ -28675,11 +28719,19 @@
         "agrees_with_pick": true,
         "overall_elo_diff": 4.54,
         "surface_elo_diff": null,
-        "player_matched_name": "Ye Xin Ma",
-        "opponent_matched_name": "Sho Shimabukuro",
-        "player_match_method": "compact",
-        "opponent_match_method": "compact"
-      }
+        "player_matched_name": null,
+        "opponent_matched_name": null,
+        "player_match_method": null,
+        "opponent_match_method": null
+      },
+      "elo_settle": {
+        "settled_at": "2026-06-04T23:08:32.033265+02:00",
+        "settle_match_method": "pick_key",
+        "source_predictions_file": "data/tennis_value_elo_predictions.json",
+        "source_results_file": "data/tennis_results.json"
+      },
+      "opponent": "S. Shimabukuro",
+      "value_score": null
     },
     {
       "pick_id": "8da0f81f4414538b7a50aeca41533a7d",
@@ -28827,11 +28879,19 @@
         "agrees_with_pick": true,
         "overall_elo_diff": 34.87,
         "surface_elo_diff": null,
-        "player_matched_name": "Fitriadi M Rifqi",
-        "opponent_matched_name": "Max Hans Rehberg",
-        "player_match_method": "compact",
-        "opponent_match_method": "compact"
-      }
+        "player_matched_name": null,
+        "opponent_matched_name": null,
+        "player_match_method": null,
+        "opponent_match_method": null
+      },
+      "elo_settle": {
+        "settled_at": "2026-06-04T23:08:32.033260+02:00",
+        "settle_match_method": "pick_key",
+        "source_predictions_file": "data/tennis_value_elo_predictions.json",
+        "source_results_file": "data/tennis_results.json"
+      },
+      "opponent": "M. H. Rehberg",
+      "value_score": null
     },
     {
       "pick_id": "9b75ba8fe5b84e3f7653490a57947891",
@@ -28979,11 +29039,19 @@
         "agrees_with_pick": true,
         "overall_elo_diff": 79.88,
         "surface_elo_diff": null,
-        "player_matched_name": "Andrea Lazaro Garcia",
-        "opponent_matched_name": "Simona Waltert",
-        "player_match_method": "compact",
-        "opponent_match_method": "compact"
-      }
+        "player_matched_name": null,
+        "opponent_matched_name": null,
+        "player_match_method": null,
+        "opponent_match_method": null
+      },
+      "elo_settle": {
+        "settled_at": "2026-06-04T23:08:32.033247+02:00",
+        "settle_match_method": "pick_key",
+        "source_predictions_file": "data/tennis_value_elo_predictions.json",
+        "source_results_file": "data/tennis_results.json"
+      },
+      "opponent": "S. Waltert",
+      "value_score": null
     },
     {
       "pick_id": "894bf73f2d99b25ac6fbcaa5c2ebd620",
@@ -29131,11 +29199,19 @@
         "agrees_with_pick": true,
         "overall_elo_diff": 82.46,
         "surface_elo_diff": null,
-        "player_matched_name": "Ashlyn Krueger",
-        "opponent_matched_name": "J J Wolf",
-        "player_match_method": "compact",
-        "opponent_match_method": "compact"
-      }
+        "player_matched_name": null,
+        "opponent_matched_name": null,
+        "player_match_method": null,
+        "opponent_match_method": null
+      },
+      "elo_settle": {
+        "settled_at": "2026-06-04T23:08:32.033252+02:00",
+        "settle_match_method": "pick_key",
+        "source_predictions_file": "data/tennis_value_elo_predictions.json",
+        "source_results_file": "data/tennis_results.json"
+      },
+      "opponent": "J. Tjen",
+      "value_score": null
     }
   ]
 }
