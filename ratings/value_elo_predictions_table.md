@@ -1,6 +1,6 @@
 # Value + ELO predictions
 
-Generated: 2026-06-05T08:42:25.294825+02:00
+Generated: 2026-06-05T09:14:46.678885+02:00
 
 ## Open / saved ELO-confirmed value picks
 
