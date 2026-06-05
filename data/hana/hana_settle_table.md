@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-05T08:01:37.795956+02:00
+Generated: 2026-06-05T08:11:12.233372+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 129 | 129 | 62 | 59 | 8 | 51.24% | 6.83u | 5.64% |
+| 145 | 145 | 68 | 67 | 10 | 50.37% | 5.3u | 3.93% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 15 | 15 | 8 | 7 | 0 | 53.33% | 1.4u | 9.33% |
-| single | 111 | 111 | 52 | 51 | 8 | 50.49% | 4.2u | 4.08% |
-| triple | 3 | 3 | 2 | 1 | 0 | 66.67% | 1.23u | 41.0% |
+| double | 18 | 18 | 9 | 9 | 0 | 50.0% | 0.52u | 2.89% |
+| single | 123 | 123 | 57 | 56 | 10 | 50.44% | 4.55u | 4.03% |
+| triple | 4 | 4 | 2 | 2 | 0 | 50.0% | 0.23u | 5.75% |
 
 ## Results
 
@@ -149,3 +149,19 @@ Generated: 2026-06-05T08:01:37.795956+02:00
 | 2026-06-03 | 14:00 | single | jakob | loss | -1.00 | P. Boscardin Dias - M. Mrva | OVER 22.5 games | 2.15 | 20 | 4-6, 4-6 |
 | 2026-06-03 | 14:30 | single | jakob | push | 0.00 | T. Pieri - S. Costoulas | UNDER 18.5 games | 2.06 | None | None |
 | 2026-06-03 | 18:30 | double | lucija, tedi | loss | -1.00 | A. Martin - B. Ellis | UNDER 21.5 games | 2.17 | 26 | 7-6, 7-6 |
+| 2026-06-04 | 10:00 | single | tedi | win | 1.20 | A. Beckley - T. Duran | UNDER 20.5 games | 2.20 | 19 | 3-6, 4-6 |
+| 2026-06-04 | 10:00 | single | jakob | loss | -1.00 | R. Guna - G. Ghetu | UNDER 19.5 games | 2.11 | 35 | 7-6, 6-7, 6-3 |
+| 2026-06-04 | 10:00 | single | lucija | loss | -1.00 | R. Tiukaev - I. Iutkin | OVER 20.5 games | 1.85 | 17 | 6-1, 6-4 |
+| 2026-06-04 | 11:00 | single | jakob | loss | -1.00 | V. Sachko - V. Kopriva | UNDER 20.5 games | 2.00 | 30 | 6-1, 4-6, 7-6 |
+| 2026-06-04 | 11:30 | double | jakob, tedi | win | 1.12 | R. Strombachs - P. Henning | UNDER 20.5 games | 2.12 | 17 | 2-6, 3-6 |
+| 2026-06-04 | 12:00 | single | tedi | win | 1.04 | A. Krueger - J. Tjen | UNDER 21.5 games | 2.04 | 16 | 6-1, 6-3 |
+| 2026-06-04 | 12:00 | double | lucija, tedi | loss | -1.00 | D. Dedura - J. Reis Da Silva | UNDER 21.5 games | 2.05 | 26 | 7-6, 7-6 |
+| 2026-06-04 | 12:30 | single | jakob | push | 0.00 | R. Sramkova - T. Wuerth | UNDER 19.5 games | 2.10 | None | None |
+| 2026-06-04 | 13:00 | single | jakob | loss | -1.00 | A. Eala - A. Charaeva | UNDER 19.5 games | 2.16 | 20 | 6-2, 7-5 |
+| 2026-06-04 | 13:00 | single | jakob | loss | -1.00 | C. Monnet - T. Prozorova | UNDER 19.5 games | 2.16 | 26 | 1-6, 6-4, 6-3 |
+| 2026-06-04 | 13:00 | single | tedi | push | 0.00 | O. Virtanen - A. Vukic | UNDER 22.0 games | 2.20 | None | None |
+| 2026-06-04 | 13:30 | triple | jakob, lucija, tedi | loss | -1.00 | M. Trungelliti - Y. H. Hsu | UNDER 19.5 games | 2.10 | 23 | 3-6, 6-1, 6-1 |
+| 2026-06-04 | 14:00 | double | lucija, tedi | loss | -1.00 | R. Montgomery - L. Boskovic | UNDER 20.5 games | 2.00 | 28 | 6-3, 5-7, 1-6 |
+| 2026-06-04 | 15:00 | single | tedi | win | 1.01 | M. Kostyuk - M. Andreeva | UNDER 21.5 games | 2.01 | 16 | 1-6, 3-6 |
+| 2026-06-04 | 15:00 | single | lucija | win | 0.90 | N. Bartunkova - G. Knutson | OVER 20.5 games | 1.90 | 23 | 6-4, 7-6 |
+| 2026-06-04 | 15:30 | single | jakob | win | 1.20 | H. Barton - N. Gombos | UNDER 20.5 games | 2.20 | 19 | 6-3, 6-4 |

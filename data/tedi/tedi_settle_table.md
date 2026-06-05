@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-05T08:01:37.665516+02:00
+Generated: 2026-06-05T08:11:12.103062+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 26 | 18 | 8 | 8 | 9 | 1 | 47.06% | -0.29u | -1.61% |
-| tedi_v2_test | 6 | 5 | 1 | 2 | 3 | 0 | 40.0% | -0.82u | -16.4% |
+| tedi_main_150 | 26 | 26 | 0 | 12 | 12 | 2 | 50.0% | 1.08u | 4.15% |
+| tedi_v2_test | 6 | 6 | 0 | 2 | 4 | 0 | 33.33% | -1.82u | -30.33% |
 
 ## Results
 
@@ -36,12 +36,12 @@ Generated: 2026-06-05T08:01:37.665516+02:00
 | 2026-06-03 | 12:30 | tedi_main_150 | win | 1.03 | S. Baez - T. Boyer | UNDER 20.5 games | 2.03 | 18 | 6-2, 6-4 |
 | 2026-06-03 | 13:00 | tedi_main_150 | loss | -1.00 | H. Squire - P. Martinez | UNDER 21.5 games | 2.00 | 23 | 7-6, 6-4 |
 | 2026-06-03 | 18:30 | tedi_main_150 | loss | -1.00 | A. Martin - B. Ellis | UNDER 21.5 games | 2.17 | 26 | 7-6, 7-6 |
-| 2026-06-04 | 10:00 | tedi_main_150 | pending | 0.00 | A. Beckley - T. Duran | UNDER 20.5 games | 2.20 |  |  |
-| 2026-06-04 | 11:30 | tedi_main_150 | pending | 0.00 | R. Strombachs - P. Henning | UNDER 20.5 games | 2.12 |  |  |
-| 2026-06-04 | 12:00 | tedi_main_150 | pending | 0.00 | A. Krueger - J. Tjen | UNDER 21.5 games | 2.04 |  |  |
-| 2026-06-04 | 12:00 | tedi_main_150 | pending | 0.00 | D. Dedura - J. Reis Da Silva | UNDER 21.5 games | 2.05 |  |  |
-| 2026-06-04 | 13:00 | tedi_main_150 | pending | 0.00 | O. Virtanen - A. Vukic | UNDER 22.0 games | 2.20 |  |  |
-| 2026-06-04 | 13:30 | tedi_main_150 | pending | 0.00 | M. Trungelliti - Y. H. Hsu | UNDER 19.5 games | 2.10 |  |  |
-| 2026-06-04 | 14:00 | tedi_main_150 | pending | 0.00 | R. Montgomery - L. Boskovic | UNDER 20.5 games | 2.00 |  |  |
-| 2026-06-04 | 14:00 | tedi_v2_test | pending | 0.00 | R. Montgomery - L. Boskovic | UNDER 20.5 games | 2.00 |  |  |
-| 2026-06-04 | 15:00 | tedi_main_150 | pending | 0.00 | M. Kostyuk - M. Andreeva | UNDER 21.5 games | 2.01 |  |  |
+| 2026-06-04 | 10:00 | tedi_main_150 | win | 1.20 | A. Beckley - T. Duran | UNDER 20.5 games | 2.20 | 19 | 3-6, 4-6 |
+| 2026-06-04 | 11:30 | tedi_main_150 | win | 1.12 | R. Strombachs - P. Henning | UNDER 20.5 games | 2.12 | 17 | 2-6, 3-6 |
+| 2026-06-04 | 12:00 | tedi_main_150 | win | 1.04 | A. Krueger - J. Tjen | UNDER 21.5 games | 2.04 | 16 | 6-1, 6-3 |
+| 2026-06-04 | 12:00 | tedi_main_150 | loss | -1.00 | D. Dedura - J. Reis Da Silva | UNDER 21.5 games | 2.05 | 26 | 7-6, 7-6 |
+| 2026-06-04 | 13:00 | tedi_main_150 | push | 0.00 | O. Virtanen - A. Vukic | UNDER 22.0 games | 2.20 | None | None |
+| 2026-06-04 | 13:30 | tedi_main_150 | loss | -1.00 | M. Trungelliti - Y. H. Hsu | UNDER 19.5 games | 2.10 | 23 | 3-6, 6-1, 6-1 |
+| 2026-06-04 | 14:00 | tedi_main_150 | loss | -1.00 | R. Montgomery - L. Boskovic | UNDER 20.5 games | 2.00 | 28 | 6-3, 5-7, 1-6 |
+| 2026-06-04 | 14:00 | tedi_v2_test | loss | -1.00 | R. Montgomery - L. Boskovic | UNDER 20.5 games | 2.00 | 28 | 6-3, 5-7, 1-6 |
+| 2026-06-04 | 15:00 | tedi_main_150 | win | 1.01 | M. Kostyuk - M. Andreeva | UNDER 21.5 games | 2.01 | 16 | 1-6, 3-6 |

@@ -1,48 +1,48 @@
 {
-  "generated_at": "2026-06-05T08:01:37.665516+02:00",
+  "generated_at": "2026-06-05T08:11:12.103062+02:00",
   "tedi_results_file": "data/tedi/tedi_results.json",
   "source_results_file": "data/tennis_totals_results.json",
   "tedi_results_loaded": 32,
   "source_results_loaded": 628,
-  "settled_now": 0,
+  "settled_now": 9,
   "already_settled": 23,
-  "still_pending": 9,
+  "still_pending": 0,
   "overall": {
     "picks": 32,
-    "settled": 23,
-    "pending": 9,
-    "wins": 10,
-    "losses": 12,
-    "pushes": 1,
-    "stake_sum": 23.0,
-    "profit": -1.11,
-    "roi": -4.83,
-    "winrate": 45.45
+    "settled": 32,
+    "pending": 0,
+    "wins": 14,
+    "losses": 16,
+    "pushes": 2,
+    "stake_sum": 32.0,
+    "profit": -0.74,
+    "roi": -2.31,
+    "winrate": 46.67
   },
   "by_strategy": {
     "tedi_main_150": {
       "picks": 26,
-      "settled": 18,
-      "pending": 8,
-      "wins": 8,
-      "losses": 9,
-      "pushes": 1,
-      "stake_sum": 18.0,
-      "profit": -0.29,
-      "roi": -1.61,
-      "winrate": 47.06
+      "settled": 26,
+      "pending": 0,
+      "wins": 12,
+      "losses": 12,
+      "pushes": 2,
+      "stake_sum": 26.0,
+      "profit": 1.08,
+      "roi": 4.15,
+      "winrate": 50.0
     },
     "tedi_v2_test": {
       "picks": 6,
-      "settled": 5,
-      "pending": 1,
+      "settled": 6,
+      "pending": 0,
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "pushes": 0,
-      "stake_sum": 5.0,
-      "profit": -0.82,
-      "roi": -16.4,
-      "winrate": 40.0
+      "stake_sum": 6.0,
+      "profit": -1.82,
+      "roi": -30.33,
+      "winrate": 33.33
     }
   }
 }

@@ -1,87 +1,105 @@
 {
-  "generated_at": "2026-06-05T08:01:37.665516+02:00",
-  "settled_now": [],
-  "missing_source": [
+  "generated_at": "2026-06-05T08:11:12.103062+02:00",
+  "settled_now": [
     {
-      "tedi_pick_id": "5a1a64c9f8380825932a5461073db9ac",
-      "source_pick_id": "80faea99f8f0023bfa542e5af51fbf11",
-      "strategy": "tedi_main_150",
-      "match": "R. Strombachs - P. Henning",
-      "bet": "UNDER 20.5 games",
-      "key": "12133246|over/under by games in match|under|20.5",
-      "reason": "no_settled_source_match"
-    },
-    {
-      "tedi_pick_id": "ff7ed3661cfa0c5e5dfe60d37084c87f",
-      "source_pick_id": "bffbde032e06e842b7cd0743492e4bb7",
-      "strategy": "tedi_main_150",
-      "match": "D. Dedura - J. Reis Da Silva",
-      "bet": "UNDER 21.5 games",
-      "key": "12133343|over/under by games in match|under|21.5",
-      "reason": "no_settled_source_match"
-    },
-    {
-      "tedi_pick_id": "ba95a5b437b0862eba47a398d78f0c86",
-      "source_pick_id": "5abeae46a0590e6d749f903f0d754015",
-      "strategy": "tedi_main_150",
-      "match": "R. Montgomery - L. Boskovic",
-      "bet": "UNDER 20.5 games",
-      "key": "12133144|over/under by games in match|under|20.5",
-      "reason": "no_settled_source_match"
-    },
-    {
-      "tedi_pick_id": "0ca7c8ac5724fdeddaefb099ad46a4ff",
-      "source_pick_id": "4333a627855d006b4847f0e9540c35a3",
-      "strategy": "tedi_main_150",
-      "match": "M. Trungelliti - Y. H. Hsu",
-      "bet": "UNDER 19.5 games",
-      "key": "12133103|over/under by games in match|under|19.5",
-      "reason": "no_settled_source_match"
-    },
-    {
-      "tedi_pick_id": "092cf39284c51a2d6fe345a9283f37fd",
+      "pick_id": "092cf39284c51a2d6fe345a9283f37fd",
       "source_pick_id": "a74671150372d3fb837f0a39efea4827",
       "strategy": "tedi_main_150",
       "match": "A. Beckley - T. Duran",
       "bet": "UNDER 20.5 games",
-      "key": "12133342|over/under by games in match|under|20.5",
-      "reason": "no_settled_source_match"
+      "result": "win",
+      "profit": 1.2,
+      "total_games": 19,
+      "final_score": "3-6, 4-6"
     },
     {
-      "tedi_pick_id": "714eaa0af6e61142c0cc2d55a4adfe01",
-      "source_pick_id": "c7cb6114aa90ee49cecbce3664aae9af",
+      "pick_id": "5a1a64c9f8380825932a5461073db9ac",
+      "source_pick_id": "80faea99f8f0023bfa542e5af51fbf11",
       "strategy": "tedi_main_150",
-      "match": "M. Kostyuk - M. Andreeva",
-      "bet": "UNDER 21.5 games",
-      "key": "12133086|over/under by games in match|under|21.5",
-      "reason": "no_settled_source_match"
+      "match": "R. Strombachs - P. Henning",
+      "bet": "UNDER 20.5 games",
+      "result": "win",
+      "profit": 1.12,
+      "total_games": 17,
+      "final_score": "2-6, 3-6"
     },
     {
-      "tedi_pick_id": "1a6b07d4e967ef8fe9ee77bdeaf27787",
+      "pick_id": "1a6b07d4e967ef8fe9ee77bdeaf27787",
       "source_pick_id": "75e1f298434df7ec8396108cbd2b2893",
       "strategy": "tedi_main_150",
       "match": "A. Krueger - J. Tjen",
       "bet": "UNDER 21.5 games",
-      "key": "12133590|over/under by games in match|under|21.5",
-      "reason": "no_settled_source_match"
+      "result": "win",
+      "profit": 1.04,
+      "total_games": 16,
+      "final_score": "6-1, 6-3"
     },
     {
-      "tedi_pick_id": "63c15e2b36df1c42c0bcc553bc9a9620",
+      "pick_id": "ff7ed3661cfa0c5e5dfe60d37084c87f",
+      "source_pick_id": "bffbde032e06e842b7cd0743492e4bb7",
+      "strategy": "tedi_main_150",
+      "match": "D. Dedura - J. Reis Da Silva",
+      "bet": "UNDER 21.5 games",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 26,
+      "final_score": "7-6, 7-6"
+    },
+    {
+      "pick_id": "63c15e2b36df1c42c0bcc553bc9a9620",
       "source_pick_id": "a5265c8c0f3dc00a4ab18f7b1be66db6",
       "strategy": "tedi_main_150",
       "match": "O. Virtanen - A. Vukic",
       "bet": "UNDER 22.0 games",
-      "key": "12133591|over/under by games in match|under|22.0",
-      "reason": "no_settled_source_match"
+      "result": "push",
+      "profit": 0.0,
+      "total_games": null,
+      "final_score": null
     },
     {
-      "tedi_pick_id": "4e7ac92ddc4092d3b7943c9aa18b758b",
+      "pick_id": "0ca7c8ac5724fdeddaefb099ad46a4ff",
+      "source_pick_id": "4333a627855d006b4847f0e9540c35a3",
+      "strategy": "tedi_main_150",
+      "match": "M. Trungelliti - Y. H. Hsu",
+      "bet": "UNDER 19.5 games",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 23,
+      "final_score": "3-6, 6-1, 6-1"
+    },
+    {
+      "pick_id": "ba95a5b437b0862eba47a398d78f0c86",
+      "source_pick_id": "5abeae46a0590e6d749f903f0d754015",
+      "strategy": "tedi_main_150",
+      "match": "R. Montgomery - L. Boskovic",
+      "bet": "UNDER 20.5 games",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 28,
+      "final_score": "6-3, 5-7, 1-6"
+    },
+    {
+      "pick_id": "4e7ac92ddc4092d3b7943c9aa18b758b",
       "source_pick_id": "5abeae46a0590e6d749f903f0d754015",
       "strategy": "tedi_v2_test",
       "match": "R. Montgomery - L. Boskovic",
       "bet": "UNDER 20.5 games",
-      "key": "12133144|over/under by games in match|under|20.5",
-      "reason": "no_settled_source_match"
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 28,
+      "final_score": "6-3, 5-7, 1-6"
+    },
+    {
+      "pick_id": "714eaa0af6e61142c0cc2d55a4adfe01",
+      "source_pick_id": "c7cb6114aa90ee49cecbce3664aae9af",
+      "strategy": "tedi_main_150",
+      "match": "M. Kostyuk - M. Andreeva",
+      "bet": "UNDER 21.5 games",
+      "result": "win",
+      "profit": 1.01,
+      "total_games": 16,
+      "final_score": "1-6, 3-6"
     }
-  ]
+  ],
+  "missing_source": []
 }

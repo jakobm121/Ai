@@ -1,38 +1,38 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-05T08:01:37.570870+02:00`
+Generated: `2026-06-05T08:11:11.999012+02:00`
 
-Pending picks: **8**
+Pending picks: **0**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 112 | 55 | 51 | 1 | 5 | 51.89% | +5.05u | 6.36% |
+| 120 | 57 | 56 | 1 | 6 | 50.44% | +3.04u | 3.59% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 0 | 0 | 0 | 0 | 0 | 0.00% | 0.00u | 0.00% |
+| 8 | 2 | 5 | 0 | 1 | 28.57% | -2.01u | -38.29% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 94 | 45 | 45 | 1 | 3 | 50.00% | +1.96u | 2.90% |
+| 102 | 47 | 50 | 1 | 4 | 48.45% | -0.05u | -0.07% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 71 | 33 | 34 | 1 | 3 | 49.25% | +0.74u | 1.48% |
+| 76 | 35 | 37 | 1 | 3 | 48.61% | +0.23u | 0.43% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 58 | 30 | 27 | 0 | 1 | 52.63% | +2.55u | 5.97% |
+| 61 | 30 | 29 | 0 | 2 | 50.85% | +1.05u | 2.38% |
 
 ### Over
 
@@ -44,12 +44,20 @@ Pending picks: **8**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 96 | 47 | 43 | 1 | 5 | 52.22% | +5.42u | 8.03% |
+| 104 | 49 | 48 | 1 | 6 | 50.52% | +3.41u | 4.69% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-04 | 15:30 | 4 | H. Barton - N. Gombos | UNDER 20.5 games | 2.20 | ✅ win | 75.88 | 19 | 6-3, 6-4 | +0.90u |
+| 2026-06-04 | 13:30 | 1 | M. Trungelliti - Y. H. Hsu | UNDER 19.5 games | 2.10 | ❌ loss | 77.60 | 23 | 3-6, 6-1, 6-1 | -0.75u |
+| 2026-06-04 | 13:00 | 7 | C. Monnet - T. Prozorova | UNDER 19.5 games | 2.16 | ❌ loss | 71.54 | 26 | 1-6, 6-4, 6-3 | -0.75u |
+| 2026-06-04 | 13:00 | 3 | A. Eala - A. Charaeva | UNDER 19.5 games | 2.16 | ❌ loss | 76.37 | 20 | 6-2, 7-5 | -0.75u |
+| 2026-06-04 | 12:30 | 8 | R. Sramkova - T. Wuerth | UNDER 19.5 games | 2.10 | ⚪ void | 70.29 |  |  | 0.00u |
+| 2026-06-04 | 11:30 | 2 | R. Strombachs - P. Henning | UNDER 20.5 games | 2.12 | ✅ win | 77.00 | 17 | 2-6, 3-6 | +0.84u |
+| 2026-06-04 | 11:00 | 6 | V. Sachko - V. Kopriva | UNDER 20.5 games | 2.00 | ❌ loss | 71.89 | 30 | 6-1, 4-6, 7-6 | -0.75u |
+| 2026-06-04 | 10:00 | 5 | R. Guna - G. Ghetu | UNDER 19.5 games | 2.11 | ❌ loss | 72.28 | 35 | 7-6, 6-7, 6-3 | -0.75u |
 | 2026-06-03 | 14:30 | 4 | T. Pieri - S. Costoulas | UNDER 18.5 games | 2.06 | ⚪ void | 75.96 |  |  | 0.00u |
 | 2026-06-03 | 14:00 | 1 | P. Boscardin Dias - M. Mrva | OVER 22.5 games | 2.15 | ❌ loss | 80.57 | 20 | 4-6, 4-6 | -0.75u |
 | 2026-06-03 | 13:30 | 7 | K. Deichmann - A. Mazzola | OVER 22.0 games | 2.05 | ❌ loss | 72.76 | 19 | 6-7, 0-6 | -0.75u |
@@ -122,12 +130,4 @@ Pending picks: **8**
 | 2026-05-27 | 11:00 | 1 | T. Korpatsch - Xin. Wang | OVER 21.5 games | 1.96 | ✅ win | 83.50 | 25 | 6-2, 2-6, 6-3 | +0.72u |
 | 2026-05-27 | 11:00 | 9 | C. McNally - B. Bencic | UNDER 20.0 games | 2.09 | ✅ win | 71.33 | 16 | 4-6, 0-6 | +0.82u |
 | 2026-05-27 | 10:00 | 8 | H. Mayot - S. Pankin | UNDER 20.5 games | 2.10 | ❌ loss | 71.37 | 31 | 6-3, 6-7, 3-6 | -0.75u |
-| 2026-05-26 | 20:00 | 3 | A. Mayo - E. Butvilas | UNDER 20.5 games | 2.08 | ❌ loss | 71.53 | 26 | 7-6, 7-6 | -0.75u |
-| 2026-05-26 | 20:00 | 13 | A. Mayo - E. Butvilas | UNDER 20.5 games | 2.08 | ❌ loss | 68.84 | 26 | 7-6, 7-6 | -0.75u |
-| 2026-05-26 | 18:30 | 19 | P. Sekulic - M. Krueger | UNDER 21.5 games | 2.18 | ⚪ void | 68.08 |  |  | 0.00u |
-| 2026-05-26 | 18:30 | 38 | D. Milavsky - Wu Tung-Lin | UNDER 21.5 games | 2.15 | ⚪ void | 60.18 |  |  | 0.00u |
-| 2026-05-26 | 17:00 | 16 | R. Hohmann - M. Cassone | UNDER 19.5 games | 2.00 | ❌ loss | 67.04 | 26 | 6-4, 1-6, 6-3 | -0.75u |
-| 2026-05-26 | 16:20 | 1 | H. Vandewinkel - M. Keys | UNDER 18.5 games | 2.14 | ✅ win | 79.21 | 15 | 3-6, 0-6 | +0.85u |
-| 2026-05-26 | 16:00 | 4 | S. Vujic - S. Napolitano | UNDER 19.5 games | 2.03 | ✅ win | 73.63 | 18 | 2-6, 4-6 | +0.77u |
-| 2026-05-26 | 16:00 | 2 | P. O. Fellin - P. Martin Tiffon | UNDER 19.5 games | 2.00 | ❌ loss | 73.93 | 20 | 4-6, 4-6 | -0.75u |
 
