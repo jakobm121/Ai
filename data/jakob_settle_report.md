@@ -1,8 +1,8 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-04T07:23:47.677818+02:00`
+Generated: `2026-06-05T08:01:37.570870+02:00`
 
-Pending picks: **0**
+Pending picks: **8**
 
 ### All settled
 
@@ -14,7 +14,7 @@ Pending picks: **0**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 3 | 0 | 2 | 0 | 1 | 0.00% | -1.50u | -100.00% |
+| 0 | 0 | 0 | 0 | 0 | 0.00% | 0.00u | 0.00% |
 
 ### Score ≥ 70
 

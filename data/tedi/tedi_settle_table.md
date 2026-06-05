@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-04T07:23:47.776474+02:00
+Generated: 2026-06-05T08:01:37.665516+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 18 | 18 | 0 | 8 | 9 | 1 | 47.06% | -0.29u | -1.61% |
-| tedi_v2_test | 5 | 5 | 0 | 2 | 3 | 0 | 40.0% | -0.82u | -16.4% |
+| tedi_main_150 | 26 | 18 | 8 | 8 | 9 | 1 | 47.06% | -0.29u | -1.61% |
+| tedi_v2_test | 6 | 5 | 1 | 2 | 3 | 0 | 40.0% | -0.82u | -16.4% |
 
 ## Results
 
@@ -36,3 +36,12 @@ Generated: 2026-06-04T07:23:47.776474+02:00
 | 2026-06-03 | 12:30 | tedi_main_150 | win | 1.03 | S. Baez - T. Boyer | UNDER 20.5 games | 2.03 | 18 | 6-2, 6-4 |
 | 2026-06-03 | 13:00 | tedi_main_150 | loss | -1.00 | H. Squire - P. Martinez | UNDER 21.5 games | 2.00 | 23 | 7-6, 6-4 |
 | 2026-06-03 | 18:30 | tedi_main_150 | loss | -1.00 | A. Martin - B. Ellis | UNDER 21.5 games | 2.17 | 26 | 7-6, 7-6 |
+| 2026-06-04 | 10:00 | tedi_main_150 | pending | 0.00 | A. Beckley - T. Duran | UNDER 20.5 games | 2.20 |  |  |
+| 2026-06-04 | 11:30 | tedi_main_150 | pending | 0.00 | R. Strombachs - P. Henning | UNDER 20.5 games | 2.12 |  |  |
+| 2026-06-04 | 12:00 | tedi_main_150 | pending | 0.00 | A. Krueger - J. Tjen | UNDER 21.5 games | 2.04 |  |  |
+| 2026-06-04 | 12:00 | tedi_main_150 | pending | 0.00 | D. Dedura - J. Reis Da Silva | UNDER 21.5 games | 2.05 |  |  |
+| 2026-06-04 | 13:00 | tedi_main_150 | pending | 0.00 | O. Virtanen - A. Vukic | UNDER 22.0 games | 2.20 |  |  |
+| 2026-06-04 | 13:30 | tedi_main_150 | pending | 0.00 | M. Trungelliti - Y. H. Hsu | UNDER 19.5 games | 2.10 |  |  |
+| 2026-06-04 | 14:00 | tedi_main_150 | pending | 0.00 | R. Montgomery - L. Boskovic | UNDER 20.5 games | 2.00 |  |  |
+| 2026-06-04 | 14:00 | tedi_v2_test | pending | 0.00 | R. Montgomery - L. Boskovic | UNDER 20.5 games | 2.00 |  |  |
+| 2026-06-04 | 15:00 | tedi_main_150 | pending | 0.00 | M. Kostyuk - M. Andreeva | UNDER 21.5 games | 2.01 |  |  |
