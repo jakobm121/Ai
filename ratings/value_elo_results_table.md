@@ -1,8 +1,8 @@
 # Value + ELO settled results
 
-Generated: 2026-06-05T08:35:36.413166+02:00
+Generated: 2026-06-05T15:19:48.496771+02:00
 
-Overall: **91-96**, WR **48.66%**, Profit **12.017u**, ROI **5.25%**, Avg odds **2.232**
+Overall: **92-98**, WR **48.42%**, Profit **11.017u**, ROI **4.73%**, Avg odds **2.233**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -198,3 +198,6 @@ Overall: **91-96**, WR **48.66%**, Profit **12.017u**, ROI **5.25%**, Avg odds *
 | 2026-06-04 | challenger | R. Montgomery - L. Boskovic | L. Boskovic | 2.64 | 1.25 | win | 2.05 | 60.16 |  |
 | 2026-06-04 | challenger | S. Shimabukuro - E. Ymer | E. Ymer | 2.12 | 1.25 | loss | -1.25 | 4.54 |  |
 | 2026-06-04 | challenger | S. Waltert - A. Lazaro Garcia | A. Lazaro Garcia | 2.5 | 1.25 | win | 1.875 | 79.88 |  |
+| 2026-06-05 | challenger | A. Fery - R. Hijikata | A. Fery | 2.0 | 1.5 | win | 1.5 | 31.13 |  |
+| 2026-06-05 | challenger | H. Mayot - E. Coulibaly | E. Coulibaly | 2.5 | 1.25 | loss | -1.25 | 99.67 |  |
+| 2026-06-05 | itf | M. Drobysheva - L. Petruzelova | M. Drobysheva | 2.33 | 1.25 | loss | -1.25 | 23.19 |  |
