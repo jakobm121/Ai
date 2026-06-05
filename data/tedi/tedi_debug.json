@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05T08:02:57.536496+02:00",
+  "generated_at": "2026-06-05T08:20:29.933748+02:00",
   "source_file": "data/tennis_totals_predictions.json",
   "source_format": "dict_with_picks",
-  "source_picks": 0,
-  "main_picks": 0,
-  "v2_test_picks": 0,
-  "rejected_picks": 0,
+  "source_picks": 20,
+  "main_picks": 11,
+  "v2_test_picks": 3,
+  "rejected_picks": 9,
   "main_rules": {
     "side": "under",
     "line_min": 19.5,
@@ -25,7 +25,654 @@
     "quality_min": 72,
     "strength_gap_max": 30
   },
-  "accepted_main": [],
-  "accepted_v2_test": [],
-  "rejected": []
+  "accepted_main": [
+    {
+      "pick_id": "9021630e10253f50c1dfe794807c69f7",
+      "source_pick_id": "7d32e67d49161b8f69428e579e0df0d9",
+      "match": "A. Moro Canas - H. Squire",
+      "bet": "UNDER 21.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.2,
+        "avg_three_set": 0.2666,
+        "avg_close_set": 0.3166,
+        "avg_total_games": 20.35,
+        "avg_over_21_5_rate": 0.3222,
+        "market_gap": 0.0932,
+        "confidence": 86.9,
+        "quality_score": 88.5,
+        "edge": 0.1155,
+        "strength_gap": 24.46,
+        "h2h_matches": 0,
+        "bookmakers_used": 7,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    },
+    {
+      "pick_id": "cbdb8032135970139d19fa1a32ea1720",
+      "source_pick_id": "23cf14efc30173963e571e1331fed50a",
+      "match": "F. Romano - O. Virtanen",
+      "bet": "UNDER 21.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.14,
+        "avg_three_set": 0.2375,
+        "avg_close_set": 0.5188,
+        "avg_total_games": 21.19,
+        "avg_over_21_5_rate": 0.45,
+        "market_gap": 0.6083,
+        "confidence": 88.9,
+        "quality_score": 86.3,
+        "edge": 0.1027,
+        "strength_gap": 25.62,
+        "h2h_matches": 0,
+        "bookmakers_used": 7,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    },
+    {
+      "pick_id": "eede7e70d3f8bc13bb40eaa3c714f151",
+      "source_pick_id": "a25be67e40be0316d196ed04094ea4d7",
+      "match": "H. Barton - T. Daniel",
+      "bet": "UNDER 21.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.06,
+        "avg_three_set": 0.2,
+        "avg_close_set": 0.4,
+        "avg_total_games": 20.65,
+        "avg_over_21_5_rate": 0.25,
+        "market_gap": 0.3533,
+        "confidence": 89.7,
+        "quality_score": 84.7,
+        "edge": 0.0846,
+        "strength_gap": 9.4,
+        "h2h_matches": 0,
+        "bookmakers_used": 8,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    },
+    {
+      "pick_id": "70015e29412ac1737a270f0170b6782d",
+      "source_pick_id": "6c6a5f8bfd61bf3fb9eafc910213bfd3",
+      "match": "T. Preston - A. Krueger",
+      "bet": "UNDER 20.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.0,
+        "avg_three_set": 0.15,
+        "avg_close_set": 0.35,
+        "avg_total_games": 19.5,
+        "avg_over_21_5_rate": 0.25,
+        "market_gap": 0.4102,
+        "confidence": 91.1,
+        "quality_score": 82.6,
+        "edge": 0.07,
+        "strength_gap": 6.6,
+        "h2h_matches": 0,
+        "bookmakers_used": 8,
+        "tour_level": "challenger",
+        "gender": "women"
+      }
+    },
+    {
+      "pick_id": "74b854debab34c729afcee158439e249",
+      "source_pick_id": "119de86cc1f068ab7615bb522f3069fa",
+      "match": "L. Pigossi - D. Chiesa",
+      "bet": "UNDER 20.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.2,
+        "avg_three_set": 0.2056,
+        "avg_close_set": 0.2824,
+        "avg_total_games": 19.36,
+        "avg_over_21_5_rate": 0.3667,
+        "market_gap": 0.078,
+        "confidence": 80.6,
+        "quality_score": 80.6,
+        "edge": 0.1155,
+        "strength_gap": 15.76,
+        "h2h_matches": 0,
+        "bookmakers_used": 4,
+        "tour_level": "itf",
+        "gender": "women"
+      }
+    },
+    {
+      "pick_id": "eb5e39cba520adcc909e765b86afb1a9",
+      "source_pick_id": "47e07fbcb95f5aa332a02bf55f9d35dc",
+      "match": "M. Lombardini - F. Urgesi",
+      "bet": "UNDER 19.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.1,
+        "avg_three_set": 0.3,
+        "avg_close_set": 0.3,
+        "avg_total_games": 19.95,
+        "avg_over_21_5_rate": 0.25,
+        "market_gap": 0.4258,
+        "confidence": 85.7,
+        "quality_score": 78.9,
+        "edge": 0.0938,
+        "strength_gap": 9.9,
+        "h2h_matches": 0,
+        "bookmakers_used": 3,
+        "tour_level": "itf",
+        "gender": "women"
+      }
+    },
+    {
+      "pick_id": "82fbc679cfeb0650778266afd6ef6d4d",
+      "source_pick_id": "ba9ad209830179b8882922bfcad7b571",
+      "match": "A. Molcan - V. Sachko",
+      "bet": "UNDER 20.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.0,
+        "avg_three_set": 0.2222,
+        "avg_close_set": 0.5278,
+        "avg_total_games": 20.945,
+        "avg_over_21_5_rate": 0.3333,
+        "market_gap": 0.4878,
+        "confidence": 89.3,
+        "quality_score": 77.6,
+        "edge": 0.07,
+        "strength_gap": 23.78,
+        "h2h_matches": 0,
+        "bookmakers_used": 5,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    },
+    {
+      "pick_id": "6aad21d7fca51019fb60b6885e0b9a75",
+      "source_pick_id": "0fa4ba092b25ceee223f99ab33fc81eb",
+      "match": "A. Walton - T. Legout",
+      "bet": "UNDER 19.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.1,
+        "avg_three_set": 0.2381,
+        "avg_close_set": 0.3095,
+        "avg_total_games": 19.69,
+        "avg_over_21_5_rate": 0.3095,
+        "market_gap": 0.7002,
+        "confidence": 86.5,
+        "quality_score": 77.2,
+        "edge": 0.0938,
+        "strength_gap": 13.71,
+        "h2h_matches": 0,
+        "bookmakers_used": 4,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    },
+    {
+      "pick_id": "b294050345eaac54c6fcc81e1eb05f39",
+      "source_pick_id": "c15a3939e6f22f2c16b03e60384eead2",
+      "match": "A. Hertel - M. Jovanovic",
+      "bet": "UNDER 20.0 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.0,
+        "odds": 2.05,
+        "avg_three_set": 0.1875,
+        "avg_close_set": 0.4097,
+        "avg_total_games": 19.895,
+        "avg_over_21_5_rate": 0.243,
+        "market_gap": 0.4329,
+        "confidence": 87.7,
+        "quality_score": 76.7,
+        "edge": 0.0822,
+        "strength_gap": 11.38,
+        "h2h_matches": 0,
+        "bookmakers_used": 3,
+        "tour_level": "itf",
+        "gender": "women"
+      }
+    },
+    {
+      "pick_id": "c3d94af2369d86722e8e6cecb60ab595",
+      "source_pick_id": "dab2132751fb5630a75c36649e5ffa72",
+      "match": "M. Trungelliti - D. Dedura",
+      "bet": "UNDER 21.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.04,
+        "avg_three_set": 0.2666,
+        "avg_close_set": 0.4584,
+        "avg_total_games": 20.865,
+        "avg_over_21_5_rate": 0.3722,
+        "market_gap": 0.2618,
+        "confidence": 82.5,
+        "quality_score": 76.3,
+        "edge": 0.0798,
+        "strength_gap": 6.92,
+        "h2h_matches": 0,
+        "bookmakers_used": 6,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    },
+    {
+      "pick_id": "719490176824b04d9235807a421f908c",
+      "source_pick_id": "64f98877e618c98e454fd4140cffbd8b",
+      "match": "K. Wehnelt - T. Al Azmeh",
+      "bet": "UNDER 20.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.02,
+        "avg_three_set": 0.1666,
+        "avg_close_set": 0.4352,
+        "avg_total_games": 19.89,
+        "avg_over_21_5_rate": 0.2777,
+        "market_gap": 0.25,
+        "confidence": 87.2,
+        "quality_score": 76.3,
+        "edge": 0.075,
+        "strength_gap": 17.78,
+        "h2h_matches": 0,
+        "bookmakers_used": 4,
+        "tour_level": "itf",
+        "gender": "men"
+      }
+    }
+  ],
+  "accepted_v2_test": [
+    {
+      "pick_id": "6d1a62608bd35661370b2edcb2a6e05c",
+      "source_pick_id": "6c6a5f8bfd61bf3fb9eafc910213bfd3",
+      "match": "T. Preston - A. Krueger",
+      "bet": "UNDER 20.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.0,
+        "avg_three_set": 0.15,
+        "avg_close_set": 0.35,
+        "avg_total_games": 19.5,
+        "avg_over_21_5_rate": 0.25,
+        "market_gap": 0.4102,
+        "confidence": 91.1,
+        "quality_score": 82.6,
+        "edge": 0.07,
+        "strength_gap": 6.6,
+        "h2h_matches": 0,
+        "bookmakers_used": 8,
+        "tour_level": "challenger",
+        "gender": "women"
+      }
+    },
+    {
+      "pick_id": "50e4f01966cc3590bbc28bb9d1f51c87",
+      "source_pick_id": "47e07fbcb95f5aa332a02bf55f9d35dc",
+      "match": "M. Lombardini - F. Urgesi",
+      "bet": "UNDER 19.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.1,
+        "avg_three_set": 0.3,
+        "avg_close_set": 0.3,
+        "avg_total_games": 19.95,
+        "avg_over_21_5_rate": 0.25,
+        "market_gap": 0.4258,
+        "confidence": 85.7,
+        "quality_score": 78.9,
+        "edge": 0.0938,
+        "strength_gap": 9.9,
+        "h2h_matches": 0,
+        "bookmakers_used": 3,
+        "tour_level": "itf",
+        "gender": "women"
+      }
+    },
+    {
+      "pick_id": "ed2b46b8ae838b94cc9e0f28924361be",
+      "source_pick_id": "0fa4ba092b25ceee223f99ab33fc81eb",
+      "match": "A. Walton - T. Legout",
+      "bet": "UNDER 19.5 games",
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.1,
+        "avg_three_set": 0.2381,
+        "avg_close_set": 0.3095,
+        "avg_total_games": 19.69,
+        "avg_over_21_5_rate": 0.3095,
+        "market_gap": 0.7002,
+        "confidence": 86.5,
+        "quality_score": 77.2,
+        "edge": 0.0938,
+        "strength_gap": 13.71,
+        "h2h_matches": 0,
+        "bookmakers_used": 4,
+        "tour_level": "challenger",
+        "gender": "men"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "source_pick_id": "7ef67aeaca69b499ea7660b2cc05d79e",
+      "match": "C. Paquet - D. Astakhova",
+      "bet": "OVER 21.5 games",
+      "date": "2026-06-05",
+      "time": "14:00",
+      "odds": 1.9,
+      "metrics": {
+        "side": "over",
+        "line": 21.5,
+        "odds": 1.9,
+        "avg_three_set": 0.5778,
+        "avg_close_set": 0.3102,
+        "avg_total_games": 22.785,
+        "avg_over_21_5_rate": 0.5778,
+        "market_gap": 0.0466,
+        "confidence": 96.0,
+        "quality_score": 89.9,
+        "edge": 0.0937,
+        "strength_gap": 8.59,
+        "h2h_matches": 2,
+        "bookmakers_used": 9,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "main_failed": [
+        "side",
+        "avg_three_set_max"
+      ],
+      "v2_failed": [
+        "side",
+        "avg_three_set_max",
+        "h2h_max",
+        "market_gap_min"
+      ]
+    },
+    {
+      "source_pick_id": "5c0096836f79acb3c4d59b0d86838e0f",
+      "match": "G. Den Ouden - E. Nava",
+      "bet": "UNDER 21.5 games",
+      "date": "2026-06-05",
+      "time": "13:30",
+      "odds": 2.15,
+      "metrics": {
+        "side": "under",
+        "line": 21.5,
+        "odds": 2.15,
+        "avg_three_set": 0.05,
+        "avg_close_set": 0.3479,
+        "avg_total_games": 18.875,
+        "avg_over_21_5_rate": 0.1125,
+        "market_gap": 0.2975,
+        "confidence": 88.9,
+        "quality_score": 86.9,
+        "edge": 0.1049,
+        "strength_gap": 33.55,
+        "h2h_matches": 0,
+        "bookmakers_used": 7,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "avg_three_set_min",
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "strength_gap_max"
+      ]
+    },
+    {
+      "source_pick_id": "646ffb9ab394def41e84ac0bdb6dd42b",
+      "match": "R. Masarova - M. Stoiana",
+      "bet": "OVER 20.5 games",
+      "date": "2026-06-05",
+      "time": "13:00",
+      "odds": 1.9,
+      "metrics": {
+        "side": "over",
+        "line": 20.5,
+        "odds": 1.9,
+        "avg_three_set": 0.5222,
+        "avg_close_set": 0.4065,
+        "avg_total_games": 22.9,
+        "avg_over_21_5_rate": 0.4722,
+        "market_gap": 0.4261,
+        "confidence": 90.6,
+        "quality_score": 85.3,
+        "edge": 0.0937,
+        "strength_gap": 20.71,
+        "h2h_matches": 0,
+        "bookmakers_used": 8,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "main_failed": [
+        "side",
+        "avg_three_set_max"
+      ],
+      "v2_failed": [
+        "side",
+        "avg_close_set_max",
+        "avg_three_set_max"
+      ]
+    },
+    {
+      "source_pick_id": "704b40a0e76bf0df143e5cabe716d452",
+      "match": "N. Sanchez Izquierdo - L. Midon",
+      "bet": "OVER 22.5 games",
+      "date": "2026-06-05",
+      "time": "15:00",
+      "odds": 2.07,
+      "metrics": {
+        "side": "over",
+        "line": 22.5,
+        "odds": 2.07,
+        "avg_three_set": 0.4524,
+        "avg_close_set": 0.4034,
+        "avg_total_games": 22.7,
+        "avg_over_21_5_rate": 0.4524,
+        "market_gap": 0.0619,
+        "confidence": 85.3,
+        "quality_score": 83.1,
+        "edge": 0.1369,
+        "strength_gap": 19.98,
+        "h2h_matches": 0,
+        "bookmakers_used": 8,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "side",
+        "avg_three_set_max"
+      ],
+      "v2_failed": [
+        "side",
+        "avg_close_set_max",
+        "avg_three_set_max",
+        "market_gap_min"
+      ]
+    },
+    {
+      "source_pick_id": "f775af2375da49940a858a8c44dc930a",
+      "match": "S. Baez - M. Mrva",
+      "bet": "OVER 20.5 games",
+      "date": "2026-06-05",
+      "time": "15:00",
+      "odds": 1.91,
+      "metrics": {
+        "side": "over",
+        "line": 20.5,
+        "odds": 1.91,
+        "avg_three_set": 0.3889,
+        "avg_close_set": 0.4629,
+        "avg_total_games": 22.67,
+        "avg_over_21_5_rate": 0.4445,
+        "market_gap": 0.5333,
+        "confidence": 85.6,
+        "quality_score": 81.6,
+        "edge": 0.0874,
+        "strength_gap": 3.45,
+        "h2h_matches": 0,
+        "bookmakers_used": 9,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "side",
+        "avg_three_set_max"
+      ],
+      "v2_failed": [
+        "side",
+        "avg_close_set_max",
+        "avg_three_set_max"
+      ]
+    },
+    {
+      "source_pick_id": "eae6e752430766fd4780808b5e28f5ec",
+      "match": "A. Ouakaa - J. Bradshaw",
+      "bet": "UNDER 20.5 games",
+      "date": "2026-06-05",
+      "time": "12:00",
+      "odds": 2.1,
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 2.1,
+        "avg_three_set": 0.25,
+        "avg_close_set": 0.2916,
+        "avg_total_games": 20.435,
+        "avg_over_21_5_rate": 0.3125,
+        "market_gap": 0.2951,
+        "confidence": 85.7,
+        "quality_score": 77.2,
+        "edge": 0.0938,
+        "strength_gap": 32.37,
+        "h2h_matches": 0,
+        "bookmakers_used": 3,
+        "tour_level": "itf",
+        "gender": "men"
+      },
+      "main_failed": [
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "strength_gap_max"
+      ]
+    },
+    {
+      "source_pick_id": "89e38bfdc48f9feaffc80022f692eaab",
+      "match": "L. Romero Gormaz - C. Monnet",
+      "bet": "UNDER 20.5 games",
+      "date": "2026-06-05",
+      "time": "15:30",
+      "odds": 1.95,
+      "metrics": {
+        "side": "under",
+        "line": 20.5,
+        "odds": 1.95,
+        "avg_three_set": 0.2611,
+        "avg_close_set": 0.2963,
+        "avg_total_games": 18.96,
+        "avg_over_21_5_rate": 0.2611,
+        "market_gap": 0.3128,
+        "confidence": 90.9,
+        "quality_score": 77.1,
+        "edge": 0.0572,
+        "strength_gap": 44.27,
+        "h2h_matches": 2,
+        "bookmakers_used": 7,
+        "tour_level": "challenger",
+        "gender": "women"
+      },
+      "main_failed": [
+        "strength_gap_max"
+      ],
+      "v2_failed": [
+        "h2h_max",
+        "strength_gap_max"
+      ]
+    },
+    {
+      "source_pick_id": "5ab688d2e8ea66b2fcdce615f212351a",
+      "match": "L. Angelini - G. Misasi",
+      "bet": "UNDER 19.5 games",
+      "date": "2026-06-05",
+      "time": "10:00",
+      "odds": 2.0,
+      "metrics": {
+        "side": "under",
+        "line": 19.5,
+        "odds": 2.0,
+        "avg_three_set": 0.1056,
+        "avg_close_set": 0.3546,
+        "avg_total_games": 18.26,
+        "avg_over_21_5_rate": 0.1556,
+        "market_gap": 0.468,
+        "confidence": 88.5,
+        "quality_score": 75.9,
+        "edge": 0.07,
+        "strength_gap": 21.81,
+        "h2h_matches": 0,
+        "bookmakers_used": 4,
+        "tour_level": "itf",
+        "gender": "men"
+      },
+      "main_failed": [
+        "avg_three_set_min"
+      ],
+      "v2_failed": [
+        "avg_close_set_max"
+      ]
+    },
+    {
+      "source_pick_id": "6aeaae24398f2138069225410eb374ca",
+      "match": "A. Pellegrino - P. Basile",
+      "bet": "OVER 20.5 games",
+      "date": "2026-06-05",
+      "time": "20:30",
+      "odds": 1.82,
+      "metrics": {
+        "side": "over",
+        "line": 20.5,
+        "odds": 1.82,
+        "avg_three_set": 0.5268,
+        "avg_close_set": 0.3929,
+        "avg_total_games": 23.84,
+        "avg_over_21_5_rate": 0.5982,
+        "market_gap": 0.553,
+        "confidence": 88.4,
+        "quality_score": 70.4,
+        "edge": 0.0705,
+        "strength_gap": 4.09,
+        "h2h_matches": 0,
+        "bookmakers_used": 3,
+        "tour_level": "challenger",
+        "gender": "men"
+      },
+      "main_failed": [
+        "side",
+        "avg_three_set_max"
+      ],
+      "v2_failed": [
+        "side",
+        "avg_close_set_max",
+        "avg_three_set_max",
+        "quality_min"
+      ]
+    }
+  ]
 }

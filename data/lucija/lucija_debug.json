@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-05T08:02:57.590293+02:00",
+  "generated_at": "2026-06-05T08:20:29.993684+02:00",
   "source_file": "data/tennis_totals_predictions.json",
   "source_format": "dict_with_picks",
-  "source_picks": 0,
-  "lucija_picks": 0,
-  "rejected_picks": 0,
+  "source_picks": 20,
+  "lucija_picks": 11,
+  "rejected_picks": 9,
   "rules": {
     "avg_close_set_max": 0.55,
     "avg_close_set_min": 0.2,
@@ -15,6 +15,475 @@
     "quality_min": 72,
     "strength_gap_max": 30
   },
-  "accepted": [],
-  "rejected": []
+  "accepted": [
+    {
+      "pick_id": "b50aca976c5b13583e995f48398b0dc6",
+      "source_pick_id": "23cf14efc30173963e571e1331fed50a",
+      "match": "F. Romano - O. Virtanen",
+      "bet": "UNDER 21.5 games",
+      "odds": 2.14,
+      "metrics": {
+        "avg_three_set": 0.2375,
+        "avg_close_set": 0.5188,
+        "market_gap": 0.6083,
+        "confidence": 88.9,
+        "quality_score": 86.3,
+        "strength_gap": 25.62,
+        "h2h_matches": 0
+      }
+    },
+    {
+      "pick_id": "a0e5a82df7609c7505871aafb4bc7dca",
+      "source_pick_id": "646ffb9ab394def41e84ac0bdb6dd42b",
+      "match": "R. Masarova - M. Stoiana",
+      "bet": "OVER 20.5 games",
+      "odds": 1.9,
+      "metrics": {
+        "avg_three_set": 0.5222,
+        "avg_close_set": 0.4065,
+        "market_gap": 0.4261,
+        "confidence": 90.6,
+        "quality_score": 85.3,
+        "strength_gap": 20.71,
+        "h2h_matches": 0
+      }
+    },
+    {
+      "pick_id": "c6b23ee8c6fff0a2b6fd73c290cdde72",
+      "source_pick_id": "a25be67e40be0316d196ed04094ea4d7",
+      "match": "H. Barton - T. Daniel",
+      "bet": "UNDER 21.5 games",
+      "odds": 2.06,
+      "metrics": {
+        "avg_three_set": 0.2,
+        "avg_close_set": 0.4,
+        "market_gap": 0.3533,
+        "confidence": 89.7,
+        "quality_score": 84.7,
+        "strength_gap": 9.4,
+        "h2h_matches": 0
+      }
+    },
+    {
+      "pick_id": "468d6e428aaee15c2a663608f9255277",
+      "source_pick_id": "6c6a5f8bfd61bf3fb9eafc910213bfd3",
+      "match": "T. Preston - A. Krueger",
+      "bet": "UNDER 20.5 games",
+      "odds": 2.0,
+      "metrics": {
+        "avg_three_set": 0.15,
+        "avg_close_set": 0.35,
+        "market_gap": 0.4102,
+        "confidence": 91.1,
+        "quality_score": 82.6,
+        "strength_gap": 6.6,
+        "h2h_matches": 0
+      }
+    },
+    {
+      "pick_id": "789dbb627090bb7872d27baebf6611bf",
+      "source_pick_id": "f775af2375da49940a858a8c44dc930a",
+      "match": "S. Baez - M. Mrva",
+      "bet": "OVER 20.5 games",
+      "odds": 1.91,
+      "metrics": {
+        "avg_three_set": 0.3889,
+        "avg_close_set": 0.4629,
+        "market_gap": 0.5333,
+        "confidence": 85.6,
+        "quality_score": 81.6,
+        "strength_gap": 3.45,
+        "h2h_matches": 0
+      }
+    },
+    {
+      "pick_id": "8825b6f96a8bf05f583d4c1f2a3374bf",
+      "source_pick_id": "47e07fbcb95f5aa332a02bf55f9d35dc",
+      "match": "M. Lombardini - F. Urgesi",
+      "bet": "UNDER 19.5 games",
+      "odds": 2.1,
+      "metrics": {
+        "avg_three_set": 0.3,
+        "avg_close_set": 0.3,
+        "market_gap": 0.4258,
+        "confidence": 85.7,
+        "quality_score": 78.9,
+        "strength_gap": 9.9,
+        "h2h_matches": 0
+      }
+    },
+    {
+      "pick_id": "db3eef7d3fcabd3864ee53d42c7de65c",
+      "source_pick_id": "ba9ad209830179b8882922bfcad7b571",
+      "match": "A. Molcan - V. Sachko",
+      "bet": "UNDER 20.5 games",
+      "odds": 2.0,
+      "metrics": {
+        "avg_three_set": 0.2222,
+        "avg_close_set": 0.5278,
+        "market_gap": 0.4878,
+        "confidence": 89.3,
+        "quality_score": 77.6,
+        "strength_gap": 23.78,
+        "h2h_matches": 0
+      }
+    },
+    {
+      "pick_id": "aa95987ed70fcf4b31c899fd38866762",
+      "source_pick_id": "0fa4ba092b25ceee223f99ab33fc81eb",
+      "match": "A. Walton - T. Legout",
+      "bet": "UNDER 19.5 games",
+      "odds": 2.1,
+      "metrics": {
+        "avg_three_set": 0.2381,
+        "avg_close_set": 0.3095,
+        "market_gap": 0.7002,
+        "confidence": 86.5,
+        "quality_score": 77.2,
+        "strength_gap": 13.71,
+        "h2h_matches": 0
+      }
+    },
+    {
+      "pick_id": "48e4dc1305c93e34f41df670bcfe7731",
+      "source_pick_id": "c15a3939e6f22f2c16b03e60384eead2",
+      "match": "A. Hertel - M. Jovanovic",
+      "bet": "UNDER 20.0 games",
+      "odds": 2.05,
+      "metrics": {
+        "avg_three_set": 0.1875,
+        "avg_close_set": 0.4097,
+        "market_gap": 0.4329,
+        "confidence": 87.7,
+        "quality_score": 76.7,
+        "strength_gap": 11.38,
+        "h2h_matches": 0
+      }
+    },
+    {
+      "pick_id": "c214a43b2121e829179cb0269ac2f1e8",
+      "source_pick_id": "dab2132751fb5630a75c36649e5ffa72",
+      "match": "M. Trungelliti - D. Dedura",
+      "bet": "UNDER 21.5 games",
+      "odds": 2.04,
+      "metrics": {
+        "avg_three_set": 0.2666,
+        "avg_close_set": 0.4584,
+        "market_gap": 0.2618,
+        "confidence": 82.5,
+        "quality_score": 76.3,
+        "strength_gap": 6.92,
+        "h2h_matches": 0
+      }
+    },
+    {
+      "pick_id": "86d395cf3bec26e2c5b1105fe0011246",
+      "source_pick_id": "64f98877e618c98e454fd4140cffbd8b",
+      "match": "K. Wehnelt - T. Al Azmeh",
+      "bet": "UNDER 20.5 games",
+      "odds": 2.02,
+      "metrics": {
+        "avg_three_set": 0.1666,
+        "avg_close_set": 0.4352,
+        "market_gap": 0.25,
+        "confidence": 87.2,
+        "quality_score": 76.3,
+        "strength_gap": 17.78,
+        "h2h_matches": 0
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "pick_id": "7ef67aeaca69b499ea7660b2cc05d79e",
+      "match": "C. Paquet - D. Astakhova",
+      "bet": "OVER 21.5 games",
+      "date": "2026-06-05",
+      "time": "14:00",
+      "odds": 1.9,
+      "confidence": 96,
+      "quality_score": 89.9,
+      "metrics": {
+        "avg_three_set": 0.5778,
+        "avg_close_set": 0.3102,
+        "market_gap": 0.0466,
+        "confidence": 96.0,
+        "quality_score": 89.9,
+        "strength_gap": 8.59,
+        "h2h_matches": 2
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": false,
+        "strength_gap_max": true,
+        "h2h_max": false
+      },
+      "failed": [
+        "market_gap_min",
+        "h2h_max"
+      ]
+    },
+    {
+      "pick_id": "7d32e67d49161b8f69428e579e0df0d9",
+      "match": "A. Moro Canas - H. Squire",
+      "bet": "UNDER 21.5 games",
+      "date": "2026-06-05",
+      "time": "12:00",
+      "odds": 2.2,
+      "confidence": 86.9,
+      "quality_score": 88.5,
+      "metrics": {
+        "avg_three_set": 0.2666,
+        "avg_close_set": 0.3166,
+        "market_gap": 0.0932,
+        "confidence": 86.9,
+        "quality_score": 88.5,
+        "strength_gap": 24.46,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": false,
+        "strength_gap_max": true,
+        "h2h_max": true
+      },
+      "failed": [
+        "market_gap_min"
+      ]
+    },
+    {
+      "pick_id": "5c0096836f79acb3c4d59b0d86838e0f",
+      "match": "G. Den Ouden - E. Nava",
+      "bet": "UNDER 21.5 games",
+      "date": "2026-06-05",
+      "time": "13:30",
+      "odds": 2.15,
+      "confidence": 88.9,
+      "quality_score": 86.9,
+      "metrics": {
+        "avg_three_set": 0.05,
+        "avg_close_set": 0.3479,
+        "market_gap": 0.2975,
+        "confidence": 88.9,
+        "quality_score": 86.9,
+        "strength_gap": 33.55,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": false,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": true,
+        "strength_gap_max": false,
+        "h2h_max": true
+      },
+      "failed": [
+        "avg_three_set_min",
+        "strength_gap_max"
+      ]
+    },
+    {
+      "pick_id": "704b40a0e76bf0df143e5cabe716d452",
+      "match": "N. Sanchez Izquierdo - L. Midon",
+      "bet": "OVER 22.5 games",
+      "date": "2026-06-05",
+      "time": "15:00",
+      "odds": 2.07,
+      "confidence": 85.3,
+      "quality_score": 83.1,
+      "metrics": {
+        "avg_three_set": 0.4524,
+        "avg_close_set": 0.4034,
+        "market_gap": 0.0619,
+        "confidence": 85.3,
+        "quality_score": 83.1,
+        "strength_gap": 19.98,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": false,
+        "strength_gap_max": true,
+        "h2h_max": true
+      },
+      "failed": [
+        "market_gap_min"
+      ]
+    },
+    {
+      "pick_id": "119de86cc1f068ab7615bb522f3069fa",
+      "match": "L. Pigossi - D. Chiesa",
+      "bet": "UNDER 20.5 games",
+      "date": "2026-06-05",
+      "time": "13:00",
+      "odds": 2.2,
+      "confidence": 80.6,
+      "quality_score": 80.6,
+      "metrics": {
+        "avg_three_set": 0.2056,
+        "avg_close_set": 0.2824,
+        "market_gap": 0.078,
+        "confidence": 80.6,
+        "quality_score": 80.6,
+        "strength_gap": 15.76,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": false,
+        "strength_gap_max": true,
+        "h2h_max": true
+      },
+      "failed": [
+        "market_gap_min"
+      ]
+    },
+    {
+      "pick_id": "eae6e752430766fd4780808b5e28f5ec",
+      "match": "A. Ouakaa - J. Bradshaw",
+      "bet": "UNDER 20.5 games",
+      "date": "2026-06-05",
+      "time": "12:00",
+      "odds": 2.1,
+      "confidence": 85.7,
+      "quality_score": 77.2,
+      "metrics": {
+        "avg_three_set": 0.25,
+        "avg_close_set": 0.2916,
+        "market_gap": 0.2951,
+        "confidence": 85.7,
+        "quality_score": 77.2,
+        "strength_gap": 32.37,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": true,
+        "strength_gap_max": false,
+        "h2h_max": true
+      },
+      "failed": [
+        "strength_gap_max"
+      ]
+    },
+    {
+      "pick_id": "89e38bfdc48f9feaffc80022f692eaab",
+      "match": "L. Romero Gormaz - C. Monnet",
+      "bet": "UNDER 20.5 games",
+      "date": "2026-06-05",
+      "time": "15:30",
+      "odds": 1.95,
+      "confidence": 90.9,
+      "quality_score": 77.1,
+      "metrics": {
+        "avg_three_set": 0.2611,
+        "avg_close_set": 0.2963,
+        "market_gap": 0.3128,
+        "confidence": 90.9,
+        "quality_score": 77.1,
+        "strength_gap": 44.27,
+        "h2h_matches": 2
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": true,
+        "strength_gap_max": false,
+        "h2h_max": false
+      },
+      "failed": [
+        "strength_gap_max",
+        "h2h_max"
+      ]
+    },
+    {
+      "pick_id": "5ab688d2e8ea66b2fcdce615f212351a",
+      "match": "L. Angelini - G. Misasi",
+      "bet": "UNDER 19.5 games",
+      "date": "2026-06-05",
+      "time": "10:00",
+      "odds": 2.0,
+      "confidence": 88.5,
+      "quality_score": 75.9,
+      "metrics": {
+        "avg_three_set": 0.1056,
+        "avg_close_set": 0.3546,
+        "market_gap": 0.468,
+        "confidence": 88.5,
+        "quality_score": 75.9,
+        "strength_gap": 21.81,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": false,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": true,
+        "market_gap_min": true,
+        "strength_gap_max": true,
+        "h2h_max": true
+      },
+      "failed": [
+        "avg_three_set_min"
+      ]
+    },
+    {
+      "pick_id": "6aeaae24398f2138069225410eb374ca",
+      "match": "A. Pellegrino - P. Basile",
+      "bet": "OVER 20.5 games",
+      "date": "2026-06-05",
+      "time": "20:30",
+      "odds": 1.82,
+      "confidence": 88.4,
+      "quality_score": 70.4,
+      "metrics": {
+        "avg_three_set": 0.5268,
+        "avg_close_set": 0.3929,
+        "market_gap": 0.553,
+        "confidence": 88.4,
+        "quality_score": 70.4,
+        "strength_gap": 4.09,
+        "h2h_matches": 0
+      },
+      "checks": {
+        "avg_three_set_min": true,
+        "avg_close_set_min": true,
+        "avg_close_set_max": true,
+        "confidence_min": true,
+        "quality_min": false,
+        "market_gap_min": true,
+        "strength_gap_max": true,
+        "h2h_max": true
+      },
+      "failed": [
+        "quality_min"
+      ]
+    }
+  ]
 }
