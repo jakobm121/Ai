@@ -1,10 +1,12 @@
 {
-  "generated_at": "2026-06-05T15:20:05.747484+02:00",
+  "generated_at": "2026-06-05T15:22:55.672567+02:00",
   "source_file": "data/tennis_predictions.json",
-  "settle_source_file": "data/tennis_results.json",
   "elo_file": "ratings/tennis_elo.json",
-  "settled_removed": 0,
-  "total_saved_predictions": 2,
+  "total_source_predictions": 15,
+  "confirmed_in_current_run": 3,
+  "added": 1,
+  "updated": 2,
+  "total_saved_predictions": 3,
   "picks": [
     {
       "pick_id": "53631255bd05ccddd474257f26e96b0f",
@@ -47,6 +49,28 @@
       "elo_surface_diff": null,
       "elo_player_matched_name": "Diego Dedura Palomero",
       "elo_opponent_matched_name": "Marco Trungelliti",
+      "elo_player_match_method": "compact",
+      "elo_opponent_match_method": "compact"
+    },
+    {
+      "pick_id": "aa19ee8a0c6a3325c8f9ed1679ea37ba",
+      "created_at": "2026-06-05T08:38:44.739900+02:00",
+      "date": "2026-06-05",
+      "tour_level": "challenger",
+      "event_type": "Challenger Men Singles",
+      "match": "A. Fery - R. Hijikata",
+      "bet": "A. Fery",
+      "opponent": "R. Hijikata",
+      "odds": 2.0,
+      "stake": 1.5,
+      "model_probability": null,
+      "edge": 0.16,
+      "value_score": null,
+      "elo_confirmed": true,
+      "elo_overall_diff": 31.13,
+      "elo_surface_diff": null,
+      "elo_player_matched_name": "Arthur Fery",
+      "elo_opponent_matched_name": "Rinky Hijikata",
       "elo_player_match_method": "compact",
       "elo_opponent_match_method": "compact"
     }
