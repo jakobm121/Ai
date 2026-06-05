@@ -1,111 +1,109 @@
 # ELO totals interval scan
 
-Generated: 2026-06-03T12:30:37.058674+02:00
+Generated: 2026-06-05T09:14:16.655948+02:00
 
 ## Base
 
 | N | W-L | WR | Profit | Stake | ROI | Avg odds |
 |---:|---:|---:|---:|---:|---:|---:|
-| 423 | 204-219 | 48.23% | -5.116u | 274.0u | -1.87% | 2.055 |
+| 396 | 192-204 | 48.48% | -3.826u | 260.75u | -1.47% | 2.054 |
 
 ## Combo summary
 
 | Rule | N | W-L | WR | Profit | ROI | Avg odds |
 |---|---:|---:|---:|---:|---:|---:|
-| UNDER overall 120-150 | 22 | 10-12 | 45.45% | 0.969u | 7.31% | 2.08 |
-| UNDER overall 150-180 | 18 | 10-8 | 55.56% | 1.763u | 14.1% | 2.103 |
-| UNDER overall 180+ | 41 | 22-19 | 53.66% | 2.829u | 10.88% | 2.075 |
-| UNDER surface 100-120 | 14 | 5-9 | 35.71% | -2.198u | -24.42% | 2.08 |
-| UNDER surface 120-150 | 22 | 10-12 | 45.45% | 0.969u | 7.31% | 2.08 |
-| UNDER surface 150+ | 59 | 32-27 | 54.24% | 4.592u | 11.93% | 2.084 |
-| OVER overall 40-70 | 13 | 10-3 | 76.92% | 3.56u | 39.56% | 1.938 |
-| OVER overall 50-100 | 16 | 10-6 | 62.5% | 3.164u | 28.76% | 1.951 |
+| UNDER overall 120-150 | 24 | 10-14 | 41.67% | -1.126u | -7.38% | 2.08 |
+| UNDER overall 150-180 | 21 | 11-10 | 52.38% | 1.383u | 9.54% | 2.105 |
+| UNDER overall 180+ | 39 | 22-17 | 56.41% | 3.629u | 14.66% | 2.078 |
+| UNDER surface 100-120 | 10 | 2-8 | 20.0% | -4.285u | -68.56% | 2.056 |
+| UNDER surface 120-150 | 24 | 10-14 | 41.67% | -1.126u | -7.38% | 2.08 |
+| UNDER surface 150+ | 60 | 33-27 | 55.0% | 5.012u | 12.77% | 2.088 |
+| OVER overall 40-70 | 11 | 10-1 | 90.91% | 5.495u | 68.69% | 1.931 |
+| OVER overall 50-100 | 18 | 12-6 | 66.67% | 4.489u | 35.91% | 1.942 |
 | OVER overall 70-120 | 17 | 6-11 | 35.29% | -2.911u | -23.76% | 1.955 |
-| OVER surface 40-70 | 13 | 10-3 | 76.92% | 3.56u | 39.56% | 1.938 |
-| OVER surface 50-100 | 16 | 10-6 | 62.5% | 3.164u | 28.76% | 1.951 |
+| OVER surface 40-70 | 11 | 10-1 | 90.91% | 5.495u | 68.69% | 1.931 |
+| OVER surface 50-100 | 18 | 12-6 | 66.67% | 4.489u | 35.91% | 1.942 |
 | OVER surface 70-120 | 17 | 6-11 | 35.29% | -2.911u | -23.76% | 1.955 |
 
 ## Top overall intervals
 
 | Rule | N | W-L | WR | Profit | ROI | Avg odds |
 |---|---:|---:|---:|---:|---:|---:|
-| OVER + abs_overall_elo_diff in 50-70 | 6 | 6-0 | 100.0% | 4.007u | 94.28% | 1.932 |
-| OVER + abs_surface_elo_diff in 50-70 | 6 | 6-0 | 100.0% | 4.007u | 94.28% | 1.932 |
-| OVER + abs_overall_elo_diff in 30-40 | 9 | 6-3 | 66.67% | 1.803u | 27.74% | 1.949 |
-| OVER + abs_surface_elo_diff in 30-40 | 9 | 6-3 | 66.67% | 1.803u | 27.74% | 1.949 |
-| UNDER + abs_overall_elo_diff in 180-220 | 21 | 13-8 | 61.9% | 2.898u | 22.29% | 2.056 |
-| UNDER + abs_surface_elo_diff in 180-220 | 21 | 13-8 | 61.9% | 2.898u | 22.29% | 2.056 |
-| UNDER + abs_overall_elo_diff in 150-180 | 18 | 10-8 | 55.56% | 1.763u | 14.1% | 2.103 |
-| UNDER + abs_surface_elo_diff in 150-180 | 18 | 10-8 | 55.56% | 1.763u | 14.1% | 2.103 |
-| UNDER + abs_overall_elo_diff in 50-70 | 37 | 19-18 | 51.35% | 3.277u | 13.38% | 2.1 |
-| UNDER + abs_surface_elo_diff in 50-70 | 37 | 19-18 | 51.35% | 3.277u | 13.38% | 2.1 |
-| UNDER + abs_overall_elo_diff in 120-150 | 22 | 10-12 | 45.45% | 0.969u | 7.31% | 2.08 |
-| UNDER + abs_surface_elo_diff in 120-150 | 22 | 10-12 | 45.45% | 0.969u | 7.31% | 2.08 |
-| UNDER + abs_overall_elo_diff in 30-40 | 33 | 16-17 | 48.48% | 1.0u | 5.06% | 2.051 |
-| UNDER + abs_surface_elo_diff in 30-40 | 33 | 16-17 | 48.48% | 1.0u | 5.06% | 2.051 |
-| UNDER + abs_overall_elo_diff in 220+ | 20 | 9-11 | 45.0% | -0.069u | -0.53% | 2.096 |
-| UNDER + abs_surface_elo_diff in 220+ | 20 | 9-11 | 45.0% | -0.069u | -0.53% | 2.096 |
+| OVER + abs_overall_elo_diff in 50-70 | 8 | 8-0 | 100.0% | 5.332u | 92.73% | 1.917 |
+| OVER + abs_surface_elo_diff in 50-70 | 8 | 8-0 | 100.0% | 5.332u | 92.73% | 1.917 |
+| UNDER + abs_overall_elo_diff in 180-220 | 19 | 13-6 | 68.42% | 4.243u | 36.11% | 2.071 |
+| UNDER + abs_surface_elo_diff in 180-220 | 19 | 13-6 | 68.42% | 4.243u | 36.11% | 2.071 |
+| OVER + abs_overall_elo_diff in 30-40 | 10 | 6-4 | 60.0% | 1.303u | 18.61% | 1.942 |
+| OVER + abs_surface_elo_diff in 30-40 | 10 | 6-4 | 60.0% | 1.303u | 18.61% | 1.942 |
+| UNDER + abs_overall_elo_diff in 30-40 | 22 | 12-10 | 54.55% | 2.145u | 15.32% | 2.06 |
+| UNDER + abs_surface_elo_diff in 30-40 | 22 | 12-10 | 54.55% | 2.145u | 15.32% | 2.06 |
+| UNDER + abs_overall_elo_diff in 90-100 | 12 | 6-6 | 50.0% | 0.697u | 9.96% | 2.033 |
+| UNDER + abs_surface_elo_diff in 90-100 | 12 | 6-6 | 50.0% | 0.697u | 9.96% | 2.033 |
+| UNDER + abs_overall_elo_diff in 150-180 | 21 | 11-10 | 52.38% | 1.383u | 9.54% | 2.105 |
+| UNDER + abs_surface_elo_diff in 150-180 | 21 | 11-10 | 52.38% | 1.383u | 9.54% | 2.105 |
+| UNDER + abs_overall_elo_diff in 50-70 | 36 | 17-19 | 47.22% | 0.647u | 2.72% | 2.086 |
+| UNDER + abs_surface_elo_diff in 50-70 | 36 | 17-19 | 47.22% | 0.647u | 2.72% | 2.086 |
+| UNDER + abs_overall_elo_diff in 0-20 | 65 | 33-32 | 50.77% | 1.11u | 2.69% | 2.08 |
+| UNDER + abs_surface_elo_diff in 0-20 | 65 | 33-32 | 50.77% | 1.11u | 2.69% | 2.08 |
 | OVER + abs_overall_elo_diff in 90-100 | 5 | 2-3 | 40.0% | -0.075u | -2.14% | 1.956 |
 | OVER + abs_surface_elo_diff in 90-100 | 5 | 2-3 | 40.0% | -0.075u | -2.14% | 1.956 |
-| UNDER + abs_overall_elo_diff in 0-20 | 68 | 33-35 | 48.53% | -1.144u | -2.77% | 2.079 |
-| UNDER + abs_surface_elo_diff in 0-20 | 68 | 33-35 | 48.53% | -1.144u | -2.77% | 2.079 |
-| UNDER + abs_overall_elo_diff in 70-90 | 30 | 14-16 | 46.67% | -0.976u | -5.07% | 2.079 |
-| UNDER + abs_surface_elo_diff in 70-90 | 30 | 14-16 | 46.67% | -0.976u | -5.07% | 2.079 |
-| OVER + abs_overall_elo_diff in 0-20 | 22 | 11-11 | 50.0% | -0.863u | -5.57% | 1.965 |
-| OVER + abs_surface_elo_diff in 0-20 | 22 | 11-11 | 50.0% | -0.863u | -5.57% | 1.965 |
-| UNDER + abs_overall_elo_diff in 90-100 | 11 | 5-6 | 45.45% | -0.453u | -7.55% | 2.021 |
-| UNDER + abs_surface_elo_diff in 90-100 | 11 | 5-6 | 45.45% | -0.453u | -7.55% | 2.021 |
-| OVER + abs_overall_elo_diff in 40-50 | 7 | 4-3 | 57.14% | -0.447u | -9.41% | 1.944 |
-| OVER + abs_surface_elo_diff in 40-50 | 7 | 4-3 | 57.14% | -0.447u | -9.41% | 1.944 |
-| UNDER + abs_overall_elo_diff in 40-50 | 31 | 14-17 | 45.16% | -2.253u | -12.02% | 2.071 |
-| UNDER + abs_surface_elo_diff in 40-50 | 31 | 14-17 | 45.16% | -2.253u | -12.02% | 2.071 |
+| UNDER + abs_overall_elo_diff in 40-50 | 25 | 12-13 | 48.0% | -0.351u | -2.3% | 2.055 |
+| UNDER + abs_surface_elo_diff in 40-50 | 25 | 12-13 | 48.0% | -0.351u | -2.3% | 2.055 |
+| UNDER + abs_overall_elo_diff in 220+ | 20 | 9-11 | 45.0% | -0.614u | -4.72% | 2.086 |
+| UNDER + abs_surface_elo_diff in 220+ | 20 | 9-11 | 45.0% | -0.614u | -4.72% | 2.086 |
+| UNDER + abs_overall_elo_diff in 120-150 | 24 | 10-14 | 41.67% | -1.126u | -7.38% | 2.08 |
+| UNDER + abs_surface_elo_diff in 120-150 | 24 | 10-14 | 41.67% | -1.126u | -7.38% | 2.08 |
+| UNDER + abs_overall_elo_diff in 70-90 | 26 | 11-15 | 42.31% | -2.681u | -16.01% | 2.076 |
+| UNDER + abs_surface_elo_diff in 70-90 | 26 | 11-15 | 42.31% | -2.681u | -16.01% | 2.076 |
+| OVER + abs_overall_elo_diff in 0-20 | 22 | 10-12 | 45.45% | -2.685u | -17.05% | 1.958 |
+| OVER + abs_surface_elo_diff in 0-20 | 22 | 10-12 | 45.45% | -2.685u | -17.05% | 1.958 |
+| OVER + abs_overall_elo_diff in 20-30 | 11 | 4-7 | 36.36% | -1.758u | -21.31% | 1.96 |
+| OVER + abs_surface_elo_diff in 20-30 | 11 | 4-7 | 36.36% | -1.758u | -21.31% | 1.96 |
 
 ## UNDER intervals
 
 | Diff | Interval | N | W-L | WR | Profit | ROI |
 |---|---|---:|---:|---:|---:|---:|
-| abs_overall_elo_diff | 0-20 | 68 | 33-35 | 48.53% | -1.144u | -2.77% |
-| abs_overall_elo_diff | 20-30 | 37 | 15-22 | 40.54% | -5.644u | -22.13% |
-| abs_overall_elo_diff | 30-40 | 33 | 16-17 | 48.48% | 1.0u | 5.06% |
-| abs_overall_elo_diff | 40-50 | 31 | 14-17 | 45.16% | -2.253u | -12.02% |
-| abs_overall_elo_diff | 50-70 | 37 | 19-18 | 51.35% | 3.277u | 13.38% |
-| abs_overall_elo_diff | 70-90 | 30 | 14-16 | 46.67% | -0.976u | -5.07% |
-| abs_overall_elo_diff | 90-100 | 11 | 5-6 | 45.45% | -0.453u | -7.55% |
-| abs_overall_elo_diff | 100-120 | 14 | 5-9 | 35.71% | -2.198u | -24.42% |
-| abs_overall_elo_diff | 120-150 | 22 | 10-12 | 45.45% | 0.969u | 7.31% |
-| abs_overall_elo_diff | 150-180 | 18 | 10-8 | 55.56% | 1.763u | 14.1% |
-| abs_overall_elo_diff | 180-220 | 21 | 13-8 | 61.9% | 2.898u | 22.29% |
-| abs_overall_elo_diff | 220+ | 20 | 9-11 | 45.0% | -0.069u | -0.53% |
-| abs_surface_elo_diff | 0-20 | 68 | 33-35 | 48.53% | -1.144u | -2.77% |
-| abs_surface_elo_diff | 20-30 | 37 | 15-22 | 40.54% | -5.644u | -22.13% |
-| abs_surface_elo_diff | 30-40 | 33 | 16-17 | 48.48% | 1.0u | 5.06% |
-| abs_surface_elo_diff | 40-50 | 31 | 14-17 | 45.16% | -2.253u | -12.02% |
-| abs_surface_elo_diff | 50-70 | 37 | 19-18 | 51.35% | 3.277u | 13.38% |
-| abs_surface_elo_diff | 70-90 | 30 | 14-16 | 46.67% | -0.976u | -5.07% |
-| abs_surface_elo_diff | 90-100 | 11 | 5-6 | 45.45% | -0.453u | -7.55% |
-| abs_surface_elo_diff | 100-120 | 14 | 5-9 | 35.71% | -2.198u | -24.42% |
-| abs_surface_elo_diff | 120-150 | 22 | 10-12 | 45.45% | 0.969u | 7.31% |
-| abs_surface_elo_diff | 150-180 | 18 | 10-8 | 55.56% | 1.763u | 14.1% |
-| abs_surface_elo_diff | 180-220 | 21 | 13-8 | 61.9% | 2.898u | 22.29% |
-| abs_surface_elo_diff | 220+ | 20 | 9-11 | 45.0% | -0.069u | -0.53% |
+| abs_overall_elo_diff | 0-20 | 65 | 33-32 | 50.77% | 1.11u | 2.69% |
+| abs_overall_elo_diff | 20-30 | 39 | 15-24 | 38.46% | -6.441u | -23.86% |
+| abs_overall_elo_diff | 30-40 | 22 | 12-10 | 54.55% | 2.145u | 15.32% |
+| abs_overall_elo_diff | 40-50 | 25 | 12-13 | 48.0% | -0.351u | -2.3% |
+| abs_overall_elo_diff | 50-70 | 36 | 17-19 | 47.22% | 0.647u | 2.72% |
+| abs_overall_elo_diff | 70-90 | 26 | 11-15 | 42.31% | -2.681u | -16.01% |
+| abs_overall_elo_diff | 90-100 | 12 | 6-6 | 50.0% | 0.697u | 9.96% |
+| abs_overall_elo_diff | 100-120 | 10 | 2-8 | 20.0% | -4.285u | -68.56% |
+| abs_overall_elo_diff | 120-150 | 24 | 10-14 | 41.67% | -1.126u | -7.38% |
+| abs_overall_elo_diff | 150-180 | 21 | 11-10 | 52.38% | 1.383u | 9.54% |
+| abs_overall_elo_diff | 180-220 | 19 | 13-6 | 68.42% | 4.243u | 36.11% |
+| abs_overall_elo_diff | 220+ | 20 | 9-11 | 45.0% | -0.614u | -4.72% |
+| abs_surface_elo_diff | 0-20 | 65 | 33-32 | 50.77% | 1.11u | 2.69% |
+| abs_surface_elo_diff | 20-30 | 39 | 15-24 | 38.46% | -6.441u | -23.86% |
+| abs_surface_elo_diff | 30-40 | 22 | 12-10 | 54.55% | 2.145u | 15.32% |
+| abs_surface_elo_diff | 40-50 | 25 | 12-13 | 48.0% | -0.351u | -2.3% |
+| abs_surface_elo_diff | 50-70 | 36 | 17-19 | 47.22% | 0.647u | 2.72% |
+| abs_surface_elo_diff | 70-90 | 26 | 11-15 | 42.31% | -2.681u | -16.01% |
+| abs_surface_elo_diff | 90-100 | 12 | 6-6 | 50.0% | 0.697u | 9.96% |
+| abs_surface_elo_diff | 100-120 | 10 | 2-8 | 20.0% | -4.285u | -68.56% |
+| abs_surface_elo_diff | 120-150 | 24 | 10-14 | 41.67% | -1.126u | -7.38% |
+| abs_surface_elo_diff | 150-180 | 21 | 11-10 | 52.38% | 1.383u | 9.54% |
+| abs_surface_elo_diff | 180-220 | 19 | 13-6 | 68.42% | 4.243u | 36.11% |
+| abs_surface_elo_diff | 220+ | 20 | 9-11 | 45.0% | -0.614u | -4.72% |
 
 ## OVER intervals
 
 | Diff | Interval | N | W-L | WR | Profit | ROI |
 |---|---|---:|---:|---:|---:|---:|
-| abs_overall_elo_diff | 0-20 | 22 | 11-11 | 50.0% | -0.863u | -5.57% |
-| abs_overall_elo_diff | 20-30 | 14 | 4-10 | 28.57% | -4.67u | -44.48% |
-| abs_overall_elo_diff | 30-40 | 9 | 6-3 | 66.67% | 1.803u | 27.74% |
-| abs_overall_elo_diff | 40-50 | 7 | 4-3 | 57.14% | -0.447u | -9.41% |
-| abs_overall_elo_diff | 50-70 | 6 | 6-0 | 100.0% | 4.007u | 94.28% |
+| abs_overall_elo_diff | 0-20 | 22 | 10-12 | 45.45% | -2.685u | -17.05% |
+| abs_overall_elo_diff | 20-30 | 11 | 4-7 | 36.36% | -1.758u | -21.31% |
+| abs_overall_elo_diff | 30-40 | 10 | 6-4 | 60.0% | 1.303u | 18.61% |
+| abs_overall_elo_diff | 50-70 | 8 | 8-0 | 100.0% | 5.332u | 92.73% |
 | abs_overall_elo_diff | 70-90 | 5 | 2-3 | 40.0% | -0.768u | -23.63% |
 | abs_overall_elo_diff | 90-100 | 5 | 2-3 | 40.0% | -0.075u | -2.14% |
 | abs_overall_elo_diff | 100-120 | 7 | 2-5 | 28.57% | -2.068u | -37.6% |
-| abs_surface_elo_diff | 0-20 | 22 | 11-11 | 50.0% | -0.863u | -5.57% |
-| abs_surface_elo_diff | 20-30 | 14 | 4-10 | 28.57% | -4.67u | -44.48% |
-| abs_surface_elo_diff | 30-40 | 9 | 6-3 | 66.67% | 1.803u | 27.74% |
-| abs_surface_elo_diff | 40-50 | 7 | 4-3 | 57.14% | -0.447u | -9.41% |
-| abs_surface_elo_diff | 50-70 | 6 | 6-0 | 100.0% | 4.007u | 94.28% |
+| abs_surface_elo_diff | 0-20 | 22 | 10-12 | 45.45% | -2.685u | -17.05% |
+| abs_surface_elo_diff | 20-30 | 11 | 4-7 | 36.36% | -1.758u | -21.31% |
+| abs_surface_elo_diff | 30-40 | 10 | 6-4 | 60.0% | 1.303u | 18.61% |
+| abs_surface_elo_diff | 50-70 | 8 | 8-0 | 100.0% | 5.332u | 92.73% |
 | abs_surface_elo_diff | 70-90 | 5 | 2-3 | 40.0% | -0.768u | -23.63% |
 | abs_surface_elo_diff | 90-100 | 5 | 2-3 | 40.0% | -0.075u | -2.14% |
 | abs_surface_elo_diff | 100-120 | 7 | 2-5 | 28.57% | -2.068u | -37.6% |
@@ -118,12 +116,12 @@ Generated: 2026-06-03T12:30:37.058674+02:00
 |---|---|---:|---:|---:|---:|---:|
 | under | UNDER + abs_overall_elo_diff in 150-180 | 5 | 4-1 | 80.0% | 3.194u | 85.17% |
 | under | UNDER + abs_surface_elo_diff in 150-180 | 5 | 4-1 | 80.0% | 3.194u | 85.17% |
-| under | UNDER + abs_overall_elo_diff in 40-50 | 9 | 7-2 | 77.78% | 3.267u | 59.4% |
-| under | UNDER + abs_surface_elo_diff in 40-50 | 9 | 7-2 | 77.78% | 3.267u | 59.4% |
+| under | UNDER + abs_overall_elo_diff in 40-50 | 9 | 7-2 | 77.78% | 3.517u | 66.99% |
+| under | UNDER + abs_surface_elo_diff in 40-50 | 9 | 7-2 | 77.78% | 3.517u | 66.99% |
+| under | UNDER + abs_overall_elo_diff in 90-100 | 7 | 5-2 | 71.43% | 2.452u | 57.69% |
+| under | UNDER + abs_surface_elo_diff in 90-100 | 7 | 5-2 | 71.43% | 2.452u | 57.69% |
 | under | UNDER + abs_overall_elo_diff in 120-150 | 9 | 5-4 | 55.56% | 2.419u | 43.98% |
 | under | UNDER + abs_surface_elo_diff in 120-150 | 9 | 5-4 | 55.56% | 2.419u | 43.98% |
-| under | UNDER + abs_overall_elo_diff in 90-100 | 6 | 4-2 | 66.67% | 1.302u | 40.06% |
-| under | UNDER + abs_surface_elo_diff in 90-100 | 6 | 4-2 | 66.67% | 1.302u | 40.06% |
 | over | OVER + abs_overall_elo_diff in 0-20 | 5 | 3-2 | 60.0% | 0.565u | 25.11% |
 | over | OVER + abs_surface_elo_diff in 0-20 | 5 | 3-2 | 60.0% | 0.565u | 25.11% |
 
@@ -131,46 +129,42 @@ Generated: 2026-06-03T12:30:37.058674+02:00
 
 | Side | Rule | N | W-L | WR | Profit | ROI |
 |---|---|---:|---:|---:|---:|---:|
-| under | UNDER + abs_overall_elo_diff in 30-40 | 10 | 6-4 | 60.0% | 1.937u | 32.28% |
-| under | UNDER + abs_surface_elo_diff in 30-40 | 10 | 6-4 | 60.0% | 1.937u | 32.28% |
-| under | UNDER + abs_overall_elo_diff in 70-90 | 10 | 6-4 | 60.0% | 1.484u | 25.81% |
-| under | UNDER + abs_surface_elo_diff in 70-90 | 10 | 6-4 | 60.0% | 1.484u | 25.81% |
-| under | UNDER + abs_overall_elo_diff in 0-20 | 32 | 17-15 | 53.12% | 1.54u | 8.21% |
-| under | UNDER + abs_surface_elo_diff in 0-20 | 32 | 17-15 | 53.12% | 1.54u | 8.21% |
-| under | UNDER + abs_overall_elo_diff in 50-70 | 16 | 7-9 | 43.75% | 0.262u | 2.83% |
-| under | UNDER + abs_surface_elo_diff in 50-70 | 16 | 7-9 | 43.75% | 0.262u | 2.83% |
-| over | OVER + abs_overall_elo_diff in 40-50 | 5 | 2-3 | 40.0% | -1.353u | -36.08% |
-| over | OVER + abs_surface_elo_diff in 40-50 | 5 | 2-3 | 40.0% | -1.353u | -36.08% |
-| over | OVER + abs_overall_elo_diff in 0-20 | 9 | 3-6 | 33.33% | -2.785u | -44.56% |
-| over | OVER + abs_surface_elo_diff in 0-20 | 9 | 3-6 | 33.33% | -2.785u | -44.56% |
-| over | OVER + abs_overall_elo_diff in 20-30 | 7 | 2-5 | 28.57% | -2.513u | -50.26% |
-| over | OVER + abs_surface_elo_diff in 20-30 | 7 | 2-5 | 28.57% | -2.513u | -50.26% |
+| under | UNDER + abs_overall_elo_diff in 30-40 | 5 | 3-2 | 60.0% | 1.082u | 33.29% |
+| under | UNDER + abs_surface_elo_diff in 30-40 | 5 | 3-2 | 60.0% | 1.082u | 33.29% |
+| under | UNDER + abs_overall_elo_diff in 0-20 | 35 | 20-15 | 57.14% | 3.33u | 15.67% |
+| under | UNDER + abs_surface_elo_diff in 0-20 | 35 | 20-15 | 57.14% | 3.33u | 15.67% |
+| under | UNDER + abs_overall_elo_diff in 70-90 | 9 | 4-5 | 44.44% | -0.086u | -1.64% |
+| under | UNDER + abs_surface_elo_diff in 70-90 | 9 | 4-5 | 44.44% | -0.086u | -1.64% |
+| under | UNDER + abs_overall_elo_diff in 20-30 | 18 | 7-11 | 38.89% | -2.255u | -18.04% |
+| under | UNDER + abs_surface_elo_diff in 20-30 | 18 | 7-11 | 38.89% | -2.255u | -18.04% |
+| over | OVER + abs_overall_elo_diff in 50-70 | 5 | 5-0 | 100.0% | 2.925u | 90.0% |
+| over | OVER + abs_surface_elo_diff in 50-70 | 5 | 5-0 | 100.0% | 2.925u | 90.0% |
+| over | OVER + abs_overall_elo_diff in 0-20 | 8 | 2-6 | 25.0% | -3.195u | -55.57% |
+| over | OVER + abs_surface_elo_diff in 0-20 | 8 | 2-6 | 25.0% | -3.195u | -55.57% |
 
 ### itf
 
 | Side | Rule | N | W-L | WR | Profit | ROI |
 |---|---|---:|---:|---:|---:|---:|
-| under | UNDER + abs_overall_elo_diff in 0-20 | 8 | 5-3 | 62.5% | 1.265u | 28.11% |
-| under | UNDER + abs_surface_elo_diff in 0-20 | 8 | 5-3 | 62.5% | 1.265u | 28.11% |
 
 ### wta
 
 | Side | Rule | N | W-L | WR | Profit | ROI |
 |---|---|---:|---:|---:|---:|---:|
-| under | UNDER + abs_overall_elo_diff in 180-220 | 10 | 9-1 | 90.0% | 5.373u | 82.66% |
-| under | UNDER + abs_surface_elo_diff in 180-220 | 10 | 9-1 | 90.0% | 5.373u | 82.66% |
-| under | UNDER + abs_overall_elo_diff in 50-70 | 15 | 9-6 | 60.0% | 2.678u | 24.91% |
-| under | UNDER + abs_surface_elo_diff in 50-70 | 15 | 9-6 | 60.0% | 2.678u | 24.91% |
-| under | UNDER + abs_overall_elo_diff in 30-40 | 11 | 5-6 | 45.45% | -0.139u | -2.06% |
-| under | UNDER + abs_surface_elo_diff in 30-40 | 11 | 5-6 | 45.45% | -0.139u | -2.06% |
-| under | UNDER + abs_overall_elo_diff in 100-120 | 5 | 2-3 | 40.0% | -0.188u | -4.7% |
-| under | UNDER + abs_surface_elo_diff in 100-120 | 5 | 2-3 | 40.0% | -0.188u | -4.7% |
-| over | OVER + abs_overall_elo_diff in 0-20 | 8 | 5-3 | 62.5% | 1.357u | 19.39% |
-| over | OVER + abs_surface_elo_diff in 0-20 | 8 | 5-3 | 62.5% | 1.357u | 19.39% |
+| under | UNDER + abs_overall_elo_diff in 180-220 | 10 | 9-1 | 90.0% | 5.468u | 84.12% |
+| under | UNDER + abs_surface_elo_diff in 180-220 | 10 | 9-1 | 90.0% | 5.468u | 84.12% |
+| under | UNDER + abs_overall_elo_diff in 50-70 | 15 | 10-5 | 66.67% | 4.223u | 39.28% |
+| under | UNDER + abs_surface_elo_diff in 50-70 | 15 | 10-5 | 66.67% | 4.223u | 39.28% |
+| under | UNDER + abs_overall_elo_diff in 30-40 | 8 | 4-4 | 50.0% | 0.611u | 12.22% |
+| under | UNDER + abs_surface_elo_diff in 30-40 | 8 | 4-4 | 50.0% | 0.611u | 12.22% |
+| under | UNDER + abs_overall_elo_diff in 0-20 | 17 | 8-9 | 47.06% | 0.41u | 3.49% |
+| under | UNDER + abs_surface_elo_diff in 0-20 | 17 | 8-9 | 47.06% | 0.41u | 3.49% |
+| over | OVER + abs_overall_elo_diff in 0-20 | 8 | 4-4 | 50.0% | -0.505u | -6.97% |
+| over | OVER + abs_surface_elo_diff in 0-20 | 8 | 4-4 | 50.0% | -0.505u | -6.97% |
+| over | OVER + abs_overall_elo_diff in 20-30 | 6 | 2-4 | 33.33% | -1.168u | -24.59% |
+| over | OVER + abs_surface_elo_diff in 20-30 | 6 | 2-4 | 33.33% | -1.168u | -24.59% |
 | over | OVER + abs_overall_elo_diff in 100-120 | 6 | 2-4 | 33.33% | -1.568u | -31.36% |
 | over | OVER + abs_surface_elo_diff in 100-120 | 6 | 2-4 | 33.33% | -1.568u | -31.36% |
-| over | OVER + abs_overall_elo_diff in 20-30 | 5 | 1-4 | 20.0% | -2.03u | -50.75% |
-| over | OVER + abs_surface_elo_diff in 20-30 | 5 | 1-4 | 20.0% | -2.03u | -50.75% |
 
 
 ## Top by line
@@ -179,19 +173,19 @@ Generated: 2026-06-03T12:30:37.058674+02:00
 
 | Side | Rule | N | W-L | WR | Profit | ROI |
 |---|---|---:|---:|---:|---:|---:|
-| under | UNDER + abs_overall_elo_diff in 220+ | 5 | 1-4 | 20.0% | -1.66u | -51.08% |
-| under | UNDER + abs_surface_elo_diff in 220+ | 5 | 1-4 | 20.0% | -1.66u | -51.08% |
+| under | UNDER + abs_overall_elo_diff in 220+ | 6 | 2-4 | 33.33% | -1.16u | -30.93% |
+| under | UNDER + abs_surface_elo_diff in 220+ | 6 | 2-4 | 33.33% | -1.16u | -30.93% |
 
 ### Line 19.5
 
 | Side | Rule | N | W-L | WR | Profit | ROI |
 |---|---|---:|---:|---:|---:|---:|
-| under | UNDER + abs_overall_elo_diff in 50-70 | 5 | 3-2 | 60.0% | 0.701u | 17.53% |
-| under | UNDER + abs_surface_elo_diff in 50-70 | 5 | 3-2 | 60.0% | 0.701u | 17.53% |
-| under | UNDER + abs_overall_elo_diff in 0-20 | 9 | 5-4 | 55.56% | 0.81u | 14.73% |
-| under | UNDER + abs_surface_elo_diff in 0-20 | 9 | 5-4 | 55.56% | 0.81u | 14.73% |
-| under | UNDER + abs_overall_elo_diff in 30-40 | 6 | 3-3 | 50.0% | -0.185u | -5.69% |
-| under | UNDER + abs_surface_elo_diff in 30-40 | 6 | 3-3 | 50.0% | -0.185u | -5.69% |
+| under | UNDER + abs_overall_elo_diff in 150-180 | 5 | 4-1 | 80.0% | 2.097u | 64.52% |
+| under | UNDER + abs_surface_elo_diff in 150-180 | 5 | 4-1 | 80.0% | 2.097u | 64.52% |
+| under | UNDER + abs_overall_elo_diff in 0-20 | 8 | 5-3 | 62.5% | 1.745u | 33.24% |
+| under | UNDER + abs_surface_elo_diff in 0-20 | 8 | 5-3 | 62.5% | 1.745u | 33.24% |
+| under | UNDER + abs_overall_elo_diff in 220+ | 7 | 3-4 | 42.86% | -0.676u | -12.88% |
+| under | UNDER + abs_surface_elo_diff in 220+ | 7 | 3-4 | 42.86% | -0.676u | -12.88% |
 
 ### Line 20.0
 
@@ -202,44 +196,33 @@ Generated: 2026-06-03T12:30:37.058674+02:00
 
 | Side | Rule | N | W-L | WR | Profit | ROI |
 |---|---|---:|---:|---:|---:|---:|
-| under | UNDER + abs_overall_elo_diff in 180-220 | 9 | 7-2 | 77.78% | 3.074u | 61.48% |
-| under | UNDER + abs_surface_elo_diff in 180-220 | 9 | 7-2 | 77.78% | 3.074u | 61.48% |
-| under | UNDER + abs_overall_elo_diff in 50-70 | 15 | 10-5 | 66.67% | 4.432u | 43.24% |
-| under | UNDER + abs_surface_elo_diff in 50-70 | 15 | 10-5 | 66.67% | 4.432u | 43.24% |
-| under | UNDER + abs_overall_elo_diff in 70-90 | 6 | 4-2 | 66.67% | 0.972u | 25.92% |
-| under | UNDER + abs_surface_elo_diff in 70-90 | 6 | 4-2 | 66.67% | 0.972u | 25.92% |
-
-### Line 21.0
-
-| Side | Rule | N | W-L | WR | Profit | ROI |
-|---|---|---:|---:|---:|---:|---:|
+| under | UNDER + abs_overall_elo_diff in 180-220 | 8 | 6-2 | 75.0% | 2.594u | 57.64% |
+| under | UNDER + abs_surface_elo_diff in 180-220 | 8 | 6-2 | 75.0% | 2.594u | 57.64% |
+| under | UNDER + abs_overall_elo_diff in 30-40 | 6 | 4-2 | 66.67% | 1.959u | 52.24% |
+| under | UNDER + abs_surface_elo_diff in 30-40 | 6 | 4-2 | 66.67% | 1.959u | 52.24% |
+| under | UNDER + abs_overall_elo_diff in 70-90 | 6 | 4-2 | 66.67% | 0.892u | 23.79% |
+| under | UNDER + abs_surface_elo_diff in 70-90 | 6 | 4-2 | 66.67% | 0.892u | 23.79% |
 
 ### Line 21.5
 
 | Side | Rule | N | W-L | WR | Profit | ROI |
 |---|---|---:|---:|---:|---:|---:|
-| under | UNDER + abs_overall_elo_diff in 220+ | 5 | 4-1 | 80.0% | 2.727u | 90.9% |
-| under | UNDER + abs_surface_elo_diff in 220+ | 5 | 4-1 | 80.0% | 2.727u | 90.9% |
-| under | UNDER + abs_overall_elo_diff in 150-180 | 5 | 4-1 | 80.0% | 2.789u | 79.69% |
-| under | UNDER + abs_surface_elo_diff in 150-180 | 5 | 4-1 | 80.0% | 2.789u | 79.69% |
 | under | UNDER + abs_overall_elo_diff in 120-150 | 7 | 4-3 | 57.14% | 2.117u | 49.81% |
 | under | UNDER + abs_surface_elo_diff in 120-150 | 7 | 4-3 | 57.14% | 2.117u | 49.81% |
-| over | OVER + abs_overall_elo_diff in 0-20 | 8 | 5-3 | 62.5% | 1.165u | 17.92% |
-| over | OVER + abs_surface_elo_diff in 0-20 | 8 | 5-3 | 62.5% | 1.165u | 17.92% |
-| over | OVER + abs_overall_elo_diff in 20-30 | 5 | 1-4 | 20.0% | -2.55u | -72.86% |
-| over | OVER + abs_surface_elo_diff in 20-30 | 5 | 1-4 | 20.0% | -2.55u | -72.86% |
+| under | UNDER + abs_overall_elo_diff in 150-180 | 6 | 4-2 | 66.67% | 2.039u | 47.98% |
+| under | UNDER + abs_surface_elo_diff in 150-180 | 6 | 4-2 | 66.67% | 2.039u | 47.98% |
+| under | UNDER + abs_overall_elo_diff in 30-40 | 7 | 4-3 | 57.14% | 1.116u | 21.26% |
+| under | UNDER + abs_surface_elo_diff in 30-40 | 7 | 4-3 | 57.14% | 1.116u | 21.26% |
+| over | OVER + abs_overall_elo_diff in 0-20 | 9 | 5-4 | 55.56% | 0.165u | 2.2% |
+| over | OVER + abs_surface_elo_diff in 0-20 | 9 | 5-4 | 55.56% | 0.165u | 2.2% |
 
 ### Line 22.5
 
 | Side | Rule | N | W-L | WR | Profit | ROI |
 |---|---|---:|---:|---:|---:|---:|
-| under | UNDER + abs_overall_elo_diff in 0-20 | 8 | 6-2 | 75.0% | 1.79u | 42.12% |
-| under | UNDER + abs_surface_elo_diff in 0-20 | 8 | 6-2 | 75.0% | 1.79u | 42.12% |
-| under | UNDER + abs_overall_elo_diff in 40-50 | 7 | 4-3 | 57.14% | 0.762u | 17.93% |
-| under | UNDER + abs_surface_elo_diff in 40-50 | 7 | 4-3 | 57.14% | 0.762u | 17.93% |
-| under | UNDER + abs_overall_elo_diff in 30-40 | 6 | 3-3 | 50.0% | -0.26u | -8.0% |
-| under | UNDER + abs_surface_elo_diff in 30-40 | 6 | 3-3 | 50.0% | -0.26u | -8.0% |
-| over | OVER + abs_overall_elo_diff in 20-30 | 5 | 2-3 | 40.0% | -1.09u | -27.25% |
-| over | OVER + abs_surface_elo_diff in 20-30 | 5 | 2-3 | 40.0% | -1.09u | -27.25% |
+| under | UNDER + abs_overall_elo_diff in 0-20 | 8 | 6-2 | 75.0% | 1.54u | 34.22% |
+| under | UNDER + abs_surface_elo_diff in 0-20 | 8 | 6-2 | 75.0% | 1.54u | 34.22% |
+| under | UNDER + abs_overall_elo_diff in 40-50 | 8 | 5-3 | 62.5% | 1.242u | 26.15% |
+| under | UNDER + abs_surface_elo_diff in 40-50 | 8 | 5-3 | 62.5% | 1.242u | 26.15% |
 | over | OVER + abs_overall_elo_diff in 0-20 | 9 | 2-7 | 22.22% | -3.835u | -66.7% |
 | over | OVER + abs_surface_elo_diff in 0-20 | 9 | 2-7 | 22.22% | -3.835u | -66.7% |
