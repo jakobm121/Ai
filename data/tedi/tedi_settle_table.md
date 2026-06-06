@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-05T08:11:12.103062+02:00
+Generated: 2026-06-06T09:25:31.308685+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 26 | 26 | 0 | 12 | 12 | 2 | 50.0% | 1.08u | 4.15% |
-| tedi_v2_test | 6 | 6 | 0 | 2 | 4 | 0 | 33.33% | -1.82u | -30.33% |
+| tedi_main_150 | 37 | 37 | 0 | 18 | 16 | 3 | 52.94% | 3.68u | 9.95% |
+| tedi_v2_test | 9 | 9 | 0 | 4 | 5 | 0 | 44.44% | -0.62u | -6.89% |
 
 ## Results
 
@@ -45,3 +45,17 @@ Generated: 2026-06-05T08:11:12.103062+02:00
 | 2026-06-04 | 14:00 | tedi_main_150 | loss | -1.00 | R. Montgomery - L. Boskovic | UNDER 20.5 games | 2.00 | 28 | 6-3, 5-7, 1-6 |
 | 2026-06-04 | 14:00 | tedi_v2_test | loss | -1.00 | R. Montgomery - L. Boskovic | UNDER 20.5 games | 2.00 | 28 | 6-3, 5-7, 1-6 |
 | 2026-06-04 | 15:00 | tedi_main_150 | win | 1.01 | M. Kostyuk - M. Andreeva | UNDER 21.5 games | 2.01 | 16 | 1-6, 3-6 |
+| 2026-06-05 | 10:00 | tedi_main_150 | push | 0.00 | A. Hertel - M. Jovanovic | UNDER 20.0 games | 2.05 | None | None |
+| 2026-06-05 | 11:30 | tedi_main_150 | win | 1.14 | F. Romano - O. Virtanen | UNDER 21.5 games | 2.14 | 20 | 4-6, 4-6 |
+| 2026-06-05 | 11:30 | tedi_main_150 | loss | -1.00 | T. Preston - A. Krueger | UNDER 20.5 games | 2.00 | 27 | 6-2, 3-6, 4-6 |
+| 2026-06-05 | 11:30 | tedi_v2_test | loss | -1.00 | T. Preston - A. Krueger | UNDER 20.5 games | 2.00 | 27 | 6-2, 3-6, 4-6 |
+| 2026-06-05 | 12:00 | tedi_main_150 | loss | -1.00 | A. Molcan - V. Sachko | UNDER 20.5 games | 2.00 | 26 | 3-6, 6-1, 6-4 |
+| 2026-06-05 | 12:00 | tedi_main_150 | loss | -1.00 | A. Moro Canas - H. Squire | UNDER 21.5 games | 2.20 | 22 | 6-7, 3-6 |
+| 2026-06-05 | 12:00 | tedi_main_150 | win | 1.02 | K. Wehnelt - T. Al Azmeh | UNDER 20.5 games | 2.02 | 14 | 6-1, 6-1 |
+| 2026-06-05 | 13:00 | tedi_main_150 | win | 1.20 | L. Pigossi - D. Chiesa | UNDER 20.5 games | 2.20 | 13 | 1-6, 0-6 |
+| 2026-06-05 | 13:00 | tedi_main_150 | win | 1.10 | M. Lombardini - F. Urgesi | UNDER 19.5 games | 2.10 | 14 | 0-6, 2-6 |
+| 2026-06-05 | 13:00 | tedi_v2_test | win | 1.10 | M. Lombardini - F. Urgesi | UNDER 19.5 games | 2.10 | 14 | 0-6, 2-6 |
+| 2026-06-05 | 13:30 | tedi_main_150 | loss | -1.00 | H. Barton - T. Daniel | UNDER 21.5 games | 2.06 | 25 | 7-6, 7-5 |
+| 2026-06-05 | 15:00 | tedi_main_150 | win | 1.04 | M. Trungelliti - D. Dedura | UNDER 21.5 games | 2.04 | 17 | 2-6, 3-6 |
+| 2026-06-05 | 18:00 | tedi_main_150 | win | 1.10 | A. Walton - T. Legout | UNDER 19.5 games | 2.10 | 16 | 6-2, 6-2 |
+| 2026-06-05 | 18:00 | tedi_v2_test | win | 1.10 | A. Walton - T. Legout | UNDER 19.5 games | 2.10 | 16 | 6-2, 6-2 |

@@ -1,6 +1,6 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-05T08:11:11.999012+02:00`
+Generated: `2026-06-06T09:25:31.198194+02:00`
 
 Pending picks: **0**
 
@@ -8,48 +8,55 @@ Pending picks: **0**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 120 | 57 | 56 | 1 | 6 | 50.44% | +3.04u | 3.59% |
+| 127 | 61 | 59 | 1 | 6 | 50.83% | +4.17u | 4.64% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 8 | 2 | 5 | 0 | 1 | 28.57% | -2.01u | -38.29% |
+| 7 | 4 | 3 | 0 | 0 | 57.14% | +1.13u | 21.56% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 102 | 47 | 50 | 1 | 4 | 48.45% | -0.05u | -0.07% |
+| 109 | 51 | 53 | 1 | 4 | 49.04% | +1.08u | 1.38% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 76 | 35 | 37 | 1 | 3 | 48.61% | +0.23u | 0.43% |
+| 80 | 38 | 38 | 1 | 3 | 50.00% | +2.04u | 3.58% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 61 | 30 | 29 | 0 | 2 | 50.85% | +1.05u | 2.38% |
+| 64 | 32 | 30 | 0 | 2 | 51.61% | +1.93u | 4.15% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 16 | 8 | 8 | 0 | 0 | 50.00% | -0.37u | -3.06% |
+| 18 | 9 | 9 | 0 | 0 | 50.00% | -0.32u | -2.33% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 104 | 49 | 48 | 1 | 6 | 50.52% | +3.41u | 4.69% |
+| 109 | 52 | 50 | 1 | 6 | 50.98% | +4.49u | 5.87% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-05 | 18:00 | 5 | A. Walton - T. Legout | UNDER 19.5 games | 2.10 | ✅ win | 71.99 | 16 | 6-2, 6-2 | +0.82u |
+| 2026-06-05 | 16:00 | 6 | H. Searle - K. Poling | UNDER 19.0 games | 2.11 | ❌ loss | 70.56 | 31 | 6-7, 6-3, 3-6 | -0.75u |
+| 2026-06-05 | 15:00 | 2 | N. Sanchez Izquierdo - L. Midon | OVER 22.5 games | 2.07 | ✅ win | 78.29 | 31 | 6-7, 6-3, 6-3 | +0.80u |
+| 2026-06-05 | 14:00 | 1 | C. Paquet - D. Astakhova | OVER 22.5 games | 2.15 | ❌ loss | 84.81 | 21 | 5-7, 3-6 | -0.75u |
+| 2026-06-05 | 12:00 | 4 | N. Makhlouf - B. Willwerth | UNDER 18.5 games | 2.20 | ✅ win | 73.15 | 18 | 0-6, 5-7 | +0.90u |
+| 2026-06-05 | 11:30 | 7 | T. Preston - A. Krueger | UNDER 20.5 games | 2.00 | ❌ loss | 70.13 | 27 | 6-2, 3-6, 4-6 | -0.75u |
+| 2026-06-05 | 11:30 | 3 | F. Romano - O. Virtanen | UNDER 21.5 games | 2.14 | ✅ win | 76.97 | 20 | 4-6, 4-6 | +0.85u |
 | 2026-06-04 | 15:30 | 4 | H. Barton - N. Gombos | UNDER 20.5 games | 2.20 | ✅ win | 75.88 | 19 | 6-3, 6-4 | +0.90u |
 | 2026-06-04 | 13:30 | 1 | M. Trungelliti - Y. H. Hsu | UNDER 19.5 games | 2.10 | ❌ loss | 77.60 | 23 | 3-6, 6-1, 6-1 | -0.75u |
 | 2026-06-04 | 13:00 | 7 | C. Monnet - T. Prozorova | UNDER 19.5 games | 2.16 | ❌ loss | 71.54 | 26 | 1-6, 6-4, 6-3 | -0.75u |
@@ -123,11 +130,4 @@ Pending picks: **0**
 | 2026-05-27 | 17:00 | 6 | D. Dedura - S. Pieri | UNDER 20.5 games | 2.15 | ✅ win | 70.77 | 17 | 6-2, 6-3 | +0.86u |
 | 2026-05-27 | 16:50 | 4 | E. Lys - S. Cirstea | UNDER 19.5 games | 2.07 | ✅ win | 71.31 | 15 | 3-6, 0-6 | +0.80u |
 | 2026-05-27 | 16:15 | 5 | J. Teichmann - M. Frech | OVER 21.5 games | 1.93 | ✅ win | 71.24 | 22 | 7-5, 6-4 | +0.70u |
-| 2026-05-27 | 16:00 | 7 | L. Pokorny - M. Krumich | UNDER 20.5 games | 2.04 | ❌ loss | 70.08 | 30 | 7-5, 2-6, 4-6 | -0.75u |
-| 2026-05-27 | 14:45 | 3 | F. Jones - M. Bouzkova | UNDER 19.5 games | 2.15 | ✅ win | 72.19 | 19 | 0-6, 6-7 | +0.86u |
-| 2026-05-27 | 14:00 | 1 | M. Kostyuk - K. Volynets | UNDER 18.5 games | 2.20 | ❌ loss | 76.71 | 31 | 6-7, 6-3, 6-3 | -0.75u |
-| 2026-05-27 | 11:30 | 2 | E. Ymer - G. A. Olivieri | OVER 22.5 games | 1.99 | ❌ loss | 80.14 | 21 | 2-6, 6-7 | -0.75u |
-| 2026-05-27 | 11:00 | 1 | T. Korpatsch - Xin. Wang | OVER 21.5 games | 1.96 | ✅ win | 83.50 | 25 | 6-2, 2-6, 6-3 | +0.72u |
-| 2026-05-27 | 11:00 | 9 | C. McNally - B. Bencic | UNDER 20.0 games | 2.09 | ✅ win | 71.33 | 16 | 4-6, 0-6 | +0.82u |
-| 2026-05-27 | 10:00 | 8 | H. Mayot - S. Pankin | UNDER 20.5 games | 2.10 | ❌ loss | 71.37 | 31 | 6-3, 6-7, 3-6 | -0.75u |
 

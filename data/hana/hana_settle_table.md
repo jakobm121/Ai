@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-05T08:11:12.233372+02:00
+Generated: 2026-06-06T09:25:31.451848+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 145 | 145 | 68 | 67 | 10 | 50.37% | 5.3u | 3.93% |
+| 162 | 162 | 78 | 73 | 11 | 51.66% | 9.98u | 6.61% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 18 | 18 | 9 | 9 | 0 | 50.0% | 0.52u | 2.89% |
-| single | 123 | 123 | 57 | 56 | 10 | 50.44% | 4.55u | 4.03% |
-| triple | 4 | 4 | 2 | 2 | 0 | 50.0% | 0.23u | 5.75% |
+| double | 24 | 24 | 12 | 11 | 1 | 52.17% | 1.68u | 7.3% |
+| single | 131 | 131 | 62 | 59 | 10 | 51.24% | 6.83u | 5.64% |
+| triple | 7 | 7 | 4 | 3 | 0 | 57.14% | 1.47u | 21.0% |
 
 ## Results
 
@@ -165,3 +165,20 @@ Generated: 2026-06-05T08:11:12.233372+02:00
 | 2026-06-04 | 15:00 | single | tedi | win | 1.01 | M. Kostyuk - M. Andreeva | UNDER 21.5 games | 2.01 | 16 | 1-6, 3-6 |
 | 2026-06-04 | 15:00 | single | lucija | win | 0.90 | N. Bartunkova - G. Knutson | OVER 20.5 games | 1.90 | 23 | 6-4, 7-6 |
 | 2026-06-04 | 15:30 | single | jakob | win | 1.20 | H. Barton - N. Gombos | UNDER 20.5 games | 2.20 | 19 | 6-3, 6-4 |
+| 2026-06-05 | 10:00 | double | lucija, tedi | push | 0.00 | A. Hertel - M. Jovanovic | UNDER 20.0 games | 2.05 | None | None |
+| 2026-06-05 | 11:30 | triple | jakob, lucija, tedi | win | 1.14 | F. Romano - O. Virtanen | UNDER 21.5 games | 2.14 | 20 | 4-6, 4-6 |
+| 2026-06-05 | 11:30 | triple | jakob, lucija, tedi | loss | -1.00 | T. Preston - A. Krueger | UNDER 20.5 games | 2.00 | 27 | 6-2, 3-6, 4-6 |
+| 2026-06-05 | 12:00 | double | lucija, tedi | loss | -1.00 | A. Molcan - V. Sachko | UNDER 20.5 games | 2.00 | 26 | 3-6, 6-1, 6-4 |
+| 2026-06-05 | 12:00 | single | tedi | loss | -1.00 | A. Moro Canas - H. Squire | UNDER 21.5 games | 2.20 | 22 | 6-7, 3-6 |
+| 2026-06-05 | 12:00 | double | lucija, tedi | win | 1.02 | K. Wehnelt - T. Al Azmeh | UNDER 20.5 games | 2.02 | 14 | 6-1, 6-1 |
+| 2026-06-05 | 12:00 | single | jakob | win | 1.20 | N. Makhlouf - B. Willwerth | UNDER 18.5 games | 2.20 | 18 | 0-6, 5-7 |
+| 2026-06-05 | 13:00 | single | tedi | win | 1.20 | L. Pigossi - D. Chiesa | UNDER 20.5 games | 2.20 | 13 | 1-6, 0-6 |
+| 2026-06-05 | 13:00 | double | lucija, tedi | win | 1.10 | M. Lombardini - F. Urgesi | UNDER 19.5 games | 2.10 | 14 | 0-6, 2-6 |
+| 2026-06-05 | 13:00 | single | lucija | win | 0.90 | R. Masarova - M. Stoiana | OVER 20.5 games | 1.90 | 25 | 6-4, 3-6, 6-0 |
+| 2026-06-05 | 13:30 | double | lucija, tedi | loss | -1.00 | H. Barton - T. Daniel | UNDER 21.5 games | 2.06 | 25 | 7-6, 7-5 |
+| 2026-06-05 | 14:00 | single | jakob | loss | -1.00 | C. Paquet - D. Astakhova | OVER 22.5 games | 2.15 | 21 | 5-7, 3-6 |
+| 2026-06-05 | 15:00 | double | lucija, tedi | win | 1.04 | M. Trungelliti - D. Dedura | UNDER 21.5 games | 2.04 | 17 | 2-6, 3-6 |
+| 2026-06-05 | 15:00 | single | jakob | win | 1.07 | N. Sanchez Izquierdo - L. Midon | OVER 22.5 games | 2.07 | 31 | 6-7, 6-3, 6-3 |
+| 2026-06-05 | 15:00 | single | lucija | win | 0.91 | S. Baez - M. Mrva | OVER 20.5 games | 1.91 | 22 | 6-4, 7-5 |
+| 2026-06-05 | 16:00 | single | jakob | loss | -1.00 | H. Searle - K. Poling | UNDER 19.0 games | 2.11 | 31 | 6-7, 6-3, 3-6 |
+| 2026-06-05 | 18:00 | triple | jakob, lucija, tedi | win | 1.10 | A. Walton - T. Legout | UNDER 19.5 games | 2.10 | 16 | 6-2, 6-2 |

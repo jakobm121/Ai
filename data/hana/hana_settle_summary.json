@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T08:11:12.233372+02:00",
+  "generated_at": "2026-06-06T09:25:31.451848+02:00",
   "description": "Hana settle built directly from settled results of Jakob, Tedi and Lucija.",
   "dedupe_key": "event_key + side + line",
   "source_results": {
@@ -10,121 +10,121 @@
   "source_debug": {
     "jakob": {
       "file": "data/jakob_results.json",
-      "loaded_rows": 120,
-      "settled_rows": 120
+      "loaded_rows": 127,
+      "settled_rows": 127
     },
     "tedi": {
       "file": "data/tedi/tedi_results.json",
-      "loaded_rows": 32,
-      "settled_rows": 32
+      "loaded_rows": 46,
+      "settled_rows": 46
     },
     "lucija": {
       "file": "data/lucija/lucija_results.json",
-      "loaded_rows": 38,
-      "settled_rows": 38
+      "loaded_rows": 49,
+      "settled_rows": 49
     }
   },
-  "unique_hana_picks": 145,
+  "unique_hana_picks": 162,
   "overall": {
-    "picks": 145,
-    "settled": 145,
-    "graded": 135,
-    "wins": 68,
-    "losses": 67,
-    "pushes": 10,
-    "stake": 135.0,
-    "profit": 5.3,
-    "win_rate": 50.37,
-    "roi": 3.93
+    "picks": 162,
+    "settled": 162,
+    "graded": 151,
+    "wins": 78,
+    "losses": 73,
+    "pushes": 11,
+    "stake": 151.0,
+    "profit": 9.98,
+    "win_rate": 51.66,
+    "roi": 6.61
   },
   "by_consensus": {
     "double": {
-      "picks": 18,
-      "settled": 18,
-      "graded": 18,
-      "wins": 9,
-      "losses": 9,
-      "pushes": 0,
-      "stake": 18.0,
-      "profit": 0.52,
-      "win_rate": 50.0,
-      "roi": 2.89
+      "picks": 24,
+      "settled": 24,
+      "graded": 23,
+      "wins": 12,
+      "losses": 11,
+      "pushes": 1,
+      "stake": 23.0,
+      "profit": 1.68,
+      "win_rate": 52.17,
+      "roi": 7.3
     },
     "single": {
-      "picks": 123,
-      "settled": 123,
-      "graded": 113,
-      "wins": 57,
-      "losses": 56,
+      "picks": 131,
+      "settled": 131,
+      "graded": 121,
+      "wins": 62,
+      "losses": 59,
       "pushes": 10,
-      "stake": 113.0,
-      "profit": 4.55,
-      "win_rate": 50.44,
-      "roi": 4.03
+      "stake": 121.0,
+      "profit": 6.83,
+      "win_rate": 51.24,
+      "roi": 5.64
     },
     "triple": {
-      "picks": 4,
-      "settled": 4,
-      "graded": 4,
-      "wins": 2,
-      "losses": 2,
+      "picks": 7,
+      "settled": 7,
+      "graded": 7,
+      "wins": 4,
+      "losses": 3,
       "pushes": 0,
-      "stake": 4.0,
-      "profit": 0.23,
-      "win_rate": 50.0,
-      "roi": 5.75
+      "stake": 7.0,
+      "profit": 1.47,
+      "win_rate": 57.14,
+      "roi": 21.0
     }
   },
   "by_side": {
     "over": {
-      "picks": 17,
-      "settled": 17,
-      "graded": 16,
-      "wins": 8,
-      "losses": 8,
+      "picks": 21,
+      "settled": 21,
+      "graded": 20,
+      "wins": 11,
+      "losses": 9,
       "pushes": 1,
-      "stake": 16.0,
-      "profit": -0.47,
-      "win_rate": 50.0,
-      "roi": -2.94
+      "stake": 20.0,
+      "profit": 1.41,
+      "win_rate": 55.0,
+      "roi": 7.05
     },
     "under": {
-      "picks": 128,
-      "settled": 128,
-      "graded": 119,
-      "wins": 60,
-      "losses": 59,
-      "pushes": 9,
-      "stake": 119.0,
-      "profit": 5.77,
-      "win_rate": 50.42,
-      "roi": 4.85
+      "picks": 141,
+      "settled": 141,
+      "graded": 131,
+      "wins": 67,
+      "losses": 64,
+      "pushes": 10,
+      "stake": 131.0,
+      "profit": 8.57,
+      "win_rate": 51.15,
+      "roi": 6.54
     }
   },
   "by_tour_level": {
     "challenger": {
-      "picks": 95,
-      "settled": 95,
-      "graded": 86,
-      "wins": 44,
-      "losses": 42,
+      "picks": 107,
+      "settled": 107,
+      "graded": 98,
+      "wins": 50,
+      "losses": 48,
       "pushes": 9,
-      "stake": 86.0,
-      "profit": 5.19,
-      "win_rate": 51.16,
-      "roi": 6.03
+      "stake": 98.0,
+      "profit": 5.35,
+      "win_rate": 51.02,
+      "roi": 5.46
     },
     "itf": {
-      "picks": 13,
-      "settled": 13,
-      "graded": 12,
-      "wins": 4,
+      "picks": 18,
+      "settled": 18,
+      "graded": 16,
+      "wins": 8,
       "losses": 8,
-      "pushes": 1,
-      "stake": 12.0,
-      "profit": -3.65,
-      "win_rate": 33.33,
-      "roi": -30.42
+      "pushes": 2,
+      "stake": 16.0,
+      "profit": 0.87,
+      "win_rate": 50.0,
+      "roi": 5.44
     },
     "wta": {
       "picks": 37,
