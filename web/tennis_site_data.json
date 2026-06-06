@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T15:19:28.112049+02:00",
+  "generated_at": "2026-06-06T09:40:44.388796+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -23,18 +23,18 @@
   },
   "summary": {
     "picks": 589,
-    "settled": 546,
-    "pending": 12,
-    "wins": 241,
-    "losses": 305,
-    "hit_rate": 44.1,
-    "stake": 663.25,
-    "profit": -13.21,
-    "roi": -2.0,
-    "avg_odds": 2.26,
+    "settled": 551,
+    "pending": 7,
+    "wins": 242,
+    "losses": 309,
+    "hit_rate": 43.9,
+    "stake": 669.25,
+    "profit": -15.94,
+    "roi": -2.4,
+    "avg_odds": 2.27,
     "total_results": 589,
-    "settled_picks": 546,
-    "pending_picks": 12
+    "settled_picks": 551,
+    "pending_picks": 7
   },
   "current_picks": [
     {
@@ -591,9 +591,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-05T08:39:41.702121+02:00",
-      "reasoning": "T. Kovacevic is selected against A. Obradovic in W15 Banja Luka. The model prices T. Kovacevic at 62.2% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.25 across 9 bookmakers, leaving an estimated edge of +20.0%. Recent-form profile: T. Kovacevic last-10 win rate 60.0%, avg set diff +0.30, avg game diff +1.20; A. Obradovic last-10 win rate 50.0%, avg set diff +0.00, avg game diff -0.30. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "T. Kovacevic is selected against A. Obradovic in W15 Banja Luka. The model prices T. Kovacevic at 62.2% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.25 across 9 bookmakers, leaving an estimated edge of +20.0%. Recent-form profile: T. Kovacevic last-10 win rate 60.0%, avg set diff +0.30, avg game diff +1.20; A. Obradovic last-10 win rate 50.0%, avg set diff +0.00, avg game diff -0.30. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-06T09:40:41.134418+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "2-6, 6-3, 6-7"
     },
     {
       "pick_id": "efb0f98963ac2a32b510fe0a89e0ae29",
@@ -1713,9 +1719,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-05T08:37:34.675254+02:00",
-      "reasoning": "V. Morvayova is selected against M. Jorge in W50 Montemor-o-Novo. The model prices V. Morvayova at 60.0% versus an implied probability of 47.8% from best odds 2.09. Market median is 2.00 across 7 bookmakers, leaving an estimated edge of +12.2%. Recent-form profile: V. Morvayova last-10 win rate 50.0%, avg set diff -0.20, avg game diff -1.00; M. Jorge last-10 win rate 40.0%, avg set diff -0.50, avg game diff -1.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "V. Morvayova is selected against M. Jorge in W50 Montemor-o-Novo. The model prices V. Morvayova at 60.0% versus an implied probability of 47.8% from best odds 2.09. Market median is 2.00 across 7 bookmakers, leaving an estimated edge of +12.2%. Recent-form profile: V. Morvayova last-10 win rate 50.0%, avg set diff -0.20, avg game diff -1.00; M. Jorge last-10 win rate 40.0%, avg set diff -0.50, avg game diff -1.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.0,
+      "settled_at": "2026-06-06T09:40:41.866762+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-2, 6-3"
     },
     {
       "pick_id": "4285e3ba079b802fbc5d9f9f694b5ff4",
@@ -1848,9 +1860,15 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-05T08:37:50.466692+02:00",
-      "reasoning": "D. Dedura is selected against M. Trungelliti in Heilbronn. The model prices D. Dedura at 60.0% versus an implied probability of 38.2% from best odds 2.62. Market median is 2.47 across 10 bookmakers, leaving an estimated edge of +21.8%. Recent-form profile: D. Dedura last-10 win rate 50.0%, avg set diff +0.00, avg game diff +0.60; M. Trungelliti last-10 win rate 40.0%, avg set diff -0.10, avg game diff +1.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "D. Dedura is selected against M. Trungelliti in Heilbronn. The model prices D. Dedura at 60.0% versus an implied probability of 38.2% from best odds 2.62. Market median is 2.47 across 10 bookmakers, leaving an estimated edge of +21.8%. Recent-form profile: D. Dedura last-10 win rate 50.0%, avg set diff +0.00, avg game diff +0.60; M. Trungelliti last-10 win rate 40.0%, avg set diff -0.10, avg game diff +1.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 2.025,
+      "settled_at": "2026-06-06T09:40:42.617700+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "2-6, 3-6"
     },
     {
       "pick_id": "e2faed589eccbff8956e8a2a5bd747a8",
@@ -1983,9 +2001,15 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-05T08:39:56.958641+02:00",
-      "reasoning": "N. Noha Akugue is selected against S. Sorribes Tormo in Makarska. The model prices N. Noha Akugue at 55.9% versus an implied probability of 43.1% from best odds 2.32. Market median is 2.20 across 9 bookmakers, leaving an estimated edge of +12.8%. Recent-form profile: N. Noha Akugue last-10 win rate 80.0%, avg set diff +1.10, avg game diff +1.80; S. Sorribes Tormo last-10 win rate 80.0%, avg set diff +0.80, avg game diff +2.20. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "N. Noha Akugue is selected against S. Sorribes Tormo in Makarska. The model prices N. Noha Akugue at 55.9% versus an implied probability of 43.1% from best odds 2.32. Market median is 2.20 across 9 bookmakers, leaving an estimated edge of +12.8%. Recent-form profile: N. Noha Akugue last-10 win rate 80.0%, avg set diff +1.10, avg game diff +1.80; S. Sorribes Tormo last-10 win rate 80.0%, avg set diff +0.80, avg game diff +2.20. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-06T09:40:43.386104+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "0-6, 4-6"
     },
     {
       "pick_id": "d1a6e355cfc9457609648289592d2d4b",
@@ -2118,9 +2142,15 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-05T08:38:37.809385+02:00",
-      "reasoning": "G. Tabacco is selected against M. Giunta in M25 Caltanissetta (Italy). The model prices G. Tabacco at 66.0% versus an implied probability of 40.0% from best odds 2.50. Market median is 2.34 across 6 bookmakers, leaving an estimated edge of +26.0%. Recent-form profile: G. Tabacco last-10 win rate 70.0%, avg set diff +0.50, avg game diff +2.20; M. Giunta last-10 win rate 60.0%, avg set diff +0.60, avg game diff +2.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "G. Tabacco is selected against M. Giunta in M25 Caltanissetta (Italy). The model prices G. Tabacco at 66.0% versus an implied probability of 40.0% from best odds 2.50. Market median is 2.34 across 6 bookmakers, leaving an estimated edge of +26.0%. Recent-form profile: G. Tabacco last-10 win rate 70.0%, avg set diff +0.50, avg game diff +2.20; M. Giunta last-10 win rate 60.0%, avg set diff +0.60, avg game diff +2.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-06T09:40:44.229702+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "0-6, 2-6"
     }
   ],
   "results": [
@@ -83433,9 +83463,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-05T08:39:41.702121+02:00",
-      "reasoning": "T. Kovacevic is selected against A. Obradovic in W15 Banja Luka. The model prices T. Kovacevic at 62.2% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.25 across 9 bookmakers, leaving an estimated edge of +20.0%. Recent-form profile: T. Kovacevic last-10 win rate 60.0%, avg set diff +0.30, avg game diff +1.20; A. Obradovic last-10 win rate 50.0%, avg set diff +0.00, avg game diff -0.30. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "T. Kovacevic is selected against A. Obradovic in W15 Banja Luka. The model prices T. Kovacevic at 62.2% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.25 across 9 bookmakers, leaving an estimated edge of +20.0%. Recent-form profile: T. Kovacevic last-10 win rate 60.0%, avg set diff +0.30, avg game diff +1.20; A. Obradovic last-10 win rate 50.0%, avg set diff +0.00, avg game diff -0.30. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-06T09:40:41.134418+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "2-6, 6-3, 6-7"
     },
     {
       "pick_id": "efb0f98963ac2a32b510fe0a89e0ae29",
@@ -84555,9 +84591,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-05T08:37:34.675254+02:00",
-      "reasoning": "V. Morvayova is selected against M. Jorge in W50 Montemor-o-Novo. The model prices V. Morvayova at 60.0% versus an implied probability of 47.8% from best odds 2.09. Market median is 2.00 across 7 bookmakers, leaving an estimated edge of +12.2%. Recent-form profile: V. Morvayova last-10 win rate 50.0%, avg set diff -0.20, avg game diff -1.00; M. Jorge last-10 win rate 40.0%, avg set diff -0.50, avg game diff -1.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "V. Morvayova is selected against M. Jorge in W50 Montemor-o-Novo. The model prices V. Morvayova at 60.0% versus an implied probability of 47.8% from best odds 2.09. Market median is 2.00 across 7 bookmakers, leaving an estimated edge of +12.2%. Recent-form profile: V. Morvayova last-10 win rate 50.0%, avg set diff -0.20, avg game diff -1.00; M. Jorge last-10 win rate 40.0%, avg set diff -0.50, avg game diff -1.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.0,
+      "settled_at": "2026-06-06T09:40:41.866762+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-2, 6-3"
     },
     {
       "pick_id": "4285e3ba079b802fbc5d9f9f694b5ff4",
@@ -84690,9 +84732,15 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-05T08:37:50.466692+02:00",
-      "reasoning": "D. Dedura is selected against M. Trungelliti in Heilbronn. The model prices D. Dedura at 60.0% versus an implied probability of 38.2% from best odds 2.62. Market median is 2.47 across 10 bookmakers, leaving an estimated edge of +21.8%. Recent-form profile: D. Dedura last-10 win rate 50.0%, avg set diff +0.00, avg game diff +0.60; M. Trungelliti last-10 win rate 40.0%, avg set diff -0.10, avg game diff +1.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "D. Dedura is selected against M. Trungelliti in Heilbronn. The model prices D. Dedura at 60.0% versus an implied probability of 38.2% from best odds 2.62. Market median is 2.47 across 10 bookmakers, leaving an estimated edge of +21.8%. Recent-form profile: D. Dedura last-10 win rate 50.0%, avg set diff +0.00, avg game diff +0.60; M. Trungelliti last-10 win rate 40.0%, avg set diff -0.10, avg game diff +1.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 2.025,
+      "settled_at": "2026-06-06T09:40:42.617700+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "2-6, 3-6"
     },
     {
       "pick_id": "e2faed589eccbff8956e8a2a5bd747a8",
@@ -84825,9 +84873,15 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-05T08:39:56.958641+02:00",
-      "reasoning": "N. Noha Akugue is selected against S. Sorribes Tormo in Makarska. The model prices N. Noha Akugue at 55.9% versus an implied probability of 43.1% from best odds 2.32. Market median is 2.20 across 9 bookmakers, leaving an estimated edge of +12.8%. Recent-form profile: N. Noha Akugue last-10 win rate 80.0%, avg set diff +1.10, avg game diff +1.80; S. Sorribes Tormo last-10 win rate 80.0%, avg set diff +0.80, avg game diff +2.20. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "N. Noha Akugue is selected against S. Sorribes Tormo in Makarska. The model prices N. Noha Akugue at 55.9% versus an implied probability of 43.1% from best odds 2.32. Market median is 2.20 across 9 bookmakers, leaving an estimated edge of +12.8%. Recent-form profile: N. Noha Akugue last-10 win rate 80.0%, avg set diff +1.10, avg game diff +1.80; S. Sorribes Tormo last-10 win rate 80.0%, avg set diff +0.80, avg game diff +2.20. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-06T09:40:43.386104+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "0-6, 4-6"
     },
     {
       "pick_id": "d1a6e355cfc9457609648289592d2d4b",
@@ -84960,9 +85014,15 @@
           "fatigue_matches_3d": 2
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-05T08:38:37.809385+02:00",
-      "reasoning": "G. Tabacco is selected against M. Giunta in M25 Caltanissetta (Italy). The model prices G. Tabacco at 66.0% versus an implied probability of 40.0% from best odds 2.50. Market median is 2.34 across 6 bookmakers, leaving an estimated edge of +26.0%. Recent-form profile: G. Tabacco last-10 win rate 70.0%, avg set diff +0.50, avg game diff +2.20; M. Giunta last-10 win rate 60.0%, avg set diff +0.60, avg game diff +2.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "G. Tabacco is selected against M. Giunta in M25 Caltanissetta (Italy). The model prices G. Tabacco at 66.0% versus an implied probability of 40.0% from best odds 2.50. Market median is 2.34 across 6 bookmakers, leaving an estimated edge of +26.0%. Recent-form profile: G. Tabacco last-10 win rate 70.0%, avg set diff +0.50, avg game diff +2.20; M. Giunta last-10 win rate 60.0%, avg set diff +0.60, avg game diff +2.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-06T09:40:44.229702+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "0-6, 2-6"
     }
   ],
   "tables": {
@@ -84970,15 +85030,15 @@
       {
         "date": "2026-06-05",
         "picks": 15,
-        "settled": 10,
-        "pending": 5,
-        "wins": 4,
-        "losses": 6,
-        "hit_rate": 40.0,
-        "stake": 13.25,
-        "profit": -1.26,
-        "roi": -9.5,
-        "avg_odds": 2.33
+        "settled": 15,
+        "pending": 0,
+        "wins": 5,
+        "losses": 10,
+        "hit_rate": 33.3,
+        "stake": 19.25,
+        "profit": -3.99,
+        "roi": -20.7,
+        "avg_odds": 2.35
       },
       {
         "date": "2026-06-04",
@@ -85363,15 +85423,15 @@
         "date": "2026-06-05",
         "type": "underdog",
         "picks": 15,
-        "settled": 10,
-        "pending": 5,
-        "wins": 4,
-        "losses": 6,
-        "hit_rate": 40.0,
-        "stake": 13.25,
-        "profit": -1.26,
-        "roi": -9.5,
-        "avg_odds": 2.33
+        "settled": 15,
+        "pending": 0,
+        "wins": 5,
+        "losses": 10,
+        "hit_rate": 33.3,
+        "stake": 19.25,
+        "profit": -3.99,
+        "roi": -20.7,
+        "avg_odds": 2.35
       },
       {
         "date": "2026-06-04",
@@ -86190,14 +86250,14 @@
       {
         "group": "underdog",
         "picks": 467,
-        "settled": 430,
-        "pending": 12,
-        "wins": 177,
-        "losses": 253,
-        "hit_rate": 41.2,
-        "stake": 539.25,
-        "profit": -16.99,
-        "roi": -3.2,
+        "settled": 435,
+        "pending": 7,
+        "wins": 178,
+        "losses": 257,
+        "hit_rate": 40.9,
+        "stake": 545.25,
+        "profit": -19.72,
+        "roi": -3.6,
         "avg_odds": 2.38
       },
       {
@@ -86218,27 +86278,27 @@
       {
         "group": "2.30 - 2.69",
         "picks": 211,
-        "settled": 195,
-        "pending": 8,
-        "wins": 82,
-        "losses": 113,
-        "hit_rate": 42.1,
-        "stake": 244.5,
-        "profit": 10.22,
-        "roi": 4.2,
+        "settled": 199,
+        "pending": 4,
+        "wins": 83,
+        "losses": 116,
+        "hit_rate": 41.7,
+        "stake": 249.5,
+        "profit": 8.49,
+        "roi": 3.4,
         "avg_odds": 2.48
       },
       {
         "group": "2.00 - 2.29",
         "picks": 195,
-        "settled": 180,
-        "pending": 3,
+        "settled": 181,
+        "pending": 2,
         "wins": 73,
-        "losses": 107,
-        "hit_rate": 40.6,
-        "stake": 230.0,
-        "profit": -32.36,
-        "roi": -14.1,
+        "losses": 108,
+        "hit_rate": 40.3,
+        "stake": 231.0,
+        "profit": -33.36,
+        "roi": -14.4,
         "avg_odds": 2.15
       },
       {
@@ -86285,15 +86345,15 @@
       {
         "group": "Elite 88+",
         "picks": 503,
-        "settled": 465,
-        "pending": 12,
-        "wins": 200,
-        "losses": 265,
-        "hit_rate": 43.0,
-        "stake": 578.75,
-        "profit": -32.18,
-        "roi": -5.6,
-        "avg_odds": 2.23
+        "settled": 470,
+        "pending": 7,
+        "wins": 201,
+        "losses": 269,
+        "hit_rate": 42.8,
+        "stake": 584.75,
+        "profit": -34.91,
+        "roi": -6.0,
+        "avg_odds": 2.24
       },
       {
         "group": "Strong 82-87",
@@ -86339,40 +86399,40 @@
       {
         "group": "20%+",
         "picks": 200,
-        "settled": 183,
-        "pending": 6,
-        "wins": 68,
-        "losses": 115,
-        "hit_rate": 37.2,
-        "stake": 234.5,
-        "profit": -17.51,
-        "roi": -7.5,
+        "settled": 185,
+        "pending": 4,
+        "wins": 69,
+        "losses": 116,
+        "hit_rate": 37.3,
+        "stake": 237.0,
+        "profit": -16.74,
+        "roi": -7.1,
         "avg_odds": 2.52
       },
       {
         "group": "10% - 14.9%",
         "picks": 163,
-        "settled": 149,
-        "pending": 3,
+        "settled": 151,
+        "pending": 1,
         "wins": 72,
-        "losses": 77,
-        "hit_rate": 48.3,
-        "stake": 180.5,
-        "profit": 0.53,
-        "roi": 0.3,
+        "losses": 79,
+        "hit_rate": 47.7,
+        "stake": 182.75,
+        "profit": -1.72,
+        "roi": -0.9,
         "avg_odds": 2.12
       },
       {
         "group": "15% - 19.9%",
         "picks": 137,
-        "settled": 129,
-        "pending": 3,
+        "settled": 130,
+        "pending": 2,
         "wins": 58,
-        "losses": 71,
-        "hit_rate": 45.0,
-        "stake": 172.5,
-        "profit": 4.9,
-        "roi": 2.8,
+        "losses": 72,
+        "hit_rate": 44.6,
+        "stake": 173.75,
+        "profit": 3.65,
+        "roi": 2.1,
         "avg_odds": 2.26
       },
       {
@@ -86393,27 +86453,27 @@
       {
         "group": "Strong",
         "picks": 349,
-        "settled": 321,
-        "pending": 9,
-        "wins": 138,
-        "losses": 183,
-        "hit_rate": 43.0,
-        "stake": 401.25,
-        "profit": 0.13,
-        "roi": 0.0,
+        "settled": 325,
+        "pending": 5,
+        "wins": 139,
+        "losses": 186,
+        "hit_rate": 42.8,
+        "stake": 406.25,
+        "profit": -1.6,
+        "roi": -0.4,
         "avg_odds": 2.37
       },
       {
         "group": "Standard",
         "picks": 101,
-        "settled": 94,
-        "pending": 1,
+        "settled": 95,
+        "pending": 0,
         "wins": 41,
-        "losses": 53,
-        "hit_rate": 43.6,
-        "stake": 94.0,
-        "profit": -11.78,
-        "roi": -12.5,
+        "losses": 54,
+        "hit_rate": 43.2,
+        "stake": 95.0,
+        "profit": -12.78,
+        "roi": -13.5,
         "avg_odds": 2.06
       },
       {
@@ -86447,27 +86507,27 @@
       {
         "group": "challenger",
         "picks": 223,
-        "settled": 208,
-        "pending": 4,
-        "wins": 99,
-        "losses": 109,
+        "settled": 210,
+        "pending": 2,
+        "wins": 100,
+        "losses": 110,
         "hit_rate": 47.6,
-        "stake": 258.5,
-        "profit": 13.07,
-        "roi": 5.1,
+        "stake": 261.0,
+        "profit": 13.84,
+        "roi": 5.3,
         "avg_odds": 2.27
       },
       {
         "group": "itf",
         "picks": 203,
-        "settled": 184,
-        "pending": 7,
+        "settled": 187,
+        "pending": 4,
         "wins": 77,
-        "losses": 107,
-        "hit_rate": 41.8,
-        "stake": 211.5,
-        "profit": -11.16,
-        "roi": -5.3,
+        "losses": 110,
+        "hit_rate": 41.2,
+        "stake": 215.0,
+        "profit": -14.66,
+        "roi": -6.8,
         "avg_odds": 2.25
       },
       {
@@ -86501,27 +86561,27 @@
       {
         "group": "men",
         "picks": 371,
-        "settled": 345,
-        "pending": 6,
-        "wins": 148,
-        "losses": 197,
+        "settled": 347,
+        "pending": 4,
+        "wins": 149,
+        "losses": 198,
         "hit_rate": 42.9,
-        "stake": 417.75,
-        "profit": -19.28,
-        "roi": -4.6,
-        "avg_odds": 2.26
+        "stake": 420.25,
+        "profit": -18.51,
+        "roi": -4.4,
+        "avg_odds": 2.27
       },
       {
         "group": "women",
         "picks": 211,
-        "settled": 194,
-        "pending": 6,
+        "settled": 197,
+        "pending": 3,
         "wins": 89,
-        "losses": 105,
-        "hit_rate": 45.9,
-        "stake": 236.5,
-        "profit": 4.01,
-        "roi": 1.7,
+        "losses": 108,
+        "hit_rate": 45.2,
+        "stake": 240.0,
+        "profit": 0.51,
+        "roi": 0.2,
         "avg_odds": 2.27
       },
       {
@@ -86542,28 +86602,28 @@
       {
         "group": "Pncl",
         "picks": 253,
-        "settled": 238,
-        "pending": 4,
-        "wins": 103,
-        "losses": 135,
-        "hit_rate": 43.3,
-        "stake": 291.25,
-        "profit": -9.64,
+        "settled": 241,
+        "pending": 1,
+        "wins": 104,
+        "losses": 137,
+        "hit_rate": 43.2,
+        "stake": 294.75,
+        "profit": -9.86,
         "roi": -3.3,
-        "avg_odds": 2.26
+        "avg_odds": 2.27
       },
       {
         "group": "bet365",
         "picks": 104,
-        "settled": 93,
-        "pending": 6,
+        "settled": 95,
+        "pending": 4,
         "wins": 44,
-        "losses": 49,
-        "hit_rate": 47.3,
-        "stake": 112.0,
-        "profit": 8.09,
-        "roi": 7.2,
-        "avg_odds": 2.25
+        "losses": 51,
+        "hit_rate": 46.3,
+        "stake": 114.5,
+        "profit": 5.59,
+        "roi": 4.9,
+        "avg_odds": 2.26
       },
       {
         "group": "Unibet",
