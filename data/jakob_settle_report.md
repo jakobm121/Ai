@@ -1,6 +1,6 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-06T09:25:31.198194+02:00`
+Generated: `2026-06-07T09:49:52.457953+02:00`
 
 Pending picks: **0**
 
@@ -8,48 +8,52 @@ Pending picks: **0**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 127 | 61 | 59 | 1 | 6 | 50.83% | +4.17u | 4.64% |
+| 131 | 64 | 60 | 1 | 6 | 51.61% | +5.82u | 6.25% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 7 | 4 | 3 | 0 | 0 | 57.14% | +1.13u | 21.56% |
+| 4 | 3 | 1 | 0 | 0 | 75.00% | +1.64u | 54.73% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 109 | 51 | 53 | 1 | 4 | 49.04% | +1.08u | 1.38% |
+| 113 | 54 | 54 | 1 | 4 | 50.00% | +2.72u | 3.36% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 80 | 38 | 38 | 1 | 3 | 50.00% | +2.04u | 3.58% |
+| 83 | 41 | 38 | 1 | 3 | 51.90% | +4.43u | 7.48% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 64 | 32 | 30 | 0 | 2 | 51.61% | +1.93u | 4.15% |
+| 67 | 34 | 31 | 0 | 2 | 52.31% | +2.72u | 5.58% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 18 | 9 | 9 | 0 | 0 | 50.00% | -0.32u | -2.33% |
+| 19 | 9 | 10 | 0 | 0 | 47.37% | -1.06u | -7.47% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 109 | 52 | 50 | 1 | 6 | 50.98% | +4.49u | 5.87% |
+| 112 | 55 | 50 | 1 | 6 | 52.38% | +6.88u | 8.74% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-06 | 19:00 | 2 | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | ✅ win | 75.77 | 17 | 6-2, 6-3 | +0.85u |
+| 2026-06-06 | 15:00 | 3 | M. Chwalinska - M. Andreeva | UNDER 19.5 games | 2.00 | ✅ win | 74.92 | 17 | 3-6, 2-6 | +0.75u |
+| 2026-06-06 | 13:30 | 4 | D. Dedura - L. Mikrut | OVER 21.5 games | 1.85 | ❌ loss | 70.66 | 20 | 4-6, 4-6 | -0.75u |
+| 2026-06-06 | 12:30 | 1 | L. Castelnuovo - J. Rodionov | UNDER 20.5 games | 2.05 | ✅ win | 81.53 | 17 | 1-6, 4-6 | +0.79u |
 | 2026-06-05 | 18:00 | 5 | A. Walton - T. Legout | UNDER 19.5 games | 2.10 | ✅ win | 71.99 | 16 | 6-2, 6-2 | +0.82u |
 | 2026-06-05 | 16:00 | 6 | H. Searle - K. Poling | UNDER 19.0 games | 2.11 | ❌ loss | 70.56 | 31 | 6-7, 6-3, 3-6 | -0.75u |
 | 2026-06-05 | 15:00 | 2 | N. Sanchez Izquierdo - L. Midon | OVER 22.5 games | 2.07 | ✅ win | 78.29 | 31 | 6-7, 6-3, 6-3 | +0.80u |
@@ -126,8 +130,4 @@ Pending picks: **0**
 | 2026-05-28 | 11:00 | 5 | D. Vekic - N. Osaka | UNDER 20.5 games | 2.06 | ❌ loss | 74.91 | 23 | 6-7, 4-6 | -0.75u |
 | 2026-05-28 | 10:30 | 3 | P. Fajta - F. Roncadelli | UNDER 19.5 games | 2.15 | ❌ loss | 76.12 | 20 | 7-5, 6-2 | -0.75u |
 | 2026-05-28 | 10:00 | 10 | G. Dalmasso - R. Strombachs | UNDER 20.0 games | 2.02 | ✅ win | 70.06 | 17 | 2-6, 3-6 | +0.77u |
-| 2026-05-27 | 18:00 | 2 | T. Zink - R. Hohmann | UNDER 20.5 games | 2.00 | ✅ win | 72.48 | 17 | 6-3, 6-2 | +0.75u |
-| 2026-05-27 | 17:00 | 6 | D. Dedura - S. Pieri | UNDER 20.5 games | 2.15 | ✅ win | 70.77 | 17 | 6-2, 6-3 | +0.86u |
-| 2026-05-27 | 16:50 | 4 | E. Lys - S. Cirstea | UNDER 19.5 games | 2.07 | ✅ win | 71.31 | 15 | 3-6, 0-6 | +0.80u |
-| 2026-05-27 | 16:15 | 5 | J. Teichmann - M. Frech | OVER 21.5 games | 1.93 | ✅ win | 71.24 | 22 | 7-5, 6-4 | +0.70u |
 

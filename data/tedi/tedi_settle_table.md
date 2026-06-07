@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-06T09:25:31.308685+02:00
+Generated: 2026-06-07T09:49:52.568712+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 37 | 37 | 0 | 18 | 16 | 3 | 52.94% | 3.68u | 9.95% |
-| tedi_v2_test | 9 | 9 | 0 | 4 | 5 | 0 | 44.44% | -0.62u | -6.89% |
+| tedi_main_150 | 46 | 46 | 0 | 25 | 17 | 4 | 59.52% | 10.16u | 22.09% |
+| tedi_v2_test | 13 | 13 | 0 | 8 | 5 | 0 | 61.54% | 3.74u | 28.77% |
 
 ## Results
 
@@ -59,3 +59,16 @@ Generated: 2026-06-06T09:25:31.308685+02:00
 | 2026-06-05 | 15:00 | tedi_main_150 | win | 1.04 | M. Trungelliti - D. Dedura | UNDER 21.5 games | 2.04 | 17 | 2-6, 3-6 |
 | 2026-06-05 | 18:00 | tedi_main_150 | win | 1.10 | A. Walton - T. Legout | UNDER 19.5 games | 2.10 | 16 | 6-2, 6-2 |
 | 2026-06-05 | 18:00 | tedi_v2_test | win | 1.10 | A. Walton - T. Legout | UNDER 19.5 games | 2.10 | 16 | 6-2, 6-2 |
+| 2026-06-06 | 09:00 | tedi_main_150 | push | 0.00 | R. Tiukaev - K. Knitter | UNDER 20.5 games | 2.10 | None | None |
+| 2026-06-06 | 10:00 | tedi_main_150 | loss | -1.00 | V. Orlov - P. Makk | UNDER 20.5 games | 2.10 | 27 | 2-6, 6-4, 3-6 |
+| 2026-06-06 | 11:00 | tedi_main_150 | win | 1.04 | H. Barton - A. Molcan | UNDER 21.5 games | 2.04 | 17 | 3-6, 2-6 |
+| 2026-06-06 | 12:00 | tedi_main_150 | win | 1.17 | H. Squire - E. Nava | UNDER 21.5 games | 2.17 | 17 | 1-6, 4-6 |
+| 2026-06-06 | 12:00 | tedi_v2_test | win | 1.17 | H. Squire - E. Nava | UNDER 21.5 games | 2.17 | 17 | 1-6, 4-6 |
+| 2026-06-06 | 12:30 | tedi_main_150 | win | 1.05 | L. Castelnuovo - J. Rodionov | UNDER 20.5 games | 2.05 | 17 | 1-6, 4-6 |
+| 2026-06-06 | 15:00 | tedi_main_150 | win | 1.00 | M. Chwalinska - M. Andreeva | UNDER 19.5 games | 2.00 | 17 | 3-6, 2-6 |
+| 2026-06-06 | 15:00 | tedi_v2_test | win | 1.00 | M. Chwalinska - M. Andreeva | UNDER 19.5 games | 2.00 | 17 | 3-6, 2-6 |
+| 2026-06-06 | 17:00 | tedi_main_150 | win | 1.05 | A. Walton - L. Draxl | UNDER 21.5 games | 2.05 | 20 | 6-4, 6-4 |
+| 2026-06-06 | 17:00 | tedi_v2_test | win | 1.05 | A. Walton - L. Draxl | UNDER 21.5 games | 2.05 | 20 | 6-4, 6-4 |
+| 2026-06-06 | 17:00 | tedi_main_150 | win | 1.03 | M. Giunta - A. Reco | UNDER 19.5 games | 2.03 | 17 | 6-1, 6-4 |
+| 2026-06-06 | 19:00 | tedi_main_150 | win | 1.14 | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | 17 | 6-2, 6-3 |
+| 2026-06-06 | 19:00 | tedi_v2_test | win | 1.14 | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | 17 | 6-2, 6-3 |

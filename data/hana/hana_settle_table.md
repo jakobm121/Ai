@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-06T09:25:31.451848+02:00
+Generated: 2026-06-07T09:49:52.720394+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 162 | 162 | 78 | 73 | 11 | 51.66% | 9.98u | 6.61% |
+| 172 | 172 | 85 | 75 | 12 | 53.12% | 15.46u | 9.66% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 24 | 24 | 12 | 11 | 1 | 52.17% | 1.68u | 7.3% |
-| single | 131 | 131 | 62 | 59 | 10 | 51.24% | 6.83u | 5.64% |
-| triple | 7 | 7 | 4 | 3 | 0 | 57.14% | 1.47u | 21.0% |
+| double | 29 | 29 | 17 | 11 | 1 | 60.71% | 6.97u | 24.89% |
+| single | 134 | 134 | 62 | 61 | 11 | 50.41% | 4.83u | 3.93% |
+| triple | 9 | 9 | 6 | 3 | 0 | 66.67% | 3.66u | 40.67% |
 
 ## Results
 
@@ -182,3 +182,13 @@ Generated: 2026-06-06T09:25:31.451848+02:00
 | 2026-06-05 | 15:00 | single | lucija | win | 0.91 | S. Baez - M. Mrva | OVER 20.5 games | 1.91 | 22 | 6-4, 7-5 |
 | 2026-06-05 | 16:00 | single | jakob | loss | -1.00 | H. Searle - K. Poling | UNDER 19.0 games | 2.11 | 31 | 6-7, 6-3, 3-6 |
 | 2026-06-05 | 18:00 | triple | jakob, lucija, tedi | win | 1.10 | A. Walton - T. Legout | UNDER 19.5 games | 2.10 | 16 | 6-2, 6-2 |
+| 2026-06-06 | 09:00 | single | tedi | push | 0.00 | R. Tiukaev - K. Knitter | UNDER 20.5 games | 2.10 | None | None |
+| 2026-06-06 | 10:00 | single | tedi | loss | -1.00 | V. Orlov - P. Makk | UNDER 20.5 games | 2.10 | 27 | 2-6, 6-4, 3-6 |
+| 2026-06-06 | 11:00 | double | lucija, tedi | win | 1.04 | H. Barton - A. Molcan | UNDER 21.5 games | 2.04 | 17 | 3-6, 2-6 |
+| 2026-06-06 | 12:00 | double | lucija, tedi | win | 1.17 | H. Squire - E. Nava | UNDER 21.5 games | 2.17 | 17 | 1-6, 4-6 |
+| 2026-06-06 | 12:30 | triple | jakob, lucija, tedi | win | 1.05 | L. Castelnuovo - J. Rodionov | UNDER 20.5 games | 2.05 | 17 | 1-6, 4-6 |
+| 2026-06-06 | 13:30 | single | jakob | loss | -1.00 | D. Dedura - L. Mikrut | OVER 21.5 games | 1.85 | 20 | 4-6, 4-6 |
+| 2026-06-06 | 15:00 | double | jakob, tedi | win | 1.00 | M. Chwalinska - M. Andreeva | UNDER 19.5 games | 2.00 | 17 | 3-6, 2-6 |
+| 2026-06-06 | 17:00 | double | lucija, tedi | win | 1.05 | A. Walton - L. Draxl | UNDER 21.5 games | 2.05 | 20 | 6-4, 6-4 |
+| 2026-06-06 | 17:00 | double | lucija, tedi | win | 1.03 | M. Giunta - A. Reco | UNDER 19.5 games | 2.03 | 17 | 6-1, 6-4 |
+| 2026-06-06 | 19:00 | triple | jakob, lucija, tedi | win | 1.14 | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | 17 | 6-2, 6-3 |

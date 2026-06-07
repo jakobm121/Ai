@@ -1,24 +1,17 @@
 {
-  "generated_at": "2026-06-06T09:39:20.821425+02:00",
-  "model_version": "lucija_v1",
-  "model_name": "Lucija Tennis Totals Filter v1",
-  "source_file": "data/tennis_totals_predictions.json",
-  "source_format": "dict_with_picks",
-  "source_picks": 16,
-  "lucija_picks": 6,
-  "rejected_picks": 10,
-  "rules": {
-    "avg_close_set_max": 0.55,
-    "avg_close_set_min": 0.2,
-    "avg_three_set_min": 0.15,
-    "confidence_min": 80,
-    "h2h_max": 0,
-    "market_gap_min": 0.25,
-    "quality_min": 72,
-    "strength_gap_max": 30
-  },
-  "stake": 1.0,
-  "sides": {
-    "under": 6
-  }
+  "generated_at": "2026-06-07T09:49:52.645953+02:00",
+  "source_results_file": "data/tennis_totals_results.json",
+  "lucija_results_file": "data/lucija/lucija_results.json",
+  "total": 55,
+  "pending": 0,
+  "settled": 55,
+  "graded": 53,
+  "wins": 32,
+  "losses": 21,
+  "pushes": 0,
+  "voids": 2,
+  "profit": 13.04,
+  "risked": 53.0,
+  "winrate": 60.38,
+  "roi": 24.6
 }
