@@ -1,8 +1,8 @@
 # Value + ELO settled results
 
-Generated: 2026-06-06T09:43:42.136207+02:00
+Generated: 2026-06-07T10:32:59.672970+02:00
 
-Overall: **93-99**, WR **48.44%**, Profit **12.042u**, ROI **5.12%**, Avg odds **2.234**
+Overall: **95-101**, WR **48.47%**, Profit **13.095u**, ROI **5.44%**, Avg odds **2.237**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -203,3 +203,7 @@ Overall: **93-99**, WR **48.44%**, Profit **12.042u**, ROI **5.12%**, Avg odds *
 | 2026-06-05 | itf | M. Drobysheva - L. Petruzelova | M. Drobysheva | 2.33 | 1.25 | loss | -1.25 | 23.19 |  |
 | 2026-06-05 | itf | M. Jorge - V. Morvayova | V. Morvayova | 2.09 | 1.0 | loss | -1.0 | 13.13 |  |
 | 2026-06-05 | challenger | M. Trungelliti - D. Dedura | D. Dedura | 2.62 | 1.25 | win | 2.025 | 12.51 |  |
+| 2026-06-06 | challenger | D. Merida Aguilar - A. Pellegrino | A. Pellegrino | 2.33 | 1.25 | loss | -1.25 | 16.2 |  |
+| 2026-06-06 | challenger | H. Mayot - P. Henning | P. Henning | 2.16 | 1.5 | win | 1.74 | 99.5 |  |
+| 2026-06-06 | challenger | L. Bronzetti - L. Romero Gormaz | L. Romero Gormaz | 2.45 | 1.25 | win | 1.8125 | 49.07 |  |
+| 2026-06-06 | atp | S. Shimabukuro - S. Sakellaridis | S. Sakellaridis | 2.63 | 1.25 | loss | -1.25 | 7.47 |  |
