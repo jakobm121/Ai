@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-07T09:49:52.720394+02:00
+Generated: 2026-06-07T22:43:03.119085+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 172 | 172 | 85 | 75 | 12 | 53.12% | 15.46u | 9.66% |
+| 187 | 187 | 89 | 85 | 13 | 51.15% | 9.93u | 5.71% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 29 | 29 | 17 | 11 | 1 | 60.71% | 6.97u | 24.89% |
-| single | 134 | 134 | 62 | 61 | 11 | 50.41% | 4.83u | 3.93% |
-| triple | 9 | 9 | 6 | 3 | 0 | 66.67% | 3.66u | 40.67% |
+| double | 33 | 33 | 18 | 14 | 1 | 56.25% | 5.14u | 16.06% |
+| single | 142 | 142 | 64 | 66 | 12 | 49.23% | 1.98u | 1.52% |
+| triple | 12 | 12 | 7 | 5 | 0 | 58.33% | 2.81u | 23.42% |
 
 ## Results
 
@@ -192,3 +192,18 @@ Generated: 2026-06-07T09:49:52.720394+02:00
 | 2026-06-06 | 17:00 | double | lucija, tedi | win | 1.05 | A. Walton - L. Draxl | UNDER 21.5 games | 2.05 | 20 | 6-4, 6-4 |
 | 2026-06-06 | 17:00 | double | lucija, tedi | win | 1.03 | M. Giunta - A. Reco | UNDER 19.5 games | 2.03 | 17 | 6-1, 6-4 |
 | 2026-06-06 | 19:00 | triple | jakob, lucija, tedi | win | 1.14 | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | 17 | 6-2, 6-3 |
+| 2026-06-07 | 10:30 | double | jakob, tedi | loss | -1.00 | M. Krumich - V. Durasovic | UNDER 21.0 games | 2.11 | 23 | 6-4, 7-6 |
+| 2026-06-07 | 11:00 | double | jakob, tedi | loss | -1.00 | E. Seidel - G. Minnen | UNDER 20.5 games | 2.13 | 21 | 1-6, 6-2, 0-6 |
+| 2026-06-07 | 11:00 | double | jakob, tedi | win | 1.17 | M. Damm - J. P. Ficovich | UNDER 21.5 games | 2.17 | 16 | 6-2, 6-2 |
+| 2026-06-07 | 11:00 | single | tedi | win | 1.18 | S. Baez - A. Molcan | UNDER 21.5 games | 2.18 | 18 | 6-4, 6-2 |
+| 2026-06-07 | 12:00 | triple | jakob, lucija, tedi | win | 1.15 | F. Zakaria - M. Erhard | UNDER 19.0 games | 2.15 | 15 | 2-6, 1-6 |
+| 2026-06-07 | 12:30 | triple | jakob, lucija, tedi | loss | -1.00 | M. Alkaya - P. Herbert | UNDER 22.5 games | 1.98 | 23 | 6-7, 4-6 |
+| 2026-06-07 | 12:30 | single | jakob | loss | -1.00 | R. Safiullin - A. Galarneau | UNDER 21.5 games | 2.05 | 36 | 4-6, 7-6, 6-7 |
+| 2026-06-07 | 13:30 | single | jakob | loss | -1.00 | F. Forti - L. Castagnola | UNDER 19.0 games | 2.10 | 28 | 4-6, 6-4, 6-2 |
+| 2026-06-07 | 13:30 | single | jakob | win | 0.97 | Q. Vandecasteele - C. Broom | UNDER 21.5 games | 1.97 | 16 | 3-6, 1-6 |
+| 2026-06-07 | 14:00 | single | jakob | loss | -1.00 | B. Bonzi - B. Tomic | UNDER 22.5 games | 2.12 | 33 | 6-7, 6-2, 7-5 |
+| 2026-06-07 | 14:30 | single | jakob | loss | -1.00 | M. Inglis - A. Parks | UNDER 20.5 games | 2.05 | 32 | 5-7, 6-4, 6-4 |
+| 2026-06-07 | 14:30 | triple | jakob, lucija, tedi | loss | -1.00 | T. Maria - L. Miyazaki | UNDER 19.5 games | 1.95 | 23 | 6-2, 1-6, 6-2 |
+| 2026-06-07 | 15:00 | single | tedi | push | 0.00 | P. Fajta - M. Tobon | UNDER 21.0 games | 2.08 | None | None |
+| 2026-06-07 | 16:30 | single | tedi | loss | -1.00 | F. Urgesi - A. Mazzola | UNDER 20.0 games | 2.14 | 26 | 6-4, 3-6, 6-1 |
+| 2026-06-07 | 18:30 | double | lucija, tedi | loss | -1.00 | L. Romero Gormaz - T. C. Grant | UNDER 20.0 games | 2.19 | 26 | 7-5, 0-6, 6-2 |

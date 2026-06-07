@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-07T09:49:52.568712+02:00
+Generated: 2026-06-07T22:43:02.962438+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 46 | 46 | 0 | 25 | 17 | 4 | 59.52% | 10.16u | 22.09% |
-| tedi_v2_test | 13 | 13 | 0 | 8 | 5 | 0 | 61.54% | 3.74u | 28.77% |
+| tedi_main_150 | 55 | 55 | 0 | 27 | 23 | 5 | 54.0% | 6.51u | 11.84% |
+| tedi_v2_test | 16 | 16 | 0 | 9 | 7 | 0 | 56.25% | 2.89u | 18.06% |
 
 ## Results
 
@@ -72,3 +72,15 @@ Generated: 2026-06-07T09:49:52.568712+02:00
 | 2026-06-06 | 17:00 | tedi_main_150 | win | 1.03 | M. Giunta - A. Reco | UNDER 19.5 games | 2.03 | 17 | 6-1, 6-4 |
 | 2026-06-06 | 19:00 | tedi_main_150 | win | 1.14 | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | 17 | 6-2, 6-3 |
 | 2026-06-06 | 19:00 | tedi_v2_test | win | 1.14 | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | 17 | 6-2, 6-3 |
+| 2026-06-07 | 10:30 | tedi_main_150 | loss | -1.00 | M. Krumich - V. Durasovic | UNDER 21.0 games | 2.11 | 23 | 6-4, 7-6 |
+| 2026-06-07 | 11:00 | tedi_main_150 | loss | -1.00 | E. Seidel - G. Minnen | UNDER 20.5 games | 2.13 | 21 | 1-6, 6-2, 0-6 |
+| 2026-06-07 | 11:00 | tedi_main_150 | win | 1.17 | M. Damm - J. P. Ficovich | UNDER 21.5 games | 2.17 | 16 | 6-2, 6-2 |
+| 2026-06-07 | 11:00 | tedi_main_150 | win | 1.18 | S. Baez - A. Molcan | UNDER 21.5 games | 2.18 | 18 | 6-4, 6-2 |
+| 2026-06-07 | 12:00 | tedi_v2_test | win | 1.15 | F. Zakaria - M. Erhard | UNDER 19.0 games | 2.15 | 15 | 2-6, 1-6 |
+| 2026-06-07 | 12:30 | tedi_main_150 | loss | -1.00 | M. Alkaya - P. Herbert | UNDER 22.5 games | 1.98 | 23 | 6-7, 4-6 |
+| 2026-06-07 | 14:30 | tedi_main_150 | loss | -1.00 | T. Maria - L. Miyazaki | UNDER 19.5 games | 1.95 | 23 | 6-2, 1-6, 6-2 |
+| 2026-06-07 | 14:30 | tedi_v2_test | loss | -1.00 | T. Maria - L. Miyazaki | UNDER 19.5 games | 1.95 | 23 | 6-2, 1-6, 6-2 |
+| 2026-06-07 | 15:00 | tedi_main_150 | push | 0.00 | P. Fajta - M. Tobon | UNDER 21.0 games | 2.08 | None | None |
+| 2026-06-07 | 16:30 | tedi_main_150 | loss | -1.00 | F. Urgesi - A. Mazzola | UNDER 20.0 games | 2.14 | 26 | 6-4, 3-6, 6-1 |
+| 2026-06-07 | 18:30 | tedi_main_150 | loss | -1.00 | L. Romero Gormaz - T. C. Grant | UNDER 20.0 games | 2.19 | 26 | 7-5, 0-6, 6-2 |
+| 2026-06-07 | 18:30 | tedi_v2_test | loss | -1.00 | L. Romero Gormaz - T. C. Grant | UNDER 20.0 games | 2.19 | 26 | 7-5, 0-6, 6-2 |

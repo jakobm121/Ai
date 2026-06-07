@@ -1,6 +1,6 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-07T09:49:52.457953+02:00`
+Generated: `2026-06-07T22:43:02.839805+02:00`
 
 Pending picks: **0**
 
@@ -8,31 +8,31 @@ Pending picks: **0**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 131 | 64 | 60 | 1 | 6 | 51.61% | +5.82u | 6.25% |
+| 142 | 67 | 68 | 1 | 6 | 49.63% | +2.28u | 2.26% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 4 | 3 | 1 | 0 | 0 | 75.00% | +1.64u | 54.73% |
+| 15 | 6 | 9 | 0 | 0 | 40.00% | -1.89u | -16.81% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 113 | 54 | 54 | 1 | 4 | 50.00% | +2.72u | 3.36% |
+| 124 | 57 | 62 | 1 | 4 | 47.90% | -0.81u | -0.91% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 83 | 41 | 38 | 1 | 3 | 51.90% | +4.43u | 7.48% |
+| 92 | 44 | 44 | 1 | 3 | 50.00% | +2.40u | 3.64% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 67 | 34 | 31 | 0 | 2 | 52.31% | +2.72u | 5.58% |
+| 73 | 35 | 36 | 0 | 2 | 49.30% | -0.30u | -0.57% |
 
 ### Over
 
@@ -44,12 +44,23 @@ Pending picks: **0**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 112 | 55 | 50 | 1 | 6 | 52.38% | +6.88u | 8.74% |
+| 123 | 58 | 58 | 1 | 6 | 50.00% | +3.35u | 3.85% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-07 | 14:30 | 2 | T. Maria - L. Miyazaki | UNDER 19.5 games | 1.95 | ❌ loss | 80.45 | 23 | 6-2, 1-6, 6-2 | -0.75u |
+| 2026-06-07 | 14:30 | 7 | M. Inglis - A. Parks | UNDER 20.5 games | 2.05 | ❌ loss | 75.77 | 32 | 5-7, 6-4, 6-4 | -0.75u |
+| 2026-06-07 | 14:00 | 4 | B. Bonzi - B. Tomic | UNDER 22.5 games | 2.12 | ❌ loss | 77.36 | 33 | 6-7, 6-2, 7-5 | -0.75u |
+| 2026-06-07 | 13:30 | 9 | Q. Vandecasteele - C. Broom | UNDER 21.5 games | 1.97 | ✅ win | 72.07 | 16 | 3-6, 1-6 | +0.73u |
+| 2026-06-07 | 13:30 | 5 | F. Forti - L. Castagnola | UNDER 19.0 games | 2.10 | ❌ loss | 76.22 | 28 | 4-6, 6-4, 6-2 | -0.75u |
+| 2026-06-07 | 12:30 | 11 | R. Safiullin - A. Galarneau | UNDER 21.5 games | 2.05 | ❌ loss | 71.05 | 36 | 4-6, 7-6, 6-7 | -0.75u |
+| 2026-06-07 | 12:30 | 6 | M. Alkaya - P. Herbert | UNDER 22.5 games | 1.98 | ❌ loss | 75.99 | 23 | 6-7, 4-6 | -0.75u |
+| 2026-06-07 | 12:00 | 3 | F. Zakaria - M. Erhard | UNDER 19.0 games | 2.15 | ✅ win | 79.05 | 15 | 2-6, 1-6 | +0.86u |
+| 2026-06-07 | 11:00 | 1 | M. Damm - J. P. Ficovich | UNDER 21.5 games | 2.17 | ✅ win | 82.25 | 16 | 6-2, 6-2 | +0.88u |
+| 2026-06-07 | 11:00 | 8 | E. Seidel - G. Minnen | UNDER 20.5 games | 2.13 | ❌ loss | 72.21 | 21 | 1-6, 6-2, 0-6 | -0.75u |
+| 2026-06-07 | 10:30 | 10 | M. Krumich - V. Durasovic | UNDER 21.0 games | 2.11 | ❌ loss | 71.52 | 23 | 6-4, 7-6 | -0.75u |
 | 2026-06-06 | 19:00 | 2 | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | ✅ win | 75.77 | 17 | 6-2, 6-3 | +0.85u |
 | 2026-06-06 | 15:00 | 3 | M. Chwalinska - M. Andreeva | UNDER 19.5 games | 2.00 | ✅ win | 74.92 | 17 | 3-6, 2-6 | +0.75u |
 | 2026-06-06 | 13:30 | 4 | D. Dedura - L. Mikrut | OVER 21.5 games | 1.85 | ❌ loss | 70.66 | 20 | 4-6, 4-6 | -0.75u |
@@ -119,15 +130,4 @@ Pending picks: **0**
 | 2026-05-29 | 13:15 | 1 | J. Teichmann - K. Muchova | UNDER 18.5 games | 2.12 | ❌ loss | 77.66 | 19 | 6-1, 7-5 | -0.75u |
 | 2026-05-29 | 11:30 | 3 | D. Blanch - P. Fajta | UNDER 20.5 games | 2.03 | ✅ win | 73.61 | 17 | 6-2, 6-3 | +0.77u |
 | 2026-05-29 | 11:00 | 4 | L. Neumayer - R. Bertola | UNDER 20.0 games | 2.11 | ❌ loss | 72.83 | 23 | 6-4, 7-6 | -0.75u |
-| 2026-05-29 | 10:00 | 6 | D. Markovina - D. Ajdukovic | UNDER 18.5 games | 2.15 | ✅ win | 70.86 | 17 | 4-6, 1-6 | +0.86u |
-| 2026-05-28 | 19:35 | 2 | K. Boulter - A. Potapova | UNDER 19.5 games | 2.07 | ❌ loss | 75.96 | 30 | 7-5, 4-6, 2-6 | -0.75u |
-| 2026-05-28 | 18:40 | 3 | V. Mboko - K. Siniakova | UNDER 20.5 games | 2.11 | ❌ loss | 72.93 | 30 | 5-7, 6-4, 6-2 | -0.75u |
-| 2026-05-28 | 17:40 | 1 | A. Ruzic - M. Keys | UNDER 18.5 games | 2.12 | ❌ loss | 79.99 | 20 | 4-6, 4-6 | -0.75u |
-| 2026-05-28 | 15:35 | 5 | A. Li - D. Parry | UNDER 20.5 games | 2.04 | ✅ win | 70.62 | 19 | 3-6, 4-6 | +0.78u |
-| 2026-05-28 | 15:30 | 3 | A. Kalinskaya - A. Korneeva | UNDER 20.5 games | 2.10 | ❌ loss | 73.61 | 23 | 7-6, 6-4 | -0.75u |
-| 2026-05-28 | 13:00 | 8 | A. Beckley - S. Napolitano | UNDER 20.5 games | 2.04 | ✅ win | 71.52 | 18 | 4-6, 2-6 | +0.78u |
-| 2026-05-28 | 11:00 | 1 | I. Jovic - E. Navarro | OVER 21.5 games | 1.91 | ❌ loss | 80.29 | 15 | 6-0, 6-3 | -0.75u |
-| 2026-05-28 | 11:00 | 5 | D. Vekic - N. Osaka | UNDER 20.5 games | 2.06 | ❌ loss | 74.91 | 23 | 6-7, 4-6 | -0.75u |
-| 2026-05-28 | 10:30 | 3 | P. Fajta - F. Roncadelli | UNDER 19.5 games | 2.15 | ❌ loss | 76.12 | 20 | 7-5, 6-2 | -0.75u |
-| 2026-05-28 | 10:00 | 10 | G. Dalmasso - R. Strombachs | UNDER 20.0 games | 2.02 | ✅ win | 70.06 | 17 | 2-6, 3-6 | +0.77u |
 
