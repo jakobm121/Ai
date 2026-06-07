@@ -1,19 +1,18 @@
 # Tedi active predictions
 
-Generated: 2026-06-06T09:39:20.763798+02:00
+Generated: 2026-06-07T10:13:16.635972+02:00
 
 | Date | Time | Strategy | Match | Bet | Odds | Line | Conf | Quality | Gap | Strength | Avg 3-set | Avg close | Book |
 |---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 2026-06-06 | 09:00 | tedi_main_150 | R. Tiukaev - K. Knitter | UNDER 20.5 games | 2.10 | 20.5 | 84.9 | 77.5 | 0.140 | 14.56 | 0.211 | 0.259 | Betfair |
-| 2026-06-06 | 10:00 | tedi_main_150 | V. Orlov - P. Makk | UNDER 20.5 games | 2.10 | 20.5 | 85.7 | 78.1 | 0.180 | 1.70 | 0.311 | 0.122 | Betfair |
-| 2026-06-06 | 11:00 | tedi_main_150 | H. Barton - A. Molcan | UNDER 21.5 games | 2.04 | 21.5 | 86.6 | 79.3 | 0.316 | 6.58 | 0.211 | 0.418 | Pncl |
-| 2026-06-06 | 12:00 | tedi_main_150 | H. Squire - E. Nava | UNDER 21.5 games | 2.17 | 21.5 | 86.1 | 84.9 | 0.353 | 1.43 | 0.214 | 0.274 | Pncl |
-| 2026-06-06 | 12:00 | tedi_v2_test | H. Squire - E. Nava | UNDER 21.5 games | 2.17 | 21.5 | 86.1 | 84.9 | 0.353 | 1.43 | 0.214 | 0.274 | Pncl |
-| 2026-06-06 | 12:30 | tedi_main_150 | L. Castelnuovo - J. Rodionov | UNDER 20.5 games | 2.05 | 20.5 | 87.2 | 78.3 | 0.691 | 19.11 | 0.278 | 0.435 | Unibet |
-| 2026-06-06 | 15:00 | tedi_main_150 | M. Chwalinska - M. Andreeva | UNDER 19.5 games | 2.00 | 19.5 | 91.7 | 80.3 | 0.553 | 3.29 | 0.293 | 0.170 | Betfair |
-| 2026-06-06 | 15:00 | tedi_v2_test | M. Chwalinska - M. Andreeva | UNDER 19.5 games | 2.00 | 19.5 | 91.7 | 80.3 | 0.553 | 3.29 | 0.293 | 0.170 | Betfair |
-| 2026-06-06 | 17:00 | tedi_main_150 | A. Walton - L. Draxl | UNDER 21.5 games | 2.05 | 21.5 | 88.5 | 77.5 | 0.279 | 2.29 | 0.259 | 0.214 | Pncl |
-| 2026-06-06 | 17:00 | tedi_v2_test | A. Walton - L. Draxl | UNDER 21.5 games | 2.05 | 21.5 | 88.5 | 77.5 | 0.279 | 2.29 | 0.259 | 0.214 | Pncl |
-| 2026-06-06 | 17:00 | tedi_main_150 | M. Giunta - A. Reco | UNDER 19.5 games | 2.03 | 19.5 | 88.5 | 77.1 | 0.575 | 14.48 | 0.163 | 0.446 | Pncl |
-| 2026-06-06 | 19:00 | tedi_main_150 | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | 19.5 | 86.2 | 85.1 | 0.445 | 20.72 | 0.305 | 0.228 | Pncl |
-| 2026-06-06 | 19:00 | tedi_v2_test | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | 19.5 | 86.2 | 85.1 | 0.445 | 20.72 | 0.305 | 0.228 | Pncl |
+| 2026-06-07 | 10:30 | tedi_main_150 | M. Krumich - V. Durasovic | UNDER 21.0 games | 2.11 | 21.0 | 86.5 | 78.6 | 0.461 | 13.04 | 0.238 | 0.493 | Pncl |
+| 2026-06-07 | 11:00 | tedi_main_150 | E. Seidel - G. Minnen | UNDER 20.5 games | 2.13 | 20.5 | 87.3 | 82.4 | 0.241 | 12.73 | 0.167 | 0.270 | Pncl |
+| 2026-06-07 | 11:00 | tedi_main_150 | M. Damm - J. P. Ficovich | UNDER 21.5 games | 2.17 | 21.5 | 86.9 | 85.7 | 0.609 | 12.23 | 0.250 | 0.486 | Pncl |
+| 2026-06-07 | 11:00 | tedi_main_150 | S. Baez - A. Molcan | UNDER 21.5 games | 2.18 | 21.5 | 85.3 | 84.3 | 0.103 | 23.48 | 0.163 | 0.465 | Unibet |
+| 2026-06-07 | 12:00 | tedi_v2_test | F. Zakaria - M. Erhard | UNDER 19.0 games | 2.15 | 19.0 | 82.1 | 76.7 | 0.717 | 8.34 | 0.268 | 0.306 | Pncl |
+| 2026-06-07 | 12:30 | tedi_main_150 | M. Alkaya - P. Herbert | UNDER 22.5 games | 1.98 | 22.5 | 90.9 | 77.5 | 0.495 | 15.76 | 0.188 | 0.375 | Unibet |
+| 2026-06-07 | 14:30 | tedi_main_150 | T. Maria - L. Miyazaki | UNDER 19.5 games | 1.95 | 19.5 | 90.9 | 77.1 | 0.593 | 25.23 | 0.222 | 0.232 | Betano |
+| 2026-06-07 | 14:30 | tedi_v2_test | T. Maria - L. Miyazaki | UNDER 19.5 games | 1.95 | 19.5 | 90.9 | 77.1 | 0.593 | 25.23 | 0.222 | 0.232 | Betano |
+| 2026-06-07 | 15:00 | tedi_main_150 | P. Fajta - M. Tobon | UNDER 21.0 games | 2.08 | 21.0 | 85.7 | 76.8 | 0.207 | 13.00 | 0.222 | 0.315 | Pncl |
+| 2026-06-07 | 16:30 | tedi_main_150 | F. Urgesi - A. Mazzola | UNDER 20.0 games | 2.14 | 20.0 | 85.7 | 79.6 | 0.142 | 22.32 | 0.225 | 0.217 | Pncl |
+| 2026-06-07 | 18:30 | tedi_main_150 | L. Romero Gormaz - T. C. Grant | UNDER 20.0 games | 2.19 | 20.0 | 83.7 | 81.8 | 0.314 | 10.89 | 0.206 | 0.261 | Pncl |
+| 2026-06-07 | 18:30 | tedi_v2_test | L. Romero Gormaz - T. C. Grant | UNDER 20.0 games | 2.19 | 20.0 | 83.7 | 81.8 | 0.314 | 10.89 | 0.206 | 0.261 | Pncl |
