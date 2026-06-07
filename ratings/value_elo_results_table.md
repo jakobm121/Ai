@@ -1,8 +1,8 @@
 # Value + ELO settled results
 
-Generated: 2026-06-07T10:32:59.672970+02:00
+Generated: 2026-06-07T22:54:10.602298+02:00
 
-Overall: **95-101**, WR **48.47%**, Profit **13.095u**, ROI **5.44%**, Avg odds **2.237**
+Overall: **99-104**, WR **48.77%**, Profit **15.96u**, ROI **6.38%**, Avg odds **2.238**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -207,3 +207,10 @@ Overall: **95-101**, WR **48.47%**, Profit **13.095u**, ROI **5.44%**, Avg odds 
 | 2026-06-06 | challenger | H. Mayot - P. Henning | P. Henning | 2.16 | 1.5 | win | 1.74 | 99.5 |  |
 | 2026-06-06 | challenger | L. Bronzetti - L. Romero Gormaz | L. Romero Gormaz | 2.45 | 1.25 | win | 1.8125 | 49.07 |  |
 | 2026-06-06 | atp | S. Shimabukuro - S. Sakellaridis | S. Sakellaridis | 2.63 | 1.25 | loss | -1.25 | 7.47 |  |
+| 2026-06-07 | wta | E. Jacquemot - H. Guo | H. Guo | 2.42 | 1.25 | win | 1.775 | 45.86 |  |
+| 2026-06-07 | challenger | H. Rocha - D. Merida Aguilar | H. Rocha | 2.12 | 1.25 | win | 1.4 | 11.08 |  |
+| 2026-06-07 | wta | H. Vandewinkel - A. Koevermans | A. Koevermans | 2.5 | 1.25 | loss | -1.25 | 22.72 |  |
+| 2026-06-07 | wta | H. Watson - B. Haddad Maia | H. Watson | 2.2 | 1.5 | win | 1.8 | 13.75 |  |
+| 2026-06-07 | atp | M. Huesler - G. Onclin | G. Onclin | 2.26 | 1.5 | win | 1.89 | 56.03 |  |
+| 2026-06-07 | challenger | O. Virtanen - K. Majchrzak | K. Majchrzak | 2.24 | 1.5 | loss | -1.5 | 65.05 |  |
+| 2026-06-07 | atp | S. Shimabukuro - J. Rodionov | J. Rodionov | 2.11 | 1.25 | loss | -1.25 | 58.85 |  |
