@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T09:03:36.353193+02:00",
+  "generated_at": "2026-06-08T22:46:57.612616+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -23,18 +23,18 @@
   },
   "summary": {
     "picks": 631,
-    "settled": 577,
-    "pending": 22,
-    "wins": 250,
-    "losses": 327,
-    "hit_rate": 43.3,
-    "stake": 702.75,
-    "profit": -24.4,
-    "roi": -3.5,
+    "settled": 589,
+    "pending": 10,
+    "wins": 259,
+    "losses": 330,
+    "hit_rate": 44.0,
+    "stake": 718.0,
+    "profit": -13.34,
+    "roi": -1.9,
     "avg_odds": 2.27,
     "total_results": 631,
-    "settled_picks": 577,
-    "pending_picks": 22
+    "settled_picks": 589,
+    "pending_picks": 10
   },
   "current_picks": [
     {
@@ -168,9 +168,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-08T09:03:17.503576+02:00",
-      "reasoning": "M. Mazza is selected against C. Sanchez Jover in Cattolica (Italy) - Qualification. The model prices M. Mazza at 60.0% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.20 across 8 bookmakers, leaving an estimated edge of +17.8%. Recent-form profile: M. Mazza last-10 win rate 60.0%, avg set diff +0.40, avg game diff +2.00; C. Sanchez Jover last-10 win rate 50.0%, avg set diff +0.00, avg game diff +0.20. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "M. Mazza is selected against C. Sanchez Jover in Cattolica (Italy) - Qualification. The model prices M. Mazza at 60.0% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.20 across 8 bookmakers, leaving an estimated edge of +17.8%. Recent-form profile: M. Mazza last-10 win rate 60.0%, avg set diff +0.40, avg game diff +2.00; C. Sanchez Jover last-10 win rate 50.0%, avg set diff +0.00, avg game diff +0.20. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-08T22:46:48.270075+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "3-6, 7-6, 6-0"
     },
     {
       "pick_id": "08d697047d1d3b3a16845d3074646127",
@@ -303,9 +309,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-07T10:36:43.220036+02:00",
-      "reasoning": "F. Romano is selected against M. Mmoh in Ilkley. The model prices F. Romano at 55.7% versus an implied probability of 43.7% from best odds 2.29. Market median is 2.20 across 10 bookmakers, leaving an estimated edge of +12.0%. Recent-form profile: F. Romano last-10 win rate 70.0%, avg set diff +0.70, avg game diff +2.70; M. Mmoh last-10 win rate 70.0%, avg set diff +0.40, avg game diff +2.10. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "F. Romano is selected against M. Mmoh in Ilkley. The model prices F. Romano at 55.7% versus an implied probability of 43.7% from best odds 2.29. Market median is 2.20 across 10 bookmakers, leaving an estimated edge of +12.0%. Recent-form profile: F. Romano last-10 win rate 70.0%, avg set diff +0.70, avg game diff +2.70; M. Mmoh last-10 win rate 70.0%, avg set diff +0.40, avg game diff +2.10. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.6125,
+      "settled_at": "2026-06-08T22:46:47.581408+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "2-6, 4-6"
     },
     {
       "pick_id": "cb7d2fa7609c8347033fdff14e64d601",
@@ -438,9 +450,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-08T09:03:15.429445+02:00",
-      "reasoning": "S. Pieri is selected against F. Forti in Cattolica (Italy) - Qualification. The model prices S. Pieri at 60.0% versus an implied probability of 41.3% from best odds 2.42. Market median is 2.26 across 9 bookmakers, leaving an estimated edge of +18.7%. Recent-form profile: S. Pieri last-10 win rate 90.0%, avg set diff +1.50, avg game diff +3.10; F. Forti last-10 win rate 70.0%, avg set diff +0.50, avg game diff +1.70. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "S. Pieri is selected against F. Forti in Cattolica (Italy) - Qualification. The model prices S. Pieri at 60.0% versus an implied probability of 41.3% from best odds 2.42. Market median is 2.26 across 9 bookmakers, leaving an estimated edge of +18.7%. Recent-form profile: S. Pieri last-10 win rate 90.0%, avg set diff +1.50, avg game diff +3.10; F. Forti last-10 win rate 70.0%, avg set diff +0.50, avg game diff +1.70. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-08T22:46:48.967276+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "7-6, 7-6"
     },
     {
       "pick_id": "96ff5c805c21448b0dcc849c11c25dad",
@@ -573,9 +591,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:02:08.479039+02:00",
-      "reasoning": "D. E. Galan is selected against L. Pavlovic in Lyon. The model prices D. E. Galan at 60.0% versus an implied probability of 44.1% from best odds 2.27. Market median is 2.20 across 7 bookmakers, leaving an estimated edge of +15.9%. Recent-form profile: D. E. Galan last-10 win rate 50.0%, avg set diff +0.10, avg game diff +1.30; L. Pavlovic last-10 win rate 40.0%, avg set diff -0.60, avg game diff -1.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "D. E. Galan is selected against L. Pavlovic in Lyon. The model prices D. E. Galan at 60.0% versus an implied probability of 44.1% from best odds 2.27. Market median is 2.20 across 7 bookmakers, leaving an estimated edge of +15.9%. Recent-form profile: D. E. Galan last-10 win rate 50.0%, avg set diff +0.10, avg game diff +1.30; L. Pavlovic last-10 win rate 40.0%, avg set diff -0.60, avg game diff -1.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.5875,
+      "settled_at": "2026-06-08T22:46:49.658093+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "6-7, 2-6"
     },
     {
       "pick_id": "de4216aa76270bd0f5cc5581816efae8",
@@ -708,9 +732,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:01:46.271528+02:00",
-      "reasoning": "Ka. Pliskova is selected against M. Kessler in London. The model prices Ka. Pliskova at 66.0% versus an implied probability of 54.1% from best odds 1.85. Market median is 1.69 across 10 bookmakers, leaving an estimated edge of +11.9%. Recent-form profile: Ka. Pliskova last-10 win rate 70.0%, avg set diff +0.50, avg game diff -0.30; M. Kessler last-10 win rate 50.0%, avg set diff -0.30, avg game diff -1.30. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "Ka. Pliskova is selected against M. Kessler in London. The model prices Ka. Pliskova at 66.0% versus an implied probability of 54.1% from best odds 1.85. Market median is 1.69 across 10 bookmakers, leaving an estimated edge of +11.9%. Recent-form profile: Ka. Pliskova last-10 win rate 70.0%, avg set diff +0.50, avg game diff -0.30; M. Kessler last-10 win rate 50.0%, avg set diff -0.30, avg game diff -1.30. Pick type: favorite. Confidence score: 88.0.",
+      "profit": 1.0625,
+      "settled_at": "2026-06-08T22:46:50.351784+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-7, 6-3, 6-4"
     },
     {
       "pick_id": "09c34d1895b0e273cb72424809db55a2",
@@ -843,9 +873,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-08T09:03:06.404998+02:00",
-      "reasoning": "A. Santillan is selected against A. Shelbayh in Bratislava. The model prices A. Santillan at 62.7% versus an implied probability of 42.0% from best odds 2.38. Market median is 2.28 across 9 bookmakers, leaving an estimated edge of +20.7%. Recent-form profile: A. Santillan last-10 win rate 60.0%, avg set diff +0.40, avg game diff +0.70; A. Shelbayh last-10 win rate 40.0%, avg set diff -0.20, avg game diff -0.90. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "A. Santillan is selected against A. Shelbayh in Bratislava. The model prices A. Santillan at 62.7% versus an implied probability of 42.0% from best odds 2.38. Market median is 2.28 across 9 bookmakers, leaving an estimated edge of +20.7%. Recent-form profile: A. Santillan last-10 win rate 60.0%, avg set diff +0.40, avg game diff +0.70; A. Shelbayh last-10 win rate 40.0%, avg set diff -0.20, avg game diff -0.90. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-08T22:46:51.041666+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "6-7, 6-2, 0-6"
     },
     {
       "pick_id": "8aec30b4ccf757c82291d57b38a61dd9",
@@ -978,9 +1014,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:01:30.799971+02:00",
-      "reasoning": "D. Snigur is selected against P. Badosa in Hertogenbosch. The model prices D. Snigur at 66.0% versus an implied probability of 46.1% from best odds 2.17. Market median is 1.90 across 10 bookmakers, leaving an estimated edge of +19.9%. Recent-form profile: D. Snigur last-10 win rate 70.0%, avg set diff +0.70, avg game diff +1.20; P. Badosa last-10 win rate 40.0%, avg set diff -0.10, avg game diff -0.50. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "D. Snigur is selected against P. Badosa in Hertogenbosch. The model prices D. Snigur at 66.0% versus an implied probability of 46.1% from best odds 2.17. Market median is 1.90 across 10 bookmakers, leaving an estimated edge of +19.9%. Recent-form profile: D. Snigur last-10 win rate 70.0%, avg set diff +0.70, avg game diff +1.20; P. Badosa last-10 win rate 40.0%, avg set diff -0.10, avg game diff -0.50. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.755,
+      "settled_at": "2026-06-08T22:46:51.741668+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-1, 7-6"
     },
     {
       "pick_id": "fd97f7f9cb3d9c2f3de44428db4056e0",
@@ -1113,9 +1155,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:01:56.030539+02:00",
-      "reasoning": "T. Kokkinakis is selected against T. Barrios Vera in Bratislava. The model prices T. Kokkinakis at 66.0% versus an implied probability of 49.5% from best odds 2.02. Market median is 1.95 across 8 bookmakers, leaving an estimated edge of +16.5%. Recent-form profile: T. Kokkinakis last-10 win rate 80.0%, avg set diff +0.80, avg game diff +2.30; T. Barrios Vera last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "T. Kokkinakis is selected against T. Barrios Vera in Bratislava. The model prices T. Kokkinakis at 66.0% versus an implied probability of 49.5% from best odds 2.02. Market median is 1.95 across 8 bookmakers, leaving an estimated edge of +16.5%. Recent-form profile: T. Kokkinakis last-10 win rate 80.0%, avg set diff +0.80, avg game diff +2.30; T. Barrios Vera last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.275,
+      "settled_at": "2026-06-08T22:46:52.436059+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-4, 6-4"
     },
     {
       "pick_id": "b96a7f8eb616cb1f0d2de79bcfef6357",
@@ -1248,9 +1296,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:02:18.395474+02:00",
-      "reasoning": "A. Holmgren is selected against N. Budkov Kjaer in Ilkley. The model prices A. Holmgren at 66.0% versus an implied probability of 42.7% from best odds 2.34. Market median is 2.25 across 9 bookmakers, leaving an estimated edge of +23.3%. Recent-form profile: A. Holmgren last-10 win rate 60.0%, avg set diff +0.50, avg game diff +0.40; N. Budkov Kjaer last-10 win rate 50.0%, avg set diff -0.30, avg game diff +0.10. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "A. Holmgren is selected against N. Budkov Kjaer in Ilkley. The model prices A. Holmgren at 66.0% versus an implied probability of 42.7% from best odds 2.34. Market median is 2.25 across 9 bookmakers, leaving an estimated edge of +23.3%. Recent-form profile: A. Holmgren last-10 win rate 60.0%, avg set diff +0.50, avg game diff +0.40; N. Budkov Kjaer last-10 win rate 50.0%, avg set diff -0.30, avg game diff +0.10. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.675,
+      "settled_at": "2026-06-08T22:46:53.143526+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-0, 7-6"
     },
     {
       "pick_id": "4ca991e78b33c5ec15d0e573a696ff88",
@@ -1383,9 +1437,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:02:23.948227+02:00",
-      "reasoning": "A. Dudeney is selected against H. Sakatsume in Ilkley. The model prices A. Dudeney at 66.0% versus an implied probability of 44.4% from best odds 2.25. Market median is 2.20 across 9 bookmakers, leaving an estimated edge of +21.6%. Recent-form profile: A. Dudeney last-10 win rate 90.0%, avg set diff +1.50, avg game diff +5.70; H. Sakatsume last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.70. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "A. Dudeney is selected against H. Sakatsume in Ilkley. The model prices A. Dudeney at 66.0% versus an implied probability of 44.4% from best odds 2.25. Market median is 2.20 across 9 bookmakers, leaving an estimated edge of +21.6%. Recent-form profile: A. Dudeney last-10 win rate 90.0%, avg set diff +1.50, avg game diff +5.70; H. Sakatsume last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.70. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.5625,
+      "settled_at": "2026-06-08T22:46:53.835647+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-4, 6-3"
     },
     {
       "pick_id": "3aeb74d8308e06191a071bcf82568fc1",
@@ -1518,9 +1578,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:02:56.674638+02:00",
-      "reasoning": "G. Onclin is selected against F. Marozsan in Stuttgart. The model prices G. Onclin at 66.0% versus an implied probability of 38.2% from best odds 2.62. Market median is 2.38 across 10 bookmakers, leaving an estimated edge of +27.8%. Recent-form profile: G. Onclin last-10 win rate 80.0%, avg set diff +1.20, avg game diff +3.00; F. Marozsan last-10 win rate 40.0%, avg set diff -0.40, avg game diff -2.00. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "G. Onclin is selected against F. Marozsan in Stuttgart. The model prices G. Onclin at 66.0% versus an implied probability of 38.2% from best odds 2.62. Market median is 2.38 across 10 bookmakers, leaving an estimated edge of +27.8%. Recent-form profile: G. Onclin last-10 win rate 80.0%, avg set diff +1.20, avg game diff +3.00; F. Marozsan last-10 win rate 40.0%, avg set diff -0.40, avg game diff -2.00. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 2.025,
+      "settled_at": "2026-06-08T22:46:54.607373+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "7-6, 6-3"
     },
     {
       "pick_id": "6e409fc8567aca49ba6346f7a4b03b6a",
@@ -1923,9 +1989,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:02:01.456477+02:00",
-      "reasoning": "A. Guerrieri is selected against D. Svrcina in Cattolica (Italy) - Qualification. The model prices A. Guerrieri at 66.0% versus an implied probability of 35.7% from best odds 2.80. Market median is 2.75 across 8 bookmakers, leaving an estimated edge of +30.3%. Recent-form profile: A. Guerrieri last-10 win rate 80.0%, avg set diff +1.00, avg game diff +3.10; D. Svrcina last-10 win rate 50.0%, avg set diff +0.20, avg game diff +1.10. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "A. Guerrieri is selected against D. Svrcina in Cattolica (Italy) - Qualification. The model prices A. Guerrieri at 66.0% versus an implied probability of 35.7% from best odds 2.80. Market median is 2.75 across 8 bookmakers, leaving an estimated edge of +30.3%. Recent-form profile: A. Guerrieri last-10 win rate 80.0%, avg set diff +1.00, avg game diff +3.10; D. Svrcina last-10 win rate 50.0%, avg set diff +0.20, avg game diff +1.10. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 2.25,
+      "settled_at": "2026-06-08T22:46:56.756741+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-3, 3-6, 6-4"
     },
     {
       "pick_id": "9f52fc19cb7d9e39d6f1768208c7b454",
@@ -88731,9 +88803,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-07T10:36:43.220036+02:00",
-      "reasoning": "F. Romano is selected against M. Mmoh in Ilkley. The model prices F. Romano at 55.7% versus an implied probability of 43.7% from best odds 2.29. Market median is 2.20 across 10 bookmakers, leaving an estimated edge of +12.0%. Recent-form profile: F. Romano last-10 win rate 70.0%, avg set diff +0.70, avg game diff +2.70; M. Mmoh last-10 win rate 70.0%, avg set diff +0.40, avg game diff +2.10. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "F. Romano is selected against M. Mmoh in Ilkley. The model prices F. Romano at 55.7% versus an implied probability of 43.7% from best odds 2.29. Market median is 2.20 across 10 bookmakers, leaving an estimated edge of +12.0%. Recent-form profile: F. Romano last-10 win rate 70.0%, avg set diff +0.70, avg game diff +2.70; M. Mmoh last-10 win rate 70.0%, avg set diff +0.40, avg game diff +2.10. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.6125,
+      "settled_at": "2026-06-08T22:46:47.581408+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "2-6, 4-6"
     },
     {
       "pick_id": "aa167a19477203e98303f72c8aea92ff",
@@ -89007,9 +89085,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-08T09:03:17.503576+02:00",
-      "reasoning": "M. Mazza is selected against C. Sanchez Jover in Cattolica (Italy) - Qualification. The model prices M. Mazza at 60.0% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.20 across 8 bookmakers, leaving an estimated edge of +17.8%. Recent-form profile: M. Mazza last-10 win rate 60.0%, avg set diff +0.40, avg game diff +2.00; C. Sanchez Jover last-10 win rate 50.0%, avg set diff +0.00, avg game diff +0.20. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "M. Mazza is selected against C. Sanchez Jover in Cattolica (Italy) - Qualification. The model prices M. Mazza at 60.0% versus an implied probability of 42.2% from best odds 2.37. Market median is 2.20 across 8 bookmakers, leaving an estimated edge of +17.8%. Recent-form profile: M. Mazza last-10 win rate 60.0%, avg set diff +0.40, avg game diff +2.00; C. Sanchez Jover last-10 win rate 50.0%, avg set diff +0.00, avg game diff +0.20. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-08T22:46:48.270075+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "3-6, 7-6, 6-0"
     },
     {
       "pick_id": "cb7d2fa7609c8347033fdff14e64d601",
@@ -89142,9 +89226,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-08T09:03:15.429445+02:00",
-      "reasoning": "S. Pieri is selected against F. Forti in Cattolica (Italy) - Qualification. The model prices S. Pieri at 60.0% versus an implied probability of 41.3% from best odds 2.42. Market median is 2.26 across 9 bookmakers, leaving an estimated edge of +18.7%. Recent-form profile: S. Pieri last-10 win rate 90.0%, avg set diff +1.50, avg game diff +3.10; F. Forti last-10 win rate 70.0%, avg set diff +0.50, avg game diff +1.70. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "S. Pieri is selected against F. Forti in Cattolica (Italy) - Qualification. The model prices S. Pieri at 60.0% versus an implied probability of 41.3% from best odds 2.42. Market median is 2.26 across 9 bookmakers, leaving an estimated edge of +18.7%. Recent-form profile: S. Pieri last-10 win rate 90.0%, avg set diff +1.50, avg game diff +3.10; F. Forti last-10 win rate 70.0%, avg set diff +0.50, avg game diff +1.70. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-08T22:46:48.967276+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "7-6, 7-6"
     },
     {
       "pick_id": "96ff5c805c21448b0dcc849c11c25dad",
@@ -89277,9 +89367,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:02:08.479039+02:00",
-      "reasoning": "D. E. Galan is selected against L. Pavlovic in Lyon. The model prices D. E. Galan at 60.0% versus an implied probability of 44.1% from best odds 2.27. Market median is 2.20 across 7 bookmakers, leaving an estimated edge of +15.9%. Recent-form profile: D. E. Galan last-10 win rate 50.0%, avg set diff +0.10, avg game diff +1.30; L. Pavlovic last-10 win rate 40.0%, avg set diff -0.60, avg game diff -1.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "D. E. Galan is selected against L. Pavlovic in Lyon. The model prices D. E. Galan at 60.0% versus an implied probability of 44.1% from best odds 2.27. Market median is 2.20 across 7 bookmakers, leaving an estimated edge of +15.9%. Recent-form profile: D. E. Galan last-10 win rate 50.0%, avg set diff +0.10, avg game diff +1.30; L. Pavlovic last-10 win rate 40.0%, avg set diff -0.60, avg game diff -1.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.5875,
+      "settled_at": "2026-06-08T22:46:49.658093+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "6-7, 2-6"
     },
     {
       "pick_id": "de4216aa76270bd0f5cc5581816efae8",
@@ -89412,9 +89508,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:01:46.271528+02:00",
-      "reasoning": "Ka. Pliskova is selected against M. Kessler in London. The model prices Ka. Pliskova at 66.0% versus an implied probability of 54.1% from best odds 1.85. Market median is 1.69 across 10 bookmakers, leaving an estimated edge of +11.9%. Recent-form profile: Ka. Pliskova last-10 win rate 70.0%, avg set diff +0.50, avg game diff -0.30; M. Kessler last-10 win rate 50.0%, avg set diff -0.30, avg game diff -1.30. Pick type: favorite. Confidence score: 88.0."
+      "reasoning": "Ka. Pliskova is selected against M. Kessler in London. The model prices Ka. Pliskova at 66.0% versus an implied probability of 54.1% from best odds 1.85. Market median is 1.69 across 10 bookmakers, leaving an estimated edge of +11.9%. Recent-form profile: Ka. Pliskova last-10 win rate 70.0%, avg set diff +0.50, avg game diff -0.30; M. Kessler last-10 win rate 50.0%, avg set diff -0.30, avg game diff -1.30. Pick type: favorite. Confidence score: 88.0.",
+      "profit": 1.0625,
+      "settled_at": "2026-06-08T22:46:50.351784+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-7, 6-3, 6-4"
     },
     {
       "pick_id": "09c34d1895b0e273cb72424809db55a2",
@@ -89547,9 +89649,15 @@
           "fatigue_matches_3d": 1
         }
       },
-      "result": "pending",
+      "result": "loss",
       "created_at": "2026-06-08T09:03:06.404998+02:00",
-      "reasoning": "A. Santillan is selected against A. Shelbayh in Bratislava. The model prices A. Santillan at 62.7% versus an implied probability of 42.0% from best odds 2.38. Market median is 2.28 across 9 bookmakers, leaving an estimated edge of +20.7%. Recent-form profile: A. Santillan last-10 win rate 60.0%, avg set diff +0.40, avg game diff +0.70; A. Shelbayh last-10 win rate 40.0%, avg set diff -0.20, avg game diff -0.90. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "A. Santillan is selected against A. Shelbayh in Bratislava. The model prices A. Santillan at 62.7% versus an implied probability of 42.0% from best odds 2.38. Market median is 2.28 across 9 bookmakers, leaving an estimated edge of +20.7%. Recent-form profile: A. Santillan last-10 win rate 60.0%, avg set diff +0.40, avg game diff +0.70; A. Shelbayh last-10 win rate 40.0%, avg set diff -0.20, avg game diff -0.90. Pick type: underdog. Confidence score: 88.0.",
+      "profit": -1.25,
+      "settled_at": "2026-06-08T22:46:51.041666+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "Second Player",
+      "final_score": "6-7, 6-2, 0-6"
     },
     {
       "pick_id": "8aec30b4ccf757c82291d57b38a61dd9",
@@ -89682,9 +89790,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:01:30.799971+02:00",
-      "reasoning": "D. Snigur is selected against P. Badosa in Hertogenbosch. The model prices D. Snigur at 66.0% versus an implied probability of 46.1% from best odds 2.17. Market median is 1.90 across 10 bookmakers, leaving an estimated edge of +19.9%. Recent-form profile: D. Snigur last-10 win rate 70.0%, avg set diff +0.70, avg game diff +1.20; P. Badosa last-10 win rate 40.0%, avg set diff -0.10, avg game diff -0.50. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "D. Snigur is selected against P. Badosa in Hertogenbosch. The model prices D. Snigur at 66.0% versus an implied probability of 46.1% from best odds 2.17. Market median is 1.90 across 10 bookmakers, leaving an estimated edge of +19.9%. Recent-form profile: D. Snigur last-10 win rate 70.0%, avg set diff +0.70, avg game diff +1.20; P. Badosa last-10 win rate 40.0%, avg set diff -0.10, avg game diff -0.50. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.755,
+      "settled_at": "2026-06-08T22:46:51.741668+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-1, 7-6"
     },
     {
       "pick_id": "fd97f7f9cb3d9c2f3de44428db4056e0",
@@ -89817,9 +89931,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:01:56.030539+02:00",
-      "reasoning": "T. Kokkinakis is selected against T. Barrios Vera in Bratislava. The model prices T. Kokkinakis at 66.0% versus an implied probability of 49.5% from best odds 2.02. Market median is 1.95 across 8 bookmakers, leaving an estimated edge of +16.5%. Recent-form profile: T. Kokkinakis last-10 win rate 80.0%, avg set diff +0.80, avg game diff +2.30; T. Barrios Vera last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.40. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "T. Kokkinakis is selected against T. Barrios Vera in Bratislava. The model prices T. Kokkinakis at 66.0% versus an implied probability of 49.5% from best odds 2.02. Market median is 1.95 across 8 bookmakers, leaving an estimated edge of +16.5%. Recent-form profile: T. Kokkinakis last-10 win rate 80.0%, avg set diff +0.80, avg game diff +2.30; T. Barrios Vera last-10 win rate 50.0%, avg set diff +0.10, avg game diff +0.40. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.275,
+      "settled_at": "2026-06-08T22:46:52.436059+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-4, 6-4"
     },
     {
       "pick_id": "b96a7f8eb616cb1f0d2de79bcfef6357",
@@ -89952,9 +90072,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:02:18.395474+02:00",
-      "reasoning": "A. Holmgren is selected against N. Budkov Kjaer in Ilkley. The model prices A. Holmgren at 66.0% versus an implied probability of 42.7% from best odds 2.34. Market median is 2.25 across 9 bookmakers, leaving an estimated edge of +23.3%. Recent-form profile: A. Holmgren last-10 win rate 60.0%, avg set diff +0.50, avg game diff +0.40; N. Budkov Kjaer last-10 win rate 50.0%, avg set diff -0.30, avg game diff +0.10. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "A. Holmgren is selected against N. Budkov Kjaer in Ilkley. The model prices A. Holmgren at 66.0% versus an implied probability of 42.7% from best odds 2.34. Market median is 2.25 across 9 bookmakers, leaving an estimated edge of +23.3%. Recent-form profile: A. Holmgren last-10 win rate 60.0%, avg set diff +0.50, avg game diff +0.40; N. Budkov Kjaer last-10 win rate 50.0%, avg set diff -0.30, avg game diff +0.10. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.675,
+      "settled_at": "2026-06-08T22:46:53.143526+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-0, 7-6"
     },
     {
       "pick_id": "4ca991e78b33c5ec15d0e573a696ff88",
@@ -90087,9 +90213,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:02:23.948227+02:00",
-      "reasoning": "A. Dudeney is selected against H. Sakatsume in Ilkley. The model prices A. Dudeney at 66.0% versus an implied probability of 44.4% from best odds 2.25. Market median is 2.20 across 9 bookmakers, leaving an estimated edge of +21.6%. Recent-form profile: A. Dudeney last-10 win rate 90.0%, avg set diff +1.50, avg game diff +5.70; H. Sakatsume last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.70. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "A. Dudeney is selected against H. Sakatsume in Ilkley. The model prices A. Dudeney at 66.0% versus an implied probability of 44.4% from best odds 2.25. Market median is 2.20 across 9 bookmakers, leaving an estimated edge of +21.6%. Recent-form profile: A. Dudeney last-10 win rate 90.0%, avg set diff +1.50, avg game diff +5.70; H. Sakatsume last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.70. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 1.5625,
+      "settled_at": "2026-06-08T22:46:53.835647+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-4, 6-3"
     },
     {
       "pick_id": "3aeb74d8308e06191a071bcf82568fc1",
@@ -90222,9 +90354,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:02:56.674638+02:00",
-      "reasoning": "G. Onclin is selected against F. Marozsan in Stuttgart. The model prices G. Onclin at 66.0% versus an implied probability of 38.2% from best odds 2.62. Market median is 2.38 across 10 bookmakers, leaving an estimated edge of +27.8%. Recent-form profile: G. Onclin last-10 win rate 80.0%, avg set diff +1.20, avg game diff +3.00; F. Marozsan last-10 win rate 40.0%, avg set diff -0.40, avg game diff -2.00. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "G. Onclin is selected against F. Marozsan in Stuttgart. The model prices G. Onclin at 66.0% versus an implied probability of 38.2% from best odds 2.62. Market median is 2.38 across 10 bookmakers, leaving an estimated edge of +27.8%. Recent-form profile: G. Onclin last-10 win rate 80.0%, avg set diff +1.20, avg game diff +3.00; F. Marozsan last-10 win rate 40.0%, avg set diff -0.40, avg game diff -2.00. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 2.025,
+      "settled_at": "2026-06-08T22:46:54.607373+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "7-6, 6-3"
     },
     {
       "pick_id": "6e409fc8567aca49ba6346f7a4b03b6a",
@@ -90627,9 +90765,15 @@
           "fatigue_matches_3d": 0
         }
       },
-      "result": "pending",
+      "result": "win",
       "created_at": "2026-06-08T09:02:01.456477+02:00",
-      "reasoning": "A. Guerrieri is selected against D. Svrcina in Cattolica (Italy) - Qualification. The model prices A. Guerrieri at 66.0% versus an implied probability of 35.7% from best odds 2.80. Market median is 2.75 across 8 bookmakers, leaving an estimated edge of +30.3%. Recent-form profile: A. Guerrieri last-10 win rate 80.0%, avg set diff +1.00, avg game diff +3.10; D. Svrcina last-10 win rate 50.0%, avg set diff +0.20, avg game diff +1.10. Pick type: underdog. Confidence score: 88.0."
+      "reasoning": "A. Guerrieri is selected against D. Svrcina in Cattolica (Italy) - Qualification. The model prices A. Guerrieri at 66.0% versus an implied probability of 35.7% from best odds 2.80. Market median is 2.75 across 8 bookmakers, leaving an estimated edge of +30.3%. Recent-form profile: A. Guerrieri last-10 win rate 80.0%, avg set diff +1.00, avg game diff +3.10; D. Svrcina last-10 win rate 50.0%, avg set diff +0.20, avg game diff +1.10. Pick type: underdog. Confidence score: 88.0.",
+      "profit": 2.25,
+      "settled_at": "2026-06-08T22:46:56.756741+02:00",
+      "settled_status": "Finished",
+      "settle_reason": "finished_with_winner",
+      "event_winner": "First Player",
+      "final_score": "6-3, 3-6, 6-4"
     },
     {
       "pick_id": "9f52fc19cb7d9e39d6f1768208c7b454",
@@ -90772,15 +90916,15 @@
       {
         "date": "2026-06-08",
         "picks": 15,
-        "settled": 0,
-        "pending": 15,
-        "wins": 0,
-        "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "settled": 12,
+        "pending": 3,
+        "wins": 9,
+        "losses": 3,
+        "hit_rate": 75.0,
+        "stake": 15.25,
+        "profit": 11.05,
+        "roi": 72.5,
+        "avg_odds": 2.31
       },
       {
         "date": "2026-06-07",
@@ -91204,29 +91348,29 @@
         "date": "2026-06-08",
         "type": "underdog",
         "picks": 14,
-        "settled": 0,
-        "pending": 14,
-        "wins": 0,
-        "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "settled": 11,
+        "pending": 3,
+        "wins": 8,
+        "losses": 3,
+        "hit_rate": 72.7,
+        "stake": 14.0,
+        "profit": 9.99,
+        "roi": 71.4,
+        "avg_odds": 2.36
       },
       {
         "date": "2026-06-08",
         "type": "favorite",
         "picks": 1,
-        "settled": 0,
-        "pending": 1,
-        "wins": 0,
+        "settled": 1,
+        "pending": 0,
+        "wins": 1,
         "losses": 0,
-        "hit_rate": 0,
-        "stake": 0,
-        "profit": 0,
-        "roi": 0,
-        "avg_odds": 0
+        "hit_rate": 100.0,
+        "stake": 1.25,
+        "profit": 1.06,
+        "roi": 85.0,
+        "avg_odds": 1.85
       },
       {
         "date": "2026-06-07",
@@ -92115,27 +92259,27 @@
       {
         "group": "underdog",
         "picks": 506,
-        "settled": 459,
-        "pending": 21,
-        "wins": 186,
-        "losses": 273,
-        "hit_rate": 40.5,
-        "stake": 576.25,
-        "profit": -25.67,
-        "roi": -4.5,
+        "settled": 470,
+        "pending": 10,
+        "wins": 194,
+        "losses": 276,
+        "hit_rate": 41.3,
+        "stake": 590.25,
+        "profit": -15.68,
+        "roi": -2.7,
         "avg_odds": 2.38
       },
       {
         "group": "favorite",
         "picks": 125,
-        "settled": 118,
-        "pending": 1,
-        "wins": 64,
+        "settled": 119,
+        "pending": 0,
+        "wins": 65,
         "losses": 54,
-        "hit_rate": 54.2,
-        "stake": 126.5,
-        "profit": 1.28,
-        "roi": 1.0,
+        "hit_rate": 54.6,
+        "stake": 127.75,
+        "profit": 2.34,
+        "roi": 1.8,
         "avg_odds": 1.85
       }
     ],
@@ -92143,53 +92287,53 @@
       {
         "group": "2.30 - 2.69",
         "picks": 227,
-        "settled": 208,
-        "pending": 10,
-        "wins": 86,
-        "losses": 122,
+        "settled": 213,
+        "pending": 5,
+        "wins": 88,
+        "losses": 125,
         "hit_rate": 41.3,
-        "stake": 261.0,
-        "profit": 5.97,
-        "roi": 2.3,
-        "avg_odds": 2.48
+        "stake": 267.25,
+        "profit": 5.92,
+        "roi": 2.2,
+        "avg_odds": 2.47
       },
       {
         "group": "2.00 - 2.29",
         "picks": 212,
-        "settled": 191,
-        "pending": 9,
-        "wins": 77,
+        "settled": 196,
+        "pending": 4,
+        "wins": 82,
         "losses": 114,
-        "hit_rate": 40.3,
-        "stake": 244.25,
-        "profit": -34.03,
-        "roi": -13.9,
+        "hit_rate": 41.8,
+        "stake": 250.75,
+        "profit": -26.24,
+        "roi": -10.5,
         "avg_odds": 2.15
       },
       {
         "group": "1.80 - 1.99",
         "picks": 93,
-        "settled": 87,
-        "pending": 1,
-        "wins": 50,
+        "settled": 88,
+        "pending": 0,
+        "wins": 51,
         "losses": 37,
-        "hit_rate": 57.5,
-        "stake": 97.75,
-        "profit": 7.94,
-        "roi": 8.1,
+        "hit_rate": 58.0,
+        "stake": 99.0,
+        "profit": 9.01,
+        "roi": 9.1,
         "avg_odds": 1.89
       },
       {
         "group": "2.70+",
         "picks": 67,
-        "settled": 60,
-        "pending": 2,
-        "wins": 23,
+        "settled": 61,
+        "pending": 1,
+        "wins": 24,
         "losses": 37,
-        "hit_rate": 38.3,
-        "stake": 71.0,
-        "profit": 2.39,
-        "roi": 3.4,
+        "hit_rate": 39.3,
+        "stake": 72.25,
+        "profit": 4.64,
+        "roi": 6.4,
         "avg_odds": 2.77
       },
       {
@@ -92210,14 +92354,14 @@
       {
         "group": "Elite 88+",
         "picks": 542,
-        "settled": 493,
-        "pending": 22,
-        "wins": 208,
-        "losses": 285,
-        "hit_rate": 42.2,
-        "stake": 614.5,
-        "profit": -42.68,
-        "roi": -6.9,
+        "settled": 505,
+        "pending": 10,
+        "wins": 217,
+        "losses": 288,
+        "hit_rate": 43.0,
+        "stake": 629.75,
+        "profit": -31.63,
+        "roi": -5.0,
         "avg_odds": 2.24
       },
       {
@@ -92264,40 +92408,40 @@
       {
         "group": "20%+",
         "picks": 215,
-        "settled": 194,
-        "pending": 10,
-        "wins": 71,
-        "losses": 123,
-        "hit_rate": 36.6,
-        "stake": 248.5,
-        "profit": -21.45,
-        "roi": -8.6,
+        "settled": 199,
+        "pending": 5,
+        "wins": 75,
+        "losses": 124,
+        "hit_rate": 37.7,
+        "stake": 254.75,
+        "profit": -15.19,
+        "roi": -6.0,
         "avg_odds": 2.52
       },
       {
         "group": "10% - 14.9%",
         "picks": 173,
-        "settled": 158,
-        "pending": 4,
-        "wins": 73,
+        "settled": 160,
+        "pending": 2,
+        "wins": 75,
         "losses": 85,
-        "hit_rate": 46.2,
-        "stake": 191.5,
-        "profit": -7.23,
-        "roi": -3.8,
+        "hit_rate": 46.9,
+        "stake": 194.0,
+        "profit": -4.56,
+        "roi": -2.3,
         "avg_odds": 2.12
       },
       {
         "group": "15% - 19.9%",
         "picks": 154,
-        "settled": 140,
-        "pending": 8,
-        "wins": 63,
-        "losses": 77,
-        "hit_rate": 45.0,
-        "stake": 187.0,
-        "profit": 5.42,
-        "roi": 2.9,
+        "settled": 145,
+        "pending": 3,
+        "wins": 66,
+        "losses": 79,
+        "hit_rate": 45.5,
+        "stake": 193.5,
+        "profit": 7.53,
+        "roi": 3.9,
         "avg_odds": 2.27
       },
       {
@@ -92318,27 +92462,27 @@
       {
         "group": "Strong",
         "picks": 384,
-        "settled": 345,
-        "pending": 19,
-        "wins": 144,
-        "losses": 201,
-        "hit_rate": 41.7,
-        "stake": 431.25,
-        "profit": -11.49,
-        "roi": -2.7,
+        "settled": 356,
+        "pending": 8,
+        "wins": 152,
+        "losses": 204,
+        "hit_rate": 42.7,
+        "stake": 445.0,
+        "profit": -2.19,
+        "roi": -0.5,
         "avg_odds": 2.37
       },
       {
         "group": "Top Rated",
         "picks": 106,
-        "settled": 98,
-        "pending": 3,
-        "wins": 43,
+        "settled": 99,
+        "pending": 2,
+        "wins": 44,
         "losses": 55,
-        "hit_rate": 43.9,
-        "stake": 147.0,
-        "profit": -5.19,
-        "roi": -3.5,
+        "hit_rate": 44.4,
+        "stake": 148.5,
+        "profit": -3.43,
+        "roi": -2.3,
         "avg_odds": 2.2
       },
       {
@@ -92372,14 +92516,14 @@
       {
         "group": "challenger",
         "picks": 248,
-        "settled": 222,
-        "pending": 14,
-        "wins": 105,
-        "losses": 117,
-        "hit_rate": 47.3,
-        "stake": 276.75,
-        "profit": 13.42,
-        "roi": 4.8,
+        "settled": 231,
+        "pending": 5,
+        "wins": 111,
+        "losses": 120,
+        "hit_rate": 48.1,
+        "stake": 288.0,
+        "profit": 19.63,
+        "roi": 6.8,
         "avg_odds": 2.28
       },
       {
@@ -92398,27 +92542,27 @@
       {
         "group": "atp",
         "picks": 100,
-        "settled": 93,
-        "pending": 2,
-        "wins": 34,
+        "settled": 94,
+        "pending": 1,
+        "wins": 35,
         "losses": 59,
-        "hit_rate": 36.6,
-        "stake": 118.0,
-        "profit": -18.34,
-        "roi": -15.5,
+        "hit_rate": 37.2,
+        "stake": 119.25,
+        "profit": -16.32,
+        "roi": -13.7,
         "avg_odds": 2.3
       },
       {
         "group": "wta",
         "picks": 74,
-        "settled": 69,
-        "pending": 2,
-        "wins": 34,
+        "settled": 71,
+        "pending": 0,
+        "wins": 36,
         "losses": 35,
-        "hit_rate": 49.3,
-        "stake": 85.75,
-        "profit": 2.44,
-        "roi": 2.8,
+        "hit_rate": 50.7,
+        "stake": 88.5,
+        "profit": 5.25,
+        "roi": 5.9,
         "avg_odds": 2.26
       }
     ],
@@ -92426,27 +92570,27 @@
       {
         "group": "men",
         "picks": 395,
-        "settled": 359,
-        "pending": 15,
-        "wins": 154,
-        "losses": 205,
-        "hit_rate": 42.9,
-        "stake": 436.0,
-        "profit": -18.6,
-        "roi": -4.3,
+        "settled": 368,
+        "pending": 6,
+        "wins": 160,
+        "losses": 208,
+        "hit_rate": 43.5,
+        "stake": 447.25,
+        "profit": -11.93,
+        "roi": -2.7,
         "avg_odds": 2.27
       },
       {
         "group": "women",
         "picks": 229,
-        "settled": 211,
-        "pending": 7,
-        "wins": 92,
+        "settled": 214,
+        "pending": 4,
+        "wins": 95,
         "losses": 119,
-        "hit_rate": 43.6,
-        "stake": 257.75,
-        "profit": -7.86,
-        "roi": -3.0,
+        "hit_rate": 44.4,
+        "stake": 261.75,
+        "profit": -3.48,
+        "roi": -1.3,
         "avg_odds": 2.27
       },
       {
@@ -92467,28 +92611,41 @@
       {
         "group": "Pncl",
         "picks": 268,
-        "settled": 253,
-        "pending": 4,
-        "wins": 109,
-        "losses": 144,
-        "hit_rate": 43.1,
-        "stake": 310.0,
-        "profit": -9.41,
-        "roi": -3.0,
+        "settled": 256,
+        "pending": 1,
+        "wins": 111,
+        "losses": 145,
+        "hit_rate": 43.4,
+        "stake": 313.75,
+        "profit": -7.37,
+        "roi": -2.3,
         "avg_odds": 2.27
       },
       {
         "group": "bet365",
         "picks": 111,
-        "settled": 100,
-        "pending": 6,
-        "wins": 45,
-        "losses": 55,
-        "hit_rate": 45.0,
-        "stake": 121.0,
-        "profit": 2.39,
-        "roi": 2.0,
+        "settled": 102,
+        "pending": 4,
+        "wins": 46,
+        "losses": 56,
+        "hit_rate": 45.1,
+        "stake": 123.5,
+        "profit": 3.16,
+        "roi": 2.6,
         "avg_odds": 2.27
+      },
+      {
+        "group": "Betfair",
+        "picks": 78,
+        "settled": 75,
+        "pending": 1,
+        "wins": 32,
+        "losses": 43,
+        "hit_rate": 42.7,
+        "stake": 89.25,
+        "profit": -0.94,
+        "roi": -1.1,
+        "avg_odds": 2.38
       },
       {
         "group": "Unibet",
@@ -92504,30 +92661,17 @@
         "avg_odds": 2.25
       },
       {
-        "group": "Betfair",
-        "picks": 78,
-        "settled": 72,
-        "pending": 4,
-        "wins": 30,
-        "losses": 42,
-        "hit_rate": 41.7,
-        "stake": 85.5,
-        "profit": -3.5,
-        "roi": -4.1,
-        "avg_odds": 2.38
-      },
-      {
         "group": "Betano",
         "picks": 26,
-        "settled": 23,
-        "pending": 3,
-        "wins": 16,
+        "settled": 25,
+        "pending": 1,
+        "wins": 18,
         "losses": 7,
-        "hit_rate": 69.6,
-        "stake": 27.25,
-        "profit": 10.79,
-        "roi": 39.6,
-        "avg_odds": 2.06
+        "hit_rate": 72.0,
+        "stake": 29.75,
+        "profit": 13.65,
+        "roi": 45.9,
+        "avg_odds": 2.07
       },
       {
         "group": "1xBet",
@@ -92545,15 +92689,15 @@
       {
         "group": "Sbo",
         "picks": 15,
-        "settled": 12,
-        "pending": 2,
-        "wins": 5,
+        "settled": 14,
+        "pending": 0,
+        "wins": 7,
         "losses": 7,
-        "hit_rate": 41.7,
-        "stake": 14.75,
-        "profit": 0.34,
-        "roi": 2.3,
-        "avg_odds": 2.32
+        "hit_rate": 50.0,
+        "stake": 17.5,
+        "profit": 3.16,
+        "roi": 18.0,
+        "avg_odds": 2.28
       },
       {
         "group": "Superbet",
