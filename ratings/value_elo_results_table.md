@@ -1,8 +1,8 @@
 # Value + ELO settled results
 
-Generated: 2026-06-07T22:54:10.602298+02:00
+Generated: 2026-06-08T22:47:12.878790+02:00
 
-Overall: **99-104**, WR **48.77%**, Profit **15.96u**, ROI **6.38%**, Avg odds **2.238**
+Overall: **102-104**, WR **49.51%**, Profit **19.973u**, ROI **7.87%**, Avg odds **2.235**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -214,3 +214,6 @@ Overall: **99-104**, WR **48.77%**, Profit **15.96u**, ROI **6.38%**, Avg odds *
 | 2026-06-07 | atp | M. Huesler - G. Onclin | G. Onclin | 2.26 | 1.5 | win | 1.89 | 56.03 |  |
 | 2026-06-07 | challenger | O. Virtanen - K. Majchrzak | K. Majchrzak | 2.24 | 1.5 | loss | -1.5 | 65.05 |  |
 | 2026-06-07 | atp | S. Shimabukuro - J. Rodionov | J. Rodionov | 2.11 | 1.25 | loss | -1.25 | 58.85 |  |
+| 2026-06-08 | challenger | A. Holmgren - N. Budkov Kjaer | A. Holmgren | 2.34 | 1.25 | win | 1.675 | 24.59 |  |
+| 2026-06-08 | wta | Ka. Pliskova - M. Kessler | Ka. Pliskova | 1.85 | 1.25 | win | 1.0625 | 45.5 |  |
+| 2026-06-08 | challenger | T. Kokkinakis - T. Barrios Vera | T. Kokkinakis | 2.02 | 1.25 | win | 1.275 | 130.28 |  |
