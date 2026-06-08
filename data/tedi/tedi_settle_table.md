@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-07T22:43:02.962438+02:00
+Generated: 2026-06-08T22:42:23.728049+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 55 | 55 | 0 | 27 | 23 | 5 | 54.0% | 6.51u | 11.84% |
-| tedi_v2_test | 16 | 16 | 0 | 9 | 7 | 0 | 56.25% | 2.89u | 18.06% |
+| tedi_main_150 | 62 | 61 | 1 | 29 | 27 | 5 | 51.79% | 4.72u | 7.74% |
+| tedi_v2_test | 18 | 18 | 0 | 9 | 9 | 0 | 50.0% | 0.89u | 4.94% |
 
 ## Results
 
@@ -84,3 +84,12 @@ Generated: 2026-06-07T22:43:02.962438+02:00
 | 2026-06-07 | 16:30 | tedi_main_150 | loss | -1.00 | F. Urgesi - A. Mazzola | UNDER 20.0 games | 2.14 | 26 | 6-4, 3-6, 6-1 |
 | 2026-06-07 | 18:30 | tedi_main_150 | loss | -1.00 | L. Romero Gormaz - T. C. Grant | UNDER 20.0 games | 2.19 | 26 | 7-5, 0-6, 6-2 |
 | 2026-06-07 | 18:30 | tedi_v2_test | loss | -1.00 | L. Romero Gormaz - T. C. Grant | UNDER 20.0 games | 2.19 | 26 | 7-5, 0-6, 6-2 |
+| 2026-06-08 | 11:00 | tedi_main_150 | loss | -1.00 | A. Davidovich Fokina - M. Bellucci | UNDER 22.5 games | 2.07 | 28 | 2-6, 7-6, 1-6 |
+| 2026-06-08 | 11:00 | tedi_main_150 | loss | -1.00 | E. Alexandrova - P. Udvardy | UNDER 19.5 games | 2.02 | 23 | 4-6, 6-7 |
+| 2026-06-08 | 11:00 | tedi_v2_test | loss | -1.00 | E. Alexandrova - P. Udvardy | UNDER 19.5 games | 2.02 | 23 | 4-6, 6-7 |
+| 2026-06-08 | 12:00 | tedi_main_150 | win | 1.19 | L. Neumayer - T. Daniel | UNDER 20.0 games | 2.19 | 19 | 4-6, 3-6 |
+| 2026-06-08 | 14:00 | tedi_main_150 | loss | -1.00 | L. Broady - I. Xilas | UNDER 19.5 games | 2.19 | 26 | 6-3, 3-6, 6-2 |
+| 2026-06-08 | 14:00 | tedi_v2_test | loss | -1.00 | L. Broady - I. Xilas | UNDER 19.5 games | 2.19 | 26 | 6-3, 3-6, 6-2 |
+| 2026-06-08 | 14:30 | tedi_main_150 | win | 1.02 | D. Snigur - P. Badosa | UNDER 21.5 games | 2.02 | 20 | 6-1, 7-6 |
+| 2026-06-08 | 14:30 | tedi_main_150 | loss | -1.00 | L. Djere - K. Coppejans | UNDER 20.5 games | 2.12 | 26 | 2-6, 6-2, 4-6 |
+| 2026-06-08 | 17:00 | tedi_main_150 | pending | 0.00 | L. Siegemund - F. Jones | UNDER 20.5 games | 2.02 |  |  |

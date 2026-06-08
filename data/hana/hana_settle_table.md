@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-07T22:43:03.119085+02:00
+Generated: 2026-06-08T22:42:23.854401+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 187 | 187 | 89 | 85 | 13 | 51.15% | 9.93u | 5.71% |
+| 207 | 207 | 99 | 94 | 14 | 51.3% | 11.48u | 5.95% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 33 | 33 | 18 | 14 | 1 | 56.25% | 5.14u | 16.06% |
-| single | 142 | 142 | 64 | 66 | 12 | 49.23% | 1.98u | 1.52% |
-| triple | 12 | 12 | 7 | 5 | 0 | 58.33% | 2.81u | 23.42% |
+| double | 36 | 36 | 18 | 16 | 2 | 52.94% | 3.14u | 9.24% |
+| single | 157 | 157 | 73 | 72 | 12 | 50.34% | 5.34u | 3.68% |
+| triple | 14 | 14 | 8 | 6 | 0 | 57.14% | 3.0u | 21.43% |
 
 ## Results
 
@@ -207,3 +207,23 @@ Generated: 2026-06-07T22:43:03.119085+02:00
 | 2026-06-07 | 15:00 | single | tedi | push | 0.00 | P. Fajta - M. Tobon | UNDER 21.0 games | 2.08 | None | None |
 | 2026-06-07 | 16:30 | single | tedi | loss | -1.00 | F. Urgesi - A. Mazzola | UNDER 20.0 games | 2.14 | 26 | 6-4, 3-6, 6-1 |
 | 2026-06-07 | 18:30 | double | lucija, tedi | loss | -1.00 | L. Romero Gormaz - T. C. Grant | UNDER 20.0 games | 2.19 | 26 | 7-5, 0-6, 6-2 |
+| 2026-06-08 | 10:30 | single | jakob | win | 1.04 | L. Ratti - H. S. Callejon | OVER 21.5 games | 2.04 | 30 | 6-7, 6-3, 2-6 |
+| 2026-06-08 | 11:00 | single | tedi | loss | -1.00 | A. Davidovich Fokina - M. Bellucci | UNDER 22.5 games | 2.07 | 28 | 2-6, 7-6, 1-6 |
+| 2026-06-08 | 11:00 | triple | jakob, lucija, tedi | loss | -1.00 | E. Alexandrova - P. Udvardy | UNDER 19.5 games | 2.02 | 23 | 4-6, 6-7 |
+| 2026-06-08 | 12:00 | single | jakob | loss | -1.00 | H. Tan - E. Appleton | UNDER 20.5 games | 2.03 | 21 | 7-5, 6-3 |
+| 2026-06-08 | 12:00 | triple | jakob, lucija, tedi | win | 1.19 | L. Neumayer - T. Daniel | UNDER 20.0 games | 2.19 | 19 | 4-6, 3-6 |
+| 2026-06-08 | 12:00 | single | jakob | loss | -1.00 | V. Sachko - Y. Watanuki | UNDER 20.5 games | 2.18 | 21 | 6-2, 7-6 |
+| 2026-06-08 | 12:30 | single | jakob | win | 1.06 | B. Bonzi - M. Rottgering | UNDER 21.5 games | 2.06 | 20 | 6-4, 6-4 |
+| 2026-06-08 | 12:30 | single | jakob | loss | -1.00 | C. Naef - M. Kobori | UNDER 18.5 games | 2.05 | 24 | 7-5, 7-5 |
+| 2026-06-08 | 12:30 | single | jakob | loss | -1.00 | D. Kasatkina - R. Montgomery | UNDER 20.5 games | 2.07 | 28 | 7-5, 0-6, 4-6 |
+| 2026-06-08 | 13:00 | single | jakob | win | 0.93 | R. Noguchi - K. Smith | OVER 22.5 games | 1.93 | 27 | 3-6, 6-4, 2-6 |
+| 2026-06-08 | 13:30 | single | jakob | win | 0.96 | K. Cross - T. Martincova | UNDER 20.5 games | 1.96 | 19 | 3-6, 4-6 |
+| 2026-06-08 | 14:00 | double | lucija, tedi | loss | -1.00 | L. Broady - I. Xilas | UNDER 19.5 games | 2.19 | 26 | 6-3, 3-6, 6-2 |
+| 2026-06-08 | 14:00 | single | jakob | loss | -1.00 | L. Broady - I. Xilas | UNDER 20.5 games | 2.04 | 26 | 6-3, 3-6, 6-2 |
+| 2026-06-08 | 14:30 | single | tedi | win | 1.02 | D. Snigur - P. Badosa | UNDER 21.5 games | 2.02 | 20 | 6-1, 7-6 |
+| 2026-06-08 | 14:30 | double | jakob, tedi | loss | -1.00 | L. Djere - K. Coppejans | UNDER 20.5 games | 2.12 | 26 | 2-6, 6-2, 4-6 |
+| 2026-06-08 | 15:00 | double | jakob, lucija | push | 0.00 | T. Paul - G. Mpetshi Perricard | UNDER 24.5 games | 2.18 | None | None |
+| 2026-06-08 | 16:00 | single | jakob | win | 1.15 | M. Pohankova - C. Tauson | UNDER 20.5 games | 2.15 | 20 | 6-4, 6-4 |
+| 2026-06-08 | 16:00 | single | jakob | win | 1.15 | U. Humbert - E. Ymer | UNDER 21.5 games | 2.15 | 19 | 6-4, 6-3 |
+| 2026-06-08 | 17:15 | single | jakob | win | 1.00 | H. Grenier - L. van Assche | UNDER 19.5 games | 2.00 | 15 | 1-6, 2-6 |
+| 2026-06-08 | 18:00 | single | lucija | win | 1.05 | K. Jacquet - T. Samuel | OVER 23.5 games | 2.05 | 30 | 6-1, 6-7, 4-6 |

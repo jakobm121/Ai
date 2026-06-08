@@ -1,56 +1,67 @@
 {
-  "generated_at": "2026-06-07T22:43:03.040374+02:00",
+  "generated_at": "2026-06-08T22:42:23.793131+02:00",
   "source_results_file": "data/tennis_totals_results.json",
   "lucija_results_file": "data/lucija/lucija_results.json",
-  "source_results_count": 681,
-  "lucija_results_count": 59,
-  "updated": 4,
+  "source_results_count": 701,
+  "lucija_results_count": 64,
+  "updated": 5,
   "still_pending": 0,
   "source_not_found": 0,
   "source_not_settled": 0,
   "items": [
     {
-      "pick_id": "16c532e15435764c1ad29ce40ca4e7f8",
-      "source_pick_id": "e5ce4d433376371690b46d06fd849716",
-      "match": "L. Romero Gormaz - T. C. Grant",
+      "pick_id": "2cd3ac14fdf214e99b3441f0163ad758",
+      "source_pick_id": "6867e8e9b25fe0ea960a5620efd39511",
+      "match": "T. Paul - G. Mpetshi Perricard",
+      "status": "settled",
+      "result": "void",
+      "profit": 0.0,
+      "total_games": null,
+      "final_score": null,
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "6bfe1bf7fe8958df6751c482c585b18b",
+      "source_pick_id": "2390ebcda814bc27804e8b4eefa3841c",
+      "match": "E. Alexandrova - P. Udvardy",
+      "status": "settled",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 23,
+      "final_score": "4-6, 6-7",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "558e11637cf100c54777a838dd2d7046",
+      "source_pick_id": "11831c1747e4580116728b031ab36f31",
+      "match": "K. Jacquet - T. Samuel",
+      "status": "settled",
+      "result": "win",
+      "profit": 1.05,
+      "total_games": 30,
+      "final_score": "6-1, 6-7, 4-6",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "29a6c800956ec3781b28d808db269095",
+      "source_pick_id": "7382d3375f57339168af69674cc1c53f",
+      "match": "L. Neumayer - T. Daniel",
+      "status": "settled",
+      "result": "win",
+      "profit": 1.19,
+      "total_games": 19,
+      "final_score": "4-6, 3-6",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "b4a34ae7df24e8fe08f9755ce1864b7c",
+      "source_pick_id": "b90e1b543cf9afa16b5bec8fecc9735d",
+      "match": "L. Broady - I. Xilas",
       "status": "settled",
       "result": "loss",
       "profit": -1.0,
       "total_games": 26,
-      "final_score": "7-5, 0-6, 6-2",
-      "match_method": "source_pick_id"
-    },
-    {
-      "pick_id": "af8d14774c5d5d602c3e98b315afb67b",
-      "source_pick_id": "f7f6501571036a2d3f2083af629141ac",
-      "match": "M. Alkaya - P. Herbert",
-      "status": "settled",
-      "result": "loss",
-      "profit": -1.0,
-      "total_games": 23,
-      "final_score": "6-7, 4-6",
-      "match_method": "source_pick_id"
-    },
-    {
-      "pick_id": "6f89d29083cc131db4915532cd7924ca",
-      "source_pick_id": "d8808a6f57b699605fe2c6660564a9ae",
-      "match": "T. Maria - L. Miyazaki",
-      "status": "settled",
-      "result": "loss",
-      "profit": -1.0,
-      "total_games": 23,
-      "final_score": "6-2, 1-6, 6-2",
-      "match_method": "source_pick_id"
-    },
-    {
-      "pick_id": "8566896e7c0b7b44987fa40a0b6f95ac",
-      "source_pick_id": "6b72596cb9dd53d557ab7859d3e6cc67",
-      "match": "F. Zakaria - M. Erhard",
-      "status": "settled",
-      "result": "win",
-      "profit": 1.15,
-      "total_games": 15,
-      "final_score": "2-6, 1-6",
+      "final_score": "6-3, 3-6, 6-2",
       "match_method": "source_pick_id"
     }
   ]
