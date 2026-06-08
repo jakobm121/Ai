@@ -2,7 +2,9 @@ name: Export Tennis Odds
 
 on:
   workflow_dispatch:
-  
+  schedule:
+    - cron: "15 */3 * * *"
+
 permissions:
   contents: write
 
@@ -31,19 +33,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Export today's tennis odds
+      - name: Export canonical tennis odds
         env:
           API_KEY: ${{ secrets.API_KEY }}
           TZ_NAME: "Europe/Ljubljana"
           TENNIS_ODDS_DAYS_AHEAD: "1"
           TENNIS_ODDS_MAX_FIXTURES: "650"
           TENNIS_ODDS_SAVE_RAW_MARKETS: "1"
+          TENNIS_ODDS_SAVE_RAW_FIXTURE: "1"
         run: python tennis_odds_export.py
 
-      - name: Validate export
+      - name: Validate canonical export
         run: |
           python - <<'PY'
           import json
+          from collections import Counter
           from pathlib import Path
 
           output = Path("data/tennis_odds_today.json")
@@ -54,21 +58,50 @@ jobs:
                   raise SystemExit(f"Missing generated file: {path}")
 
           data = json.loads(output.read_text(encoding="utf-8"))
+          matches = data.get("matches", [])
+          summary = data.get("summary", {})
 
-          print("SUMMARY:", data.get("summary", {}))
-          print("MATCHES:", len(data.get("matches", [])))
+          if data.get("schema_version") != 2:
+              raise SystemExit("Unexpected or missing schema_version")
 
-          for match in data.get("matches", [])[:3]:
-              print(
-                  match.get("player_1"),
-                  "-",
-                  match.get("player_2"),
-                  "markets=",
-                  match.get("available_markets", [])[:10],
-              )
+          print("SUMMARY:", summary)
+          print("MATCHES:", len(matches))
+
+          print(
+              "SURFACES:",
+              Counter(match.get("surface") for match in matches),
+          )
+
+          print(
+              "GENDERS:",
+              Counter(match.get("gender") for match in matches),
+          )
+
+          print(
+              "TOUR LEVELS:",
+              Counter(match.get("tour_level") for match in matches),
+          )
+
+          for match in matches[:5]:
+              print({
+                  "event_key": match.get("event_key"),
+                  "match": (
+                      f"{match.get('player_1')} - "
+                      f"{match.get('player_2')}"
+                  ),
+                  "tournament": match.get("tournament"),
+                  "gender": match.get("gender"),
+                  "surface": match.get("surface"),
+                  "indoor": match.get("indoor"),
+                  "best_of": match.get("best_of"),
+                  "tour_level": match.get("tour_level"),
+                  "market_count": len(
+                      match.get("available_markets", [])
+                  ),
+              })
           PY
 
-      - name: Commit odds export
+      - name: Commit canonical odds export
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -81,6 +114,6 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Update tennis odds export"
+          git commit -m "Update canonical tennis odds export"
           git pull --rebase --autostash origin main
           git push origin HEAD:main
