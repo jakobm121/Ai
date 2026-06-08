@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-06-08T22:49:35.311761+02:00",
+  "source_picks_url": "https://raw.githubusercontent.com/jakobm121/Tennis-ELO/refs/heads/main/data/predictions/first_set_totals_shadow.json",
+  "remote_shadow_picks": 1,
+  "added": 1,
+  "pending_before": 1,
+  "updated": 1,
+  "still_pending": 0,
+  "not_found": 0,
+  "errors": [],
+  "items": [
+    {
+      "event_key": 12134566,
+      "pick_id": "12134566|first_set|under|9.5|all_fav75_under_9_5",
+      "match": "U. Humbert - E. Ymer",
+      "side": "under",
+      "line": 9.5,
+      "odds": 2.25,
+      "status": "settled",
+      "api_status": "Finished",
+      "result": "loss",
+      "first_set_score": "6-4",
+      "first_set_games": 10,
+      "final_score": "6-4, 6-3",
+      "profit": -1.0,
+      "raw_scores": [
+        {
+          "score_first": "6",
+          "score_second": "4",
+          "score_set": "1"
+        },
+        {
+          "score_first": "6",
+          "score_second": "3",
+          "score_set": "2"
+        }
+      ],
+      "score_debug": {
+        "event_final_result": "2 - 0",
+        "event_game_result": "-",
+        "event_winner": "First Player",
+        "event_status": "Finished",
+        "scores": [
+          {
+            "score_first": "6",
+            "score_second": "4",
+            "score_set": "1"
+          },
+          {
+            "score_first": "6",
+            "score_second": "3",
+            "score_set": "2"
+          }
+        ]
+      }
+    }
+  ],
+  "performance": {
+    "total_picks": 1,
+    "pending": 0,
+    "settled": 1,
+    "graded": 1,
+    "wins": 0,
+    "losses": 1,
+    "pushes": 0,
+    "voids": 0,
+    "hit_rate": 0.0,
+    "total_staked": 1.0,
+    "profit": -1.0,
+    "roi": -1.0
+  }
+}
