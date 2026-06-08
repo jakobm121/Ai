@@ -2,8 +2,6 @@ name: Settle Tennis First Set Picks
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "10 */2 * * *"
 
 permissions:
   contents: write
