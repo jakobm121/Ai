@@ -295,6 +295,7 @@ TOURNAMENT_KEY_SURFACES = {
     2389: "clay",    # Lyon Challenger
     10890: "clay",   # San Miguel de Tucuman Challenger
     12576: "clay",   # M15 Messina
+    13956: "clay",   # Modena Challenger Women
 }
 
 TOURNAMENT_SURFACE_FALLBACKS = {
