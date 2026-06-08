@@ -288,6 +288,15 @@ SURFACE_ALIASES = {
 
 # Stable tournament fallbacks for cases where API fixture metadata does not
 # expose a dedicated surface field.
+TOURNAMENT_KEY_SURFACES = {
+    12571: "grass",  # London WTA
+    3137: "clay",    # Bratislava Challenger
+    13955: "clay",   # Cattolica Challenger
+    2389: "clay",    # Lyon Challenger
+    10890: "clay",   # San Miguel de Tucuman Challenger
+    12576: "clay",   # M15 Messina
+}
+
 TOURNAMENT_SURFACE_FALLBACKS = {
     "australian open": "hard",
     "french open": "clay",
@@ -333,6 +342,11 @@ def normalize_surface(fixture: dict[str, Any]) -> str:
     for marker, surface in TOURNAMENT_SURFACE_FALLBACKS.items():
         if marker in tournament:
             return surface
+
+    tournament_key = safe_int(fixture.get("tournament_key"))
+
+    if tournament_key in TOURNAMENT_KEY_SURFACES:
+        return TOURNAMENT_KEY_SURFACES[tournament_key]
 
     return "unknown"
 
