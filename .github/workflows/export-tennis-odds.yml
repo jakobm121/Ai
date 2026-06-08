@@ -1,0 +1,90 @@
+name: Export Tennis Odds
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 */3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: export-tennis-odds
+  cancel-in-progress: true
+
+jobs:
+  export-tennis-odds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install requests
+
+      - name: Export today's tennis odds
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          TZ_NAME: "Europe/Ljubljana"
+          TENNIS_ODDS_DAYS_AHEAD: "1"
+          TENNIS_ODDS_MAX_FIXTURES: "650"
+          TENNIS_ODDS_SAVE_RAW_MARKETS: "1"
+        run: python tennis_odds_export.py
+
+      - name: Validate export
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          output = Path("data/tennis_odds_today.json")
+          debug = Path("data/tennis_odds_export_debug.json")
+
+          for path in [output, debug]:
+              if not path.exists():
+                  raise SystemExit(f"Missing generated file: {path}")
+
+          data = json.loads(output.read_text(encoding="utf-8"))
+
+          print("SUMMARY:", data.get("summary", {}))
+          print("MATCHES:", len(data.get("matches", [])))
+
+          for match in data.get("matches", [])[:3]:
+              print(
+                  match.get("player_1"),
+                  "-",
+                  match.get("player_2"),
+                  "markets=",
+                  match.get("available_markets", [])[:10],
+              )
+          PY
+
+      - name: Commit odds export
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/tennis_odds_today.json
+          git add data/tennis_odds_export_debug.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update tennis odds export"
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
