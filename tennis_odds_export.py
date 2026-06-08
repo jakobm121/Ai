@@ -371,21 +371,41 @@ def parse_match_winner(odds_blob: dict[str, Any]) -> dict[str, Any] | None:
 
 
 def extract_line(text: Any) -> float | None:
-    match = re.search(r"(\d{1,2}(?:[.,]\d+)?)", str(text or ""))
+    value = str(text or "")
+
+    # Remove ordinal numbers such as "1st" so they are not
+    # incorrectly interpreted as a totals line of 1.0.
+    value = re.sub(
+        r"\b\d+(?:st|nd|rd|th)\b",
+        "",
+        value,
+        flags=re.IGNORECASE,
+    )
+
+    match = re.search(
+        r"(?<!\d)(\d{1,2}(?:[.,]\d+)?)(?!\d)",
+        value,
+    )
+
     if not match:
         return None
+
     return safe_float(match.group(1).replace(",", "."))
 
 
 def side_from_text(text: Any) -> str | None:
-    value = str(text or "").lower()
+    value = str(text or "").strip().lower()
 
-    if "over" in value:
-        return "over"
-    if "under" in value:
-        return "under"
-    if value.strip() in {"yes", "no"}:
-        return value.strip()
+    # Market labels can contain both words, for example:
+    # "Over/Under (1st Set) Under".
+    # The last occurrence is the actual selection.
+    selections = re.findall(r"\b(over|under)\b", value)
+
+    if selections:
+        return selections[-1]
+
+    if value in {"yes", "no"}:
+        return value
 
     return None
 
