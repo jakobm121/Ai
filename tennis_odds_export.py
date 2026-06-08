@@ -13,6 +13,7 @@ import requests
 API_KEY = os.getenv("API_KEY")
 BASE_URL = "https://api.api-tennis.com/tennis/"
 TZ_NAME = os.getenv("TZ_NAME", "Europe/Ljubljana")
+SCHEMA_VERSION = 2
 
 DATA_DIR = os.getenv("TENNIS_ODDS_DATA_DIR", "data")
 OUTPUT_FILE = os.getenv(
@@ -29,6 +30,7 @@ MAX_FIXTURES = int(os.getenv("TENNIS_ODDS_MAX_FIXTURES", "650"))
 REQUEST_TIMEOUT = int(os.getenv("TENNIS_ODDS_REQUEST_TIMEOUT", "30"))
 API_SLEEP_SECONDS = float(os.getenv("TENNIS_ODDS_API_SLEEP_SECONDS", "0.30"))
 SAVE_RAW_MARKETS = os.getenv("TENNIS_ODDS_SAVE_RAW_MARKETS", "1") == "1"
+SAVE_RAW_FIXTURE = os.getenv("TENNIS_ODDS_SAVE_RAW_FIXTURE", "1") == "1"
 
 BAD_STATUSES = {
     "finished",
@@ -186,9 +188,39 @@ def normalize_player_key(name: Any) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
-def tour_level(event_type: Any) -> str:
-    value = str(event_type or "").lower()
+def text_blob(*values: Any) -> str:
+    return " ".join(str(value or "") for value in values).lower()
 
+
+def direct_fixture_values(
+    fixture: dict[str, Any],
+    markers: tuple[str, ...],
+) -> list[Any]:
+    values = []
+
+    for key, value in fixture.items():
+        lower = str(key).lower()
+
+        if any(marker in lower for marker in markers):
+            values.append(value)
+
+    return values
+
+
+def tour_level(event_type: Any, tournament: Any = None) -> str:
+    value = text_blob(event_type, tournament)
+
+    if "grand slam" in value:
+        return "grand_slam"
+    if any(name in value for name in (
+        "australian open",
+        "french open",
+        "roland garros",
+        "wimbledon",
+        "us open",
+        "u.s. open",
+    )):
+        return "grand_slam"
     if "challenger" in value:
         return "challenger"
     if "itf" in value:
@@ -203,35 +235,179 @@ def tour_level(event_type: Any) -> str:
     return "unknown"
 
 
-def gender_from_event_type(event_type: Any) -> str:
-    value = str(event_type or "").lower()
+def gender_from_event_type(event_type: Any, tournament: Any = None) -> str:
+    value = text_blob(event_type, tournament)
 
-    if "women" in value or "wta" in value:
+    if any(marker in value for marker in (
+        "women",
+        "woman",
+        "female",
+        "wta",
+        "Å¾enski",
+        "zene",
+    )):
         return "women"
-    if "men" in value or "atp" in value:
+
+    if any(marker in value for marker in (
+        "men",
+        "male",
+        "atp",
+        "muÅ¡ki",
+        "muski",
+    )):
         return "men"
 
     return "unknown"
 
 
-def normalize_surface(match: dict[str, Any]) -> str:
+SURFACE_ALIASES = {
+    "clay": (
+        "clay",
+        "red clay",
+        "green clay",
+        "zemlja",
+        "terre battue",
+    ),
+    "grass": (
+        "grass",
+        "trava",
+        "lawn",
+    ),
+    "hard": (
+        "hard",
+        "hardcourt",
+        "hard court",
+        "cement",
+        "acrylic",
+    ),
+    "carpet": (
+        "carpet",
+        "tepih",
+    ),
+}
+
+# Stable tournament fallbacks for cases where API fixture metadata does not
+# expose a dedicated surface field.
+TOURNAMENT_SURFACE_FALLBACKS = {
+    "australian open": "hard",
+    "french open": "clay",
+    "roland garros": "clay",
+    "wimbledon": "grass",
+    "us open": "hard",
+    "u.s. open": "hard",
+    "stuttgart": "grass",
+    "s-hertogenbosch": "grass",
+    "hertogenbosch": "grass",
+    "ilkley": "grass",
+    "queens club": "grass",
+    "queen's club": "grass",
+    "halle": "grass",
+    "eastbourne": "grass",
+    "nottingham": "grass",
+    "berlin": "grass",
+    "bad homburg": "grass",
+}
+
+
+def normalize_surface(fixture: dict[str, Any]) -> str:
+    direct_values = direct_fixture_values(
+        fixture,
+        ("surface", "court", "ground", "floor"),
+    )
+
     candidates = [
-        match.get("event_type_type"),
-        match.get("tournament_name"),
-        match.get("tournament_season"),
+        *direct_values,
+        fixture.get("event_type_type"),
+        fixture.get("tournament_name"),
+        fixture.get("tournament_season"),
+        fixture.get("league_name"),
     ]
-    value = " ".join(str(x or "") for x in candidates).lower()
+    value = text_blob(*candidates)
 
-    if "clay" in value:
-        return "clay"
-    if "grass" in value:
-        return "grass"
-    if "hard" in value:
-        return "hard"
-    if "carpet" in value:
-        return "carpet"
+    for canonical, aliases in SURFACE_ALIASES.items():
+        if any(alias in value for alias in aliases):
+            return canonical
 
-    return ""
+    tournament = text_blob(fixture.get("tournament_name"))
+
+    for marker, surface in TOURNAMENT_SURFACE_FALLBACKS.items():
+        if marker in tournament:
+            return surface
+
+    return "unknown"
+
+
+def infer_indoor(fixture: dict[str, Any]) -> bool | None:
+    values = direct_fixture_values(
+        fixture,
+        ("indoor", "outdoor", "court", "surface", "ground"),
+    )
+    value = text_blob(*values, fixture.get("event_type_type"))
+
+    if "indoor" in value:
+        return True
+
+    if "outdoor" in value:
+        return False
+
+    return None
+
+
+def is_grand_slam(tournament: Any) -> bool:
+    value = text_blob(tournament)
+
+    return any(name in value for name in (
+        "australian open",
+        "french open",
+        "roland garros",
+        "wimbledon",
+        "us open",
+        "u.s. open",
+    ))
+
+
+def infer_best_of(
+    fixture: dict[str, Any],
+    gender: str,
+    tournament: Any,
+) -> int:
+    for key, value in fixture.items():
+        lower = str(key).lower()
+
+        if "best" in lower and ("set" in lower or "of" in lower):
+            parsed = safe_int(value)
+
+            if parsed in {3, 5}:
+                return parsed
+
+    if is_grand_slam(tournament) and gender == "men":
+        return 5
+
+    return 3
+
+
+def fixture_metadata_debug(fixture: dict[str, Any]) -> dict[str, Any]:
+    return {
+        str(key): value
+        for key, value in fixture.items()
+        if any(
+            marker in str(key).lower()
+            for marker in (
+                "surface",
+                "court",
+                "ground",
+                "floor",
+                "indoor",
+                "outdoor",
+                "type",
+                "tournament",
+                "league",
+                "round",
+                "best",
+                "set",
+            )
+        )
+    }
 
 
 def collect_books(obj: Any) -> dict[str, float]:
@@ -594,9 +770,15 @@ def match_record(
     player_1 = fixture.get("event_first_player")
     player_2 = fixture.get("event_second_player")
     event_type = fixture.get("event_type_type")
+    tournament = fixture.get("tournament_name")
+    gender = gender_from_event_type(event_type, tournament)
+    surface = normalize_surface(fixture)
+    level = tour_level(event_type, tournament)
 
     record = {
+        "schema_version": SCHEMA_VERSION,
         "event_key": fixture.get("event_key"),
+        "event_id": str(fixture.get("event_key") or ""),
         "date": fixture.get("event_date"),
         "time": fixture.get("event_time"),
         "timezone": TZ_NAME,
@@ -608,19 +790,27 @@ def match_record(
         "player_2_key": normalize_player_key(player_2),
         "first_player_key": safe_int(fixture.get("first_player_key")),
         "second_player_key": safe_int(fixture.get("second_player_key")),
-        "tournament": fixture.get("tournament_name"),
+        "tournament": tournament,
         "tournament_key": fixture.get("tournament_key"),
+        "tournament_season": fixture.get("tournament_season"),
         "round": fixture.get("tournament_round"),
         "event_type": event_type,
-        "tour_level": tour_level(event_type),
-        "gender": gender_from_event_type(event_type),
-        "surface": normalize_surface(fixture),
+        "tour_level": level,
+        "gender": gender,
+        "surface": surface,
+        "indoor": infer_indoor(fixture),
+        "best_of": infer_best_of(fixture, gender, tournament),
+        "is_grand_slam": is_grand_slam(tournament),
         "qualification": str(
             fixture.get("event_qualification") or ""
         ).lower() == "true",
         "available_markets": list(odds_blob.keys()),
         "markets": normalize_markets(odds_blob),
+        "fixture_metadata_debug": fixture_metadata_debug(fixture),
     }
+
+    if SAVE_RAW_FIXTURE:
+        record["raw_fixture"] = fixture
 
     if SAVE_RAW_MARKETS:
         record["raw_markets"] = odds_blob
@@ -711,6 +901,7 @@ def main() -> None:
             print(f"ERROR {event_key} {match_name}: {exc}")
 
     payload = {
+        "schema_version": SCHEMA_VERSION,
         "generated_at": now_iso(),
         "timezone": TZ_NAME,
         "source": "API-Tennis",
@@ -718,6 +909,7 @@ def main() -> None:
             "days_ahead": DAYS_AHEAD,
             "max_fixtures": MAX_FIXTURES,
             "save_raw_markets": SAVE_RAW_MARKETS,
+            "save_raw_fixture": SAVE_RAW_FIXTURE,
         },
         "summary": {
             "fixtures_total": len(fixtures),
@@ -738,6 +930,18 @@ def main() -> None:
                         "match_total_games"
                     )
                 )
+                for match in matches
+            ),
+            "with_surface": sum(
+                match.get("surface") not in {"", "unknown", None}
+                for match in matches
+            ),
+            "with_gender": sum(
+                match.get("gender") not in {"", "unknown", None}
+                for match in matches
+            ),
+            "with_best_of": sum(
+                match.get("best_of") in {3, 5}
                 for match in matches
             ),
             "tiebreak_market_matches": sum(
