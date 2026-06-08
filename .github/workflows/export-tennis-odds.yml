@@ -101,6 +101,60 @@ jobs:
               })
           PY
 
+      - name: Show unknown surface tournaments
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+
+          path = Path("data/tennis_odds_today.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+
+          unknown = [
+              match
+              for match in data.get("matches", [])
+              if match.get("surface") == "unknown"
+          ]
+
+          print("UNKNOWN SURFACE MATCHES:", len(unknown))
+
+          tournaments = Counter(
+              (
+                  match.get("tournament"),
+                  match.get("tournament_key"),
+                  match.get("tour_level"),
+                  match.get("gender"),
+              )
+              for match in unknown
+          )
+
+          print("\nUNKNOWN TOURNAMENTS:")
+
+          for item, count in tournaments.most_common():
+              print({
+                  "tournament": item[0],
+                  "tournament_key": item[1],
+                  "tour_level": item[2],
+                  "gender": item[3],
+                  "matches": count,
+              })
+
+          print("\nFIRST 10 METADATA BLOCKS:")
+
+          for match in unknown[:10]:
+              print({
+                  "event_key": match.get("event_key"),
+                  "match": (
+                      f"{match.get('player_1')} - "
+                      f"{match.get('player_2')}"
+                  ),
+                  "tournament": match.get("tournament"),
+                  "tournament_key": match.get("tournament_key"),
+                  "metadata": match.get("fixture_metadata_debug"),
+              })
+          PY
+
       - name: Commit canonical odds export
         run: |
           git config user.name "github-actions[bot]"
