@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-08T20:08:44.169253+02:00",
+  "generated_at": "2026-06-08T22:34:32.206123+02:00",
   "summary": {
-    "fixtures_total": 114,
-    "matches_with_odds": 9,
-    "skipped": 105,
+    "fixtures_total": 106,
+    "matches_with_odds": 2,
+    "skipped": 104,
     "errors": 0,
-    "first_set_total_matches": 6,
-    "match_total_matches": 6,
-    "with_surface": 9,
-    "with_gender": 9,
-    "with_best_of": 9,
+    "first_set_total_matches": 0,
+    "match_total_matches": 0,
+    "with_surface": 2,
+    "with_gender": 2,
+    "with_best_of": 2,
     "tiebreak_market_matches": 0
   },
   "skipped": [
@@ -37,11 +37,6 @@
       "event_key": 12134226,
       "match": "Frantzen/ Haase - Lehecka/ Moutet",
       "reason": "not_pregame"
-    },
-    {
-      "event_key": 12134227,
-      "match": "Bublik/ Kyrgios - Paul/ Seggerman",
-      "reason": "not_singles"
     },
     {
       "event_key": 12134232,
@@ -107,11 +102,6 @@
       "event_key": 12134323,
       "match": "Q. Zheng - J. Cristian",
       "reason": "not_pregame"
-    },
-    {
-      "event_key": 12134331,
-      "match": "Jurak Schreiber/ Rosolska - Mihalikova/ Nicholls",
-      "reason": "not_singles"
     },
     {
       "event_key": 12134378,
@@ -324,6 +314,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12134520,
+      "match": "K. Kawa - L. Pigato",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12134525,
       "match": "M. Trevisan - J. Ruggeri",
       "reason": "not_pregame"
@@ -346,6 +341,11 @@
     {
       "event_key": 12134530,
       "match": "M. Lajal - P. Jubb",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12134537,
+      "match": "M. Del Pino - A. Huertas Del Pino Cordova",
       "reason": "not_pregame"
     },
     {
@@ -439,6 +439,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12134559,
+      "match": "D. Bagnolini - J. Bilardo",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12134560,
       "match": "T. C. Baragiola Mordini - M. Sciahbasi",
       "reason": "no_odds"
@@ -504,11 +509,6 @@
       "reason": "not_pregame"
     },
     {
-      "event_key": 12134589,
-      "match": "Corley/ Ngounoue - Brooks/ Rajecki",
-      "reason": "not_singles"
-    },
-    {
       "event_key": 12134596,
       "match": "B. Chelia - T. Martinez",
       "reason": "no_odds"
@@ -532,51 +532,19 @@
       "event_key": 12134649,
       "match": "B. Jones - O. Okonkwo",
       "reason": "not_pregame"
-    },
-    {
-      "event_key": 12134650,
-      "match": "R. Safiullin - G. Mpetshi Perricard",
-      "reason": "not_pregame"
     }
   ],
   "errors": [],
   "market_names": [
-    "Asian Handicap (1st Set)",
-    "Asian Handicap (2nd Set)",
-    "Asian Handicap (Games)",
-    "Asian Handicap (Sets)",
-    "Away First Service Game - Winners First Point",
-    "Away First Service Game - Winners Winner",
     "Away Team Total (1st Set)",
-    "Away Team Total (2nd Set)",
     "Correct Score 1st Half",
-    "Correct Score 2nd Half",
-    "Home First Service Game - Winners First Point",
-    "Home First Service Game - Winners Winner",
     "Home Team Total (1st Set)",
-    "Home Team Total (2nd Set)",
     "Home/Away",
     "Home/Away (1st Set)",
-    "Home/Away (2nd Set)",
     "Number of sets",
     "Odd/Even",
     "Odd/Even (1st Set)",
-    "Odd/Even (2nd Set)",
-    "Over/Under",
-    "Over/Under (1st Set)",
-    "Over/Under by Games (2nd Set)",
-    "Over/Under by Games in Match",
-    "Result/Total Goals",
     "Set / Match",
-    "Set Betting",
-    "Total - Away",
-    "Total - Home",
-    "Total Tiebreaks",
-    "Win From behind (Player 1)",
-    "Win From behind (Player 2)",
-    "Win In Straigh Sets (Player 1)",
-    "Win In Straigh Sets (Player 2)",
-    "Win at least one set (Player 1)",
-    "Win at least one set (Player 2)"
+    "Set Betting"
   ]
 }
