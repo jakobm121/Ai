@@ -1,46 +1,46 @@
 {
-  "generated_at": "2026-06-10T19:23:40.980706+02:00",
+  "generated_at": "2026-06-10T19:28:19.117839+02:00",
   "requested_range": {
     "from_date": "2026-05-27",
     "to_date": "2026-06-09"
   },
   "summary": {
-    "matches_total": 2566,
+    "matches_total": 2680,
     "levels": {
       "challenger": 353,
-      "itf": 1508,
+      "itf": 1622,
       "main_tour": 286,
       "qualifying": 419
     },
     "surfaces": {
       "clay": 446,
       "grass": 150,
-      "unknown": 1970
+      "unknown": 2084
     },
     "genders": {
-      "men": 1366,
+      "men": 1424,
       "unknown": 173,
-      "women": 1027
+      "women": 1083
     },
     "surface_sources": {
       "fixture_or_fallback": 596,
-      "unknown": 1970
+      "unknown": 2084
     },
     "gender_sources": {
-      "event_type": 2393,
+      "event_type": 2507,
       "unknown": 173
     },
     "level_unknown": 0,
-    "surface_unknown": 1970,
+    "surface_unknown": 2084,
     "gender_unknown": 173,
-    "with_player_api_ids": 2566,
+    "with_player_api_ids": 2680,
     "existing_before_run": 0,
-    "added_this_run": 2566,
+    "added_this_run": 2680,
     "duplicates_this_run": 0,
     "fixtures_seen_this_run": 4058,
     "skipped_not_singles": 1242,
     "skipped_not_finished": 0,
-    "skipped_rejected_status": 250,
+    "skipped_rejected_status": 136,
     "skipped_missing_winner": 0,
     "skipped_missing_result": 0
   },
@@ -48,32 +48,32 @@
     {
       "date": "2026-05-27",
       "fixtures": 512,
-      "finished_singles": 322,
-      "added": 322
+      "finished_singles": 346,
+      "added": 346
     },
     {
       "date": "2026-05-28",
       "fixtures": 428,
-      "finished_singles": 250,
-      "added": 250
+      "finished_singles": 266,
+      "added": 266
     },
     {
       "date": "2026-05-29",
       "fixtures": 241,
-      "finished_singles": 142,
-      "added": 142
+      "finished_singles": 150,
+      "added": 150
     },
     {
       "date": "2026-05-30",
       "fixtures": 169,
-      "finished_singles": 101,
-      "added": 101
+      "finished_singles": 105,
+      "added": 105
     },
     {
       "date": "2026-05-31",
       "fixtures": 178,
-      "finished_singles": 148,
-      "added": 148
+      "finished_singles": 150,
+      "added": 150
     },
     {
       "date": "2026-06-01",
@@ -84,38 +84,38 @@
     {
       "date": "2026-06-02",
       "fixtures": 386,
-      "finished_singles": 225,
-      "added": 225
+      "finished_singles": 233,
+      "added": 233
     },
     {
       "date": "2026-06-03",
       "fixtures": 456,
-      "finished_singles": 276,
-      "added": 276
+      "finished_singles": 299,
+      "added": 299
     },
     {
       "date": "2026-06-04",
       "fixtures": 477,
-      "finished_singles": 294,
-      "added": 294
+      "finished_singles": 309,
+      "added": 309
     },
     {
       "date": "2026-06-05",
       "fixtures": 257,
-      "finished_singles": 154,
-      "added": 154
+      "finished_singles": 162,
+      "added": 162
     },
     {
       "date": "2026-06-06",
       "fixtures": 154,
-      "finished_singles": 94,
-      "added": 94
+      "finished_singles": 98,
+      "added": 98
     },
     {
       "date": "2026-06-07",
       "fixtures": 149,
-      "finished_singles": 134,
-      "added": 134
+      "finished_singles": 136,
+      "added": 136
     },
     {
       "date": "2026-06-08",
@@ -130,7 +130,7 @@
       "added": 235
     }
   ],
-  "tournaments_total": 109,
+  "tournaments_total": 113,
   "tournaments": [
     {
       "tournament_key": 9660,
@@ -372,6 +372,32 @@
         "tournament_round": "Foggia - Final",
         "tournament_season": "2026",
         "event_qualification": "True"
+      }
+    },
+    {
+      "tournament_key": 9872,
+      "tournament": "M15 Lakewood, CA 2",
+      "event_type": "Itf Men Singles",
+      "matches": 31,
+      "tour_levels": {
+        "itf": 31
+      },
+      "surfaces": {
+        "unknown": 31
+      },
+      "genders": {
+        "men": 31
+      },
+      "needs_surface": true,
+      "needs_gender": false,
+      "sample_event_key": 12132980,
+      "sample_metadata": {
+        "event_type_type": "Itf Men Singles",
+        "tournament_name": "M15 Lakewood, CA 2",
+        "tournament_key": 9872,
+        "tournament_round": "M15 Lakewood, CA 2 - 1/16-finals",
+        "tournament_season": "2026",
+        "event_qualification": "False"
       }
     },
     {
@@ -947,6 +973,32 @@
       }
     },
     {
+      "tournament_key": 9873,
+      "tournament": "W15 Lakewood, CA 2",
+      "event_type": "Itf Women Singles",
+      "matches": 29,
+      "tour_levels": {
+        "itf": 29
+      },
+      "surfaces": {
+        "unknown": 29
+      },
+      "genders": {
+        "women": 29
+      },
+      "needs_surface": true,
+      "needs_gender": false,
+      "sample_event_key": 12132972,
+      "sample_metadata": {
+        "event_type_type": "Itf Women Singles",
+        "tournament_name": "W15 Lakewood, CA 2",
+        "tournament_key": 9873,
+        "tournament_round": "W15 Lakewood, CA 2 - 1/16-finals",
+        "tournament_season": "2026",
+        "event_qualification": "False"
+      }
+    },
+    {
       "tournament_key": 10953,
       "tournament": "W15 Osijek",
       "event_type": "Itf Women Singles",
@@ -1155,6 +1207,32 @@
       }
     },
     {
+      "tournament_key": 7440,
+      "tournament": "M15 Lakewood, CA",
+      "event_type": "Itf Men Singles",
+      "matches": 27,
+      "tour_levels": {
+        "itf": 27
+      },
+      "surfaces": {
+        "unknown": 27
+      },
+      "genders": {
+        "men": 27
+      },
+      "needs_surface": true,
+      "needs_gender": false,
+      "sample_event_key": 12131384,
+      "sample_metadata": {
+        "event_type_type": "Itf Men Singles",
+        "tournament_name": "M15 Lakewood, CA",
+        "tournament_key": 7440,
+        "tournament_round": "M15 Lakewood, CA - 1/16-finals",
+        "tournament_season": "2026",
+        "event_qualification": "False"
+      }
+    },
+    {
       "tournament_key": 13096,
       "tournament": "M15 Luan 3",
       "event_type": "Itf Men Singles",
@@ -1228,6 +1306,32 @@
         "tournament_name": "M25 Grado (Italy)",
         "tournament_key": 13919,
         "tournament_round": "M25 Grado - 1/16-finals",
+        "tournament_season": "2026",
+        "event_qualification": "False"
+      }
+    },
+    {
+      "tournament_key": 7441,
+      "tournament": "W15 Lakewood, CA",
+      "event_type": "Itf Women Singles",
+      "matches": 27,
+      "tour_levels": {
+        "itf": 27
+      },
+      "surfaces": {
+        "unknown": 27
+      },
+      "genders": {
+        "women": 27
+      },
+      "needs_surface": true,
+      "needs_gender": false,
+      "sample_event_key": 12131400,
+      "sample_metadata": {
+        "event_type_type": "Itf Women Singles",
+        "tournament_name": "W15 Lakewood, CA",
+        "tournament_key": 7441,
+        "tournament_round": "W15 Lakewood, CA - 1/16-finals",
         "tournament_season": "2026",
         "event_qualification": "False"
       }
@@ -3230,6 +3334,32 @@
       }
     },
     {
+      "tournament_key": 9872,
+      "tournament": "M15 Lakewood, CA 2",
+      "event_type": "Itf Men Singles",
+      "matches": 31,
+      "tour_levels": {
+        "itf": 31
+      },
+      "surfaces": {
+        "unknown": 31
+      },
+      "genders": {
+        "men": 31
+      },
+      "needs_surface": true,
+      "needs_gender": false,
+      "sample_event_key": 12132980,
+      "sample_metadata": {
+        "event_type_type": "Itf Men Singles",
+        "tournament_name": "M15 Lakewood, CA 2",
+        "tournament_key": 9872,
+        "tournament_round": "M15 Lakewood, CA 2 - 1/16-finals",
+        "tournament_season": "2026",
+        "event_qualification": "False"
+      }
+    },
+    {
       "tournament_key": 12564,
       "tournament": "M15 Ljubljana",
       "event_type": "Itf Men Singles",
@@ -3802,6 +3932,32 @@
       }
     },
     {
+      "tournament_key": 9873,
+      "tournament": "W15 Lakewood, CA 2",
+      "event_type": "Itf Women Singles",
+      "matches": 29,
+      "tour_levels": {
+        "itf": 29
+      },
+      "surfaces": {
+        "unknown": 29
+      },
+      "genders": {
+        "women": 29
+      },
+      "needs_surface": true,
+      "needs_gender": false,
+      "sample_event_key": 12132972,
+      "sample_metadata": {
+        "event_type_type": "Itf Women Singles",
+        "tournament_name": "W15 Lakewood, CA 2",
+        "tournament_key": 9873,
+        "tournament_round": "W15 Lakewood, CA 2 - 1/16-finals",
+        "tournament_season": "2026",
+        "event_qualification": "False"
+      }
+    },
+    {
       "tournament_key": 10953,
       "tournament": "W15 Osijek",
       "event_type": "Itf Women Singles",
@@ -4010,6 +4166,32 @@
       }
     },
     {
+      "tournament_key": 7440,
+      "tournament": "M15 Lakewood, CA",
+      "event_type": "Itf Men Singles",
+      "matches": 27,
+      "tour_levels": {
+        "itf": 27
+      },
+      "surfaces": {
+        "unknown": 27
+      },
+      "genders": {
+        "men": 27
+      },
+      "needs_surface": true,
+      "needs_gender": false,
+      "sample_event_key": 12131384,
+      "sample_metadata": {
+        "event_type_type": "Itf Men Singles",
+        "tournament_name": "M15 Lakewood, CA",
+        "tournament_key": 7440,
+        "tournament_round": "M15 Lakewood, CA - 1/16-finals",
+        "tournament_season": "2026",
+        "event_qualification": "False"
+      }
+    },
+    {
       "tournament_key": 13096,
       "tournament": "M15 Luan 3",
       "event_type": "Itf Men Singles",
@@ -4083,6 +4265,32 @@
         "tournament_name": "M25 Grado (Italy)",
         "tournament_key": 13919,
         "tournament_round": "M25 Grado - 1/16-finals",
+        "tournament_season": "2026",
+        "event_qualification": "False"
+      }
+    },
+    {
+      "tournament_key": 7441,
+      "tournament": "W15 Lakewood, CA",
+      "event_type": "Itf Women Singles",
+      "matches": 27,
+      "tour_levels": {
+        "itf": 27
+      },
+      "surfaces": {
+        "unknown": 27
+      },
+      "genders": {
+        "women": 27
+      },
+      "needs_surface": true,
+      "needs_gender": false,
+      "sample_event_key": 12131400,
+      "sample_metadata": {
+        "event_type_type": "Itf Women Singles",
+        "tournament_name": "W15 Lakewood, CA",
+        "tournament_key": 7441,
+        "tournament_round": "W15 Lakewood, CA - 1/16-finals",
         "tournament_season": "2026",
         "event_qualification": "False"
       }
@@ -5612,174 +5820,6 @@
       "result": "1 - 1"
     },
     {
-      "event_key": 12131384,
-      "match": "J. Fuentes Vasquez - M. Arseneault",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131385,
-      "match": "M. Jones - M. Exsted",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131386,
-      "match": "J. Peck - I. Vasa",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12131387,
-      "match": "T. Stringer - T. Dean",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12131388,
-      "match": "O. Baris - D. Popko",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131389,
-      "match": "L. Marionneau - J. Roberts",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131390,
-      "match": "W. Mayew - E. van Loben Sels",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12131391,
-      "match": "O. Ojakaar - J. Satterfield",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131392,
-      "match": "K. Bigun - A. Ciric",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131393,
-      "match": "W. Kleege - A. Guajardo",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12131394,
-      "match": "K. K. Lee - V. Kalina",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12131395,
-      "match": "D. Rolland - M. Mesarovic",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131400,
-      "match": "A. Arora - D. Plekhanova",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131401,
-      "match": "M. Crossley - S. J. Thorne",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131402,
-      "match": "A. Nguyen - T. Evans",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131403,
-      "match": "K. Nguyen - K. Fakih",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131404,
-      "match": "J. Chan - A. Wang",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12131405,
-      "match": "C. Hill - K. Evans",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131406,
-      "match": "A. Lutkemeyer - E. Juravliova",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131407,
-      "match": "A. Nguyen - L. Taylor",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12131408,
-      "match": "J. Brown - K. Kosan",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12131409,
-      "match": "M. Castillo Meza - I. Marton",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131410,
-      "match": "V. Crocker - A. Kockinis",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131411,
-      "match": "S. Suh - E. Alvarez Sande",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
       "event_key": 12130710,
       "match": "J. Grabher - A. Anisimova",
       "reason": "rejected_status",
@@ -5864,118 +5904,6 @@
       "result": "-"
     },
     {
-      "event_key": 12131772,
-      "match": "O. Center - B. Fernandez",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12131773,
-      "match": "M. Crossley - M. Castillo Meza",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131774,
-      "match": "T. Evans - J. Brown",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131775,
-      "match": "A. Kockinis - D. Plekhanova",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131776,
-      "match": "A. Lutkemeyer - K. Nguyen",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12131777,
-      "match": "V. Miroshnichenko - K. Liu",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12131778,
-      "match": "L. Taylor - K. Evans",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131779,
-      "match": "A. Wang - E. Alvarez Sande",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12131786,
-      "match": "M. Arseneault - N. Zamora",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12131787,
-      "match": "K. Bigun - A. Guajardo",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131788,
-      "match": "T. Dean - I. Vasa",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12131789,
-      "match": "M. Exsted - V. Kalina",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131790,
-      "match": "S. Johnson - O. Baris",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12131791,
-      "match": "N. Johnston - L. Marionneau",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131792,
-      "match": "M. Mesarovic - A. Vales",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12131793,
-      "match": "O. Ojakaar - W. Mayew",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
       "event_key": 12132747,
       "match": "E. Philippov - M. Shin",
       "reason": "rejected_status",
@@ -6032,62 +5960,6 @@
       "result": "0 - 0"
     },
     {
-      "event_key": 12132004,
-      "match": "M. Crossley - K. Liu",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12132005,
-      "match": "T. Evans - O. Center",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12132006,
-      "match": "A. Lutkemeyer - D. Plekhanova",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12132007,
-      "match": "A. Wang - K. Evans",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12132009,
-      "match": "K. Bigun - O. Ojakaar",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12132010,
-      "match": "T. Dean - S. Johnson",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12132011,
-      "match": "V. Kalina - A. Vales",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12132012,
-      "match": "L. Marionneau - N. Zamora",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
       "event_key": 12132063,
       "match": "M. Fuele - N. Djosic",
       "reason": "rejected_status",
@@ -6107,34 +5979,6 @@
       "reason": "rejected_status",
       "status": "Cancelled",
       "result": "-"
-    },
-    {
-      "event_key": 12132128,
-      "match": "M. Crossley - T. Evans",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12132129,
-      "match": "A. Wang - A. Lutkemeyer",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12132133,
-      "match": "K. Bigun - L. Marionneau",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12132134,
-      "match": "A. Vales - S. Johnson",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
     },
     {
       "event_key": 12132144,
@@ -6184,20 +6028,6 @@
       "reason": "rejected_status",
       "status": "Retired",
       "result": "1 - 1"
-    },
-    {
-      "event_key": 12132407,
-      "match": "K. Bigun - A. Vales",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12132408,
-      "match": "T. Evans - A. Lutkemeyer",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
     },
     {
       "event_key": 12132347,
@@ -6312,62 +6142,6 @@
       "result": "0 - 1"
     },
     {
-      "event_key": 12132972,
-      "match": "C. Aulia - J. Chan",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12132973,
-      "match": "K. Fakih - L. Taylor",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12132974,
-      "match": "C. Jauffret - K. Kosan",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12132975,
-      "match": "T. Saulter - J. Brown",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12132980,
-      "match": "M. Arseneault - D. Rolland",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12132981,
-      "match": "T. Dean - O. Baris",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12132982,
-      "match": "M. Latak - K. Miyoshi",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12132983,
-      "match": "A. Petrov - M. Jones",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
       "event_key": 12132991,
       "match": "N. Zanellato - P. Rodrigues",
       "reason": "rejected_status",
@@ -6445,27 +6219,6 @@
       "result": "0 - 1"
     },
     {
-      "event_key": 12133389,
-      "match": "S. Fagan - K. Penickova",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133390,
-      "match": "T. Gowda - T. Messerli",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133391,
-      "match": "A. Haile - K. Liu",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
       "event_key": 12133392,
       "match": "A. Hrastar - V. Mulville",
       "reason": "rejected_status",
@@ -6473,151 +6226,11 @@
       "result": "0 - 0"
     },
     {
-      "event_key": 12133393,
-      "match": "P. Daughters - K. Hui",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12133394,
-      "match": "A. Lee - K. Evans",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133395,
-      "match": "I. Marton - M. Aytoyan",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12133396,
-      "match": "S. Suh - D. Plekhanova",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133397,
-      "match": "K. Carnicella - O. Center",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133398,
-      "match": "R. Gailis - K. Nguyen",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12133399,
-      "match": "A. Vagramov - T. Evans",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133400,
-      "match": "Y. Zhytelna - M. Crossley",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133406,
-      "match": "N. Arseneault - O. Bonding",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12133407,
-      "match": "N. Johnston - K. Bigun",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12133408,
-      "match": "M. Kuhar - O. Ojakaar",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133409,
-      "match": "A. Tallakson - M. Mesarovic",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12133410,
-      "match": "J. B. Badon - A. Vales",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12133411,
-      "match": "M. Rajski - A. Ciric",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12133412,
-      "match": "J. Roberts - N. Cox",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12133413,
-      "match": "N. Zamora - T. Stepanov",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133414,
-      "match": "K. Giese - J. Satterfield",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133415,
-      "match": "N. Niedner - R. Falck",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
       "event_key": 12133416,
       "match": "D. Popko - T. Lee",
       "reason": "rejected_status",
       "status": "Cancelled",
       "result": "-"
-    },
-    {
-      "event_key": 12133417,
-      "match": "E. van Loben Sels - I. Vasa",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12133716,
-      "match": "D. Popko - D. N. Stoot",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
     },
     {
       "event_key": 12132525,
@@ -6746,116 +6359,11 @@
       "result": "1 - 1"
     },
     {
-      "event_key": 12133753,
-      "match": "J. Brown - K. Evans",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133754,
-      "match": "K. Carnicella - M. Crossley",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133755,
-      "match": "T. Evans - T. Gowda",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133756,
-      "match": "R. Gailis - I. Marton",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133757,
-      "match": "A. Haile - D. Plekhanova",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12133758,
-      "match": "A. Hrastar - K. Fakih",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
       "event_key": 12133759,
       "match": "K. Hui - K. Penickova",
       "reason": "rejected_status",
       "status": "Walk Over",
       "result": "-"
-    },
-    {
-      "event_key": 12133760,
-      "match": "K. Kosan - J. Chan",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133767,
-      "match": "O. Baris - N. Johnston",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133768,
-      "match": "O. Bonding - J. Roberts",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133769,
-      "match": "M. Mesarovic - A. Petrov",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133770,
-      "match": "N. Niedner - J. B. Badon",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133771,
-      "match": "O. Ojakaar - M. Arseneault",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133772,
-      "match": "D. Popko - J. Satterfield",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133773,
-      "match": "I. Vasa - A. Ciric",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 1"
-    },
-    {
-      "event_key": 12133774,
-      "match": "N. Zamora - K. Miyoshi",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
     },
     {
       "event_key": 12133790,
@@ -6893,62 +6401,6 @@
       "result": "0 - 1"
     },
     {
-      "event_key": 12133986,
-      "match": "A. Hrastar - D. Plekhanova",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133987,
-      "match": "R. Gailis - K. Penickova",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12133988,
-      "match": "T. Evans - K. Evans",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12133989,
-      "match": "J. Chan - M. Crossley",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12134019,
-      "match": "O. Bonding - M. Mesarovic",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12134020,
-      "match": "O. Ojakaar - K. Miyoshi",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12134021,
-      "match": "D. Popko - N. Niedner",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12134022,
-      "match": "I. Vasa - O. Baris",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
       "event_key": 12134037,
       "match": "M. N. Turker - R. Faucon",
       "reason": "rejected_status",
@@ -6968,34 +6420,6 @@
       "reason": "rejected_status",
       "status": "Retired",
       "result": "1 - 0"
-    },
-    {
-      "event_key": 12134150,
-      "match": "T. Evans - K. Penickova",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12134151,
-      "match": "D. Plekhanova - M. Crossley",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
-    },
-    {
-      "event_key": 12134154,
-      "match": "O. Bonding - D. Popko",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
-    },
-    {
-      "event_key": 12134155,
-      "match": "I. Vasa - O. Ojakaar",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "1 - 2"
     },
     {
       "event_key": 12134164,
@@ -7052,20 +6476,6 @@
       "reason": "rejected_status",
       "status": "Cancelled",
       "result": "-"
-    },
-    {
-      "event_key": 12134442,
-      "match": "K. Penickova - M. Crossley",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "0 - 2"
-    },
-    {
-      "event_key": 12134458,
-      "match": "O. Bonding - O. Ojakaar",
-      "reason": "rejected_status",
-      "status": "Finished",
-      "result": "2 - 0"
     },
     {
       "event_key": 12134493,
