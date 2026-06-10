@@ -4,7 +4,7 @@ import argparse
 import json
 import os
 import time
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -25,9 +25,11 @@ from tennis_odds_export import (
 )
 
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
+
 DEFAULT_OUTPUT = "data/tle/tle_api_results_backfill.json"
 DEFAULT_REPORT = "data/tle/tle_api_results_backfill_report.json"
+DEFAULT_METADATA = "data/tle/api_tournament_metadata.json"
 
 FINISHED_STATUSES = {
     "finished",
@@ -37,19 +39,42 @@ FINISHED_STATUSES = {
     "ended",
 }
 
-REJECTED_STATUSES = {
+REJECTED_MARKERS = {
     "cancelled",
     "canceled",
     "postponed",
     "interrupted",
     "abandoned",
     "walkover",
+    "walk over",
     "wo",
     "w/o",
     "retired",
 }
 
 TRUE_VALUES = {"1", "true", "yes", "y"}
+
+VALID_LEVELS = {
+    "main_tour",
+    "challenger",
+    "itf",
+    "qualifying",
+    "unknown",
+}
+
+VALID_SURFACES = {
+    "hard",
+    "clay",
+    "grass",
+    "carpet",
+    "unknown",
+}
+
+VALID_GENDERS = {
+    "men",
+    "women",
+    "unknown",
+}
 
 
 def now_iso() -> str:
@@ -76,88 +101,134 @@ def clean_text(value: Any) -> str:
     return " ".join(str(value or "").strip().split())
 
 
+def lower_text(value: Any) -> str:
+    return clean_text(value).lower()
+
+
+def load_json(path: Path, default: Any) -> Any:
+    if not path.exists():
+        return default
+
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            return json.load(handle)
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Ne morem prebrati JSON datoteke: {path}") from exc
+
+
+def save_json(path: Path, payload: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+
+    try:
+        with temporary.open("w", encoding="utf-8") as handle:
+            json.dump(payload, handle, indent=2, ensure_ascii=False)
+            handle.write("\n")
+
+        temporary.replace(path)
+    except OSError as exc:
+        if temporary.exists():
+            temporary.unlink()
+        raise RuntimeError(f"Ne morem zapisati datoteke: {path}") from exc
+
+
 def normalized_status(fixture: dict[str, Any]) -> str:
-    return clean_text(fixture.get("event_status")).lower()
+    return lower_text(fixture.get("event_status"))
 
 
-def is_finished(fixture: dict[str, Any]) -> bool:
-    status = normalized_status(fixture)
-    if status in FINISHED_STATUSES:
-        return True
-
-    # API vÄasih vrne prazen ali drugaÄen status, rezultat pa je Å¾e konÄen.
-    final_result = clean_text(
+def result_text(fixture: dict[str, Any]) -> str:
+    return clean_text(
         fixture.get("event_final_result")
         or fixture.get("final_result")
         or fixture.get("event_result")
     )
+
+
+def is_finished(fixture: dict[str, Any]) -> bool:
+    status = normalized_status(fixture)
+
+    if status in FINISHED_STATUSES:
+        return True
+
     winner = clean_text(
         fixture.get("event_winner")
         or fixture.get("winner")
     )
-    return bool(final_result and winner and status not in REJECTED_STATUSES)
+
+    return bool(
+        result_text(fixture)
+        and winner
+        and not is_rejected_result(fixture)
+    )
 
 
 def is_rejected_result(fixture: dict[str, Any]) -> bool:
-    status = normalized_status(fixture)
-    text = " ".join(
+    blob = " ".join(
         [
-            status,
-            clean_text(fixture.get("event_final_result")).lower(),
-            clean_text(fixture.get("event_result")).lower(),
+            normalized_status(fixture),
+            lower_text(fixture.get("event_final_result")),
+            lower_text(fixture.get("event_result")),
+            lower_text(fixture.get("tournament_round")),
         ]
     )
-    return any(marker in text for marker in REJECTED_STATUSES)
+
+    return any(marker in blob for marker in REJECTED_MARKERS)
 
 
 def qualification_flag(fixture: dict[str, Any]) -> bool:
-    value = str(fixture.get("event_qualification") or "").strip().lower()
-    if value in TRUE_VALUES:
+    raw = lower_text(fixture.get("event_qualification"))
+
+    if raw in TRUE_VALUES:
         return True
 
-    round_text = clean_text(fixture.get("tournament_round")).lower()
-    event_type = clean_text(fixture.get("event_type_type")).lower()
-    tournament = clean_text(fixture.get("tournament_name")).lower()
-    blob = f"{round_text} {event_type} {tournament}"
-
-    return any(
-        marker in blob
-        for marker in (
-            "qualification",
-            "qualifying",
-            "qualifier",
-            "q1",
-            "q2",
-            "q3",
-        )
+    blob = " ".join(
+        [
+            lower_text(fixture.get("tournament_round")),
+            lower_text(fixture.get("event_type_type")),
+            lower_text(fixture.get("tournament_name")),
+        ]
     )
+
+    qualification_markers = (
+        "qualification",
+        "qualifying",
+        "qualifier",
+        " qual ",
+        " q1",
+        " q2",
+        " q3",
+    )
+
+    return any(marker in f" {blob} " for marker in qualification_markers)
 
 
 def normalize_tle_level(fixture: dict[str, Any]) -> str:
     if qualification_flag(fixture):
         return "qualifying"
 
-    event_type = fixture.get("event_type_type")
-    tournament = fixture.get("tournament_name")
-    raw_level = tour_level(event_type, tournament)
+    raw = tour_level(
+        fixture.get("event_type_type"),
+        fixture.get("tournament_name"),
+    )
 
-    if raw_level in {"grand_slam", "atp", "wta"}:
+    if raw in {"grand_slam", "atp", "wta"}:
         return "main_tour"
-    if raw_level == "challenger":
+    if raw == "challenger":
         return "challenger"
-    if raw_level == "itf":
+    if raw == "itf":
         return "itf"
+
     return "unknown"
 
 
 def winner_side(fixture: dict[str, Any]) -> str | None:
-    raw = clean_text(
+    raw = lower_text(
         fixture.get("event_winner")
         or fixture.get("winner")
-    ).lower()
+    )
 
-    first_name = clean_text(fixture.get("event_first_player")).lower()
-    second_name = clean_text(fixture.get("event_second_player")).lower()
+    first_name = lower_text(fixture.get("event_first_player"))
+    second_name = lower_text(fixture.get("event_second_player"))
 
     first_markers = {
         "first player",
@@ -167,6 +238,7 @@ def winner_side(fixture: dict[str, Any]) -> str | None:
         "home",
         "1",
     }
+
     second_markers = {
         "second player",
         "second",
@@ -178,20 +250,151 @@ def winner_side(fixture: dict[str, Any]) -> str | None:
 
     if raw in first_markers or (first_name and raw == first_name):
         return "player_1"
+
     if raw in second_markers or (second_name and raw == second_name):
         return "player_2"
+
     return None
+
+
+def tournament_key_text(fixture: dict[str, Any]) -> str:
+    key = safe_int(fixture.get("tournament_key"))
+    return str(key) if key is not None else ""
+
+
+def load_metadata(path: Path) -> dict[str, Any]:
+    payload = load_json(path, {})
+
+    if not isinstance(payload, dict):
+        raise RuntimeError(
+            f"Metadata mora biti JSON object: {path}"
+        )
+
+    tournaments = payload.get("tournaments")
+
+    if tournaments is None:
+        # Podpora tudi preprosti obliki:
+        # {"123": {"surface": "clay", ...}}
+        tournaments = {
+            str(key): value
+            for key, value in payload.items()
+            if isinstance(value, dict)
+        }
+
+    if not isinstance(tournaments, dict):
+        tournaments = {}
+
+    return {
+        "schema_version": payload.get("schema_version", 1),
+        "updated_at": payload.get("updated_at"),
+        "tournaments": tournaments,
+    }
+
+
+def metadata_value(
+    metadata: dict[str, Any],
+    fixture: dict[str, Any],
+    field: str,
+) -> str | None:
+    key = tournament_key_text(fixture)
+
+    if not key:
+        return None
+
+    entry = metadata.get("tournaments", {}).get(key)
+
+    if not isinstance(entry, dict):
+        return None
+
+    value = lower_text(entry.get(field))
+
+    allowed = {
+        "surface": VALID_SURFACES,
+        "gender": VALID_GENDERS,
+        "tour_level": VALID_LEVELS,
+    }.get(field)
+
+    if not value or value == "unknown":
+        return None
+
+    if allowed is not None and value not in allowed:
+        raise ValueError(
+            f"Neveljaven metadata {field}={value!r} za tournament_key={key}"
+        )
+
+    return value
+
+
+def resolve_surface(
+    fixture: dict[str, Any],
+    metadata: dict[str, Any],
+) -> tuple[str, str]:
+    override = metadata_value(metadata, fixture, "surface")
+
+    if override:
+        return override, "metadata"
+
+    detected = normalize_surface(fixture)
+
+    if detected in VALID_SURFACES - {"unknown"}:
+        return detected, "fixture_or_fallback"
+
+    return "unknown", "unknown"
+
+
+def resolve_gender(
+    fixture: dict[str, Any],
+    metadata: dict[str, Any],
+) -> tuple[str, str]:
+    override = metadata_value(metadata, fixture, "gender")
+
+    if override:
+        return override, "metadata"
+
+    detected = gender_from_event_type(
+        fixture.get("event_type_type"),
+        fixture.get("tournament_name"),
+    )
+
+    if detected in VALID_GENDERS - {"unknown"}:
+        return detected, "event_type"
+
+    return "unknown", "unknown"
+
+
+def resolve_level(
+    fixture: dict[str, Any],
+    metadata: dict[str, Any],
+) -> tuple[str, str]:
+    # Qualifying ima vedno prednost pred roÄnim level overrideom.
+    if qualification_flag(fixture):
+        return "qualifying", "qualification"
+
+    override = metadata_value(metadata, fixture, "tour_level")
+
+    if override:
+        return override, "metadata"
+
+    detected = normalize_tle_level(fixture)
+
+    if detected in VALID_LEVELS - {"unknown"}:
+        return detected, "event_type"
+
+    return "unknown", "unknown"
 
 
 def fetch_fixtures_for_date(day: date) -> list[dict[str, Any]]:
     day_text = day.isoformat()
+
     payload = api_call(
         {
             "method": "get_fixtures",
             "date_start": day_text,
             "date_stop": day_text,
+            "timezone": TZ_NAME,
         }
     )
+
     time.sleep(API_SLEEP_SECONDS)
 
     if payload.get("success") != 1:
@@ -201,12 +404,42 @@ def fetch_fixtures_for_date(day: date) -> list[dict[str, Any]]:
     return result if isinstance(result, list) else []
 
 
-def build_record(fixture: dict[str, Any]) -> dict[str, Any]:
-    tournament = fixture.get("tournament_name")
-    event_type = fixture.get("event_type_type")
-    gender = gender_from_event_type(event_type, tournament)
-    surface = normalize_surface(fixture)
-    level = normalize_tle_level(fixture)
+def fixture_metadata_debug(
+    fixture: dict[str, Any],
+) -> dict[str, Any]:
+    markers = (
+        "surface",
+        "court",
+        "ground",
+        "floor",
+        "indoor",
+        "outdoor",
+        "type",
+        "tournament",
+        "league",
+        "round",
+        "season",
+        "qualification",
+    )
+
+    return {
+        str(key): value
+        for key, value in fixture.items()
+        if any(marker in str(key).lower() for marker in markers)
+    }
+
+
+def build_record(
+    fixture: dict[str, Any],
+    metadata: dict[str, Any],
+) -> dict[str, Any]:
+    tournament = clean_text(fixture.get("tournament_name"))
+    event_type = clean_text(fixture.get("event_type_type"))
+
+    gender, gender_source = resolve_gender(fixture, metadata)
+    surface, surface_source = resolve_surface(fixture, metadata)
+    level, level_source = resolve_level(fixture, metadata)
+
     side = winner_side(fixture)
 
     player_1 = clean_text(fixture.get("event_first_player"))
@@ -225,14 +458,17 @@ def build_record(fixture: dict[str, Any]) -> dict[str, Any]:
         "timezone": TZ_NAME,
         "status": clean_text(fixture.get("event_status")),
         "gender": gender,
+        "gender_source": gender_source,
         "tour_level": level,
+        "tour_level_source": level_source,
         "surface": surface,
+        "surface_source": surface_source,
         "qualification": qualification_flag(fixture),
         "is_grand_slam": is_grand_slam(tournament),
         "indoor": infer_indoor(fixture),
         "best_of": infer_best_of(fixture, gender, tournament),
-        "event_type": clean_text(event_type),
-        "tournament": clean_text(tournament),
+        "event_type": event_type,
+        "tournament": tournament,
         "tournament_key": safe_int(fixture.get("tournament_key")),
         "tournament_season": clean_text(
             fixture.get("tournament_season")
@@ -249,68 +485,78 @@ def build_record(fixture: dict[str, Any]) -> dict[str, Any]:
         "winner_side": side,
         "winner": winner_name,
         "loser": loser_name,
-        "final_result": clean_text(
-            fixture.get("event_final_result")
-            or fixture.get("final_result")
-            or fixture.get("event_result")
-        ),
+        "final_result": result_text(fixture),
         "scores": fixture.get("scores") or [],
+        "fixture_metadata_debug": fixture_metadata_debug(fixture),
         "raw_fixture": fixture,
     }
 
 
 def load_existing_matches(path: Path) -> list[dict[str, Any]]:
-    if not path.exists():
+    payload = load_json(path, {})
+
+    if not isinstance(payload, dict):
         return []
 
-    with path.open("r", encoding="utf-8") as handle:
-        payload = json.load(handle)
-
-    matches = payload.get("matches") if isinstance(payload, dict) else None
+    matches = payload.get("matches")
     return matches if isinstance(matches, list) else []
 
 
 def match_identity(match: dict[str, Any]) -> str:
     event_key = match.get("event_key")
+
     if event_key not in {None, ""}:
         return f"event:{event_key}"
 
     players = sorted(
         [
-            clean_text(match.get("player_1")).lower(),
-            clean_text(match.get("player_2")).lower(),
+            lower_text(match.get("player_1")),
+            lower_text(match.get("player_2")),
         ]
     )
+
     return "|".join(
         [
             clean_text(match.get("date")),
-            clean_text(match.get("tournament")).lower(),
+            lower_text(match.get("tournament")),
             *players,
         ]
     )
 
 
-def save_json(path: Path, payload: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".tmp")
-
-    with temporary.open("w", encoding="utf-8") as handle:
-        json.dump(payload, handle, indent=2, ensure_ascii=False)
-        handle.write("\n")
-
-    temporary.replace(path)
-
-
 def summary_for(matches: list[dict[str, Any]]) -> dict[str, Any]:
-    levels = Counter(match.get("tour_level") or "unknown" for match in matches)
-    surfaces = Counter(match.get("surface") or "unknown" for match in matches)
-    genders = Counter(match.get("gender") or "unknown" for match in matches)
+    levels = Counter(
+        match.get("tour_level") or "unknown"
+        for match in matches
+    )
+
+    surfaces = Counter(
+        match.get("surface") or "unknown"
+        for match in matches
+    )
+
+    genders = Counter(
+        match.get("gender") or "unknown"
+        for match in matches
+    )
+
+    surface_sources = Counter(
+        match.get("surface_source") or "unknown"
+        for match in matches
+    )
+
+    gender_sources = Counter(
+        match.get("gender_source") or "unknown"
+        for match in matches
+    )
 
     return {
         "matches_total": len(matches),
         "levels": dict(sorted(levels.items())),
         "surfaces": dict(sorted(surfaces.items())),
         "genders": dict(sorted(genders.items())),
+        "surface_sources": dict(sorted(surface_sources.items())),
+        "gender_sources": dict(sorted(gender_sources.items())),
         "level_unknown": levels.get("unknown", 0),
         "surface_unknown": surfaces.get("unknown", 0),
         "gender_unknown": genders.get("unknown", 0),
@@ -322,39 +568,216 @@ def summary_for(matches: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def tournament_summary(
+    matches: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+
+    for match in matches:
+        key = str(match.get("tournament_key") or "")
+        grouped[key].append(match)
+
+    rows: list[dict[str, Any]] = []
+
+    for key, group in grouped.items():
+        names = Counter(
+            clean_text(match.get("tournament"))
+            for match in group
+        )
+
+        event_types = Counter(
+            clean_text(match.get("event_type"))
+            for match in group
+        )
+
+        levels = Counter(
+            match.get("tour_level") or "unknown"
+            for match in group
+        )
+
+        surfaces = Counter(
+            match.get("surface") or "unknown"
+            for match in group
+        )
+
+        genders = Counter(
+            match.get("gender") or "unknown"
+            for match in group
+        )
+
+        row = {
+            "tournament_key": safe_int(key),
+            "tournament": names.most_common(1)[0][0] if names else "",
+            "event_type": (
+                event_types.most_common(1)[0][0]
+                if event_types
+                else ""
+            ),
+            "matches": len(group),
+            "tour_levels": dict(levels),
+            "surfaces": dict(surfaces),
+            "genders": dict(genders),
+            "needs_surface": surfaces.get("unknown", 0) > 0,
+            "needs_gender": genders.get("unknown", 0) > 0,
+            "sample_event_key": group[0].get("event_key"),
+            "sample_metadata": group[0].get(
+                "fixture_metadata_debug",
+                {},
+            ),
+        }
+
+        rows.append(row)
+
+    return sorted(
+        rows,
+        key=lambda row: (
+            not row["needs_surface"],
+            not row["needs_gender"],
+            -row["matches"],
+            row["tournament"],
+        ),
+    )
+
+
+def update_metadata_catalog(
+    metadata: dict[str, Any],
+    tournament_rows: list[dict[str, Any]],
+) -> dict[str, Any]:
+    tournaments = dict(metadata.get("tournaments") or {})
+
+    for row in tournament_rows:
+        key = row.get("tournament_key")
+
+        if key is None:
+            continue
+
+        key_text = str(key)
+        old = tournaments.get(key_text)
+        entry = dict(old) if isinstance(old, dict) else {}
+
+        entry["name"] = row.get("tournament")
+        entry["event_type"] = row.get("event_type")
+        entry["matches_seen"] = row.get("matches")
+        entry["last_seen_at"] = now_iso()
+
+        level_counts = row.get("tour_levels") or {}
+        known_levels = [
+            value
+            for value in level_counts
+            if value != "unknown"
+        ]
+        if not entry.get("tour_level") and len(known_levels) == 1:
+            entry["tour_level"] = known_levels[0]
+
+        surface_counts = row.get("surfaces") or {}
+        known_surfaces = [
+            value
+            for value in surface_counts
+            if value != "unknown"
+        ]
+        if not entry.get("surface"):
+            entry["surface"] = (
+                known_surfaces[0]
+                if len(known_surfaces) == 1
+                else "unknown"
+            )
+
+        gender_counts = row.get("genders") or {}
+        known_genders = [
+            value
+            for value in gender_counts
+            if value != "unknown"
+        ]
+        if not entry.get("gender"):
+            entry["gender"] = (
+                known_genders[0]
+                if len(known_genders) == 1
+                else "unknown"
+            )
+
+        entry["needs_review"] = bool(
+            entry.get("surface") in {None, "", "unknown"}
+            or entry.get("gender") in {None, "", "unknown"}
+        )
+
+        tournaments[key_text] = entry
+
+    return {
+        "schema_version": 1,
+        "updated_at": now_iso(),
+        "instructions": {
+            "surface": "Allowed: hard, clay, grass, carpet, unknown",
+            "gender": "Allowed: men, women, unknown",
+            "tour_level": (
+                "Allowed: main_tour, challenger, itf, "
+                "qualifying, unknown"
+            ),
+            "note": (
+                "RoÄno popravi samo surface/gender/tour_level. "
+                "Naslednji zagon backfilla bo te vrednosti uporabil."
+            ),
+        },
+        "tournaments": dict(
+            sorted(
+                tournaments.items(),
+                key=lambda item: (
+                    not bool(item[1].get("needs_review")),
+                    -int(item[1].get("matches_seen") or 0),
+                    str(item[1].get("name") or ""),
+                ),
+            )
+        ),
+    }
+
+
 def main() -> None:
     local_today = datetime.now(ZoneInfo(TZ_NAME)).date()
 
     parser = argparse.ArgumentParser(
         description=(
-            "Pobere zakljuÄene API-Tennis singles tekme za TLE backfill."
+            "Pobere zakljuÄene API-Tennis singles tekme za TLE backfill "
+            "in izdela tournament metadata katalog."
         )
     )
+
     parser.add_argument(
         "--from-date",
         type=parse_date,
         default=local_today - timedelta(days=14),
         help="ZaÄetni datum YYYY-MM-DD. Privzeto 14 dni nazaj.",
     )
+
     parser.add_argument(
         "--to-date",
         type=parse_date,
         default=local_today - timedelta(days=1),
         help="KonÄni datum YYYY-MM-DD. Privzeto vÄeraj.",
     )
+
     parser.add_argument(
         "--output",
         default=os.getenv("TLE_RESULTS_OUTPUT", DEFAULT_OUTPUT),
     )
+
     parser.add_argument(
         "--report",
         default=os.getenv("TLE_RESULTS_REPORT", DEFAULT_REPORT),
     )
+
+    parser.add_argument(
+        "--metadata",
+        default=os.getenv(
+            "TLE_TOURNAMENT_METADATA",
+            DEFAULT_METADATA,
+        ),
+    )
+
     parser.add_argument(
         "--replace",
         action="store_true",
-        help="Ne zdruÅ¾i z obstojeÄim arhivom, ampak ga zamenja.",
+        help="Zamenjaj obstojeÄi backfill arhiv.",
     )
+
     args = parser.parse_args()
 
     if args.from_date > args.to_date:
@@ -362,9 +785,20 @@ def main() -> None:
 
     output_path = Path(args.output)
     report_path = Path(args.report)
+    metadata_path = Path(args.metadata)
 
-    existing = [] if args.replace else load_existing_matches(output_path)
-    all_matches = {match_identity(match): match for match in existing}
+    metadata = load_metadata(metadata_path)
+
+    existing = (
+        []
+        if args.replace
+        else load_existing_matches(output_path)
+    )
+
+    all_matches = {
+        match_identity(match): match
+        for match in existing
+    }
 
     counters = Counter()
     skipped: list[dict[str, Any]] = []
@@ -372,6 +806,7 @@ def main() -> None:
 
     for day in date_range(args.from_date, args.to_date):
         fixtures = fetch_fixtures_for_date(day)
+
         day_added = 0
         day_finished_singles = 0
 
@@ -379,7 +814,7 @@ def main() -> None:
 
         for fixture in fixtures:
             event_key = fixture.get("event_key")
-            name = (
+            match_name = (
                 f"{fixture.get('event_first_player')} - "
                 f"{fixture.get('event_second_player')}"
             )
@@ -393,9 +828,10 @@ def main() -> None:
                 skipped.append(
                     {
                         "event_key": event_key,
-                        "match": name,
+                        "match": match_name,
                         "reason": "rejected_status",
                         "status": fixture.get("event_status"),
+                        "result": result_text(fixture),
                     }
                 )
                 continue
@@ -405,14 +841,14 @@ def main() -> None:
                 continue
 
             day_finished_singles += 1
-            record = build_record(fixture)
+            record = build_record(fixture, metadata)
 
             if record["winner_side"] is None:
                 counters["skipped_missing_winner"] += 1
                 skipped.append(
                     {
                         "event_key": event_key,
-                        "match": name,
+                        "match": match_name,
                         "reason": "missing_or_unrecognized_winner",
                         "event_winner": fixture.get("event_winner"),
                         "status": fixture.get("event_status"),
@@ -425,13 +861,14 @@ def main() -> None:
                 skipped.append(
                     {
                         "event_key": event_key,
-                        "match": name,
+                        "match": match_name,
                         "reason": "missing_final_result",
                     }
                 )
                 continue
 
             identity = match_identity(record)
+
             if identity in all_matches:
                 counters["duplicates"] += 1
                 continue
@@ -448,9 +885,11 @@ def main() -> None:
                 "added": day_added,
             }
         )
+
         print(
             f"{day}: fixtures={len(fixtures)} "
-            f"finished_singles={day_finished_singles} added={day_added}"
+            f"finished_singles={day_finished_singles} "
+            f"added={day_added}"
         )
 
     matches = sorted(
@@ -462,6 +901,44 @@ def main() -> None:
         ),
     )
 
+    summary = {
+        **summary_for(matches),
+        "existing_before_run": len(existing),
+        "added_this_run": counters["added"],
+        "duplicates_this_run": counters["duplicates"],
+        "fixtures_seen_this_run": counters["fixtures_total"],
+        "skipped_not_singles": counters["skipped_not_singles"],
+        "skipped_not_finished": counters["skipped_not_finished"],
+        "skipped_rejected_status": counters[
+            "skipped_rejected_status"
+        ],
+        "skipped_missing_winner": counters[
+            "skipped_missing_winner"
+        ],
+        "skipped_missing_result": counters[
+            "skipped_missing_result"
+        ],
+    }
+
+    tournaments = tournament_summary(matches)
+
+    metadata_payload = update_metadata_catalog(
+        metadata,
+        tournaments,
+    )
+
+    unknown_surface_tournaments = [
+        row
+        for row in tournaments
+        if row["needs_surface"]
+    ]
+
+    unknown_gender_tournaments = [
+        row
+        for row in tournaments
+        if row["needs_gender"]
+    ]
+
     payload = {
         "schema_version": SCHEMA_VERSION,
         "generated_at": now_iso(),
@@ -471,24 +948,11 @@ def main() -> None:
             "from_date": args.from_date.isoformat(),
             "to_date": args.to_date.isoformat(),
         },
-        "summary": {
-            **summary_for(matches),
-            "existing_before_run": len(existing),
-            "added_this_run": counters["added"],
-            "duplicates_this_run": counters["duplicates"],
-            "fixtures_seen_this_run": counters["fixtures_total"],
-            "skipped_not_singles": counters["skipped_not_singles"],
-            "skipped_not_finished": counters["skipped_not_finished"],
-            "skipped_rejected_status": counters[
-                "skipped_rejected_status"
-            ],
-            "skipped_missing_winner": counters[
-                "skipped_missing_winner"
-            ],
-            "skipped_missing_result": counters[
-                "skipped_missing_result"
-            ],
+        "settings": {
+            "metadata_path": str(metadata_path),
+            "replace": args.replace,
         },
+        "summary": summary,
         "daily": daily,
         "matches": matches,
     }
@@ -496,29 +960,34 @@ def main() -> None:
     report = {
         "generated_at": payload["generated_at"],
         "requested_range": payload["requested_range"],
-        "summary": payload["summary"],
+        "summary": summary,
         "daily": daily,
+        "tournaments_total": len(tournaments),
+        "tournaments": tournaments,
+        "unknown_surface_tournaments": unknown_surface_tournaments,
+        "unknown_gender_tournaments": unknown_gender_tournaments,
         "skipped_for_review": skipped,
-        "unknown_level_matches": [
-            match
-            for match in matches
-            if match.get("tour_level") == "unknown"
-        ],
-        "unknown_surface_matches": [
-            match
-            for match in matches
-            if match.get("surface") == "unknown"
-        ],
     }
 
     save_json(output_path, payload)
     save_json(report_path, report)
+    save_json(metadata_path, metadata_payload)
 
     print("")
     print("TLE RESULTS BACKFILL DONE")
-    print(json.dumps(payload["summary"], indent=2, ensure_ascii=False))
-    print(f"Output: {output_path}")
-    print(f"Report: {report_path}")
+    print(json.dumps(summary, indent=2, ensure_ascii=False))
+    print("")
+    print(
+        "Unknown-surface tournaments:",
+        len(unknown_surface_tournaments),
+    )
+    print(
+        "Unknown-gender tournaments:",
+        len(unknown_gender_tournaments),
+    )
+    print(f"Output:   {output_path}")
+    print(f"Report:   {report_path}")
+    print(f"Metadata: {metadata_path}")
 
 
 if __name__ == "__main__":
