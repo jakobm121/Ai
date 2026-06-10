@@ -1,0 +1,107 @@
+name: TLE Debug API Unknown Fixtures
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  debug-api-unknowns:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout AI repository
+        uses: actions/checkout@v4
+
+      - name: Build unknown fixture debug file
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from collections import Counter
+
+          source = Path("data/tle/tle_api_results_backfill.json")
+          output = Path("data/tle/debug/api_unknown_fixture_samples.json")
+
+          if not source.exists():
+              raise SystemExit(f"Missing source file: {source}")
+
+          payload = json.loads(source.read_text(encoding="utf-8"))
+          matches = payload.get("matches", [])
+
+          unknown_surface = [
+              m for m in matches
+              if m.get("surface") == "unknown"
+          ]
+
+          unknown_gender = [
+              m for m in matches
+              if m.get("gender") == "unknown"
+          ]
+
+          key_counter = Counter()
+          for m in unknown_surface + unknown_gender:
+              raw = m.get("raw_fixture") or {}
+              key_counter.update(raw.keys())
+
+          def compact(match):
+              raw = match.get("raw_fixture") or {}
+              return {
+                  "event_key": match.get("event_key"),
+                  "date": match.get("date"),
+                  "tournament_key": match.get("tournament_key"),
+                  "tournament": match.get("tournament"),
+                  "event_type": match.get("event_type"),
+                  "tour_level": match.get("tour_level"),
+                  "surface": match.get("surface"),
+                  "gender": match.get("gender"),
+                  "round": match.get("round"),
+                  "player_1": match.get("player_1"),
+                  "player_2": match.get("player_2"),
+                  "raw_fixture_keys": sorted(raw.keys()),
+                  "raw_fixture": raw,
+                  "fixture_metadata_debug": match.get("fixture_metadata_debug"),
+              }
+
+          debug = {
+              "summary": {
+                  "matches_total": len(matches),
+                  "unknown_surface": len(unknown_surface),
+                  "unknown_gender": len(unknown_gender),
+                  "raw_fixture_keys": dict(key_counter.most_common()),
+              },
+              "unknown_surface_samples": [
+                  compact(m)
+                  for m in unknown_surface[:80]
+              ],
+              "unknown_gender_samples": [
+                  compact(m)
+                  for m in unknown_gender[:80]
+              ],
+          }
+
+          output.parent.mkdir(parents=True, exist_ok=True)
+          output.write_text(
+              json.dumps(debug, indent=2, ensure_ascii=False) + "\n",
+              encoding="utf-8",
+          )
+
+          print(json.dumps(debug["summary"], indent=2, ensure_ascii=False))
+          PY
+
+      - name: Commit debug file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/tle/debug/api_unknown_fixture_samples.json
+
+          if git diff --cached --quiet; then
+            echo "No debug changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Debug TLE API unknown fixture fields"
+          git push
