@@ -1,0 +1,82 @@
+name: TLE Debug Odds Side Mapping Raw
+
+on:
+  workflow_dispatch:
+    inputs:
+      event_keys:
+        description: "Comma separated event keys"
+        required: true
+        default: "12134273,12134279"
+
+      date:
+        description: "Odds date, YYYY-MM-DD"
+        required: true
+        default: "2026-06-09"
+
+permissions:
+  contents: write
+
+jobs:
+  debug-odds-side-mapping-raw:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout AI repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Debug raw fixture and odds side mapping
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          API_SLEEP_SECONDS: "0.8"
+        run: |
+          python tle_debug_odds_side_mapping_raw.py \
+            --event-keys "${{ inputs.event_keys }}" \
+            --date "${{ inputs.date }}"
+
+      - name: Show raw mapping debug summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("data/tle/debug/odds_side_mapping_raw_debug.json")
+
+          if not path.exists():
+              raise SystemExit(f"Missing debug output: {path}")
+
+          payload = json.loads(path.read_text(encoding="utf-8"))
+
+          for item in payload.get("items", []):
+              print(json.dumps({
+                  "event_key": item.get("event_key"),
+                  "fixture_summary": item.get("fixture_summary"),
+                  "winner_inference": item.get("winner_inference"),
+                  "home_away_odds_summary": item.get("home_away_odds_summary"),
+              }, indent=2, ensure_ascii=False))
+          PY
+
+      - name: Commit raw mapping debug output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/tle/debug/odds_side_mapping_raw_debug.json
+
+          if git diff --cached --quiet; then
+            echo "No debug changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Debug TLE raw odds side mapping"
+          git push
