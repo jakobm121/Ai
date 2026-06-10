@@ -1,8 +1,8 @@
 # Value + ELO settled results
 
-Generated: 2026-06-08T22:47:36.275663+02:00
+Generated: 2026-06-10T09:31:33.706741+02:00
 
-Overall: **102-104**, WR **49.51%**, Profit **19.973u**, ROI **7.87%**, Avg odds **2.235**
+Overall: **104-106**, WR **49.52%**, Profit **21.223u**, ROI **8.19%**, Avg odds **2.24**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -217,3 +217,7 @@ Overall: **102-104**, WR **49.51%**, Profit **19.973u**, ROI **7.87%**, Avg odds
 | 2026-06-08 | challenger | A. Holmgren - N. Budkov Kjaer | A. Holmgren | 2.34 | 1.25 | win | 1.675 | 24.59 |  |
 | 2026-06-08 | wta | Ka. Pliskova - M. Kessler | Ka. Pliskova | 1.85 | 1.25 | win | 1.0625 | 45.5 |  |
 | 2026-06-08 | challenger | T. Kokkinakis - T. Barrios Vera | T. Kokkinakis | 2.02 | 1.25 | win | 1.275 | 130.28 |  |
+| 2026-06-09 | challenger | D. Vidmanova - L. Fruhvirtova | D. Vidmanova | 2.5 | 1.25 | win | 1.875 | 15.91 |  |
+| 2026-06-09 | atp | G. Diallo - A. Mannarino | G. Diallo | 2.26 | 1.5 | loss | -1.5 | 89.27 |  |
+| 2026-06-09 | challenger | L. Pokorny - A. Barrena | L. Pokorny | 2.7 | 1.25 | win | 2.125 | 36.91 |  |
+| 2026-06-09 | challenger | M. H. Rehberg - R. Carballes Baena | M. H. Rehberg | 2.5 | 1.25 | loss | -1.25 | 37.29 |  |
