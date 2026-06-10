@@ -39,7 +39,7 @@ FINISHED_STATUSES = {
     "ended",
 }
 
-REJECTED_MARKERS = {
+REJECTED_STATUSES = {
     "cancelled",
     "canceled",
     "postponed",
@@ -50,6 +50,18 @@ REJECTED_MARKERS = {
     "wo",
     "w/o",
     "retired",
+}
+
+REJECTED_RESULT_MARKERS = {
+    "walkover",
+    "walk over",
+    "w/o",
+    "retired",
+    "cancelled",
+    "canceled",
+    "postponed",
+    "interrupted",
+    "abandoned",
 }
 
 TRUE_VALUES = {"1", "true", "yes", "y"}
@@ -163,16 +175,24 @@ def is_finished(fixture: dict[str, Any]) -> bool:
 
 
 def is_rejected_result(fixture: dict[str, Any]) -> bool:
-    blob = " ".join(
+    status = normalized_status(fixture)
+
+    # Status preverjamo kot celo vrednost. Ne uporabljamo substringa "wo",
+    # ker bi ta napaÄno zadel besede kot "women".
+    if status in REJECTED_STATUSES:
+        return True
+
+    result_blob = " ".join(
         [
-            normalized_status(fixture),
             lower_text(fixture.get("event_final_result")),
             lower_text(fixture.get("event_result")),
-            lower_text(fixture.get("tournament_round")),
         ]
     )
 
-    return any(marker in blob for marker in REJECTED_MARKERS)
+    return any(
+        marker in result_blob
+        for marker in REJECTED_RESULT_MARKERS
+    )
 
 
 def qualification_flag(fixture: dict[str, Any]) -> bool:
