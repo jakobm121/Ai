@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-08T22:42:23.728049+02:00
+Generated: 2026-06-10T09:15:52.465499+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 62 | 61 | 1 | 29 | 27 | 5 | 51.79% | 4.72u | 7.74% |
-| tedi_v2_test | 18 | 18 | 0 | 9 | 9 | 0 | 50.0% | 0.89u | 4.94% |
+| tedi_main_150 | 71 | 70 | 1 | 35 | 29 | 6 | 54.69% | 8.95u | 12.79% |
+| tedi_v2_test | 19 | 19 | 0 | 10 | 9 | 0 | 52.63% | 1.91u | 10.05% |
 
 ## Results
 
@@ -92,4 +92,14 @@ Generated: 2026-06-08T22:42:23.728049+02:00
 | 2026-06-08 | 14:00 | tedi_v2_test | loss | -1.00 | L. Broady - I. Xilas | UNDER 19.5 games | 2.19 | 26 | 6-3, 3-6, 6-2 |
 | 2026-06-08 | 14:30 | tedi_main_150 | win | 1.02 | D. Snigur - P. Badosa | UNDER 21.5 games | 2.02 | 20 | 6-1, 7-6 |
 | 2026-06-08 | 14:30 | tedi_main_150 | loss | -1.00 | L. Djere - K. Coppejans | UNDER 20.5 games | 2.12 | 26 | 2-6, 6-2, 4-6 |
-| 2026-06-08 | 17:00 | tedi_main_150 | pending | 0.00 | L. Siegemund - F. Jones | UNDER 20.5 games | 2.02 |  |  |
+| 2026-06-08 | 17:00 | tedi_main_150 | win | 1.02 | L. Siegemund - F. Jones | UNDER 20.5 games | 2.02 | 17 | 6-2, 6-3 |
+| 2026-06-09 | 10:00 | tedi_main_150 | win | 1.02 | M. Tobon - A. Vasilev | UNDER 21.5 games | 2.02 | 18 | 4-6, 2-6 |
+| 2026-06-09 | 11:00 | tedi_main_150 | loss | -1.00 | G. Diallo - A. Mannarino | UNDER 22.5 games | 2.20 | 31 | 4-6, 6-3, 5-7 |
+| 2026-06-09 | 11:00 | tedi_main_150 | loss | -1.00 | K. Volynets - Z. Sonmez | UNDER 20.5 games | 2.08 | 26 | 3-6, 6-2, 3-6 |
+| 2026-06-09 | 13:00 | tedi_main_150 | win | 1.02 | E. Raducanu - A. Blinkova | UNDER 20.5 games | 2.02 | 15 | 6-0, 6-3 |
+| 2026-06-09 | 13:00 | tedi_v2_test | win | 1.02 | E. Raducanu - A. Blinkova | UNDER 20.5 games | 2.02 | 15 | 6-0, 6-3 |
+| 2026-06-09 | 14:30 | tedi_main_150 | push | 0.00 | E. Navarro - C. McNally | UNDER 20.5 games | 2.13 | None | None |
+| 2026-06-09 | 15:00 | tedi_main_150 | win | 1.05 | D. Jorda Sanchis - A. Sanchez Quilez | UNDER 21.5 games | 2.05 | 20 | 7-5, 6-2 |
+| 2026-06-09 | 16:30 | tedi_main_150 | pending | 0.00 | H. Stewart - L. Riedi | UNDER 20.5 games | 2.19 |  |  |
+| 2026-06-09 | 17:00 | tedi_main_150 | win | 1.12 | G. I. Justo - J. Aguilar Cardozo | UNDER 20.5 games | 2.12 | 17 | 6-2, 6-3 |
+| 2026-06-09 | 17:30 | tedi_main_150 | win | 1.00 | V. Jimenez Kasintseva - J. Pieri | UNDER 19.5 games | 2.00 | 18 | 6-2, 6-4 |

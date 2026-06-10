@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-08T22:42:23.854401+02:00
+Generated: 2026-06-10T09:15:52.634677+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 207 | 207 | 99 | 94 | 14 | 51.3% | 11.48u | 5.95% |
+| 229 | 229 | 111 | 101 | 17 | 52.36% | 17.23u | 8.13% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 36 | 36 | 18 | 16 | 2 | 52.94% | 3.14u | 9.24% |
-| single | 157 | 157 | 73 | 72 | 12 | 50.34% | 5.34u | 3.68% |
-| triple | 14 | 14 | 8 | 6 | 0 | 57.14% | 3.0u | 21.43% |
+| double | 38 | 38 | 20 | 16 | 2 | 55.56% | 5.28u | 14.67% |
+| single | 176 | 176 | 82 | 79 | 15 | 50.93% | 7.95u | 4.94% |
+| triple | 15 | 15 | 9 | 6 | 0 | 60.0% | 4.0u | 26.67% |
 
 ## Results
 
@@ -225,5 +225,27 @@ Generated: 2026-06-08T22:42:23.854401+02:00
 | 2026-06-08 | 15:00 | double | jakob, lucija | push | 0.00 | T. Paul - G. Mpetshi Perricard | UNDER 24.5 games | 2.18 | None | None |
 | 2026-06-08 | 16:00 | single | jakob | win | 1.15 | M. Pohankova - C. Tauson | UNDER 20.5 games | 2.15 | 20 | 6-4, 6-4 |
 | 2026-06-08 | 16:00 | single | jakob | win | 1.15 | U. Humbert - E. Ymer | UNDER 21.5 games | 2.15 | 19 | 6-4, 6-3 |
+| 2026-06-08 | 17:00 | single | tedi | win | 1.02 | L. Siegemund - F. Jones | UNDER 20.5 games | 2.02 | 17 | 6-2, 6-3 |
 | 2026-06-08 | 17:15 | single | jakob | win | 1.00 | H. Grenier - L. van Assche | UNDER 19.5 games | 2.00 | 15 | 1-6, 2-6 |
 | 2026-06-08 | 18:00 | single | lucija | win | 1.05 | K. Jacquet - T. Samuel | OVER 23.5 games | 2.05 | 30 | 6-1, 6-7, 4-6 |
+| 2026-06-09 | 10:00 | single | tedi | win | 1.02 | M. Tobon - A. Vasilev | UNDER 21.5 games | 2.02 | 18 | 4-6, 2-6 |
+| 2026-06-09 | 10:30 | single | jakob | win | 1.02 | M. Krumich - M. Mrva | OVER 22.5 games | 2.02 | 23 | 6-7, 4-6 |
+| 2026-06-09 | 10:30 | single | jakob | win | 1.00 | T. Boyer - R. Perot | UNDER 20.5 games | 2.00 | 17 | 6-3, 6-2 |
+| 2026-06-09 | 11:00 | single | tedi | loss | -1.00 | G. Diallo - A. Mannarino | UNDER 22.5 games | 2.20 | 31 | 4-6, 6-3, 5-7 |
+| 2026-06-09 | 11:00 | single | tedi | loss | -1.00 | K. Volynets - Z. Sonmez | UNDER 20.5 games | 2.08 | 26 | 3-6, 6-2, 3-6 |
+| 2026-06-09 | 11:00 | single | jakob | win | 1.15 | P. Martinez - S. Gulin | UNDER 20.0 games | 2.15 | 19 | 7-5, 6-1 |
+| 2026-06-09 | 11:30 | single | lucija | loss | -1.00 | C. Sanchez Jover - M. Dodig | OVER 21.5 games | 1.98 | 20 | 6-4, 6-4 |
+| 2026-06-09 | 13:00 | double | lucija, tedi | win | 1.02 | E. Raducanu - A. Blinkova | UNDER 20.5 games | 2.02 | 15 | 6-0, 6-3 |
+| 2026-06-09 | 13:00 | single | jakob | loss | -1.00 | J. De Jong - O. Milic | UNDER 19.5 games | 2.00 | 20 | 6-1, 7-6 |
+| 2026-06-09 | 13:30 | single | jakob | win | 1.07 | S. Gueymard Wayenburg - C. Tabur | UNDER 20.5 games | 2.07 | 19 | 4-6, 3-6 |
+| 2026-06-09 | 14:00 | single | jakob | push | 0.00 | H. Hurkacz - M. Fucsovics | UNDER 22.5 games | 2.15 | None | None |
+| 2026-06-09 | 14:00 | single | jakob | loss | -1.00 | L. Staeheli - F. Balshaw | UNDER 19.5 games | 2.05 | 25 | 6-7, 5-7 |
+| 2026-06-09 | 14:30 | single | tedi | push | 0.00 | E. Navarro - C. McNally | UNDER 20.5 games | 2.13 | None | None |
+| 2026-06-09 | 15:00 | single | jakob | loss | -1.00 | D. Altmaier - F. Tiafoe | UNDER 22.5 games | 2.08 | 33 | 6-7, 6-4, 4-6 |
+| 2026-06-09 | 15:00 | single | tedi | win | 1.05 | D. Jorda Sanchis - A. Sanchez Quilez | UNDER 21.5 games | 2.05 | 20 | 7-5, 6-2 |
+| 2026-06-09 | 15:00 | single | jakob | loss | -1.00 | P. Boscardin Dias - E. Nava | UNDER 20.5 games | 2.14 | 28 | 5-7, 6-3, 1-6 |
+| 2026-06-09 | 15:30 | single | jakob | push | 0.00 | M. Stojsavljevic - M. Kostyuk | UNDER 18.5 games | 2.10 | None | None |
+| 2026-06-09 | 17:00 | double | lucija, tedi | win | 1.12 | G. I. Justo - J. Aguilar Cardozo | UNDER 20.5 games | 2.12 | 17 | 6-2, 6-3 |
+| 2026-06-09 | 17:00 | single | jakob | win | 1.12 | J. S. Gomez - L. E. Ambrogi | UNDER 18.5 games | 2.12 | 18 | 2-6, 4-6 |
+| 2026-06-09 | 17:30 | triple | jakob, lucija, tedi | win | 1.00 | V. Jimenez Kasintseva - J. Pieri | UNDER 19.5 games | 2.00 | 18 | 6-2, 6-4 |
+| 2026-06-09 | 18:00 | single | jakob | win | 1.16 | R. Dickerson - M. Pucinelli de Almeida | UNDER 18.5 games | 2.16 | 14 | 1-6, 1-6 |
