@@ -1,6 +1,6 @@
 # Value + ELO settled results
 
-Generated: 2026-06-11T09:14:35.615925+02:00
+Generated: 2026-06-11T09:15:18.481667+02:00
 
 Overall: **107-110**, WR **49.31%**, Profit **21.148u**, ROI **7.89%**, Avg odds **2.245**
 
