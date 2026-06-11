@@ -1,8 +1,8 @@
 # Value + ELO settled results
 
-Generated: 2026-06-10T09:31:33.706741+02:00
+Generated: 2026-06-11T09:14:35.615925+02:00
 
-Overall: **104-106**, WR **49.52%**, Profit **21.223u**, ROI **8.19%**, Avg odds **2.24**
+Overall: **107-110**, WR **49.31%**, Profit **21.148u**, ROI **7.89%**, Avg odds **2.245**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -221,3 +221,10 @@ Overall: **104-106**, WR **49.52%**, Profit **21.223u**, ROI **8.19%**, Avg odds
 | 2026-06-09 | atp | G. Diallo - A. Mannarino | G. Diallo | 2.26 | 1.5 | loss | -1.5 | 89.27 |  |
 | 2026-06-09 | challenger | L. Pokorny - A. Barrena | L. Pokorny | 2.7 | 1.25 | win | 2.125 | 36.91 |  |
 | 2026-06-09 | challenger | M. H. Rehberg - R. Carballes Baena | M. H. Rehberg | 2.5 | 1.25 | loss | -1.25 | 37.29 |  |
+| 2026-06-10 | itf | A. El Aouni - A. Teixido Garcia | A. El Aouni | 2.75 | 1.25 | loss | -1.25 | 0.43 |  |
+| 2026-06-10 | atp | G. Mpetshi Perricard - G. Onclin | G. Onclin | 2.52 | 1.25 | loss | -1.25 | 10.62 |  |
+| 2026-06-10 | challenger | H. Rocha - C. Broom | H. Rocha | 2.51 | 1.25 | win | 1.8875 | 60.69 |  |
+| 2026-06-10 | wta | J. Bouzas Maneiro - A. Tomljanovic | J. Bouzas Maneiro | 1.89 | 1.25 | loss | -1.25 | 39.74 |  |
+| 2026-06-10 | itf | J. Lim - M. Rouvroy | J. Lim | 2.0 | 1.25 | win | 1.25 | 14.79 |  |
+| 2026-06-10 | challenger | N. Sanchez Izquierdo - L. van Assche | N. Sanchez Izquierdo | 2.63 | 1.25 | win | 2.0375 | 33.86 |  |
+| 2026-06-10 | challenger | T. Schoolkate - P. Jubb | P. Jubb | 2.35 | 1.5 | loss | -1.5 | 78.09 |  |
