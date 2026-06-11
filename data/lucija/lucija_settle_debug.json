@@ -1,64 +1,75 @@
 {
-  "generated_at": "2026-06-10T09:15:52.550349+02:00",
+  "generated_at": "2026-06-11T09:12:23.833824+02:00",
   "source_results_file": "data/tennis_totals_results.json",
   "lucija_results_file": "data/lucija/lucija_results.json",
-  "source_results_count": 721,
-  "lucija_results_count": 69,
-  "updated": 4,
+  "source_results_count": 738,
+  "lucija_results_count": 74,
+  "updated": 5,
   "still_pending": 1,
   "source_not_found": 0,
   "source_not_settled": 1,
   "items": [
     {
-      "pick_id": "bd25d119c5264c6ab7e9daccde36c402",
-      "source_pick_id": "27e312b82248a728051b8357ab7b3faf",
-      "match": "C. Sanchez Jover - M. Dodig",
-      "status": "settled",
-      "result": "loss",
-      "profit": -1.0,
-      "total_games": 20,
-      "final_score": "6-4, 6-4",
-      "match_method": "source_pick_id"
-    },
-    {
       "pick_id": "b0406ec40bacfecbb89ea46f07f88450",
       "source_pick_id": "3cd744b454c992467c4f96659c0ff382",
       "match": "H. Stewart - L. Riedi",
+      "status": "settled",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 25,
+      "final_score": "1-6, 6-3, 3-6",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "d87c37a85a28cd01f558bee8d985d131",
+      "source_pick_id": "2ffcbfe04ae8d3666d5806d30e4a94f7",
+      "match": "L. Siegemund - A. Anisimova",
+      "status": "settled",
+      "result": "win",
+      "profit": 1.2,
+      "total_games": 16,
+      "final_score": "1-6, 3-6",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "e4810d67674d09d544f1b4add670edf9",
+      "source_pick_id": "2ff8a0c98e2f28b1ccf51a2c977a5908",
+      "match": "D. Salkova - M. Trevisan",
+      "status": "settled",
+      "result": "win",
+      "profit": 1.04,
+      "total_games": 20,
+      "final_score": "6-1, 7-6",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "e6549c08ba9f98ce5c9c47a1727cba46",
+      "source_pick_id": "c8e31aec9d2b7ddb1af71cc545a1b999",
+      "match": "A. Dudeney - A. Krueger",
       "status": "source_not_settled",
       "source_result": "pending",
       "match_method": "source_pick_id"
     },
     {
-      "pick_id": "ea08b30c7d420433ad7d680a31c2f46e",
-      "source_pick_id": "9b4a3ce14e0dfce100e1b45ae26d414b",
-      "match": "G. I. Justo - J. Aguilar Cardozo",
+      "pick_id": "64caa52c26a69ff91c8388439e8a0873",
+      "source_pick_id": "54bbdb87560d7fe4add4c9275693f98f",
+      "match": "J. Reis Da Silva - A. Donski",
       "status": "settled",
-      "result": "win",
-      "profit": 1.12,
-      "total_games": 17,
-      "final_score": "6-2, 6-3",
-      "match_method": "source_pick_id"
-    },
-    {
-      "pick_id": "46b2b56710c50ddd1ec95ee0a0a26b2a",
-      "source_pick_id": "a513ac2300fe4664952ffdc2ae8424c9",
-      "match": "E. Raducanu - A. Blinkova",
-      "status": "settled",
-      "result": "win",
-      "profit": 1.02,
-      "total_games": 15,
-      "final_score": "6-0, 6-3",
-      "match_method": "source_pick_id"
-    },
-    {
-      "pick_id": "7d51c1f756afa659d9b95cefc2d21975",
-      "source_pick_id": "fb67dea254328c5ea19971ecec0a468f",
-      "match": "V. Jimenez Kasintseva - J. Pieri",
-      "status": "settled",
-      "result": "win",
-      "profit": 1.0,
+      "result": "loss",
+      "profit": -1.0,
       "total_games": 18,
       "final_score": "6-2, 6-4",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "981c7b784b54e47dde88720498a5bdd7",
+      "source_pick_id": "8d223faba788fd8a78b4f59c45447c53",
+      "match": "T. Boogaard - Y. Wu",
+      "status": "settled",
+      "result": "win",
+      "profit": 0.9,
+      "total_games": 27,
+      "final_score": "6-3, 2-6, 6-4",
       "match_method": "source_pick_id"
     }
   ]

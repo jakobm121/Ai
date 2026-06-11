@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-10T09:15:52.465499+02:00
+Generated: 2026-06-11T09:12:23.746364+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 71 | 70 | 1 | 35 | 29 | 6 | 54.69% | 8.95u | 12.79% |
-| tedi_v2_test | 19 | 19 | 0 | 10 | 9 | 0 | 52.63% | 1.91u | 10.05% |
+| tedi_main_150 | 77 | 74 | 3 | 36 | 31 | 7 | 53.73% | 8.15u | 11.01% |
+| tedi_v2_test | 21 | 20 | 1 | 11 | 9 | 0 | 55.0% | 3.06u | 15.3% |
 
 ## Results
 
@@ -100,6 +100,14 @@ Generated: 2026-06-10T09:15:52.465499+02:00
 | 2026-06-09 | 13:00 | tedi_v2_test | win | 1.02 | E. Raducanu - A. Blinkova | UNDER 20.5 games | 2.02 | 15 | 6-0, 6-3 |
 | 2026-06-09 | 14:30 | tedi_main_150 | push | 0.00 | E. Navarro - C. McNally | UNDER 20.5 games | 2.13 | None | None |
 | 2026-06-09 | 15:00 | tedi_main_150 | win | 1.05 | D. Jorda Sanchis - A. Sanchez Quilez | UNDER 21.5 games | 2.05 | 20 | 7-5, 6-2 |
-| 2026-06-09 | 16:30 | tedi_main_150 | pending | 0.00 | H. Stewart - L. Riedi | UNDER 20.5 games | 2.19 |  |  |
+| 2026-06-09 | 16:30 | tedi_main_150 | loss | -1.00 | H. Stewart - L. Riedi | UNDER 20.5 games | 2.19 | 25 | 1-6, 6-3, 3-6 |
 | 2026-06-09 | 17:00 | tedi_main_150 | win | 1.12 | G. I. Justo - J. Aguilar Cardozo | UNDER 20.5 games | 2.12 | 17 | 6-2, 6-3 |
 | 2026-06-09 | 17:30 | tedi_main_150 | win | 1.00 | V. Jimenez Kasintseva - J. Pieri | UNDER 19.5 games | 2.00 | 18 | 6-2, 6-4 |
+| 2026-06-10 | 11:00 | tedi_main_150 | loss | -1.00 | A. Moro Canas - K. Coppejans | UNDER 21.5 games | 2.12 | 27 | 7-6, 1-6, 1-6 |
+| 2026-06-10 | 14:00 | tedi_main_150 | pending | 0.00 | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.07 |  |  |
+| 2026-06-10 | 14:00 | tedi_v2_test | pending | 0.00 | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.07 |  |  |
+| 2026-06-10 | 14:00 | tedi_main_150 | win | 1.20 | L. Siegemund - A. Anisimova | UNDER 19.5 games | 2.20 | 16 | 1-6, 3-6 |
+| 2026-06-10 | 15:00 | tedi_v2_test | win | 1.15 | N. Kicker - T. Martinez | UNDER 18.5 games | 2.15 | 16 | 6-0, 6-4 |
+| 2026-06-10 | 15:00 | tedi_main_150 | pending | 0.00 | R. Montgomery - G. Minnen | UNDER 21.5 games | 2.08 |  |  |
+| 2026-06-10 | 15:00 | tedi_main_150 | push | 0.00 | T. Cigarran - V. Aboian | UNDER 19.5 games | 2.14 | None | None |
+| 2026-06-10 | 15:30 | tedi_main_150 | pending | 0.00 | U. Humbert - B. Bonzi | UNDER 22.5 games | 2.20 |  |  |

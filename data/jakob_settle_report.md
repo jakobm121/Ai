@@ -1,55 +1,65 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-10T09:15:52.328424+02:00`
+Generated: `2026-06-11T09:12:23.615301+02:00`
 
-Pending picks: **3**
+Pending picks: **1**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 171 | 82 | 79 | 1 | 9 | 50.93% | +6.03u | 5.00% |
+| 181 | 87 | 83 | 1 | 10 | 51.18% | +7.01u | 5.50% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 13 | 7 | 4 | 0 | 2 | 63.64% | +2.64u | 31.99% |
+| 10 | 5 | 4 | 0 | 1 | 55.56% | +0.98u | 14.55% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 153 | 72 | 73 | 1 | 7 | 49.66% | +2.94u | 2.70% |
+| 163 | 77 | 77 | 1 | 8 | 50.00% | +3.92u | 3.39% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 111 | 54 | 51 | 1 | 5 | 51.43% | +5.15u | 6.54% |
+| 118 | 57 | 54 | 1 | 6 | 51.35% | +5.26u | 6.32% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 91 | 44 | 44 | 0 | 3 | 50.00% | +0.51u | 0.77% |
+| 95 | 47 | 45 | 0 | 3 | 51.09% | +2.04u | 2.95% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 22 | 12 | 10 | 0 | 0 | 54.55% | +1.18u | 7.14% |
+| 23 | 13 | 10 | 0 | 0 | 56.52% | +1.93u | 11.18% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 149 | 70 | 69 | 1 | 9 | 50.36% | +4.85u | 4.66% |
+| 158 | 74 | 73 | 1 | 10 | 50.34% | +5.09u | 4.61% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-10 | 16:30 | 1 | N. Hardt - B. Fernandez | UNDER 18.5 games | 2.18 | ❌ loss | 80.97 | 20 | 7-5, 6-2 | -0.75u |
+| 2026-06-10 | 16:30 | 9 | D. Salkova - M. Trevisan | UNDER 20.5 games | 2.04 | ✅ win | 70.54 | 20 | 6-1, 7-6 | +0.78u |
+| 2026-06-10 | 15:00 | 4 | T. Cigarran - V. Aboian | UNDER 19.5 games | 2.14 | ⚪ void | 76.40 |  |  | 0.00u |
+| 2026-06-10 | 15:00 | 3 | N. Kicker - T. Martinez | UNDER 18.5 games | 2.15 | ✅ win | 77.55 | 16 | 6-0, 6-4 | +0.86u |
+| 2026-06-10 | 14:00 | 7 | L. Siegemund - A. Anisimova | UNDER 20.5 games | 2.00 | ✅ win | 74.32 | 16 | 1-6, 3-6 | +0.75u |
+| 2026-06-10 | 13:00 | 8 | A. Bolt - K. Smith | UNDER 22.5 games | 2.12 | ✅ win | 71.26 | 20 | 4-6, 4-6 | +0.84u |
+| 2026-06-10 | 11:00 | 5 | A. Potapova - S. Lamens | UNDER 19.5 games | 2.02 | ❌ loss | 76.39 | 33 | 6-7, 6-4, 6-4 | -0.75u |
+| 2026-06-10 | 10:00 | 6 | G. Ferrari - R. Carballes Baena | UNDER 19.5 games | 2.14 | ❌ loss | 76.12 | 20 | 4-6, 4-6 | -0.75u |
+| 2026-06-09 | 16:30 | 13 | H. Stewart - L. Riedi | UNDER 20.5 games | 2.19 | ❌ loss | 71.64 | 25 | 1-6, 6-3, 3-6 | -0.75u |
+| 2026-06-09 | 15:30 | 1 | O. Virtanen - K. Majchrzak | OVER 24.5 games | 2.00 | ✅ win | 86.33 | 36 | 7-6, 4-6, 6-7 | +0.75u |
 | 2026-06-09 | 18:00 | 5 | R. Dickerson - M. Pucinelli de Almeida | UNDER 18.5 games | 2.16 | ✅ win | 75.28 | 14 | 1-6, 1-6 | +0.87u |
 | 2026-06-09 | 17:30 | 10 | V. Jimenez Kasintseva - J. Pieri | UNDER 19.5 games | 2.00 | ✅ win | 72.62 | 18 | 6-2, 6-4 | +0.75u |
 | 2026-06-09 | 17:00 | 14 | J. S. Gomez - L. E. Ambrogi | UNDER 18.5 games | 2.12 | ✅ win | 71.61 | 18 | 2-6, 4-6 | +0.84u |
@@ -120,14 +130,4 @@ Pending picks: **3**
 | 2026-06-03 | 10:30 | 6 | M. Bassem Sobhy - N. Makhlouf | UNDER 19.0 games | 2.13 | ⚪ void | 73.24 |  |  | 0.00u |
 | 2026-06-01 | 16:30 | 4 | C. Naef - M. Inglis | UNDER 19.5 games | 2.00 | ✅ win | 70.09 | 17 | 6-2, 6-3 | +0.75u |
 | 2026-06-02 | 18:00 | 10 | D. Dedura - M. Wiskandt | UNDER 20.5 games | 2.08 | ✅ win | 75.16 | 17 | 6-1, 6-4 | +0.81u |
-| 2026-06-02 | 17:00 | 11 | M. Bulgaru - N. Noha Akugue | UNDER 19.5 games | 2.17 | ❌ loss | 73.94 | 25 | 6-7, 5-7 | -0.75u |
-| 2026-06-02 | 16:00 | 7 | T. Duran - S. Napolitano | UNDER 20.5 games | 2.20 | ⚪ void | 75.79 |  |  | 0.00u |
-| 2026-06-02 | 16:00 | 13 | B. Shick - R. Hohmann | UNDER 20.5 games | 2.00 | ❌ loss | 73.85 | 26 | 6-4, 3-6, 6-1 | -0.75u |
-| 2026-06-02 | 13:30 | 12 | M. Mrva - D. Svrcina | UNDER 20.5 games | 2.00 | ❌ loss | 73.93 | 31 | 5-7, 6-3, 6-4 | -0.75u |
-| 2026-06-02 | 13:00 | 15 | D. Papamichail - C. Paquet | OVER 20.5 games | 2.00 | ✅ win | 72.96 | 21 | 5-7, 3-6 | +0.75u |
-| 2026-06-02 | 12:00 | 25 | T. Daniel - J. Forejtek | OVER 22.5 games | 2.05 | ❌ loss | 70.54 | 20 | 7-6, 6-1 | -0.75u |
-| 2026-06-02 | 12:00 | 6 | A. Martin - V. Kopriva | UNDER 19.5 games | 2.00 | ✅ win | 76.34 | 16 | 0-6, 4-6 | +0.75u |
-| 2026-06-02 | 11:30 | 2 | V. Royer - N. Alvarez Varona | UNDER 20.5 games | 2.20 | ✅ win | 80.68 | 19 | 6-4, 6-3 | +0.90u |
-| 2026-06-02 | 11:30 | 1 | N. Bartunkova - H. Dart | OVER 21.5 games | 1.93 | ✅ win | 83.48 | 30 | 3-6, 6-3, 7-5 | +0.70u |
-| 2026-06-02 | 11:30 | 9 | A. Eala - P. Hon | UNDER 19.5 games | 2.01 | ✅ win | 75.29 | 14 | 6-0, 6-2 | +0.76u |
 

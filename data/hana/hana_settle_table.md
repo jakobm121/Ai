@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-10T09:15:52.634677+02:00
+Generated: 2026-06-11T09:12:23.920768+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 229 | 229 | 111 | 101 | 17 | 52.36% | 17.23u | 8.13% |
+| 243 | 243 | 118 | 107 | 18 | 52.44% | 18.64u | 8.28% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 38 | 38 | 20 | 16 | 2 | 55.56% | 5.28u | 14.67% |
-| single | 176 | 176 | 82 | 79 | 15 | 50.93% | 7.95u | 4.94% |
-| triple | 15 | 15 | 9 | 6 | 0 | 60.0% | 4.0u | 26.67% |
+| double | 42 | 42 | 23 | 16 | 3 | 58.97% | 8.67u | 22.23% |
+| single | 185 | 185 | 86 | 84 | 15 | 50.59% | 6.97u | 4.1% |
+| triple | 16 | 16 | 9 | 7 | 0 | 56.25% | 3.0u | 18.75% |
 
 ## Results
 
@@ -245,7 +245,21 @@ Generated: 2026-06-10T09:15:52.634677+02:00
 | 2026-06-09 | 15:00 | single | tedi | win | 1.05 | D. Jorda Sanchis - A. Sanchez Quilez | UNDER 21.5 games | 2.05 | 20 | 7-5, 6-2 |
 | 2026-06-09 | 15:00 | single | jakob | loss | -1.00 | P. Boscardin Dias - E. Nava | UNDER 20.5 games | 2.14 | 28 | 5-7, 6-3, 1-6 |
 | 2026-06-09 | 15:30 | single | jakob | push | 0.00 | M. Stojsavljevic - M. Kostyuk | UNDER 18.5 games | 2.10 | None | None |
+| 2026-06-09 | 15:30 | single | jakob | win | 1.00 | O. Virtanen - K. Majchrzak | OVER 24.5 games | 2.00 | 36 | 7-6, 4-6, 6-7 |
+| 2026-06-09 | 16:30 | triple | jakob, lucija, tedi | loss | -1.00 | H. Stewart - L. Riedi | UNDER 20.5 games | 2.19 | 25 | 1-6, 6-3, 3-6 |
 | 2026-06-09 | 17:00 | double | lucija, tedi | win | 1.12 | G. I. Justo - J. Aguilar Cardozo | UNDER 20.5 games | 2.12 | 17 | 6-2, 6-3 |
 | 2026-06-09 | 17:00 | single | jakob | win | 1.12 | J. S. Gomez - L. E. Ambrogi | UNDER 18.5 games | 2.12 | 18 | 2-6, 4-6 |
 | 2026-06-09 | 17:30 | triple | jakob, lucija, tedi | win | 1.00 | V. Jimenez Kasintseva - J. Pieri | UNDER 19.5 games | 2.00 | 18 | 6-2, 6-4 |
 | 2026-06-09 | 18:00 | single | jakob | win | 1.16 | R. Dickerson - M. Pucinelli de Almeida | UNDER 18.5 games | 2.16 | 14 | 1-6, 1-6 |
+| 2026-06-10 | 10:00 | single | jakob | loss | -1.00 | G. Ferrari - R. Carballes Baena | UNDER 19.5 games | 2.14 | 20 | 4-6, 4-6 |
+| 2026-06-10 | 11:00 | single | tedi | loss | -1.00 | A. Moro Canas - K. Coppejans | UNDER 21.5 games | 2.12 | 27 | 7-6, 1-6, 1-6 |
+| 2026-06-10 | 11:00 | single | jakob | loss | -1.00 | A. Potapova - S. Lamens | UNDER 19.5 games | 2.02 | 33 | 6-7, 6-4, 6-4 |
+| 2026-06-10 | 11:00 | single | lucija | win | 0.90 | T. Boogaard - Y. Wu | OVER 20.5 games | 1.90 | 27 | 6-3, 2-6, 6-4 |
+| 2026-06-10 | 12:00 | single | lucija | loss | -1.00 | J. Reis Da Silva - A. Donski | OVER 20.5 games | 1.90 | 18 | 6-2, 6-4 |
+| 2026-06-10 | 13:00 | single | jakob | win | 1.12 | A. Bolt - K. Smith | UNDER 22.5 games | 2.12 | 20 | 4-6, 4-6 |
+| 2026-06-10 | 14:00 | double | lucija, tedi | win | 1.20 | L. Siegemund - A. Anisimova | UNDER 19.5 games | 2.20 | 16 | 1-6, 3-6 |
+| 2026-06-10 | 14:00 | single | jakob | win | 1.00 | L. Siegemund - A. Anisimova | UNDER 20.5 games | 2.00 | 16 | 1-6, 3-6 |
+| 2026-06-10 | 15:00 | double | jakob, tedi | win | 1.15 | N. Kicker - T. Martinez | UNDER 18.5 games | 2.15 | 16 | 6-0, 6-4 |
+| 2026-06-10 | 15:00 | double | jakob, tedi | push | 0.00 | T. Cigarran - V. Aboian | UNDER 19.5 games | 2.14 | None | None |
+| 2026-06-10 | 16:30 | double | jakob, lucija | win | 1.04 | D. Salkova - M. Trevisan | UNDER 20.5 games | 2.04 | 20 | 6-1, 7-6 |
+| 2026-06-10 | 16:30 | single | jakob | loss | -1.00 | N. Hardt - B. Fernandez | UNDER 18.5 games | 2.18 | 20 | 7-5, 6-2 |
