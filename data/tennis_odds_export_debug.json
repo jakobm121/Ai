@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-11T07:01:45.940953+02:00",
+  "generated_at": "2026-06-11T07:34:55.949373+02:00",
   "summary": {
-    "fixtures_total": 359,
-    "matches_with_odds": 131,
-    "skipped": 228,
+    "fixtures_total": 362,
+    "matches_with_odds": 129,
+    "skipped": 233,
     "errors": 0,
-    "first_set_total_matches": 127,
-    "match_total_matches": 128,
+    "first_set_total_matches": 125,
+    "match_total_matches": 126,
     "with_surface": 60,
-    "with_gender": 131,
-    "with_best_of": 131,
+    "with_gender": 129,
+    "with_best_of": 129,
     "tiebreak_market_matches": 0
   },
   "skipped": [
@@ -146,6 +146,11 @@
     {
       "event_key": 12134759,
       "match": "Recek/ Siniakov - Hipfl/ Lechno-Wasiutynski",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12134852,
+      "match": "Beaven/ Lakshmanan - Guilleme/ Kask",
       "reason": "not_singles"
     },
     {
@@ -501,7 +506,7 @@
     {
       "event_key": 12135536,
       "match": "Papa/ Ruland - Dean/ Stepanov",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12135537,
@@ -584,6 +589,16 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12135589,
+      "match": "J. Charlton - M. Dellavedova",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12135590,
+      "match": "K. Samrej - P. Sornlaksup",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12135594,
       "match": "D. J. Kim - S. Tang",
       "reason": "no_odds"
@@ -606,6 +621,16 @@
     {
       "event_key": 12135599,
       "match": "J. Kim - M. Jones",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12135601,
+      "match": "H. Shiraishi - S. Hazawa",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12135602,
+      "match": "J. Yamasaki - H. Jones",
       "reason": "not_pregame"
     },
     {
@@ -1160,11 +1185,13 @@
     "Asian Handicap (2nd Set)",
     "Asian Handicap (Games)",
     "Asian Handicap (Sets)",
+    "Away First Service Game - Winners First Point",
     "Away First Service Game - Winners Winner",
     "Away Team Total (1st Set)",
     "Away Team Total (2nd Set)",
     "Correct Score 1st Half",
     "Correct Score 2nd Half",
+    "Home First Service Game - Winners First Point",
     "Home First Service Game - Winners Winner",
     "Home Team Total (1st Set)",
     "Home Team Total (2nd Set)",
@@ -1184,6 +1211,7 @@
     "Set Betting",
     "Total - Away",
     "Total - Home",
+    "Total Breaks on Serve",
     "Total Tiebreaks",
     "Win In Straigh Sets (Player 1)",
     "Win In Straigh Sets (Player 2)",
