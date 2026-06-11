@@ -2,9 +2,71 @@
   "schema_version": 1,
   "file_type": "ai_repo_tle_open_predictions",
   "summary": {
-    "generated_at": "2026-06-11T12:52:23+00:00",
-    "open_predictions_count": 13,
-    "removed_settled_this_run": 9
+    "generated_at": "2026-06-11T14:13:14+00:00",
+    "scan_date_start": "2026-06-11",
+    "scan_date_end": "2026-06-11",
+    "settings": {
+      "bookmaker": "Pncl",
+      "fallback": "clean_average",
+      "min_edge": 0.05,
+      "min_ev": 0.0,
+      "min_odds": 1.2,
+      "max_odds": 8.0,
+      "min_overround": -0.03,
+      "max_overround": 0.18,
+      "max_book_deviation": 0.35,
+      "min_start_minutes": 30.0,
+      "levels": [
+        "atp_wta",
+        "challenger",
+        "grand_slam",
+        "itf"
+      ],
+      "main_min_level_matches": 20,
+      "main_min_surface_matches": 10,
+      "itf_min_level_matches": 5,
+      "challenger_min_level_matches": 5,
+      "state_note": "TLE state uses Tennis-ELO canonical matches strictly before scan start date.",
+      "historical_matches_loaded_before_scan_date": 215534
+    },
+    "counters": {
+      "api_fixture_events": 365,
+      "api_odds_events": 182,
+      "away_resolve_api_mapping": 7,
+      "away_resolve_unique_surname_initial": 5,
+      "home_resolve_api_mapping": 9,
+      "home_resolve_unique_surname_initial": 3,
+      "odds_events_with_fixture": 182,
+      "picks": 7,
+      "picks_gender_men": 6,
+      "picks_gender_women": 1,
+      "picks_level_itf": 7,
+      "scored_level_itf": 12,
+      "scored_matches": 12,
+      "skipped_level_qualifying": 35,
+      "skipped_missing_pair_odds": 22,
+      "skipped_starts_too_soon": 16,
+      "skipped_status_cancelled": 1,
+      "skipped_status_finished": 94,
+      "skipped_status_retired": 2
+    },
+    "current_snapshot_picks_count": 7,
+    "open_predictions_count": 16,
+    "scored_sides_count": 24,
+    "ledger": {
+      "existing_open_before_merge": 13,
+      "current_snapshot_picks": 7,
+      "open_predictions_after_merge": 16,
+      "active_in_latest_snapshot": 7,
+      "not_in_latest_snapshot": 9
+    },
+    "level_counts": {
+      "itf": 16
+    },
+    "gender_counts": {
+      "men": 7,
+      "women": 9
+    }
   },
   "picks": [
     {
@@ -79,7 +141,7 @@
       "first_seen_at": "2026-06-11T08:24:31+00:00",
       "last_seen_at": "2026-06-11T08:24:31+00:00",
       "snapshot_count": 1,
-      "ledger_status": "active_in_latest_snapshot",
+      "ledger_status": "not_in_latest_snapshot",
       "first_odds": 1.541667,
       "first_tle_probability": 0.664083,
       "first_book_probability_devig": 0.602492,
@@ -161,7 +223,7 @@
       "first_seen_at": "2026-06-11T08:24:31+00:00",
       "last_seen_at": "2026-06-11T08:24:31+00:00",
       "snapshot_count": 1,
-      "ledger_status": "active_in_latest_snapshot",
+      "ledger_status": "not_in_latest_snapshot",
       "first_odds": 3.25,
       "first_tle_probability": 0.576988,
       "first_book_probability_devig": 0.285714,
@@ -270,7 +332,7 @@
       "first_seen_at": "2026-06-11T08:24:31+00:00",
       "last_seen_at": "2026-06-11T08:24:31+00:00",
       "snapshot_count": 1,
-      "ledger_status": "active_in_latest_snapshot",
+      "ledger_status": "not_in_latest_snapshot",
       "first_odds": 2.35,
       "first_tle_probability": 0.517819,
       "first_book_probability_devig": 0.394018,
@@ -352,7 +414,7 @@
       "first_seen_at": "2026-06-11T08:24:31+00:00",
       "last_seen_at": "2026-06-11T08:24:31+00:00",
       "snapshot_count": 1,
-      "ledger_status": "active_in_latest_snapshot",
+      "ledger_status": "not_in_latest_snapshot",
       "first_odds": 3.27,
       "first_tle_probability": 0.362728,
       "first_book_probability_devig": 0.278146,
@@ -437,7 +499,7 @@
       "first_seen_at": "2026-06-11T08:24:31+00:00",
       "last_seen_at": "2026-06-11T08:24:31+00:00",
       "snapshot_count": 1,
-      "ledger_status": "active_in_latest_snapshot",
+      "ledger_status": "not_in_latest_snapshot",
       "first_odds": 4.0,
       "first_tle_probability": 0.360812,
       "first_book_probability_devig": 0.232982,
@@ -543,7 +605,7 @@
       "first_seen_at": "2026-06-11T08:24:31+00:00",
       "last_seen_at": "2026-06-11T08:24:31+00:00",
       "snapshot_count": 1,
-      "ledger_status": "active_in_latest_snapshot",
+      "ledger_status": "not_in_latest_snapshot",
       "first_odds": 2.575556,
       "first_tle_probability": 0.415923,
       "first_book_probability_devig": 0.358783,
@@ -640,7 +702,7 @@
       "first_seen_at": "2026-06-11T08:24:31+00:00",
       "last_seen_at": "2026-06-11T08:24:31+00:00",
       "snapshot_count": 1,
-      "ledger_status": "active_in_latest_snapshot",
+      "ledger_status": "not_in_latest_snapshot",
       "first_odds": 2.396667,
       "first_tle_probability": 0.603874,
       "first_book_probability_devig": 0.387042,
@@ -731,7 +793,7 @@
       "first_seen_at": "2026-06-11T08:24:31+00:00",
       "last_seen_at": "2026-06-11T08:24:31+00:00",
       "snapshot_count": 1,
-      "ledger_status": "active_in_latest_snapshot",
+      "ledger_status": "not_in_latest_snapshot",
       "first_odds": 3.215,
       "first_tle_probability": 0.391421,
       "first_book_probability_devig": 0.28714,
@@ -776,12 +838,12 @@
       "away_player": "D. Chan",
       "home_tle_key": "men:sackmann:211727",
       "away_tle_key": "men:sackmann:211673",
-      "odds": 3.15,
+      "odds": 3.12,
       "odds_source": "clean_average",
-      "book_probability_devig": 0.293722,
+      "book_probability_devig": 0.290909,
       "tle_probability": 0.676303,
-      "tle_edge": 0.382581,
-      "tle_ev": 1.130354,
+      "tle_edge": 0.385394,
+      "tle_ev": 1.110065,
       "model": "itf_100_level_overall",
       "model_details": {
         "home_level_matches": 86,
@@ -790,40 +852,40 @@
         "away_level_elo": 1507.156,
         "home_resolve_method": "api_mapping",
         "away_resolve_method": "unique_surname_initial",
-        "home_odds": 3.15,
-        "away_odds": 1.31,
-        "overround": 0.080819,
+        "home_odds": 3.12,
+        "away_odds": 1.28,
+        "overround": 0.101763,
         "odds_details": {
           "book_pairs_total": 1,
           "book_pairs_valid": 1,
           "book_pairs_rejected_overround": 0,
           "books_used": [
-            "Superbet"
+            "Sbo"
           ],
           "home_book_odds": [
-            3.15
+            3.12
           ],
           "away_book_odds": [
-            1.31
+            1.28
           ]
         },
-        "minutes_until_start": 395.47
+        "minutes_until_start": 46.76
       },
       "settlement_status": "PENDING",
       "first_seen_at": "2026-06-11T08:24:31+00:00",
-      "last_seen_at": "2026-06-11T08:24:31+00:00",
-      "snapshot_count": 1,
+      "last_seen_at": "2026-06-11T14:13:14+00:00",
+      "snapshot_count": 2,
       "ledger_status": "active_in_latest_snapshot",
       "first_odds": 3.15,
       "first_tle_probability": 0.676303,
       "first_book_probability_devig": 0.293722,
       "first_tle_edge": 0.382581,
       "first_tle_ev": 1.130354,
-      "latest_odds": 3.15,
+      "latest_odds": 3.12,
       "latest_tle_probability": 0.676303,
-      "latest_book_probability_devig": 0.293722,
-      "latest_tle_edge": 0.382581,
-      "latest_tle_ev": 1.130354,
+      "latest_book_probability_devig": 0.290909,
+      "latest_tle_edge": 0.385394,
+      "latest_tle_ev": 1.110065,
       "settlement_reason": "not_finished",
       "settlement_odds": 3.15,
       "stake": 1.0,
@@ -839,9 +901,78 @@
       "api_event_time": "17:00"
     },
     {
+      "event_key": "12135764",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "K. Poling - D. Popko",
+      "selection": "D. Popko",
+      "opponent": "K. Poling",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "K. Poling",
+      "away_player": "D. Popko",
+      "home_tle_key": "men:sackmann:207202",
+      "away_tle_key": "men:sackmann:122078",
+      "odds": 1.66,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.558511,
+      "tle_probability": 0.862758,
+      "tle_edge": 0.304248,
+      "tle_ev": 0.432179,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 73,
+        "away_level_matches": 74,
+        "home_level_elo": 1469.681,
+        "away_level_elo": 1789.042,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 2.1,
+        "away_odds": 1.66,
+        "overround": 0.0786,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Superbet"
+          ],
+          "home_book_odds": [
+            2.1
+          ],
+          "away_book_odds": [
+            1.66
+          ]
+        },
+        "minutes_until_start": 46.76
+      },
+      "settlement_status": "PENDING",
+      "first_seen_at": "2026-06-11T14:13:14+00:00",
+      "last_seen_at": "2026-06-11T14:13:14+00:00",
+      "snapshot_count": 1,
+      "ledger_status": "active_in_latest_snapshot",
+      "first_odds": 1.66,
+      "first_tle_probability": 0.862758,
+      "first_book_probability_devig": 0.558511,
+      "first_tle_edge": 0.304248,
+      "first_tle_ev": 0.432179,
+      "latest_odds": 1.66,
+      "latest_tle_probability": 0.862758,
+      "latest_book_probability_devig": 0.558511,
+      "latest_tle_edge": 0.304248,
+      "latest_tle_ev": 0.432179
+    },
+    {
       "event_key": "12135512",
       "date": "2026-06-11",
-      "time": "17:30",
+      "time": "17:00",
       "tournament": "M25 Martos",
       "tournament_key": "7261",
       "round": "M25 Martos - 1/8-finals",
@@ -910,12 +1041,12 @@
             1.4
           ]
         },
-        "minutes_until_start": 425.47
+        "minutes_until_start": 46.76
       },
       "settlement_status": "PENDING",
       "first_seen_at": "2026-06-11T08:24:31+00:00",
-      "last_seen_at": "2026-06-11T08:24:31+00:00",
-      "snapshot_count": 1,
+      "last_seen_at": "2026-06-11T14:13:14+00:00",
+      "snapshot_count": 2,
       "ledger_status": "active_in_latest_snapshot",
       "first_odds": 1.3675,
       "first_tle_probability": 0.74666,
@@ -961,12 +1092,12 @@
       "away_player": "K. Miyoshi",
       "home_tle_key": "men:sackmann:212859",
       "away_tle_key": "men:sackmann:211501",
-      "odds": 3.15,
+      "odds": 3.3,
       "odds_source": "clean_average",
-      "book_probability_devig": 0.293722,
+      "book_probability_devig": 0.281046,
       "tle_probability": 0.396579,
-      "tle_edge": 0.102857,
-      "tle_ev": 0.249225,
+      "tle_edge": 0.115534,
+      "tle_ev": 0.308712,
       "model": "itf_100_level_overall",
       "model_details": {
         "home_level_matches": 9,
@@ -975,9 +1106,9 @@
         "away_level_elo": 1564.5,
         "home_resolve_method": "unique_surname_initial",
         "away_resolve_method": "api_mapping",
-        "home_odds": 3.15,
-        "away_odds": 1.31,
-        "overround": 0.080819,
+        "home_odds": 3.3,
+        "away_odds": 1.29,
+        "overround": 0.078224,
         "odds_details": {
           "book_pairs_total": 1,
           "book_pairs_valid": 1,
@@ -986,29 +1117,29 @@
             "Superbet"
           ],
           "home_book_odds": [
-            3.15
+            3.3
           ],
           "away_book_odds": [
-            1.31
+            1.29
           ]
         },
-        "minutes_until_start": 515.47
+        "minutes_until_start": 166.76
       },
       "settlement_status": "PENDING",
       "first_seen_at": "2026-06-11T08:24:31+00:00",
-      "last_seen_at": "2026-06-11T08:24:31+00:00",
-      "snapshot_count": 1,
+      "last_seen_at": "2026-06-11T14:13:14+00:00",
+      "snapshot_count": 2,
       "ledger_status": "active_in_latest_snapshot",
       "first_odds": 3.15,
       "first_tle_probability": 0.396579,
       "first_book_probability_devig": 0.293722,
       "first_tle_edge": 0.102857,
       "first_tle_ev": 0.249225,
-      "latest_odds": 3.15,
+      "latest_odds": 3.3,
       "latest_tle_probability": 0.396579,
-      "latest_book_probability_devig": 0.293722,
-      "latest_tle_edge": 0.102857,
-      "latest_tle_ev": 0.249225,
+      "latest_book_probability_devig": 0.281046,
+      "latest_tle_edge": 0.115534,
+      "latest_tle_ev": 0.308712,
       "settlement_reason": "not_finished",
       "settlement_odds": 3.15,
       "stake": 1.0,
@@ -1022,6 +1153,75 @@
       "api_second_player": "K. Miyoshi",
       "api_event_date": "2026-06-11",
       "api_event_time": "19:00"
+    },
+    {
+      "event_key": "12135697",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "O. Baris - Z. Velcz",
+      "selection": "Z. Velcz",
+      "opponent": "O. Baris",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "O. Baris",
+      "away_player": "Z. Velcz",
+      "home_tle_key": "men:sackmann:210028",
+      "away_tle_key": "men:sackmann:209852",
+      "odds": 2.81,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.329356,
+      "tle_probability": 0.386877,
+      "tle_edge": 0.057522,
+      "tle_ev": 0.087125,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 60,
+        "away_level_matches": 20,
+        "home_level_elo": 1618.323,
+        "away_level_elo": 1538.333,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 1.38,
+        "away_odds": 2.81,
+        "overround": 0.08051,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet"
+          ],
+          "home_book_odds": [
+            1.38
+          ],
+          "away_book_odds": [
+            2.81
+          ]
+        },
+        "minutes_until_start": 166.76
+      },
+      "settlement_status": "PENDING",
+      "first_seen_at": "2026-06-11T14:13:14+00:00",
+      "last_seen_at": "2026-06-11T14:13:14+00:00",
+      "snapshot_count": 1,
+      "ledger_status": "active_in_latest_snapshot",
+      "first_odds": 2.81,
+      "first_tle_probability": 0.386877,
+      "first_book_probability_devig": 0.329356,
+      "first_tle_edge": 0.057522,
+      "first_tle_ev": 0.087125,
+      "latest_odds": 2.81,
+      "latest_tle_probability": 0.386877,
+      "latest_book_probability_devig": 0.329356,
+      "latest_tle_edge": 0.057522,
+      "latest_tle_ev": 0.087125
     },
     {
       "event_key": "12135804",
@@ -1043,12 +1243,12 @@
       "away_player": "S. Gorzny",
       "home_tle_key": "men:sackmann:134329",
       "away_tle_key": "men:sackmann:210478",
-      "odds": 2.17,
+      "odds": 2.05,
       "odds_source": "clean_average",
-      "book_probability_devig": 0.425926,
+      "book_probability_devig": 0.448925,
       "tle_probability": 0.784243,
-      "tle_edge": 0.358317,
-      "tle_ev": 0.701807,
+      "tle_edge": 0.335318,
+      "tle_ev": 0.607698,
       "model": "itf_100_level_overall",
       "model_details": {
         "home_level_matches": 108,
@@ -1057,40 +1257,40 @@
         "away_level_elo": 1522.234,
         "home_resolve_method": "api_mapping",
         "away_resolve_method": "api_mapping",
-        "home_odds": 2.17,
-        "away_odds": 1.61,
-        "overround": 0.081948,
+        "home_odds": 2.05,
+        "away_odds": 1.67,
+        "overround": 0.086607,
         "odds_details": {
           "book_pairs_total": 1,
           "book_pairs_valid": 1,
           "book_pairs_rejected_overround": 0,
           "books_used": [
-            "Superbet"
+            "1xBet"
           ],
           "home_book_odds": [
-            2.17
+            2.05
           ],
           "away_book_odds": [
-            1.61
+            1.67
           ]
         },
-        "minutes_until_start": 635.47
+        "minutes_until_start": 286.76
       },
       "settlement_status": "PENDING",
       "first_seen_at": "2026-06-11T08:24:31+00:00",
-      "last_seen_at": "2026-06-11T08:24:31+00:00",
-      "snapshot_count": 1,
+      "last_seen_at": "2026-06-11T14:13:14+00:00",
+      "snapshot_count": 2,
       "ledger_status": "active_in_latest_snapshot",
       "first_odds": 2.17,
       "first_tle_probability": 0.784243,
       "first_book_probability_devig": 0.425926,
       "first_tle_edge": 0.358317,
       "first_tle_ev": 0.701807,
-      "latest_odds": 2.17,
+      "latest_odds": 2.05,
       "latest_tle_probability": 0.784243,
-      "latest_book_probability_devig": 0.425926,
-      "latest_tle_edge": 0.358317,
-      "latest_tle_ev": 0.701807,
+      "latest_book_probability_devig": 0.448925,
+      "latest_tle_edge": 0.335318,
+      "latest_tle_ev": 0.607698,
       "settlement_reason": "not_finished",
       "settlement_odds": 2.17,
       "stake": 1.0,
@@ -1104,6 +1304,75 @@
       "api_second_player": "S. Gorzny",
       "api_event_date": "2026-06-11",
       "api_event_time": "21:00"
+    },
+    {
+      "event_key": "12135729",
+      "date": "2026-06-11",
+      "time": "21:30",
+      "tournament": "W35 Decatur, IL",
+      "tournament_key": "12629",
+      "round": "W35 Decatur, IL - 1/8-finals",
+      "event_type": "Itf Women Singles",
+      "gender": "women",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "S. Yamalapalli - D. Plekhanova",
+      "selection": "D. Plekhanova",
+      "opponent": "S. Yamalapalli",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "S. Yamalapalli",
+      "away_player": "D. Plekhanova",
+      "home_tle_key": "women:sackmann:246481",
+      "away_tle_key": "women:sackmann:223203",
+      "odds": 1.91,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.480978,
+      "tle_probability": 0.57537,
+      "tle_edge": 0.094392,
+      "tle_ev": 0.098957,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 182,
+        "away_level_matches": 78,
+        "home_level_elo": 1632.213,
+        "away_level_elo": 1684.987,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 1.77,
+        "away_odds": 1.91,
+        "overround": 0.088532,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            1.77
+          ],
+          "away_book_odds": [
+            1.91
+          ]
+        },
+        "minutes_until_start": 316.76
+      },
+      "settlement_status": "PENDING",
+      "first_seen_at": "2026-06-11T14:13:14+00:00",
+      "last_seen_at": "2026-06-11T14:13:14+00:00",
+      "snapshot_count": 1,
+      "ledger_status": "active_in_latest_snapshot",
+      "first_odds": 1.91,
+      "first_tle_probability": 0.57537,
+      "first_book_probability_devig": 0.480978,
+      "first_tle_edge": 0.094392,
+      "first_tle_ev": 0.098957,
+      "latest_odds": 1.91,
+      "latest_tle_probability": 0.57537,
+      "latest_book_probability_devig": 0.480978,
+      "latest_tle_edge": 0.094392,
+      "latest_tle_ev": 0.098957
     },
     {
       "event_key": "12135801",
@@ -1162,7 +1431,7 @@
       "first_seen_at": "2026-06-11T08:24:31+00:00",
       "last_seen_at": "2026-06-11T08:24:31+00:00",
       "snapshot_count": 1,
-      "ledger_status": "active_in_latest_snapshot",
+      "ledger_status": "not_in_latest_snapshot",
       "first_odds": 4.0,
       "first_tle_probability": 0.3218,
       "first_book_probability_devig": 0.232246,
@@ -1186,6 +1455,1747 @@
       "api_second_player": "M. Souza",
       "api_event_date": "2026-06-11",
       "api_event_time": "22:30"
+    }
+  ],
+  "current_snapshot_picks": [
+    {
+      "event_key": "12135763",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "P. Marinkov - D. Chan",
+      "selection": "P. Marinkov",
+      "opponent": "D. Chan",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "P. Marinkov",
+      "away_player": "D. Chan",
+      "home_tle_key": "men:sackmann:211727",
+      "away_tle_key": "men:sackmann:211673",
+      "odds": 3.12,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.290909,
+      "tle_probability": 0.676303,
+      "tle_edge": 0.385394,
+      "tle_ev": 1.110065,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 86,
+        "away_level_matches": 11,
+        "home_level_elo": 1635.156,
+        "away_level_elo": 1507.156,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 3.12,
+        "away_odds": 1.28,
+        "overround": 0.101763,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            3.12
+          ],
+          "away_book_odds": [
+            1.28
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135804",
+      "date": "2026-06-11",
+      "time": "21:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "B. Ellis - S. Gorzny",
+      "selection": "B. Ellis",
+      "opponent": "S. Gorzny",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "B. Ellis",
+      "away_player": "S. Gorzny",
+      "home_tle_key": "men:sackmann:134329",
+      "away_tle_key": "men:sackmann:210478",
+      "odds": 2.05,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.448925,
+      "tle_probability": 0.784243,
+      "tle_edge": 0.335318,
+      "tle_ev": 0.607698,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 108,
+        "away_level_matches": 20,
+        "home_level_elo": 1746.428,
+        "away_level_elo": 1522.234,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 2.05,
+        "away_odds": 1.67,
+        "overround": 0.086607,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet"
+          ],
+          "home_book_odds": [
+            2.05
+          ],
+          "away_book_odds": [
+            1.67
+          ]
+        },
+        "minutes_until_start": 286.76
+      }
+    },
+    {
+      "event_key": "12135764",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "K. Poling - D. Popko",
+      "selection": "D. Popko",
+      "opponent": "K. Poling",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "K. Poling",
+      "away_player": "D. Popko",
+      "home_tle_key": "men:sackmann:207202",
+      "away_tle_key": "men:sackmann:122078",
+      "odds": 1.66,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.558511,
+      "tle_probability": 0.862758,
+      "tle_edge": 0.304248,
+      "tle_ev": 0.432179,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 73,
+        "away_level_matches": 74,
+        "home_level_elo": 1469.681,
+        "away_level_elo": 1789.042,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 2.1,
+        "away_odds": 1.66,
+        "overround": 0.0786,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Superbet"
+          ],
+          "home_book_odds": [
+            2.1
+          ],
+          "away_book_odds": [
+            1.66
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135792",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "M. Farzam - K. Miyoshi",
+      "selection": "M. Farzam",
+      "opponent": "K. Miyoshi",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "M. Farzam",
+      "away_player": "K. Miyoshi",
+      "home_tle_key": "men:sackmann:212859",
+      "away_tle_key": "men:sackmann:211501",
+      "odds": 3.3,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.281046,
+      "tle_probability": 0.396579,
+      "tle_edge": 0.115534,
+      "tle_ev": 0.308712,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 9,
+        "away_level_matches": 48,
+        "home_level_elo": 1491.584,
+        "away_level_elo": 1564.5,
+        "home_resolve_method": "unique_surname_initial",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 3.3,
+        "away_odds": 1.29,
+        "overround": 0.078224,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Superbet"
+          ],
+          "home_book_odds": [
+            3.3
+          ],
+          "away_book_odds": [
+            1.29
+          ]
+        },
+        "minutes_until_start": 166.76
+      }
+    },
+    {
+      "event_key": "12135729",
+      "date": "2026-06-11",
+      "time": "21:30",
+      "tournament": "W35 Decatur, IL",
+      "tournament_key": "12629",
+      "round": "W35 Decatur, IL - 1/8-finals",
+      "event_type": "Itf Women Singles",
+      "gender": "women",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "S. Yamalapalli - D. Plekhanova",
+      "selection": "D. Plekhanova",
+      "opponent": "S. Yamalapalli",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "S. Yamalapalli",
+      "away_player": "D. Plekhanova",
+      "home_tle_key": "women:sackmann:246481",
+      "away_tle_key": "women:sackmann:223203",
+      "odds": 1.91,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.480978,
+      "tle_probability": 0.57537,
+      "tle_edge": 0.094392,
+      "tle_ev": 0.098957,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 182,
+        "away_level_matches": 78,
+        "home_level_elo": 1632.213,
+        "away_level_elo": 1684.987,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 1.77,
+        "away_odds": 1.91,
+        "overround": 0.088532,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            1.77
+          ],
+          "away_book_odds": [
+            1.91
+          ]
+        },
+        "minutes_until_start": 316.76
+      }
+    },
+    {
+      "event_key": "12135512",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Martos",
+      "tournament_key": "7261",
+      "round": "M25 Martos - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "C. Hernandez - J. Domingues",
+      "selection": "J. Domingues",
+      "opponent": "C. Hernandez",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "C. Hernandez",
+      "away_player": "J. Domingues",
+      "home_tle_key": "men:sackmann:208264",
+      "away_tle_key": "men:sackmann:106249",
+      "odds": 1.3675,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.674308,
+      "tle_probability": 0.74666,
+      "tle_edge": 0.072352,
+      "tle_ev": 0.021058,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 65,
+        "away_level_matches": 77,
+        "home_level_elo": 1489.139,
+        "away_level_elo": 1676.907,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 2.83125,
+        "away_odds": 1.3675,
+        "overround": 0.084462,
+        "odds_details": {
+          "book_pairs_total": 8,
+          "book_pairs_valid": 8,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet",
+            "Betfair",
+            "Marathon",
+            "Pncl",
+            "Sbo",
+            "Superbet",
+            "Unibet",
+            "bet365"
+          ],
+          "home_book_odds": [
+            2.81,
+            3.0,
+            2.8,
+            2.98,
+            2.66,
+            2.75,
+            2.9,
+            2.75
+          ],
+          "away_book_odds": [
+            1.38,
+            1.33,
+            1.37,
+            1.37,
+            1.33,
+            1.4,
+            1.36,
+            1.4
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135697",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "O. Baris - Z. Velcz",
+      "selection": "Z. Velcz",
+      "opponent": "O. Baris",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "O. Baris",
+      "away_player": "Z. Velcz",
+      "home_tle_key": "men:sackmann:210028",
+      "away_tle_key": "men:sackmann:209852",
+      "odds": 2.81,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.329356,
+      "tle_probability": 0.386877,
+      "tle_edge": 0.057522,
+      "tle_ev": 0.087125,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 60,
+        "away_level_matches": 20,
+        "home_level_elo": 1618.323,
+        "away_level_elo": 1538.333,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 1.38,
+        "away_odds": 2.81,
+        "overround": 0.08051,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet"
+          ],
+          "home_book_odds": [
+            1.38
+          ],
+          "away_book_odds": [
+            2.81
+          ]
+        },
+        "minutes_until_start": 166.76
+      }
+    }
+  ],
+  "all_scored_sides": [
+    {
+      "event_key": "12135763",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "P. Marinkov - D. Chan",
+      "selection": "P. Marinkov",
+      "opponent": "D. Chan",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "P. Marinkov",
+      "away_player": "D. Chan",
+      "home_tle_key": "men:sackmann:211727",
+      "away_tle_key": "men:sackmann:211673",
+      "odds": 3.12,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.290909,
+      "tle_probability": 0.676303,
+      "tle_edge": 0.385394,
+      "tle_ev": 1.110065,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 86,
+        "away_level_matches": 11,
+        "home_level_elo": 1635.156,
+        "away_level_elo": 1507.156,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 3.12,
+        "away_odds": 1.28,
+        "overround": 0.101763,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            3.12
+          ],
+          "away_book_odds": [
+            1.28
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135804",
+      "date": "2026-06-11",
+      "time": "21:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "B. Ellis - S. Gorzny",
+      "selection": "B. Ellis",
+      "opponent": "S. Gorzny",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "B. Ellis",
+      "away_player": "S. Gorzny",
+      "home_tle_key": "men:sackmann:134329",
+      "away_tle_key": "men:sackmann:210478",
+      "odds": 2.05,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.448925,
+      "tle_probability": 0.784243,
+      "tle_edge": 0.335318,
+      "tle_ev": 0.607698,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 108,
+        "away_level_matches": 20,
+        "home_level_elo": 1746.428,
+        "away_level_elo": 1522.234,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 2.05,
+        "away_odds": 1.67,
+        "overround": 0.086607,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet"
+          ],
+          "home_book_odds": [
+            2.05
+          ],
+          "away_book_odds": [
+            1.67
+          ]
+        },
+        "minutes_until_start": 286.76
+      }
+    },
+    {
+      "event_key": "12135764",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "K. Poling - D. Popko",
+      "selection": "D. Popko",
+      "opponent": "K. Poling",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "K. Poling",
+      "away_player": "D. Popko",
+      "home_tle_key": "men:sackmann:207202",
+      "away_tle_key": "men:sackmann:122078",
+      "odds": 1.66,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.558511,
+      "tle_probability": 0.862758,
+      "tle_edge": 0.304248,
+      "tle_ev": 0.432179,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 73,
+        "away_level_matches": 74,
+        "home_level_elo": 1469.681,
+        "away_level_elo": 1789.042,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 2.1,
+        "away_odds": 1.66,
+        "overround": 0.0786,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Superbet"
+          ],
+          "home_book_odds": [
+            2.1
+          ],
+          "away_book_odds": [
+            1.66
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135792",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "M. Farzam - K. Miyoshi",
+      "selection": "M. Farzam",
+      "opponent": "K. Miyoshi",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "M. Farzam",
+      "away_player": "K. Miyoshi",
+      "home_tle_key": "men:sackmann:212859",
+      "away_tle_key": "men:sackmann:211501",
+      "odds": 3.3,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.281046,
+      "tle_probability": 0.396579,
+      "tle_edge": 0.115534,
+      "tle_ev": 0.308712,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 9,
+        "away_level_matches": 48,
+        "home_level_elo": 1491.584,
+        "away_level_elo": 1564.5,
+        "home_resolve_method": "unique_surname_initial",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 3.3,
+        "away_odds": 1.29,
+        "overround": 0.078224,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Superbet"
+          ],
+          "home_book_odds": [
+            3.3
+          ],
+          "away_book_odds": [
+            1.29
+          ]
+        },
+        "minutes_until_start": 166.76
+      }
+    },
+    {
+      "event_key": "12135729",
+      "date": "2026-06-11",
+      "time": "21:30",
+      "tournament": "W35 Decatur, IL",
+      "tournament_key": "12629",
+      "round": "W35 Decatur, IL - 1/8-finals",
+      "event_type": "Itf Women Singles",
+      "gender": "women",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "S. Yamalapalli - D. Plekhanova",
+      "selection": "D. Plekhanova",
+      "opponent": "S. Yamalapalli",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "S. Yamalapalli",
+      "away_player": "D. Plekhanova",
+      "home_tle_key": "women:sackmann:246481",
+      "away_tle_key": "women:sackmann:223203",
+      "odds": 1.91,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.480978,
+      "tle_probability": 0.57537,
+      "tle_edge": 0.094392,
+      "tle_ev": 0.098957,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 182,
+        "away_level_matches": 78,
+        "home_level_elo": 1632.213,
+        "away_level_elo": 1684.987,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 1.77,
+        "away_odds": 1.91,
+        "overround": 0.088532,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            1.77
+          ],
+          "away_book_odds": [
+            1.91
+          ]
+        },
+        "minutes_until_start": 316.76
+      }
+    },
+    {
+      "event_key": "12135512",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Martos",
+      "tournament_key": "7261",
+      "round": "M25 Martos - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "C. Hernandez - J. Domingues",
+      "selection": "J. Domingues",
+      "opponent": "C. Hernandez",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "C. Hernandez",
+      "away_player": "J. Domingues",
+      "home_tle_key": "men:sackmann:208264",
+      "away_tle_key": "men:sackmann:106249",
+      "odds": 1.3675,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.674308,
+      "tle_probability": 0.74666,
+      "tle_edge": 0.072352,
+      "tle_ev": 0.021058,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 65,
+        "away_level_matches": 77,
+        "home_level_elo": 1489.139,
+        "away_level_elo": 1676.907,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 2.83125,
+        "away_odds": 1.3675,
+        "overround": 0.084462,
+        "odds_details": {
+          "book_pairs_total": 8,
+          "book_pairs_valid": 8,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet",
+            "Betfair",
+            "Marathon",
+            "Pncl",
+            "Sbo",
+            "Superbet",
+            "Unibet",
+            "bet365"
+          ],
+          "home_book_odds": [
+            2.81,
+            3.0,
+            2.8,
+            2.98,
+            2.66,
+            2.75,
+            2.9,
+            2.75
+          ],
+          "away_book_odds": [
+            1.38,
+            1.33,
+            1.37,
+            1.37,
+            1.33,
+            1.4,
+            1.36,
+            1.4
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135697",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "O. Baris - Z. Velcz",
+      "selection": "Z. Velcz",
+      "opponent": "O. Baris",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "O. Baris",
+      "away_player": "Z. Velcz",
+      "home_tle_key": "men:sackmann:210028",
+      "away_tle_key": "men:sackmann:209852",
+      "odds": 2.81,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.329356,
+      "tle_probability": 0.386877,
+      "tle_edge": 0.057522,
+      "tle_ev": 0.087125,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 60,
+        "away_level_matches": 20,
+        "home_level_elo": 1618.323,
+        "away_level_elo": 1538.333,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 1.38,
+        "away_odds": 2.81,
+        "overround": 0.08051,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet"
+          ],
+          "home_book_odds": [
+            1.38
+          ],
+          "away_book_odds": [
+            2.81
+          ]
+        },
+        "minutes_until_start": 166.76
+      }
+    },
+    {
+      "event_key": "12135786",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "C. Woestendick - L. Marionneau",
+      "selection": "C. Woestendick",
+      "opponent": "L. Marionneau",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "C. Woestendick",
+      "away_player": "L. Marionneau",
+      "home_tle_key": "men:sackmann:212857",
+      "away_tle_key": "men:sackmann:212841",
+      "odds": 1.83,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.5,
+      "tle_probability": 0.542018,
+      "tle_edge": 0.042018,
+      "tle_ev": -0.008107,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 18,
+        "away_level_matches": 31,
+        "home_level_elo": 1517.052,
+        "away_level_elo": 1487.786,
+        "home_resolve_method": "unique_surname_initial",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 1.83,
+        "away_odds": 1.83,
+        "overround": 0.092896,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "bet365"
+          ],
+          "home_book_odds": [
+            1.83
+          ],
+          "away_book_odds": [
+            1.83
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135699",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Martos",
+      "tournament_key": "7261",
+      "round": "M25 Martos - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "E. Hudd - B. Munk Mesa",
+      "selection": "B. Munk Mesa",
+      "opponent": "E. Hudd",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "E. Hudd",
+      "away_player": "B. Munk Mesa",
+      "home_tle_key": "men:sackmann:209163",
+      "away_tle_key": "men:sackmann:212827",
+      "odds": 3.63,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.25,
+      "tle_probability": 0.288591,
+      "tle_edge": 0.038591,
+      "tle_ev": 0.047584,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 137,
+        "away_level_matches": 16,
+        "home_level_elo": 1653.8,
+        "away_level_elo": 1497.065,
+        "home_resolve_method": "unique_surname_initial",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 1.21,
+        "away_odds": 3.63,
+        "overround": 0.101928,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            1.21
+          ],
+          "away_book_odds": [
+            3.63
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135737",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "W35 Nice + H (France)",
+      "tournament_key": "13965",
+      "round": "W35 Nice + H - 1/8-finals",
+      "event_type": "Itf Women Singles",
+      "gender": "women",
+      "tour_level": "itf",
+      "surface": "unknown",
+      "match": "T. Pieri - D. Martynov",
+      "selection": "D. Martynov",
+      "opponent": "T. Pieri",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "T. Pieri",
+      "away_player": "D. Martynov",
+      "home_tle_key": "women:sackmann:214301",
+      "away_tle_key": "women:sackmann:221157",
+      "odds": 2.44,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.375959,
+      "tle_probability": 0.410303,
+      "tle_edge": 0.034344,
+      "tle_ev": 0.00114,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 183,
+        "away_level_matches": 159,
+        "home_level_elo": 1617.517,
+        "away_level_elo": 1554.508,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 1.47,
+        "away_odds": 2.44,
+        "overround": 0.090108,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            1.47
+          ],
+          "away_book_odds": [
+            2.44
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135793",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "W. Manning - E. Aguiard",
+      "selection": "E. Aguiard",
+      "opponent": "W. Manning",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "W. Manning",
+      "away_player": "E. Aguiard",
+      "home_tle_key": "men:sackmann:213152",
+      "away_tle_key": "men:sackmann:212174",
+      "odds": 1.26,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.734177,
+      "tle_probability": 0.75008,
+      "tle_edge": 0.015902,
+      "tle_ev": -0.0549,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 6,
+        "away_level_matches": 47,
+        "home_level_elo": 1452.359,
+        "away_level_elo": 1643.281,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 3.48,
+        "away_odds": 1.26,
+        "overround": 0.081007,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet"
+          ],
+          "home_book_odds": [
+            3.48
+          ],
+          "away_book_odds": [
+            1.26
+          ]
+        },
+        "minutes_until_start": 166.76
+      }
+    },
+    {
+      "event_key": "12135781",
+      "date": "2026-06-11",
+      "time": "18:05",
+      "tournament": "W35 Decatur, IL",
+      "tournament_key": "12629",
+      "round": "W35 Decatur, IL - 1/8-finals",
+      "event_type": "Itf Women Singles",
+      "gender": "women",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "Z. Pawlikowska - J. Brown",
+      "selection": "J. Brown",
+      "opponent": "Z. Pawlikowska",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "Z. Pawlikowska",
+      "away_player": "J. Brown",
+      "home_tle_key": "women:sackmann:264187",
+      "away_tle_key": "women:sackmann:222035",
+      "odds": 2.88,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.317536,
+      "tle_probability": 0.324618,
+      "tle_edge": 0.007082,
+      "tle_ev": -0.065101,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 149,
+        "away_level_matches": 19,
+        "home_level_elo": 1607.191,
+        "away_level_elo": 1479.92,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 1.34,
+        "away_odds": 2.88,
+        "overround": 0.093491,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            1.34
+          ],
+          "away_book_odds": [
+            2.88
+          ]
+        },
+        "minutes_until_start": 111.76
+      }
+    },
+    {
+      "event_key": "12135781",
+      "date": "2026-06-11",
+      "time": "18:05",
+      "tournament": "W35 Decatur, IL",
+      "tournament_key": "12629",
+      "round": "W35 Decatur, IL - 1/8-finals",
+      "event_type": "Itf Women Singles",
+      "gender": "women",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "Z. Pawlikowska - J. Brown",
+      "selection": "Z. Pawlikowska",
+      "opponent": "J. Brown",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "Z. Pawlikowska",
+      "away_player": "J. Brown",
+      "home_tle_key": "women:sackmann:264187",
+      "away_tle_key": "women:sackmann:222035",
+      "odds": 1.34,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.682464,
+      "tle_probability": 0.675382,
+      "tle_edge": -0.007082,
+      "tle_ev": -0.094988,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 149,
+        "away_level_matches": 19,
+        "home_level_elo": 1607.191,
+        "away_level_elo": 1479.92,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 1.34,
+        "away_odds": 2.88,
+        "overround": 0.093491,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            1.34
+          ],
+          "away_book_odds": [
+            2.88
+          ]
+        },
+        "minutes_until_start": 111.76
+      }
+    },
+    {
+      "event_key": "12135793",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "W. Manning - E. Aguiard",
+      "selection": "W. Manning",
+      "opponent": "E. Aguiard",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "W. Manning",
+      "away_player": "E. Aguiard",
+      "home_tle_key": "men:sackmann:213152",
+      "away_tle_key": "men:sackmann:212174",
+      "odds": 3.48,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.265823,
+      "tle_probability": 0.24992,
+      "tle_edge": -0.015902,
+      "tle_ev": -0.130277,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 6,
+        "away_level_matches": 47,
+        "home_level_elo": 1452.359,
+        "away_level_elo": 1643.281,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 3.48,
+        "away_odds": 1.26,
+        "overround": 0.081007,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet"
+          ],
+          "home_book_odds": [
+            3.48
+          ],
+          "away_book_odds": [
+            1.26
+          ]
+        },
+        "minutes_until_start": 166.76
+      }
+    },
+    {
+      "event_key": "12135737",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "W35 Nice + H (France)",
+      "tournament_key": "13965",
+      "round": "W35 Nice + H - 1/8-finals",
+      "event_type": "Itf Women Singles",
+      "gender": "women",
+      "tour_level": "itf",
+      "surface": "unknown",
+      "match": "T. Pieri - D. Martynov",
+      "selection": "T. Pieri",
+      "opponent": "D. Martynov",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "T. Pieri",
+      "away_player": "D. Martynov",
+      "home_tle_key": "women:sackmann:214301",
+      "away_tle_key": "women:sackmann:221157",
+      "odds": 1.47,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.624041,
+      "tle_probability": 0.589697,
+      "tle_edge": -0.034344,
+      "tle_ev": -0.133146,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 183,
+        "away_level_matches": 159,
+        "home_level_elo": 1617.517,
+        "away_level_elo": 1554.508,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 1.47,
+        "away_odds": 2.44,
+        "overround": 0.090108,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            1.47
+          ],
+          "away_book_odds": [
+            2.44
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135699",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Martos",
+      "tournament_key": "7261",
+      "round": "M25 Martos - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "E. Hudd - B. Munk Mesa",
+      "selection": "E. Hudd",
+      "opponent": "B. Munk Mesa",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "E. Hudd",
+      "away_player": "B. Munk Mesa",
+      "home_tle_key": "men:sackmann:209163",
+      "away_tle_key": "men:sackmann:212827",
+      "odds": 1.21,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.75,
+      "tle_probability": 0.711409,
+      "tle_edge": -0.038591,
+      "tle_ev": -0.139195,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 137,
+        "away_level_matches": 16,
+        "home_level_elo": 1653.8,
+        "away_level_elo": 1497.065,
+        "home_resolve_method": "unique_surname_initial",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 1.21,
+        "away_odds": 3.63,
+        "overround": 0.101928,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            1.21
+          ],
+          "away_book_odds": [
+            3.63
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135786",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "C. Woestendick - L. Marionneau",
+      "selection": "L. Marionneau",
+      "opponent": "C. Woestendick",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "C. Woestendick",
+      "away_player": "L. Marionneau",
+      "home_tle_key": "men:sackmann:212857",
+      "away_tle_key": "men:sackmann:212841",
+      "odds": 1.83,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.5,
+      "tle_probability": 0.457982,
+      "tle_edge": -0.042018,
+      "tle_ev": -0.161893,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 18,
+        "away_level_matches": 31,
+        "home_level_elo": 1517.052,
+        "away_level_elo": 1487.786,
+        "home_resolve_method": "unique_surname_initial",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 1.83,
+        "away_odds": 1.83,
+        "overround": 0.092896,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "bet365"
+          ],
+          "home_book_odds": [
+            1.83
+          ],
+          "away_book_odds": [
+            1.83
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135697",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "O. Baris - Z. Velcz",
+      "selection": "O. Baris",
+      "opponent": "Z. Velcz",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "O. Baris",
+      "away_player": "Z. Velcz",
+      "home_tle_key": "men:sackmann:210028",
+      "away_tle_key": "men:sackmann:209852",
+      "odds": 1.38,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.670644,
+      "tle_probability": 0.613123,
+      "tle_edge": -0.057522,
+      "tle_ev": -0.153891,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 60,
+        "away_level_matches": 20,
+        "home_level_elo": 1618.323,
+        "away_level_elo": 1538.333,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 1.38,
+        "away_odds": 2.81,
+        "overround": 0.08051,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet"
+          ],
+          "home_book_odds": [
+            1.38
+          ],
+          "away_book_odds": [
+            2.81
+          ]
+        },
+        "minutes_until_start": 166.76
+      }
+    },
+    {
+      "event_key": "12135512",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Martos",
+      "tournament_key": "7261",
+      "round": "M25 Martos - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "C. Hernandez - J. Domingues",
+      "selection": "C. Hernandez",
+      "opponent": "J. Domingues",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "C. Hernandez",
+      "away_player": "J. Domingues",
+      "home_tle_key": "men:sackmann:208264",
+      "away_tle_key": "men:sackmann:106249",
+      "odds": 2.83125,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.325692,
+      "tle_probability": 0.25334,
+      "tle_edge": -0.072352,
+      "tle_ev": -0.282731,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 65,
+        "away_level_matches": 77,
+        "home_level_elo": 1489.139,
+        "away_level_elo": 1676.907,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 2.83125,
+        "away_odds": 1.3675,
+        "overround": 0.084462,
+        "odds_details": {
+          "book_pairs_total": 8,
+          "book_pairs_valid": 8,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet",
+            "Betfair",
+            "Marathon",
+            "Pncl",
+            "Sbo",
+            "Superbet",
+            "Unibet",
+            "bet365"
+          ],
+          "home_book_odds": [
+            2.81,
+            3.0,
+            2.8,
+            2.98,
+            2.66,
+            2.75,
+            2.9,
+            2.75
+          ],
+          "away_book_odds": [
+            1.38,
+            1.33,
+            1.37,
+            1.37,
+            1.33,
+            1.4,
+            1.36,
+            1.4
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135729",
+      "date": "2026-06-11",
+      "time": "21:30",
+      "tournament": "W35 Decatur, IL",
+      "tournament_key": "12629",
+      "round": "W35 Decatur, IL - 1/8-finals",
+      "event_type": "Itf Women Singles",
+      "gender": "women",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "S. Yamalapalli - D. Plekhanova",
+      "selection": "S. Yamalapalli",
+      "opponent": "D. Plekhanova",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "S. Yamalapalli",
+      "away_player": "D. Plekhanova",
+      "home_tle_key": "women:sackmann:246481",
+      "away_tle_key": "women:sackmann:223203",
+      "odds": 1.77,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.519022,
+      "tle_probability": 0.42463,
+      "tle_edge": -0.094392,
+      "tle_ev": -0.248405,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 182,
+        "away_level_matches": 78,
+        "home_level_elo": 1632.213,
+        "away_level_elo": 1684.987,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 1.77,
+        "away_odds": 1.91,
+        "overround": 0.088532,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            1.77
+          ],
+          "away_book_odds": [
+            1.91
+          ]
+        },
+        "minutes_until_start": 316.76
+      }
+    },
+    {
+      "event_key": "12135792",
+      "date": "2026-06-11",
+      "time": "19:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "M. Farzam - K. Miyoshi",
+      "selection": "K. Miyoshi",
+      "opponent": "M. Farzam",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "M. Farzam",
+      "away_player": "K. Miyoshi",
+      "home_tle_key": "men:sackmann:212859",
+      "away_tle_key": "men:sackmann:211501",
+      "odds": 1.29,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.718954,
+      "tle_probability": 0.603421,
+      "tle_edge": -0.115534,
+      "tle_ev": -0.221587,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 9,
+        "away_level_matches": 48,
+        "home_level_elo": 1491.584,
+        "away_level_elo": 1564.5,
+        "home_resolve_method": "unique_surname_initial",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 3.3,
+        "away_odds": 1.29,
+        "overround": 0.078224,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Superbet"
+          ],
+          "home_book_odds": [
+            3.3
+          ],
+          "away_book_odds": [
+            1.29
+          ]
+        },
+        "minutes_until_start": 166.76
+      }
+    },
+    {
+      "event_key": "12135764",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "K. Poling - D. Popko",
+      "selection": "K. Poling",
+      "opponent": "D. Popko",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "K. Poling",
+      "away_player": "D. Popko",
+      "home_tle_key": "men:sackmann:207202",
+      "away_tle_key": "men:sackmann:122078",
+      "odds": 2.1,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.441489,
+      "tle_probability": 0.137242,
+      "tle_edge": -0.304248,
+      "tle_ev": -0.711792,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 73,
+        "away_level_matches": 74,
+        "home_level_elo": 1469.681,
+        "away_level_elo": 1789.042,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 2.1,
+        "away_odds": 1.66,
+        "overround": 0.0786,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Superbet"
+          ],
+          "home_book_odds": [
+            2.1
+          ],
+          "away_book_odds": [
+            1.66
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
+    },
+    {
+      "event_key": "12135804",
+      "date": "2026-06-11",
+      "time": "21:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "B. Ellis - S. Gorzny",
+      "selection": "S. Gorzny",
+      "opponent": "B. Ellis",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "B. Ellis",
+      "away_player": "S. Gorzny",
+      "home_tle_key": "men:sackmann:134329",
+      "away_tle_key": "men:sackmann:210478",
+      "odds": 1.67,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.551075,
+      "tle_probability": 0.215757,
+      "tle_edge": -0.335318,
+      "tle_ev": -0.639686,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 108,
+        "away_level_matches": 20,
+        "home_level_elo": 1746.428,
+        "away_level_elo": 1522.234,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 2.05,
+        "away_odds": 1.67,
+        "overround": 0.086607,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet"
+          ],
+          "home_book_odds": [
+            2.05
+          ],
+          "away_book_odds": [
+            1.67
+          ]
+        },
+        "minutes_until_start": 286.76
+      }
+    },
+    {
+      "event_key": "12135763",
+      "date": "2026-06-11",
+      "time": "17:00",
+      "tournament": "M25 Wichita, KS",
+      "tournament_key": "4195",
+      "round": "M25 Wichita, KS - 1/8-finals",
+      "event_type": "Itf Men Singles",
+      "gender": "men",
+      "tour_level": "itf",
+      "surface": "hard",
+      "match": "P. Marinkov - D. Chan",
+      "selection": "D. Chan",
+      "opponent": "P. Marinkov",
+      "selected_side": "Away",
+      "selected_player_side": "player_2",
+      "home_player": "P. Marinkov",
+      "away_player": "D. Chan",
+      "home_tle_key": "men:sackmann:211727",
+      "away_tle_key": "men:sackmann:211673",
+      "odds": 1.28,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.709091,
+      "tle_probability": 0.323697,
+      "tle_edge": -0.385394,
+      "tle_ev": -0.585668,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 86,
+        "away_level_matches": 11,
+        "home_level_elo": 1635.156,
+        "away_level_elo": 1507.156,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "unique_surname_initial",
+        "home_odds": 3.12,
+        "away_odds": 1.28,
+        "overround": 0.101763,
+        "odds_details": {
+          "book_pairs_total": 1,
+          "book_pairs_valid": 1,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "Sbo"
+          ],
+          "home_book_odds": [
+            3.12
+          ],
+          "away_book_odds": [
+            1.28
+          ]
+        },
+        "minutes_until_start": 46.76
+      }
     }
   ]
 }
