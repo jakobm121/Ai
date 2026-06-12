@@ -33,20 +33,22 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
         run: |
           python ai_tle_settle_predictions.py \
-            --picks data/tle/predictions/ai_tle_predictions_latest.json \
-            --output-dir data/tle/settlement \
+            --results data/tle/predictions/ai_tle_results.json \
+            --predictions data/tle/predictions/ai_tle_predictions_latest.json \
+            --predictions-table data/tle/predictions/ai_tle_predictions_table.md \
+            --results-table data/tle/predictions/ai_tle_results_table.md \
             --timezone Europe/Ljubljana
 
-      - name: Show settlement
+      - name: Show all results table
         run: |
-          cat data/tle/settlement/tle_scanner_settlement_latest.md || true
+          cat data/tle/predictions/ai_tle_results_table.md || true
 
-      - name: Commit settlement and updated predictions
+      - name: Commit settled results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/tle/predictions data/tle/settlement
+          git add data/tle/predictions
 
           if git diff --cached --quiet; then
             echo "No settlement changes."
