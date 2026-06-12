@@ -1,12 +1,12 @@
 # AI TLE Results
 
-Generated: `2026-06-12T22:08:41+00:00`
+Generated: `2026-06-12T23:30:27+00:00`
 Total picks: `15`
-Settled bets: `13`
-Pending: `1`
-Profit: `5.484855`
-ROI: `42.19%`
-Hit rate: `53.85%`
+Settled bets: `14`
+Pending: `0`
+Profit: `4.484855`
+ROI: `32.03%`
+Hit rate: `50.00%`
 
 | # | Date | Time | Level | Match | Pick | Odds | Status | Profit | Edge | EV | Winner | Score | Reason |
 |---:|---|---|---|---|---|---:|---|---:|---:|---:|---|---|---|
@@ -24,4 +24,4 @@ Hit rate: `53.85%`
 | 12 | 2026-06-12 | 19:00 | challenger | N. Kicker - F. Coria | F. Coria | 2.397 | VOID | 0.0 | 25.20% | 53.84% | First Player | 1 - 0 | void_status |
 | 13 | 2026-06-12 | 19:30 | itf | Z. Pawlikowska - P. Charney | Z. Pawlikowska | 2.964286 | WIN | 1.964286 | 28.48% | 77.12% | First Player | 2 - 1 | settled |
 | 14 | 2026-06-12 | 20:15 | challenger | F. Romano - J. Pinnington Jones | F. Romano | 2.966364 | WIN | 1.966364 | 8.03% | 16.94% | First Player | 2 - 1 | settled |
-| 15 | 2026-06-12 | 22:00 | itf | L. Fullana - C. Alves | L. Fullana | 2.765556 | PENDING |  | 20.33% | 48.62% |  | 0 - 0 | not_finished |
+| 15 | 2026-06-12 | 22:00 | itf | L. Fullana - C. Alves | L. Fullana | 2.765556 | LOSS | -1.0 | 20.33% | 48.62% | Second Player | 0 - 2 | settled |

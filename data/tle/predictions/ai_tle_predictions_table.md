@@ -1,9 +1,8 @@
 # AI TLE Active Predictions
 
-Generated: `2026-06-12T22:08:41+00:00`
-Active predictions: `1`
+Generated: `2026-06-12T23:30:27+00:00`
+Active predictions: `0`
 Results ledger: `data/tle/predictions/ai_tle_results.json`
 
 | # | Date | Time | Level | Match | Pick | Odds | TLE % | Book % | Edge | EV | Status |
 |---:|---|---|---|---|---|---:|---:|---:|---:|---:|---|
-| 1 | 2026-06-12 | 22:00 | itf | L. Fullana - C. Alves | L. Fullana | 2.765556 | 53.74% | 33.41% | 20.33% | 48.62% | PENDING |
