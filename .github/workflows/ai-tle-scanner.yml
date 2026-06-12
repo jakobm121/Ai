@@ -58,12 +58,14 @@ jobs:
             --min-overround -0.03 \
             --max-overround 0.18 \
             --max-book-deviation 0.35 \
+            --min-book-pairs 3 \
+            --allowed-resolve-methods "api_mapping,exact_name" \
             --min-start-minutes "${{ inputs.min_start_minutes || '30' }}" \
             --min-edge "${{ inputs.min_edge || '0.05' }}" \
             --min-ev "${{ inputs.min_ev || '0.00' }}" \
             --levels "${{ inputs.levels || 'challenger,itf,atp_wta,grand_slam' }}"
 
-      - name: Show predictions table
+      - name: Show active predictions table
         run: |
           cat data/tle/predictions/ai_tle_predictions_table.md || true
 
