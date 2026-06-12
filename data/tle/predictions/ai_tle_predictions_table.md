@@ -1,7 +1,7 @@
 # AI TLE Predictions
 
-Generated: `2026-06-12T11:08:59+00:00`
-Open predictions: `37`
+Generated: `2026-06-12T11:42:19+00:00`
+Open predictions: `40`
 
 | # | Date | Time | Level | Match | Pick | Odds | TLE % | Book % | Edge | EV | Status |
 |---:|---|---|---|---|---|---:|---:|---:|---:|---:|---|
@@ -31,14 +31,17 @@ Open predictions: `37`
 | 24 | 2026-06-12 | 14:00 | itf | A. Prisacariu - C. Gennaro | C. Gennaro | 1.938889 | 53.09% | 47.74% | 5.36% | 2.94% | PENDING |
 | 25 | 2026-06-12 | 14:30 | itf | T. Pieri - A. Granwehr | A. Granwehr | 1.75 | 61.34% | 52.85% | 8.50% | 7.35% | PENDING |
 | 26 | 2026-06-12 | 15:00 | itf | A. Zantedeschi - A. Mazzola | A. Mazzola | 2.278889 | 59.17% | 40.59% | 18.58% | 34.83% | PENDING |
-| 27 | 2026-06-12 | 16:00 | itf | P. Martinez Gomez - J. Echeverria | P. Martinez Gomez | 3.62 | 34.62% | 25.74% | 8.87% | 25.31% | PENDING |
-| 28 | 2026-06-12 | 16:00 | itf | G. Piraino - M. Zielinski | M. Zielinski | 3.338333 | 33.86% | 27.74% | 6.11% | 13.02% | PENDING |
-| 29 | 2026-06-12 | 17:00 | itf | D. Popko - E. Aguiard | D. Popko | 1.85 | 69.83% | 50.00% | 19.83% | 29.18% | PENDING |
-| 30 | 2026-06-12 | 17:00 | itf | A. Fenty - L. Marionneau | A. Fenty | 1.58 | 73.45% | 58.31% | 15.14% | 16.05% | PENDING |
-| 31 | 2026-06-12 | 17:00 | itf | E. Hudd - J. Domingues | J. Domingues | 2.0375 | 53.32% | 45.38% | 7.95% | 8.64% | PENDING |
-| 32 | 2026-06-12 | 17:00 | itf | O. Simion - J. Lim | O. Simion | 2.525 | 41.64% | 36.64% | 5.00% | 5.15% | PENDING |
-| 33 | 2026-06-12 | 18:00 | itf | M. Brengle - M. Rapolu | M. Rapolu | 3.04 | 46.80% | 29.95% | 16.84% | 42.26% | PENDING |
-| 34 | 2026-06-12 | 19:00 | itf | Z. Pawlikowska - P. Charney | Z. Pawlikowska | 2.92 | 59.75% | 31.13% | 28.62% | 74.47% | PENDING |
-| 35 | 2026-06-12 | 19:00 | itf | O. Baris - D. Chan | O. Baris | 2.2 | 65.47% | 42.11% | 23.37% | 44.04% | PENDING |
-| 36 | 2026-06-12 | 20:00 | itf | A. Vagramov - V. Miroshnichenko | V. Miroshnichenko | 1.61 | 62.36% | 56.84% | 5.52% | 0.40% | PENDING |
-| 37 | 2026-06-12 | 22:30 | itf | L. Fullana - C. Alves | L. Fullana | 2.69 | 53.74% | 33.91% | 19.83% | 44.56% | PENDING |
+| 27 | 2026-06-12 | 15:00 | challenger | T. Schoolkate - O. Tarvet | T. Schoolkate | 1.707273 | 69.98% | 54.65% | 15.34% | 19.48% | PENDING |
+| 28 | 2026-06-12 | 16:00 | itf | P. Martinez Gomez - J. Echeverria | P. Martinez Gomez | 3.62 | 34.62% | 25.74% | 8.87% | 25.31% | PENDING |
+| 29 | 2026-06-12 | 16:00 | itf | G. Piraino - M. Zielinski | M. Zielinski | 3.338333 | 33.86% | 27.74% | 6.11% | 13.02% | PENDING |
+| 30 | 2026-06-12 | 16:30 | challenger | F. Romano - J. Pinnington Jones | F. Romano | 2.966364 | 39.42% | 31.39% | 8.03% | 16.94% | PENDING |
+| 31 | 2026-06-12 | 17:00 | itf | D. Popko - E. Aguiard | D. Popko | 1.85 | 69.83% | 50.00% | 19.83% | 29.18% | PENDING |
+| 32 | 2026-06-12 | 17:00 | itf | A. Fenty - L. Marionneau | A. Fenty | 1.58 | 73.45% | 58.31% | 15.14% | 16.05% | PENDING |
+| 33 | 2026-06-12 | 17:00 | itf | E. Hudd - J. Domingues | J. Domingues | 2.0375 | 53.32% | 45.38% | 7.95% | 8.64% | PENDING |
+| 34 | 2026-06-12 | 17:00 | itf | O. Simion - J. Lim | O. Simion | 2.525 | 41.64% | 36.64% | 5.00% | 5.15% | PENDING |
+| 35 | 2026-06-12 | 17:45 | challenger | F. Balshaw - C. Tabur | C. Tabur | 1.591818 | 64.84% | 58.31% | 6.53% | 3.21% | PENDING |
+| 36 | 2026-06-12 | 18:00 | itf | M. Brengle - M. Rapolu | M. Rapolu | 3.04 | 46.80% | 29.95% | 16.84% | 42.26% | PENDING |
+| 37 | 2026-06-12 | 19:00 | itf | Z. Pawlikowska - P. Charney | Z. Pawlikowska | 2.92 | 59.75% | 31.13% | 28.62% | 74.47% | PENDING |
+| 38 | 2026-06-12 | 19:00 | itf | O. Baris - D. Chan | O. Baris | 2.2 | 65.47% | 42.11% | 23.37% | 44.04% | PENDING |
+| 39 | 2026-06-12 | 20:00 | itf | A. Vagramov - V. Miroshnichenko | V. Miroshnichenko | 1.61 | 62.36% | 56.84% | 5.52% | 0.40% | PENDING |
+| 40 | 2026-06-12 | 22:30 | itf | L. Fullana - C. Alves | L. Fullana | 2.69 | 53.74% | 33.91% | 19.83% | 44.56% | PENDING |
