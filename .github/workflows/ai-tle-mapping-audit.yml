@@ -1,0 +1,65 @@
+name: AI TLE Mapping Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      min_start_minutes:
+        description: "0 = audit all not-finished matches, 30 = scanner-like future matches"
+        required: true
+        default: "0"
+      levels:
+        description: "Levels to audit"
+        required: true
+        default: "challenger,itf,atp_wta,grand_slam,qualifying,unknown"
+
+  schedule:
+    - cron: "45 6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout AI repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests
+
+      - name: Run mapping audit
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python ai_tle_mapping_audit.py \
+            --min-start-minutes "${{ inputs.min_start_minutes || '0' }}" \
+            --levels "${{ inputs.levels || 'challenger,itf,atp_wta,grand_slam,qualifying,unknown' }}"
+
+      - name: Show audit
+        run: |
+          cat data/tle/mapping_audit/ai_tle_mapping_audit_latest.md || true
+
+      - name: Commit audit outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/tle/mapping_audit
+
+          if git diff --cached --quiet; then
+            echo "No mapping audit changes."
+            exit 0
+          fi
+
+          git commit -m "Run AI TLE mapping audit"
+          git push
