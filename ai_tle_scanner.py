@@ -325,9 +325,46 @@ def normalize_level(level: Any) -> str:
     return s
 
 
-def infer_level(fixture: dict[str, Any], metadata: dict[str, Any]) -> str:
-    tournament_key = clean(fixture.get("tournament_key"))
+def is_qualification_fixture(fixture: dict[str, Any]) -> bool:
+    # API tournament metadata can incorrectly label normal ATP/WTA/Challenger
+    # quarter-finals as qualifying. For level selection, trust the live fixture
+    # text first and only treat it as qualifying when the fixture itself says so.
+    text = " ".join(
+        clean(fixture.get(key))
+        for key in ["tournament_name", "tournament_round", "event_name"]
+    ).lower()
+    return bool(re.search(r"\bqualif(?:ication|ying|iers?|y)?\b", text))
 
+
+def infer_level(fixture: dict[str, Any], metadata: dict[str, Any]) -> str:
+    event_type = clean(fixture.get("event_type_type")).lower()
+    fixture_text = " ".join(
+        clean(fixture.get(key))
+        for key in ["tournament_name", "tournament_round", "event_name"]
+    ).lower()
+
+    if is_qualification_fixture(fixture):
+        return "qualifying"
+
+    # Live API event_type is more reliable than our tournament metadata for daily scans.
+    # Metadata is still used as a fallback when event_type is missing/ambiguous.
+    if "itf" in event_type:
+        return "itf"
+    if "challenger" in event_type:
+        return "challenger"
+    if "atp" in event_type or "wta" in event_type:
+        return "atp_wta"
+
+    if (
+        "grand slam" in fixture_text
+        or "australian open" in fixture_text
+        or "roland garros" in fixture_text
+        or "wimbledon" in fixture_text
+        or "us open" in fixture_text
+    ):
+        return "grand_slam"
+
+    tournament_key = clean(fixture.get("tournament_key"))
     if tournament_key:
         meta = metadata.get(tournament_key)
         if isinstance(meta, dict):
@@ -335,29 +372,11 @@ def infer_level(fixture: dict[str, Any], metadata: dict[str, Any]) -> str:
             if level in {"atp_wta", "grand_slam", "challenger", "itf", "qualifying"}:
                 return level
 
-    text = " ".join(
-        clean(fixture.get(key))
-        for key in ["event_type_type", "tournament_name", "tournament_round"]
-    ).lower()
-
-    if "qualif" in text:
-        # Keep qualification as separate no-bet level unless event_type clearly says Challenger/ITF and
-        # event_qualification is unreliable. This is conservative.
-        if "itf" in text:
-            return "itf"
-        if "challenger" in text:
-            return "challenger"
-        return "qualifying"
-
+    text = f"{event_type} {fixture_text}"
     if "itf" in text:
         return "itf"
-
     if "challenger" in text:
         return "challenger"
-
-    if "grand slam" in text or "australian open" in text or "roland garros" in text or "wimbledon" in text or "us open" in text:
-        return "grand_slam"
-
     if "atp" in text or "wta" in text:
         return "atp_wta"
 
@@ -971,6 +990,8 @@ def main() -> None:
     parser.add_argument("--min-overround", type=float, default=-0.03)
     parser.add_argument("--max-overround", type=float, default=0.18)
     parser.add_argument("--max-book-deviation", type=float, default=0.35)
+    parser.add_argument("--min-book-pairs", type=int, default=3)
+    parser.add_argument("--allowed-resolve-methods", default="api_mapping,exact_name")
     parser.add_argument("--canonical-manifest", default=str(DEFAULT_CANONICAL_MANIFEST))
     parser.add_argument("--api-player-mapping", default=str(DEFAULT_API_PLAYER_MAPPING))
     parser.add_argument("--tournament-metadata", default=str(DEFAULT_TOURNAMENT_METADATA))
@@ -1080,6 +1101,10 @@ def main() -> None:
                 counters["skipped_missing_pair_odds"] += 1
                 continue
 
+            if int(odds_details.get("book_pairs_valid") or 0) < args.min_book_pairs:
+                counters["skipped_min_book_pairs"] += 1
+                continue
+
             mins = minutes_until_start(fixture, args.timezone)
             if mins is None:
                 counters["skipped_missing_start_time"] += 1
@@ -1115,6 +1140,12 @@ def main() -> None:
 
             if not home_key or not away_key:
                 counters["skipped_unresolved_player"] += 1
+                continue
+
+            if home_method not in allowed_resolve_methods or away_method not in allowed_resolve_methods:
+                counters["skipped_unsafe_player_resolve"] += 1
+                counters[f"skipped_unsafe_home_{home_method}"] += 1
+                counters[f"skipped_unsafe_away_{away_method}"] += 1
                 continue
 
             home_player = players.get(home_key)
@@ -1230,6 +1261,8 @@ def main() -> None:
             "min_overround": args.min_overround,
             "max_overround": args.max_overround,
             "max_book_deviation": args.max_book_deviation,
+            "min_book_pairs": args.min_book_pairs,
+            "allowed_resolve_methods": sorted(allowed_resolve_methods),
             "min_start_minutes": args.min_start_minutes,
             "levels": sorted(levels_to_scan),
             "main_min_level_matches": args.main_min_level_matches,
