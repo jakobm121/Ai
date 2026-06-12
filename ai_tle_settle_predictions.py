@@ -484,12 +484,100 @@ def date_label_from_rows(rows: list[dict[str, Any]]) -> str:
     return f"{dates[0]}_{dates[-1]}"
 
 
+
+
+def write_active_predictions_table(path: Path, picks: list[dict[str, Any]], summary: dict[str, Any]) -> None:
+    lines = [
+        "# AI TLE Active Predictions",
+        "",
+        f"Generated: `{summary.get('generated_at')}`",
+        f"Active predictions: `{len(picks)}`",
+        f"Results ledger: `{summary.get('results_path')}`",
+        "",
+        "| # | Date | Time | Level | Match | Pick | Odds | TLE % | Book % | Edge | EV | Status |",
+        "|---:|---|---|---|---|---|---:|---:|---:|---:|---:|---|",
+    ]
+    for i, p in enumerate(picks, 1):
+        odds = p.get("first_odds") or p.get("odds") or p.get("latest_odds")
+        lines.append("| " + " | ".join([
+            str(i),
+            clean(p.get("date")),
+            clean(p.get("time")),
+            clean(p.get("tour_level")),
+            clean(p.get("match")).replace("|", "-"),
+            clean(p.get("selection")).replace("|", "-"),
+            clean(odds),
+            pct(p.get("first_tle_probability") or p.get("tle_probability")),
+            pct(p.get("first_book_probability_devig") or p.get("book_probability_devig")),
+            pct(p.get("first_tle_edge") or p.get("tle_edge")),
+            pct(p.get("first_tle_ev") or p.get("tle_ev")),
+            clean(p.get("settlement_status") or "PENDING"),
+        ]) + " |")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    tmp.replace(path)
+
+
+def write_results_table(path: Path, rows: list[dict[str, Any]], summary: dict[str, Any]) -> None:
+    overall = summary.get("overall", {})
+    lines = [
+        "# AI TLE Results",
+        "",
+        f"Generated: `{summary.get('generated_at')}`",
+        f"Total picks: `{overall.get('total_picks')}`",
+        f"Settled bets: `{overall.get('settled_bets')}`",
+        f"Pending: `{overall.get('pending')}`",
+        f"Profit: `{overall.get('profit')}`",
+        f"ROI: `{pct(overall.get('roi'))}`",
+        f"Hit rate: `{pct(overall.get('hit_rate'))}`",
+        "",
+        "| # | Date | Time | Level | Match | Pick | Odds | Status | Profit | Edge | EV | Winner | Score | Reason |",
+        "|---:|---|---|---|---|---|---:|---|---:|---:|---:|---|---|---|",
+    ]
+    for i, row in enumerate(rows, 1):
+        status = clean(row.get("settlement_status") or "PENDING")
+        profit = "" if status == "PENDING" else clean(row.get("profit"))
+        odds = row.get("settlement_odds") or row.get("first_odds") or row.get("odds") or row.get("latest_odds")
+        lines.append("| " + " | ".join([
+            str(i),
+            clean(row.get("date")),
+            clean(row.get("time")),
+            clean(row.get("tour_level")),
+            clean(row.get("match")).replace("|", "-"),
+            clean(row.get("selection")).replace("|", "-"),
+            clean(odds),
+            status,
+            profit,
+            pct(row.get("first_tle_edge") or row.get("tle_edge")),
+            pct(row.get("first_tle_ev") or row.get("tle_ev")),
+            clean(row.get("api_event_winner")).replace("|", "-"),
+            clean(row.get("api_final_score")).replace("|", "-"),
+            clean(row.get("settlement_reason")),
+        ]) + " |")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    tmp.replace(path)
+
+
+def pick_key(row: dict[str, Any]) -> str:
+    return "|".join([
+        clean(row.get("event_key")),
+        clean(row.get("selected_player_side") or row.get("selected_side")),
+        normalize_name(row.get("selection")),
+    ])
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Settle AI repo TLE open predictions. Keeps picks in predictions until WIN/LOSS/VOID."
+        description="Settle AI TLE results ledger. Keeps active predictions open until settled."
     )
-    parser.add_argument("--picks", default=str(DEFAULT_PICKS_PATH))
-    parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR))
+    parser.add_argument("--results", default="data/tle/predictions/ai_tle_results.json")
+    parser.add_argument("--picks", default="", help="Deprecated alias; use --results")
+    parser.add_argument("--predictions", default="data/tle/predictions/ai_tle_predictions_latest.json")
+    parser.add_argument("--predictions-table", default="data/tle/predictions/ai_tle_predictions_table.md")
+    parser.add_argument("--results-table", default="data/tle/predictions/ai_tle_results_table.md")
     parser.add_argument("--timezone", default="Europe/Ljubljana")
     parser.add_argument("--api-sleep-seconds", type=float, default=0.0)
     args = parser.parse_args()
@@ -498,168 +586,109 @@ def main() -> None:
     if not api_key:
         raise RuntimeError("Missing API_KEY environment variable.")
 
-    picks_path = Path(args.picks)
-    picks_payload = load_json_any(args.picks)
-    picks = extract_picks(picks_payload)
+    results_path = Path(args.picks or args.results)
+    predictions_path = Path(args.predictions)
+    predictions_table_path = Path(args.predictions_table)
+    results_table_path = Path(args.results_table)
 
-    if not picks:
-        raise RuntimeError("No Tennis-ELO picks found.")
+    results_payload = load_json_any(results_path)
+    all_rows = extract_picks(results_payload)
+    if not all_rows:
+        raise RuntimeError("No AI TLE results picks found.")
 
-    dates = sorted({clean(row.get("date")) for row in picks if clean(row.get("date"))})
-    if not dates:
-        raise RuntimeError("No pick dates found.")
+    pending_rows = [r for r in all_rows if clean(r.get("settlement_status") or "PENDING").upper() == "PENDING"]
+    dates = sorted({clean(row.get("date")) for row in pending_rows if clean(row.get("date"))})
 
-    date_start = dates[0]
-    date_stop = dates[-1]
+    fixtures: list[dict[str, Any]] = []
+    fixtures_index: dict[str, dict[str, Any]] = {}
+    date_start = dates[0] if dates else ""
+    date_stop = dates[-1] if dates else ""
 
-    fixtures = api_get_fixtures(
-        api_key=api_key,
-        date_start=date_start,
-        date_stop=date_stop,
-        timezone_name=args.timezone,
-    )
-
-    if args.api_sleep_seconds > 0:
-        time.sleep(args.api_sleep_seconds)
-
-    fixtures_index = index_fixtures(fixtures)
-
-    settled_rows = []
-    counters = Counter()
-
-    for pick in picks:
-        key = clean(pick.get("event_key"))
-        fixture = fixtures_index.get(key)
-        settled = settle_pick(pick, fixture)
-        settled_rows.append(settled)
-
-        counters[f"status_{settled['settlement_status'].lower()}"] += 1
-        counters[f"reason_{settled['settlement_reason']}"] += 1
-
-    # Keep only unresolved picks in predictions; settled rows go to settlement history.
-    still_open = [row for row in settled_rows if row.get("settlement_status") == "PENDING"]
-    newly_closed = [row for row in settled_rows if row.get("settlement_status") in {"WIN", "LOSS", "VOID"}]
-
-    history_path = Path(args.output_dir) / "ai_tle_settlement_history.json"
-    old_history = []
-    if history_path.exists():
-        try:
-            old_payload = json.loads(history_path.read_text(encoding="utf-8"))
-            if isinstance(old_payload, dict) and isinstance(old_payload.get("settled_picks"), list):
-                old_history = [r for r in old_payload["settled_picks"] if isinstance(r, dict)]
-        except Exception:
-            old_history = []
-
-    def row_key(row: dict[str, Any]) -> str:
-        return "|".join([clean(row.get("event_key")), clean(row.get("selected_player_side")), normalize_name(row.get("selection"))])
-
-    history_by_key = {row_key(r): r for r in old_history if row_key(r)}
-    for r in newly_closed:
-        history_by_key[row_key(r)] = r
-    history_rows = sorted(history_by_key.values(), key=lambda r: (clean(r.get("date")), clean(r.get("time")), clean(r.get("event_key"))))
-
-    open_predictions_payload = {
-        "schema_version": 1,
-        "file_type": "ai_repo_tle_open_predictions",
-        "summary": {
-            "generated_at": now_iso(),
-            "open_predictions_count": len(still_open),
-            "removed_settled_this_run": len(newly_closed),
-        },
-        "picks": still_open,
-    }
-    if not str(args.picks).startswith("http"):
-        save_json(picks_path, open_predictions_payload)
-
-    settled_rows.sort(
-        key=lambda row: (
-            clean(row.get("date")),
-            clean(row.get("time")),
-            clean(row.get("event_key")),
-            clean(row.get("selection")),
+    if dates:
+        fixtures = api_get_fixtures(
+            api_key=api_key,
+            date_start=date_start,
+            date_stop=date_stop,
+            timezone_name=args.timezone,
         )
-    )
+        if args.api_sleep_seconds > 0:
+            time.sleep(args.api_sleep_seconds)
+        fixtures_index = index_fixtures(fixtures)
 
-    label = date_label_from_rows(settled_rows)
-    out_dir = Path(args.output_dir)
+    updated_by_key: dict[str, dict[str, Any]] = {}
+    counters = Counter()
+    generated_at = now_iso()
 
-    output_json = out_dir / f"tle_scanner_settlement_{label}.json"
-    output_csv = out_dir / f"tle_scanner_settlement_{label}.csv"
-    output_md = out_dir / f"tle_scanner_settlement_{label}.md"
+    for row in all_rows:
+        status_before = clean(row.get("settlement_status") or "PENDING").upper()
+        if status_before in {"WIN", "LOSS", "VOID"}:
+            updated = dict(row)
+            counters[f"status_{status_before.lower()}"] += 1
+        else:
+            fixture = fixtures_index.get(clean(row.get("event_key")))
+            updated = settle_pick(row, fixture)
+            status_after = clean(updated.get("settlement_status") or "PENDING").upper()
+            if status_after in {"WIN", "LOSS", "VOID"}:
+                updated["settled_at"] = generated_at
+            counters[f"status_{status_after.lower()}"] += 1
+            counters[f"reason_{updated.get('settlement_reason')}"] += 1
+        key = pick_key(updated)
+        if key:
+            updated_by_key[key] = updated
 
-    latest_json = out_dir / "tle_scanner_settlement_latest.json"
-    latest_csv = out_dir / "tle_scanner_settlement_latest.csv"
-    latest_md = out_dir / "tle_scanner_settlement_latest.md"
-
-    raw_fixtures_path = out_dir / f"tle_scanner_settlement_raw_fixtures_{label}.json"
-    raw_fixtures_latest = out_dir / "tle_scanner_settlement_raw_fixtures_latest.json"
+    updated_rows = list(updated_by_key.values())
+    updated_rows.sort(key=lambda r: (clean(r.get("date")), clean(r.get("time")), clean(r.get("event_key")), clean(r.get("selection"))))
+    active_rows = [r for r in updated_rows if clean(r.get("settlement_status") or "PENDING").upper() == "PENDING"]
+    active_rows.sort(key=lambda r: (clean(r.get("date")), clean(r.get("time")), -float(r.get("first_tle_edge") or r.get("tle_edge") or 0)))
 
     summary = {
-        "generated_at": now_iso(),
-        "picks_source": str(args.picks),
+        "generated_at": generated_at,
+        "results_path": str(results_path),
+        "predictions_path": str(predictions_path),
         "date_start": date_start,
         "date_stop": date_stop,
-        "date_label": label,
         "api_fixtures_loaded": len(fixtures),
         "api_events_indexed": len(fixtures_index),
-        "picks_loaded": len(picks),
+        "results_loaded": len(all_rows),
+        "results_total_after_settle": len(updated_rows),
+        "active_predictions_after_settle": len(active_rows),
         "counters": dict(sorted(counters.items())),
-        "overall": summarize(settled_rows),
-        "by_level": summarize_by(settled_rows, "tour_level"),
-        "by_gender": summarize_by(settled_rows, "gender"),
-        "by_status": summarize_by(settled_rows, "settlement_status"),
+        "overall": summarize(updated_rows),
+        "by_level": summarize_by(updated_rows, "tour_level"),
+        "by_gender": summarize_by(updated_rows, "gender"),
+        "by_status": summarize_by(updated_rows, "settlement_status"),
+        "files_written": [
+            str(results_path),
+            str(predictions_path),
+            str(predictions_table_path),
+            str(results_table_path),
+        ],
     }
 
-    payload = {
+    new_results_payload = {
         "schema_version": 1,
+        "file_type": "ai_tle_results_ledger",
         "summary": summary,
-        "settled_picks": settled_rows,
+        "picks": updated_rows,
     }
-
-    for path in [output_json, latest_json]:
-        save_json(path, payload)
-
-    for path in [output_csv, latest_csv]:
-        write_csv(path, settled_rows)
-
-    for path in [output_md, latest_md]:
-        write_md(path, summary, settled_rows)
-
-    history_payload = {
+    predictions_payload = {
         "schema_version": 1,
-        "summary": {
-            "generated_at": summary["generated_at"],
-            "total_settled_history": len(history_rows),
-            "newly_closed_this_run": len(newly_closed),
-            "open_remaining": len(still_open),
-            "overall_history": summarize(history_rows),
-            "by_level_history": summarize_by(history_rows, "tour_level"),
-        },
-        "settled_picks": history_rows,
-    }
-    save_json(history_path, history_payload)
-
-    raw_payload = {
-        "generated_at": summary["generated_at"],
-        "date_start": date_start,
-        "date_stop": date_stop,
-        "fixtures": fixtures,
+        "file_type": "ai_tle_open_predictions",
+        "summary": summary,
+        "picks": active_rows,
     }
 
-    for path in [raw_fixtures_path, raw_fixtures_latest]:
-        save_json(path, raw_payload)
+    save_json(results_path, new_results_payload)
+    save_json(predictions_path, predictions_payload)
+    write_active_predictions_table(predictions_table_path, active_rows, summary)
+    write_results_table(results_table_path, updated_rows, summary)
 
-    print("AI TLE PREDICTIONS SETTLEMENT DONE")
+    print("AI TLE SETTLEMENT DONE")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
-    print(f"JSON: {output_json}")
-    print(f"CSV: {output_csv}")
-    print(f"MD: {output_md}")
-    print(f"Latest JSON: {latest_json}")
-    print(f"Latest CSV: {latest_csv}")
-    print(f"Latest MD: {latest_md}")
-    print(f"Raw fixtures: {raw_fixtures_path}")
-    print(f"Updated open predictions: {args.picks}")
-    print(f"Settlement history: {history_path}")
+    print(f"Results ledger: {results_path}")
+    print(f"Open predictions: {predictions_path}")
+    print(f"Active table: {predictions_table_path}")
+    print(f"Results table: {results_table_path}")
 
 
 if __name__ == "__main__":
