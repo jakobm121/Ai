@@ -1,38 +1,38 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-11T09:12:23.615301+02:00`
+Generated: `2026-06-12T13:14:43.801262+02:00`
 
-Pending picks: **1**
+Pending picks: **2**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 181 | 87 | 83 | 1 | 10 | 51.18% | +7.01u | 5.50% |
+| 188 | 90 | 84 | 1 | 13 | 51.72% | +8.77u | 6.72% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 10 | 5 | 4 | 0 | 1 | 55.56% | +0.98u | 14.55% |
+| 7 | 3 | 1 | 0 | 3 | 75.00% | +1.75u | 58.50% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 163 | 77 | 77 | 1 | 8 | 50.00% | +3.92u | 3.39% |
+| 170 | 80 | 78 | 1 | 11 | 50.63% | +5.67u | 4.79% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 118 | 57 | 54 | 1 | 6 | 51.35% | +5.26u | 6.32% |
+| 122 | 59 | 54 | 1 | 8 | 52.21% | +6.87u | 8.10% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 95 | 47 | 45 | 0 | 3 | 51.09% | +2.04u | 2.95% |
+| 97 | 48 | 45 | 0 | 4 | 51.61% | +2.79u | 3.99% |
 
 ### Over
 
@@ -44,12 +44,19 @@ Pending picks: **1**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 158 | 74 | 73 | 1 | 10 | 50.34% | +5.09u | 4.61% |
+| 165 | 77 | 74 | 1 | 13 | 50.99% | +6.84u | 6.04% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-11 | 18:00 | 9 | D. Lajovic - O. Roca Batalla | UNDER 20.5 games | 2.07 | ⚪ void | 70.06 |  |  | 0.00u |
+| 2026-06-11 | 17:00 | 3 | B. Shelton - M. Giron | UNDER 24.5 games | 2.14 | ⚪ void | 76.67 |  |  | 0.00u |
+| 2026-06-11 | 13:30 | 5 | B. Krejcikova - H. Vandewinkel | UNDER 19.5 games | 2.14 | ✅ win | 75.12 | 17 | 6-1, 6-4 | +0.85u |
+| 2026-06-11 | 12:00 | 4 | K. Smith - J. Fearnley | UNDER 21.5 games | 2.16 | ⚪ void | 75.50 |  |  | 0.00u |
+| 2026-06-11 | 12:00 | 7 | J. De Jong - F. Bondioli | UNDER 19.5 games | 2.12 | ❌ loss | 71.72 | 28 | 6-2, 4-6, 6-4 | -0.75u |
+| 2026-06-11 | 11:00 | 8 | R. Hijikata - F. Tiafoe | UNDER 22.5 games | 2.20 | ✅ win | 70.16 | 20 | 4-6, 4-6 | +0.90u |
+| 2026-06-11 | 06:00 | 6 | K. Ogura - M. Imamura | UNDER 19.5 games | 2.00 | ✅ win | 74.17 | 17 | 6-4, 6-1 | +0.75u |
 | 2026-06-10 | 16:30 | 1 | N. Hardt - B. Fernandez | UNDER 18.5 games | 2.18 | ❌ loss | 80.97 | 20 | 7-5, 6-2 | -0.75u |
 | 2026-06-10 | 16:30 | 9 | D. Salkova - M. Trevisan | UNDER 20.5 games | 2.04 | ✅ win | 70.54 | 20 | 6-1, 7-6 | +0.78u |
 | 2026-06-10 | 15:00 | 4 | T. Cigarran - V. Aboian | UNDER 19.5 games | 2.14 | ⚪ void | 76.40 |  |  | 0.00u |
@@ -123,11 +130,4 @@ Pending picks: **1**
 | 2026-06-03 | 14:00 | 1 | P. Boscardin Dias - M. Mrva | OVER 22.5 games | 2.15 | ❌ loss | 80.57 | 20 | 4-6, 4-6 | -0.75u |
 | 2026-06-03 | 13:30 | 7 | K. Deichmann - A. Mazzola | OVER 22.0 games | 2.05 | ❌ loss | 72.76 | 19 | 6-7, 0-6 | -0.75u |
 | 2026-06-03 | 12:30 | 5 | S. Baez - T. Boyer | UNDER 20.5 games | 2.03 | ✅ win | 73.87 | 18 | 6-2, 6-4 | +0.77u |
-| 2026-06-03 | 12:30 | 9 | A. Sabalenka - D. Shnaider | UNDER 19.0 games | 2.10 | ❌ loss | 71.17 | 27 | 6-3, 5-7, 0-6 | -0.75u |
-| 2026-06-03 | 11:30 | 3 | M. Topo - E. Nava | UNDER 20.5 games | 2.20 | ✅ win | 76.29 | 19 | 3-6, 4-6 | +0.90u |
-| 2026-06-03 | 11:30 | 2 | A. Krueger - H. Sakatsume | UNDER 20.5 games | 2.00 | ✅ win | 76.83 | 19 | 6-4, 6-3 | +0.75u |
-| 2026-06-03 | 10:30 | 8 | M. Hageman - M. Masiianskaia | UNDER 19.5 games | 2.01 | ❌ loss | 71.65 | 22 | 6-4, 7-5 | -0.75u |
-| 2026-06-03 | 10:30 | 6 | M. Bassem Sobhy - N. Makhlouf | UNDER 19.0 games | 2.13 | ⚪ void | 73.24 |  |  | 0.00u |
-| 2026-06-01 | 16:30 | 4 | C. Naef - M. Inglis | UNDER 19.5 games | 2.00 | ✅ win | 70.09 | 17 | 6-2, 6-3 | +0.75u |
-| 2026-06-02 | 18:00 | 10 | D. Dedura - M. Wiskandt | UNDER 20.5 games | 2.08 | ✅ win | 75.16 | 17 | 6-1, 6-4 | +0.81u |
 

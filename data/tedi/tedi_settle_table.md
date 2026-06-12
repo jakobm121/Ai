@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-11T09:12:23.746364+02:00
+Generated: 2026-06-12T13:14:43.929296+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 77 | 74 | 3 | 36 | 31 | 7 | 53.73% | 8.15u | 11.01% |
-| tedi_v2_test | 21 | 20 | 1 | 11 | 9 | 0 | 55.0% | 3.06u | 15.3% |
+| tedi_main_150 | 81 | 78 | 3 | 37 | 33 | 8 | 52.86% | 7.33u | 9.4% |
+| tedi_v2_test | 22 | 20 | 2 | 11 | 9 | 0 | 55.0% | 3.06u | 15.3% |
 
 ## Results
 
@@ -104,10 +104,15 @@ Generated: 2026-06-11T09:12:23.746364+02:00
 | 2026-06-09 | 17:00 | tedi_main_150 | win | 1.12 | G. I. Justo - J. Aguilar Cardozo | UNDER 20.5 games | 2.12 | 17 | 6-2, 6-3 |
 | 2026-06-09 | 17:30 | tedi_main_150 | win | 1.00 | V. Jimenez Kasintseva - J. Pieri | UNDER 19.5 games | 2.00 | 18 | 6-2, 6-4 |
 | 2026-06-10 | 11:00 | tedi_main_150 | loss | -1.00 | A. Moro Canas - K. Coppejans | UNDER 21.5 games | 2.12 | 27 | 7-6, 1-6, 1-6 |
-| 2026-06-10 | 14:00 | tedi_main_150 | pending | 0.00 | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.07 |  |  |
-| 2026-06-10 | 14:00 | tedi_v2_test | pending | 0.00 | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.07 |  |  |
 | 2026-06-10 | 14:00 | tedi_main_150 | win | 1.20 | L. Siegemund - A. Anisimova | UNDER 19.5 games | 2.20 | 16 | 1-6, 3-6 |
 | 2026-06-10 | 15:00 | tedi_v2_test | win | 1.15 | N. Kicker - T. Martinez | UNDER 18.5 games | 2.15 | 16 | 6-0, 6-4 |
-| 2026-06-10 | 15:00 | tedi_main_150 | pending | 0.00 | R. Montgomery - G. Minnen | UNDER 21.5 games | 2.08 |  |  |
 | 2026-06-10 | 15:00 | tedi_main_150 | push | 0.00 | T. Cigarran - V. Aboian | UNDER 19.5 games | 2.14 | None | None |
-| 2026-06-10 | 15:30 | tedi_main_150 | pending | 0.00 | U. Humbert - B. Bonzi | UNDER 22.5 games | 2.20 |  |  |
+| 2026-06-10 | 15:30 | tedi_main_150 | loss | -1.00 | U. Humbert - B. Bonzi | UNDER 22.5 games | 2.20 | 28 | 4-6, 6-3, 3-6 |
+| 2026-06-11 | 11:00 | tedi_main_150 | loss | -1.00 | R. Montgomery - G. Minnen | UNDER 21.5 games | 2.08 | 23 | 6-4, 7-6 |
+| 2026-06-11 | 12:00 | tedi_main_150 | pending | 0.00 | D. Vidmanova - L. Stefanini | UNDER 20.5 games | 2.18 |  |  |
+| 2026-06-11 | 12:00 | tedi_main_150 | push | 0.00 | T. Prozorova - S. Kraus | UNDER 21.5 games | 2.00 | None | None |
+| 2026-06-11 | 12:30 | tedi_main_150 | pending | 0.00 | S. Cirstea - E. Raducanu | UNDER 21.5 games | 2.04 |  |  |
+| 2026-06-11 | 13:30 | tedi_main_150 | pending | 0.00 | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.10 |  |  |
+| 2026-06-11 | 13:30 | tedi_v2_test | pending | 0.00 | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.10 |  |  |
+| 2026-06-11 | 13:30 | tedi_v2_test | pending | 0.00 | V. Golubic - K. Swan | UNDER 21.5 games | 1.99 |  |  |
+| 2026-06-11 | 15:30 | tedi_main_150 | win | 1.18 | T. Daniel - E. Nava | UNDER 21.5 games | 2.18 | 16 | 6-1, 6-3 |

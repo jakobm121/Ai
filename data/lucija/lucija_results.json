@@ -13406,7 +13406,7 @@
     "first_strength_score": 38.2,
     "second_strength_score": 45.05,
     "h2h_matches": 0,
-    "result": "pending",
+    "result": "win",
     "created_at": "2026-06-11T09:22:48.393664+02:00",
     "reasoning": "Lucija selected OVER 20.5 games in C. Hernandez - J. Domingues using optimizer rule: confidence >= 80, quality >= 72, market_gap >= 0.25, strength_gap <= 30, h2h <= 0, avg_three_set >= 0.15, avg_close_set between 0.2 and 0.55.",
     "source_pick_id": "8baa335ae1387bde4cdbdf026cf8f6b1",
@@ -13440,6 +13440,14 @@
       "strength_gap_max": true,
       "h2h_max": true
     },
-    "profit": null
+    "profit": 0.93,
+    "settled_at": "2026-06-12T13:14:36.541700+02:00",
+    "settled_status": "Finished",
+    "event_winner": "Second Player",
+    "final_score": "6-7, 5-7",
+    "total_games": 25,
+    "settled_from": "data/tennis_totals_results.json",
+    "settled_source_pick_id": "8baa335ae1387bde4cdbdf026cf8f6b1",
+    "lucija_settled_at": "2026-06-12T13:14:44.019614+02:00"
   }
 ]

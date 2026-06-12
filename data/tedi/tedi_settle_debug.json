@@ -1,83 +1,54 @@
 {
-  "generated_at": "2026-06-11T09:12:23.746364+02:00",
+  "generated_at": "2026-06-12T13:14:43.929296+02:00",
   "settled_now": [
     {
-      "pick_id": "ec8d9b6e8bf0a8b82eb6402a13153d87",
-      "source_pick_id": "3cd744b454c992467c4f96659c0ff382",
-      "strategy": "tedi_main_150",
-      "match": "H. Stewart - L. Riedi",
-      "bet": "UNDER 20.5 games",
-      "result": "loss",
-      "profit": -1.0,
-      "total_games": 25,
-      "final_score": "1-6, 6-3, 3-6"
-    },
-    {
-      "pick_id": "301944569ad6cf7cb106a69dc50391dd",
-      "source_pick_id": "2ffcbfe04ae8d3666d5806d30e4a94f7",
-      "strategy": "tedi_main_150",
-      "match": "L. Siegemund - A. Anisimova",
-      "bet": "UNDER 19.5 games",
-      "result": "win",
-      "profit": 1.2,
-      "total_games": 16,
-      "final_score": "1-6, 3-6"
-    },
-    {
-      "pick_id": "e29ab07e408fe4b7e05aa31d58cdf603",
-      "source_pick_id": "f56bad221e9d75f14cf0d653042ccc39",
-      "strategy": "tedi_main_150",
-      "match": "A. Moro Canas - K. Coppejans",
-      "bet": "UNDER 21.5 games",
-      "result": "loss",
-      "profit": -1.0,
-      "total_games": 27,
-      "final_score": "7-6, 1-6, 1-6"
-    },
-    {
-      "pick_id": "0f36c97807780708d8da9986205b045f",
-      "source_pick_id": "0472590be32f6d7389750f9d58f4aecc",
-      "strategy": "tedi_main_150",
-      "match": "T. Cigarran - V. Aboian",
-      "bet": "UNDER 19.5 games",
-      "result": "push",
-      "profit": 0.0,
-      "total_games": null,
-      "final_score": null
-    },
-    {
-      "pick_id": "2bed11619fc79431326bd4e70174c3d3",
-      "source_pick_id": "305e03f1cb2ebf864bff857190a8e4d0",
-      "strategy": "tedi_v2_test",
-      "match": "N. Kicker - T. Martinez",
-      "bet": "UNDER 18.5 games",
-      "result": "win",
-      "profit": 1.15,
-      "total_games": 16,
-      "final_score": "6-0, 6-4"
-    }
-  ],
-  "missing_source": [
-    {
-      "tedi_pick_id": "013cfcd03b45b327d6af884140057f3d",
-      "source_pick_id": "0d64f54ba23c3d9d71f010e4fd180583",
-      "strategy": "tedi_main_150",
-      "match": "U. Humbert - B. Bonzi",
-      "bet": "UNDER 22.5 games",
-      "key": "12134912|over/under by games in match|under|22.5",
-      "reason": "no_settled_source_match"
-    },
-    {
-      "tedi_pick_id": "d62c0de30ecd9afefdcf5bc6e59fa5f1",
+      "pick_id": "d62c0de30ecd9afefdcf5bc6e59fa5f1",
       "source_pick_id": "a27b65d6f9a5e1ed0681668c6fd2c4c2",
       "strategy": "tedi_main_150",
       "match": "R. Montgomery - G. Minnen",
       "bet": "UNDER 21.5 games",
-      "key": "12135135|over/under by games in match|under|21.5",
-      "reason": "no_settled_source_match"
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 23,
+      "final_score": "6-4, 7-6"
     },
     {
-      "tedi_pick_id": "34761276b284fba6ddfbbe986d897503",
+      "pick_id": "013cfcd03b45b327d6af884140057f3d",
+      "source_pick_id": "0d64f54ba23c3d9d71f010e4fd180583",
+      "strategy": "tedi_main_150",
+      "match": "U. Humbert - B. Bonzi",
+      "bet": "UNDER 22.5 games",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 28,
+      "final_score": "4-6, 6-3, 3-6"
+    },
+    {
+      "pick_id": "3e5dbb554b145b209bd4918924531fe7",
+      "source_pick_id": "95d2f496feeb2e81ef58cf11880b5295",
+      "strategy": "tedi_main_150",
+      "match": "T. Daniel - E. Nava",
+      "bet": "UNDER 21.5 games",
+      "result": "win",
+      "profit": 1.18,
+      "total_games": 16,
+      "final_score": "6-1, 6-3"
+    },
+    {
+      "pick_id": "d3d22ed6bcdb17e63e7cf628b0480021",
+      "source_pick_id": "fcc6c38f26d84a22f4f5deaf4c51d647",
+      "strategy": "tedi_main_150",
+      "match": "T. Prozorova - S. Kraus",
+      "bet": "UNDER 21.5 games",
+      "result": "push",
+      "profit": 0.0,
+      "total_games": null,
+      "final_score": null
+    }
+  ],
+  "missing_source": [
+    {
+      "tedi_pick_id": "3489a8e1e1789680e703e35799a9491b",
       "source_pick_id": "c8e31aec9d2b7ddb1af71cc545a1b999",
       "strategy": "tedi_main_150",
       "match": "A. Dudeney - A. Krueger",
@@ -86,12 +57,39 @@
       "reason": "no_settled_source_match"
     },
     {
-      "tedi_pick_id": "04d7cbf15c0f23ec4da71736bc3516b8",
+      "tedi_pick_id": "83f8de6fc84015c33d02cbcfab1509e5",
       "source_pick_id": "c8e31aec9d2b7ddb1af71cc545a1b999",
       "strategy": "tedi_v2_test",
       "match": "A. Dudeney - A. Krueger",
       "bet": "UNDER 19.5 games",
       "key": "12135317|over/under by games in match|under|19.5",
+      "reason": "no_settled_source_match"
+    },
+    {
+      "tedi_pick_id": "778f0ae9b451fd7c5e1436f00d1bb44e",
+      "source_pick_id": "95162491846369d4cc8b0c96bbebeb66",
+      "strategy": "tedi_main_150",
+      "match": "S. Cirstea - E. Raducanu",
+      "bet": "UNDER 21.5 games",
+      "key": "12135313|over/under by games in match|under|21.5",
+      "reason": "no_settled_source_match"
+    },
+    {
+      "tedi_pick_id": "8fa716e7323ebba4132f2f54ac8eecae",
+      "source_pick_id": "65f5e56a22fc50d0664450e020c4ef42",
+      "strategy": "tedi_main_150",
+      "match": "D. Vidmanova - L. Stefanini",
+      "bet": "UNDER 20.5 games",
+      "key": "12135314|over/under by games in match|under|20.5",
+      "reason": "no_settled_source_match"
+    },
+    {
+      "tedi_pick_id": "002470e49ccb4a1bee64dbcd73609af8",
+      "source_pick_id": "fa922ae6c924ca06babda812a9460518",
+      "strategy": "tedi_v2_test",
+      "match": "V. Golubic - K. Swan",
+      "bet": "UNDER 21.5 games",
+      "key": "12135753|over/under by games in match|under|21.5",
       "reason": "no_settled_source_match"
     }
   ]

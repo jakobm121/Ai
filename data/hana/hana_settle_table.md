@@ -1,19 +1,19 @@
 # Hana settled results
 
-Generated: 2026-06-11T09:12:23.920768+02:00
+Generated: 2026-06-12T13:14:44.115085+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 243 | 243 | 118 | 107 | 18 | 52.44% | 18.64u | 8.28% |
+| 255 | 255 | 123 | 110 | 22 | 52.79% | 21.09u | 9.05% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | double | 42 | 42 | 23 | 16 | 3 | 58.97% | 8.67u | 22.23% |
-| single | 185 | 185 | 86 | 84 | 15 | 50.59% | 6.97u | 4.1% |
+| single | 197 | 197 | 91 | 87 | 19 | 51.12% | 9.42u | 5.29% |
 | triple | 16 | 16 | 9 | 7 | 0 | 56.25% | 3.0u | 18.75% |
 
 ## Results
@@ -261,5 +261,17 @@ Generated: 2026-06-11T09:12:23.920768+02:00
 | 2026-06-10 | 14:00 | single | jakob | win | 1.00 | L. Siegemund - A. Anisimova | UNDER 20.5 games | 2.00 | 16 | 1-6, 3-6 |
 | 2026-06-10 | 15:00 | double | jakob, tedi | win | 1.15 | N. Kicker - T. Martinez | UNDER 18.5 games | 2.15 | 16 | 6-0, 6-4 |
 | 2026-06-10 | 15:00 | double | jakob, tedi | push | 0.00 | T. Cigarran - V. Aboian | UNDER 19.5 games | 2.14 | None | None |
+| 2026-06-10 | 15:30 | single | tedi | loss | -1.00 | U. Humbert - B. Bonzi | UNDER 22.5 games | 2.20 | 28 | 4-6, 6-3, 3-6 |
 | 2026-06-10 | 16:30 | double | jakob, lucija | win | 1.04 | D. Salkova - M. Trevisan | UNDER 20.5 games | 2.04 | 20 | 6-1, 7-6 |
 | 2026-06-10 | 16:30 | single | jakob | loss | -1.00 | N. Hardt - B. Fernandez | UNDER 18.5 games | 2.18 | 20 | 7-5, 6-2 |
+| 2026-06-11 | 06:00 | single | jakob | win | 1.00 | K. Ogura - M. Imamura | UNDER 19.5 games | 2.00 | 17 | 6-4, 6-1 |
+| 2026-06-11 | 11:00 | single | jakob | win | 1.20 | R. Hijikata - F. Tiafoe | UNDER 22.5 games | 2.20 | 20 | 4-6, 4-6 |
+| 2026-06-11 | 11:00 | single | tedi | loss | -1.00 | R. Montgomery - G. Minnen | UNDER 21.5 games | 2.08 | 23 | 6-4, 7-6 |
+| 2026-06-11 | 12:00 | single | jakob | loss | -1.00 | J. De Jong - F. Bondioli | UNDER 19.5 games | 2.12 | 28 | 6-2, 4-6, 6-4 |
+| 2026-06-11 | 12:00 | single | jakob | push | 0.00 | K. Smith - J. Fearnley | UNDER 21.5 games | 2.16 | None | None |
+| 2026-06-11 | 12:00 | single | tedi | push | 0.00 | T. Prozorova - S. Kraus | UNDER 21.5 games | 2.00 | None | None |
+| 2026-06-11 | 13:30 | single | jakob | win | 1.14 | B. Krejcikova - H. Vandewinkel | UNDER 19.5 games | 2.14 | 17 | 6-1, 6-4 |
+| 2026-06-11 | 15:30 | single | tedi | win | 1.18 | T. Daniel - E. Nava | UNDER 21.5 games | 2.18 | 16 | 6-1, 6-3 |
+| 2026-06-11 | 17:00 | single | jakob | push | 0.00 | B. Shelton - M. Giron | UNDER 24.5 games | 2.14 | None | None |
+| 2026-06-11 | 17:30 | single | lucija | win | 0.93 | C. Hernandez - J. Domingues | OVER 20.5 games | 1.93 | 25 | 6-7, 5-7 |
+| 2026-06-11 | 18:00 | single | jakob | push | 0.00 | D. Lajovic - O. Roca Batalla | UNDER 20.5 games | 2.07 | None | None |
