@@ -1242,18 +1242,88 @@ def main() -> None:
     if not out_dir.is_absolute():
         out_dir = ROOT_DIR / out_dir
 
-    if args.duration == 1:
-        stem = f"tle_scanner_picks_{scan_start.isoformat()}"
-    else:
-        stem = f"tle_scanner_picks_{scan_start.isoformat()}_{scan_end.isoformat()}"
-
-    output_path = out_dir / f"{stem}.json"
+    results_path = out_dir / "ai_tle_results.json"
     latest_path = out_dir / "ai_tle_predictions_latest.json"
     table_path = out_dir / "ai_tle_predictions_table.md"
 
     generated_at = now_iso()
-    existing_open = load_existing_predictions(latest_path)
-    open_picks, ledger_stats = merge_open_predictions(existing_open, picks, generated_at)
+
+    # Results ledger = all picks ever created by this scanner.
+    # It is the single source of truth. Scanner only appends/updates current strict picks.
+    # Settlement later changes settlement_status and rewrites active predictions/table.
+    existing_results_payload = None
+    existing_results: list[dict[str, Any]] = []
+    if results_path.exists():
+        try:
+            existing_results_payload = json.loads(results_path.read_text(encoding="utf-8"))
+            existing_results = load_existing_predictions(results_path)
+        except Exception:
+            existing_results_payload = None
+            existing_results = []
+
+    results_by_key: dict[str, dict[str, Any]] = {}
+    for row in existing_results:
+        key = pick_identity(row)
+        if not key:
+            continue
+        saved = dict(row)
+        saved.setdefault("settlement_status", "PENDING")
+        results_by_key[key] = saved
+
+    new_picks_count = 0
+    refreshed_open_count = 0
+    skipped_already_settled_count = 0
+
+    for raw in picks:
+        key = pick_identity(raw)
+        if not key:
+            continue
+
+        old = results_by_key.get(key)
+        if old and clean(old.get("settlement_status") or "PENDING").upper() in {"WIN", "LOSS", "VOID"}:
+            skipped_already_settled_count += 1
+            continue
+
+        row = dict(raw)
+        row["settlement_status"] = "PENDING"
+        row["first_seen_at"] = (old or {}).get("first_seen_at") or generated_at
+        row["last_seen_at"] = generated_at
+        row["snapshot_count"] = int((old or {}).get("snapshot_count") or 0) + 1
+        row["ledger_status"] = "active_in_latest_snapshot"
+        row["first_odds"] = (old or {}).get("first_odds", row.get("odds"))
+        row["first_tle_probability"] = (old or {}).get("first_tle_probability", row.get("tle_probability"))
+        row["first_book_probability_devig"] = (old or {}).get("first_book_probability_devig", row.get("book_probability_devig"))
+        row["first_tle_edge"] = (old or {}).get("first_tle_edge", row.get("tle_edge"))
+        row["first_tle_ev"] = (old or {}).get("first_tle_ev", row.get("tle_ev"))
+        row["latest_odds"] = row.get("odds")
+        row["latest_tle_probability"] = row.get("tle_probability")
+        row["latest_book_probability_devig"] = row.get("book_probability_devig")
+        row["latest_tle_edge"] = row.get("tle_edge")
+        row["latest_tle_ev"] = row.get("tle_ev")
+
+        if old:
+            refreshed_open_count += 1
+        else:
+            new_picks_count += 1
+        results_by_key[key] = row
+
+    all_results = list(results_by_key.values())
+    all_results.sort(key=lambda r: (clean(r.get("date")), clean(r.get("time")), clean(r.get("event_key")), clean(r.get("selection"))))
+
+    open_picks = [r for r in all_results if clean(r.get("settlement_status") or "PENDING").upper() == "PENDING"]
+    open_picks.sort(key=lambda r: (clean(r.get("date")), clean(r.get("time")), -float(r.get("first_tle_edge") or r.get("tle_edge") or 0)))
+
+    ledger_stats = {
+        "results_existing_before_scan": len(existing_results),
+        "current_snapshot_picks": len(picks),
+        "new_picks_added_to_results": new_picks_count,
+        "open_picks_refreshed": refreshed_open_count,
+        "skipped_already_settled": skipped_already_settled_count,
+        "results_total_after_scan": len(all_results),
+        "open_predictions_after_scan": len(open_picks),
+        "settled_predictions_in_results": len(all_results) - len(open_picks),
+        "source_of_truth": "ai_tle_results.json",
+    }
 
     summary = {
         "generated_at": generated_at,
@@ -1283,29 +1353,35 @@ def main() -> None:
         "counters": dict(sorted(counters.items())),
         "current_snapshot_picks_count": len(picks),
         "open_predictions_count": len(open_picks),
+        "results_total_count": len(all_results),
         "scored_sides_count": len(all_scored),
         "ledger": ledger_stats,
-        "level_counts": dict(Counter(row["tour_level"] for row in open_picks)),
-        "gender_counts": dict(Counter(row["gender"] for row in open_picks)),
+        "level_counts_open": dict(Counter(row.get("tour_level") for row in open_picks)),
+        "gender_counts_open": dict(Counter(row.get("gender") for row in open_picks)),
     }
 
-    payload = {
+    results_payload = {
         "schema_version": 1,
-        "file_type": "ai_repo_tle_open_predictions",
+        "file_type": "ai_tle_results_ledger",
+        "summary": summary,
+        "picks": all_results,
+    }
+
+    predictions_payload = {
+        "schema_version": 1,
+        "file_type": "ai_tle_open_predictions",
         "summary": summary,
         "picks": open_picks,
-        "current_snapshot_picks": picks,
-        "all_scored_sides": all_scored,
     }
 
-    save_json(output_path, payload)
-    save_json(latest_path, payload)
+    save_json(results_path, results_payload)
+    save_json(latest_path, predictions_payload)
     write_predictions_table(table_path, open_picks, summary)
 
     print("AI TLE SCANNER DONE")
     print(json.dumps(summary, indent=2, ensure_ascii=False))
-    print(f"Output: {output_path}")
-    print(f"Latest predictions: {latest_path}")
+    print(f"Results ledger: {results_path}")
+    print(f"Open predictions: {latest_path}")
     print(f"Table: {table_path}")
 
 
