@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-11T09:22:48.452144+02:00",
+  "generated_at": "2026-06-12T13:20:49.598631+02:00",
   "sources": [
     {
       "machine": "jakob",
       "file": "data/jakob_predictions.json",
-      "raw_picks": 9,
-      "active_picks": 9,
+      "raw_picks": 2,
+      "active_picks": 2,
       "rejected_picks": 0
     },
     {
@@ -25,15 +25,16 @@
     {
       "machine": "lucija",
       "file": "data/lucija/lucija_predictions.json",
-      "raw_picks": 3,
-      "active_picks": 3,
+      "raw_picks": 4,
+      "active_picks": 4,
       "rejected_picks": 0
     }
   ],
-  "unique_hub_picks": 17,
-  "raw_group_keys": 17,
+  "unique_hub_picks": 9,
+  "raw_group_keys": 9,
   "consensus_counts": {
-    "single": 16,
-    "quad": 1
+    "single": 6,
+    "quad": 1,
+    "double": 2
   }
 }
