@@ -1018,6 +1018,14 @@ def main() -> None:
         if clean(item)
     }
 
+    allowed_resolve_methods = {
+        clean(item).lower()
+        for item in args.allowed_resolve_methods.split(",")
+        if clean(item)
+    }
+    if not allowed_resolve_methods:
+        allowed_resolve_methods = {"api_mapping", "exact_name"}
+
     canonical_manifest = args.canonical_manifest
 
     api_mapping_path = args.api_player_mapping
