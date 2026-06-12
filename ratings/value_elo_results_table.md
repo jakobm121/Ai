@@ -1,8 +1,8 @@
 # Value + ELO settled results
 
-Generated: 2026-06-11T09:15:18.481667+02:00
+Generated: 2026-06-12T13:16:27.516224+02:00
 
-Overall: **107-110**, WR **49.31%**, Profit **21.148u**, ROI **7.89%**, Avg odds **2.245**
+Overall: **109-111**, WR **49.55%**, Profit **23.873u**, ROI **8.78%**, Avg odds **2.248**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -228,3 +228,6 @@ Overall: **107-110**, WR **49.31%**, Profit **21.148u**, ROI **7.89%**, Avg odds
 | 2026-06-10 | itf | J. Lim - M. Rouvroy | J. Lim | 2.0 | 1.25 | win | 1.25 | 14.79 |  |
 | 2026-06-10 | challenger | N. Sanchez Izquierdo - L. van Assche | N. Sanchez Izquierdo | 2.63 | 1.25 | win | 2.0375 | 33.86 |  |
 | 2026-06-10 | challenger | T. Schoolkate - P. Jubb | P. Jubb | 2.35 | 1.5 | loss | -1.5 | 78.09 |  |
+| 2026-06-11 | challenger | L. Romero Gormaz - M. Sherif | L. Romero Gormaz | 2.5 | 1.25 | win | 1.875 | 70.27 |  |
+| 2026-06-11 | atp | S. Shimabukuro - N. Kyrgios | S. Shimabukuro | 2.4 | 1.5 | win | 2.1 | 19.11 |  |
+| 2026-06-11 | challenger | T. Faurel - C. Tabur | T. Faurel | 2.62 | 1.25 | loss | -1.25 | 9.82 |  |
