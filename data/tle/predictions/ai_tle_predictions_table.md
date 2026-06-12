@@ -1,7 +1,7 @@
 # AI TLE Predictions
 
-Generated: `2026-06-12T13:44:10+00:00`
-Open predictions: `11`
+Generated: `2026-06-12T16:28:58+00:00`
+Open predictions: `15`
 
 | # | Date | Time | Level | Match | Pick | Odds | TLE % | Book % | Edge | EV | Status |
 |---:|---|---|---|---|---|---:|---:|---:|---:|---:|---|
@@ -15,4 +15,8 @@ Open predictions: `11`
 | 8 | 2026-06-12 | 17:00 | itf | O. Simion - J. Lim | O. Simion | 2.525 | 41.64% | 36.64% | 5.00% | 5.15% | PENDING |
 | 9 | 2026-06-12 | 17:45 | challenger | F. Balshaw - C. Tabur | C. Tabur | 1.591818 | 64.84% | 58.31% | 6.53% | 3.21% | PENDING |
 | 10 | 2026-06-12 | 18:00 | challenger | T. Schoolkate - O. Tarvet | T. Schoolkate | 1.707273 | 69.98% | 54.65% | 15.34% | 19.48% | PENDING |
-| 11 | 2026-06-12 | 19:30 | challenger | F. Romano - J. Pinnington Jones | F. Romano | 2.966364 | 39.42% | 31.39% | 8.03% | 16.94% | PENDING |
+| 11 | 2026-06-12 | 19:00 | challenger | N. Kicker - F. Coria | F. Coria | 2.397 | 64.18% | 38.98% | 25.20% | 53.84% | PENDING |
+| 12 | 2026-06-12 | 19:00 | itf | O. Baris - D. Chan | O. Baris | 2.16125 | 65.47% | 42.99% | 22.48% | 41.51% | PENDING |
+| 13 | 2026-06-12 | 19:30 | itf | Z. Pawlikowska - P. Charney | Z. Pawlikowska | 2.964286 | 59.75% | 31.27% | 28.48% | 77.12% | PENDING |
+| 14 | 2026-06-12 | 20:15 | challenger | F. Romano - J. Pinnington Jones | F. Romano | 2.966364 | 39.42% | 31.39% | 8.03% | 16.94% | PENDING |
+| 15 | 2026-06-12 | 22:00 | itf | L. Fullana - C. Alves | L. Fullana | 2.765556 | 53.74% | 33.41% | 20.33% | 48.62% | PENDING |
