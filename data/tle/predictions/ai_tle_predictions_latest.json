@@ -2,166 +2,96 @@
   "schema_version": 1,
   "file_type": "ai_tle_open_predictions",
   "summary": {
-    "generated_at": "2026-06-13T11:18:00+00:00",
-    "results_path": "data/tle/predictions/ai_tle_results.json",
-    "predictions_path": "data/tle/predictions/ai_tle_predictions_latest.json",
-    "date_start": "2026-06-13",
-    "date_stop": "2026-06-13",
-    "api_fixtures_loaded": 204,
-    "api_events_indexed": 204,
-    "results_loaded": 32,
-    "results_total_after_settle": 32,
-    "active_predictions_after_settle": 8,
+    "generated_at": "2026-06-13T11:19:40+00:00",
+    "scan_date_start": "2026-06-13",
+    "scan_date_end": "2026-06-13",
+    "settings": {
+      "bookmaker": "Pncl",
+      "fallback": "clean_average",
+      "min_edge": 0.05,
+      "min_ev": 0.0,
+      "min_odds": 1.2,
+      "max_odds": 8.0,
+      "min_overround": -0.03,
+      "max_overround": 0.18,
+      "max_book_deviation": 0.35,
+      "min_book_pairs": 3,
+      "allowed_resolve_methods": [
+        "api_mapping",
+        "exact_name"
+      ],
+      "min_start_minutes": 30.0,
+      "levels": [
+        "atp_wta",
+        "challenger",
+        "grand_slam",
+        "itf"
+      ],
+      "main_min_level_matches": 20,
+      "main_min_surface_matches": 10,
+      "itf_min_level_matches": 5,
+      "challenger_min_level_matches": 5,
+      "state_note": "TLE state uses Tennis-ELO canonical matches strictly before scan start date.",
+      "historical_matches_loaded_before_scan_date": 215534
+    },
     "counters": {
-      "reason_not_finished": 8,
-      "reason_settled": 9,
-      "status_loss": 11,
-      "status_pending": 8,
-      "status_void": 1,
-      "status_win": 12
+      "api_fixture_events": 204,
+      "api_odds_events": 122,
+      "away_resolve_api_mapping": 28,
+      "away_resolve_exact_name": 1,
+      "home_resolve_api_key_unmapped": 1,
+      "home_resolve_api_mapping": 26,
+      "home_resolve_exact_name": 2,
+      "odds_events_with_fixture": 122,
+      "picks": 3,
+      "picks_gender_men": 2,
+      "picks_gender_women": 1,
+      "picks_level_challenger": 1,
+      "picks_level_itf": 2,
+      "scored_level_atp_wta": 1,
+      "scored_level_challenger": 2,
+      "scored_level_itf": 4,
+      "scored_matches": 7,
+      "skipped_challenger_missing_level_rating": 3,
+      "skipped_level_qualifying": 4,
+      "skipped_main_tour_level_min_sample": 6,
+      "skipped_main_tour_missing_level_rating": 5,
+      "skipped_main_tour_surface_min_sample": 1,
+      "skipped_main_tour_unknown_surface": 6,
+      "skipped_min_book_pairs": 22,
+      "skipped_missing_pair_odds": 11,
+      "skipped_starts_too_soon": 27,
+      "skipped_status_cancelled": 2,
+      "skipped_status_finished": 25,
+      "skipped_status_retired": 2,
+      "skipped_unsafe_away_api_mapping": 1,
+      "skipped_unsafe_home_api_key_unmapped": 1,
+      "skipped_unsafe_player_resolve": 1
     },
-    "overall": {
-      "total_picks": 32,
-      "settled_bets": 23,
-      "wins": 12,
-      "losses": 11,
-      "void": 1,
-      "pending": 8,
-      "staked": 23.0,
-      "profit": 6.858605,
-      "roi": 0.2982,
-      "hit_rate": 0.521739,
-      "avg_odds": 2.522375
+    "current_snapshot_picks_count": 3,
+    "open_predictions_count": 9,
+    "results_total_count": 33,
+    "scored_sides_count": 14,
+    "ledger": {
+      "results_existing_before_scan": 32,
+      "current_snapshot_picks": 3,
+      "new_picks_added_to_results": 1,
+      "open_picks_refreshed": 2,
+      "skipped_already_settled": 0,
+      "results_total_after_scan": 33,
+      "open_predictions_after_scan": 9,
+      "settled_predictions_in_results": 24,
+      "source_of_truth": "ai_tle_results.json"
     },
-    "by_level": {
-      "atp_wta": {
-        "total_picks": 1,
-        "settled_bets": 0,
-        "wins": 0,
-        "losses": 0,
-        "void": 0,
-        "pending": 1,
-        "staked": 0.0,
-        "profit": 0,
-        "roi": null,
-        "hit_rate": null,
-        "avg_odds": null
-      },
-      "challenger": {
-        "total_picks": 8,
-        "settled_bets": 5,
-        "wins": 2,
-        "losses": 3,
-        "void": 1,
-        "pending": 2,
-        "staked": 5.0,
-        "profit": 0.951819,
-        "roi": 0.190364,
-        "hit_rate": 0.4,
-        "avg_odds": 2.565455
-      },
-      "itf": {
-        "total_picks": 23,
-        "settled_bets": 18,
-        "wins": 10,
-        "losses": 8,
-        "void": 0,
-        "pending": 5,
-        "staked": 18.0,
-        "profit": 5.906786,
-        "roi": 0.328155,
-        "hit_rate": 0.555556,
-        "avg_odds": 2.510408
-      }
+    "level_counts_open": {
+      "itf": 6,
+      "challenger": 2,
+      "atp_wta": 1
     },
-    "by_gender": {
-      "men": {
-        "total_picks": 20,
-        "settled_bets": 15,
-        "wins": 8,
-        "losses": 7,
-        "void": 1,
-        "pending": 4,
-        "staked": 15.0,
-        "profit": 4.374319,
-        "roi": 0.291621,
-        "hit_rate": 0.533333,
-        "avg_odds": 2.519392
-      },
-      "women": {
-        "total_picks": 12,
-        "settled_bets": 8,
-        "wins": 4,
-        "losses": 4,
-        "void": 0,
-        "pending": 4,
-        "staked": 8.0,
-        "profit": 2.484286,
-        "roi": 0.310536,
-        "hit_rate": 0.5,
-        "avg_odds": 2.527966
-      }
-    },
-    "by_status": {
-      "LOSS": {
-        "total_picks": 11,
-        "settled_bets": 11,
-        "wins": 0,
-        "losses": 11,
-        "void": 0,
-        "pending": 0,
-        "staked": 11.0,
-        "profit": -11.0,
-        "roi": -1.0,
-        "hit_rate": 0.0,
-        "avg_odds": 2.559637
-      },
-      "PENDING": {
-        "total_picks": 8,
-        "settled_bets": 0,
-        "wins": 0,
-        "losses": 0,
-        "void": 0,
-        "pending": 8,
-        "staked": 0.0,
-        "profit": 0,
-        "roi": null,
-        "hit_rate": null,
-        "avg_odds": null
-      },
-      "VOID": {
-        "total_picks": 1,
-        "settled_bets": 0,
-        "wins": 0,
-        "losses": 0,
-        "void": 1,
-        "pending": 0,
-        "staked": 0.0,
-        "profit": 0,
-        "roi": null,
-        "hit_rate": null,
-        "avg_odds": null
-      },
-      "WIN": {
-        "total_picks": 12,
-        "settled_bets": 12,
-        "wins": 12,
-        "losses": 0,
-        "void": 0,
-        "pending": 0,
-        "staked": 12.0,
-        "profit": 17.858605,
-        "roi": 1.488217,
-        "hit_rate": 1.0,
-        "avg_odds": 2.488217
-      }
-    },
-    "files_written": [
-      "data/tle/predictions/ai_tle_results.json",
-      "data/tle/predictions/ai_tle_predictions_latest.json",
-      "data/tle/predictions/ai_tle_predictions_table.md",
-      "data/tle/predictions/ai_tle_results_table.md"
-    ]
+    "gender_counts_open": {
+      "women": 5,
+      "men": 4
+    }
   },
   "picks": [
     {
@@ -795,6 +725,84 @@
       "api_event_time": "13:45"
     },
     {
+      "event_key": "12136350",
+      "date": "2026-06-13",
+      "time": "15:00",
+      "tournament": "W35 San Gregorio 3 (Italy)",
+      "tournament_key": "13966",
+      "round": "W35 San Gregorio 3 - Semi-finals",
+      "event_type": "Itf Women Singles",
+      "gender": "women",
+      "tour_level": "itf",
+      "surface": "unknown",
+      "match": "N. Podoroska - A. Zantedeschi",
+      "selection": "N. Podoroska",
+      "opponent": "A. Zantedeschi",
+      "selected_side": "Home",
+      "selected_player_side": "player_1",
+      "home_player": "N. Podoroska",
+      "away_player": "A. Zantedeschi",
+      "home_tle_key": "women:sackmann:206408",
+      "away_tle_key": "women:sackmann:215878",
+      "odds": 1.74,
+      "odds_source": "clean_average",
+      "book_probability_devig": 0.52973,
+      "tle_probability": 0.581226,
+      "tle_edge": 0.051496,
+      "tle_ev": 0.011333,
+      "model": "itf_100_level_overall",
+      "model_details": {
+        "home_level_matches": 104,
+        "away_level_matches": 194,
+        "home_level_elo": 1736.35,
+        "away_level_elo": 1679.403,
+        "home_resolve_method": "api_mapping",
+        "away_resolve_method": "api_mapping",
+        "home_odds": 1.74,
+        "away_odds": 1.96,
+        "overround": 0.084917,
+        "odds_details": {
+          "book_pairs_total": 4,
+          "book_pairs_valid": 4,
+          "book_pairs_rejected_overround": 0,
+          "books_used": [
+            "1xBet",
+            "Marathon",
+            "Sbo",
+            "bet365"
+          ],
+          "home_book_odds": [
+            1.74,
+            1.74,
+            1.76,
+            1.72
+          ],
+          "away_book_odds": [
+            1.95,
+            1.95,
+            1.94,
+            2.0
+          ]
+        },
+        "minutes_until_start": 100.32
+      },
+      "settlement_status": "PENDING",
+      "first_seen_at": "2026-06-13T11:19:40+00:00",
+      "last_seen_at": "2026-06-13T11:19:40+00:00",
+      "snapshot_count": 1,
+      "ledger_status": "active_in_latest_snapshot",
+      "first_odds": 1.74,
+      "first_tle_probability": 0.581226,
+      "first_book_probability_devig": 0.52973,
+      "first_tle_edge": 0.051496,
+      "first_tle_ev": 0.011333,
+      "latest_odds": 1.74,
+      "latest_tle_probability": 0.581226,
+      "latest_book_probability_devig": 0.52973,
+      "latest_tle_edge": 0.051496,
+      "latest_tle_ev": 0.011333
+    },
+    {
       "event_key": "12136338",
       "date": "2026-06-13",
       "time": "16:00",
@@ -869,12 +877,12 @@
             1.73
           ]
         },
-        "minutes_until_start": 471.87
+        "minutes_until_start": 160.32
       },
       "settlement_status": "PENDING",
       "first_seen_at": "2026-06-13T05:55:13+00:00",
-      "last_seen_at": "2026-06-13T06:08:07+00:00",
-      "snapshot_count": 2,
+      "last_seen_at": "2026-06-13T11:19:40+00:00",
+      "snapshot_count": 3,
       "ledger_status": "active_in_latest_snapshot",
       "first_odds": 2.038889,
       "first_tle_probability": 0.615395,
@@ -885,20 +893,7 @@
       "latest_tle_probability": 0.615395,
       "latest_book_probability_devig": 0.455974,
       "latest_tle_edge": 0.159421,
-      "latest_tle_ev": 0.254722,
-      "settlement_reason": "not_finished",
-      "settlement_odds": 2.038889,
-      "stake": 1.0,
-      "profit": 0.0,
-      "won": null,
-      "winner_side": null,
-      "api_event_status": "",
-      "api_event_winner": "",
-      "api_final_score": "-",
-      "api_first_player": "D. E. Galan",
-      "api_second_player": "F. Balshaw",
-      "api_event_date": "2026-06-13",
-      "api_event_time": "16:00"
+      "latest_tle_ev": 0.254722
     },
     {
       "event_key": "12136345",
@@ -957,12 +952,12 @@
             2.37
           ]
         },
-        "minutes_until_start": 531.87
+        "minutes_until_start": 220.32
       },
       "settlement_status": "PENDING",
       "first_seen_at": "2026-06-13T05:55:13+00:00",
-      "last_seen_at": "2026-06-13T06:08:07+00:00",
-      "snapshot_count": 2,
+      "last_seen_at": "2026-06-13T11:19:40+00:00",
+      "snapshot_count": 3,
       "ledger_status": "active_in_latest_snapshot",
       "first_odds": 1.506667,
       "first_tle_probability": 0.727862,
@@ -973,20 +968,7 @@
       "latest_tle_probability": 0.727862,
       "latest_book_probability_devig": 0.614005,
       "latest_tle_edge": 0.113857,
-      "latest_tle_ev": 0.096646,
-      "settlement_reason": "not_finished",
-      "settlement_odds": 1.506667,
-      "stake": 1.0,
-      "profit": 0.0,
-      "won": null,
-      "winner_side": null,
-      "api_event_status": "",
-      "api_event_winner": "",
-      "api_final_score": "-",
-      "api_first_player": "G. Piraino",
-      "api_second_player": "F. Tabacco",
-      "api_event_date": "2026-06-13",
-      "api_event_time": "17:00"
+      "latest_tle_ev": 0.096646
     }
   ]
 }
