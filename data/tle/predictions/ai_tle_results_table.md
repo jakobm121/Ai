@@ -1,12 +1,12 @@
 # AI TLE Results
 
-Generated: `2026-06-13T11:18:00+00:00`
-Total picks: `32`
-Settled bets: `23`
-Pending: `8`
-Profit: `6.858605`
-ROI: `29.82%`
-Hit rate: `52.17%`
+Generated: `2026-06-13T14:43:47+00:00`
+Total picks: `33`
+Settled bets: `30`
+Pending: `2`
+Profit: `10.331499`
+ROI: `34.44%`
+Hit rate: `53.33%`
 
 | # | Date | Time | Level | Match | Pick | Odds | Status | Profit | Edge | EV | Winner | Score | Reason |
 |---:|---|---|---|---|---|---:|---|---:|---:|---:|---|---|---|
@@ -32,13 +32,14 @@ Hit rate: `52.17%`
 | 20 | 2026-06-13 | 10:30 | itf | R. Pascual Ferra - C. Bouchelaghem | C. Bouchelaghem | 1.78625 | WIN | 0.78625 | 5.22% | 2.00% | Second Player | 0 - 2 | settled |
 | 21 | 2026-06-13 | 10:30 | itf | M. Walters - D. Mosejczuk | M. Walters | 2.818333 | LOSS | -1.0 | 18.25% | 44.08% | Second Player | 0 - 2 | settled |
 | 22 | 2026-06-13 | 10:30 | itf | R. Izquierdo Luque - J. Domingues | J. Domingues | 1.8525 | WIN | 0.8525 | 12.80% | 16.71% | Second Player | 0 - 2 | settled |
-| 23 | 2026-06-13 | 11:00 | itf | R. Roura Llaverias - M. Soriano Santiago | M. Soriano Santiago | 1.942222 | PENDING |  | 9.11% | 10.22% |  | - | not_finished |
+| 23 | 2026-06-13 | 11:00 | itf | R. Roura Llaverias - M. Soriano Santiago | M. Soriano Santiago | 1.942222 | LOSS | -1.0 | 9.11% | 10.22% | First Player | 2 - 0 | settled |
 | 24 | 2026-06-13 | 11:00 | itf | N. Vargova - L. Vujovic | L. Vujovic | 2.827778 | WIN | 1.827778 | 7.10% | 12.76% | Second Player | 0 - 2 | settled |
-| 25 | 2026-06-13 | 11:00 | itf | M. Weckerle - V. Steiner | M. Weckerle | 3.0425 | PENDING |  | 8.69% | 19.16% |  | - | not_finished |
+| 25 | 2026-06-13 | 11:00 | itf | M. Weckerle - V. Steiner | M. Weckerle | 3.0425 | LOSS | -1.0 | 8.69% | 19.16% | Second Player | 0 - 2 | settled |
 | 26 | 2026-06-13 | 11:00 | itf | K. Kuzmova - S. Broadus | K. Kuzmova | 2.17 | LOSS | -1.0 | 23.11% | 42.86% | Second Player | 0 - 2 | settled |
-| 27 | 2026-06-13 | 12:00 | challenger | O. Tarvet - F. Romano | F. Romano | 2.622727 | PENDING |  | 25.25% | 59.56% |  | 0 - 1 | not_finished |
-| 28 | 2026-06-13 | 12:30 | itf | E. Bennemann - T. Gadamauri | T. Gadamauri | 4.026 | PENDING |  | 17.08% | 61.90% |  | - | not_finished |
-| 29 | 2026-06-13 | 13:00 | itf | I. Primorac - E. Avanesyan | I. Primorac | 3.976 | PENDING |  | 16.47% | 58.12% |  | 0 - 0 | not_finished |
-| 30 | 2026-06-13 | 13:00 | atp_wta | A. Bublik - T. Fritz | T. Fritz | 2.084167 | PENDING |  | 6.48% | 8.12% |  | - | not_finished |
-| 31 | 2026-06-13 | 16:00 | challenger | D. E. Galan - F. Balshaw | D. E. Galan | 2.038889 | PENDING |  | 15.94% | 25.47% |  | - | not_finished |
-| 32 | 2026-06-13 | 17:00 | itf | G. Piraino - F. Tabacco | G. Piraino | 1.506667 | PENDING |  | 11.39% | 9.66% |  | - | not_finished |
+| 27 | 2026-06-13 | 12:00 | challenger | O. Tarvet - F. Romano | F. Romano | 2.622727 | WIN | 1.622727 | 25.25% | 59.56% | Second Player | 1 - 2 | settled |
+| 28 | 2026-06-13 | 12:30 | itf | E. Bennemann - T. Gadamauri | T. Gadamauri | 4.026 | WIN | 3.026 | 17.08% | 61.90% | Second Player | 0 - 2 | settled |
+| 29 | 2026-06-13 | 13:00 | itf | I. Primorac - E. Avanesyan | I. Primorac | 3.976 | LOSS | -1.0 | 16.47% | 58.12% | Second Player | 1 - 2 | settled |
+| 30 | 2026-06-13 | 13:00 | atp_wta | A. Bublik - T. Fritz | T. Fritz | 2.084167 | WIN | 1.084167 | 6.48% | 8.12% | Second Player | 0 - 2 | settled |
+| 31 | 2026-06-13 | 15:00 | itf | N. Podoroska - A. Zantedeschi | N. Podoroska | 1.74 | WIN | 0.74 | 5.15% | 1.13% | First Player | 2 - 0 | settled |
+| 32 | 2026-06-13 | 16:00 | challenger | D. E. Galan - F. Balshaw | D. E. Galan | 2.038889 | PENDING |  | 15.94% | 25.47% |  | - | not_finished |
+| 33 | 2026-06-13 | 17:00 | itf | G. Piraino - F. Tabacco | G. Piraino | 1.506667 | PENDING |  | 11.39% | 9.66% |  | - | not_finished |
