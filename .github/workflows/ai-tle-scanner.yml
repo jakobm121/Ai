@@ -19,12 +19,7 @@ on:
         description: "Levels"
         required: true
         default: "challenger,itf,atp_wta,grand_slam"
-
-  schedule:
-    - cron: "15 7 * * *"
-    - cron: "15 10 * * *"
-    - cron: "15 13 * * *"
-
+        
 permissions:
   contents: write
 
