@@ -1,55 +1,65 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-13T08:47:16.721823+02:00`
+Generated: `2026-06-13T22:41:47.720253+02:00`
 
-Pending picks: **0**
+Pending picks: **1**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 191 | 91 | 86 | 1 | 13 | 51.41% | +8.09u | 6.10% |
+| 201 | 95 | 92 | 1 | 13 | 50.80% | +6.65u | 4.74% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 3 | 1 | 2 | 0 | 0 | 33.33% | -0.68u | -30.00% |
+| 13 | 5 | 8 | 0 | 0 | 38.46% | -2.12u | -21.70% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 173 | 81 | 80 | 1 | 11 | 50.31% | +5.00u | 4.14% |
+| 183 | 85 | 86 | 1 | 11 | 49.71% | +3.56u | 2.77% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 125 | 60 | 56 | 1 | 8 | 51.72% | +6.19u | 7.12% |
+| 134 | 63 | 62 | 1 | 8 | 50.40% | +3.96u | 4.23% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 100 | 49 | 47 | 0 | 4 | 51.04% | +2.11u | 2.93% |
+| 110 | 53 | 53 | 0 | 4 | 50.00% | +0.67u | 0.84% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 23 | 13 | 10 | 0 | 0 | 56.52% | +1.93u | 11.18% |
+| 25 | 13 | 12 | 0 | 0 | 52.00% | +0.43u | 2.28% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 168 | 78 | 76 | 1 | 13 | 50.65% | +6.17u | 5.34% |
+| 176 | 82 | 80 | 1 | 13 | 50.62% | +6.22u | 5.12% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-13 | 15:00 | 10 | A. Mannarino - A. De Minaur | UNDER 20.5 games | 2.08 | ✅ win | 72.71 | 16 | 4-6, 0-6 | +0.81u |
+| 2026-06-13 | 14:00 | 6 | D. Kasatkina - A. Blinkova | UNDER 20.5 games | 1.95 | ✅ win | 74.13 | 17 | 3-6, 2-6 | +0.71u |
+| 2026-06-13 | 14:00 | 9 | A. Krueger - D. Vidmanova | UNDER 20.5 games | 1.96 | ❌ loss | 72.99 | 29 | 6-4, 3-6, 6-4 | -0.75u |
+| 2026-06-13 | 13:30 | 4 | H. Klugman - A. Zakharova | UNDER 20.0 games | 2.08 | ❌ loss | 76.47 | 21 | 7-6, 6-2 | -0.75u |
+| 2026-06-13 | 13:30 | 2 | E. Raducanu - K. Rakhimova | UNDER 19.5 games | 2.05 | ❌ loss | 81.04 | 21 | 6-3, 7-5 | -0.75u |
+| 2026-06-13 | 13:30 | 7 | A. Ruzic - K. Juvan | OVER 21.5 games | 2.02 | ❌ loss | 73.89 | 19 | 6-3, 6-4 | -0.75u |
+| 2026-06-13 | 13:00 | 3 | Z. Svajda - L. Broady | UNDER 21.5 games | 2.00 | ✅ win | 76.96 | 20 | 7-5, 6-2 | +0.75u |
+| 2026-06-13 | 13:00 | 11 | M. Damm - D. Merida Aguilar | UNDER 22.5 games | 2.05 | ✅ win | 71.71 | 17 | 6-3, 6-2 | +0.79u |
+| 2026-06-13 | 12:00 | 1 | S. Kenin - E. Jacquemot | OVER 22.5 games | 2.10 | ❌ loss | 84.58 | 20 | 6-4, 6-4 | -0.75u |
+| 2026-06-13 | 11:00 | 5 | B. Krejcikova - M. Linette | UNDER 20.5 games | 2.07 | ❌ loss | 74.28 | 22 | 6-3, 7-6 | -0.75u |
 | 2026-06-12 | 14:00 | 2 | B. Bonzi - A. De Minaur | UNDER 21.5 games | 2.10 | ✅ win | 72.72 | 18 | 2-6, 4-6 | +0.82u |
 | 2026-06-12 | 12:20 | 1 | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.10 | ❌ loss | 80.07 | 27 | 4-6, 6-3, 2-6 | -0.75u |
 | 2026-06-11 | 15:30 | 2 | E. Rybakina - T. Maria | UNDER 20.5 games | 1.97 | ❌ loss | 77.18 | 31 | 6-7, 7-5, 6-0 | -0.75u |
@@ -120,14 +130,4 @@ Pending picks: **0**
 | 2026-06-05 | 14:00 | 1 | C. Paquet - D. Astakhova | OVER 22.5 games | 2.15 | ❌ loss | 84.81 | 21 | 5-7, 3-6 | -0.75u |
 | 2026-06-05 | 12:00 | 4 | N. Makhlouf - B. Willwerth | UNDER 18.5 games | 2.20 | ✅ win | 73.15 | 18 | 0-6, 5-7 | +0.90u |
 | 2026-06-05 | 11:30 | 7 | T. Preston - A. Krueger | UNDER 20.5 games | 2.00 | ❌ loss | 70.13 | 27 | 6-2, 3-6, 4-6 | -0.75u |
-| 2026-06-05 | 11:30 | 3 | F. Romano - O. Virtanen | UNDER 21.5 games | 2.14 | ✅ win | 76.97 | 20 | 4-6, 4-6 | +0.85u |
-| 2026-06-04 | 15:30 | 4 | H. Barton - N. Gombos | UNDER 20.5 games | 2.20 | ✅ win | 75.88 | 19 | 6-3, 6-4 | +0.90u |
-| 2026-06-04 | 13:30 | 1 | M. Trungelliti - Y. H. Hsu | UNDER 19.5 games | 2.10 | ❌ loss | 77.60 | 23 | 3-6, 6-1, 6-1 | -0.75u |
-| 2026-06-04 | 13:00 | 7 | C. Monnet - T. Prozorova | UNDER 19.5 games | 2.16 | ❌ loss | 71.54 | 26 | 1-6, 6-4, 6-3 | -0.75u |
-| 2026-06-04 | 13:00 | 3 | A. Eala - A. Charaeva | UNDER 19.5 games | 2.16 | ❌ loss | 76.37 | 20 | 6-2, 7-5 | -0.75u |
-| 2026-06-04 | 12:30 | 8 | R. Sramkova - T. Wuerth | UNDER 19.5 games | 2.10 | ⚪ void | 70.29 |  |  | 0.00u |
-| 2026-06-04 | 11:30 | 2 | R. Strombachs - P. Henning | UNDER 20.5 games | 2.12 | ✅ win | 77.00 | 17 | 2-6, 3-6 | +0.84u |
-| 2026-06-04 | 11:00 | 6 | V. Sachko - V. Kopriva | UNDER 20.5 games | 2.00 | ❌ loss | 71.89 | 30 | 6-1, 4-6, 7-6 | -0.75u |
-| 2026-06-04 | 10:00 | 5 | R. Guna - G. Ghetu | UNDER 19.5 games | 2.11 | ❌ loss | 72.28 | 35 | 7-6, 6-7, 6-3 | -0.75u |
-| 2026-06-03 | 14:30 | 4 | T. Pieri - S. Costoulas | UNDER 18.5 games | 2.06 | ⚪ void | 75.96 |  |  | 0.00u |
 

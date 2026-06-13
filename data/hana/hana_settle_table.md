@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-13T08:47:17.036842+02:00
+Generated: 2026-06-13T22:41:48.063282+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 267 | 267 | 129 | 116 | 22 | 52.65% | 21.52u | 8.78% |
+| 283 | 283 | 137 | 124 | 22 | 52.49% | 21.76u | 8.34% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 44 | 44 | 24 | 17 | 3 | 58.54% | 8.66u | 21.12% |
-| single | 206 | 206 | 96 | 91 | 19 | 51.34% | 10.86u | 5.81% |
-| triple | 17 | 17 | 9 | 8 | 0 | 52.94% | 2.0u | 11.76% |
+| double | 48 | 48 | 25 | 20 | 3 | 55.56% | 6.79u | 15.09% |
+| single | 216 | 216 | 102 | 95 | 19 | 51.78% | 12.97u | 6.58% |
+| triple | 19 | 19 | 10 | 9 | 0 | 52.63% | 2.0u | 10.53% |
 
 ## Results
 
@@ -287,3 +287,19 @@ Generated: 2026-06-13T08:47:17.036842+02:00
 | 2026-06-12 | 14:00 | single | jakob | win | 1.10 | B. Bonzi - A. De Minaur | UNDER 21.5 games | 2.10 | 18 | 2-6, 4-6 |
 | 2026-06-12 | 15:00 | double | lucija, tedi | win | 0.99 | C. Naef - A. Urhobo | UNDER 20.5 games | 1.99 | 19 | 6-3, 6-4 |
 | 2026-06-12 | 16:00 | single | lucija | win | 0.94 | R. Brancaccio - R. Carballes Baena | OVER 22.0 games | 1.94 | 28 | 4-6, 6-3, 3-6 |
+| 2026-06-13 | 11:00 | double | jakob, tedi | loss | -1.00 | B. Krejcikova - M. Linette | UNDER 20.5 games | 2.07 | 22 | 6-3, 7-6 |
+| 2026-06-13 | 11:00 | double | lucija, tedi | win | 1.13 | N. Vargova - L. Vujovic | UNDER 19.5 games | 2.13 | 18 | 4-6, 2-6 |
+| 2026-06-13 | 12:00 | single | lucija | win | 0.85 | D. Sweeny - T. Samuel | OVER 20.5 games | 1.85 | 29 | 5-7, 6-2, 6-3 |
+| 2026-06-13 | 12:00 | single | tedi | win | 1.10 | M. Lajal - Y. Bu | UNDER 22.5 games | 2.10 | 17 | 4-6, 1-6 |
+| 2026-06-13 | 12:00 | single | jakob | loss | -1.00 | S. Kenin - E. Jacquemot | OVER 22.5 games | 2.10 | 20 | 6-4, 6-4 |
+| 2026-06-13 | 13:00 | single | jakob | win | 1.05 | M. Damm - D. Merida Aguilar | UNDER 22.5 games | 2.05 | 17 | 6-3, 6-2 |
+| 2026-06-13 | 13:00 | triple | jakob, lucija, tedi | win | 1.00 | Z. Svajda - L. Broady | UNDER 21.5 games | 2.00 | 20 | 7-5, 6-2 |
+| 2026-06-13 | 13:30 | single | jakob | loss | -1.00 | A. Ruzic - K. Juvan | OVER 21.5 games | 2.02 | 19 | 6-3, 6-4 |
+| 2026-06-13 | 13:30 | double | jakob, lucija | loss | -1.00 | E. Raducanu - K. Rakhimova | UNDER 19.5 games | 2.05 | 21 | 6-3, 7-5 |
+| 2026-06-13 | 13:30 | triple | jakob, lucija, tedi | loss | -1.00 | H. Klugman - A. Zakharova | UNDER 20.0 games | 2.08 | 21 | 7-6, 6-2 |
+| 2026-06-13 | 14:00 | single | jakob | loss | -1.00 | A. Krueger - D. Vidmanova | UNDER 20.5 games | 1.96 | 29 | 6-4, 3-6, 6-4 |
+| 2026-06-13 | 14:00 | single | tedi | win | 1.08 | D. Kasatkina - A. Blinkova | UNDER 20.0 games | 2.08 | 17 | 3-6, 2-6 |
+| 2026-06-13 | 14:00 | single | jakob | win | 0.95 | D. Kasatkina - A. Blinkova | UNDER 20.5 games | 1.95 | 17 | 3-6, 2-6 |
+| 2026-06-13 | 14:30 | double | lucija, tedi | loss | -1.00 | D. Jorda Sanchis - T. Boyer | UNDER 21.5 games | 2.14 | 31 | 3-6, 6-4, 7-5 |
+| 2026-06-13 | 15:00 | single | jakob | win | 1.08 | A. Mannarino - A. De Minaur | UNDER 20.5 games | 2.08 | 16 | 4-6, 0-6 |
+| 2026-06-13 | 17:30 | single | tedi | loss | -1.00 | G. I. Justo - L. E. Ambrogi | UNDER 21.5 games | 2.00 | 30 | 6-4, 5-7, 2-6 |

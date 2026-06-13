@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-13T08:47:16.848376+02:00
+Generated: 2026-06-13T22:41:47.858121+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 84 | 84 | 0 | 40 | 36 | 8 | 52.63% | 7.54u | 8.98% |
-| tedi_v2_test | 23 | 23 | 0 | 11 | 12 | 0 | 47.83% | 0.06u | 0.26% |
+| tedi_main_150 | 92 | 92 | 0 | 44 | 40 | 8 | 52.38% | 7.85u | 8.53% |
+| tedi_v2_test | 26 | 26 | 0 | 13 | 13 | 0 | 50.0% | 1.19u | 4.58% |
 
 ## Results
 
@@ -120,3 +120,14 @@ Generated: 2026-06-13T08:47:16.848376+02:00
 | 2026-06-12 | 13:30 | tedi_main_150 | win | 1.05 | S. Cirstea - E. Raducanu | UNDER 21.5 games | 2.05 | 18 | 4-6, 2-6 |
 | 2026-06-12 | 13:30 | tedi_main_150 | loss | -1.00 | Z. Kolar - F. Cina | UNDER 21.5 games | 2.06 | 29 | 6-4, 4-6, 3-6 |
 | 2026-06-12 | 15:00 | tedi_main_150 | win | 0.99 | C. Naef - A. Urhobo | UNDER 20.5 games | 1.99 | 19 | 6-3, 6-4 |
+| 2026-06-13 | 11:00 | tedi_main_150 | loss | -1.00 | B. Krejcikova - M. Linette | UNDER 20.5 games | 2.07 | 22 | 6-3, 7-6 |
+| 2026-06-13 | 11:00 | tedi_main_150 | win | 1.13 | N. Vargova - L. Vujovic | UNDER 19.5 games | 2.13 | 18 | 4-6, 2-6 |
+| 2026-06-13 | 11:00 | tedi_v2_test | win | 1.13 | N. Vargova - L. Vujovic | UNDER 19.5 games | 2.13 | 18 | 4-6, 2-6 |
+| 2026-06-13 | 12:00 | tedi_main_150 | win | 1.10 | M. Lajal - Y. Bu | UNDER 22.5 games | 2.10 | 17 | 4-6, 1-6 |
+| 2026-06-13 | 13:00 | tedi_main_150 | win | 1.00 | Z. Svajda - L. Broady | UNDER 21.5 games | 2.00 | 20 | 7-5, 6-2 |
+| 2026-06-13 | 13:00 | tedi_v2_test | win | 1.00 | Z. Svajda - L. Broady | UNDER 21.5 games | 2.00 | 20 | 7-5, 6-2 |
+| 2026-06-13 | 13:30 | tedi_main_150 | loss | -1.00 | H. Klugman - A. Zakharova | UNDER 20.0 games | 2.08 | 21 | 7-6, 6-2 |
+| 2026-06-13 | 14:00 | tedi_main_150 | win | 1.08 | D. Kasatkina - A. Blinkova | UNDER 20.0 games | 2.08 | 17 | 3-6, 2-6 |
+| 2026-06-13 | 14:30 | tedi_main_150 | loss | -1.00 | D. Jorda Sanchis - T. Boyer | UNDER 21.5 games | 2.14 | 31 | 3-6, 6-4, 7-5 |
+| 2026-06-13 | 14:30 | tedi_v2_test | loss | -1.00 | D. Jorda Sanchis - T. Boyer | UNDER 21.5 games | 2.14 | 31 | 3-6, 6-4, 7-5 |
+| 2026-06-13 | 17:30 | tedi_main_150 | loss | -1.00 | G. I. Justo - L. E. Ambrogi | UNDER 21.5 games | 2.00 | 30 | 6-4, 5-7, 2-6 |
