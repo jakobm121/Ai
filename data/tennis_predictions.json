@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T08:59:28.850321+02:00",
+  "generated_at": "2026-06-13T09:29:04.775164+02:00",
   "timezone": "Europe/Ljubljana",
   "source": "API-Tennis",
   "model": "AI77 Tennis Value Model v1",
@@ -17,147 +17,12 @@
   },
   "summary": {
     "fixtures_checked": 202,
-    "candidates_raw": 19,
+    "candidates_raw": 20,
     "final_picks": 15,
     "skipped_ineligible": 16,
     "errors": 0
   },
   "picks": [
-    {
-      "pick_id": "89990834b9d21a5c07f8f4c8c38e6568",
-      "event_key": 12136245,
-      "fixture_id": 12136245,
-      "sport": "tennis",
-      "model_version": "ai77_tennis_value_v1",
-      "date": "2026-06-13",
-      "time": "10:00",
-      "match": "V. Orlov - V. Bielinskyi",
-      "bet": "V. Orlov",
-      "bucket": "match_winner",
-      "side": "home",
-      "market_side": "Home",
-      "player_key": 932,
-      "player_name": "V. Orlov",
-      "opponent_key": 930,
-      "opponent_name": "V. Bielinskyi",
-      "tournament": "M25 Kiseljak",
-      "tournament_key": 4114,
-      "round": "M25 Kiseljak - Quarter-finals",
-      "event_type": "Itf Men Singles",
-      "qualification": false,
-      "tour_level": "itf",
-      "gender": "men",
-      "odds": 2.48,
-      "best_bookmaker": "Pncl",
-      "market_median_odds": 2.13,
-      "bookmakers_used": 6,
-      "best_to_median_gap": 0.1643,
-      "model_prob": 0.5425,
-      "implied_prob": 0.4032,
-      "edge": 0.1393,
-      "player_score": 62.2,
-      "opponent_score": 59.9,
-      "score_diff": 2.3,
-      "confidence": 78.2,
-      "quality_score": 81.3,
-      "stake": 1.0,
-      "stake_label": "Standard",
-      "favorite_type": "underdog",
-      "h2h": {
-        "matches": 2,
-        "first_wins": 0,
-        "second_wins": 2,
-        "first_score": -3.0,
-        "second_score": 3.0
-      },
-      "player_form": {
-        "score": 62.2,
-        "last_5": {
-          "matches": 5,
-          "wins": 4,
-          "losses": 1,
-          "win_rate": 0.8,
-          "set_diff_avg": 1.2,
-          "game_diff_avg": 4.2,
-          "straight_win_rate": 0.6,
-          "straight_loss_rate": 0.0,
-          "close_loss_rate": 0.2,
-          "fatigue_matches_7d": 3,
-          "fatigue_matches_3d": 2
-        },
-        "last_10": {
-          "matches": 10,
-          "wins": 6,
-          "losses": 4,
-          "win_rate": 0.6,
-          "set_diff_avg": 0.5,
-          "game_diff_avg": 2.6,
-          "straight_win_rate": 0.4,
-          "straight_loss_rate": 0.1,
-          "close_loss_rate": 0.3,
-          "fatigue_matches_7d": 3,
-          "fatigue_matches_3d": 2
-        },
-        "last_20": {
-          "matches": 10,
-          "wins": 6,
-          "losses": 4,
-          "win_rate": 0.6,
-          "set_diff_avg": 0.5,
-          "game_diff_avg": 2.6,
-          "straight_win_rate": 0.4,
-          "straight_loss_rate": 0.1,
-          "close_loss_rate": 0.3,
-          "fatigue_matches_7d": 3,
-          "fatigue_matches_3d": 2
-        }
-      },
-      "opponent_form": {
-        "score": 59.9,
-        "last_5": {
-          "matches": 5,
-          "wins": 3,
-          "losses": 2,
-          "win_rate": 0.6,
-          "set_diff_avg": 0.4,
-          "game_diff_avg": 2.6,
-          "straight_win_rate": 0.6,
-          "straight_loss_rate": 0.4,
-          "close_loss_rate": 0.0,
-          "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
-        },
-        "last_10": {
-          "matches": 10,
-          "wins": 6,
-          "losses": 4,
-          "win_rate": 0.6,
-          "set_diff_avg": 0.3,
-          "game_diff_avg": 1.8,
-          "straight_win_rate": 0.5,
-          "straight_loss_rate": 0.4,
-          "close_loss_rate": 0.0,
-          "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
-        },
-        "last_20": {
-          "matches": 10,
-          "wins": 6,
-          "losses": 4,
-          "win_rate": 0.6,
-          "set_diff_avg": 0.3,
-          "game_diff_avg": 1.8,
-          "straight_win_rate": 0.5,
-          "straight_loss_rate": 0.4,
-          "close_loss_rate": 0.0,
-          "fatigue_matches_7d": 2,
-          "fatigue_matches_3d": 2
-        }
-      },
-      "result": "pending",
-      "created_at": "2026-06-13T08:59:45.833917+02:00",
-      "reasoning": "V. Orlov is selected against V. Bielinskyi in M25 Kiseljak. The model prices V. Orlov at 54.2% versus an implied probability of 40.3% from best odds 2.48. Market median is 2.13 across 6 bookmakers, leaving an estimated edge of +13.9%. Recent-form profile: V. Orlov last-10 win rate 60.0%, avg set diff +0.50, avg game diff +2.60; V. Bielinskyi last-10 win rate 60.0%, avg set diff +0.30, avg game diff +1.80. Pick type: underdog. Confidence score: 78.2."
-    },
     {
       "pick_id": "968922195c0ffa97226ac6b5258be26c",
       "event_key": 12136240,
@@ -290,8 +155,143 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T08:59:39.367619+02:00",
+      "created_at": "2026-06-13T09:29:13.895882+02:00",
       "reasoning": "R. Pascual Ferra is selected against C. Bouchelaghem in M15 Monastir 22. The model prices R. Pascual Ferra at 66.0% versus an implied probability of 50.0% from best odds 2.00. Market median is 1.92 across 7 bookmakers, leaving an estimated edge of +16.0%. Recent-form profile: R. Pascual Ferra last-10 win rate 70.0%, avg set diff +0.70, avg game diff +2.30; C. Bouchelaghem last-10 win rate 40.0%, avg set diff -0.20, avg game diff +0.20. Pick type: underdog. Confidence score: 88.0."
+    },
+    {
+      "pick_id": "e1ec05d910a502feab88c57babf001ed",
+      "event_key": 12136347,
+      "fixture_id": 12136347,
+      "sport": "tennis",
+      "model_version": "ai77_tennis_value_v1",
+      "date": "2026-06-13",
+      "time": "10:30",
+      "match": "R. Izquierdo Luque - J. Domingues",
+      "bet": "R. Izquierdo Luque",
+      "bucket": "match_winner",
+      "side": "home",
+      "market_side": "Home",
+      "player_key": 57566,
+      "player_name": "R. Izquierdo Luque",
+      "opponent_key": 561,
+      "opponent_name": "J. Domingues",
+      "tournament": "M25 Martos",
+      "tournament_key": 7261,
+      "round": "M25 Martos - Semi-finals",
+      "event_type": "Itf Men Singles",
+      "qualification": false,
+      "tour_level": "itf",
+      "gender": "men",
+      "odds": 1.97,
+      "best_bookmaker": "Pncl",
+      "market_median_odds": 1.85,
+      "bookmakers_used": 5,
+      "best_to_median_gap": 0.0649,
+      "model_prob": 0.66,
+      "implied_prob": 0.5076,
+      "edge": 0.1524,
+      "player_score": 67.7,
+      "opponent_score": 57.3,
+      "score_diff": 10.4,
+      "confidence": 88,
+      "quality_score": 85.4,
+      "stake": 1.25,
+      "stake_label": "Strong",
+      "favorite_type": "favorite",
+      "h2h": {
+        "matches": 0,
+        "first_wins": 0,
+        "second_wins": 0,
+        "first_score": 0.0,
+        "second_score": 0.0
+      },
+      "player_form": {
+        "score": 67.7,
+        "last_5": {
+          "matches": 5,
+          "wins": 4,
+          "losses": 1,
+          "win_rate": 0.8,
+          "set_diff_avg": 1.2,
+          "game_diff_avg": 4.8,
+          "straight_win_rate": 0.6,
+          "straight_loss_rate": 0.0,
+          "close_loss_rate": 0.2,
+          "fatigue_matches_7d": 3,
+          "fatigue_matches_3d": 3
+        },
+        "last_10": {
+          "matches": 10,
+          "wins": 7,
+          "losses": 3,
+          "win_rate": 0.7,
+          "set_diff_avg": 0.8,
+          "game_diff_avg": 2.3,
+          "straight_win_rate": 0.6,
+          "straight_loss_rate": 0.2,
+          "close_loss_rate": 0.1,
+          "fatigue_matches_7d": 3,
+          "fatigue_matches_3d": 3
+        },
+        "last_20": {
+          "matches": 10,
+          "wins": 7,
+          "losses": 3,
+          "win_rate": 0.7,
+          "set_diff_avg": 0.8,
+          "game_diff_avg": 2.3,
+          "straight_win_rate": 0.6,
+          "straight_loss_rate": 0.2,
+          "close_loss_rate": 0.1,
+          "fatigue_matches_7d": 3,
+          "fatigue_matches_3d": 3
+        }
+      },
+      "opponent_form": {
+        "score": 57.3,
+        "last_5": {
+          "matches": 5,
+          "wins": 3,
+          "losses": 2,
+          "win_rate": 0.6,
+          "set_diff_avg": 0.4,
+          "game_diff_avg": 0.6,
+          "straight_win_rate": 0.4,
+          "straight_loss_rate": 0.2,
+          "close_loss_rate": 0.2,
+          "fatigue_matches_7d": 2,
+          "fatigue_matches_3d": 2
+        },
+        "last_10": {
+          "matches": 10,
+          "wins": 6,
+          "losses": 4,
+          "win_rate": 0.6,
+          "set_diff_avg": 0.4,
+          "game_diff_avg": 0.5,
+          "straight_win_rate": 0.4,
+          "straight_loss_rate": 0.2,
+          "close_loss_rate": 0.2,
+          "fatigue_matches_7d": 2,
+          "fatigue_matches_3d": 2
+        },
+        "last_20": {
+          "matches": 10,
+          "wins": 6,
+          "losses": 4,
+          "win_rate": 0.6,
+          "set_diff_avg": 0.4,
+          "game_diff_avg": 0.5,
+          "straight_win_rate": 0.4,
+          "straight_loss_rate": 0.2,
+          "close_loss_rate": 0.2,
+          "fatigue_matches_7d": 2,
+          "fatigue_matches_3d": 2
+        }
+      },
+      "result": "pending",
+      "created_at": "2026-06-13T09:30:49.367339+02:00",
+      "reasoning": "R. Izquierdo Luque is selected against J. Domingues in M25 Martos. The model prices R. Izquierdo Luque at 66.0% versus an implied probability of 50.8% from best odds 1.97. Market median is 1.85 across 5 bookmakers, leaving an estimated edge of +15.2%. Recent-form profile: R. Izquierdo Luque last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.30; J. Domingues last-10 win rate 60.0%, avg set diff +0.40, avg game diff +0.50. Pick type: favorite. Confidence score: 88.0."
     },
     {
       "pick_id": "5ead05e737ba202eba5d42328b0062ed",
@@ -425,7 +425,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:00:53.133819+02:00",
+      "created_at": "2026-06-13T09:30:20.728251+02:00",
       "reasoning": "K. Kuzmova is selected against S. Broadus in W50 Guimaraes. The model prices K. Kuzmova at 59.9% versus an implied probability of 44.4% from best odds 2.25. Market median is 2.17 across 10 bookmakers, leaving an estimated edge of +15.4%. Recent-form profile: K. Kuzmova last-10 win rate 80.0%, avg set diff +1.00, avg game diff +3.50; S. Broadus last-10 win rate 70.0%, avg set diff +0.80, avg game diff +2.50. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -454,9 +454,9 @@
       "gender": "women",
       "odds": 1.92,
       "best_bookmaker": "Unibet",
-      "market_median_odds": 1.8,
+      "market_median_odds": 1.79,
       "bookmakers_used": 9,
-      "best_to_median_gap": 0.0667,
+      "best_to_median_gap": 0.0756,
       "model_prob": 0.66,
       "implied_prob": 0.5208,
       "edge": 0.1392,
@@ -560,8 +560,8 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:00:46.016193+02:00",
-      "reasoning": "E. Lene is selected against A. Teixido Garcia in W35 Casablanca. The model prices E. Lene at 66.0% versus an implied probability of 52.1% from best odds 1.92. Market median is 1.80 across 9 bookmakers, leaving an estimated edge of +13.9%. Recent-form profile: E. Lene last-10 win rate 70.0%, avg set diff +0.80, avg game diff +4.00; A. Teixido Garcia last-10 win rate 40.0%, avg set diff -0.30, avg game diff -0.40. Pick type: favorite. Confidence score: 88.0."
+      "created_at": "2026-06-13T09:30:14.516741+02:00",
+      "reasoning": "E. Lene is selected against A. Teixido Garcia in W35 Casablanca. The model prices E. Lene at 66.0% versus an implied probability of 52.1% from best odds 1.92. Market median is 1.79 across 9 bookmakers, leaving an estimated edge of +13.9%. Recent-form profile: E. Lene last-10 win rate 70.0%, avg set diff +0.80, avg game diff +4.00; A. Teixido Garcia last-10 win rate 40.0%, avg set diff -0.30, avg game diff -0.40. Pick type: favorite. Confidence score: 88.0."
     },
     {
       "pick_id": "a82c7b7336fc5de82b16e4bfcf211367",
@@ -695,7 +695,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:00:11.800163+02:00",
+      "created_at": "2026-06-13T09:29:42.118585+02:00",
       "reasoning": "M. Soriano Santiago is selected against R. Roura Llaverias in W15 Madrid 2. The model prices M. Soriano Santiago at 60.0% versus an implied probability of 47.6% from best odds 2.10. Market median is 1.93 across 9 bookmakers, leaving an estimated edge of +12.4%. Recent-form profile: M. Soriano Santiago last-10 win rate 70.0%, avg set diff +0.60, avg game diff +2.10; R. Roura Llaverias last-10 win rate 40.0%, avg set diff -0.50, avg game diff -1.80. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -830,7 +830,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:00:26.270192+02:00",
+      "created_at": "2026-06-13T09:29:54.609433+02:00",
       "reasoning": "V. Sachko is selected against A. Shevchenko in Bratislava. The model prices V. Sachko at 60.0% versus an implied probability of 42.7% from best odds 2.34. Market median is 2.13 across 11 bookmakers, leaving an estimated edge of +17.3%. Recent-form profile: V. Sachko last-10 win rate 60.0%, avg set diff +0.10, avg game diff +0.20; A. Shevchenko last-10 win rate 60.0%, avg set diff -0.10, avg game diff +0.80. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -965,7 +965,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:00:23.116601+02:00",
+      "created_at": "2026-06-13T09:29:51.836856+02:00",
       "reasoning": "Dar. Blanch is selected against J. Fearnley in Ilkley. The model prices Dar. Blanch at 66.0% versus an implied probability of 43.9% from best odds 2.28. Market median is 2.18 across 11 bookmakers, leaving an estimated edge of +22.1%. Recent-form profile: Dar. Blanch last-10 win rate 60.0%, avg set diff +0.20, avg game diff +0.30; J. Fearnley last-10 win rate 40.0%, avg set diff -0.40, avg game diff -1.50. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -1100,7 +1100,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:01:13.677973+02:00",
+      "created_at": "2026-06-13T09:30:38.940524+02:00",
       "reasoning": "F. Romano is selected against O. Tarvet in Ilkley. The model prices F. Romano at 60.0% versus an implied probability of 35.1% from best odds 2.85. Market median is 2.59 across 11 bookmakers, leaving an estimated edge of +24.9%. Recent-form profile: F. Romano last-10 win rate 80.0%, avg set diff +0.90, avg game diff +2.60; O. Tarvet last-10 win rate 50.0%, avg set diff -0.10, avg game diff -0.50. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -1128,10 +1128,10 @@
       "tour_level": "wta",
       "gender": "women",
       "odds": 1.83,
-      "best_bookmaker": "bet365",
-      "market_median_odds": 1.73,
-      "bookmakers_used": 9,
-      "best_to_median_gap": 0.0578,
+      "best_bookmaker": "Sbo",
+      "market_median_odds": 1.74,
+      "bookmakers_used": 8,
+      "best_to_median_gap": 0.0517,
       "model_prob": 0.66,
       "implied_prob": 0.5464,
       "edge": 0.1136,
@@ -1139,9 +1139,9 @@
       "opponent_score": 49.3,
       "score_diff": 12.2,
       "confidence": 88,
-      "quality_score": 84.8,
-      "stake": 1.25,
-      "stake_label": "Strong",
+      "quality_score": 83.3,
+      "stake": 1.0,
+      "stake_label": "Standard",
       "favorite_type": "favorite",
       "h2h": {
         "matches": 0,
@@ -1235,8 +1235,8 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:02:12.640853+02:00",
-      "reasoning": "M. Pohankova is selected against T. Korpatsch in Berlin. The model prices M. Pohankova at 66.0% versus an implied probability of 54.6% from best odds 1.83. Market median is 1.73 across 9 bookmakers, leaving an estimated edge of +11.4%. Recent-form profile: M. Pohankova last-10 win rate 70.0%, avg set diff +0.50, avg game diff +0.50; T. Korpatsch last-10 win rate 60.0%, avg set diff +0.00, avg game diff -0.20. Pick type: favorite. Confidence score: 88.0."
+      "created_at": "2026-06-13T09:31:32.089491+02:00",
+      "reasoning": "M. Pohankova is selected against T. Korpatsch in Berlin. The model prices M. Pohankova at 66.0% versus an implied probability of 54.6% from best odds 1.83. Market median is 1.74 across 8 bookmakers, leaving an estimated edge of +11.4%. Recent-form profile: M. Pohankova last-10 win rate 70.0%, avg set diff +0.50, avg game diff +0.50; T. Korpatsch last-10 win rate 60.0%, avg set diff +0.00, avg game diff -0.20. Pick type: favorite. Confidence score: 88.0."
     },
     {
       "pick_id": "d739364e03ff99635668899273c6ed21",
@@ -1370,7 +1370,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:01:05.788561+02:00",
+      "created_at": "2026-06-13T09:30:31.849897+02:00",
       "reasoning": "J. Lim is selected against A. Granwehr in W35 Nice + H (France). The model prices J. Lim at 60.0% versus an implied probability of 45.5% from best odds 2.20. Market median is 2.04 across 8 bookmakers, leaving an estimated edge of +14.5%. Recent-form profile: J. Lim last-10 win rate 90.0%, avg set diff +1.40, avg game diff +4.70; A. Granwehr last-10 win rate 60.0%, avg set diff +0.50, avg game diff +1.30. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -1505,7 +1505,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:01:58.113058+02:00",
+      "created_at": "2026-06-13T09:31:18.907317+02:00",
       "reasoning": "M. Mmoh is selected against A. Kovacevic in London. The model prices M. Mmoh at 60.0% versus an implied probability of 41.2% from best odds 2.43. Market median is 2.37 across 7 bookmakers, leaving an estimated edge of +18.8%. Recent-form profile: M. Mmoh last-10 win rate 70.0%, avg set diff +0.40, avg game diff +2.10; A. Kovacevic last-10 win rate 50.0%, avg set diff -0.40, avg game diff -1.00. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -1534,19 +1534,19 @@
       "gender": "women",
       "odds": 2.4,
       "best_bookmaker": "Superbet",
-      "market_median_odds": 2.36,
-      "bookmakers_used": 8,
-      "best_to_median_gap": 0.0169,
+      "market_median_odds": 2.37,
+      "bookmakers_used": 7,
+      "best_to_median_gap": 0.0127,
       "model_prob": 0.5443,
       "implied_prob": 0.4167,
       "edge": 0.1277,
       "player_score": 45.4,
       "opponent_score": 43.0,
       "score_diff": 2.4,
-      "confidence": 84.3,
-      "quality_score": 85.6,
-      "stake": 1.25,
-      "stake_label": "Strong",
+      "confidence": 83.5,
+      "quality_score": 83.8,
+      "stake": 1.0,
+      "stake_label": "Standard",
       "favorite_type": "underdog",
       "h2h": {
         "matches": 0,
@@ -1640,8 +1640,8 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:02:22.178084+02:00",
-      "reasoning": "D. Galfi is selected against Xin. Wang in Berlin. The model prices D. Galfi at 54.4% versus an implied probability of 41.7% from best odds 2.40. Market median is 2.36 across 8 bookmakers, leaving an estimated edge of +12.8%. Recent-form profile: D. Galfi last-10 win rate 50.0%, avg set diff +0.00, avg game diff -0.40; Xin. Wang last-10 win rate 50.0%, avg set diff -0.10, avg game diff +0.30. Pick type: underdog. Confidence score: 84.3."
+      "created_at": "2026-06-13T09:31:40.414173+02:00",
+      "reasoning": "D. Galfi is selected against Xin. Wang in Berlin. The model prices D. Galfi at 54.4% versus an implied probability of 41.7% from best odds 2.40. Market median is 2.37 across 7 bookmakers, leaving an estimated edge of +12.8%. Recent-form profile: D. Galfi last-10 win rate 50.0%, avg set diff +0.00, avg game diff -0.40; Xin. Wang last-10 win rate 50.0%, avg set diff -0.10, avg game diff +0.30. Pick type: underdog. Confidence score: 83.5."
     },
     {
       "pick_id": "710f2b921c14c712879a6150e779f054",
@@ -1667,19 +1667,19 @@
       "qualification": true,
       "tour_level": "atp",
       "gender": "men",
-      "odds": 1.87,
-      "best_bookmaker": "Pncl",
+      "odds": 1.94,
+      "best_bookmaker": "Sbo",
       "market_median_odds": 1.85,
       "bookmakers_used": 7,
-      "best_to_median_gap": 0.0108,
+      "best_to_median_gap": 0.0486,
       "model_prob": 0.66,
-      "implied_prob": 0.5348,
-      "edge": 0.1252,
+      "implied_prob": 0.5155,
+      "edge": 0.1445,
       "player_score": 68.1,
       "opponent_score": 50.1,
       "score_diff": 18.0,
       "confidence": 88,
-      "quality_score": 84.8,
+      "quality_score": 88.4,
       "stake": 1.25,
       "stake_label": "Strong",
       "favorite_type": "favorite",
@@ -1775,8 +1775,8 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:02:03.810637+02:00",
-      "reasoning": "D. Prizmic is selected against R. Hijikata in London. The model prices D. Prizmic at 66.0% versus an implied probability of 53.5% from best odds 1.87. Market median is 1.85 across 7 bookmakers, leaving an estimated edge of +12.5%. Recent-form profile: D. Prizmic last-10 win rate 70.0%, avg set diff +0.90, avg game diff +2.60; R. Hijikata last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.50. Pick type: favorite. Confidence score: 88.0."
+      "created_at": "2026-06-13T09:31:24.465322+02:00",
+      "reasoning": "D. Prizmic is selected against R. Hijikata in London. The model prices D. Prizmic at 66.0% versus an implied probability of 51.5% from best odds 1.94. Market median is 1.85 across 7 bookmakers, leaving an estimated edge of +14.5%. Recent-form profile: D. Prizmic last-10 win rate 70.0%, avg set diff +0.90, avg game diff +2.60; R. Hijikata last-10 win rate 50.0%, avg set diff -0.20, avg game diff -0.50. Pick type: favorite. Confidence score: 88.0."
     },
     {
       "pick_id": "fe15c544d879e362587a1ad4ec8fd9b4",
@@ -1910,7 +1910,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:01:16.822377+02:00",
+      "created_at": "2026-06-13T09:30:41.710036+02:00",
       "reasoning": "L. E. Ambrogi is selected against G. I. Justo in San Miguel de Tucuman. The model prices L. E. Ambrogi at 60.0% versus an implied probability of 40.7% from best odds 2.46. Market median is 2.38 across 7 bookmakers, leaving an estimated edge of +19.3%. Recent-form profile: L. E. Ambrogi last-10 win rate 70.0%, avg set diff +0.70, avg game diff +2.30; G. I. Justo last-10 win rate 60.0%, avg set diff +0.40, avg game diff +0.50. Pick type: underdog. Confidence score: 88.0."
     },
     {
@@ -2045,7 +2045,7 @@
         }
       },
       "result": "pending",
-      "created_at": "2026-06-13T09:02:38.888774+02:00",
+      "created_at": "2026-06-13T09:31:55.035432+02:00",
       "reasoning": "L. Tararudee is selected against Z. Sonmez in Nottingham. The model prices L. Tararudee at 60.0% versus an implied probability of 38.5% from best odds 2.60. Market median is 2.47 across 7 bookmakers, leaving an estimated edge of +21.5%. Recent-form profile: L. Tararudee last-10 win rate 60.0%, avg set diff +0.40, avg game diff +1.50; Z. Sonmez last-10 win rate 50.0%, avg set diff -0.10, avg game diff +0.60. Pick type: underdog. Confidence score: 88.0."
     }
   ]
