@@ -1,6 +1,6 @@
 # AI TLE Predictions
 
-Generated: `2026-06-13T14:59:06+00:00`
+Generated: `2026-06-13T20:44:58+00:00`
 Open predictions: `2`
 
 | # | Date | Time | Level | Match | Pick | Odds | TLE % | Book % | Edge | EV | Status |
