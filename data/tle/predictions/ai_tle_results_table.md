@@ -1,12 +1,12 @@
 # AI TLE Results
 
-Generated: `2026-06-13T08:35:02+00:00`
+Generated: `2026-06-13T11:18:00+00:00`
 Total picks: `32`
-Settled bets: `14`
-Pending: `17`
-Profit: `4.484855`
-ROI: `32.03%`
-Hit rate: `50.00%`
+Settled bets: `23`
+Pending: `8`
+Profit: `6.858605`
+ROI: `29.82%`
+Hit rate: `52.17%`
 
 | # | Date | Time | Level | Match | Pick | Odds | Status | Profit | Edge | EV | Winner | Score | Reason |
 |---:|---|---|---|---|---|---:|---|---:|---:|---:|---|---|---|
@@ -25,20 +25,20 @@ Hit rate: `50.00%`
 | 13 | 2026-06-12 | 19:30 | itf | Z. Pawlikowska - P. Charney | Z. Pawlikowska | 2.964286 | WIN | 1.964286 | 28.48% | 77.12% | First Player | 2 - 1 | settled |
 | 14 | 2026-06-12 | 20:15 | challenger | F. Romano - J. Pinnington Jones | F. Romano | 2.966364 | WIN | 1.966364 | 8.03% | 16.94% | First Player | 2 - 1 | settled |
 | 15 | 2026-06-12 | 22:00 | itf | L. Fullana - C. Alves | L. Fullana | 2.765556 | LOSS | -1.0 | 20.33% | 48.62% | Second Player | 0 - 2 | settled |
-| 16 | 2026-06-13 | 10:00 | itf | H. Bernet - S. Kopp | S. Kopp | 1.965 | PENDING |  | 22.04% | 36.12% |  | 0 - 0 | not_finished |
-| 17 | 2026-06-13 | 10:00 | itf | A. Thanos - N. McDonald | A. Thanos | 1.897778 | PENDING |  | 16.38% | 23.68% |  | 0 - 0 | not_finished |
-| 18 | 2026-06-13 | 10:00 | itf | M. Sharipov - K. Kivattsev | K. Kivattsev | 3.533333 | PENDING |  | 9.95% | 27.94% |  | 0 - 0 | not_finished |
-| 19 | 2026-06-13 | 10:00 | itf | A. Zolotareva - K. Zaytseva | K. Zaytseva | 2.942222 | PENDING |  | 29.96% | 80.64% |  | - | not_finished |
-| 20 | 2026-06-13 | 10:30 | itf | R. Pascual Ferra - C. Bouchelaghem | C. Bouchelaghem | 1.78625 | PENDING |  | 5.22% | 2.00% |  | - | not_finished |
-| 21 | 2026-06-13 | 10:30 | itf | M. Walters - D. Mosejczuk | M. Walters | 2.818333 | PENDING |  | 18.25% | 44.08% |  | - | not_finished |
-| 22 | 2026-06-13 | 10:30 | itf | R. Izquierdo Luque - J. Domingues | J. Domingues | 1.8525 | PENDING |  | 12.80% | 16.71% |  | - | not_finished |
+| 16 | 2026-06-13 | 10:00 | itf | H. Bernet - S. Kopp | S. Kopp | 1.965 | WIN | 0.965 | 22.04% | 36.12% | Second Player | 0 - 2 | settled |
+| 17 | 2026-06-13 | 10:00 | itf | A. Thanos - N. McDonald | A. Thanos | 1.897778 | LOSS | -1.0 | 16.38% | 23.68% | Second Player | 0 - 2 | settled |
+| 18 | 2026-06-13 | 10:00 | itf | M. Sharipov - K. Kivattsev | K. Kivattsev | 3.533333 | LOSS | -1.0 | 9.95% | 27.94% | First Player | 2 - 1 | settled |
+| 19 | 2026-06-13 | 10:00 | itf | A. Zolotareva - K. Zaytseva | K. Zaytseva | 2.942222 | WIN | 1.942222 | 29.96% | 80.64% | Second Player | 0 - 2 | settled |
+| 20 | 2026-06-13 | 10:30 | itf | R. Pascual Ferra - C. Bouchelaghem | C. Bouchelaghem | 1.78625 | WIN | 0.78625 | 5.22% | 2.00% | Second Player | 0 - 2 | settled |
+| 21 | 2026-06-13 | 10:30 | itf | M. Walters - D. Mosejczuk | M. Walters | 2.818333 | LOSS | -1.0 | 18.25% | 44.08% | Second Player | 0 - 2 | settled |
+| 22 | 2026-06-13 | 10:30 | itf | R. Izquierdo Luque - J. Domingues | J. Domingues | 1.8525 | WIN | 0.8525 | 12.80% | 16.71% | Second Player | 0 - 2 | settled |
 | 23 | 2026-06-13 | 11:00 | itf | R. Roura Llaverias - M. Soriano Santiago | M. Soriano Santiago | 1.942222 | PENDING |  | 9.11% | 10.22% |  | - | not_finished |
-| 24 | 2026-06-13 | 11:00 | itf | N. Vargova - L. Vujovic | L. Vujovic | 2.827778 | PENDING |  | 7.10% | 12.76% |  | - | not_finished |
+| 24 | 2026-06-13 | 11:00 | itf | N. Vargova - L. Vujovic | L. Vujovic | 2.827778 | WIN | 1.827778 | 7.10% | 12.76% | Second Player | 0 - 2 | settled |
 | 25 | 2026-06-13 | 11:00 | itf | M. Weckerle - V. Steiner | M. Weckerle | 3.0425 | PENDING |  | 8.69% | 19.16% |  | - | not_finished |
-| 26 | 2026-06-13 | 11:00 | itf | K. Kuzmova - S. Broadus | K. Kuzmova | 2.17 | PENDING |  | 23.11% | 42.86% |  | - | not_finished |
-| 27 | 2026-06-13 | 12:00 | challenger | O. Tarvet - F. Romano | F. Romano | 2.622727 | PENDING |  | 25.25% | 59.56% |  | - | not_finished |
+| 26 | 2026-06-13 | 11:00 | itf | K. Kuzmova - S. Broadus | K. Kuzmova | 2.17 | LOSS | -1.0 | 23.11% | 42.86% | Second Player | 0 - 2 | settled |
+| 27 | 2026-06-13 | 12:00 | challenger | O. Tarvet - F. Romano | F. Romano | 2.622727 | PENDING |  | 25.25% | 59.56% |  | 0 - 1 | not_finished |
 | 28 | 2026-06-13 | 12:30 | itf | E. Bennemann - T. Gadamauri | T. Gadamauri | 4.026 | PENDING |  | 17.08% | 61.90% |  | - | not_finished |
-| 29 | 2026-06-13 | 13:00 | itf | I. Primorac - E. Avanesyan | I. Primorac | 3.976 | PENDING |  | 16.47% | 58.12% |  | - | not_finished |
+| 29 | 2026-06-13 | 13:00 | itf | I. Primorac - E. Avanesyan | I. Primorac | 3.976 | PENDING |  | 16.47% | 58.12% |  | 0 - 0 | not_finished |
 | 30 | 2026-06-13 | 13:00 | atp_wta | A. Bublik - T. Fritz | T. Fritz | 2.084167 | PENDING |  | 6.48% | 8.12% |  | - | not_finished |
 | 31 | 2026-06-13 | 16:00 | challenger | D. E. Galan - F. Balshaw | D. E. Galan | 2.038889 | PENDING |  | 15.94% | 25.47% |  | - | not_finished |
 | 32 | 2026-06-13 | 17:00 | itf | G. Piraino - F. Tabacco | G. Piraino | 1.506667 | PENDING |  | 11.39% | 9.66% |  | - | not_finished |
