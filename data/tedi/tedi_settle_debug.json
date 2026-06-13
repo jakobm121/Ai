@@ -1,96 +1,105 @@
 {
-  "generated_at": "2026-06-12T13:14:43.929296+02:00",
+  "generated_at": "2026-06-13T08:47:16.848376+02:00",
   "settled_now": [
     {
-      "pick_id": "d62c0de30ecd9afefdcf5bc6e59fa5f1",
-      "source_pick_id": "a27b65d6f9a5e1ed0681668c6fd2c4c2",
-      "strategy": "tedi_main_150",
-      "match": "R. Montgomery - G. Minnen",
-      "bet": "UNDER 21.5 games",
-      "result": "loss",
-      "profit": -1.0,
-      "total_games": 23,
-      "final_score": "6-4, 7-6"
-    },
-    {
-      "pick_id": "013cfcd03b45b327d6af884140057f3d",
-      "source_pick_id": "0d64f54ba23c3d9d71f010e4fd180583",
-      "strategy": "tedi_main_150",
-      "match": "U. Humbert - B. Bonzi",
-      "bet": "UNDER 22.5 games",
-      "result": "loss",
-      "profit": -1.0,
-      "total_games": 28,
-      "final_score": "4-6, 6-3, 3-6"
-    },
-    {
-      "pick_id": "3e5dbb554b145b209bd4918924531fe7",
-      "source_pick_id": "95d2f496feeb2e81ef58cf11880b5295",
-      "strategy": "tedi_main_150",
-      "match": "T. Daniel - E. Nava",
-      "bet": "UNDER 21.5 games",
-      "result": "win",
-      "profit": 1.18,
-      "total_games": 16,
-      "final_score": "6-1, 6-3"
-    },
-    {
-      "pick_id": "d3d22ed6bcdb17e63e7cf628b0480021",
-      "source_pick_id": "fcc6c38f26d84a22f4f5deaf4c51d647",
-      "strategy": "tedi_main_150",
-      "match": "T. Prozorova - S. Kraus",
-      "bet": "UNDER 21.5 games",
-      "result": "push",
-      "profit": 0.0,
-      "total_games": null,
-      "final_score": null
-    }
-  ],
-  "missing_source": [
-    {
-      "tedi_pick_id": "3489a8e1e1789680e703e35799a9491b",
-      "source_pick_id": "c8e31aec9d2b7ddb1af71cc545a1b999",
-      "strategy": "tedi_main_150",
-      "match": "A. Dudeney - A. Krueger",
-      "bet": "UNDER 19.5 games",
-      "key": "12135317|over/under by games in match|under|19.5",
-      "reason": "no_settled_source_match"
-    },
-    {
-      "tedi_pick_id": "83f8de6fc84015c33d02cbcfab1509e5",
-      "source_pick_id": "c8e31aec9d2b7ddb1af71cc545a1b999",
-      "strategy": "tedi_v2_test",
-      "match": "A. Dudeney - A. Krueger",
-      "bet": "UNDER 19.5 games",
-      "key": "12135317|over/under by games in match|under|19.5",
-      "reason": "no_settled_source_match"
-    },
-    {
-      "tedi_pick_id": "778f0ae9b451fd7c5e1436f00d1bb44e",
-      "source_pick_id": "95162491846369d4cc8b0c96bbebeb66",
-      "strategy": "tedi_main_150",
-      "match": "S. Cirstea - E. Raducanu",
-      "bet": "UNDER 21.5 games",
-      "key": "12135313|over/under by games in match|under|21.5",
-      "reason": "no_settled_source_match"
-    },
-    {
-      "tedi_pick_id": "8fa716e7323ebba4132f2f54ac8eecae",
+      "pick_id": "914a72fe03964e24321241049274db04",
       "source_pick_id": "65f5e56a22fc50d0664450e020c4ef42",
       "strategy": "tedi_main_150",
       "match": "D. Vidmanova - L. Stefanini",
       "bet": "UNDER 20.5 games",
-      "key": "12135314|over/under by games in match|under|20.5",
-      "reason": "no_settled_source_match"
+      "result": "win",
+      "profit": 1.17,
+      "total_games": 15,
+      "final_score": "6-2, 6-1"
     },
     {
-      "tedi_pick_id": "002470e49ccb4a1bee64dbcd73609af8",
+      "pick_id": "07ca2015f6bfc8403dcdb71702925bdc",
+      "source_pick_id": "95162491846369d4cc8b0c96bbebeb66",
+      "strategy": "tedi_main_150",
+      "match": "S. Cirstea - E. Raducanu",
+      "bet": "UNDER 21.5 games",
+      "result": "win",
+      "profit": 1.05,
+      "total_games": 18,
+      "final_score": "4-6, 2-6"
+    },
+    {
+      "pick_id": "3489a8e1e1789680e703e35799a9491b",
+      "source_pick_id": "c8e31aec9d2b7ddb1af71cc545a1b999",
+      "strategy": "tedi_main_150",
+      "match": "A. Dudeney - A. Krueger",
+      "bet": "UNDER 19.5 games",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 27,
+      "final_score": "4-6, 6-3, 2-6"
+    },
+    {
+      "pick_id": "83f8de6fc84015c33d02cbcfab1509e5",
+      "source_pick_id": "c8e31aec9d2b7ddb1af71cc545a1b999",
+      "strategy": "tedi_v2_test",
+      "match": "A. Dudeney - A. Krueger",
+      "bet": "UNDER 19.5 games",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 27,
+      "final_score": "4-6, 6-3, 2-6"
+    },
+    {
+      "pick_id": "002470e49ccb4a1bee64dbcd73609af8",
       "source_pick_id": "fa922ae6c924ca06babda812a9460518",
       "strategy": "tedi_v2_test",
       "match": "V. Golubic - K. Swan",
       "bet": "UNDER 21.5 games",
-      "key": "12135753|over/under by games in match|under|21.5",
-      "reason": "no_settled_source_match"
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 23,
+      "final_score": "4-6, 6-7"
+    },
+    {
+      "pick_id": "b9389ff7d4a16a1aa060f368041f4bd7",
+      "source_pick_id": "07e961ae76ce38d376cd7996ed8a6985",
+      "strategy": "tedi_main_150",
+      "match": "Z. Kolar - F. Cina",
+      "bet": "UNDER 21.5 games",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 29,
+      "final_score": "6-4, 4-6, 3-6"
+    },
+    {
+      "pick_id": "ccefd7f436dab644c2c93b2a38b82f7d",
+      "source_pick_id": "ef2eded00c3a49acb14f6a9711b50a62",
+      "strategy": "tedi_main_150",
+      "match": "G. Dalmasso - T. Zeuch",
+      "bet": "UNDER 21.5 games",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 32,
+      "final_score": "5-7, 6-4, 6-4"
+    },
+    {
+      "pick_id": "224a4614c0c74e58d45f36b2fb82d939",
+      "source_pick_id": "ceb3bf8b916a57da3a840be9a12474b8",
+      "strategy": "tedi_main_150",
+      "match": "C. Naef - A. Urhobo",
+      "bet": "UNDER 20.5 games",
+      "result": "win",
+      "profit": 0.99,
+      "total_games": 19,
+      "final_score": "6-3, 6-4"
+    },
+    {
+      "pick_id": "27a2fb6830ea24cb1ce0d34f39b021e7",
+      "source_pick_id": "367c024eec4a0d23d4278d861e5b7ad4",
+      "strategy": "tedi_v2_test",
+      "match": "V. Golubic - K. Swan",
+      "bet": "UNDER 20.5 games",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 23,
+      "final_score": "4-6, 6-7"
     }
-  ]
+  ],
+  "missing_source": []
 }

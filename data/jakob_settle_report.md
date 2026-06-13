@@ -1,38 +1,38 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-12T13:14:43.801262+02:00`
+Generated: `2026-06-13T08:47:16.721823+02:00`
 
-Pending picks: **2**
+Pending picks: **0**
 
 ### All settled
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 188 | 90 | 84 | 1 | 13 | 51.72% | +8.77u | 6.72% |
+| 191 | 91 | 86 | 1 | 13 | 51.41% | +8.09u | 6.10% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 7 | 3 | 1 | 0 | 3 | 75.00% | +1.75u | 58.50% |
+| 3 | 1 | 2 | 0 | 0 | 33.33% | -0.68u | -30.00% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 170 | 80 | 78 | 1 | 11 | 50.63% | +5.67u | 4.79% |
+| 173 | 81 | 80 | 1 | 11 | 50.31% | +5.00u | 4.14% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 122 | 59 | 54 | 1 | 8 | 52.21% | +6.87u | 8.10% |
+| 125 | 60 | 56 | 1 | 8 | 51.72% | +6.19u | 7.12% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 97 | 48 | 45 | 0 | 4 | 51.61% | +2.79u | 3.99% |
+| 100 | 49 | 47 | 0 | 4 | 51.04% | +2.11u | 2.93% |
 
 ### Over
 
@@ -44,12 +44,15 @@ Pending picks: **2**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 165 | 77 | 74 | 1 | 13 | 50.99% | +6.84u | 6.04% |
+| 168 | 78 | 76 | 1 | 13 | 50.65% | +6.17u | 5.34% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-12 | 14:00 | 2 | B. Bonzi - A. De Minaur | UNDER 21.5 games | 2.10 | ✅ win | 72.72 | 18 | 2-6, 4-6 | +0.82u |
+| 2026-06-12 | 12:20 | 1 | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.10 | ❌ loss | 80.07 | 27 | 4-6, 6-3, 2-6 | -0.75u |
+| 2026-06-11 | 15:30 | 2 | E. Rybakina - T. Maria | UNDER 20.5 games | 1.97 | ❌ loss | 77.18 | 31 | 6-7, 7-5, 6-0 | -0.75u |
 | 2026-06-11 | 18:00 | 9 | D. Lajovic - O. Roca Batalla | UNDER 20.5 games | 2.07 | ⚪ void | 70.06 |  |  | 0.00u |
 | 2026-06-11 | 17:00 | 3 | B. Shelton - M. Giron | UNDER 24.5 games | 2.14 | ⚪ void | 76.67 |  |  | 0.00u |
 | 2026-06-11 | 13:30 | 5 | B. Krejcikova - H. Vandewinkel | UNDER 19.5 games | 2.14 | ✅ win | 75.12 | 17 | 6-1, 6-4 | +0.85u |
@@ -127,7 +130,4 @@ Pending picks: **2**
 | 2026-06-04 | 11:00 | 6 | V. Sachko - V. Kopriva | UNDER 20.5 games | 2.00 | ❌ loss | 71.89 | 30 | 6-1, 4-6, 7-6 | -0.75u |
 | 2026-06-04 | 10:00 | 5 | R. Guna - G. Ghetu | UNDER 19.5 games | 2.11 | ❌ loss | 72.28 | 35 | 7-6, 6-7, 6-3 | -0.75u |
 | 2026-06-03 | 14:30 | 4 | T. Pieri - S. Costoulas | UNDER 18.5 games | 2.06 | ⚪ void | 75.96 |  |  | 0.00u |
-| 2026-06-03 | 14:00 | 1 | P. Boscardin Dias - M. Mrva | OVER 22.5 games | 2.15 | ❌ loss | 80.57 | 20 | 4-6, 4-6 | -0.75u |
-| 2026-06-03 | 13:30 | 7 | K. Deichmann - A. Mazzola | OVER 22.0 games | 2.05 | ❌ loss | 72.76 | 19 | 6-7, 0-6 | -0.75u |
-| 2026-06-03 | 12:30 | 5 | S. Baez - T. Boyer | UNDER 20.5 games | 2.03 | ✅ win | 73.87 | 18 | 6-2, 6-4 | +0.77u |
 

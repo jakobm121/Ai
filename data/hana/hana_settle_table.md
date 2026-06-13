@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-12T13:14:44.115085+02:00
+Generated: 2026-06-13T08:47:17.036842+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 255 | 255 | 123 | 110 | 22 | 52.79% | 21.09u | 9.05% |
+| 267 | 267 | 129 | 116 | 22 | 52.65% | 21.52u | 8.78% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 42 | 42 | 23 | 16 | 3 | 58.97% | 8.67u | 22.23% |
-| single | 197 | 197 | 91 | 87 | 19 | 51.12% | 9.42u | 5.29% |
-| triple | 16 | 16 | 9 | 7 | 0 | 56.25% | 3.0u | 18.75% |
+| double | 44 | 44 | 24 | 17 | 3 | 58.54% | 8.66u | 21.12% |
+| single | 206 | 206 | 96 | 91 | 19 | 51.34% | 10.86u | 5.81% |
+| triple | 17 | 17 | 9 | 8 | 0 | 52.94% | 2.0u | 11.76% |
 
 ## Results
 
@@ -271,7 +271,19 @@ Generated: 2026-06-12T13:14:44.115085+02:00
 | 2026-06-11 | 12:00 | single | jakob | push | 0.00 | K. Smith - J. Fearnley | UNDER 21.5 games | 2.16 | None | None |
 | 2026-06-11 | 12:00 | single | tedi | push | 0.00 | T. Prozorova - S. Kraus | UNDER 21.5 games | 2.00 | None | None |
 | 2026-06-11 | 13:30 | single | jakob | win | 1.14 | B. Krejcikova - H. Vandewinkel | UNDER 19.5 games | 2.14 | 17 | 6-1, 6-4 |
+| 2026-06-11 | 13:30 | single | tedi | loss | -1.00 | V. Golubic - K. Swan | UNDER 21.5 games | 1.99 | 23 | 4-6, 6-7 |
+| 2026-06-11 | 15:30 | single | lucija | win | 1.18 | D. Medvedev - T. Boogaard | OVER 20.5 games | 2.18 | 32 | 6-3, 4-6, 7-6 |
+| 2026-06-11 | 15:30 | single | jakob | loss | -1.00 | E. Rybakina - T. Maria | UNDER 20.5 games | 1.97 | 31 | 6-7, 7-5, 6-0 |
 | 2026-06-11 | 15:30 | single | tedi | win | 1.18 | T. Daniel - E. Nava | UNDER 21.5 games | 2.18 | 16 | 6-1, 6-3 |
 | 2026-06-11 | 17:00 | single | jakob | push | 0.00 | B. Shelton - M. Giron | UNDER 24.5 games | 2.14 | None | None |
 | 2026-06-11 | 17:30 | single | lucija | win | 0.93 | C. Hernandez - J. Domingues | OVER 20.5 games | 1.93 | 25 | 6-7, 5-7 |
 | 2026-06-11 | 18:00 | single | jakob | push | 0.00 | D. Lajovic - O. Roca Batalla | UNDER 20.5 games | 2.07 | None | None |
+| 2026-06-12 | 11:00 | single | tedi | loss | -1.00 | G. Dalmasso - T. Zeuch | UNDER 21.5 games | 2.05 | 32 | 5-7, 6-4, 6-4 |
+| 2026-06-12 | 12:20 | triple | jakob, lucija, tedi | loss | -1.00 | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.10 | 27 | 4-6, 6-3, 2-6 |
+| 2026-06-12 | 12:20 | single | tedi | win | 1.17 | D. Vidmanova - L. Stefanini | UNDER 20.5 games | 2.17 | 15 | 6-2, 6-1 |
+| 2026-06-12 | 12:20 | single | tedi | loss | -1.00 | V. Golubic - K. Swan | UNDER 20.5 games | 2.19 | 23 | 4-6, 6-7 |
+| 2026-06-12 | 13:30 | single | tedi | win | 1.05 | S. Cirstea - E. Raducanu | UNDER 21.5 games | 2.05 | 18 | 4-6, 2-6 |
+| 2026-06-12 | 13:30 | double | lucija, tedi | loss | -1.00 | Z. Kolar - F. Cina | UNDER 21.5 games | 2.06 | 29 | 6-4, 4-6, 3-6 |
+| 2026-06-12 | 14:00 | single | jakob | win | 1.10 | B. Bonzi - A. De Minaur | UNDER 21.5 games | 2.10 | 18 | 2-6, 4-6 |
+| 2026-06-12 | 15:00 | double | lucija, tedi | win | 0.99 | C. Naef - A. Urhobo | UNDER 20.5 games | 1.99 | 19 | 6-3, 6-4 |
+| 2026-06-12 | 16:00 | single | lucija | win | 0.94 | R. Brancaccio - R. Carballes Baena | OVER 22.0 games | 1.94 | 28 | 4-6, 6-3, 3-6 |
