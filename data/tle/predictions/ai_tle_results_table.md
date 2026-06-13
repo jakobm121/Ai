@@ -1,12 +1,12 @@
 # AI TLE Results
 
-Generated: `2026-06-13T14:43:47+00:00`
+Generated: `2026-06-13T21:47:50+00:00`
 Total picks: `33`
-Settled bets: `30`
-Pending: `2`
-Profit: `10.331499`
-ROI: `34.44%`
-Hit rate: `53.33%`
+Settled bets: `32`
+Pending: `0`
+Profit: `8.331499`
+ROI: `26.04%`
+Hit rate: `50.00%`
 
 | # | Date | Time | Level | Match | Pick | Odds | Status | Profit | Edge | EV | Winner | Score | Reason |
 |---:|---|---|---|---|---|---:|---|---:|---:|---:|---|---|---|
@@ -41,5 +41,5 @@ Hit rate: `53.33%`
 | 29 | 2026-06-13 | 13:00 | itf | I. Primorac - E. Avanesyan | I. Primorac | 3.976 | LOSS | -1.0 | 16.47% | 58.12% | Second Player | 1 - 2 | settled |
 | 30 | 2026-06-13 | 13:00 | atp_wta | A. Bublik - T. Fritz | T. Fritz | 2.084167 | WIN | 1.084167 | 6.48% | 8.12% | Second Player | 0 - 2 | settled |
 | 31 | 2026-06-13 | 15:00 | itf | N. Podoroska - A. Zantedeschi | N. Podoroska | 1.74 | WIN | 0.74 | 5.15% | 1.13% | First Player | 2 - 0 | settled |
-| 32 | 2026-06-13 | 16:00 | challenger | D. E. Galan - F. Balshaw | D. E. Galan | 2.038889 | PENDING |  | 15.94% | 25.47% |  | - | not_finished |
-| 33 | 2026-06-13 | 17:00 | itf | G. Piraino - F. Tabacco | G. Piraino | 1.506667 | PENDING |  | 11.39% | 9.66% |  | - | not_finished |
+| 32 | 2026-06-13 | 16:00 | challenger | D. E. Galan - F. Balshaw | D. E. Galan | 2.038889 | LOSS | -1.0 | 15.94% | 25.47% | Second Player | 1 - 2 | settled |
+| 33 | 2026-06-13 | 17:00 | itf | G. Piraino - F. Tabacco | G. Piraino | 1.506667 | LOSS | -1.0 | 11.39% | 9.66% | Second Player | 0 - 2 | settled |
