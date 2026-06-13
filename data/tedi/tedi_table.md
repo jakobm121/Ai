@@ -1,14 +1,17 @@
 # Tedi active predictions
 
-Generated: 2026-06-12T13:20:49.471284+02:00
+Generated: 2026-06-13T08:57:58.834576+02:00
 
 | Date | Time | Strategy | Match | Bet | Odds | Line | Conf | Quality | Gap | Strength | Avg 3-set | Avg close | Book |
 |---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 2026-06-12 | 11:00 | tedi_main_150 | G. Dalmasso - T. Zeuch | UNDER 21.5 games | 2.05 | 21.5 | 89.3 | 79.2 | 0.003 | 29.68 | 0.197 | 0.360 | Pncl |
-| 2026-06-12 | 12:20 | tedi_main_150 | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.10 | 19.5 | 89.7 | 86.4 | 0.598 | 11.55 | 0.222 | 0.259 | Pncl |
-| 2026-06-12 | 12:20 | tedi_v2_test | A. Dudeney - A. Krueger | UNDER 19.5 games | 2.10 | 19.5 | 89.7 | 86.4 | 0.598 | 11.55 | 0.222 | 0.259 | Pncl |
-| 2026-06-12 | 12:20 | tedi_main_150 | D. Vidmanova - L. Stefanini | UNDER 20.5 games | 2.17 | 20.5 | 78.6 | 82.1 | 0.134 | 21.23 | 0.222 | 0.343 | Pncl |
-| 2026-06-12 | 12:20 | tedi_v2_test | V. Golubic - K. Swan | UNDER 20.5 games | 2.19 | 20.5 | 83.7 | 82.7 | 0.267 | 23.30 | 0.100 | 0.250 | Pncl |
-| 2026-06-12 | 13:30 | tedi_main_150 | S. Cirstea - E. Raducanu | UNDER 21.5 games | 2.05 | 21.5 | 92.5 | 85.9 | 0.005 | 14.50 | 0.250 | 0.229 | 1xBet |
-| 2026-06-12 | 13:30 | tedi_main_150 | Z. Kolar - F. Cina | UNDER 21.5 games | 2.06 | 21.5 | 88.6 | 80.3 | 0.313 | 13.82 | 0.238 | 0.496 | Unibet |
-| 2026-06-12 | 15:00 | tedi_main_150 | C. Naef - A. Urhobo | UNDER 20.5 games | 1.99 | 20.5 | 87.5 | 78.1 | 0.404 | 14.82 | 0.243 | 0.500 | Pncl |
+| 2026-06-13 | 11:00 | tedi_main_150 | B. Krejcikova - M. Linette | UNDER 20.5 games | 2.07 | 20.5 | 88.9 | 82.8 | 0.436 | 26.67 | 0.156 | 0.274 | Betano |
+| 2026-06-13 | 11:00 | tedi_main_150 | N. Vargova - L. Vujovic | UNDER 19.5 games | 2.13 | 19.5 | 85.7 | 79.9 | 0.351 | 4.00 | 0.161 | 0.221 | Pncl |
+| 2026-06-13 | 11:00 | tedi_v2_test | N. Vargova - L. Vujovic | UNDER 19.5 games | 2.13 | 19.5 | 85.7 | 79.9 | 0.351 | 4.00 | 0.161 | 0.221 | Pncl |
+| 2026-06-13 | 12:00 | tedi_main_150 | M. Lajal - Y. Bu | UNDER 22.5 games | 2.10 | 22.5 | 88.9 | 83.0 | 0.159 | 26.71 | 0.214 | 0.452 | 10Bet |
+| 2026-06-13 | 13:00 | tedi_main_150 | Z. Svajda - L. Broady | UNDER 21.5 games | 2.00 | 21.5 | 89.3 | 76.7 | 0.473 | 19.28 | 0.275 | 0.319 | Superbet |
+| 2026-06-13 | 13:00 | tedi_v2_test | Z. Svajda - L. Broady | UNDER 21.5 games | 2.00 | 21.5 | 89.3 | 76.7 | 0.473 | 19.28 | 0.275 | 0.319 | Superbet |
+| 2026-06-13 | 13:30 | tedi_main_150 | H. Klugman - A. Zakharova | UNDER 20.0 games | 2.08 | 20.0 | 85.7 | 77.7 | 0.487 | 10.80 | 0.200 | 0.425 | Pncl |
+| 2026-06-13 | 14:00 | tedi_main_150 | D. Kasatkina - A. Blinkova | UNDER 20.0 games | 2.08 | 20.0 | 85.7 | 76.8 | 0.390 | 20.00 | 0.167 | 0.296 | Pncl |
+| 2026-06-13 | 14:30 | tedi_main_150 | D. Jorda Sanchis - T. Boyer | UNDER 21.5 games | 2.14 | 21.5 | 88.9 | 87.2 | 0.259 | 10.88 | 0.167 | 0.259 | Pncl |
+| 2026-06-13 | 14:30 | tedi_v2_test | D. Jorda Sanchis - T. Boyer | UNDER 21.5 games | 2.14 | 21.5 | 88.9 | 87.2 | 0.259 | 10.88 | 0.167 | 0.259 | Pncl |
+| 2026-06-13 | 17:30 | tedi_main_150 | G. I. Justo - L. E. Ambrogi | UNDER 21.5 games | 2.00 | 21.5 | 89.3 | 77.6 | 0.233 | 15.97 | 0.156 | 0.445 | Betfair |
