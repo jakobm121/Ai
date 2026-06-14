@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T08:52:37.847182+02:00",
+  "generated_at": "2026-06-14T07:53:03.594696+02:00",
   "source_files": {
     "elo_predictions": "data/tennis_value_elo_predictions.json",
     "value_results": "data/tennis_results.json",
@@ -7,52 +7,52 @@
     "elo": "ratings/tennis_elo.json"
   },
   "settle": {
-    "prediction_source_rows": 0,
-    "value_result_source_rows": 682,
-    "settled_now": 0,
+    "prediction_source_rows": 5,
+    "value_result_source_rows": 698,
+    "settled_now": 5,
     "remaining_predictions": 0,
-    "added": 0,
+    "added": 5,
     "updated": 0,
-    "saved_total_results": 228,
+    "saved_total_results": 233,
     "missing_unsettled": 0
   },
   "results": {
     "overall": {
-      "rows": 228,
-      "win_loss_rows": 223,
-      "wins": 110,
-      "losses": 113,
+      "rows": 233,
+      "win_loss_rows": 228,
+      "wins": 111,
+      "losses": 117,
       "void_push": 5,
-      "profit": 23.118,
-      "stake": 276.25,
-      "avg_odds": 2.245,
-      "roi": 8.37,
-      "win_rate": 49.33
+      "profit": 18.448,
+      "stake": 282.75,
+      "avg_odds": 2.244,
+      "roi": 6.52,
+      "win_rate": 48.68
     },
     "by_tour": {
       "atp": {
-        "rows": 46,
-        "win_loss_rows": 46,
+        "rows": 48,
+        "win_loss_rows": 48,
         "wins": 21,
-        "losses": 25,
+        "losses": 27,
         "void_push": 0,
-        "profit": 2.252,
-        "stake": 57.75,
-        "avg_odds": 2.218,
-        "roi": 3.9,
-        "win_rate": 45.65
+        "profit": -0.248,
+        "stake": 60.25,
+        "avg_odds": 2.216,
+        "roi": -0.41,
+        "win_rate": 43.75
       },
       "challenger": {
-        "rows": 107,
-        "win_loss_rows": 105,
+        "rows": 109,
+        "win_loss_rows": 107,
         "wins": 54,
-        "losses": 51,
+        "losses": 53,
         "void_push": 2,
-        "profit": 18.91,
-        "stake": 130.75,
-        "avg_odds": 2.279,
-        "roi": 14.46,
-        "win_rate": 51.43
+        "profit": 15.91,
+        "stake": 133.75,
+        "avg_odds": 2.28,
+        "roi": 11.9,
+        "win_rate": 50.47
       },
       "itf": {
         "rows": 30,
@@ -67,42 +67,42 @@
         "win_rate": 48.28
       },
       "wta": {
-        "rows": 45,
-        "win_loss_rows": 43,
-        "wins": 21,
+        "rows": 46,
+        "win_loss_rows": 44,
+        "wins": 22,
         "losses": 22,
         "void_push": 2,
-        "profit": -1.747,
-        "stake": 53.25,
-        "avg_odds": 2.166,
-        "roi": -3.28,
-        "win_rate": 48.84
+        "profit": -0.917,
+        "stake": 54.25,
+        "avg_odds": 2.159,
+        "roi": -1.69,
+        "win_rate": 50.0
       }
     },
     "by_event_type": {
       "Atp Singles": {
-        "rows": 46,
-        "win_loss_rows": 46,
+        "rows": 48,
+        "win_loss_rows": 48,
         "wins": 21,
-        "losses": 25,
+        "losses": 27,
         "void_push": 0,
-        "profit": 2.252,
-        "stake": 57.75,
-        "avg_odds": 2.218,
-        "roi": 3.9,
-        "win_rate": 45.65
+        "profit": -0.248,
+        "stake": 60.25,
+        "avg_odds": 2.216,
+        "roi": -0.41,
+        "win_rate": 43.75
       },
       "Challenger Men Singles": {
-        "rows": 88,
-        "win_loss_rows": 86,
+        "rows": 90,
+        "win_loss_rows": 88,
         "wins": 42,
-        "losses": 44,
+        "losses": 46,
         "void_push": 2,
-        "profit": 8.882,
-        "stake": 106.25,
-        "avg_odds": 2.276,
-        "roi": 8.36,
-        "win_rate": 48.84
+        "profit": 5.882,
+        "stake": 109.25,
+        "avg_odds": 2.277,
+        "roi": 5.38,
+        "win_rate": 47.73
       },
       "Challenger Women Singles": {
         "rows": 19,
@@ -141,16 +141,16 @@
         "win_rate": 50.0
       },
       "Wta Singles": {
-        "rows": 45,
-        "win_loss_rows": 43,
-        "wins": 21,
+        "rows": 46,
+        "win_loss_rows": 44,
+        "wins": 22,
         "losses": 22,
         "void_push": 2,
-        "profit": -1.747,
-        "stake": 53.25,
-        "avg_odds": 2.166,
-        "roi": -3.28,
-        "win_rate": 48.84
+        "profit": -0.917,
+        "stake": 54.25,
+        "avg_odds": 2.159,
+        "roi": -1.69,
+        "win_rate": 50.0
       }
     }
   }

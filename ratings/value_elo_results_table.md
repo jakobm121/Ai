@@ -1,8 +1,8 @@
 # Value + ELO settled results
 
-Generated: 2026-06-13T08:52:37.848804+02:00
+Generated: 2026-06-14T07:53:03.596287+02:00
 
-Overall: **110-113**, WR **49.33%**, Profit **23.118u**, ROI **8.37%**, Avg odds **2.245**
+Overall: **111-117**, WR **48.68%**, Profit **18.448u**, ROI **6.52%**, Avg odds **2.244**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -234,3 +234,8 @@ Overall: **110-113**, WR **49.33%**, Profit **23.118u**, ROI **8.37%**, Avg odds
 | 2026-06-12 | challenger | H. Rocha - Dar. Blanch | H. Rocha | 1.88 | 1.25 | loss | -1.25 | 62.88 |  |
 | 2026-06-12 | challenger | L. Sun - M. Stoiana | M. Stoiana | 2.33 | 1.5 | win | 1.995 | 14.3 |  |
 | 2026-06-12 | wta | S. Cirstea - E. Raducanu | S. Cirstea | 1.94 | 1.5 | loss | -1.5 | 170.16 |  |
+| 2026-06-13 | atp | A. Kovacevic - M. Mmoh | M. Mmoh | 2.43 | 1.25 | loss | -1.25 | 54.35 |  |
+| 2026-06-13 | challenger | A. Shevchenko - V. Sachko | V. Sachko | 2.34 | 1.5 | loss | -1.5 | 2.76 |  |
+| 2026-06-13 | atp | D. Prizmic - R. Hijikata | D. Prizmic | 1.94 | 1.25 | loss | -1.25 | 98.16 |  |
+| 2026-06-13 | challenger | Dar. Blanch - J. Fearnley | Dar. Blanch | 2.28 | 1.5 | loss | -1.5 | 25.43 |  |
+| 2026-06-13 | wta | M. Pohankova - T. Korpatsch | M. Pohankova | 1.83 | 1.0 | win | 0.83 | 32.97 |  |
