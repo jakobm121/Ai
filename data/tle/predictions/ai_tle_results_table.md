@@ -1,12 +1,12 @@
 # AI TLE Results
 
-Generated: `2026-06-14T14:57:33+00:00`
+Generated: `2026-06-14T20:03:44+00:00`
 Total picks: `59`
-Settled bets: `51`
-Pending: `6`
-Profit: `4.376933`
-ROI: `8.58%`
-Hit rate: `45.10%`
+Settled bets: `55`
+Pending: `2`
+Profit: `2.737933`
+ROI: `4.98%`
+Hit rate: `43.64%`
 
 | # | Date | Time | Level | Match | Pick | Odds | Status | Profit | Edge | EV | Winner | Score | Reason |
 |---:|---|---|---|---|---|---:|---|---:|---:|---:|---|---|---|
@@ -61,11 +61,11 @@ Hit rate: `45.10%`
 | 49 | 2026-06-14 | 13:00 | challenger | S. Vincent Ruggeri - A. Sanchez Quilez | S. Vincent Ruggeri | 3.237143 | LOSS | -1.0 | 8.45% | 20.26% | Second Player | 0 - 2 | settled |
 | 50 | 2026-06-14 | 14:00 | atp_wta | B. Shelton - T. Fritz | T. Fritz | 1.858182 | LOSS | -1.0 | 6.05% | 5.80% | First Player | 2 - 1 | settled |
 | 51 | 2026-06-14 | 14:00 | itf | E. Avanesyan - K. Rinaldo Persson | K. Rinaldo Persson | 2.43 | LOSS | -1.0 | 10.45% | 18.17% | First Player | 2 - 0 | settled |
-| 52 | 2026-06-14 | 14:00 | challenger | M. H. Rehberg - A. Marti Pujolras | M. H. Rehberg | 1.532857 | PENDING |  | 11.57% | 10.17% |  | - | not_finished |
+| 52 | 2026-06-14 | 14:00 | challenger | M. H. Rehberg - A. Marti Pujolras | M. H. Rehberg | 1.532857 | PENDING |  | 11.57% | 10.17% |  |  | fixture_not_found |
 | 53 | 2026-06-14 | 14:30 | itf | C. Burel - J. Lim | J. Lim | 3.52 | LOSS | -1.0 | 24.25% | 78.22% | First Player | 2 - 1 | settled |
 | 54 | 2026-06-14 | 15:00 | itf | P. Iatcenko - M. Kubka | P. Iatcenko | 2.332 | WIN | 1.332 | 10.46% | 16.97% | First Player | 2 - 0 | settled |
-| 55 | 2026-06-14 | 15:00 | challenger | F. Balshaw - D. Jorda Sanchis | D. Jorda Sanchis | 2.361 | PENDING |  | 21.24% | 43.09% |  | 0 - 1 | not_finished |
-| 56 | 2026-06-14 | 15:30 | challenger | R. Molleker - M. Erhard | R. Molleker | 1.98625 | PENDING |  | 5.07% | 2.75% |  | - | not_finished |
-| 57 | 2026-06-14 | 16:00 | challenger | N. Budkov Kjaer - M. McDonald | N. Budkov Kjaer | 2.015 | PENDING |  | 6.12% | 5.10% |  | 1 - 0 | not_finished |
-| 58 | 2026-06-14 | 17:00 | itf | N. Podoroska - L. Perez Alarcon | L. Perez Alarcon | 2.215556 | PENDING |  | 12.68% | 20.48% |  | - | not_finished |
-| 59 | 2026-06-14 | 17:30 | challenger | R. Sakamoto - Y. Wu | R. Sakamoto | 2.34125 | PENDING |  | 10.59% | 17.41% |  | - | not_finished |
+| 55 | 2026-06-14 | 15:00 | challenger | F. Balshaw - D. Jorda Sanchis | D. Jorda Sanchis | 2.361 | WIN | 1.361 | 21.24% | 43.09% | Second Player | 0 - 2 | settled |
+| 56 | 2026-06-14 | 16:00 | challenger | N. Budkov Kjaer - M. McDonald | N. Budkov Kjaer | 2.015 | LOSS | -1.0 | 6.12% | 5.10% | Second Player | 1 - 2 | settled |
+| 57 | 2026-06-14 | 17:00 | itf | N. Podoroska - L. Perez Alarcon | L. Perez Alarcon | 2.215556 | LOSS | -1.0 | 12.68% | 20.48% | First Player | 2 - 1 | settled |
+| 58 | 2026-06-14 | 17:45 | challenger | R. Sakamoto - Y. Wu | R. Sakamoto | 2.34125 | LOSS | -1.0 | 10.59% | 17.41% | Second Player | 0 - 2 | settled |
+| 59 | 2026-06-14 | 17:45 | challenger | R. Molleker - M. Erhard | R. Molleker | 1.98625 | PENDING |  | 5.07% | 2.75% |  |  | fixture_not_found |
