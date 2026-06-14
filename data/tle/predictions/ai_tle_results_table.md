@@ -1,12 +1,12 @@
 # AI TLE Results
 
-Generated: `2026-06-14T08:51:50+00:00`
+Generated: `2026-06-14T14:57:33+00:00`
 Total picks: `59`
-Settled bets: `32`
-Pending: `26`
-Profit: `8.331499`
-ROI: `26.04%`
-Hit rate: `50.00%`
+Settled bets: `51`
+Pending: `6`
+Profit: `4.376933`
+ROI: `8.58%`
+Hit rate: `45.10%`
 
 | # | Date | Time | Level | Match | Pick | Odds | Status | Profit | Edge | EV | Winner | Score | Reason |
 |---:|---|---|---|---|---|---:|---|---:|---:|---:|---|---|---|
@@ -43,29 +43,29 @@ Hit rate: `50.00%`
 | 31 | 2026-06-13 | 15:00 | itf | N. Podoroska - A. Zantedeschi | N. Podoroska | 1.74 | WIN | 0.74 | 5.15% | 1.13% | First Player | 2 - 0 | settled |
 | 32 | 2026-06-13 | 16:00 | challenger | D. E. Galan - F. Balshaw | D. E. Galan | 2.038889 | LOSS | -1.0 | 15.94% | 25.47% | Second Player | 1 - 2 | settled |
 | 33 | 2026-06-13 | 17:00 | itf | G. Piraino - F. Tabacco | G. Piraino | 1.506667 | LOSS | -1.0 | 11.39% | 9.66% | Second Player | 0 - 2 | settled |
-| 34 | 2026-06-14 | 09:00 | itf | I. Marrero Curbelo - M. McKennon | I. Marrero Curbelo | 1.888889 | PENDING |  | 9.63% | 10.80% |  | - | not_finished |
-| 35 | 2026-06-14 | 10:00 | itf | N. McDonald - S. Kopp | S. Kopp | 1.703333 | PENDING |  | 15.23% | 18.72% |  | 0 - 0 | not_finished |
-| 36 | 2026-06-14 | 10:00 | itf | K. Zaytseva - M. Mettraux | M. Mettraux | 3.003 | PENDING |  | 22.02% | 58.82% |  | - | not_finished |
-| 37 | 2026-06-14 | 10:00 | challenger | M. Cerny - A. Weis | M. Cerny | 1.9375 | PENDING |  | 5.65% | 3.51% |  | 0 - 0 | not_finished |
-| 38 | 2026-06-14 | 10:30 | itf | D. Mosejczuk - C. Bouchelaghem | C. Bouchelaghem | 1.4275 | PENDING |  | 6.46% | 1.97% |  | - | not_finished |
-| 39 | 2026-06-14 | 10:30 | itf | V. Milovanova - A. Schuman | V. Milovanova | 1.62 | PENDING |  | 9.43% | 8.04% |  | - | not_finished |
-| 40 | 2026-06-14 | 11:00 | itf | A. Falei - S. Broadus | A. Falei | 1.409 | PENDING |  | 8.96% | 5.26% |  | - | not_finished |
-| 41 | 2026-06-14 | 11:00 | itf | T. Gadamauri - V. Steiner | T. Gadamauri | 2.746667 | PENDING |  | 10.67% | 21.89% |  | - | not_finished |
-| 42 | 2026-06-14 | 11:00 | challenger | F. Broska - M. Bassem Sobhy | M. Bassem Sobhy | 3.19125 | PENDING |  | 21.71% | 62.15% |  | - | not_finished |
-| 43 | 2026-06-14 | 11:30 | itf | J. Domingues - P. Martinez Gomez | J. Domingues | 1.695556 | PENDING |  | 9.26% | 8.38% |  | - | not_finished |
-| 44 | 2026-06-14 | 11:30 | challenger | A. Shevchenko - T. Daniel | T. Daniel | 2.284545 | PENDING |  | 6.81% | 8.73% |  | - | not_finished |
-| 45 | 2026-06-14 | 11:30 | challenger | M. Topo - R. Seggerman | R. Seggerman | 2.45875 | PENDING |  | 7.51% | 11.48% |  | - | not_finished |
-| 46 | 2026-06-14 | 12:00 | challenger | J. Watt - A. Gray | J. Watt | 2.209 | PENDING |  | 5.04% | 3.64% |  | - | not_finished |
-| 47 | 2026-06-14 | 12:30 | challenger | M. Vrbensky - M. Karol | M. Vrbensky | 3.1925 | PENDING |  | 7.83% | 17.87% |  | - | not_finished |
-| 48 | 2026-06-14 | 13:00 | challenger | R. Bertola - J. McCabe | R. Bertola | 3.03375 | PENDING |  | 13.23% | 32.55% |  | - | not_finished |
-| 49 | 2026-06-14 | 13:00 | challenger | S. Vincent Ruggeri - A. Sanchez Quilez | S. Vincent Ruggeri | 3.237143 | PENDING |  | 8.45% | 20.26% |  | - | not_finished |
-| 50 | 2026-06-14 | 14:00 | atp_wta | B. Shelton - T. Fritz | T. Fritz | 1.858182 | PENDING |  | 6.05% | 5.80% |  | - | not_finished |
-| 51 | 2026-06-14 | 14:00 | itf | E. Avanesyan - K. Rinaldo Persson | K. Rinaldo Persson | 2.43 | PENDING |  | 10.45% | 18.17% |  | - | not_finished |
+| 34 | 2026-06-14 | 09:00 | itf | I. Marrero Curbelo - M. McKennon | I. Marrero Curbelo | 1.888889 | WIN | 0.888889 | 9.63% | 10.80% | First Player | 2 - 0 | settled |
+| 35 | 2026-06-14 | 10:00 | itf | N. McDonald - S. Kopp | S. Kopp | 1.703333 | LOSS | -1.0 | 15.23% | 18.72% | First Player | 2 - 0 | settled |
+| 36 | 2026-06-14 | 10:00 | itf | K. Zaytseva - M. Mettraux | M. Mettraux | 3.003 | LOSS | -1.0 | 22.02% | 58.82% | First Player | 2 - 0 | settled |
+| 37 | 2026-06-14 | 10:00 | challenger | M. Cerny - A. Weis | M. Cerny | 1.9375 | LOSS | -1.0 | 5.65% | 3.51% | Second Player | 0 - 2 | settled |
+| 38 | 2026-06-14 | 10:30 | itf | D. Mosejczuk - C. Bouchelaghem | C. Bouchelaghem | 1.4275 | WIN | 0.4275 | 6.46% | 1.97% | Second Player | 1 - 2 | settled |
+| 39 | 2026-06-14 | 10:30 | itf | V. Milovanova - A. Schuman | V. Milovanova | 1.62 | WIN | 0.62 | 9.43% | 8.04% | First Player | 2 - 0 | settled |
+| 40 | 2026-06-14 | 11:00 | itf | A. Falei - S. Broadus | A. Falei | 1.409 | LOSS | -1.0 | 8.96% | 5.26% | Second Player | 1 - 2 | settled |
+| 41 | 2026-06-14 | 11:00 | itf | T. Gadamauri - V. Steiner | T. Gadamauri | 2.746667 | LOSS | -1.0 | 10.67% | 21.89% | Second Player | 0 - 2 | settled |
+| 42 | 2026-06-14 | 11:00 | challenger | F. Broska - M. Bassem Sobhy | M. Bassem Sobhy | 3.19125 | LOSS | -1.0 | 21.71% | 62.15% | First Player | 2 - 0 | settled |
+| 43 | 2026-06-14 | 11:30 | itf | J. Domingues - P. Martinez Gomez | J. Domingues | 1.695556 | LOSS | -1.0 | 9.26% | 8.38% | Second Player | 0 - 2 | settled |
+| 44 | 2026-06-14 | 11:30 | challenger | A. Shevchenko - T. Daniel | T. Daniel | 2.284545 | WIN | 1.284545 | 6.81% | 8.73% | Second Player | 1 - 2 | settled |
+| 45 | 2026-06-14 | 11:30 | challenger | M. Topo - R. Seggerman | R. Seggerman | 2.45875 | WIN | 1.45875 | 7.51% | 11.48% | Second Player | 1 - 2 | settled |
+| 46 | 2026-06-14 | 12:00 | challenger | J. Watt - A. Gray | J. Watt | 2.209 | LOSS | -1.0 | 5.04% | 3.64% | Second Player | 0 - 2 | settled |
+| 47 | 2026-06-14 | 12:30 | challenger | M. Vrbensky - M. Karol | M. Vrbensky | 3.1925 | VOID | 0.0 | 7.83% | 17.87% |  | 0 - 0 | void_status |
+| 48 | 2026-06-14 | 13:00 | challenger | R. Bertola - J. McCabe | R. Bertola | 3.03375 | WIN | 2.03375 | 13.23% | 32.55% | First Player | 2 - 0 | settled |
+| 49 | 2026-06-14 | 13:00 | challenger | S. Vincent Ruggeri - A. Sanchez Quilez | S. Vincent Ruggeri | 3.237143 | LOSS | -1.0 | 8.45% | 20.26% | Second Player | 0 - 2 | settled |
+| 50 | 2026-06-14 | 14:00 | atp_wta | B. Shelton - T. Fritz | T. Fritz | 1.858182 | LOSS | -1.0 | 6.05% | 5.80% | First Player | 2 - 1 | settled |
+| 51 | 2026-06-14 | 14:00 | itf | E. Avanesyan - K. Rinaldo Persson | K. Rinaldo Persson | 2.43 | LOSS | -1.0 | 10.45% | 18.17% | First Player | 2 - 0 | settled |
 | 52 | 2026-06-14 | 14:00 | challenger | M. H. Rehberg - A. Marti Pujolras | M. H. Rehberg | 1.532857 | PENDING |  | 11.57% | 10.17% |  | - | not_finished |
-| 53 | 2026-06-14 | 14:30 | itf | C. Burel - J. Lim | J. Lim | 3.52 | PENDING |  | 24.25% | 78.22% |  | - | not_finished |
-| 54 | 2026-06-14 | 15:00 | itf | P. Iatcenko - M. Kubka | P. Iatcenko | 2.332 | PENDING |  | 10.46% | 16.97% |  | - | not_finished |
-| 55 | 2026-06-14 | 15:00 | challenger | F. Balshaw - D. Jorda Sanchis | D. Jorda Sanchis | 2.361 | PENDING |  | 21.24% | 43.09% |  | - | not_finished |
+| 53 | 2026-06-14 | 14:30 | itf | C. Burel - J. Lim | J. Lim | 3.52 | LOSS | -1.0 | 24.25% | 78.22% | First Player | 2 - 1 | settled |
+| 54 | 2026-06-14 | 15:00 | itf | P. Iatcenko - M. Kubka | P. Iatcenko | 2.332 | WIN | 1.332 | 10.46% | 16.97% | First Player | 2 - 0 | settled |
+| 55 | 2026-06-14 | 15:00 | challenger | F. Balshaw - D. Jorda Sanchis | D. Jorda Sanchis | 2.361 | PENDING |  | 21.24% | 43.09% |  | 0 - 1 | not_finished |
 | 56 | 2026-06-14 | 15:30 | challenger | R. Molleker - M. Erhard | R. Molleker | 1.98625 | PENDING |  | 5.07% | 2.75% |  | - | not_finished |
-| 57 | 2026-06-14 | 16:00 | challenger | N. Budkov Kjaer - M. McDonald | N. Budkov Kjaer | 2.015 | PENDING |  | 6.12% | 5.10% |  | - | not_finished |
+| 57 | 2026-06-14 | 16:00 | challenger | N. Budkov Kjaer - M. McDonald | N. Budkov Kjaer | 2.015 | PENDING |  | 6.12% | 5.10% |  | 1 - 0 | not_finished |
 | 58 | 2026-06-14 | 17:00 | itf | N. Podoroska - L. Perez Alarcon | L. Perez Alarcon | 2.215556 | PENDING |  | 12.68% | 20.48% |  | - | not_finished |
 | 59 | 2026-06-14 | 17:30 | challenger | R. Sakamoto - Y. Wu | R. Sakamoto | 2.34125 | PENDING |  | 10.59% | 17.41% |  | - | not_finished |
