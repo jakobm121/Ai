@@ -1,6 +1,6 @@
 # Hana settled results
 
-Generated: 2026-06-13T22:41:48.063282+02:00
+Generated: 2026-06-14T07:47:16.691243+02:00
 
 ## Overall
 

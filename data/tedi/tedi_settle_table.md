@@ -1,6 +1,6 @@
 # Tedi settled results
 
-Generated: 2026-06-13T22:41:47.858121+02:00
+Generated: 2026-06-14T07:47:16.499931+02:00
 
 ## Summary by strategy
 
