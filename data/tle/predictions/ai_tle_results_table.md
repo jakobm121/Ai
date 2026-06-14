@@ -1,9 +1,9 @@
 # AI TLE Results
 
-Generated: `2026-06-14T20:03:44+00:00`
-Total picks: `59`
+Generated: `2026-06-14T21:52:44+00:00`
+Total picks: `60`
 Settled bets: `55`
-Pending: `2`
+Pending: `3`
 Profit: `2.737933`
 ROI: `4.98%`
 Hit rate: `43.64%`
@@ -69,3 +69,4 @@ Hit rate: `43.64%`
 | 57 | 2026-06-14 | 17:00 | itf | N. Podoroska - L. Perez Alarcon | L. Perez Alarcon | 2.215556 | LOSS | -1.0 | 12.68% | 20.48% | First Player | 2 - 1 | settled |
 | 58 | 2026-06-14 | 17:45 | challenger | R. Sakamoto - Y. Wu | R. Sakamoto | 2.34125 | LOSS | -1.0 | 10.59% | 17.41% | Second Player | 0 - 2 | settled |
 | 59 | 2026-06-14 | 17:45 | challenger | R. Molleker - M. Erhard | R. Molleker | 1.98625 | PENDING |  | 5.07% | 2.75% |  |  | fixture_not_found |
+| 60 | 2026-06-14 | 23:00 | itf | A. Vergara Rivera - C. Alves | A. Vergara Rivera | 2.107 | PENDING |  | 7.74% | 9.08% |  | 0 - 0 | not_finished |

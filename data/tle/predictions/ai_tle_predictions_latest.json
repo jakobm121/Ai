@@ -2,77 +2,166 @@
   "schema_version": 1,
   "file_type": "ai_tle_open_predictions",
   "summary": {
-    "generated_at": "2026-06-14T20:05:49+00:00",
-    "scan_date_start": "2026-06-14",
-    "scan_date_end": "2026-06-14",
-    "settings": {
-      "bookmaker": "Pncl",
-      "fallback": "clean_average",
-      "min_edge": 0.05,
-      "min_ev": 0.0,
-      "min_odds": 1.2,
-      "max_odds": 8.0,
-      "min_overround": -0.03,
-      "max_overround": 0.18,
-      "max_book_deviation": 0.35,
-      "min_book_pairs": 3,
-      "allowed_resolve_methods": [
-        "api_mapping",
-        "exact_name"
-      ],
-      "min_start_minutes": 30.0,
-      "levels": [
-        "atp_wta",
-        "challenger",
-        "grand_slam",
-        "itf"
-      ],
-      "main_min_level_matches": 20,
-      "main_min_surface_matches": 10,
-      "itf_min_level_matches": 5,
-      "challenger_min_level_matches": 5,
-      "state_note": "TLE state uses Tennis-ELO canonical matches strictly before scan start date.",
-      "historical_matches_loaded_before_scan_date": 215534
-    },
+    "generated_at": "2026-06-14T21:52:44+00:00",
+    "results_path": "data/tle/predictions/ai_tle_results.json",
+    "predictions_path": "data/tle/predictions/ai_tle_predictions_latest.json",
+    "date_start": "2026-06-14",
+    "date_stop": "2026-06-14",
+    "api_fixtures_loaded": 143,
+    "api_events_indexed": 143,
+    "results_loaded": 60,
+    "results_total_after_settle": 60,
+    "active_predictions_after_settle": 3,
     "counters": {
-      "api_fixture_events": 143,
-      "api_odds_events": 110,
-      "away_resolve_api_mapping": 1,
-      "home_resolve_api_mapping": 1,
-      "odds_events_with_fixture": 110,
-      "picks": 1,
-      "picks_gender_women": 1,
-      "picks_level_itf": 1,
-      "scored_level_itf": 1,
-      "scored_matches": 1,
-      "skipped_level_qualifying": 5,
-      "skipped_starts_too_soon": 2,
-      "skipped_status_cancelled": 4,
-      "skipped_status_finished": 98
+      "reason_fixture_not_found": 2,
+      "reason_not_finished": 1,
+      "status_loss": 31,
+      "status_pending": 3,
+      "status_void": 2,
+      "status_win": 24
     },
-    "current_snapshot_picks_count": 1,
-    "open_predictions_count": 3,
-    "results_total_count": 60,
-    "scored_sides_count": 2,
-    "ledger": {
-      "results_existing_before_scan": 59,
-      "current_snapshot_picks": 1,
-      "new_picks_added_to_results": 1,
-      "open_picks_refreshed": 0,
-      "skipped_already_settled": 0,
-      "results_total_after_scan": 60,
-      "open_predictions_after_scan": 3,
-      "settled_predictions_in_results": 57,
-      "source_of_truth": "ai_tle_results.json"
+    "overall": {
+      "total_picks": 60,
+      "settled_bets": 55,
+      "wins": 24,
+      "losses": 31,
+      "void": 2,
+      "pending": 3,
+      "staked": 55.0,
+      "profit": 2.737933,
+      "roi": 0.049781,
+      "hit_rate": 0.436364,
+      "avg_odds": 2.434776
     },
-    "level_counts_open": {
-      "challenger": 2,
-      "itf": 1
+    "by_level": {
+      "atp_wta": {
+        "total_picks": 2,
+        "settled_bets": 2,
+        "wins": 1,
+        "losses": 1,
+        "void": 0,
+        "pending": 0,
+        "staked": 2.0,
+        "profit": 0.084167,
+        "roi": 0.042084,
+        "hit_rate": 0.5,
+        "avg_odds": 1.971175
+      },
+      "challenger": {
+        "total_picks": 21,
+        "settled_bets": 17,
+        "wins": 7,
+        "losses": 10,
+        "void": 2,
+        "pending": 2,
+        "staked": 17.0,
+        "profit": 1.712591,
+        "roi": 0.100741,
+        "hit_rate": 0.411765,
+        "avg_odds": 2.503416
+      },
+      "itf": {
+        "total_picks": 37,
+        "settled_bets": 36,
+        "wins": 16,
+        "losses": 20,
+        "void": 0,
+        "pending": 1,
+        "staked": 36.0,
+        "profit": 0.941175,
+        "roi": 0.026144,
+        "hit_rate": 0.444444,
+        "avg_odds": 2.428118
+      }
     },
-    "gender_counts_open": {
-      "men": 2,
-      "women": 1
-    }
+    "by_gender": {
+      "men": {
+        "total_picks": 38,
+        "settled_bets": 34,
+        "wins": 16,
+        "losses": 18,
+        "void": 2,
+        "pending": 2,
+        "staked": 34.0,
+        "profit": 3.535647,
+        "roi": 0.10399,
+        "hit_rate": 0.470588,
+        "avg_odds": 2.343705
+      },
+      "women": {
+        "total_picks": 22,
+        "settled_bets": 21,
+        "wins": 8,
+        "losses": 13,
+        "void": 0,
+        "pending": 1,
+        "staked": 21.0,
+        "profit": -0.797714,
+        "roi": -0.037986,
+        "hit_rate": 0.380952,
+        "avg_odds": 2.582223
+      }
+    },
+    "by_status": {
+      "LOSS": {
+        "total_picks": 31,
+        "settled_bets": 31,
+        "wins": 0,
+        "losses": 31,
+        "void": 0,
+        "pending": 0,
+        "staked": 31.0,
+        "profit": -31.0,
+        "roi": -1.0,
+        "hit_rate": 0.0,
+        "avg_odds": 2.457249
+      },
+      "PENDING": {
+        "total_picks": 3,
+        "settled_bets": 0,
+        "wins": 0,
+        "losses": 0,
+        "void": 0,
+        "pending": 3,
+        "staked": 0.0,
+        "profit": 0,
+        "roi": null,
+        "hit_rate": null,
+        "avg_odds": null
+      },
+      "VOID": {
+        "total_picks": 2,
+        "settled_bets": 0,
+        "wins": 0,
+        "losses": 0,
+        "void": 2,
+        "pending": 0,
+        "staked": 0.0,
+        "profit": 0,
+        "roi": null,
+        "hit_rate": null,
+        "avg_odds": null
+      },
+      "WIN": {
+        "total_picks": 24,
+        "settled_bets": 24,
+        "wins": 24,
+        "losses": 0,
+        "void": 0,
+        "pending": 0,
+        "staked": 24.0,
+        "profit": 33.737933,
+        "roi": 1.405747,
+        "hit_rate": 1.0,
+        "avg_odds": 2.405747
+      }
+    },
+    "files_written": [
+      "data/tle/predictions/ai_tle_results.json",
+      "data/tle/predictions/ai_tle_predictions_latest.json",
+      "data/tle/predictions/ai_tle_predictions_table.md",
+      "data/tle/predictions/ai_tle_results_table.md"
+    ]
   },
   "picks": [
     {
@@ -372,7 +461,20 @@
       "latest_tle_probability": 0.517725,
       "latest_book_probability_devig": 0.440372,
       "latest_tle_edge": 0.077354,
-      "latest_tle_ev": 0.090847
+      "latest_tle_ev": 0.090847,
+      "settlement_reason": "not_finished",
+      "settlement_odds": 2.107,
+      "stake": 1.0,
+      "profit": 0.0,
+      "won": null,
+      "winner_side": null,
+      "api_event_status": "Set 1",
+      "api_event_winner": "",
+      "api_final_score": "0 - 0",
+      "api_first_player": "A. Vergara Rivera",
+      "api_second_player": "C. Alves",
+      "api_event_date": "2026-06-14",
+      "api_event_time": "23:40"
     }
   ]
 }
