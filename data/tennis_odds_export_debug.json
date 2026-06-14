@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-06-14T18:47:07.949992+02:00",
+  "generated_at": "2026-06-14T21:58:40.833487+02:00",
   "summary": {
-    "fixtures_total": 147,
-    "matches_with_odds": 14,
-    "skipped": 133,
+    "fixtures_total": 143,
+    "matches_with_odds": 5,
+    "skipped": 138,
     "errors": 0,
-    "first_set_total_matches": 7,
-    "match_total_matches": 7,
-    "with_surface": 2,
-    "with_gender": 14,
-    "with_best_of": 14,
+    "first_set_total_matches": 4,
+    "match_total_matches": 4,
+    "with_surface": 1,
+    "with_gender": 5,
+    "with_best_of": 5,
     "tiebreak_market_matches": 0
   },
   "skipped": [
     {
       "event_key": 12136325,
       "match": "Fradkin/ McKennon - Chopra/ Cooper",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12136398,
@@ -349,11 +349,6 @@
       "reason": "not_pregame"
     },
     {
-      "event_key": 12136589,
-      "match": "A. Wazny - D. Yevseyev",
-      "reason": "not_pregame"
-    },
-    {
       "event_key": 12136592,
       "match": "A. Santillan - F. Pieczonka",
       "reason": "not_pregame"
@@ -376,6 +371,11 @@
     {
       "event_key": 12136599,
       "match": "N. Tajima - N. K. Sinha",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12136600,
+      "match": "J. Coudret - A. Freire Da Silva",
       "reason": "not_pregame"
     },
     {
@@ -489,6 +489,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12136623,
+      "match": "N. Oliveira - A. Hernandez",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12136624,
       "match": "S. Cuenin - S. D'Agostino",
       "reason": "not_pregame"
@@ -571,7 +576,12 @@
     {
       "event_key": 12136727,
       "match": "M. Brengle - L. Ma",
-      "reason": "no_odds"
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12136728,
+      "match": "K. Kawa - L. Bronzetti",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12136729,
@@ -649,19 +659,34 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12136755,
+      "match": "A. Huertas Del Pino Cordova - B. De La Pena",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12136756,
       "match": "S. A. Linde Palacios - F. Gonzalez Benitez",
       "reason": "not_pregame"
     },
     {
+      "event_key": 12136757,
+      "match": "I. Monzon - J. Cundom",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12136760,
       "match": "M. Zeitune - A. A. Frutos Alonso",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12136763,
       "match": "T. Martinez - V. C. Loureiro J.",
       "reason": "no_odds"
+    },
+    {
+      "event_key": 12136764,
+      "match": "K. Bigun - A. Johnson",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12136777,
@@ -676,7 +701,7 @@
     {
       "event_key": 12136810,
       "match": "L. Britto - F. Gonzalez Benitez",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     }
   ],
   "errors": [],
@@ -711,6 +736,8 @@
     "Set Betting",
     "Total - Away",
     "Total - Home",
+    "Win In Straigh Sets (Player 1)",
+    "Win In Straigh Sets (Player 2)",
     "Win at least one set (Player 1)",
     "Win at least one set (Player 2)"
   ]
