@@ -1,7 +1,8 @@
-# AI TLE Predictions
+# AI TLE Active Predictions
 
-Generated: `2026-06-14T06:04:51+00:00`
-Open predictions: `26`
+Generated: `2026-06-14T08:51:50+00:00`
+Active predictions: `26`
+Results ledger: `data/tle/predictions/ai_tle_results.json`
 
 | # | Date | Time | Level | Match | Pick | Odds | TLE % | Book % | Edge | EV | Status |
 |---:|---|---|---|---|---|---:|---:|---:|---:|---:|---|
