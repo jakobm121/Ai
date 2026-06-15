@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-14T07:47:16.691243+02:00
+Generated: 2026-06-15T10:00:14.548414+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 283 | 283 | 137 | 124 | 22 | 52.49% | 21.76u | 8.34% |
+| 292 | 292 | 139 | 127 | 26 | 52.26% | 20.82u | 7.83% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 48 | 48 | 25 | 20 | 3 | 55.56% | 6.79u | 15.09% |
-| single | 216 | 216 | 102 | 95 | 19 | 51.78% | 12.97u | 6.58% |
-| triple | 19 | 19 | 10 | 9 | 0 | 52.63% | 2.0u | 10.53% |
+| double | 49 | 49 | 25 | 21 | 3 | 54.35% | 5.79u | 12.59% |
+| single | 223 | 223 | 104 | 97 | 22 | 51.74% | 13.03u | 6.48% |
+| triple | 20 | 20 | 10 | 9 | 1 | 52.63% | 2.0u | 10.53% |
 
 ## Results
 
@@ -303,3 +303,12 @@ Generated: 2026-06-14T07:47:16.691243+02:00
 | 2026-06-13 | 14:30 | double | lucija, tedi | loss | -1.00 | D. Jorda Sanchis - T. Boyer | UNDER 21.5 games | 2.14 | 31 | 3-6, 6-4, 7-5 |
 | 2026-06-13 | 15:00 | single | jakob | win | 1.08 | A. Mannarino - A. De Minaur | UNDER 20.5 games | 2.08 | 16 | 4-6, 0-6 |
 | 2026-06-13 | 17:30 | single | tedi | loss | -1.00 | G. I. Justo - L. E. Ambrogi | UNDER 21.5 games | 2.00 | 30 | 6-4, 5-7, 2-6 |
+| 2026-06-14 | 11:00 | single | jakob | push | 0.00 | L. Sun - A. Kalinina | UNDER 20.5 games | 2.05 | None | None |
+| 2026-06-14 | 11:30 | single | jakob | win | 1.04 | H. S. Callejon - L. Bocchi | UNDER 20.0 games | 2.04 | 19 | 3-6, 4-6 |
+| 2026-06-14 | 12:00 | triple | jakob, lucija, tedi | push | 0.00 | R. Montgomery - B. Krejcikova | UNDER 21.5 games | 1.97 | None | None |
+| 2026-06-14 | 12:30 | single | jakob | push | 0.00 | M. Vrbensky - M. Karol | UNDER 20.0 games | 2.08 | None | None |
+| 2026-06-14 | 13:00 | single | tedi | win | 1.02 | A. Vukic - H. Wendelken | UNDER 22.5 games | 2.02 | 20 | 6-7, 1-6 |
+| 2026-06-14 | 13:00 | double | jakob, tedi | loss | -1.00 | M. Bellucci - A. Bolt | UNDER 22.5 games | 2.10 | 34 | 6-7, 7-5, 6-3 |
+| 2026-06-14 | 13:00 | single | jakob | push | 0.00 | S. Vincent Ruggeri - A. Sanchez Quilez | UNDER 20.0 games | 2.08 | 20 | 2-6, 5-7 |
+| 2026-06-14 | 15:00 | single | tedi | loss | -1.00 | F. Balshaw - D. Jorda Sanchis | UNDER 21.5 games | 2.17 | 23 | 4-6, 6-7 |
+| 2026-06-14 | 15:30 | single | jakob | loss | -1.00 | J. Fearnley - Y. Bu | OVER 23.5 games | 2.10 | 22 | 3-6, 6-7 |

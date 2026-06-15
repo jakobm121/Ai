@@ -1,6 +1,6 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-14T07:47:16.374500+02:00`
+Generated: `2026-06-15T10:00:14.215328+02:00`
 
 Pending picks: **1**
 
@@ -8,48 +8,55 @@ Pending picks: **1**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 201 | 95 | 92 | 1 | 13 | 50.80% | +6.65u | 4.74% |
+| 208 | 96 | 94 | 2 | 16 | 50.53% | +5.93u | 4.16% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 0 | 0 | 0 | 0 | 0 | 0.00% | 0.00u | 0.00% |
+| 7 | 1 | 2 | 1 | 3 | 33.33% | -0.72u | -32.00% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 183 | 85 | 86 | 1 | 11 | 49.71% | +3.56u | 2.77% |
+| 190 | 86 | 88 | 2 | 14 | 49.43% | +2.84u | 2.17% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 134 | 63 | 62 | 1 | 8 | 50.40% | +3.96u | 4.23% |
+| 139 | 64 | 63 | 2 | 10 | 50.39% | +4.00u | 4.19% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 110 | 53 | 53 | 0 | 4 | 50.00% | +0.67u | 0.84% |
+| 117 | 54 | 55 | 1 | 7 | 49.54% | -0.05u | -0.06% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 25 | 13 | 12 | 0 | 0 | 52.00% | +0.43u | 2.28% |
+| 26 | 13 | 13 | 0 | 0 | 50.00% | -0.32u | -1.65% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 176 | 82 | 80 | 1 | 13 | 50.62% | +6.22u | 5.12% |
+| 182 | 83 | 81 | 2 | 16 | 50.61% | +6.25u | 5.09% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-14 | 15:30 | 8 | J. Fearnley - Y. Bu | OVER 23.5 games | 2.10 | ❌ loss | 71.05 | 22 | 3-6, 6-7 | -0.75u |
+| 2026-06-14 | 13:00 | 4 | S. Vincent Ruggeri - A. Sanchez Quilez | UNDER 20.0 games | 2.08 | ➖ push | 73.24 | 20 | 2-6, 5-7 | 0.00u |
+| 2026-06-14 | 13:00 | 2 | M. Bellucci - A. Bolt | UNDER 22.5 games | 2.10 | ❌ loss | 75.48 | 34 | 6-7, 7-5, 6-3 | -0.75u |
+| 2026-06-14 | 12:30 | 6 | M. Vrbensky - M. Karol | UNDER 20.0 games | 2.08 | ⚪ void | 72.52 |  |  | 0.00u |
+| 2026-06-14 | 12:00 | 7 | R. Montgomery - B. Krejcikova | UNDER 21.5 games | 1.97 | ⚪ void | 71.44 |  |  | 0.00u |
+| 2026-06-14 | 11:30 | 3 | H. S. Callejon - L. Bocchi | UNDER 20.0 games | 2.04 | ✅ win | 75.23 | 19 | 3-6, 4-6 | +0.78u |
+| 2026-06-14 | 11:00 | 5 | L. Sun - A. Kalinina | UNDER 20.5 games | 2.05 | ⚪ void | 72.84 |  |  | 0.00u |
 | 2026-06-13 | 15:00 | 10 | A. Mannarino - A. De Minaur | UNDER 20.5 games | 2.08 | ✅ win | 72.71 | 16 | 4-6, 0-6 | +0.81u |
 | 2026-06-13 | 14:00 | 6 | D. Kasatkina - A. Blinkova | UNDER 20.5 games | 1.95 | ✅ win | 74.13 | 17 | 3-6, 2-6 | +0.71u |
 | 2026-06-13 | 14:00 | 9 | A. Krueger - D. Vidmanova | UNDER 20.5 games | 1.96 | ❌ loss | 72.99 | 29 | 6-4, 3-6, 6-4 | -0.75u |
@@ -123,11 +130,4 @@ Pending picks: **1**
 | 2026-06-06 | 19:00 | 2 | T. C. Grant - D. Astakhova | UNDER 19.5 games | 2.14 | ✅ win | 75.77 | 17 | 6-2, 6-3 | +0.85u |
 | 2026-06-06 | 15:00 | 3 | M. Chwalinska - M. Andreeva | UNDER 19.5 games | 2.00 | ✅ win | 74.92 | 17 | 3-6, 2-6 | +0.75u |
 | 2026-06-06 | 13:30 | 4 | D. Dedura - L. Mikrut | OVER 21.5 games | 1.85 | ❌ loss | 70.66 | 20 | 4-6, 4-6 | -0.75u |
-| 2026-06-06 | 12:30 | 1 | L. Castelnuovo - J. Rodionov | UNDER 20.5 games | 2.05 | ✅ win | 81.53 | 17 | 1-6, 4-6 | +0.79u |
-| 2026-06-05 | 18:00 | 5 | A. Walton - T. Legout | UNDER 19.5 games | 2.10 | ✅ win | 71.99 | 16 | 6-2, 6-2 | +0.82u |
-| 2026-06-05 | 16:00 | 6 | H. Searle - K. Poling | UNDER 19.0 games | 2.11 | ❌ loss | 70.56 | 31 | 6-7, 6-3, 3-6 | -0.75u |
-| 2026-06-05 | 15:00 | 2 | N. Sanchez Izquierdo - L. Midon | OVER 22.5 games | 2.07 | ✅ win | 78.29 | 31 | 6-7, 6-3, 6-3 | +0.80u |
-| 2026-06-05 | 14:00 | 1 | C. Paquet - D. Astakhova | OVER 22.5 games | 2.15 | ❌ loss | 84.81 | 21 | 5-7, 3-6 | -0.75u |
-| 2026-06-05 | 12:00 | 4 | N. Makhlouf - B. Willwerth | UNDER 18.5 games | 2.20 | ✅ win | 73.15 | 18 | 0-6, 5-7 | +0.90u |
-| 2026-06-05 | 11:30 | 7 | T. Preston - A. Krueger | UNDER 20.5 games | 2.00 | ❌ loss | 70.13 | 27 | 6-2, 3-6, 4-6 | -0.75u |
 

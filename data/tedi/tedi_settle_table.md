@@ -1,12 +1,12 @@
 # Tedi settled results
 
-Generated: 2026-06-14T07:47:16.499931+02:00
+Generated: 2026-06-15T10:00:14.355184+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 92 | 92 | 0 | 44 | 40 | 8 | 52.38% | 7.85u | 8.53% |
+| tedi_main_150 | 96 | 96 | 0 | 45 | 42 | 9 | 51.72% | 6.87u | 7.16% |
 | tedi_v2_test | 26 | 26 | 0 | 13 | 13 | 0 | 50.0% | 1.19u | 4.58% |
 
 ## Results
@@ -131,3 +131,7 @@ Generated: 2026-06-14T07:47:16.499931+02:00
 | 2026-06-13 | 14:30 | tedi_main_150 | loss | -1.00 | D. Jorda Sanchis - T. Boyer | UNDER 21.5 games | 2.14 | 31 | 3-6, 6-4, 7-5 |
 | 2026-06-13 | 14:30 | tedi_v2_test | loss | -1.00 | D. Jorda Sanchis - T. Boyer | UNDER 21.5 games | 2.14 | 31 | 3-6, 6-4, 7-5 |
 | 2026-06-13 | 17:30 | tedi_main_150 | loss | -1.00 | G. I. Justo - L. E. Ambrogi | UNDER 21.5 games | 2.00 | 30 | 6-4, 5-7, 2-6 |
+| 2026-06-14 | 12:00 | tedi_main_150 | push | 0.00 | R. Montgomery - B. Krejcikova | UNDER 21.5 games | 1.97 | None | None |
+| 2026-06-14 | 13:00 | tedi_main_150 | win | 1.02 | A. Vukic - H. Wendelken | UNDER 22.5 games | 2.02 | 20 | 6-7, 1-6 |
+| 2026-06-14 | 13:00 | tedi_main_150 | loss | -1.00 | M. Bellucci - A. Bolt | UNDER 22.5 games | 2.10 | 34 | 6-7, 7-5, 6-3 |
+| 2026-06-14 | 15:00 | tedi_main_150 | loss | -1.00 | F. Balshaw - D. Jorda Sanchis | UNDER 21.5 games | 2.17 | 23 | 4-6, 6-7 |
