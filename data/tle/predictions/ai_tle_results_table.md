@@ -1,12 +1,12 @@
 # AI TLE Results
 
-Generated: `2026-06-15T11:26:04+00:00`
+Generated: `2026-06-15T22:35:07+00:00`
 Total picks: `75`
-Settled bets: `59`
-Pending: `14`
-Profit: `2.42979`
-ROI: `4.12%`
-Hit rate: `44.07%`
+Settled bets: `70`
+Pending: `1`
+Profit: `2.134083`
+ROI: `3.05%`
+Hit rate: `44.29%`
 
 | # | Date | Time | Level | Match | Pick | Odds | Status | Profit | Edge | EV | Winner | Score | Reason |
 |---:|---|---|---|---|---|---:|---|---:|---:|---:|---|---|---|
@@ -67,21 +67,21 @@ Hit rate: `44.07%`
 | 55 | 2026-06-14 | 16:00 | challenger | N. Budkov Kjaer - M. McDonald | N. Budkov Kjaer | 2.015 | LOSS | -1.0 | 6.12% | 5.10% | Second Player | 1 - 2 | settled |
 | 56 | 2026-06-14 | 17:00 | itf | N. Podoroska - L. Perez Alarcon | L. Perez Alarcon | 2.215556 | LOSS | -1.0 | 12.68% | 20.48% | First Player | 2 - 1 | settled |
 | 57 | 2026-06-14 | 17:45 | challenger | R. Sakamoto - Y. Wu | R. Sakamoto | 2.34125 | LOSS | -1.0 | 10.59% | 17.41% | Second Player | 0 - 2 | settled |
-| 58 | 2026-06-14 | 17:45 | challenger | R. Molleker - M. Erhard | R. Molleker | 1.98625 | PENDING |  | 5.07% | 2.75% |  | - | not_finished |
+| 58 | 2026-06-14 | 17:45 | challenger | R. Molleker - M. Erhard | R. Molleker | 1.98625 | LOSS | -1.0 | 5.07% | 2.75% | Second Player | 1 - 2 | settled |
 | 59 | 2026-06-14 | 23:00 | itf | A. Vergara Rivera - C. Alves | A. Vergara Rivera | 2.107 | LOSS | -1.0 | 7.74% | 9.08% | Second Player | 1 - 2 | settled |
 | 60 | 2026-06-15 | 10:00 | challenger | M. H. Rehberg - A. Marti Pujolras | M. H. Rehberg | 1.532857 | WIN | 0.532857 | 11.57% | 10.17% | First Player | 2 - 0 | settled |
 | 61 | 2026-06-15 | 10:00 | challenger | L. Bocchi - A. Weis | L. Bocchi | 2.683 | LOSS | -1.0 | 17.11% | 38.46% | Second Player | 0 - 2 | settled |
 | 62 | 2026-06-15 | 10:00 | challenger | R. Seggerman - M. Tobon | R. Seggerman | 2.159 | WIN | 1.159 | 5.79% | 5.31% | First Player | 2 - 1 | settled |
-| 63 | 2026-06-15 | 11:30 | challenger | M. Martineau - L. Wiedenmann | L. Wiedenmann | 2.879 | PENDING |  | 13.21% | 30.63% |  | 0 - 0 | not_finished |
-| 64 | 2026-06-15 | 11:30 | challenger | E. Dalla Valle - J. Paul | J. Paul | 2.461111 | PENDING |  | 7.37% | 10.92% |  | - | not_finished |
-| 65 | 2026-06-15 | 12:00 | challenger | O. Tarvet - R. Safiullin | R. Safiullin | 1.538182 | PENDING |  | 22.42% | 27.49% |  | 1 - 0 | not_finished |
-| 66 | 2026-06-15 | 15:00 | challenger | F. Agamenone - S. Napolitano | S. Napolitano | 1.891 | PENDING |  | 5.61% | 3.48% |  | - | not_finished |
-| 67 | 2026-06-15 | 15:30 | challenger | K. Feldbausch - L. Lokoli | L. Lokoli | 3.387 | PENDING |  | 8.19% | 20.79% |  | - | not_finished |
-| 68 | 2026-06-15 | 15:30 | challenger | O. Milic - T. Faurel | O. Milic | 2.512 | PENDING |  | 21.98% | 48.32% |  | - | not_finished |
-| 69 | 2026-06-15 | 16:30 | challenger | T. Barrios Vera - B. Bonzi | T. Barrios Vera | 3.197273 | PENDING |  | 18.40% | 51.88% |  | - | not_finished |
-| 70 | 2026-06-15 | 16:30 | challenger | P. Brunclik - S. Nagal | S. Nagal | 2.118 | PENDING |  | 5.72% | 5.06% |  | - | not_finished |
-| 71 | 2026-06-15 | 16:30 | challenger | B. Gadamauri - D. Dzumhur | B. Gadamauri | 2.558333 | PENDING |  | 7.38% | 11.90% |  | - | not_finished |
-| 72 | 2026-06-15 | 16:30 | challenger | N. Sanchez Izquierdo - L. van Assche | L. van Assche | 1.837778 | PENDING |  | 15.56% | 21.04% |  | - | not_finished |
-| 73 | 2026-06-15 | 17:00 | challenger | P. Delage - S. Gulin | P. Delage | 3.9125 | PENDING |  | 23.93% | 86.84% |  | - | not_finished |
-| 74 | 2026-06-15 | 18:00 | challenger | M. Kasnikowski - L. Giustino | L. Giustino | 2.627 | PENDING |  | 12.09% | 24.57% |  | - | not_finished |
-| 75 | 2026-06-15 | 18:00 | challenger | L. Ratti - C. Hemery | C. Hemery | 1.433333 | PENDING |  | 9.71% | 6.39% |  | - | not_finished |
+| 63 | 2026-06-15 | 11:30 | challenger | M. Martineau - L. Wiedenmann | L. Wiedenmann | 2.879 | WIN | 1.879 | 13.21% | 30.63% | Second Player | 0 - 2 | settled |
+| 64 | 2026-06-15 | 11:30 | challenger | E. Dalla Valle - J. Paul | J. Paul | 2.461111 | LOSS | -1.0 | 7.37% | 10.92% | First Player | 2 - 0 | settled |
+| 65 | 2026-06-15 | 12:00 | challenger | O. Tarvet - R. Safiullin | R. Safiullin | 1.538182 | WIN | 0.538182 | 22.42% | 27.49% | Second Player | 1 - 2 | settled |
+| 66 | 2026-06-15 | 15:00 | challenger | F. Agamenone - S. Napolitano | S. Napolitano | 1.891 | WIN | 0.891 | 5.61% | 3.48% | Second Player | 1 - 2 | settled |
+| 67 | 2026-06-15 | 15:30 | challenger | K. Feldbausch - L. Lokoli | L. Lokoli | 3.387 | LOSS | -1.0 | 8.19% | 20.79% | First Player | 2 - 0 | settled |
+| 68 | 2026-06-15 | 15:30 | challenger | O. Milic - T. Faurel | O. Milic | 2.512 | LOSS | -1.0 | 21.98% | 48.32% | Second Player | 0 - 2 | settled |
+| 69 | 2026-06-15 | 16:30 | challenger | T. Barrios Vera - B. Bonzi | T. Barrios Vera | 3.197273 | LOSS | -1.0 | 18.40% | 51.88% | Second Player | 1 - 2 | settled |
+| 70 | 2026-06-15 | 16:30 | challenger | P. Brunclik - S. Nagal | S. Nagal | 2.118 | VOID | 0.0 | 5.72% | 5.06% | First Player | 1 - 0 | void_status |
+| 71 | 2026-06-15 | 16:30 | challenger | B. Gadamauri - D. Dzumhur | B. Gadamauri | 2.558333 | WIN | 1.558333 | 7.38% | 11.90% | First Player | 2 - 0 | settled |
+| 72 | 2026-06-15 | 16:30 | challenger | N. Sanchez Izquierdo - L. van Assche | L. van Assche | 1.837778 | WIN | 0.837778 | 15.56% | 21.04% | Second Player | 1 - 2 | settled |
+| 73 | 2026-06-15 | 17:00 | challenger | P. Delage - S. Gulin | P. Delage | 3.9125 | LOSS | -1.0 | 23.93% | 86.84% | Second Player | 1 - 2 | settled |
+| 74 | 2026-06-15 | 18:00 | challenger | M. Kasnikowski - L. Giustino | L. Giustino | 2.627 | PENDING |  | 12.09% | 24.57% |  |  | fixture_not_found |
+| 75 | 2026-06-15 | 18:00 | challenger | L. Ratti - C. Hemery | C. Hemery | 1.433333 | VOID | 0.0 | 9.71% | 6.39% | First Player | 1 - 1 | void_status |
