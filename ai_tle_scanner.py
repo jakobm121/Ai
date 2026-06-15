@@ -548,6 +548,10 @@ def resolve_player(
     return None, "unresolved"
 
 
+def is_api_only_tle_key(value: str | None) -> bool:
+    return bool(value and re.fullmatch(r"(men|women):api:\d+", value))
+
+
 def expected_score(rating_a: float, rating_b: float) -> float:
     return 1.0 / (1.0 + math.pow(10.0, (rating_b - rating_a) / 400.0))
 
@@ -992,6 +996,7 @@ def main() -> None:
     parser.add_argument("--max-book-deviation", type=float, default=0.35)
     parser.add_argument("--min-book-pairs", type=int, default=3)
     parser.add_argument("--allowed-resolve-methods", default="api_mapping,exact_name")
+    parser.add_argument("--allow-api-only-players", action="store_true", help="Allow men:api:* or women:api:* identities in betting picks. Default is to skip them.")
     parser.add_argument("--canonical-manifest", default=str(DEFAULT_CANONICAL_MANIFEST))
     parser.add_argument("--api-player-mapping", default=str(DEFAULT_API_PLAYER_MAPPING))
     parser.add_argument("--tournament-metadata", default=str(DEFAULT_TOURNAMENT_METADATA))
@@ -1154,6 +1159,14 @@ def main() -> None:
                 counters["skipped_unsafe_player_resolve"] += 1
                 counters[f"skipped_unsafe_home_{home_method}"] += 1
                 counters[f"skipped_unsafe_away_{away_method}"] += 1
+                continue
+
+            if not args.allow_api_only_players and (is_api_only_tle_key(home_key) or is_api_only_tle_key(away_key)):
+                counters["skipped_api_only_player_identity"] += 1
+                if is_api_only_tle_key(home_key):
+                    counters["skipped_api_only_home_player"] += 1
+                if is_api_only_tle_key(away_key):
+                    counters["skipped_api_only_away_player"] += 1
                 continue
 
             home_player = players.get(home_key)
@@ -1341,6 +1354,7 @@ def main() -> None:
             "max_book_deviation": args.max_book_deviation,
             "min_book_pairs": args.min_book_pairs,
             "allowed_resolve_methods": sorted(allowed_resolve_methods),
+            "allow_api_only_players": bool(args.allow_api_only_players),
             "min_start_minutes": args.min_start_minutes,
             "levels": sorted(levels_to_scan),
             "main_min_level_matches": args.main_min_level_matches,
