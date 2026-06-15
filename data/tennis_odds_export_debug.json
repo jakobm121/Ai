@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-15T00:36:58.342531+02:00",
+  "generated_at": "2026-06-15T07:30:52.798341+02:00",
   "summary": {
-    "fixtures_total": 135,
-    "matches_with_odds": 78,
-    "skipped": 57,
-    "errors": 0,
-    "first_set_total_matches": 74,
-    "match_total_matches": 73,
+    "fixtures_total": 144,
+    "matches_with_odds": 75,
+    "skipped": 68,
+    "errors": 1,
+    "first_set_total_matches": 72,
+    "match_total_matches": 72,
     "with_surface": 26,
-    "with_gender": 78,
-    "with_best_of": 78,
+    "with_gender": 75,
+    "with_best_of": 75,
     "tiebreak_market_matches": 0
   },
   "skipped": [
@@ -134,6 +134,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12136762,
+      "match": "A. Hayen - I. Parisca",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12136768,
       "match": "J. Estevez - R. Dickerson",
       "reason": "not_pregame"
@@ -224,6 +229,11 @@
       "reason": "no_odds"
     },
     {
+      "event_key": 12136852,
+      "match": "E. Gorgodze - D. Semenistaja",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12136855,
       "match": "C. Paquet - A. K. Toth",
       "reason": "no_odds"
@@ -297,22 +307,69 @@
       "event_key": 12136891,
       "match": "S. Heredia - E. Monferrer",
       "reason": "no_odds"
+    },
+    {
+      "event_key": 12136892,
+      "match": "I. Monzon - V. Basel",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12136893,
+      "match": "A. Huertas Del Pino Cordova - G. Ribeiro de Almeida",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12136894,
+      "match": "M. Zeitune - V. C. Loureiro J.",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12136895,
+      "match": "E. Gorgodze - N. Brancaccio",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12136896,
+      "match": "F. Gonzalez Benitez - I. Parisca",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12136900,
+      "match": "Barbados W - Antigua and Barbuda W",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12136903,
+      "match": "El Salvador W - Cuba W",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12136911,
+      "match": "Costa Rica W - Panama W",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12136916,
+      "match": "Trinidad & Tobago W - Jamaica W",
+      "reason": "not_singles"
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "event_key": 12136590,
+      "match": "N. Gombos - A. Blus",
+      "error": "API request failed after retries."
+    }
+  ],
   "market_names": [
     "Asian Handicap (1st Set)",
     "Asian Handicap (2nd Set)",
     "Asian Handicap (Games)",
     "Asian Handicap (Sets)",
-    "Away First Service Game - Winners First Point",
-    "Away First Service Game - Winners Winner",
     "Away Team Total (1st Set)",
     "Away Team Total (2nd Set)",
     "Correct Score 1st Half",
     "Correct Score 2nd Half",
-    "Home First Service Game - Winners First Point",
-    "Home First Service Game - Winners Winner",
     "Home Team Total (1st Set)",
     "Home Team Total (2nd Set)",
     "Home/Away",
@@ -331,12 +388,6 @@
     "Set Betting",
     "Total - Away",
     "Total - Home",
-    "Total Breaks on Serve",
-    "Total Tiebreaks",
-    "Win From behind (Player 1)",
-    "Win From behind (Player 2)",
-    "Win In Straigh Sets (Player 1)",
-    "Win In Straigh Sets (Player 2)",
     "Win at least one set (Player 1)",
     "Win at least one set (Player 2)"
   ]
