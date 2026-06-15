@@ -1,10 +1,12 @@
 # Tedi active predictions
 
-Generated: 2026-06-14T08:25:51.691388+02:00
+Generated: 2026-06-15T10:06:06.204959+02:00
 
 | Date | Time | Strategy | Match | Bet | Odds | Line | Conf | Quality | Gap | Strength | Avg 3-set | Avg close | Book |
 |---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 2026-06-14 | 12:00 | tedi_main_150 | R. Montgomery - B. Krejcikova | UNDER 21.5 games | 1.97 | 21.5 | 93.3 | 82.7 | 0.413 | 25.32 | 0.222 | 0.352 | Pncl |
-| 2026-06-14 | 13:00 | tedi_main_150 | A. Vukic - H. Wendelken | UNDER 22.5 games | 2.02 | 22.5 | 90.1 | 80.6 | 0.191 | 1.98 | 0.261 | 0.375 | Unibet |
-| 2026-06-14 | 13:00 | tedi_main_150 | M. Bellucci - A. Bolt | UNDER 22.5 games | 2.10 | 22.5 | 90.5 | 87.0 | 0.267 | 8.88 | 0.263 | 0.377 | 10Bet |
-| 2026-06-14 | 15:00 | tedi_main_150 | F. Balshaw - D. Jorda Sanchis | UNDER 21.5 games | 2.17 | 21.5 | 75.8 | 78.9 | 0.230 | 19.17 | 0.278 | 0.426 | Pncl |
+| 2026-06-15 | 11:30 | tedi_main_150 | M. Schoenhaus - L. Tien | UNDER 21.5 games | 2.15 | 21.5 | 84.9 | 85.2 | 0.580 | 10.02 | 0.341 | 0.380 | Pncl |
+| 2026-06-15 | 12:30 | tedi_main_150 | B. Van De Zandschulp - H. Wendelken | UNDER 22.5 games | 2.02 | 22.5 | 91.7 | 82.5 | 0.336 | 13.69 | 0.174 | 0.429 | Unibet |
+| 2026-06-15 | 15:30 | tedi_main_150 | J. Pinnington Jones - D. Shapovalov | UNDER 22.5 games | 2.06 | 22.5 | 89.6 | 82.9 | 0.186 | 22.46 | 0.292 | 0.528 | Pncl |
+| 2026-06-15 | 16:30 | tedi_main_150 | A. Blinkova - T. Preston | UNDER 20.5 games | 2.00 | 20.5 | 91.7 | 83.0 | 0.372 | 4.87 | 0.156 | 0.310 | Betfair |
+| 2026-06-15 | 16:30 | tedi_v2_test | A. Blinkova - T. Preston | UNDER 20.5 games | 2.00 | 20.5 | 91.7 | 83.0 | 0.372 | 4.87 | 0.156 | 0.310 | Betfair |
+| 2026-06-15 | 16:30 | tedi_main_150 | T. Barrios Vera - B. Bonzi | UNDER 21.5 games | 2.12 | 21.5 | 88.9 | 86.0 | 0.451 | 20.34 | 0.278 | 0.481 | Betano |
