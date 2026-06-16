@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-15T10:00:14.548414+02:00
+Generated: 2026-06-16T08:42:40.499947+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 292 | 292 | 139 | 127 | 26 | 52.26% | 20.82u | 7.83% |
+| 307 | 307 | 146 | 134 | 27 | 52.14% | 21.47u | 7.67% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 49 | 49 | 25 | 21 | 3 | 54.35% | 5.79u | 12.59% |
-| single | 223 | 223 | 104 | 97 | 22 | 51.74% | 13.03u | 6.48% |
-| triple | 20 | 20 | 10 | 9 | 1 | 52.63% | 2.0u | 10.53% |
+| double | 51 | 51 | 25 | 23 | 3 | 52.08% | 3.79u | 7.9% |
+| single | 234 | 234 | 110 | 101 | 23 | 52.13% | 15.53u | 7.36% |
+| triple | 22 | 22 | 11 | 10 | 1 | 52.38% | 2.15u | 10.24% |
 
 ## Results
 
@@ -312,3 +312,18 @@ Generated: 2026-06-15T10:00:14.548414+02:00
 | 2026-06-14 | 13:00 | single | jakob | push | 0.00 | S. Vincent Ruggeri - A. Sanchez Quilez | UNDER 20.0 games | 2.08 | 20 | 2-6, 5-7 |
 | 2026-06-14 | 15:00 | single | tedi | loss | -1.00 | F. Balshaw - D. Jorda Sanchis | UNDER 21.5 games | 2.17 | 23 | 4-6, 6-7 |
 | 2026-06-14 | 15:30 | single | jakob | loss | -1.00 | J. Fearnley - Y. Bu | OVER 23.5 games | 2.10 | 22 | 3-6, 6-7 |
+| 2026-06-14 | 15:30 | single | jakob | win | 1.06 | R. Molleker - M. Erhard | OVER 23.0 games | 2.06 | 31 | 7-5, 6-7, 0-6 |
+| 2026-06-15 | 11:30 | triple | jakob, lucija, tedi | win | 1.15 | M. Schoenhaus - L. Tien | UNDER 21.5 games | 2.15 | 18 | 2-6, 4-6 |
+| 2026-06-15 | 12:30 | double | lucija, tedi | loss | -1.00 | B. Van De Zandschulp - H. Wendelken | UNDER 22.5 games | 2.02 | 23 | 6-4, 7-6 |
+| 2026-06-15 | 12:30 | single | jakob | win | 1.00 | R. Molleker - M. Erhard | OVER 22.5 games | 2.00 | 31 | 7-5, 6-7, 0-6 |
+| 2026-06-15 | 13:30 | single | jakob | push | 0.00 | S. Bejlek - E. Navarro | UNDER 19.5 games | 2.07 | None | None |
+| 2026-06-15 | 14:00 | single | jakob | win | 1.08 | M. Leonard - A. Charaeva | UNDER 18.5 games | 2.08 | 12 | 0-6, 0-6 |
+| 2026-06-15 | 14:00 | single | jakob | win | 0.98 | T. Paul - Z. Svajda | UNDER 22.5 games | 1.98 | 21 | 7-5, 6-3 |
+| 2026-06-15 | 15:00 | single | jakob | loss | -1.00 | F. Diaz Acosta - F. Roncadelli | UNDER 19.5 games | 1.98 | 20 | 6-2, 7-5 |
+| 2026-06-15 | 15:00 | single | jakob | win | 1.18 | J. Faria - M. Echargui | UNDER 20.5 games | 2.18 | 19 | 6-3, 6-4 |
+| 2026-06-15 | 15:30 | single | tedi | loss | -1.00 | J. Pinnington Jones - D. Shapovalov | UNDER 22.5 games | 2.06 | 33 | 4-6, 6-4, 6-7 |
+| 2026-06-15 | 15:30 | single | jakob | win | 1.20 | K. Feldbausch - L. Lokoli | UNDER 19.5 games | 2.20 | 18 | 6-2, 6-4 |
+| 2026-06-15 | 15:30 | single | jakob | loss | -1.00 | S. Vickery - B. Haddad Maia | UNDER 18.5 games | 2.00 | 24 | 7-5, 7-5 |
+| 2026-06-15 | 16:30 | double | lucija, tedi | loss | -1.00 | A. Blinkova - T. Preston | UNDER 20.5 games | 2.00 | 28 | 6-4, 3-6, 3-6 |
+| 2026-06-15 | 16:30 | triple | jakob, lucija, tedi | loss | -1.00 | T. Barrios Vera - B. Bonzi | UNDER 21.5 games | 2.12 | 26 | 3-6, 6-2, 3-6 |
+| 2026-06-15 | 17:00 | single | jakob | loss | -1.00 | P. Delage - S. Gulin | UNDER 19.5 games | 2.20 | 23 | 1-6, 6-3, 1-6 |

@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-15T10:00:14.355184+02:00
+Generated: 2026-06-16T08:42:40.314917+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 96 | 96 | 0 | 45 | 42 | 9 | 51.72% | 6.87u | 7.16% |
-| tedi_v2_test | 26 | 26 | 0 | 13 | 13 | 0 | 50.0% | 1.19u | 4.58% |
+| tedi_main_150 | 101 | 101 | 0 | 46 | 46 | 9 | 50.0% | 4.02u | 3.98% |
+| tedi_v2_test | 27 | 27 | 0 | 13 | 14 | 0 | 48.15% | 0.19u | 0.7% |
 
 ## Results
 
@@ -135,3 +135,9 @@ Generated: 2026-06-15T10:00:14.355184+02:00
 | 2026-06-14 | 13:00 | tedi_main_150 | win | 1.02 | A. Vukic - H. Wendelken | UNDER 22.5 games | 2.02 | 20 | 6-7, 1-6 |
 | 2026-06-14 | 13:00 | tedi_main_150 | loss | -1.00 | M. Bellucci - A. Bolt | UNDER 22.5 games | 2.10 | 34 | 6-7, 7-5, 6-3 |
 | 2026-06-14 | 15:00 | tedi_main_150 | loss | -1.00 | F. Balshaw - D. Jorda Sanchis | UNDER 21.5 games | 2.17 | 23 | 4-6, 6-7 |
+| 2026-06-15 | 11:30 | tedi_main_150 | win | 1.15 | M. Schoenhaus - L. Tien | UNDER 21.5 games | 2.15 | 18 | 2-6, 4-6 |
+| 2026-06-15 | 12:30 | tedi_main_150 | loss | -1.00 | B. Van De Zandschulp - H. Wendelken | UNDER 22.5 games | 2.02 | 23 | 6-4, 7-6 |
+| 2026-06-15 | 15:30 | tedi_main_150 | loss | -1.00 | J. Pinnington Jones - D. Shapovalov | UNDER 22.5 games | 2.06 | 33 | 4-6, 6-4, 6-7 |
+| 2026-06-15 | 16:30 | tedi_main_150 | loss | -1.00 | A. Blinkova - T. Preston | UNDER 20.5 games | 2.00 | 28 | 6-4, 3-6, 3-6 |
+| 2026-06-15 | 16:30 | tedi_v2_test | loss | -1.00 | A. Blinkova - T. Preston | UNDER 20.5 games | 2.00 | 28 | 6-4, 3-6, 3-6 |
+| 2026-06-15 | 16:30 | tedi_main_150 | loss | -1.00 | T. Barrios Vera - B. Bonzi | UNDER 21.5 games | 2.12 | 26 | 3-6, 6-2, 3-6 |

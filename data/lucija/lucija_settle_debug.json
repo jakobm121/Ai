@@ -1,23 +1,56 @@
 {
-  "generated_at": "2026-06-15T10:00:14.455454+02:00",
+  "generated_at": "2026-06-16T08:42:40.409985+02:00",
   "source_results_file": "data/tennis_totals_results.json",
   "lucija_results_file": "data/lucija/lucija_results.json",
-  "source_results_count": 808,
-  "lucija_results_count": 87,
-  "updated": 1,
+  "source_results_count": 823,
+  "lucija_results_count": 91,
+  "updated": 4,
   "still_pending": 0,
   "source_not_found": 0,
   "source_not_settled": 0,
   "items": [
     {
-      "pick_id": "e535372ad9e5dfab514e4974d3c62ed4",
-      "source_pick_id": "555e776e38835914195c29c6ea547f09",
-      "match": "R. Montgomery - B. Krejcikova",
+      "pick_id": "dd902723e782e142ed4602aa94d7f98f",
+      "source_pick_id": "0ce3a22011c86f7cb726349f2601d8b0",
+      "match": "T. Barrios Vera - B. Bonzi",
       "status": "settled",
-      "result": "void",
-      "profit": 0.0,
-      "total_games": null,
-      "final_score": null,
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 26,
+      "final_score": "3-6, 6-2, 3-6",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "2722ec07b8d0f83375a70e94bc8a3433",
+      "source_pick_id": "42788372a806581ef390b585b0b8ba34",
+      "match": "M. Schoenhaus - L. Tien",
+      "status": "settled",
+      "result": "win",
+      "profit": 1.15,
+      "total_games": 18,
+      "final_score": "2-6, 4-6",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "3c5a1dcc6c0f55c9c890fc81460ad1a5",
+      "source_pick_id": "7554637c096c89317751748ab151f28e",
+      "match": "A. Blinkova - T. Preston",
+      "status": "settled",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 28,
+      "final_score": "6-4, 3-6, 3-6",
+      "match_method": "source_pick_id"
+    },
+    {
+      "pick_id": "a436b319f2e1a41be9b2516a363dd144",
+      "source_pick_id": "688aafcecf769c36dfb15bbdaef729a0",
+      "match": "B. Van De Zandschulp - H. Wendelken",
+      "status": "settled",
+      "result": "loss",
+      "profit": -1.0,
+      "total_games": 23,
+      "final_score": "6-4, 7-6",
       "match_method": "source_pick_id"
     }
   ]
