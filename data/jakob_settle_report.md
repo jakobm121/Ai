@@ -1,6 +1,6 @@
 # Jakob Tennis Totals Settled Report
 
-Generated: `2026-06-16T08:42:40.175593+02:00`
+Generated: `2026-06-17T08:27:21.688213+02:00`
 
 Pending picks: **0**
 
@@ -8,48 +8,66 @@ Pending picks: **0**
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 220 | 103 | 98 | 2 | 17 | 51.24% | +8.67u | 5.75% |
+| 238 | 110 | 108 | 2 | 18 | 50.46% | +6.79u | 4.16% |
 
 ### Settled today
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 12 | 7 | 4 | 0 | 1 | 63.64% | +2.74u | 33.18% |
+| 18 | 7 | 10 | 0 | 1 | 41.18% | -1.88u | -14.71% |
 
 ### Score ≥ 70
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 202 | 93 | 92 | 2 | 15 | 50.27% | +5.57u | 4.02% |
+| 220 | 100 | 102 | 2 | 16 | 49.50% | +3.70u | 2.44% |
 
 ### Score ≥ 72
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 147 | 68 | 66 | 2 | 11 | 50.75% | +5.04u | 5.01% |
+| 165 | 75 | 76 | 2 | 12 | 49.67% | +3.16u | 2.79% |
 
 ### Score ≥ 70 + Odds ≤ 2.10
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 124 | 58 | 57 | 1 | 8 | 50.43% | +1.54u | 1.79% |
+| 134 | 63 | 62 | 1 | 8 | 50.40% | +1.69u | 1.80% |
 
 ### Over
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 28 | 15 | 13 | 0 | 0 | 53.57% | +1.22u | 5.82% |
+| 29 | 15 | 14 | 0 | 0 | 51.72% | +0.47u | 2.17% |
 
 ### Under
 
 | Bets | Wins | Losses | Push | Void | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 192 | 88 | 85 | 2 | 17 | 50.87% | +7.45u | 5.74% |
+| 209 | 95 | 94 | 2 | 18 | 50.26% | +6.32u | 4.46% |
 
 ## Recent settled picks
 
 | Date | Time | Rank | Match | Pick | Odds | Result | Score | Total | Final score | Profit |
 |---|---|---:|---|---|---:|---|---:|---:|---|---:|
+| 2026-06-16 | 18:00 | 10 | E. Coulibaly - F. Balshaw | UNDER 20.5 games | 2.02 | ❌ loss | 74.46 | 23 | 1-6, 6-3, 1-6 | -0.75u |
+| 2026-06-16 | 17:30 | 16 | I. Ivanov - S. Sakellaridis | UNDER 21.5 games | 2.12 | ❌ loss | 73.02 | 22 | 6-7, 3-6 | -0.75u |
+| 2026-06-16 | 17:00 | 14 | G. Heide - D. Michalski | UNDER 20.5 games | 2.02 | ✅ win | 73.65 | 16 | 6-2, 6-2 | +0.77u |
+| 2026-06-16 | 15:15 | 17 | S. Bejlek - Ka. Pliskova | UNDER 20.5 games | 2.00 | ❌ loss | 72.87 | 29 | 6-2, 6-7, 2-6 | -0.75u |
+| 2026-06-16 | 15:00 | 5 | A. Kulikova - M. Hontama | UNDER 19.5 games | 2.15 | ❌ loss | 76.02 | 29 | 4-6, 6-3, 6-4 | -0.75u |
+| 2026-06-16 | 14:30 | 6 | J. De Jong - L. Djere | OVER 22.5 games | 1.95 | ❌ loss | 75.94 | 21 | 3-6, 5-7 | -0.75u |
+| 2026-06-16 | 14:30 | 1 | A. De Minaur - G. Diallo | UNDER 21.5 games | 2.15 | ❌ loss | 83.06 | 22 | 7-6, 6-3 | -0.75u |
+| 2026-06-16 | 13:30 | 2 | L. Boisson - D. Yastremska | UNDER 19.5 games | 2.14 | ⚪ void | 79.07 |  |  | 0.00u |
+| 2026-06-16 | 13:30 | 4 | J. Rodionov - Q. Vandecasteele | UNDER 21.5 games | 2.10 | ✅ win | 76.05 | 21 | 7-6, 6-2 | +0.82u |
+| 2026-06-16 | 13:30 | 3 | E. Micic - F. Jorge | UNDER 18.5 games | 2.05 | ❌ loss | 76.38 | 23 | 6-4, 7-6 | -0.75u |
+| 2026-06-16 | 13:00 | 15 | P. Martinez - D. Rincon | UNDER 20.5 games | 2.20 | ❌ loss | 73.46 | 26 | 6-7, 6-7 | -0.75u |
+| 2026-06-16 | 12:30 | 7 | Y. Erel - R. Tabata | UNDER 20.5 games | 2.06 | ❌ loss | 75.11 | 35 | 7-6, 3-6, 6-7 | -0.75u |
+| 2026-06-16 | 12:30 | 8 | L. Noskova - R. Zarazua | UNDER 19.5 games | 1.97 | ✅ win | 74.57 | 17 | 6-1, 6-4 | +0.73u |
+| 2026-06-16 | 12:00 | 9 | M. Rottgering - P. Buldorini | UNDER 19.5 games | 2.02 | ✅ win | 74.50 | 18 | 6-4, 6-2 | +0.77u |
+| 2026-06-16 | 12:00 | 12 | J. Ortenzi - F. Pace | UNDER 19.5 games | 2.17 | ✅ win | 74.21 | 18 | 6-3, 6-3 | +0.88u |
+| 2026-06-16 | 12:00 | 11 | B. Willwerth - Y. Zhou | UNDER 21.5 games | 2.12 | ❌ loss | 74.36 | 30 | 3-6, 7-6, 2-6 | -0.75u |
+| 2026-06-16 | 11:30 | 23 | M. Bellucci - A. Bublik | UNDER 22.5 games | 2.09 | ✅ win | 72.05 | 20 | 7-6, 6-1 | +0.82u |
+| 2026-06-16 | 11:00 | 13 | M. Keys - Xin. Wang | UNDER 20.5 games | 2.13 | ✅ win | 74.12 | 20 | 7-6, 6-1 | +0.85u |
 | 2026-06-15 | 17:00 | 5 | P. Delage - S. Gulin | UNDER 19.5 games | 2.20 | ❌ loss | 72.89 | 23 | 1-6, 6-3, 1-6 | -0.75u |
 | 2026-06-15 | 16:30 | 6 | T. Barrios Vera - B. Bonzi | UNDER 21.5 games | 2.12 | ❌ loss | 72.44 | 26 | 3-6, 6-2, 3-6 | -0.75u |
 | 2026-06-15 | 15:30 | 11 | S. Vickery - B. Haddad Maia | UNDER 18.5 games | 2.00 | ❌ loss | 70.56 | 24 | 7-5, 7-5 | -0.75u |
@@ -112,22 +130,4 @@ Pending picks: **0**
 | 2026-06-09 | 11:00 | 15 | P. Martinez - S. Gulin | UNDER 20.0 games | 2.15 | ✅ win | 71.03 | 19 | 7-5, 6-1 | +0.86u |
 | 2026-06-09 | 10:30 | 11 | T. Boyer - R. Perot | UNDER 20.5 games | 2.00 | ✅ win | 71.82 | 17 | 6-3, 6-2 | +0.75u |
 | 2026-06-09 | 10:30 | 2 | M. Krumich - M. Mrva | OVER 22.5 games | 2.02 | ✅ win | 86.11 | 23 | 6-7, 4-6 | +0.77u |
-| 2026-06-08 | 17:15 | 11 | H. Grenier - L. van Assche | UNDER 19.5 games | 2.00 | ✅ win | 71.84 | 15 | 1-6, 2-6 | +0.75u |
-| 2026-06-08 | 16:00 | 1 | U. Humbert - E. Ymer | UNDER 21.5 games | 2.15 | ✅ win | 77.78 | 19 | 6-4, 6-3 | +0.86u |
-| 2026-06-08 | 16:00 | 2 | M. Pohankova - C. Tauson | UNDER 20.5 games | 2.15 | ✅ win | 75.70 | 20 | 6-4, 6-4 | +0.86u |
-| 2026-06-08 | 15:00 | 8 | T. Paul - G. Mpetshi Perricard | UNDER 24.5 games | 2.18 | ⚪ void | 72.27 |  |  | 0.00u |
-| 2026-06-08 | 14:30 | 12 | L. Djere - K. Coppejans | UNDER 20.5 games | 2.12 | ❌ loss | 71.47 | 26 | 2-6, 6-2, 4-6 | -0.75u |
-| 2026-06-08 | 14:00 | 10 | L. Broady - I. Xilas | UNDER 20.5 games | 2.04 | ❌ loss | 71.92 | 26 | 6-3, 3-6, 6-2 | -0.75u |
-| 2026-06-08 | 13:30 | 9 | K. Cross - T. Martincova | UNDER 20.5 games | 1.96 | ✅ win | 72.19 | 19 | 3-6, 4-6 | +0.72u |
-| 2026-06-08 | 13:00 | 9 | R. Noguchi - K. Smith | OVER 22.5 games | 1.93 | ✅ win | 72.13 | 27 | 3-6, 6-4, 2-6 | +0.70u |
-| 2026-06-08 | 12:30 | 7 | D. Kasatkina - R. Montgomery | UNDER 20.5 games | 2.07 | ❌ loss | 72.30 | 28 | 7-5, 0-6, 4-6 | -0.75u |
-| 2026-06-08 | 12:30 | 6 | C. Naef - M. Kobori | UNDER 18.5 games | 2.05 | ❌ loss | 72.52 | 24 | 7-5, 7-5 | -0.75u |
-| 2026-06-08 | 12:30 | 13 | B. Bonzi - M. Rottgering | UNDER 21.5 games | 2.06 | ✅ win | 71.27 | 20 | 6-4, 6-4 | +0.80u |
-| 2026-06-08 | 12:00 | 14 | V. Sachko - Y. Watanuki | UNDER 20.5 games | 2.18 | ❌ loss | 70.16 | 21 | 6-2, 7-6 | -0.75u |
-| 2026-06-08 | 12:00 | 3 | L. Neumayer - T. Daniel | UNDER 20.0 games | 2.19 | ✅ win | 75.43 | 19 | 4-6, 3-6 | +0.89u |
-| 2026-06-08 | 12:00 | 5 | H. Tan - E. Appleton | UNDER 20.5 games | 2.03 | ❌ loss | 73.49 | 21 | 7-5, 6-3 | -0.75u |
-| 2026-06-08 | 11:00 | 1 | E. Alexandrova - P. Udvardy | UNDER 19.5 games | 2.02 | ❌ loss | 76.91 | 23 | 4-6, 6-7 | -0.75u |
-| 2026-06-08 | 10:30 | 4 | L. Ratti - H. S. Callejon | OVER 21.5 games | 2.04 | ✅ win | 74.62 | 30 | 6-7, 6-3, 2-6 | +0.78u |
-| 2026-06-07 | 14:30 | 2 | T. Maria - L. Miyazaki | UNDER 19.5 games | 1.95 | ❌ loss | 80.45 | 23 | 6-2, 1-6, 6-2 | -0.75u |
-| 2026-06-07 | 14:30 | 7 | M. Inglis - A. Parks | UNDER 20.5 games | 2.05 | ❌ loss | 75.77 | 32 | 5-7, 6-4, 6-4 | -0.75u |
 

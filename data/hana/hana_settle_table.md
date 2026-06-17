@@ -1,20 +1,20 @@
 # Hana settled results
 
-Generated: 2026-06-16T08:42:40.499947+02:00
+Generated: 2026-06-17T08:27:22.037392+02:00
 
 ## Overall
 
 | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 307 | 307 | 146 | 134 | 27 | 52.14% | 21.47u | 7.67% |
+| 329 | 329 | 155 | 146 | 28 | 51.5% | 19.3u | 6.41% |
 
 ## By consensus
 
 | Consensus | Picks | Settled | W | L | Push | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| double | 51 | 51 | 25 | 23 | 3 | 52.08% | 3.79u | 7.9% |
-| single | 234 | 234 | 110 | 101 | 23 | 52.13% | 15.53u | 7.36% |
-| triple | 22 | 22 | 11 | 10 | 1 | 52.38% | 2.15u | 10.24% |
+| double | 54 | 54 | 26 | 25 | 3 | 50.98% | 2.96u | 5.8% |
+| single | 249 | 249 | 116 | 109 | 24 | 51.56% | 14.0u | 6.22% |
+| triple | 26 | 26 | 13 | 12 | 1 | 52.0% | 2.34u | 9.36% |
 
 ## Results
 
@@ -327,3 +327,25 @@ Generated: 2026-06-16T08:42:40.499947+02:00
 | 2026-06-15 | 16:30 | double | lucija, tedi | loss | -1.00 | A. Blinkova - T. Preston | UNDER 20.5 games | 2.00 | 28 | 6-4, 3-6, 3-6 |
 | 2026-06-15 | 16:30 | triple | jakob, lucija, tedi | loss | -1.00 | T. Barrios Vera - B. Bonzi | UNDER 21.5 games | 2.12 | 26 | 3-6, 6-2, 3-6 |
 | 2026-06-15 | 17:00 | single | jakob | loss | -1.00 | P. Delage - S. Gulin | UNDER 19.5 games | 2.20 | 23 | 1-6, 6-3, 1-6 |
+| 2026-06-16 | 11:00 | single | jakob | win | 1.13 | M. Keys - Xin. Wang | UNDER 20.5 games | 2.13 | 20 | 7-6, 6-1 |
+| 2026-06-16 | 11:30 | triple | jakob, lucija, tedi | win | 1.09 | M. Bellucci - A. Bublik | UNDER 22.5 games | 2.09 | 20 | 7-6, 6-1 |
+| 2026-06-16 | 12:00 | single | jakob | loss | -1.00 | B. Willwerth - Y. Zhou | UNDER 21.5 games | 2.12 | 30 | 3-6, 7-6, 2-6 |
+| 2026-06-16 | 12:00 | single | jakob | win | 1.17 | J. Ortenzi - F. Pace | UNDER 19.5 games | 2.17 | 18 | 6-3, 6-3 |
+| 2026-06-16 | 12:00 | single | jakob | win | 1.02 | M. Rottgering - P. Buldorini | UNDER 19.5 games | 2.02 | 18 | 6-4, 6-2 |
+| 2026-06-16 | 12:30 | single | jakob | win | 0.97 | L. Noskova - R. Zarazua | UNDER 19.5 games | 1.97 | 17 | 6-1, 6-4 |
+| 2026-06-16 | 12:30 | single | tedi | win | 1.16 | M. Kessler - K. Volynets | UNDER 20.5 games | 2.16 | 18 | 3-6, 3-6 |
+| 2026-06-16 | 12:30 | single | jakob | loss | -1.00 | Y. Erel - R. Tabata | UNDER 20.5 games | 2.06 | 35 | 7-6, 3-6, 6-7 |
+| 2026-06-16 | 13:00 | double | jakob, tedi | loss | -1.00 | P. Martinez - D. Rincon | UNDER 20.5 games | 2.20 | 26 | 6-7, 6-7 |
+| 2026-06-16 | 13:30 | single | jakob | loss | -1.00 | E. Micic - F. Jorge | UNDER 18.5 games | 2.05 | 23 | 6-4, 7-6 |
+| 2026-06-16 | 13:30 | double | lucija, tedi | win | 1.17 | G. Dimitrov - C. Rodesch | UNDER 22.5 games | 2.17 | 19 | 6-3, 6-4 |
+| 2026-06-16 | 13:30 | triple | jakob, lucija, tedi | win | 1.10 | J. Rodionov - Q. Vandecasteele | UNDER 21.5 games | 2.10 | 21 | 7-6, 6-2 |
+| 2026-06-16 | 13:30 | single | jakob | push | 0.00 | L. Boisson - D. Yastremska | UNDER 19.5 games | 2.14 | None | None |
+| 2026-06-16 | 14:30 | single | jakob | loss | -1.00 | A. De Minaur - G. Diallo | UNDER 21.5 games | 2.15 | 22 | 7-6, 6-3 |
+| 2026-06-16 | 14:30 | single | jakob | loss | -1.00 | J. De Jong - L. Djere | OVER 22.5 games | 1.95 | 21 | 3-6, 5-7 |
+| 2026-06-16 | 15:00 | triple | jakob, lucija, tedi | loss | -1.00 | A. Kulikova - M. Hontama | UNDER 19.5 games | 2.15 | 29 | 4-6, 6-3, 6-4 |
+| 2026-06-16 | 15:15 | single | jakob | loss | -1.00 | S. Bejlek - Ka. Pliskova | UNDER 20.5 games | 2.00 | 29 | 6-2, 6-7, 2-6 |
+| 2026-06-16 | 16:30 | single | lucija | loss | -1.00 | R. Bertola - Y. Wu | OVER 22.5 games | 2.05 | 18 | 6-3, 6-3 |
+| 2026-06-16 | 17:00 | single | jakob | win | 1.02 | G. Heide - D. Michalski | UNDER 20.5 games | 2.02 | 16 | 6-2, 6-2 |
+| 2026-06-16 | 17:30 | double | lucija, tedi | loss | -1.00 | A. Mintegi Del Olmo - X. You | UNDER 19.5 games | 2.05 | 24 | 1-6, 6-4, 6-1 |
+| 2026-06-16 | 17:30 | triple | jakob, lucija, tedi | loss | -1.00 | I. Ivanov - S. Sakellaridis | UNDER 21.5 games | 2.12 | 22 | 6-7, 3-6 |
+| 2026-06-16 | 18:00 | single | jakob | loss | -1.00 | E. Coulibaly - F. Balshaw | UNDER 20.5 games | 2.02 | 23 | 1-6, 6-3, 1-6 |

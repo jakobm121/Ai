@@ -1,13 +1,13 @@
 # Tedi settled results
 
-Generated: 2026-06-16T08:42:40.314917+02:00
+Generated: 2026-06-17T08:27:21.840566+02:00
 
 ## Summary by strategy
 
 | Strategy | Picks | Settled | Pending | W | L | P | Winrate | Profit | ROI |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| tedi_main_150 | 101 | 101 | 0 | 46 | 46 | 9 | 50.0% | 4.02u | 3.98% |
-| tedi_v2_test | 27 | 27 | 0 | 13 | 14 | 0 | 48.15% | 0.19u | 0.7% |
+| tedi_main_150 | 109 | 109 | 0 | 50 | 50 | 9 | 50.0% | 4.54u | 4.17% |
+| tedi_v2_test | 30 | 30 | 0 | 14 | 16 | 0 | 46.67% | -0.71u | -2.37% |
 
 ## Results
 
@@ -141,3 +141,14 @@ Generated: 2026-06-16T08:42:40.314917+02:00
 | 2026-06-15 | 16:30 | tedi_main_150 | loss | -1.00 | A. Blinkova - T. Preston | UNDER 20.5 games | 2.00 | 28 | 6-4, 3-6, 3-6 |
 | 2026-06-15 | 16:30 | tedi_v2_test | loss | -1.00 | A. Blinkova - T. Preston | UNDER 20.5 games | 2.00 | 28 | 6-4, 3-6, 3-6 |
 | 2026-06-15 | 16:30 | tedi_main_150 | loss | -1.00 | T. Barrios Vera - B. Bonzi | UNDER 21.5 games | 2.12 | 26 | 3-6, 6-2, 3-6 |
+| 2026-06-16 | 11:30 | tedi_main_150 | win | 1.09 | M. Bellucci - A. Bublik | UNDER 22.5 games | 2.09 | 20 | 7-6, 6-1 |
+| 2026-06-16 | 12:30 | tedi_main_150 | win | 1.16 | M. Kessler - K. Volynets | UNDER 20.5 games | 2.16 | 18 | 3-6, 3-6 |
+| 2026-06-16 | 13:00 | tedi_main_150 | loss | -1.00 | P. Martinez - D. Rincon | UNDER 20.5 games | 2.20 | 26 | 6-7, 6-7 |
+| 2026-06-16 | 13:30 | tedi_main_150 | win | 1.17 | G. Dimitrov - C. Rodesch | UNDER 22.5 games | 2.17 | 19 | 6-3, 6-4 |
+| 2026-06-16 | 13:30 | tedi_main_150 | win | 1.10 | J. Rodionov - Q. Vandecasteele | UNDER 21.5 games | 2.10 | 21 | 7-6, 6-2 |
+| 2026-06-16 | 13:30 | tedi_v2_test | win | 1.10 | J. Rodionov - Q. Vandecasteele | UNDER 21.5 games | 2.10 | 21 | 7-6, 6-2 |
+| 2026-06-16 | 15:00 | tedi_main_150 | loss | -1.00 | A. Kulikova - M. Hontama | UNDER 19.5 games | 2.15 | 29 | 4-6, 6-3, 6-4 |
+| 2026-06-16 | 15:00 | tedi_v2_test | loss | -1.00 | A. Kulikova - M. Hontama | UNDER 19.5 games | 2.15 | 29 | 4-6, 6-3, 6-4 |
+| 2026-06-16 | 17:30 | tedi_main_150 | loss | -1.00 | A. Mintegi Del Olmo - X. You | UNDER 19.5 games | 2.05 | 24 | 1-6, 6-4, 6-1 |
+| 2026-06-16 | 17:30 | tedi_v2_test | loss | -1.00 | A. Mintegi Del Olmo - X. You | UNDER 19.5 games | 2.05 | 24 | 1-6, 6-4, 6-1 |
+| 2026-06-16 | 17:30 | tedi_main_150 | loss | -1.00 | I. Ivanov - S. Sakellaridis | UNDER 21.5 games | 2.12 | 22 | 6-7, 3-6 |
