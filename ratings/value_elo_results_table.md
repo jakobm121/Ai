@@ -1,8 +1,8 @@
 # Value + ELO settled results
 
-Generated: 2026-06-16T08:45:24.174867+02:00
+Generated: 2026-06-17T08:45:15.373285+02:00
 
-Overall: **111-117**, WR **48.68%**, Profit **18.448u**, ROI **6.52%**, Avg odds **2.244**
+Overall: **114-119**, WR **48.93%**, Profit **21.878u**, ROI **7.55%**, Avg odds **2.248**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -239,3 +239,9 @@ Overall: **111-117**, WR **48.68%**, Profit **18.448u**, ROI **6.52%**, Avg odds
 | 2026-06-13 | atp | D. Prizmic - R. Hijikata | D. Prizmic | 1.94 | 1.25 | loss | -1.25 | 98.16 |  |
 | 2026-06-13 | challenger | Dar. Blanch - J. Fearnley | Dar. Blanch | 2.28 | 1.5 | loss | -1.5 | 25.43 |  |
 | 2026-06-13 | wta | M. Pohankova - T. Korpatsch | M. Pohankova | 1.83 | 1.0 | win | 0.83 | 32.97 |  |
+| 2026-06-16 | wta | A. Li - K. Birrell | A. Li | 2.35 | 1.5 | win | 2.025 | 63.18 |  |
+| 2026-06-16 | atp | A. Rublev - H. Hurkacz | A. Rublev | 2.1 | 1.5 | loss | -1.5 | 91.22 |  |
+| 2026-06-16 | challenger | C. Monnet - M. Trevisan | C. Monnet | 2.27 | 1.5 | win | 1.905 | 86.14 |  |
+| 2026-06-16 | challenger | J. Faria - Z. Zhang | J. Faria | 2.28 | 1.25 | loss | -1.25 | 41.22 |  |
+| 2026-06-16 | challenger | M. Kubka - A. Falei | M. Kubka | 2.75 | 1.25 | void |  | 36.26 |  |
+| 2026-06-16 | challenger | P. Martinez - D. Rincon | D. Rincon | 2.8 | 1.25 | win | 2.25 | 89.51 |  |
