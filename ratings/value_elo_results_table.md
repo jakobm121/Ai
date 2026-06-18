@@ -1,8 +1,8 @@
 # Value + ELO settled results
 
-Generated: 2026-06-17T08:45:15.373285+02:00
+Generated: 2026-06-18T23:25:27.447865+02:00
 
-Overall: **114-119**, WR **48.93%**, Profit **21.878u**, ROI **7.55%**, Avg odds **2.248**
+Overall: **116-122**, WR **48.74%**, Profit **21.758u**, ROI **7.34%**, Avg odds **2.253**
 
 | Date | Tour | Match | Pick | Odds | Stake | Result | Profit | ELO overall diff | ELO surface diff |
 |---|---|---|---|---:|---:|---|---:|---:|---:|
@@ -245,3 +245,9 @@ Overall: **114-119**, WR **48.93%**, Profit **21.878u**, ROI **7.55%**, Avg odds
 | 2026-06-16 | challenger | J. Faria - Z. Zhang | J. Faria | 2.28 | 1.25 | loss | -1.25 | 41.22 |  |
 | 2026-06-16 | challenger | M. Kubka - A. Falei | M. Kubka | 2.75 | 1.25 | void |  | 36.26 |  |
 | 2026-06-16 | challenger | P. Martinez - D. Rincon | D. Rincon | 2.8 | 1.25 | win | 2.25 | 89.51 |  |
+| 2026-06-17 | atp | A. Mannarino - A. Fery | A. Fery | 2.22 | 1.5 | win | 1.83 | 48.92 |  |
+| 2026-06-17 | challenger | C. O'Connell - J. Clarke | J. Clarke | 2.5 | 1.25 | loss | -1.25 | 46.54 |  |
+| 2026-06-17 | challenger | M. Rottgering - K. Jacquet | M. Rottgering | 2.75 | 1.25 | void |  | 2.92 |  |
+| 2026-06-17 | challenger | O. Crawford - A. Galarneau | O. Crawford | 2.25 | 1.25 | loss | -1.25 | 15.59 |  |
+| 2026-06-17 | challenger | T. Droguet - J. Kym | J. Kym | 2.79 | 1.25 | loss | -1.25 | 14.37 |  |
+| 2026-06-17 | itf | V. Steiner - E. Bennemann | V. Steiner | 2.2 | 1.5 | win | 1.8 | 0.05 |  |
