@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-19T12:58:53.029607+02:00",
+  "generated_at": "2026-06-19T17:44:06.056731+02:00",
   "summary": {
-    "fixtures_total": 279,
-    "matches_with_odds": 70,
-    "skipped": 209,
+    "fixtures_total": 281,
+    "matches_with_odds": 30,
+    "skipped": 251,
     "errors": 0,
-    "first_set_total_matches": 68,
-    "match_total_matches": 69,
-    "with_surface": 10,
-    "with_gender": 70,
-    "with_best_of": 70,
+    "first_set_total_matches": 29,
+    "match_total_matches": 29,
+    "with_surface": 3,
+    "with_gender": 30,
+    "with_best_of": 30,
     "tiebreak_market_matches": 0
   },
   "skipped": [
@@ -31,7 +31,7 @@
     {
       "event_key": 12136803,
       "match": "Malaysia W - Uzbekistan W",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12136902,
@@ -66,7 +66,7 @@
     {
       "event_key": 12137351,
       "match": "San Marino - Andorra",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12137376,
@@ -76,7 +76,7 @@
     {
       "event_key": 12137625,
       "match": "Moldova W - Kosovo W",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12137627,
@@ -86,17 +86,17 @@
     {
       "event_key": 12137630,
       "match": "Estonia W - Andorra W",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12137632,
       "match": "Armenia W - Montenegro W",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12137633,
       "match": "Albania W - Azerbaijan W",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12137823,
@@ -106,32 +106,32 @@
     {
       "event_key": 12137875,
       "match": "Errani/ Melichar-Martinez - Olmos/ Routliffe",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12137876,
       "match": "Kozyreva/ Shymanovich - Bouzkova/ Panova",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12137889,
       "match": "Algeria - Botswana",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12137891,
       "match": "D.R. Congo - Mozambique",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12137893,
       "match": "Ghana - Kenya",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12137896,
       "match": "Zimbabwe - Angola",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138074,
@@ -141,11 +141,21 @@
     {
       "event_key": 12138085,
       "match": "Heliovaara/ Patten - Stevenson/ Willis",
-      "reason": "not_singles"
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138090,
+      "match": "A. Fery - F. Cerundolo",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138091,
       "match": "A. De Minaur - B. Nakashima",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138092,
+      "match": "J. Bouzas Maneiro - E. Navarro",
       "reason": "not_pregame"
     },
     {
@@ -156,7 +166,17 @@
     {
       "event_key": 12138103,
       "match": "Eikeri/ Gleason - Mertens/ Zhang",
-      "reason": "not_singles"
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138108,
+      "match": "A. Sabalenka - N. Bartunkova",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138200,
+      "match": "S. Bandecchi - A. Charaeva",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138206,
@@ -171,7 +191,12 @@
     {
       "event_key": 12138241,
       "match": "Brooks/ Smith - Micic/ Mladenovic",
-      "reason": "not_singles"
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138317,
+      "match": "D. Altmaier - D. Medvedev",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138320,
@@ -244,6 +269,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138403,
+      "match": "L. Noskova - P. Badosa",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138404,
       "match": "T. Genier - N. Karma",
       "reason": "not_pregame"
@@ -256,6 +286,11 @@
     {
       "event_key": 12138406,
       "match": "A. Sobolieva - A. Mintegi Del Olmo",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138407,
+      "match": "E. Yaneva - E. Gorgodze",
       "reason": "not_pregame"
     },
     {
@@ -304,6 +339,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138417,
+      "match": "G. Kravchenko - G. La Vela",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138418,
       "match": "N. Mashtakov - N. Jadoun",
       "reason": "not_pregame"
@@ -331,6 +371,16 @@
     {
       "event_key": 12138423,
       "match": "Y. Zhang - A. Miyamoto",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138424,
+      "match": "B. Passola - L. Mair",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138425,
+      "match": "J. Stusek - M. Guth",
       "reason": "not_pregame"
     },
     {
@@ -444,6 +494,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138453,
+      "match": "Ka. Pliskova - T. Gibson",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138454,
       "match": "M. Bouzkova - T. Maria",
       "reason": "not_pregame"
@@ -451,7 +506,12 @@
     {
       "event_key": 12138455,
       "match": "Dart/ Lumsden - Sutjiadi/ Tjen",
-      "reason": "not_singles"
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138456,
+      "match": "D. Svrcina - G. Heide",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138457,
@@ -461,7 +521,7 @@
     {
       "event_key": 12138458,
       "match": "Martos Gornes/ Walkow - Donski/ Paulson",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138459,
@@ -471,7 +531,7 @@
     {
       "event_key": 12138460,
       "match": "Kiger/ Stalder - Balaji/ Demoliner",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138461,
@@ -479,14 +539,19 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138462,
+      "match": "L. Djere - S. Ofner",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138463,
       "match": "Lammons/ Withrow - Isaro/ Kaliyanda Poonacha",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138464,
       "match": "Paul/ Seggerman - Ruehl/ Veldheer",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138465,
@@ -501,12 +566,12 @@
     {
       "event_key": 12138467,
       "match": "Hunziker/ Stricker - Burdet/ Covato",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138468,
       "match": "Djonov/ Schell - Wehnelt/ Wessels",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138469,
@@ -521,22 +586,22 @@
     {
       "event_key": 12138471,
       "match": "G. A. Boitan - R. D. Turcanu",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138472,
       "match": "Haita/ Turcanu - Constantin/ Gima",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138473,
       "match": "I. M. Buculei - L. Tanasie",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138474,
       "match": "S. V. Balan - A. Safta",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138475,
@@ -551,12 +616,12 @@
     {
       "event_key": 12138477,
       "match": "Breaz/ Todoni - Ionescu/ Tanasie",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138478,
       "match": "Marginean/ Ogescu - Luciano/ Simionescu",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138479,
@@ -576,12 +641,12 @@
     {
       "event_key": 12138482,
       "match": "Kaegi/ Zurmuehle - Bayerlova/ Voracek",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138483,
       "match": "Hoedt/ Nagy - Hrda/ Parentini",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138484,
@@ -606,11 +671,16 @@
     {
       "event_key": 12138488,
       "match": "Egorova/ Perelygina - Nepliy/ Shinde",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138489,
       "match": "C. Rolland de Ravel - L. Ratti",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138490,
+      "match": "K. Feldbausch - M. Alcala Gurri",
       "reason": "not_pregame"
     },
     {
@@ -626,7 +696,7 @@
     {
       "event_key": 12138493,
       "match": "Bennemann/ Chiesa - Cortez Llorca/ Tsygourova",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138494,
@@ -636,7 +706,7 @@
     {
       "event_key": 12138495,
       "match": "R. P. Senthil Kumar - K. Yilmaz",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138496,
@@ -664,6 +734,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138501,
+      "match": "J. Adams - I. Yoruk",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138502,
       "match": "Chopra/ Marrero Curbelo - Ganta/  Javia",
       "reason": "not_singles"
@@ -671,7 +746,7 @@
     {
       "event_key": 12138503,
       "match": "Jiang/ Qabazard - Bittoun/ Blazka",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138504,
@@ -684,9 +759,14 @@
       "reason": "not_singles"
     },
     {
+      "event_key": 12138507,
+      "match": "J. Vandromme - A. Aksu",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138508,
       "match": "M. Kubka - Y. Ku",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138509,
@@ -697,6 +777,11 @@
       "event_key": 12138510,
       "match": "Barry/ Gannon - Jans/ Visker",
       "reason": "not_singles"
+    },
+    {
+      "event_key": 12138512,
+      "match": "K. Jacquet - H. Searle",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138514,
@@ -719,6 +804,21 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138518,
+      "match": "B. Zeltina - N. Senic",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138519,
+      "match": "G. Ce - V. Paganetti",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138520,
+      "match": "L. Encheva - C. Buyukakcay",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138521,
       "match": "S. Janicijevic - Z. Kulambayeva",
       "reason": "not_pregame"
@@ -726,21 +826,26 @@
     {
       "event_key": 12138522,
       "match": "Stevens/ Zhang - Alvisi/ Gandolfi",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138523,
       "match": "Perez Alarcon/ Tona - Ricci/ Rocchetti",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138524,
       "match": "Kulambayeva/ Strakhova - Alexandrova/ Garnevska",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138525,
       "match": "Korokozidi/ Stankovic - Matoula/ Shaikh",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138526,
+      "match": "T. Torres - J. Echeverria",
       "reason": "not_pregame"
     },
     {
@@ -759,6 +864,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138530,
+      "match": "J. Kovalik - D. Kuzmanov",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138531,
       "match": "Basic/ Jutresa - Neos/ Tsitsipas",
       "reason": "not_singles"
@@ -766,12 +876,27 @@
     {
       "event_key": 12138532,
       "match": "George/ Horwood - Kajin/ Mashtakov",
-      "reason": "not_singles"
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138533,
+      "match": "A. Zverev - R. Collignon",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138535,
+      "match": "Z. Zhang - O. Virtanen",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138536,
+      "match": "Xiy. Wang - L. Giovannini",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138537,
       "match": "MacKinlay/ Whitehouse - Bayldon/ Harper",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138538,
@@ -781,7 +906,7 @@
     {
       "event_key": 12138539,
       "match": "Forcano/ Vervoort - Ratti/ Ribero",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138540,
@@ -794,14 +919,24 @@
       "reason": "not_singles"
     },
     {
+      "event_key": 12138542,
+      "match": "G. Gandolfi - T. Papamalamis",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138543,
       "match": "M. Kaouk - F. Fumagalli",
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138544,
+      "match": "C. Bertimon - M. Efstathiou",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138545,
       "match": "S. A. Andreescu - S. Palosi",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138546,
@@ -814,13 +949,53 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138548,
+      "match": "N. Hipfl - J. Sperle",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138550,
       "match": "V. Radjenovic - A. de Marchi",
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138551,
+      "match": "O. Brown - G. Lazarov",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138552,
+      "match": "G. M. Noce - S. Rybkin",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138553,
+      "match": "S. Stankovic - B. Djuric",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138554,
+      "match": "B. Blaydes - P. Inchauspe",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138555,
       "match": "A. Colombo - P. Rodenas",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138556,
+      "match": "R. Pascual Ferra - E. Kirkin",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138557,
+      "match": "A. Ouakaa - V. Frydrych",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138558,
+      "match": "M. De Krom - R. Nijboer",
       "reason": "not_pregame"
     },
     {
@@ -844,6 +1019,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138568,
+      "match": "A. Giraldi Requena - M. Argyrokastriti",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138569,
       "match": "L. S. Steur J. - W. Falkowska",
       "reason": "not_pregame"
@@ -861,32 +1041,32 @@
     {
       "event_key": 12138572,
       "match": "Braynin/ Poritskyi - Michalik/ Wagner",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138573,
       "match": "Meszaros/ Sallay - Bakonyi/ Jilly",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138574,
       "match": "Jovic/ Milosavljevic - Gagliardo/ Guadagno",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138575,
       "match": "Radjenovic/ Walkin - Maric/ Radovanovic",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138576,
       "match": "Blaydes/ Blaydes - Bouchelaghem/ Gales",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138577,
       "match": "Colombo/ Piatti - Carlini/ Vaccari",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138578,
@@ -901,37 +1081,52 @@
     {
       "event_key": 12138580,
       "match": "Rocha/ Valdoleiros - Cacao/ Marques",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138581,
       "match": "Marques/ Pedrico Kravtsov - Andaloro/ Moroni",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138582,
       "match": "Antici/ Panasa - Ghirardato/ Zozaya Menendez",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138583,
       "match": "Hejtmanek/ Sagandikova - Mettraux/ Radovanovic",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138584,
       "match": "Kovackova/ Pastikova - Sucha/ Wawrzkiewicz",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138585,
       "match": "Kabbaj/ Vargova - Colmegna/ Sacco",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138586,
       "match": "Gavrila/ Sakellaridi - Firman/ Serban",
       "reason": "not_singles"
+    },
+    {
+      "event_key": 12138587,
+      "match": "T. Di Girolami - L. Claeys",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138588,
+      "match": "A. Stoyanov - F. Sziedat",
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138589,
+      "match": "C. Grignac - M. Maquet",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138591,
@@ -941,7 +1136,7 @@
     {
       "event_key": 12138592,
       "match": "Steur/  Szabo - Kuczer/ Sebestova",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138599,
@@ -1024,6 +1219,11 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138631,
+      "match": "A. Ibragimova - L. Nguyen Tan",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138632,
       "match": "Back/ Tsao - Kitahara/ Nishino",
       "reason": "not_pregame"
@@ -1031,7 +1231,7 @@
     {
       "event_key": 12138633,
       "match": "Y. Chainykova - Mat. Mariani",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138634,
@@ -1044,19 +1244,29 @@
       "reason": "not_pregame"
     },
     {
+      "event_key": 12138636,
+      "match": "D. Podhajecka - M. Nozdrachova",
+      "reason": "not_pregame"
+    },
+    {
       "event_key": 12138637,
       "match": "Ayala/ Bartel - Daubnerova/ Pawlak",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138638,
       "match": "Milovanova/ Wildgruber - Dell'Edera/ Mariani",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138639,
       "match": "Yashina/ Zhiyenbayeva - Matsuda/ Ren",
       "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138640,
+      "match": "Ciric Bagaric/ Fossa Huergo - Jakupovic/ Radisic",
+      "reason": "not_singles"
     }
   ],
   "errors": [],
