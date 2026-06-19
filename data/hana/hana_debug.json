@@ -1,41 +1,40 @@
 {
-  "generated_at": "2026-06-17T08:42:03.934602+02:00",
+  "generated_at": "2026-06-19T10:54:58.721038+02:00",
   "sources": [
     {
       "machine": "jakob",
       "file": "data/jakob_predictions.json",
-      "raw_picks": 9,
-      "active_picks": 9,
-      "rejected_picks": 0
-    },
-    {
-      "machine": "tedi_main",
-      "file": "data/tedi/tedi_predictions.json",
       "raw_picks": 8,
       "active_picks": 8,
       "rejected_picks": 0
     },
     {
+      "machine": "tedi_main",
+      "file": "data/tedi/tedi_predictions.json",
+      "raw_picks": 9,
+      "active_picks": 9,
+      "rejected_picks": 0
+    },
+    {
       "machine": "tedi_v2",
       "file": "data/tedi/tedi_v2_test_predictions.json",
-      "raw_picks": 1,
-      "active_picks": 1,
+      "raw_picks": 8,
+      "active_picks": 8,
       "rejected_picks": 0
     },
     {
       "machine": "lucija",
       "file": "data/lucija/lucija_predictions.json",
-      "raw_picks": 4,
-      "active_picks": 4,
+      "raw_picks": 6,
+      "active_picks": 6,
       "rejected_picks": 0
     }
   ],
-  "unique_hub_picks": 14,
-  "raw_group_keys": 14,
+  "unique_hub_picks": 13,
+  "raw_group_keys": 13,
   "consensus_counts": {
-    "triple": 1,
-    "single": 9,
-    "quad": 1,
-    "double": 3
+    "single": 6,
+    "quad": 4,
+    "triple": 3
   }
 }

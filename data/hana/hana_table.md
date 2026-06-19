@@ -1,31 +1,29 @@
 # Hana totals hub
 
-Generated: 2026-06-17T08:42:03.940908+02:00
+Generated: 2026-06-19T10:54:58.729469+02:00
 
 ## Active unique picks
 
 | Date | Time | Match | Pick | Consensus | Machines | Best odds | Book | Conf | Quality | Edge | 3-set | Close | Gap | Strength |
 |---|---:|---|---|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| 2026-06-17 | 12:00 | A. Aksu - S. Vickery | UNDER 20.5 games | triple | Jakob + Tedi + Lucija | 2.00 | Superbet | 93.3 | 83.9 | 0.070 | 0.229 | 0.382 | 0.363 | 29.33 |
-| 2026-06-17 | 12:00 | B. Palicova - J. Teichmann | UNDER 19.5 games | single | Jakob | 1.95 | Superbet | 92.5 | 79.1 | 0.057 | 0.229 | 0.417 | 0.642 | 40.29 |
-| 2026-06-17 | 12:30 | B. Nakashima - I. Buse | UNDER 22.5 games | quad | Jakob + Tedi + Lucija + Tedi V2 | 2.05 | Pncl | 91.7 | 84.5 | 0.082 | 0.338 | 0.319 | 0.452 | 16.95 |
-| 2026-06-17 | 12:30 | E. Demanet - C. Sanchez Jover | UNDER 21.5 games | double | Tedi + Lucija | 2.03 | Pncl | 89.8 | 83.1 | 0.077 | 0.222 | 0.454 | 0.260 | 19.33 |
-| 2026-06-17 | 12:30 | J. Pegula - K. Siniakova | UNDER 21.5 games | single | Tedi | 2.00 | Betfair | 92.5 | 82.5 | 0.070 | 0.229 | 0.346 | 0.313 | 6.02 |
-| 2026-06-17 | 13:30 | C. Tabur - S. Sakellaridis | UNDER 22.5 games | single | Tedi | 2.14 | Pncl | 82.7 | 81.7 | 0.103 | 0.236 | 0.518 | 0.076 | 27.01 |
-| 2026-06-17 | 13:30 | K. Volynets - J. Bouzas Maneiro | UNDER 21.5 games | single | Tedi | 1.99 | Pncl | 92.5 | 82.7 | 0.068 | 0.222 | 0.241 | 0.190 | 7.45 |
-| 2026-06-17 | 14:00 | A. De Minaur - D. Shapovalov | UNDER 21.5 games | single | Jakob | 2.13 | Pncl | 77.7 | 80.4 | 0.101 | 0.444 | 0.565 | 0.527 | 67.99 |
-| 2026-06-17 | 14:00 | J. Fearnley - B. Bonzi | OVER 23.5 games | single | Jakob | 2.15 | Superbet | 88.2 | 85.0 | 0.155 | 0.472 | 0.493 | 0.015 | 12.14 |
-| 2026-06-17 | 14:00 | M. Krumich - J. Reis Da Silva | OVER 22.5 games | single | Jakob | 2.02 | Superbet | 96.0 | 89.8 | 0.125 | 0.545 | 0.452 | 0.100 | 7.31 |
-| 2026-06-17 | 15:30 | P. Badosa - C. Gauff | UNDER 20.5 games | double | Jakob + Tedi | 2.00 | Pncl | 92.5 | 82.5 | 0.070 | 0.212 | 0.473 | 0.493 | 22.35 |
-| 2026-06-17 | 16:30 | Y. Zhou - N. Mejia | UNDER 22.5 games | single | Tedi | 2.05 | Pncl | 90.9 | 83.1 | 0.082 | 0.174 | 0.492 | 0.167 | 25.68 |
-| 2026-06-17 | 17:00 | T. Gibson - Q. Zheng | OVER 22.5 games | double | Jakob + Lucija | 2.02 | Pncl | 96.0 | 90.7 | 0.125 | 0.750 | 0.521 | 0.306 | 3.25 |
-| 2026-06-17 | 17:30 | A. Sabalenka - E. Alexandrova | UNDER 19.5 games | single | Jakob | 2.20 | Pncl | 88.5 | 91.8 | 0.116 | 0.156 | 0.306 | 0.640 | 56.01 |
+| 2026-06-19 | 11:00 | J. Pegula - M. Keys | UNDER 22.5 games | single | Tedi | 1.98 | Pncl | 91.7 | 80.6 | 0.065 | 0.278 | 0.407 | 0.102 | 19.44 |
+| 2026-06-19 | 12:00 | C. Rolland de Ravel - L. Ratti | UNDER 21.5 games | single | Tedi | 2.08 | Unibet | 88.9 | 82.6 | 0.089 | 0.292 | 0.157 | 0.022 | 20.65 |
+| 2026-06-19 | 12:00 | M. Ribecai - F. Diaz Acosta | UNDER 19.5 games | single | Jakob | 2.20 | Unibet | 86.9 | 87.6 | 0.116 | 0.236 | 0.501 | 0.533 | 44.95 |
+| 2026-06-19 | 12:30 | A. De Minaur - B. Nakashima | UNDER 22.5 games | quad | Jakob + Tedi + Lucija + Tedi V2 | 2.18 | Pncl | 87.7 | 88.4 | 0.111 | 0.339 | 0.314 | 0.394 | 12.07 |
+| 2026-06-19 | 12:30 | Xiy. Wang - L. Giovannini | UNDER 19.5 games | single | Tedi V2 | 2.11 | Pncl | 88.1 | 82.0 | 0.096 | 0.000 | 0.228 | 0.476 | 15.75 |
+| 2026-06-19 | 13:00 | A. Zverev - R. Collignon | UNDER 22.0 games | single | Jakob | 2.18 | Pncl | 82.0 | 78.0 | 0.111 | 0.438 | 0.417 | 0.655 | 14.22 |
+| 2026-06-19 | 14:00 | K. Feldbausch - M. Alcala Gurri | UNDER 20.5 games | triple | Tedi + Lucija + Tedi V2 | 2.15 | Betano | 81.6 | 81.2 | 0.105 | 0.211 | 0.333 | 0.271 | 3.40 |
+| 2026-06-19 | 14:30 | G. Kravchenko - G. La Vela | UNDER 19.5 games | triple | Tedi + Lucija + Tedi V2 | 2.19 | Pncl | 83.7 | 81.8 | 0.113 | 0.161 | 0.290 | 0.418 | 17.73 |
+| 2026-06-19 | 14:30 | D. Altmaier - D. Medvedev | UNDER 21.5 games | single | Jakob | 2.00 | Betfair | 82.9 | 77.1 | 0.070 | 0.333 | 0.537 | 0.691 | 15.78 |
+| 2026-06-19 | 15:00 | J. Bouzas Maneiro - E. Navarro | UNDER 20.5 games | quad | Jakob + Tedi + Lucija + Tedi V2 | 2.18 | Pncl | 87.7 | 90.1 | 0.111 | 0.206 | 0.341 | 0.283 | 15.00 |
+| 2026-06-19 | 16:00 | E. Yaneva - E. Gorgodze | UNDER 19.5 games | quad | Jakob + Tedi + Lucija + Tedi V2 | 2.00 | Superbet | 90.9 | 80.6 | 0.070 | 0.156 | 0.293 | 0.475 | 22.32 |
+| 2026-06-19 | 17:30 | E. Svitolina - A. Eala | UNDER 20.5 games | quad | Jakob + Tedi + Lucija + Tedi V2 | 2.12 | Pncl | 87.4 | 86.8 | 0.098 | 0.300 | 0.333 | 0.392 | 8.90 |
+| 2026-06-19 | 18:30 | D. Rincon - L. van Assche | UNDER 20.5 games | triple | Jakob + Tedi + Tedi V2 | 2.15 | Unibet | 88.9 | 86.0 | 0.105 | 0.309 | 0.182 | 0.418 | 12.59 |
 
 ## Consensus summary
 
 | Consensus | Count |
 |---|---:|
-| quad | 1 |
-| triple | 1 |
-| double | 3 |
-| single | 9 |
+| quad | 4 |
+| triple | 3 |
+| single | 6 |
