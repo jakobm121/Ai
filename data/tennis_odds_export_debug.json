@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-20T00:15:26.625728+02:00",
+  "generated_at": "2026-06-20T06:42:41.624562+02:00",
   "summary": {
-    "fixtures_total": 167,
-    "matches_with_odds": 75,
-    "skipped": 92,
+    "fixtures_total": 191,
+    "matches_with_odds": 91,
+    "skipped": 100,
     "errors": 0,
-    "first_set_total_matches": 63,
-    "match_total_matches": 63,
-    "with_surface": 26,
-    "with_gender": 75,
-    "with_best_of": 75,
+    "first_set_total_matches": 90,
+    "match_total_matches": 90,
+    "with_surface": 34,
+    "with_gender": 91,
+    "with_best_of": 91,
     "tiebreak_market_matches": 0
   },
   "skipped": [
@@ -96,12 +96,17 @@
     {
       "event_key": 12138607,
       "match": "M. Herazo Gonzalez - M. F. Urrutia",
-      "reason": "no_odds"
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138608,
+      "match": "A. Vergara Rivera - J. Estevez",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138611,
       "match": "Ribeiro/ Zeballos - Huertas Del Pino/ Huertas Del Pino Cordova",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138619,
@@ -116,12 +121,17 @@
     {
       "event_key": 12138626,
       "match": "D. Back - H. Abe",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138627,
       "match": "Falck/ Suarez - Johnson/ van Loben Sels",
       "reason": "not_singles"
+    },
+    {
+      "event_key": 12138629,
+      "match": "H. Kaji - Y. Kitahara",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138640,
@@ -131,7 +141,7 @@
     {
       "event_key": 12138670,
       "match": "H. Moriya - H. Roh",
-      "reason": "no_odds"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138673,
@@ -146,7 +156,12 @@
     {
       "event_key": 12138679,
       "match": "E. Laskevich - C. Zhu",
-      "reason": "no_odds"
+      "reason": "not_pregame"
+    },
+    {
+      "event_key": 12138680,
+      "match": "J. Wang - D. Khomutsianskaya",
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138682,
@@ -156,7 +171,7 @@
     {
       "event_key": 12138683,
       "match": "Im/ Kim Eunchae - Kawamura/ Ohwaki Yui",
-      "reason": "not_singles"
+      "reason": "not_pregame"
     },
     {
       "event_key": 12138684,
@@ -354,89 +369,9 @@
       "reason": "no_odds"
     },
     {
-      "event_key": 12138760,
-      "match": "D. Kuzmanov - N. Mashtakov",
-      "reason": "no_odds"
-    },
-    {
       "event_key": 12138761,
       "match": "Micic/ Mladenovic - Hruncakova/ Kuzmova",
       "reason": "not_singles"
-    },
-    {
-      "event_key": 12138762,
-      "match": "M. Arnaldi - A. Gray",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138763,
-      "match": "T. Samuel - Q. Halys",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138764,
-      "match": "E. Nava - H. Stewart",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138765,
-      "match": "H. Wendelken - A. Vukic",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138766,
-      "match": "J. Duckworth - G. Hussey",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138767,
-      "match": "F. Gill - M. Trungelliti",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138768,
-      "match": "J. Choinski - Y. Wu",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138769,
-      "match": "M. Giron - C. Broom",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138771,
-      "match": "A. Ghibaudo - P. Bar Biryukov",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138772,
-      "match": "A. Molcan - Z. Sesko",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138773,
-      "match": "F. Romano - M. Cassone",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138774,
-      "match": "M. Kukushkin - D. Dzumhur",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138775,
-      "match": "A. Shevchenko - A. Shelbayh",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138776,
-      "match": "A. Walton - F. Bondioli",
-      "reason": "no_odds"
-    },
-    {
-      "event_key": 12138777,
-      "match": "Z. Svajda - M. Huesler",
-      "reason": "no_odds"
     },
     {
       "event_key": 12138791,
@@ -464,14 +399,119 @@
       "reason": "not_singles"
     },
     {
-      "event_key": 12138817,
-      "match": "M. Vankan - M. Zielinski",
-      "reason": "no_odds"
-    },
-    {
       "event_key": 12138818,
       "match": "Al Azmeh/ Marysko - Balciunas/ De Lange",
       "reason": "not_singles"
+    },
+    {
+      "event_key": 12138819,
+      "match": "A. Martin - J.J. Wolf",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12138820,
+      "match": "N. Hardt - J. Estevez",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12138821,
+      "match": "A. Kubareva - R. X. Wu",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12138822,
+      "match": "Nefve/ Vance - Boulais/ Young",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138823,
+      "match": "Cuba W - Jamaica W",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138824,
+      "match": "Antigua and Barbuda W - Panama W",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138825,
+      "match": "Suriname W - Bermuda W",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138826,
+      "match": "Costa Rica W - Barbados W",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138827,
+      "match": "El Salvador W - Trinidad & Tobago W",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138830,
+      "match": "Huertas Del Pino/ Huertas Del Pino Cordova - Aguilar Cardozo/ De La Fuente",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138831,
+      "match": "Delaney/ Nakagawa - Kusuhara/ Purcell",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138832,
+      "match": "J. M. Gonzalez Daniele - M. F. Urrutia",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12138833,
+      "match": "A. Vergara Rivera - L. F. Britez Risso",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12138834,
+      "match": "Moyano/ Romero - Candiotto/ Gonzalez Daniele",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138835,
+      "match": "Chinese Taipei W - Hong Kong W",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138836,
+      "match": "Singapore W - Malaysia W",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138837,
+      "match": "S. Johnson - S. Kirchheimer",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12138838,
+      "match": "Johnson/ van Loben Sels - Landau/ Zamora",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138839,
+      "match": "A. Shcherbinina - M. Castillo Meza",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12138840,
+      "match": "K. Carnicella - M. Ekstrand",
+      "reason": "no_odds"
+    },
+    {
+      "event_key": 12138841,
+      "match": "Fairclough/ Fakih - Castillo Meza/ Fulgenzi",
+      "reason": "not_singles"
+    },
+    {
+      "event_key": 12138842,
+      "match": "B. Nakashima - K. Miyoshi",
+      "reason": "no_odds"
     }
   ],
   "errors": [],
@@ -507,6 +547,7 @@
     "Total - Away",
     "Total - Home",
     "Total Breaks on Serve",
+    "Total Tiebreaks",
     "Win From behind (Player 1)",
     "Win From behind (Player 2)",
     "Win In Straigh Sets (Player 1)",
