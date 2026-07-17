@@ -1,6 +1,6 @@
 # AI TLE Results
 
-Generated: `2026-07-17T07:30:59+00:00`
+Generated: `2026-07-17T21:22:48+00:00`
 Total picks: `75`
 Settled bets: `70`
 Pending: `1`
